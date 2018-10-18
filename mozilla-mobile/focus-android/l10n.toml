@@ -1,3 +1,4 @@
+
 basepath = "."
 
 locales = [
@@ -11,12 +12,12 @@ locales = [
   "ay",
   "az",
   "bg",
-  "bn",
+  "bn-BD",
+  "bn-IN",
   "bo",
   "bs",
   "ca",
   "cak",
-  "co",
   "cs",
   "cy",
   "da",
@@ -24,13 +25,11 @@ locales = [
   "dsb",
   "el",
   "en-CA",
-  "en-GB",
   "eo",
   "es-AR",
   "es-CL",
   "es-ES",
   "es-MX",
-  "et",
   "eu",
   "fa",
   "fi",
@@ -68,7 +67,6 @@ locales = [
   "ne-NP",
   "nl",
   "nn-NO",
-  "nv",
   "oc",
   "pa-IN",
   "pai",
@@ -79,11 +77,8 @@ locales = [
   "quy",
   "ro",
   "ru",
-  "si",
   "sk",
-  "skr",
   "sl",
-  "sn",
   "sq",
   "sr",
   "su",
@@ -102,18 +97,10 @@ locales = [
   "yua",
   "zam",
   "zh-CN",
-  "zh-HK",
   "zh-TW",
-]
-
-# Expose the following branches to localization
-# Changes to this list should be announced to the l10n team ahead of time.
-branches = [
-    "main",
-]
-
+  ]
 [env]
 
 [[paths]]
   reference = "app/src/main/res/values/strings.xml"
-  l10n = "app/src/main/res/values-{android_locale}/strings.xml"
+  l10n = "{l10n_base}/app/src/main/res/values-{android_locale}/strings.xml"
