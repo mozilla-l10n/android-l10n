@@ -255,6 +255,16 @@
     <!-- This string is used to label the 'VR' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_vr">VR</string>
 
+    <!-- This string is used to label radio buttons for setting fixed-foveated-rendering (FFR) level.
+     The term "foveation" derives from "fovea", the area of higher-resolution vision in the human retina.
+     Higher values of this option result in larger parts of the peripheral vision being rendered
+     at lower resolutions than the content in the center of the view.  These higher values reduce
+     quality to increase performance.
+     The Oculus implementation of fixed-foveated-rendering is described in more detail here:
+     https://developer.oculus.com/blog/optimizing-oculus-go-for-performance/-->
+    <string name="developer_options_foveated_app">陥凹レベル (アプリ)</string>
+    <!-- This string is used to label radio buttons for setting foveated level for WebVR immersive experiences -->
+    <string name="developer_options_foveated_webvr">陥凹レベル (WebVR)</string>
     <!-- This string is used to label the Foveated radio button that disables fixed-foveated-rendering in immersive mode. -->
     <string name="developer_options_foveated_disabled">無効</string>
     <!-- This string is used to label the Foveated radio button that enables low-level fixed-foveated-rendering. -->
@@ -335,6 +345,11 @@
          relate to Android system permissions granted to the app.
          '%1$s' will be replaced at runtime with the app's name. -->
     <string name="security_options_permissions_title">許可設定 (%1$s にアクセスを許可)</string>
+
+    <!-- This string is displayed in an alert box if the user attempts to disable an enabled
+         permission and informs the user that the app cannot disable the given permission, that
+         function being reserved by the system permissions app. -->
+    <string name="security_options_permissions_reject_message">この許可設定はシステムの許可設定でのみ無効化できます</string>
 
     <!-- This string labels the button that displays or enables application access to the device's
          camera, if a camera is present. -->
@@ -611,6 +626,10 @@
 <p>プライベートブラウジングで<strong>匿名化はできません</strong>。ネットワーク管理者やインターネットサービスプロバイダーは、依然としてあなたが訪れたページを追跡できます。</p>
 <p class="about-info"><a id="learnMore">プライベートブラウジングの詳細</a>。</p>
      ]]></string>
+
+    <!-- This string is displayed in any button used for removing all the items in the current context.
+         '%1$s' will be replaced at runtime with the app's name. -->
+    <string name="homepage_hint">%1$s ホーム (既定)</string>
 
     <!-- This string is displayed in the title of an authentication prompt, which requests a username and a password. -->
     <string name="authentication_required">認証が必要です</string>
