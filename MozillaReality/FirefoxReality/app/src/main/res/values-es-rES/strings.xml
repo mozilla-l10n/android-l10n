@@ -3,6 +3,9 @@
     <!-- IMPORTANT NOTE: If this file is updated anyhow, the STRs wiki must be updated accordingly:
     https://github.com/MozillaReality/FirefoxReality/wiki/L10n -->
 
+    <!-- This string is used on the virtual keyboard to label the 'Enter' key (stylized in uppercase letters as 'ENTER'). -->
+    <string name="keyboard_enter_label">ENTER</string>
+
     <!-- This string is displayed in the button that means the user accepts the
          permission requested for in the permission dialog box. -->
     <string name="permission_allow">Permitir</string>
@@ -16,6 +19,42 @@
 
     <!-- This string is displayed in a label that means the permission has already been granted -->
     <string name="permission_enabled">Habilitado</string>
+
+    <!-- This string will be displayed in a dialog box presented to the user
+         when the application needs to request permission to access the device's camera.
+         '%1$s' will be replaced at runtime with the website's domain name. -->
+    <string name="permission_camera">¿Quieres permitir que %1$s use la cámara?</string>
+
+    <!-- This string will be displayed in a dialog box presented to the user
+         when the application needs to request permission to access the device's microphone.
+         '%1$s' will be replaced at runtime with the website's domain name. -->
+    <string name="permission_microphone">¿Quieres permitir que %1$s use el micrófono?</string>
+
+    <!-- This string will be displayed in a dialog box presented to the user
+         when the application needs to request permission to access the device's camera and microphone.
+         '%1$s' will be replaced at runtime with the website's domain name. -->
+    <string name="permission_camera_and_microphone">¿Quieres permitir que %1$s use la cámara y el micrófono?</string>
+
+    <!-- This string will be displayed in a dialog box presented to the user
+         when the application needs to request permission to access the device's geographic location.
+         '%1$s' will be replaced at runtime with the website's domain name. -->
+    <string name="permission_location">¿Quieres permitir que %1$s acceda a tu ubicación?</string>
+
+    <!-- This string will be displayed in a dialog box presented to the user
+         when the application needs to request permission to send browser-level
+         push notifications from a particular website (i.e., same origin).
+         '%1$s' will be replaced at runtime with the website's domain name. -->
+    <string name="permission_notification">¿Quieres permitir que %1$s te envíe notificaciones?</string>
+
+    <!-- This string will be displayed in a dialog box presented to the user when the application
+         needs to request permission to access the device's external storage such as the
+         sdcard. '%1$s' will be replaced at runtime with the website's domain name. -->
+    <string name="permission_read_external_storage">¿Quieres permitir que %1$s lea tu memoria externa?</string>
+
+    <!-- This string will be displayed in a dialog box presented to the user when the application
+         needs to request permission to access the device's external storage such as the
+         sdcard. '%1$s' will be replaced at runtime with the website's domain name. -->
+    <string name="permission_persistent_storage">¿Quieres permitir que %1$s almacene datos de forma permanente?</string>
 
     <!-- This string is displayed in the Settings dialog box and how
          the user can know which version of the application they are currently running.
@@ -105,10 +144,22 @@
          opens a dialog box that contains controller-related options: pointer color and scroll direction. -->
     <string name="settings_controller_options">Opciones del controlador</string>
 
+    <!-- This string is displayed in the 'Settings' dialog window and, is used to label an,
+         On/Off switch that enables/disables the speech-data reporting. -->
+    <string name="settings_report_speech_data">Informar sobre datos de voz</string>
+
     <!-- This string is used to label a button that, when pressed, loads a website
          that allows the user file an issue or problem they may have encountered while using the
          application or while visiting a site. -->
     <string name="settings_report_issue">Informar de un problema</string>
+
+    <!-- This string is used in place of the 'settings_version' string (e.g., `version 1.1`) when the user is running
+         a developer-build version of the app. -->
+    <string name="settings_version_developer">Compilación del desarrollador</string>
+
+    <!-- This string is the title of a dialog box shown to the user when a settings
+         change requires the application to restart. -->
+    <string name="restart_dialog_restart">Se requiere reiniciar</string>
 
     <!-- This string is the text displayed in the restart dialog box explaining why the
          restart is required. '%1$s' will be replaced at runtime with the app's name. -->
@@ -122,12 +173,31 @@
          from being restarted. -->
     <string name="restart_later_dialog_button">Más tarde</string>
 
+    <!-- This string labels an On/Off switch in the 'Developer Options' dialog
+     and is used to enable or disable curved display. -->
+    <string name="developer_options_curved_display">Habilitar pantalla curva</string>
+
+    <!-- This string labels an On/Off switch in the 'Developer Options' dialog
+         and is used to toggle remote debugging of website content in the application. -->
+    <string name="developer_options_remote_debugging">Activar depuración remota</string>
+
+    <!-- This string labels an On/Off switch in the 'Developer Options' dialog
+         and is used to toggle redirecting JavaScript Console output to the Android Logcat (i.e., `adb logcat`). -->
+    <string name="developer_options_show_console">Redirigir consola a Logcat</string>
+
+    <!-- This string labels an On/Off switch in the developer options dialog
+         and is used to customize background environments of the app. -->
+    <string name="developer_options_env_override">Habilitar la invalidación del entorno</string>
+
     <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
          running content in a separate process.
          Multiprocessing: the running of two or more programs or sequences of instructions
          simultaneously by a computer with more than one central processor.
          A dialog should appear with a field labeled with the text, 'Enable Multiprocess'. -->
     <string name="developer_options_multiprocess">Habilitar multiproceso</string>
+
+    <!-- The string labels an On/Off switch in the developer options dialog and is used to toggle enabling Servo. -->
+    <string name="developer_options_servo">Habilitar Servo</string>
 
     <!-- This string is used to label a numerical-entry field where the user may set a new value to
          use for the display density. -->
@@ -172,6 +242,10 @@
     <!-- This string is used to label the MSAA radio button that enables two times MSAA in Immersive Mode. -->
     <string name="developer_options_msaa_4">4x</string>
 
+    <!-- This string is used to label a set of radio buttons that allow the user to change the
+         User-Agent (UA) string of the browser. -->
+    <string name="developer_options_ua_mode">Modo de agente de usuario</string>
+
     <!-- This string is used to label the 'Desktop' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_desktop">Escritorio</string>
 
@@ -200,23 +274,58 @@
     <!-- This string is used to label the Foveated radio button that enables high-level fixed-foveated-rendering. -->
     <string name="developer_options_foveated_3">3</string>
 
+    <!-- This string is used to label a set of radio buttons that allow the user to change the
+     scroll direction of the remote controller. -->
+    <string name="developer_options_scroll_direction">Dirección de desplazamiento</string>
+
     <!-- This string is used to label the 'Natural' radio button of the 'Scroll Direction' settings option.
          "Natural" refers to the motion of scrolled material being congruent with respect to direction of
          motion of user input. -->
     <string name="developer_options_scroll_direction_natural">Natural</string>
 
+    <!-- This string is used to label the 'Reversed' radio button of the 'Scroll Direction' settings option.
+         "Reversed" refers to the motion of scrolled material being reversed with respect to direction of
+         motion of user input. -->
+    <string name="developer_options_scroll_direction_reversed">Inversa</string>
+
+    <!-- This string describes what the 'Reset' button in the developer options does which is
+         restore all the developer settings to their default value. -->
+    <string name="developer_options_reset">Restablecer los ajustes del desarrollador</string>
+
+    <!-- This string labels the 'Reset' button that restores the default developer settings values. -->
+    <string name="developer_options_reset_button">Restablecer</string>
+
     <!-- This string describes the radio buttons used to select the user's background environment
          (seen while not in Immersive Mode). -->
     <string name="developer_options_environments">Entorno</string>
+
+    <!-- This string labels the radio button that selects the 'Void' environment.
+         The 'Void' environment is an empty space that surrounds the user in empty, black space. -->
+    <string name="developer_options_env_void">Nulo</string>
 
     <!-- This string labels the radio button that selects the 'Offworld' environment,
          a sci-fi themed desert-like environment. The offworld references sci-fi fictional
          representations of colonies on other non-Earth planets. -->
     <string name="developer_options_env_offworld">Extraterrestre</string>
 
+    <!-- This string labels the radio button that selects the 'Underwater' environment,
+         a brightly lit submarine themed environment. -->
+    <string name="developer_options_env_underwater">Submarino</string>
+
     <!-- This string labels the radio button that selects the 'Winter' environment,
          a snow-covered outdoor winter mountain scene. -->
     <string name="developer_options_env_winter">Invierno</string>
+
+    <!-- This string labels the radio button that selects the 'Meadow' environment,
+         a sunlit grassy meadow filled with tiny flowers and surrounded by mountains. -->
+    <string name="developer_options_env_meadow">Prado</string>
+
+    <!-- This string labels the radio button that selects the 'Cave' environment,
+         a dimly-lit subterranean environment with fairytale structures set amongst mushrooms. -->
+    <string name="developer_options_env_cave">Caverna</string>
+
+    <!-- This string describes the radio buttons used to select the pointer color. -->
+    <string name="developer_options_pointer_color">Color del puntero</string>
 
     <!-- This string labels the radio button that sets the pointer color to purple. -->
     <string name="developer_options_pointer_purple">Morado</string>
@@ -273,6 +382,10 @@
          button used to initiate Voice Search. -->
     <string name="voice_search_start">¿Qué te gustaría buscar en la Web?</string>
 
+    <!-- This string is displayed in the voice-search dialog box that is shown to the user when they press the
+         button used to initiate Voice Search. -->
+    <string name="voice_search_example">Ejemplo: Di &quot;vídeos de 360, clima, noticias...&quot;</string>
+
     <!-- This string is displayed in a dialog box show to the user while the Voice Search is being
          performed. It indicates that the search query is running and they should wait for the result. -->
     <string name="voice_search_decoding">Buscando…</string>
@@ -284,6 +397,10 @@
     <!-- This string is displayed in a dialog box after a failed Voice Search and the system is prompting the
          user to try the Voice Search again. -->
     <string name="voice_search_try_again">Vuelve a intentarlo.</string>
+
+    <!-- This string is displayed in a dialog after the user has declined permission to use the
+         device's microphone. It explains why Voice Search is not working. -->
+    <string name="voice_search_permission_after_decline">Permita el acceso al micrófono para usar la búsqueda por voz.</string>
 
     <!-- This string is displayed in the URL bar when it is empty. It informs the user that they
          may use the URL bar to search the Web or enter a Web address. -->
