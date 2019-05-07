@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">More options</string>
@@ -41,7 +39,7 @@
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Settings</string>
     <!-- Browser menu button that opens a user's library -->
-    <string name="browser_menu_library">Library</string>
+    <string name="browser_menu_your_library">Your Library</string>
     <!-- Browser menu toggle that requests a desktop site -->
     <string name="browser_menu_desktop_site">Desktop site</string>
     <!-- Browser menu button that opens the find in page menu -->
@@ -50,6 +48,8 @@
     <string name="browser_menu_private_tab">Private tab</string>
     <!-- Browser menu button that creates a new tab -->
     <string name="browser_menu_new_tab">New tab</string>
+    <!-- Browser menu button that saves the current tab to a collection -->
+    <string name="browser_menu_save_to_collection">Save to Collection</string>
     <!-- Browser menu button that opens a dialog to report issues with the current site -->
     <string name="browser_menu_report_issue">Report site issue</string>
     <!-- Browser menu button that open a share menu to share the current site -->
@@ -139,6 +139,8 @@
     <string name="preferences_sync_category">Choose what to sync</string>
     <!-- Preference for syncing history -->
     <string name="preferences_sync_history">History</string>
+    <!-- Preference for syncing bookmarks -->
+    <string name="preferences_sync_bookmarks">Bookmarks</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">Sign out</string>
     <!-- Label indicating that sync is in progress -->
@@ -161,6 +163,10 @@
     <string name="preferences_tracking_protection_description">Block content and scripts that track you online</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Exceptions</string>
+    <!-- Preference description for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions_description">Tracking Protection is off for these websites</string>
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Turn on for all sites</string>
 
     <!-- Preference switch for Telemetry -->
     <string name="preferences_telemetry">Telemetry</string>
@@ -170,6 +176,14 @@
     <string name="preferences_mozilla_location_service">Mozilla location service</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">%s health report</string>
+
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string name="preferences_sync">Turn on Sync</string>
+    <!-- Preference for account login -->
+    <string name="preferences_sync_sign_in">Sign in</string>
+    <!-- Preference for account creation -->
+    <string name="preferences_sync_create_account">Create an account</string>
 
     <!-- Theme Preferences -->
     <!-- Preference for using light theme -->
@@ -190,6 +204,10 @@
     <string name="quick_action_bookmark">Bookmark</string>
     <!-- Button in the browser chrome in the browser to put the the current page in reader mode -->
     <string name="quick_action_read">Read</string>
+    <!-- Button in the browser chrome to exit reader mode -->
+    <string name="quick_action_read_close">Close</string>
+    <!-- Button in the browser chrome to configure reader mode appearance e.g. the used font type and size -->
+    <string name="quick_action_read_appearance">Appearance</string>
     <!-- Content description (not visible, for screen readers etc.): Quick action sheet handle to provide users
         with shortcuts to commonly used actions such as Share, Bookmark etc.. -->
     <string name="quick_action_sheet_handle">Quick actions</string>
@@ -219,16 +237,26 @@
     <string name="content_description_close_button">Close</string>
 
     <!-- Sessions -->
-    <!-- Title for the list of tabs in the current session -->
-    <string name="tabs_header_title">Current session</string>
+    <!-- Title for the list of tabs -->
+    <string name="tab_header_label">Open tabs</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_title">Private session</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Add tab</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Close tab</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
+    <string name="open_tabs_menu">Open tabs menu</string>
+    <!-- Open tabs menu item to close all tabs -->
+    <string name="tabs_menu_close_all_tabs">Close all tabs</string>
+    <!-- Open tabs menu item to share all tabs -->
+    <string name="tabs_menu_share_tabs">Share tabs</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection">Save to collection</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Tab menu</string>
+    <!-- Tab menu item to share the tab -->
+    <string name="tab_share">Share tab</string>
     <!-- Button in the current session menu. Deletes the session when pressed -->
     <string name="current_session_delete">Delete</string>
     <!-- Button in the current session menu. Saves the session when pressed -->
@@ -237,15 +265,24 @@
     <string name="current_session_share">Share</string>
     <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
     <string name="current_session_image">Current session image</string>
-    <!-- Text for the button to save a session -->
-    <string name="session_save">Save session</string>
-    <!-- Text for the button to delete a session -->
-    <string name="session_delete">Delete session</string>
+    <!-- Button to save the current set of tabs into a collection -->
+    <string name="save_to_collection">Save to collection</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">Delete collection</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">Rename collection</string>
+    <!-- Text for the button to open tabs of the selected collection -->
+    <string name="collection_open_tabs">Open tabs</string>
     <!-- Text for the button to delete a single session -->
     <string name="session_item_delete">Delete</string>
     <!-- Text to tell the user how many more tabs this session has.
         The first parameter is a digit that shows the cardinal number of how many additional tabs the session has. -->
     <string name="session_items_more">%1$d sites…</string>
+
+    <!-- No Open Tabs Message Header -->
+    <string name="no_open_tabs_header">No tabs opened</string>
+    <!-- No Open Tabs Message Description -->
+    <string name="no_open_tabs_description">Your open tabs will be shown here.</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -268,7 +305,8 @@
 
     <!-- Crashes -->
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
-    <string name="tab_crash_title">Sorry. %1$s can’t get that tab back</string>
+    <string name="tab_crash_title_2">Sorry. %1$s can’t load that page.</string>
+
     <!-- Description text displayed on the tab crash page -->
     <string name="tab_crash_description">You can attempt to restore or close this tab below.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
@@ -313,7 +351,8 @@
     <string name="bookmark_menu_open_in_private_tab_button">Open in private tab</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Delete</string>
-    <!-- Bookmark multi select title in app bar -->
+    <!-- Bookmark multi select title in app bar
+     The first parameter is the number of bookmarks selected -->
     <string name="bookmarks_multi_select_title">%1$d selected</string>
     <!-- Bookmark editing screen title -->
     <string name="edit_bookmark_fragment_title">Edit bookmark</string>
@@ -346,11 +385,9 @@
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL copied</string>
 
-
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">Go to Settings</string>
-
     <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
         to give users access to site specific information / settings. For example:
         Secure settings status and a button to modify site permissions -->
@@ -359,11 +396,11 @@
     <string name="phone_feature_recommended">Recommended</string>
     <!-- button that allows editing site permissions settings -->
     <string name="quick_settings_sheet_manage_site_permissions">Manage site permissions</string>
-    <!-- Button label for clear all the information of a site permissions-->
+    <!-- Button label for clearing all the information of site permissions-->
     <string name="clear_permissions">Clear permissions</string>
-    <!-- Button label for clear a site permissions-->
+    <!-- Button label for clearing a site permission-->
     <string name="clear_permission">Clear permission</string>
-    <!-- Button label for clear all the information fall all sites-->
+    <!-- Button label for clearing all the information on all sites-->
     <string name="clear_permissions_on_all_sites">Clear permissions on all sites</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">Camera</string>
@@ -383,10 +420,70 @@
     <string name="phone_feature_blocked_by_android">Blocked by Android</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Exceptions</string>
-    <!-- Action in Quick Settings dialog to report a site problem related to tracking protection -->
-    <string name="tracking_protection_report_problem">Report a problem</string>
     <!-- Summary of tracking protection preference if tracking protection is set to on -->
     <string name="tracking_protection_on">On</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Off</string>
+
+    <!-- Collections -->
+    <!-- Collections header on home fragment -->
+    <string name="collections_header">Collections</string>
+    <!-- No Open Tabs Message Header -->
+    <string name="no_collections_header">No collections</string>
+    <!-- No Open Tabs Message Description -->
+    <string name="no_collections_description">Your collections will be shown here.</string>
+
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">Select Tabs</string>
+
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Select collection</string>
+
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Name collection</string>
+
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">Add new collection</string>
+
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_all">Select All</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">Select tabs to save</string>
+
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d tabs selected</string>
+
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d tab selected</string>
+
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">Tabs saved!</string>
+
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">Tab saved!</string>
+
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
+    <string name="create_collection_close">Close</string>
+
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">Save</string>
+
+    <!-- Default name for a new collection in "name new collection" step of the collection creator-->
+    <string name="create_collection_default_name">Collection %d</string>
+
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">Collection deleted</string>
+
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">Tab deleted</string>
+
+    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <string name="snackbar_deleted_undo">UNDO</string>
+
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Allow %1$s to open %2$s</string>
+
 </resources>
