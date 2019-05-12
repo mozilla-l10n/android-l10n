@@ -15,6 +15,8 @@
 
     <!-- This is used as the label on a button on a first-run welcome screen to sign in and start using the application -->
     <string name="welcome_start_btn">Per iniziare</string>
+    <!-- This provides context near a button on the first-run welcome screen to describe application requirements. Firefox Account is to be translated consistently to match use in other Firefox products. %1$s will be replaced with application name. -->
+    <string name="welcome_instructions">Per utilizzare %1$s serve un account Firefox con credenziali salvate.</string>
     <!-- This is the link on the first-run welcome screen to learn more about the requirements of the application -->
     <string name="welcome_learn_more_btn">Ulteriori informazioni</string>
 
@@ -43,12 +45,32 @@
     <!-- This is the label for the button to unlock the application for use while on a lock screen -->
     <string name="unlock_button">Sblocca</string>
 
+    <!-- This message appears in a toast informing the user it is currently downloading and syncing login (a saved login is basically the URL, username and password) data -->
+    <string name="syncing_logins">Sincronizzazione credenziali in corso...</string>
+
+    <!-- This is the label used by screenreaders to inform the user the selected menu is for sorting the saved logins in the list -->
+    <string name="sort_description">Ordina credenziali</string>
     <!-- This is the label for the sorting option of the list of passwords to be in alphabetical order -->
     <string name="sort_menu_az">Alfabeticamente</string>
+    <!-- This is a corresponding heading to describe the list view is showing all saved logins sorted alphabetically -->
+    <string name="all_logins_a_z">Tutte le credenziali (A-Z)</string>
     <!-- This is the label for the sorting option of the list of passwords to be in order of recency the item was accessed or used -->
     <string name="sort_menu_recent">Utilizzate di recente</string>
+    <!-- This is a corresponding heading to describe the list view is showing all saved logins sorted by recent use -->
+    <string name="all_logins_recent">Tutte le credenziali (recenti)</string>
+    <!-- This is the label used by screenreaders to inform the user the selected text area is used to search the logins in the list -->
+    <string name="search_description">Cerca nelle credenziali</string>
+    <!-- This is the placeholder text to visibly describe a text area is to be used to search all the logins seen in the list view -->
+    <string name="search_logins">cerca credenziali</string>
+    <!-- This is the placeholder text to visibly describe a text area is to be used to search all the logins seen in the list view with the first letter capitalized -->
+    <string name="search_logins_cap">Cerca credenziali</string>
     <!-- This is the label used by screenreaders to inform the user the selected button will clear the text currently input in the search area -->
     <string name="search_clear_content_description">Cancella testo nella barra di ricerca</string>
+
+    <!-- This is shown when a user has entered search terms that have filtered the list of logins to find no results -->
+    <string name="no_matching_logins">Nessuna corrispondenza nelle credenziali.</string>
+    <!-- This explains that if no logins are found and were expected, to add new logins through the Firefox desktop browser -->
+    <string name="save_firefox_disclaimer">Per visualizzare ulteriori credenziali in questa sezione è necessario salvarle in Firefox.</string>
 
     <!-- This is a heading that appears above the URL in context of a detailed item view -->
     <string name="hint_hostname">Indirizzo web</string>
@@ -57,6 +79,9 @@
     <string name="hint_username">Nome utente</string>
     <!-- This is a heading that appears above a password in context of a detailed item view -->
     <string name="hint_password">Password</string>
+
+    <!-- This message appears to link to a web page explaining how to make changes to the details -->
+    <string name="learn_to_edit_login">Scopri come modificare questa credenziale</string>
 
     <!-- This describes an icon to screenreaders that the button tapped will open the web address in a web browser -->
     <string name="launch_hostname_content_description">Apri indirizzo nel browser</string>
@@ -100,6 +125,8 @@
 
     <!-- This is the title of a setting that allows the user to automatically fill forms in Android applications and websites using username and password data from this application. Autofill should match the Android name for this system feature -->
     <string name="autofill">Compilazione automatica</string>
+    <!-- This is the sub-title of a setting that allows the user to automatically fill forms in Android applications and websites using username and password data from this application. %1$s will be replaced with application name -->
+    <string name="autofill_summary">Consenti a %1$s di compilare automaticamente le credenziali</string>
     <!-- This is the label a screenreader uses to inform the user they selected the autofill setting toggle. Autofill should match the Android name for this system feature -->
     <string name="autofill_description">Impostazione per la compilazione automatica</string>
 
@@ -153,8 +180,12 @@
     <string name="account_information">Per apportare modifiche all’account, accedi al tuo account Firefox da qualsiasi browser.</string>
     <!-- This is the text on a button to sign out and disconnect the account from the application. %1$s will be replaced with application name -->
     <string name="disconnect_button">Disconnetti %1$s</string>
+    <!-- This message is displayed near a button to sign out and disconnect the account from the application explaining this does not affect the data stored with Firefox. %1$s will be replaced with application name -->
+    <string name="disconnect_disclaimer">Questa operazione rimuove le credenziali salvate da %1$s , ma non da Firefox.</string>
     <!-- This is the text on a final confirmation button to sign out and disconnect the account from the application. %1$s will be replaced with application name -->
     <string name="disconnect_disclaimer_title">Disconnettere %1$s?</string>
+    <!-- This message is displayed on a final confirmation dialog to sign out and disconnect their account from the application. Firefox Account is to be translated consistently to match use in other Firefox products. %1$s will be replaced with application name -->
+    <string name="disconnect_disclaimer_message">Questa operazione rimuoverà da %1$s le informazioni relative all’account Firefox e tutte le credenziali salvate.</string>
     <!-- This is the text on a final confirmation button to sign out and disconnect the account from the application -->
     <string name="disconnect">Disconnetti</string>
     <!-- This is the hint value for an autofill box that appears when suggesting a value for a password field. It is interpolated with the user's account name. -->
@@ -170,6 +201,10 @@
     <!-- This is used in the app logs to inform that network connectivity has successfully been detected -->
     <string name="network_connection_success">Connessione alla rete stabilita.</string>
 
+    <!-- This is used to inform the user that there are no saved logins in the list -->
+    <string name="no_logins_found">Impossibile trovare la credenziale</string>
+    <!-- This explains the steps the user should take, if no saved logins are found: sign in and sync in Firefox. %1$s will be replaced with application name -->
+    <string name="no_logins_description">%1$s permette di accedere alle password salvate in Firefox. Per visualizzare le credenziali in questa sezione, effettua l’accesso in Firefox e completa la sincronizzazione.</string>
     <!-- This is the title for the biometric unlock onboarding screen. %1$s will be replaced with application name -->
     <string name="onboarding_unlock_title">Sblocca %1$s con l’impronta digitale.</string>
     <!-- This is the onboarding description for enabling biometric unlock with the fingerprint sensor. %1$s will be replaced with application name -->
@@ -190,6 +225,8 @@
     <string name="all_set">È tutto pronto.</string>
     <!-- This is the button to dismiss the final onboarding screen -->
     <string name="finish">Fine</string>
+    <!-- This description of the app functionality is shown on the final onboarding screen -->
+    <string name="access_description">Accedi alle credenziali salvate in Firefox dal tuo telefono</string>
     <!-- This is an accessible content description for the security information link text. %1$s will be replaced with application name -->
     <string name="security_content_description">Link a una descrizione delle pratiche di sicurezza in %1$s.</string>
     <!-- This description of the app security is shown on the final onboarding screen. %s will be replaced with the security link. -->
