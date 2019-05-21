@@ -172,6 +172,9 @@
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">すべてのサイトで有効化</string>
 
+    <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
+    <string name="preferences_tracking_protection_turned_off_globally">すべてのサイトで無効にしました。有効にするには設定から変更してください。</string>
+
     <!-- Preference switch for Telemetry -->
     <string name="preferences_telemetry">Telemetry</string>
     <!-- Preference switch for crash reporter -->
@@ -265,6 +268,8 @@
     <string name="tabs_menu_close_all_tabs">すべてのタブを閉じる</string>
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">タブを共有</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection">コレクションに保存</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">タブメニュー</string>
     <!-- Tab menu item to share the tab -->
@@ -278,6 +283,10 @@
 
     <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
     <string name="current_session_image">現在のセッションイメージ</string>
+    <!-- Button to save the current set of tabs into a collection -->
+    <string name="save_to_collection">コレクションに保存</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">コレクションを削除</string>
     <!-- Text for the menu button to rename a collection -->
     <string name="collection_rename">コレクションの名前を変更</string>
     <!-- Text for the button to open tabs of the selected collection -->
@@ -439,10 +448,24 @@
     <!-- No Open Tabs Message Description -->
     <string name="no_collections_description">あなたのコレクションがここに表示されます。</string>
 
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">タブの選択</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">コレクションの選択</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">コレクションの名前</string>
     <!-- Button to add new collection for the "select collection" step of the collection creator -->
     <string name="create_collection_add_new_collection">新しいコレクションを追加</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_select_all">すべて選択</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">保存するタブを選択してください</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d 個のタブを選択しました</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d 個のタブを選択しました</string>
     <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
     <string name="create_collection_tabs_saved">タブが保存されました！</string>
     <!-- Text shown in snackbar when one tab has been saved in a collection -->
@@ -452,8 +475,19 @@
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
     <string name="create_collection_save">保存</string>
 
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">Collection %d</string>
+
+    <!-- Notifications -->
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">コレクションを削除しました</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">タブを削除しました</string>
     <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
     <string name="snackbar_deleted_undo">元に戻す</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">%2$s を開くことを %1$s に許可する</string>
     <!-- Text displayed in a notification when the user enters full screen mode -->
     <string name="full_screen_notification">全画面表示モードです</string>
 
