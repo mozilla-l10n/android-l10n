@@ -17,6 +17,12 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Prywatna sesja</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_explanation">%1$s usuwa historię wyszukiwania i przeglądania po zamknięciu sesji prywatnej.
+        Chociaż nie czyni to użytkownika anonimowym wobec stron internetowych ani dostawcy Internetu,
+        to ułatwia zachowanie prywatności przed pozostałymi użytkownikami tego urządzenia.\n\nPopularne mity na temat przeglądania prywatnego
+    </string>
     <!-- Delete session button to erase your history in a private session -->
     <string name="private_browsing_delete_session">Usuń sesję</string>
 
@@ -443,8 +449,14 @@
     <string name="permissions_header">Uprawnienia</string>
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">Przejdź do ustawień</string>
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">Ustawienia podręczne</string>
     <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">Zalecane</string>
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">Zarządzaj uprawnieniami witryny</string>
     <!-- Button label for clearing all the information of site permissions-->
     <string name="clear_permissions">Usuń uprawnienia</string>
     <!-- Button label for clearing a site permission-->
@@ -566,4 +578,122 @@
     <!-- Sample text for accessibility font size -->
     <string name="accessibility_text_size_sample_text">Pchnąć w tę łódź jeża lub ośm skrzyń fig. Pchnąć w tę łódź jeża lub ośm skrzyń fig. Pchnąć w tę łódź jeża lub ośm skrzyń fig. Pchnąć w tę łódź jeża lub ośm skrzyń fig.</string>
 
-    </resources>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Powiększenie lub pomniejszenie tekstu na stronach</string>
+    <!-- Title for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_font_size_title">Rozmiar czcionki</string>
+
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size">Automatyczny</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Czcionka będzie miała rozmiar według ustawień Androida. Wyłączenie umożliwi zarządzanie rozmiarem w tym miejscu.</string>
+
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">Usuń historię przeglądania</string>
+    <!-- Title for the tabs item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_tabs_title">Otwarte karty</string>
+    <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
+    <string name="preferences_delete_browsing_data_tabs_subtitle">Karty: %d</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">Historia przeglądania i dane stron</string>
+    <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
+        number of history items the user has -->
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">Adresy: %d</string>
+    <!-- Title for the collections item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_collections_title">Kolekcje</string>
+    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
+        number of collections that will be deleted -->
+    <string name="preferences_delete_browsing_data_collections_subtitle">Kolekcje: %d</string>
+    <!-- Text for the button to delete browsing data -->
+    <string name="preferences_delete_browsing_data_button">Usuń historię przeglądania</string>
+
+    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
+    <string name="preferences_delete_browsing_data_prompt_message">Zezwolić programowi %s na usunięcie historii przeglądania?</string>
+    <!-- Text for the cancel button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_cancel">Nie zezwalaj</string>
+    <!-- Text for the allow button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_allow">Zezwól</string>
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">Usunięto historię przeglądania</string>
+
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome message
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_header">Witamy w programie %s!</string>
+    <!-- text for the Firefox Accounts section header -->
+    <string name="onboarding_fxa_section_header">Masz już konto?</string>
+    <!-- text for the Firefox Preview feature section header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_feature_section_header">Poznaj program %s</string>
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Wybierz motyw</string>
+    <!-- text for the theme picker onboarding card description -->
+    <string name="onboarding_theme_picker_description">Wypróbuj ciemny motyw: lżejszy dla baterii i dla oczu.</string>
+    <!-- text for the firefox account onboarding card header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_firefox_account_header">W pełni wykorzystuj możliwości programu %s.</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated -->
+    <string name="onboarding_firefox_account_auto_signin_header">Na tym telefonie już zalogowano w innej przeglądarce Firefox.</string>
+    <!-- text for the button to sign into your Firefox account. The word "Firefox" should not be translated -->
+    <string name="onboarding_firefox_account_sign_in">Zaloguj się w Firefoksie</string>
+    <!-- text for the button to stay signed into your Firefox account. -->
+    <string name="onboarding_firefox_account_stay_signed_in">Nie wylogowuj</string>
+    <!-- text for the button to sign out of your Firefox account. -->
+    <string name="onboarding_firefox_account_sign_out">Wyloguj się</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header">Chroń się</string>
+    <!-- text for the tracking protection card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_tracking_protection_description">%s blokuje reklamy śledzące Cię w Internecie.
+    </string>
+    <!-- text for the private browsing onboarding card header -->
+    <string name="onboarding_private_browsing_header">Przeglądaj prywatnie</string>
+    <!-- text for the private browsing onboarding card description
+    The first parameter is an icon that represents private browsing -->
+    <string name="onboarding_private_browsing_description">Tryb prywatny jest dostępny po jednym stuknięciu ikony %s.
+   </string>
+    <!-- text for the privacy notice onboarding card header -->
+    <string name="onboarding_privacy_notice_header">Twoja prywatność</string>
+    <!-- text for the privacy notice onboarding card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_privacy_notice_description">%s został zaprojektowany tak, aby dać Ci kontrolę nad tym,
+        co udostępniasz w sieci i czym dzielisz się z nami.
+    </string>
+    <!-- Text for the button to read the privacy notice -->
+    <string name="onboarding_privacy_notice_read_button">Poznaj nasze zasady ochrony prywatności</string>
+
+    <!-- text for the button to finish onboarding -->
+    <string name="onboarding_finish">Zacznij przeglądać Internet</string>
+
+    <!-- Onboarding theme -->
+    <!-- Automatic theme setting (will follow device setting) -->
+    <string name="onboarding_theme_automatic_title">Automatyczny</string>
+    <!-- Summary of automatic theme setting (will follow device setting) -->
+    <string name="onboarding_theme_automatic_summary">Dostosowuje się do ustawień urządzenia</string>
+    <!-- Theme setting for dark mode -->
+    <string name="onboarding_theme_dark_title">Ciemny motyw</string>
+    <!-- Theme setting for light mode -->
+    <string name="onboarding_theme_light_title">Jasny motyw</string>
+
+    <!-- Text shown in snackbar when multiple tabs have been sent to device -->
+    <string name="sync_sent_tabs_snackbar">Wysłano karty</string>
+    <!-- Text shown in snackbar when one tab has been sent to device  -->
+    <string name="sync_sent_tab_snackbar">Wysłano kartę</string>
+    <!-- Title of QR Pairing Fragment -->
+    <string name="sync_scan_code">Zeskanuj kod</string>
+    <!-- Instructions on how to access pairing -->
+    <string name="sign_in_instructions"><![CDATA[Otwórz Firefoksa na komputerze i wejdź na stronę <b>https://firefox.com/pair</b>]]></string>
+    <!-- Text shown for sign in pairing when ready -->
+    <string name="sign_in_ready_for_scan">Gotowy do skanowania</string>
+    <!-- Text shown for settings option for sign with pairing -->
+    <string name="sign_in_with_camera">Zaloguj się za pomocą aparatu</string>
+    <!-- Text shown for settings option for sign with email -->
+    <string name="sign_in_with_email">Użyj adresu e-mail</string>
+    <!-- Text shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_confirmation_message">Firefox zatrzyma synchronizację z tym kontem, ale nie usunie historii przeglądania na tym urządzeniu.</string>
+    <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_disconnect">Rozłącz</string>
+    <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_cancel">Anuluj</string>
+</resources>
