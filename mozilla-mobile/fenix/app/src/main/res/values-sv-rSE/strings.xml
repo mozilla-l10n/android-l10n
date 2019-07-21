@@ -454,15 +454,27 @@
     <!-- Site permissions preferences header -->
     <string name="permissions_header">Behörigheter</string>
     <!-- Button label that take the user to the Android App setting -->
-    <string name="phone_feature_go_to_settings">Gå till  inställningar</string>
+    <string name="phone_feature_go_to_settings">Gå till inställningar</string>
     <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">Rekommenderad</string>
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">Hantera webbplatsbehörigheter</string>
+    <!-- Button label for clearing all the information of site permissions-->
+    <string name="clear_permissions">Rensa behörigheter</string>
+    <!-- Button label for clearing a site permission-->
+    <string name="clear_permission">Rensa behörigheter</string>
+    <!-- Button label for clearing all the information on all sites-->
+    <string name="clear_permissions_on_all_sites">Rensa behörigheter på alla webbplatser</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">Kamera</string>
     <!-- Preference for altering the microphone access for all websites -->
     <string name="preference_phone_feature_microphone">Mikrofon</string>
     <!-- Preference for altering the location access for all websites -->
     <string name="preference_phone_feature_location">Plats</string>
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Meddelanden</string>
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Fråga för att tillåta</string>
     <!-- Label that indicates that a permission must be blocked -->
     <string name="preference_option_phone_feature_blocked">Blockerad</string>
     <!-- Label that indicates that a permission must be allowed -->
@@ -479,12 +491,30 @@
     <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">Samlingar</string>
+    <!-- No Open Tabs Message Header -->
+    <string name="no_collections_header">Inga samlingar</string>
+    <!-- No Open Tabs Message Description -->
+    <string name="no_collections_description">Dina samlingar kommer att visas här.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">Välj flikar</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Välj samling</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Namnge samling</string>
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">Lägg till samling</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
-    <string name="create_collection_select_all">Välj alla</string>
+    <string name="create_collection_select_all">Markera alla</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Avmarkera alla</string>
     <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
     <string name="create_collection_save_to_collection_empty">Välj flikar att spara</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d flikar valda</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d flik vald</string>
     <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
     <string name="create_collection_tabs_saved">Flikar sparade!</string>
     <!-- Text shown in snackbar when one tab has been saved in a collection -->
@@ -494,6 +524,9 @@
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
     <string name="create_collection_save">Spara</string>
 
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">Samling %d</string>
+
     <!-- Share -->
     <!-- Share screen header -->
     <string name="share_header">Skicka och dela</string>
@@ -501,13 +534,36 @@
     <string name="share_link_subheader">Dela en länk</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Skicka till enhet</string>
+    <!-- An option from the share dialog to sign into sync -->
+    <string name="sync_sign_in">Logga in till Sync</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
     <string name="sync_send_to_all">Skicka till alla enheter</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">Återanslut till Sync</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
+    <string name="sync_offline">Offline</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Anslut en annan enhet</string>
 
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">För att skicka en flik, logga in på Firefox på minst en annan enhet.</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">Jag förstår</string>
+
+    <!-- Notifications -->
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">Samling borttagen</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">Samling omdöpt</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">Flik borttagen</string>
+    <!-- Text shown in snackbar when user deletes all tabs -->
+    <string name="snackbar_tabs_deleted">Flikar borttagna</string>
     <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
     <string name="snackbar_deleted_undo">ÅNGRA</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Tillåt %1$s att öppna %2$s</string>
     <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
     <string name="qr_scanner_dialog_positive">TILLÅT</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
@@ -518,15 +574,30 @@
     <string name="tab_collection_dialog_positive">Ta bort</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">Avbryt</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">Startar fullskärmsläge</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL kopierad</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text">Den snabba bruna räven hoppar över den lata hunden. Den snabba bruna räven hoppar över den lata hunden. Den snabba bruna räven hoppar över den lata hunden. Den snabba bruna räven hoppar över den lata hunden.</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Gör text på webbplatser större eller mindre</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_font_size_title">Teckenstorlek</string>
 
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size">Automatisk fontstorlek</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Teckensnittstorlek matchar dina Android-inställningar. Inaktivera att hantera teckenstorlek här.</string>
+
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">Ta bort surfdata</string>
     <!-- Title for the tabs item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_tabs_title">Öppna flikar</string>
     <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
     <string name="preferences_delete_browsing_data_tabs_subtitle">%d flikar</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">Webbläsarhistorik och platsinformation</string>
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adresser</string>
@@ -536,10 +607,18 @@
         number of collections that will be deleted -->
     <string name="preferences_delete_browsing_data_collections_subtitle">%d samlingar</string>
 
+    <!-- Text for the button to delete browsing data -->
+    <string name="preferences_delete_browsing_data_button">Ta bort surfdata</string>
+
+    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
+    <string name="preferences_delete_browsing_data_prompt_message">Tillåt %s att ta bort dina surfdata?</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="preferences_delete_browsing_data_prompt_cancel">Tillåt inte</string>
     <!-- Text for the allow button for the data deletion dialog -->
     <string name="preferences_delete_browsing_data_prompt_allow">Tillåt</string>
+
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">Surfdata borttagen</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
@@ -547,8 +626,19 @@
     <string name="onboarding_header">Välkommen till %s!</string>
     <!-- text for the Firefox Accounts section header -->
     <string name="onboarding_fxa_section_header">Har du redan ett konto?</string>
+    <!-- text for the Firefox Preview feature section header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_feature_section_header">Lär känna %s</string>
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Välj ditt tema</string>
+    <!-- text for the theme picker onboarding card description -->
+    <string name="onboarding_theme_picker_description">Prova mörkt tema: bättre för ditt batteri och dina ögon.</string>
+    <!-- text for the firefox account onboarding card header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_firefox_account_header">Få ut det mesta av %s.</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated -->
+    <string name="onboarding_firefox_account_auto_signin_header">Du är inloggad på en annan Firefox-webbläsare på den här telefonen.</string>
     <!-- text for the button to sign into your Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Logga in till Firefox</string>
 
@@ -556,15 +646,37 @@
     <string name="onboarding_firefox_account_stay_signed_in">Fortsätt vara inloggad</string>
     <!-- text for the button to sign out of your Firefox account. -->
     <string name="onboarding_firefox_account_sign_out">Logga ut</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header">Skydda dig</string>
+    <!-- text for the tracking protection card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_tracking_protection_description">%s blockerar annonsspårare som följer dig på nätet.
+    </string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Surfa privat</string>
+
+    <!-- text for the private browsing onboarding card description
+    The first parameter is an icon that represents private browsing -->
+    <string name="onboarding_private_browsing_description">När du ser ikonen %s, är privat surfning bara ett tryck bort.
+   </string>
+    <!-- text for the privacy notice onboarding card header -->
+    <string name="onboarding_privacy_notice_header">Din integritet</string>
+    <!-- text for the privacy notice onboarding card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_privacy_notice_description">Vi har utformat %s för att ge dig kontroll över vad du delar
+        online och vad du delar med oss.
+    </string>
+    <!-- Text for the button to read the privacy notice -->
+    <string name="onboarding_privacy_notice_read_button">Läs vår sekretesspolicy</string>
 
     <!-- text for the button to finish onboarding -->
     <string name="onboarding_finish">Börja surfa</string>
 
     <!-- Onboarding theme -->
     <!-- Automatic theme setting (will follow device setting) -->
-    <string name="onboarding_theme_automatic_title">Automatiskt</string>
+    <string name="onboarding_theme_automatic_title">Automatisk</string>
+    <!-- Summary of automatic theme setting (will follow device setting) -->
+    <string name="onboarding_theme_automatic_summary">Anpassar sig till dina enhetsinställningar</string>
     <!-- Theme setting for dark mode -->
     <string name="onboarding_theme_dark_title">Mörkt tema</string>
     <!-- Theme setting for light mode -->
@@ -574,10 +686,20 @@
     <string name="sync_sent_tabs_snackbar">Flikar skickade!</string>
     <!-- Text shown in snackbar when one tab has been sent to device  -->
     <string name="sync_sent_tab_snackbar">Flik skickad!</string>
+    <!-- Title of QR Pairing Fragment -->
+    <string name="sync_scan_code">Skanna QR-kod</string>
+    <!-- Instructions on how to access pairing -->
+    <string name="sign_in_instructions"><![CDATA[Öppna Firefox på din dator och gå till <b>https://firefox.com/pair</b>]]></string>
+    <!-- Text shown for sign in pairing when ready -->
+    <string name="sign_in_ready_for_scan">Redo att skanna</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">Logga in med din kamera</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Använd e-post istället</string>
+    <!-- Text shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_confirmation_message">Firefox kommer sluta att synka med ditt konto, men kommer inte att radera din surfdata på den här enheten.</string>
+    <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_disconnect">Koppla från</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Avbryt</string>
 </resources>
