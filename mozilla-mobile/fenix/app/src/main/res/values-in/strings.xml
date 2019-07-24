@@ -124,13 +124,29 @@
     <!-- Label indicating that sync is in progress -->
     <string name="sync_syncing_in_progress">Menyinkronkan…</string>
 
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">Sinkronisasi gagal. Terakhir berhasil: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">Sinkronisasi gagal. Terakhir disinkronkan: tidak pernah</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">Terakhir disinkronkan: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">Terakhir disinkronkan: tidak pernah</string>
+
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">Tab dari %s</string>
+
     <!-- Advanced Preferences -->
     <!-- Preference for tracking protection settings -->
     <string name="preferences_tracking_protection_settings">Perlindungan Pelacakan</string>
     <!-- Preference switch for tracking protection -->
     <string name="preferences_tracking_protection">Perlindungan Pelacakan</string>
+    <!-- Preference switch description for tracking protection -->
+    <string name="preferences_tracking_protection_description">Blokir konten dan skrip yang melacak Anda secara daring</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Kekecualian</string>
+    <!-- Preference description for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions_description">Perlindungan Pelacakan tidak aktif untuk situs web ini</string>
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Nyalakan untuk semua situs</string>
 
@@ -140,6 +156,8 @@
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Masuk</string>
 
+    <!-- Button to open camera for pairing -->
+    <string name="pair_open_camera">Buka Kamera</string>
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">Batal</string>
 
@@ -148,6 +166,9 @@
     <string name="preference_light_theme">Terang</string>
     <!-- Preference for using dark theme -->
     <string name="preference_dark_theme">Gelap</string>
+
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">Ikuti tema peranti</string>
 
     <!-- Quick Action Sheet -->
     <!-- Button in the browser chrome to share the current page -->
@@ -177,6 +198,8 @@
     <string name="library_downloads">Unduhan</string>
     <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">Markah</string>
+    <!-- Option in library to open Desktop Bookmarks root page -->
+    <string name="library_desktop_bookmarks_root">Markah Desktop</string>
     <!-- Option in library to open Desktop Bookmarks "menu" page -->
     <string name="library_desktop_bookmarks_menu">Menu Markah</string>
     <!-- Option in library to open Desktop Bookmarks "toolbar" page -->
@@ -185,6 +208,8 @@
     <string name="library_desktop_bookmarks_unfiled">Markah Lain</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">Riwayat</string>
+    <!-- Menu Item Label for Search in Library -->
+    <string name="library_search">Cari</string>
     <!-- Settings Page Title -->
     <string name="settings_title">Setelan</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
@@ -228,8 +253,20 @@
     <!-- Text for the header that groups the history the past month -->
     <string name="history_this_month">Bulan ini</string>
 
+    <!-- Text shown when no history exists -->
+    <string name="history_empty_message">Tidak ada riwayat di sini</string>
+
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">Maaf. %1$s tidak dapat memuat halaman.</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Tutup tab</string>
+
+    <!-- Content Description for session item menu button -->
+    <string name="content_description_session_menu">Opsi sesi</string>
+
+    <!-- Content Description for session item share button -->
+    <string name="content_description_session_share">Bagikan sesi</string>
 
     <!-- Bookmarks -->
     <!-- Content description for bookmarks library menu -->
@@ -240,6 +277,8 @@
     <string name="bookmark_select_folder">Pilih folder</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Tambah folder</string>
+    <!-- Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_saved_snackbar">Markah berhasil disimpan!</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">EDIT</string>
     <!-- Bookmark overflow menu edit button -->
@@ -280,12 +319,16 @@
     <!-- Site Permissions -->
     <!-- Site permissions preferences header -->
     <string name="permissions_header">Izin</string>
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">Kelola izin situs</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">Kamera</string>
     <!-- Preference for altering the microphone access for all websites -->
     <string name="preference_phone_feature_microphone">Mikrofon</string>
     <!-- Preference for altering the location access for all websites -->
     <string name="preference_phone_feature_location">Lokasi</string>
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">Pemberitahuan</string>
     <!-- Label that indicates that a permission must be blocked -->
     <string name="preference_option_phone_feature_blocked">Diblokir</string>
     <!-- Label that indicates that a permission must be allowed -->
@@ -299,5 +342,67 @@
     <string name="create_collection_select_tabs">Pilih Tab</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_select_all">Pilih Semua</string>
+
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Batal Pilih Semua</string>
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
+    <string name="create_collection_close">Tutup</string>
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">Simpan</string>
+
+    <!-- Share -->
+    <!-- Share screen header -->
+    <string name="share_header">Kirim dan Bagikan</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">Kirim ke peranti</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">Kirim ke semua peranti</string>
+    <!-- An option to connect additional devices -->
+    <string name="sync_connect_device">Sambungkan peranti lain</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">Untuk mengirimkan tab, masuk ke Firefox minimal pada satu peranti lain.</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">Paham</string>
+
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">Tab dihapus</string>
+    <!-- Text shown in snackbar when user deletes all tabs -->
+    <string name="snackbar_tabs_deleted">Tab dihapus</string>
+    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <string name="snackbar_deleted_undo">URUNGKAN</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Izinkan %1$s untuk membuka %2$s</string>
+    <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
+    <string name="qr_scanner_dialog_positive">IZINKAN</string>
+    <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
+    <string name="qr_scanner_dialog_negative">TOLAK</string>
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">Yakin ingin menghapus %1$s?</string>
+    <!-- Tab collection deletion prompt dialog option to delete the collection -->
+    <string name="tab_collection_dialog_positive">Hapus</string>
+    <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
+    <string name="tab_collection_dialog_negative">Batal</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">Memasuki mode layar penuh</string>
+    <!-- Message for copying the URL via long press on the toolbar -->
+    <string name="url_copied">URL disalin</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Besarkan atau kecilkan teks pada situs web</string>
+    <!-- Title for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_font_size_title">Ukuran Fon</string>
+
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size">Ukuran Fon Otomatis</string>
+
+    <!-- Text for the cancel button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_cancel">Jangan izinkan</string>
+    <!-- Text for the allow button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_allow">Izinkan</string>
+
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome message
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_header">Selamat datang di %s!</string>
 
     </resources>
