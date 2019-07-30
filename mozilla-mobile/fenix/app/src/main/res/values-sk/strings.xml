@@ -63,6 +63,8 @@
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
     <string name="search_scan_button">Skenovať</string>
+    <!-- Button in the search view that lets a user search by using a shortcut -->
+    <string name="search_shortcuts_button">Skratky</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">Nastavenia vyhľadávacieho modulu</string>
     <!-- Header displayed when selecting a shortcut search engine -->
@@ -135,6 +137,8 @@
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Synchronizovať</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">Vyberte si, čo chcete synchronizovať</string>
     <!-- Preference for syncing history -->
     <string name="preferences_sync_history">História</string>
     <!-- Preference for syncing bookmarks -->
@@ -218,6 +222,8 @@
     <string name="quick_action_bookmark">Pridať medzi záložky</string>
     <!-- Button in the browser chrome in the browser to edit the bookmark of the current page -->
     <string name="quick_action_bookmark_edit">Upraviť záložku</string>
+    <!-- Button in the browser chrome in the browser to put the the current page in reader mode -->
+    <string name="quick_action_read">Čítať</string>
     <!-- Button in the browser chrome to exit reader mode -->
     <string name="quick_action_read_close">Zavrieť</string>
     <!-- Button in the browser chrome to configure reader mode appearance e.g. the used font type and size -->
@@ -235,12 +241,26 @@
     <string name="library_downloads">Prevzaté súbory</string>
     <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">Záložky</string>
+    <!-- Option in library to open Desktop Bookmarks root page -->
+    <string name="library_desktop_bookmarks_root">Záložky z počítača</string>
+    <!-- Option in library to open Desktop Bookmarks "menu" page -->
+    <string name="library_desktop_bookmarks_menu">Ponuka záložiek</string>
+    <!-- Option in library to open Desktop Bookmarks "toolbar" page -->
+    <string name="library_desktop_bookmarks_toolbar">Panel záložiek</string>
+    <!-- Option in library to open Desktop Bookmarks "unfiled" page -->
+    <string name="library_desktop_bookmarks_unfiled">Ostatné záložky</string>
+    <!-- Option in Library to open History page -->
+    <string name="library_history">História</string>
+    <!-- Option in Library to open Reading List -->
+    <string name="library_reading_list">Zoznam na prečítanie</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">Hľadať</string>
     <!-- Library Page Title -->
     <string name="library_title">Knižnica</string>
     <!-- Settings Page Title -->
     <string name="settings_title">Nastavenia</string>
+    <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
+    <string name="content_description_history_menu">Ponuka položky z histórie</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Zavrieť</string>
 
@@ -253,10 +273,16 @@
     <string name="add_tab">Pridať kartu</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Zavrieť kartu</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
+    <string name="open_tabs_menu">Ponuka otvorených kariet</string>
+    <!-- Open tabs menu item to close all tabs -->
+    <string name="tabs_menu_close_all_tabs">Zavrieť všetky karty</string>
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">Zdieľať karty</string>
     <!-- Open tabs menu item to save tabs to collection -->
     <string name="tabs_menu_save_to_collection">Uložiť do kolekcie</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string name="tab_menu">Ponuka kariet</string>
     <!-- Tab menu item to share the tab -->
     <string name="tab_share">Zdieľať kartu</string>
     <!-- Button in the current session menu. Deletes the session when pressed -->
@@ -278,6 +304,8 @@
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Vymazať históriu</string>
+    <!-- Text for the dialog to confirm clearing all history -->
+    <string name="history_delete_all_dialog">Naozaj chcete vymazať svoju históriu?</string>
     <!-- Text for positive action to delete history in deleting history dialog -->
     <string name="history_clear_dialog">Vymazať</string>
     <!-- Text for the button to delete a single history item -->
@@ -297,8 +325,14 @@
     <!-- Content Description for session item share button -->
     <string name="content_description_session_share">Zdieľať reláciu</string>
 
+    <!-- Screen title for editing bookmarks -->
+    <string name="bookmark_edit">Upraviť záložku</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Pridať priečinok</string>
+    <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_created_snackbar">Záložka bola vytvorená.</string>
+    <!-- Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_saved_snackbar">Záložka bola uložená!</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">UPRAVIŤ</string>
     <!-- Bookmark overflow menu edit button -->
@@ -325,6 +359,12 @@
     <string name="bookmark_folder_label">PRIEČINOK</string>
     <!-- Bookmark NAME editing field label -->
     <string name="bookmark_name_label">NÁZOV</string>
+    <!-- Bookmark add folder screen title -->
+    <string name="bookmark_add_folder_fragment_label">Pridanie priečinku</string>
+    <!-- Bookmark select folder screen title -->
+    <string name="bookmark_select_folder_fragment_label">Výber priečinku</string>
+    <!-- Bookmark editing error missing title -->
+    <string name="bookmark_empty_title_error">Priečinok musí mať názov</string>
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">Neplatná URL adresa</string>
     <!-- Bookmark undo button for deletion snackbar action -->
@@ -351,6 +391,116 @@
     <string name="no_collections_header">Nemáte žiadne kolekcie</string>
     <!-- No Open Tabs Message Description -->
     <string name="no_collections_description">Vaše kolekcie budú zobrazené tu.</string>
+
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">Výber kariet</string>
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_all">Vybrať všetky</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Zrušiť výber všetkých</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">Počet vybraných kariet: %d</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">Bola vybraná %d karta</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">Karty boli uložené!</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">Karta bola uložená!</string>
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
+    <string name="create_collection_close">Zavrieť</string>
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">Uložiť</string>
+
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">Kolekcia %d</string>
+
+    <!-- Share -->
+    <!-- Share screen header -->
+    <string name="share_header">Odoslať a zdieľať</string>
+    <!-- Sub-header in the dialog to share a link to another app -->
+    <string name="share_link_subheader">Zdieľať odkaz</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">Odoslať do zariadenia</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">Odoslať do všetkých zariadení</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">Rozumiem</string>
+
+    <!-- Notifications -->
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">Kolekcia bola odstránená</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">Kolekcia bola premenovaná</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">Karta bola odstránená</string>
+    <!-- Text shown in snackbar when user deletes all tabs -->
+    <string name="snackbar_tabs_deleted">Karty boli odstránené</string>
+    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <string name="snackbar_deleted_undo">SPÄŤ</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Chcete aplikácii %1$s povoliť otvorenie %2$s</string>
+    <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
+    <string name="qr_scanner_dialog_positive">POVOLIŤ</string>
+    <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
+    <string name="qr_scanner_dialog_negative">ZAMIETNUŤ</string>
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">Naozaj chcete odstrániť kolekciu %1$s?</string>
+    <!-- Tab collection deletion prompt dialog option to delete the collection -->
+    <string name="tab_collection_dialog_positive">Odstrániť</string>
+    <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
+    <string name="tab_collection_dialog_negative">Zrušiť</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">Bol spustený režim celej obrazovky</string>
+    <!-- Message for copying the URL via long press on the toolbar -->
+    <string name="url_copied">Adresa bola skopírovaná</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text">A tie vrabce z toho tŕnia, štrng brnk do tŕnia. A tie vrabce z toho tŕnia, štrng brnk do tŕnia. A tie vrabce z toho tŕnia, štrng brnk do tŕnia. A tie vrabce z toho tŕnia, štrng brnk do tŕnia.</string>
+    <!-- Title for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_font_size_title">Veľkosť písma</string>
+
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size">Automatická veľkosť písma</string>
+
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">Odstrániť údaje o prehliadaní</string>
+    <!-- Title for the tabs item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_tabs_title">Otvorené karty</string>
+    <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
+    <string name="preferences_delete_browsing_data_tabs_subtitle">Počet kariet: %d</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">História prehliadania a údaje stránok</string>
+    <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
+        number of history items the user has -->
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">Počet adries: %d</string>
+    <!-- Title for the collections item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_collections_title">Kolekcie</string>
+    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
+        number of collections that will be deleted -->
+    <string name="preferences_delete_browsing_data_collections_subtitle">Počet kolekcií: %d</string>
+    <!-- Text for the button to delete browsing data -->
+    <string name="preferences_delete_browsing_data_button">Odstrániť údaje o prehliadaní</string>
+
+    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
+    <string name="preferences_delete_browsing_data_prompt_message">Chcete povoliť aplikácii %s odstrániť vaše údaje o prehliadaní?</string>
+    <!-- Text for the cancel button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_cancel">Nepovoliť</string>
+    <!-- Text for the allow button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_allow">Povoliť</string>
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">Údaje o prehliadaní boli odstránené</string>
+
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome message
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_header">Víta vás %s!</string>
+    <!-- text for the Firefox Preview feature section header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_feature_section_header">Spoznajte %s</string>
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Vyberte si tému vzhľadu</string>
 
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Odpojiť</string>
