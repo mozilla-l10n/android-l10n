@@ -18,8 +18,13 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Jste v režimu anonymního prohlížení</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder">
+         %1$s vymaže vaši historii vyhledávání a navštívených stránek po ukončení aplikace nebo zavření všech anonymních panelů. S touto funkcí nejste na internetu zcela neviditelní a např. poskytovatel připojení k internetu může stále zjistit, které stránky navštěvujete. Vaše aktivita na internetu ale zůstane utajena před dalšími uživateli tohoto zařízení.\n\nČasté omyly o fungování anonymního prohlížení
+    </string>
     <!-- Delete session button to erase your history in a private session -->
-    <string name="private_browsing_delete_session">Smazat relaci</string>
+    <string name="private_browsing_delete_session">Odstranit relaci</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -52,6 +57,8 @@
     <string name="browser_menu_report_issue">Nahlásit chybu stránky</string>
     <!-- Browser menu button that open a share menu to share the current site -->
     <string name="browser_menu_share">Sdílet</string>
+    <!-- Share menu title, displayed when a user is sharing their current site -->
+    <string name="menu_share_with">Sdílet pomocí…</string>
     <!-- Browser menu button shown in custom tabs that opens the current tab in Fenix
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_open_in_fenix">Otevřít v aplikaci %1$s</string>
@@ -110,12 +117,20 @@
     <string name="preferences_accessibility">Přístupnost</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Účet</string>
+    <!-- Preference shown on banner to sign into account -->
+    <string name="preferences_sign_in">Přihlásit se</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Vzhled</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">S účtem Firefoxu můžete synchronizovat záložky, historii i další svá data</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Účet Firefoxu</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">Pro spuštění synchronizace se znovu připojte</string>
     <!-- Preference for language -->
     <string name="preferences_language">Jazyk</string>
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices">Možnosti hlášení</string>
     <!-- Preference for data collection -->
     <string name="preferences_data_collection">Sběr dat</string>
     <!-- Preference linking to the privacy notice -->
@@ -138,6 +153,8 @@
     <string name="preferences_sync_history">Historii</string>
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">Záložky</string>
+    <!-- Preference for signing out -->
+    <string name="preferences_sign_out">Odhlásit</string>
     <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">Název zařízení</string>
     <!-- Text shown when user enters empty device name -->
@@ -154,6 +171,20 @@
     <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">Poslední synchronizace: nikdy</string>
 
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name">%s na %s %s</string>
+
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">Přijaté panely</string>
+    <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_description">Oznámení o panelech přijatých z jiných zařízení s Firefoxem.</string>
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">Přijatý panel</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">Přijaté panely</string>
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Panel z %s</string>
 
@@ -171,6 +202,8 @@
     <string name="preferences_tracking_protection_exceptions_description">Ochrana proti sledování je pro tyto servery vypnutá</string>
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Zapnout pro všechny servery</string>
+    <!-- Text displayed when there are no exceptions, includes a learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message">Nastavením výjimky můžete vypnout ochranu proti sledování na vybraných stránkách.\n\nZjistit více</string>
     <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
     <string name="preferences_tracking_protection_turned_off_globally">Ochranu proti sledování můžete opět zapnout v nastavení aplikace.</string>
 
@@ -182,12 +215,26 @@
     <!-- Preference switch for Mozilla location service -->
     <string name="preferences_mozilla_location_service">Geolokační služba Mozilly</string>
 
+    <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preferences_fenix_health_report">Hlášení o zdraví aplikace %s</string>
+
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Zapnout synchronizaci</string>
+    <!-- Preference for pairing -->
+    <string name="preferences_sync_pair">Naskenujte párovací kód zobrazení ve Firefoxu na počítači</string>
+    <!-- Preference for account login -->
+    <string name="preferences_sync_sign_in">Přihlásit se</string>
+    <!-- Preference for reconnecting to FxA sync -->
+    <string name="preferences_sync_sign_in_to_reconnect">Pro opětovné připojení se přihlaste</string>
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">Odebrat účet</string>
 
+    <!-- Pairing Feature strings -->
+    <!-- Instructions on how to access pairing -->
+    <string name="pair_instructions"><![CDATA[Pro zobrazení QR kódu navštivte ve Firefoxu na svém počítači stránku <b>firefox.com/pair</b>.]]></string>
+    <!-- Button to open camera for pairing -->
+    <string name="pair_open_camera">Otevřít fotoaparát</string>
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">Zrušit</string>
 
@@ -208,8 +255,12 @@
     <string name="quick_action_bookmark">Přidat do záložek</string>
     <!-- Button in the browser chrome in the browser to edit the bookmark of the current page -->
     <string name="quick_action_bookmark_edit">Upravit záložku</string>
+    <!-- Button in the browser chrome in the browser to put the the current page in reader mode -->
+    <string name="quick_action_read">Režim čtení</string>
     <!-- Button in the browser chrome to exit reader mode -->
     <string name="quick_action_read_close">Zavřít</string>
+    <!-- Button in the browser chrome to open the current page in an external app -->
+    <string name="quick_action_open_app_link">Otevřít v aplikaci</string>
     <!-- Button in the browser chrome to configure reader mode appearance e.g. the used font type and size -->
     <string name="quick_action_read_appearance">Vzhled</string>
     <!-- Content description (not visible, for screen readers etc.): Quick action sheet handle to provide users
@@ -237,6 +288,8 @@
     <string name="library_history">Historie</string>
     <!-- Option in Library to open Reading List -->
     <string name="library_reading_list">Seznam ke čtení</string>
+    <!-- Menu Item Label for Search in Library -->
+    <string name="library_search">Hledat</string>
     <!-- Library Page Title -->
     <string name="library_title">Knihovna</string>
     <!-- Settings Page Title -->
@@ -249,6 +302,8 @@
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Otevřené panely</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_title">Anonymní relace</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Přidat panel</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
@@ -265,6 +320,8 @@
     <string name="tab_menu">Nabídka panelů</string>
     <!-- Tab menu item to share the tab -->
     <string name="tab_share">Sdílet panel</string>
+    <!-- Button in the current session menu. Deletes the session when pressed -->
+    <string name="current_session_delete">Odstranit</string>
     <!-- Button in the current session menu. Saves the session when pressed -->
     <string name="current_session_save">Uložit</string>
     <!-- Button in the current session menu. Opens the share menu when pressed -->
@@ -275,6 +332,22 @@
     <string name="save_to_collection">Uložit do sbírky</string>
 
 
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">Odstranit sbírku</string>
+
+
+    <!-- History -->
+    <!-- Text for the button to clear all history -->
+    <string name="history_delete_all">Vymazat historii</string>
+    <!-- Text for the dialog to confirm clearing all history -->
+    <string name="history_delete_all_dialog">Opravdu chcete vymazat historii vašeho prohlížení?</string>
+    <!-- Text for positive action to delete history in deleting history dialog -->
+    <string name="history_clear_dialog">Vymazat</string>
+    <!-- Text for the button to delete a single history item -->
+    <string name="history_delete_item">Smazat</string>
+    <!-- Text for the button to clear selected history items. The first parameter
+        is a digit showing the number of items you have selected -->
+    <string name="history_delete_some">Položek ke smazání: %1$d</string>
     <!-- Text for the header that groups the history for Today -->
     <string name="history_today">Dnes</string>
     <!-- Text for the header that groups the history the past week -->
@@ -324,6 +397,8 @@
     <string name="bookmark_menu_open_in_new_tab_button">Otevřít v novém panelu</string>
     <!-- Bookmark overflow menu open in private tab button -->
     <string name="bookmark_menu_open_in_private_tab_button">Otevřít v anonymním panelu</string>
+    <!-- Bookmark overflow menu delete button -->
+    <string name="bookmark_menu_delete_button">Odstranit</string>
     <!-- Bookmark editing screen title -->
     <string name="edit_bookmark_fragment_title">Upravit záložku</string>
     <!-- Bookmark folder editing screen title -->
@@ -341,10 +416,61 @@
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">Neplatná URL adresa</string>
 
+    <!-- Bookmark snackbar message on deletion
+     The first parameter is the host part of the URL of the bookmark deleted, if any -->
+    <string name="bookmark_deletion_snackbar_message">Záložka odstraněna: %1$s</string>
+
     <!-- Site Permissions -->
     <!-- Site permissions preferences header -->
     <string name="permissions_header">Oprávnění</string>
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">Přejít do Nastavení</string>
 
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">Znovu se připojit k synchronizaci</string>
+
+    <!-- Notifications -->
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">Sbírka odstraněna</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">Panel zavřen</string>
+    <!-- Text shown in snackbar when user deletes all tabs -->
+    <string name="snackbar_tabs_deleted">Panely zavřeny</string>
+    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <string name="snackbar_deleted_undo">ZPĚT</string>
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">Opravdu chcete odstranit sbírku „%1$s“?</string>
+    <!-- Tab collection deletion prompt dialog option to delete the collection -->
+    <string name="tab_collection_dialog_positive">Odstranit</string>
+
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">Smazat data o prohlížení</string>
+    <!-- Title for the tabs item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_tabs_title">Otevřené panely</string>
+    <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
+    <string name="preferences_delete_browsing_data_tabs_subtitle">Počet panelů: %d</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">Historie prohlížení a data stránek</string>
+    <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
+        number of history items the user has -->
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">Počet adres: %d</string>
+    <!-- Title for the collections item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_collections_title">Sbírky</string>
+    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
+        number of collections that will be deleted -->
+    <string name="preferences_delete_browsing_data_collections_subtitle">Počet sbírek: %d</string>
+    <!-- Text for the button to delete browsing data -->
+    <string name="preferences_delete_browsing_data_button">Smazat data o prohlížení</string>
+
+    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
+    <string name="preferences_delete_browsing_data_prompt_message">Chcete aplikaci %s povolit smazat vaše data o prohlížení?</string>
+    <!-- Text for the cancel button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_cancel">Nepovolit</string>
+    <!-- Text for the allow button for the data deletion dialog -->
+    <string name="preferences_delete_browsing_data_prompt_allow">Smazat</string>
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">Data o prohlížení smazána</string>
+
+    <!-- Text shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_confirmation_message">Firefox ukončí synchronizaci s tímto účtem, ale neodstraní žádnou historii prohlížení na tomto zařízení.</string>
     </resources>
