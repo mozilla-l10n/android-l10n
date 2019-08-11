@@ -17,7 +17,7 @@
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
-    <string name="private_browsing_title">Jste v režimu anonymního prohlížení</string>
+    <string name="private_browsing_title">Používáte anonymní prohlížení</string>
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="private_browsing_placeholder">
@@ -194,7 +194,7 @@
     <!-- Preference switch for tracking protection -->
     <string name="preferences_tracking_protection">Ochrana proti sledování</string>
     <!-- Preference switch description for tracking protection -->
-    <string name="preferences_tracking_protection_description">Blokujte obsah a skripty, které vás na internetu sledují</string>
+    <string name="preferences_tracking_protection_description">Blokuje obsah a skripty, které vás na internetu sledují</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Výjimky</string>
 
@@ -377,6 +377,8 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Zatím nemáte žádnou historii prohlížení</string>
 
+    <!-- Description text displayed on the tab crash page -->
+    <string name="tab_crash_description">Níže se můžete pokusit panel obnovit nebo ho zavřít.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
     <string name="tab_crash_send_report">Poslat Mozille hlášení o pádu</string>
     <!-- Close tab button text on the tab crash page -->
@@ -443,6 +445,8 @@
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">Neplatná URL adresa</string>
 
+    <!-- Bookmark screen message for empty bookmarks folder -->
+    <string name="bookmarks_empty_message">Nemáte žádné záložky</string>
     <!-- Bookmark snackbar message on deletion
      The first parameter is the host part of the URL of the bookmark deleted, if any -->
     <string name="bookmark_deletion_snackbar_message">Záložka odstraněna: %1$s</string>
@@ -458,6 +462,10 @@
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">Přejít do Nastavení</string>
 
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">Rychlá nastavení</string>
     <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">Doporučeno</string>
     <!-- button that allows editing site permissions settings -->
@@ -529,6 +537,9 @@
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
     <string name="create_collection_save">Uložit</string>
 
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">Sbírka č. %d</string>
+
     <!-- Share -->
     <!-- Share screen header -->
     <string name="share_header">Poslat a sdílet</string>
@@ -580,11 +591,18 @@
     <string name="full_screen_notification">Spuštěn režim celé obrazovky</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL adresa zkopírována</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text">Příliš žluťoučký kůň úpěl ďábelské ódy. Příliš žluťoučký kůň úpěl ďábelské ódy. Příliš žluťoučký kůň úpěl ďábelské ódy. Příliš žluťoučký kůň úpěl ďábelské ódy.</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Úprava velikosti textu na webových stránkách</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_font_size_title">Velikost písma</string>
 
     <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
     <string name="preference_accessibility_auto_size">Automatická velikost písma</string>
+
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Zrušte tuto volbu, pokud nechcete, aby se velikost písma řídila nastavením systému Android.</string>
 
     <!-- Title for the Delete browsing data preference -->
     <string name="preferences_delete_browsing_data">Smazat data o prohlížení</string>
@@ -620,6 +638,9 @@
     <string name="onboarding_header">Vítá vás %s</string>
     <!-- text for the Firefox Accounts section header -->
     <string name="onboarding_fxa_section_header">Už máte účet?</string>
+    <!-- text for the Firefox Preview feature section header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_feature_section_header">Poznejte aplikaci %s</string>
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Vyberte si vzhled</string>
     <!-- text for the theme picker onboarding card description -->
@@ -627,12 +648,23 @@
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Využijte aplikaci %s naplno.</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated -->
+    <string name="onboarding_firefox_account_auto_signin_header">Na tomto telefonu už jste přihlášení k jinému účtu Firefoxu.</string>
     <!-- text for the button to sign into your Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Přihlásit se do Firefoxu</string>
+    <!-- text for the button to stay signed into your Firefox account. -->
+    <string name="onboarding_firefox_account_stay_signed_in">Zůstat přihlášeni</string>
+    <!-- text for the button to sign out of your Firefox account. -->
+    <string name="onboarding_firefox_account_sign_out">Odhlásit se</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header">Chraňte se</string>
     <!-- text for the tracking protection card description
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_tracking_protection_description">%s blokuje reklamy, které vás sledujíc napříč internetem.
     </string>
+    <!-- text for the private browsing onboarding card header -->
+    <string name="onboarding_private_browsing_header">Prohlížejte v soukromí</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Vaše soukromí</string>
     <!-- Text for the button to read the privacy notice -->
@@ -659,6 +691,10 @@
     <string name="sync_scan_code">Naskenovat kód</string>
     <!-- Instructions on how to access pairing -->
     <string name="sign_in_instructions"><![CDATA[Otevřte Firefoxu na svém počítači a navštivte stránku <b>https://firefox.com/pair</b>]]></string>
+    <!-- Text shown for settings option for sign with pairing -->
+    <string name="sign_in_with_camera">Přihlásit se pomocí fotoaparátu</string>
+    <!-- Text shown for settings option for sign with email -->
+    <string name="sign_in_with_email">Použít raději e-mail</string>
     <!-- Text shown in confirmation dialog to sign out of account -->
     <string name="sign_out_confirmation_message">Firefox ukončí synchronizaci s tímto účtem, ale neodstraní žádnou historii prohlížení na tomto zařízení.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
