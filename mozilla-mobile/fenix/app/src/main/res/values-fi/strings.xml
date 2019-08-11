@@ -115,6 +115,8 @@
     <string name="preferences_language">Kieli</string>
     <!-- Preference linking to the privacy notice -->
     <string name="preferences_privacy_link">Yksityisyyskäytäntö</string>
+    <!-- Preference title for switch preference to show search suggestions -->
+    <string name="preferences_show_search_suggestions">Näytä hakuehdotukset</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Tilin asetukset</string>
 
@@ -144,6 +146,20 @@
     <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">Viimeksi synkronoitu: ei koskaan</string>
 
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name">%s laitteella %s %s</string>
+
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">Vastaanotetut välilehdet</string>
+    <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_description">Ilmoitukset muista Firefox-laitteista vastaanotetuista välilehdistä.</string>
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">Välilehti vastaanotettu</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">Välilehtiä vastaanotettu</string>
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Välilehti laitteesta %s</string>
 
@@ -230,6 +246,8 @@
     <string name="add_tab">Lisää välilehti</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Sulje välilehti</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
+    <string name="open_tabs_menu">Avointen välilehtien valikko</string>
     <!-- Open tabs menu item to close all tabs -->
     <string name="tabs_menu_close_all_tabs">Sulje kaikki välilehdet</string>
     <!-- Open tabs menu item to share all tabs -->
@@ -280,6 +298,9 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Ei historiaa täällä</string>
 
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">Pahoittelut, %1$s ei voi ladata tätä sivua.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
     <string name="tab_crash_send_report">Lähetä kaatumisraportti Mozillalle</string>
     <!-- Close tab button text on the tab crash page -->
@@ -386,6 +407,11 @@
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Poikkeukset</string>
 
+    <!-- Summary of tracking protection preference if tracking protection is set to on -->
+    <string name="tracking_protection_on">Päällä</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <string name="tracking_protection_off">Pois</string>
+
     <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">Kokoelmat</string>
@@ -435,12 +461,18 @@
     <string name="share_link_subheader">Jaa linkki</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Lähetä laitteeseen</string>
+    <!-- An option from the share dialog to sign into sync -->
+    <string name="sync_sign_in">Kirjaudu sisään Synciin</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
     <string name="sync_send_to_all">Lähetä kaikkiin laitteisiin</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">Yhdistä uudelleen Synciin</string>
     <!-- Text displayed when sync is offline and cannot be accessed -->
     <string name="sync_offline">Ei yhteydessä</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Yhdistä toinen laite</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">Lähetä välilehti kirjautumalla Firefoxiin vähintään yhdellä muulla laitteella.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Selvä</string>
 
@@ -455,6 +487,9 @@
     <string name="snackbar_tabs_deleted">Välilehdet poistettu</string>
     <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
     <string name="snackbar_deleted_undo">KUMOA</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Salli %1$sin avata %2$s</string>
     <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
     <string name="qr_scanner_dialog_positive">SALLI</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
@@ -470,6 +505,16 @@
     <string name="full_screen_notification">Siirrytään koko näytön tilaan</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">Osoite kopioitu</string>
+
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Tee verkkosivujen tekstistä suurempaa tai pienempää</string>
+    <!-- Title for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_font_size_title">Fontin koko</string>
+
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size">Automaattinen fonttikoko</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Fonttikoko vastaa Androidin asetuksia. Poista valinta käytöstä hallitaksesi fontin kokoa täällä.</string>
 
     <!-- Title for the Delete browsing data preference -->
     <string name="preferences_delete_browsing_data">Poista selaustiedot</string>
@@ -490,6 +535,8 @@
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Poista selaustiedot</string>
 
+    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
+    <string name="preferences_delete_browsing_data_prompt_message">Sallitko %sin poistaa selaustietosi?</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="preferences_delete_browsing_data_prompt_cancel">Älä salli</string>
     <!-- Text for the allow button for the data deletion dialog -->
