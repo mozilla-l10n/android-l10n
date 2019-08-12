@@ -80,6 +80,12 @@
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
     <string name="awesomebar_clipboard_title">開啟剪貼簿中的鏈結</string>
 
+    <!-- Search Widget -->
+    <!-- Text preview for smaller sized widgets -->
+    <string name="search_widget_text_short">搜尋</string>
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">搜尋 Web</string>
+
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">設定</string>
@@ -362,12 +368,12 @@
     <!-- Text for the button to clear selected history items. The first parameter
         is a digit showing the number of items you have selected -->
     <string name="history_delete_some">刪除 %1$d 個項目</string>
-    <!-- Text for the header that groups the history for Today -->
-    <string name="history_today">今天</string>
-    <!-- Text for the header that groups the history the past week -->
-    <string name="history_this_week">本週</string>
-    <!-- Text for the header that groups the history the past month -->
-    <string name="history_this_month">這個月</string>
+    <!-- Text for the header that groups the history for last 24 hours -->
+    <string name="history_24_hours">24 小時以內</string>
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">7 天內</string>
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">30 天內</string>
     <!-- Text for the header that groups the history older than the last month -->
     <string name="history_older">更久之前</string>
 
@@ -499,7 +505,6 @@
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">關閉</string>
 
-    <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">收藏集</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
@@ -643,13 +648,10 @@
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">刪除瀏覽資料</string>
 
-    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
-    <string name="preferences_delete_browsing_data_prompt_message">要允許 %s 刪除您的瀏覽資料嗎？</string>
     <!-- Text for the cancel button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_cancel">不允許</string>
+    <string name="delete_browsing_data_prompt_cancel">取消</string>
     <!-- Text for the allow button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_allow">允許</string>
-
+    <string name="delete_browsing_data_prompt_allow">刪除</string>
     <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">已刪除瀏覽資料</string>
 
@@ -669,16 +671,19 @@
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">發揮 %s 的最大威力。</string>
-    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated -->
-    <string name="onboarding_firefox_account_auto_signin_header">您已登入至這台手機上的另一套 Firefox 瀏覽器。</string>
-    <!-- text for the button to sign into your Firefox account. The word "Firefox" should not be translated -->
+    <!-- text for the button to confirm automatic sign-in -->
+    <string name="onboarding_firefox_account_auto_signin_confirm">好，請幫我登入</string>
+    <!-- text for the automatic sign-in button while signing in is in process -->
+    <string name="onboarding_firefox_account_signing_in">登入中…</string>
+    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">登入至 Firefox</string>
-    <!-- text for the button to stay signed into your Firefox account. -->
-    <string name="onboarding_firefox_account_stay_signed_in">保持登入</string>
-    <!-- text for the button to sign out of your Firefox account. -->
-    <string name="onboarding_firefox_account_sign_out">登出</string>
 
+    <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
+    <string name="onboarding_firefox_account_stay_signed_out">不要登入</string>
+    <!-- text to display in the snackbar once account is signed-in -->
+    <string name="onboarding_firefox_account_sync_is_on">已開啟 Sync</string>
+    <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
+    <string name="onboarding_firefox_account_automatic_signin_failed">登入失敗</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">保護自己</string>
     <!-- text for the tracking protection card description
@@ -730,4 +735,41 @@
     <string name="sign_out_disconnect">取消連線</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">取消</string>
+    <!-- Error message snackbar shown after the user tried to select a default folder which cannot be altered -->
+    <string name="bookmark_cannot_edit_root">無法編輯預設資料夾</string>
+
+    <!-- Enhanced Tracking Protection -->
+    <!-- Link displayed in enhanced tracking protection panel to access tracking protection settings -->
+    <string name="etp_settings">保護設定</string>
+    <!-- Title for the description of enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_title">上網不被追蹤</string>
+    <!-- Text displayed that links to website about enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_learn_more">了解更多</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard">標準（推薦）</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description">在保護與效能間取得平衡。</string>
+    <!-- Preference for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict">嚴格</string>
+    <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
+    <string name="enhanced_tracking_protection_blocking">封鎖</string>
+    <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
+    <string name="enhanced_tracking_protection_not_blocking">不封鎖</string>
+    <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_title">社交媒體追蹤器</string>
+    <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_title">跨網站追蹤 Cookie</string>
+    <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_title">加密貨幣採礦程式</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_title">數位指紋追蹤程式</string>
+    <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_title">追蹤用內容</string>
+    <!-- About page Your rights link text -->
+    <string name="about_your_rights">您的權利</string>
+    <!-- About page link text to open open source licenses screen -->
+    <string name="about_open_source_licenses">我們使用的開放原始碼程式庫</string>
+    <!-- Open source licenses page title
+    The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | 開放原始碼程式庫</string>
 </resources>
