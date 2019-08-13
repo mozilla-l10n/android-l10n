@@ -78,6 +78,8 @@
     <string name="preferences_category_about">Tietoja</string>
     <!-- Preference for settings related to changing the default search engine -->
     <string name="preferences_search_engine">Hakukone</string>
+    <!-- Preference for showing visited sites and bookmarks in awesomebar -->
+    <string name="preference_show_visited_sites_bookmarks">Näytä vieraillut sivut ja kirjanmerkit</string>
     <!-- Preference linking to help about Fenix -->
     <string name="preferences_help">Ohje</string>
     <!-- Preference link to rating Fenix on the Play Store -->
@@ -99,6 +101,8 @@
     <string name="preferences_set_as_default_browser">Aseta oletusselaimeksi</string>
     <!-- Preference category for advanced settings -->
     <string name="preferences_category_advanced">Lisäasetukset</string>
+    <!-- Preference category for privacy settings -->
+    <string name="preferences_category_privacy">Yksityisyys</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Sivustojen käyttöoikeudet</string>
     <!-- Preference for accessibility -->
@@ -117,6 +121,10 @@
     <string name="preferences_language">Kieli</string>
     <!-- Preference linking to the privacy notice -->
     <string name="preferences_privacy_link">Yksityisyyskäytäntö</string>
+    <!-- Preference category for developer tools -->
+    <string name="developer_tools_category">Kehittäjätyökalut</string>
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">Etävianjäljitys USB:n kautta</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Näytä hakuehdotukset</string>
     <!-- Preference for account settings -->
@@ -170,15 +178,29 @@
     <string name="preferences_tracking_protection_settings">Seurannan suojaus</string>
     <!-- Preference switch for tracking protection -->
     <string name="preferences_tracking_protection">Seurannan suojaus</string>
+    <!-- Preference switch description for tracking protection -->
+    <string name="preferences_tracking_protection_description">Estä sisältö ja komentosarjat, jotka seuraavat sinua verkossa</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Poikkeukset</string>
+
+    <!-- Preference description for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions_description">Seurannan suojaus on pois käytöstä seuraaville sivustoille</string>
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Ota käyttöön kaikille sivustoille</string>
+    <!-- Text displayed when there are no exceptions, includes a learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message">Poikkeukset mahdollistavat kytkeä seurannan suojauksen pois käytöstä valituilla sivustoilla.\n\nLue lisää</string>
 
     <!-- Preference switch for Mozilla location service -->
     <string name="preferences_mozilla_location_service">Mozillan sijaintipalvelu</string>
 
+    <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preferences_fenix_health_report">%s-terveysraportti</string>
+
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Ota Sync käyttöön</string>
+    <!-- Preference for pairing -->
+    <string name="preferences_sync_pair">Skannaa parituskoodi Firefoxin työpöytäversiossa</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Kirjaudu sisän</string>
     <!-- Preference for removing FxA account -->
@@ -304,13 +326,7 @@
     <!-- Text for the button to clear selected history items. The first parameter
         is a digit showing the number of items you have selected -->
     <string name="history_delete_some">Poista %1$d tietuetta</string>
-    <!-- Text for the header that groups the history for Today -->
-    <string name="history_today">Tänään</string>
 
-    <!-- Text for the header that groups the history the past week -->
-    <string name="history_this_week">Tällä viikolla</string>
-    <!-- Text for the header that groups the history the past month -->
-    <string name="history_this_month">Tässä kuussa</string>
     <!-- Text for the header that groups the history older than the last month -->
     <string name="history_older">Vanhemmat</string>
     <!-- Text shown when no history exists -->
@@ -432,7 +448,6 @@
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Pois</string>
 
-    <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">Kokoelmat</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
@@ -451,6 +466,8 @@
     <string name="create_collection_add_new_collection">Lisää uusi kokoelma</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_select_all">Valitse kaikki</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Poista kaikkien valinta</string>
     <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
     <string name="create_collection_save_to_collection_empty">Valitse tallennettavat välilehdet</string>
     <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
@@ -555,12 +572,6 @@
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Poista selaustiedot</string>
 
-    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
-    <string name="preferences_delete_browsing_data_prompt_message">Sallitko %sin poistaa selaustietosi?</string>
-    <!-- Text for the cancel button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_cancel">Älä salli</string>
-    <!-- Text for the allow button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_allow">Salli</string>
     <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">Selaustiedot poistettu</string>
 
@@ -580,15 +591,8 @@
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Ota kaikki irti %sista.</string>
-    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated -->
-    <string name="onboarding_firefox_account_auto_signin_header">Olet kirjautunut sisään toiseen Firefox-selaimeen tällä puhelimella.</string>
-    <!-- text for the button to sign into your Firefox account. The word "Firefox" should not be translated -->
+    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Kirjaudu sisään Firefoxiin</string>
-    <!-- text for the button to stay signed into your Firefox account. -->
-    <string name="onboarding_firefox_account_stay_signed_in">Pysy sisäänkirjautuneena</string>
-    <!-- text for the button to sign out of your Firefox account. -->
-    <string name="onboarding_firefox_account_sign_out">Kirjaudu ulos</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Suojaa itsesi</string>
     <!-- text for the tracking protection card description
@@ -637,4 +641,5 @@
     <string name="sign_out_disconnect">Katkaise yhteys</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Peruuta</string>
-</resources>
+
+    </resources>
