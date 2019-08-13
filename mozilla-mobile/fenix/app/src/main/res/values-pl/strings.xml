@@ -79,6 +79,12 @@
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
     <string name="awesomebar_clipboard_title">Wklej odnośnik ze schowka</string>
 
+    <!-- Search Widget -->
+    <!-- Text preview for smaller sized widgets -->
+    <string name="search_widget_text_short">Szukaj</string>
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">Szukaj w Internecie</string>
+
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">Ustawienia</string>
@@ -358,12 +364,12 @@
     <!-- Text for the button to clear selected history items. The first parameter
         is a digit showing the number of items you have selected -->
     <string name="history_delete_some">Usuń pozycje (%1$d)</string>
-    <!-- Text for the header that groups the history for Today -->
-    <string name="history_today">Dzisiaj</string>
-    <!-- Text for the header that groups the history the past week -->
-    <string name="history_this_week">W tym tygodniu</string>
-    <!-- Text for the header that groups the history the past month -->
-    <string name="history_this_month">W tym miesiącu</string>
+    <!-- Text for the header that groups the history for last 24 hours -->
+    <string name="history_24_hours">Ostatnie 24 godziny</string>
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">Ostatnie 7 dni</string>
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">Ostatnie 30 dni</string>
     <!-- Text for the header that groups the history older than the last month -->
     <string name="history_older">Starsze</string>
     <!-- Text shown when no history exists -->
@@ -492,6 +498,8 @@
     <string name="tracking_protection_off">Wyłączona</string>
 
     <!-- Collections -->
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="collections_description">Zbieraj rzeczy, które są dla Ciebie ważne. Aby zacząć, zachowaj otwarte karty w nowej kolekcji.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">Kolekcje</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
@@ -617,12 +625,12 @@
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Usuń historię przeglądania</string>
 
-    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
-    <string name="preferences_delete_browsing_data_prompt_message">Zezwolić programowi %s na usunięcie historii przeglądania?</string>
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">Spowoduje to usunięcie całej historii przeglądania.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_cancel">Nie zezwalaj</string>
+    <string name="delete_browsing_data_prompt_cancel">Anuluj</string>
     <!-- Text for the allow button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_allow">Zezwól</string>
+    <string name="delete_browsing_data_prompt_allow">Usuń</string>
     <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">Usunięto historię przeglądania</string>
 
@@ -643,14 +651,13 @@
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">W pełni wykorzystuj możliwości programu %s.</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated -->
-    <string name="onboarding_firefox_account_auto_signin_header">Na tym telefonie już zalogowano w innej przeglądarce Firefox.</string>
-    <!-- text for the button to sign into your Firefox account. The word "Firefox" should not be translated -->
+        another Firefox browser. (The word `Firefox` should not be translated)
+        The first parameter is the email of the detected user's account -->
+    <string name="onboarding_firefox_account_auto_signin_header_2">Zalogowano jako %s w innej przeglądarce Firefox na tym telefonie. Czy chcesz się zalogować na tym koncie?</string>
+    <!-- text for the button to confirm automatic sign-in -->
+    <string name="onboarding_firefox_account_auto_signin_confirm">Tak, zaloguj mnie</string>
+    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Zaloguj się w Firefoksie</string>
-    <!-- text for the button to stay signed into your Firefox account. -->
-    <string name="onboarding_firefox_account_stay_signed_in">Nie wylogowuj</string>
-    <!-- text for the button to sign out of your Firefox account. -->
-    <string name="onboarding_firefox_account_sign_out">Wyloguj się</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Chroń się</string>
     <!-- text for the tracking protection card description
@@ -706,4 +713,5 @@
     <string name="sign_out_disconnect">Rozłącz</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Anuluj</string>
-</resources>
+
+    </resources>
