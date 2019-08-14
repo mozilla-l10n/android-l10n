@@ -76,6 +76,12 @@
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
     <string name="awesomebar_clipboard_title">Isi tautan dari papan klip</string>
 
+    <!-- Search Widget -->
+    <!-- Text preview for smaller sized widgets -->
+    <string name="search_widget_text_short">Cari</string>
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">Cari di Web</string>
+
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">Setelan</string>
@@ -360,13 +366,13 @@
     <!-- Text for the button to clear selected history items. The first parameter
         is a digit showing the number of items you have selected -->
     <string name="history_delete_some">Hapus %1$d item</string>
-    <!-- Text for the header that groups the history for Today -->
-    <string name="history_today">Hari ini</string>
-    <!-- Text for the header that groups the history the past week -->
-    <string name="history_this_week">Pekan ini</string>
-    <!-- Text for the header that groups the history the past month -->
-    <string name="history_this_month">Bulan ini</string>
 
+    <!-- Text for the header that groups the history for last 24 hours -->
+    <string name="history_24_hours">24 jam terakhir</string>
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">7 hari terakhir</string>
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">30 hari terakhir</string>
     <!-- Text for the header that groups the history older than the last month -->
     <string name="history_older">Lebih lawas</string>
     <!-- Text shown when no history exists -->
@@ -497,6 +503,8 @@
     <string name="tracking_protection_off">Nonaktif</string>
 
     <!-- Collections -->
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="collections_description">Kumpulkan hal-hal yang penting bagi Anda. Untuk memulai, simpan tab terbuka ke koleksi baru.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">Koleksi</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
@@ -624,13 +632,12 @@
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Hapus data penjelajahan</string>
 
-    <!-- Dialog message to the user asking to delete browsing data. Parameter is the name of the app (e.g. Fenix) -->
-    <string name="preferences_delete_browsing_data_prompt_message">Izinkan %s untuk menghapus data penjelajahan Anda?</string>
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">Ini akan menghapus semua data penjelajahan Anda.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_cancel">Jangan izinkan</string>
+    <string name="delete_browsing_data_prompt_cancel">Batal</string>
     <!-- Text for the allow button for the data deletion dialog -->
-    <string name="preferences_delete_browsing_data_prompt_allow">Izinkan</string>
-
+    <string name="delete_browsing_data_prompt_allow">Hapus</string>
     <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">Data penjelajahan dihapus</string>
 
@@ -651,15 +658,8 @@
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Dapatkan hasil maksimal dari %s.</string>
-    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated -->
-    <string name="onboarding_firefox_account_auto_signin_header">Anda masuk ke peramban Firefox lainnya dalam ponsel ini.</string>
-    <!-- text for the button to sign into your Firefox account. The word "Firefox" should not be translated -->
+    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Masuk ke Firefox</string>
-    <!-- text for the button to stay signed into your Firefox account. -->
-    <string name="onboarding_firefox_account_stay_signed_in">Tetap masuk</string>
-    <!-- text for the button to sign out of your Firefox account. -->
-    <string name="onboarding_firefox_account_sign_out">Keluar</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Lindungi diri Anda</string>
     <!-- text for the tracking protection card description
@@ -715,4 +715,20 @@
     <string name="sign_out_disconnect">Putuskan</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Batal</string>
+
+    <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_title">Penambang Kripto</string>
+    <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_description">Mencegah skrip berbahaya yang dapat mengakses ke perangkat Anda untuk menambang mata uang digital.</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_title">Pelacak Sidik</string>
+    <!-- Header for exceptions list for which sites enhanced tracking protection is always off -->
+    <string name="enhanced_tracking_protection_exceptions">Perlindungan Pelacakan yang Ditingkatkan tidak aktif untuk situs web ini</string>
+    <!-- About page Your rights link text -->
+    <string name="about_your_rights">Hak anda</string>
+    <!-- About page link text to open open source licenses screen -->
+    <string name="about_open_source_licenses">Pustaka sumber terbuka yang kami gunakan</string>
+    <!-- Open source licenses page title
+    The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Pustaka OSS</string>
 </resources>
