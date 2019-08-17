@@ -32,7 +32,7 @@
     <!-- The error message shown when a website sends has an invalid or expired SSL certificate. -->
     <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
       <ul>
-        <li>Dette kan være på grunn av et problem med serverens innstillinger, eller det kan være at noen forsøker å etterligne serveren.</li>
+        <li>Dette kan være på grunn av et problem med serverens innstillinger, eller det kan være at noen forsøker å forfalske tilkoblingen til serveren.</li>
         <li>Dersom du tidligere har koblet til serveren er det mulig at feilen er midlertidig, og du kan prøve igjen senere.</li>
       </ul>
     ]]></string>
@@ -43,20 +43,67 @@
     <!-- The document title and heading of the error page shown when a website takes too long to load. -->
     <string name="mozac_browser_errorpages_net_timeout_title">Tilkoblingen fikk tidsavbrudd</string>
 
+    <!-- The error message shown when a website took long to load. -->
+    <string name="mozac_browser_errorpages_net_timeout_message"><![CDATA[
+      <p>Det forespurte nettstedet svarte ikke på en tilkoblingsforespørsel, og nettleseren har sluttet å vente på svar.</p>
+      <ul>
+        <li>Kan det hende at nettstedet har unormalt høy belastning akkurat nå, eller er midlertidig utilgjengelig? Prøv igjen senere.</li>
+        <li>Klarer du å koble til andre nettsted? Kontroller at datamaskinens nettverkstilkobling virker.</li>
+        <li>Er datamaskinen din beskyttet av en brannmur eller proxy?  Feilaktige innstillinger kan gjøre det umulig å få tilgang til Internett.</li>
+        <li>Har du fortsatt problemer? Kontakt systemansvarlig eller Internett-tilbyderen for mer hjelp.</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of the error page shown when a website could not be reached. -->
     <string name="mozac_browser_errorpages_connection_failure_title">Kan ikke koble til</string>
+
+    <!-- The error message shown when a website could not be reached. -->
+    <string name="mozac_browser_errorpages_connection_failure_message"><![CDATA[
+      <ul>
+        <li>Siden kan være midlertidig utilgjengelig, eller opptatt. Prøv igjen om en stund.</li>
+        <li>Hvis du ikke klarer å laste noen sider, kontroller data- eller Wi-Fi-forbindelsen til enheten din.</li>
+      </ul>
+    ]]></string>
 
     <!-- The document title and heading of the error page shown when a website responds in an unexpected way and the browser cannot continue. -->
     <string name="mozac_browser_errorpages_unknown_socket_type_title">Uventet svar fra server</string>
 
+    <!-- The error message shown when a website responds in an unexpected way and the browser cannot continue. -->
+    <string name="mozac_browser_errorpages_unknown_socket_type_message"><![CDATA[
+      <p>Nettstedet svarte på en forespørsel på en uventet måte, og nettleseren kan ikke fortsette.</p>
+    ]]></string>
+
     <!-- The document title and heading of the error page shown when the browser gets stuck in an infinite loop when loading a website. -->
     <string name="mozac_browser_errorpages_redirect_loop_title">Nettsiden videresender ikke ordentlig</string>
+
+    <!-- The error message shown when the browser gets stuck in an infinite loop when loading a website. -->
+    <string name="mozac_browser_errorpages_redirect_loop_message"><![CDATA[
+      <p>Nettleseren har sluttet å forsøke å laste det ønskede elementet. Nettsiden omdirigerer forespørselen på en måte slik at den aldri vil fullføre.</p>
+      <ul>
+        <li>Har du slått av eller blokkert infokapsler som er påkrevd av dette nettstedet?</li>
+        <li>Dersom det ikke hjelper å akseptere nettstedets infokapsler, kan det være et problem med nettstedets innstillinger, og problemet gjelder da ikke datamaskinen din.</li>
+      </ul>
+    ]]></string>
 
     <!-- The document title and heading of the error page shown when a website cannot be loaded because the browser is in offline mode. -->
     <string name="mozac_browser_errorpages_offline_title">Frakoblet modus</string>
 
+    <!-- The error message shown when a website cannot be loaded because the browser is in offline mode. -->
+    <string name="mozac_browser_errorpages_offline_message"><![CDATA[
+      <p>Nettleseren er i frakoblet modus, og kan ikke koble til serveren.</p>
+      <ul>
+        <li>Er datamaskinen koblet til et aktivt nettverk?</li>
+        <li>Trykk «Prøv igjen» for å bytte til tilkoblet modus og laste siden på nytt.</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of the error page shown when the browser prevents loading a website on a restricted port. -->
     <string name="mozac_browser_errorpages_port_blocked_title">Porten er adgangsbegrenset av sikkerhetsårsaker</string>
+
+    <!-- The error message shown when the browser prevents loading a website on a restricted port. -->
+    <string name="mozac_browser_errorpages_port_blocked_message"><![CDATA[
+      <p>Forespørselsadressen oppgav en port (f.eks. <q>mozilla.org:80</q> for port 80 på mozilla.org) som normalt brukes til et <em>annet</em> formål enn nettlesing. Nettleseren har avbrutt forespørselen av sikkerhetsårsaker.</p>
+    ]]></string>
 
     <!-- The document title and heading of the error page shown when the Internet connection is disrupted while loading a website. -->
     <string name="mozac_browser_errorpages_net_reset_title">Tilkoblingen ble avbrutt</string>
@@ -64,11 +111,33 @@
     <!-- The document title and heading of the error page shown when the browser refuses to load a type of file that is considered unsafe. -->
     <string name="mozac_browser_errorpages_unsafe_content_type_title">Usikker filtype</string>
 
+    <!-- The error message shown when the browser refuses to load a type of file that is considered unsafe. -->
+    <string name="mozac_browser_errorpages_unsafe_content_type_message"><![CDATA[
+      <ul>
+        <li>Kontakt eieren av nettstedet og informer dem om dette problemet.</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of the error page shown when a file cannot be loaded because of a detected data corruption. -->
     <string name="mozac_browser_errorpages_corrupted_content_title">Ødelagt innholdsfeil</string>
 
+    <!-- The error message shown when shown when a file cannot be loaded because of a detected data corruption. -->
+    <string name="mozac_browser_errorpages_corrupted_content_message"><![CDATA[
+      <p>Siden du forsøker å vise kan ikke åpnes på grunn av en feil i dataoverføringen.</p>
+      <ul>
+        <li>Kontakt nettstedseierne og informer dem om dette problemet.</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_content_crashed_title">Innhold krasjet</string>
+
+    <string name="mozac_browser_errorpages_content_crashed_message"><![CDATA[
+      <p>Siden du forsøker å vise kan ikke åpnes på grunn av en feil i dataoverføringen.</p>
+      <ul>
+        <li>Kontakt nettstedseierne og informer dem om dette problemet.</li>
+      </ul>
+    ]]></string>
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_invalid_content_encoding_title">Feil med tegnkoding</string>
