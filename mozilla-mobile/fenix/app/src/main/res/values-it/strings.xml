@@ -84,6 +84,9 @@
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Cerca</string>
 
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">Cerca sul Web</string>
+
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">Impostazioni</string>
@@ -507,6 +510,9 @@
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Disattivata</string>
 
+    <!-- Collections -->
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="collections_description">Raggruppa i contenuti che ritieni importanti. Per iniziare, salva le schede aperte in una nuova collezione.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">Raccolte</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
@@ -649,6 +655,8 @@
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Elimina dati di navigazione</string>
 
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">Questa azione eliminerà tutti i dati di navigazione.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">Annulla</string>
     <!-- Text for the allow button for the data deletion dialog -->
@@ -672,6 +680,10 @@
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Ottieni il massimo da %s.</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated)
+        The first parameter is the email of the detected user's account -->
+    <string name="onboarding_firefox_account_auto_signin_header_2">Sei già connesso come %s in un altro browser Firefox sul dispositivo in uso. Desideri accedere con questo account?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">Sì, accedi</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
@@ -739,12 +751,37 @@
     <!-- Error message snackbar shown after the user tried to select a default folder which cannot be altered -->
     <string name="bookmark_cannot_edit_root">Impossibile modificare le cartelle predefinite</string>
 
+    <!-- Enhanced Tracking Protection -->
+    <!-- Link displayed in enhanced tracking protection panel to access tracking protection settings -->
+    <string name="etp_settings">Impostazioni protezione</string>
+    <!-- Preference title for enhanced tracking protection settings -->
+    <string name="preference_enhanced_tracking_protection">Protezione antitracciamento avanzata</string>
+    <!-- Title for the description of enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_title">Naviga senza lasciarti seguire</string>
+    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preference_enhanced_tracking_protection_explanation">Mantieni i tuoi dati al riparo da occhi indiscreti. %s ti protegge dagli elementi traccianti più comuni che cercano di seguire le tue attività online.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Ulteriori informazioni</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard">Normale (consigliato)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description">Equilibrio tra protezione e prestazioni.</string>
+    <!-- Preference for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict">Restrittivo</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_description">Maggiore protezione, alcuni siti o contenuti potrebbero non funzionare correttamente.</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocking">Bloccati</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_not_blocking">Non bloccati</string>
+    <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_title">Traccianti dei social media</string>
+    <!-- Description of social media trackers that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_description">Limita la capacità dei social network di tracciare le tue attività sul Web.</string>
+    <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_title">Cookie traccianti intersito</string>
+    <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_description">Blocca i cookie che le reti pubblicitarie e le società di analisi dati utilizzano per raccogliere i dati di navigazione quando passi da un sito all’altro.</string>
     <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_cryptominers_title">Cryptominer</string>
     <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
@@ -755,6 +792,10 @@
     <string name="etp_fingerprinters_description">Impedisce la raccolta di dati identificativi univoci sul dispositivo che possono essere utilizzati a scopo di tracciamento.</string>
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">Contenuti traccianti</string>
+    <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_description">Interrompe il caricamento di annunci esterni, video e altri contenuti che contengono codice di tracciamento. Può influire su alcune funzionalità del sito web.</string>
+    <!-- Enhanced Tracking Protection Onboarding Message shown in a dialog above the toolbar. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="etp_onboarding_message">Quando lo scudo cambia colore significa che %s ha bloccato degli elementi traccianti. Tocca l’icona per visualizzare gli elementi bloccati.</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">Le protezioni sono attive per questo sito</string>
     <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
@@ -763,6 +804,8 @@
     <string name="enhanced_tracking_protection_exceptions">La protezione antitracciamento avanzata è disattivata per questi siti</string>
     <!-- About page Your rights link text -->
     <string name="about_your_rights">I tuoi diritti</string>
+    <!-- About page link text to open open source licenses screen -->
+    <string name="about_open_source_licenses">Librerie open source utilizzate</string>
     <!-- Open source licenses page title
     The first parameter is the app name -->
     <string name="open_source_licenses_title">%s | Librerie OSS</string>
