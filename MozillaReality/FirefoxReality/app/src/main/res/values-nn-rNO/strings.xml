@@ -528,6 +528,9 @@
     <string name="video_mode_tooltip">Videoprojeksjon</string>
 
     <!-- This string is displayed when selecting a video playback mode. -->
+    <string name="video_mode_3d_side">3D side om side</string>
+
+    <!-- This string is displayed when selecting a video playback mode. -->
     <string name="video_mode_360">360</string>
 
     <!-- This string is displayed when selecting a video playback mode. -->
@@ -559,6 +562,14 @@
 
     <!-- This string is displayed in a tooltip below the video controls UI. -->
     <string name="video_controls_volume">Lydstyrke</string>
+
+    <!-- This string is displayed in a tooltip in the video controls UI (e.g., 'Seek +30 seconds').
+    '%1$s' will be replaced at runtime with a duration in seconds (e.g., '30'). -->
+    <string name="video_controls_seek_forward">Spol +%1$s sekund</string>
+
+    <!-- This string is displayed in a tooltip in the video controls UI (e.g., 'Seek -15 seconds').
+    '%1$s' will be replaced at runtime with a duration in seconds (e.g., '15'). -->
+    <string name="video_controls_seek_backward">Spol +%1$s sekund</string>
 
     <!-- This string is displayed in the video control seekbar when the media is not seekable
          (e.g., a live video stream). Prefer a short text because it affects the width of the seek bar. -->
@@ -596,6 +607,15 @@
 
     <!-- This string labels the Reset button that restores the default privacy and security settings values. -->
     <string name="privacy_options_reset">Tilbakestill innstillingar for personvern og sikkerheit</string>
+
+    <!-- This string labels the Reset button that restores the default controller settings values. -->
+    <string name="controller_options_reset">Tilbakestill kontrollerinnstillingar</string>
+
+    <!-- This string labels the Reset button that restores the default environment settings values. -->
+    <string name="environment_options_reset">Tilbakestill miljøinnstillingar</string>
+
+    <!-- This string labels the Reset button that restores the default voice search language settings values. -->
+    <string name="language_options_reset">Tilbakestill språkinnstillingar for stemmesøk</string>
 
     <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the 'Name' of the bookmarked website. -->
     <string name="col_name">Namn</string>
@@ -710,6 +730,21 @@
          Private Browsing Mode button from the tray is clicked. -->
     <string name="private_browsing_title">Privat nettlesing</string>
 
+    <!-- This string is used as the body of the Private Browsing page that is opened when the
+         Private Browsing Mode button from the tray is clicked.
+         '%1$s' will be replaced at runtime with the app's name. -->
+    <string name="private_browsing_body"><![CDATA[
+<p>Når du surfar i eit privat vindauge, <strong>lagrar %1$s ikkje</strong>:</p>
+<ul class="two-column">
+  <li>besøkte sider</li>
+  <li>søk</li>
+  <li>infokapslar</li>
+  <li>mellombelse filer</li>
+</ul>
+<p>Privat nettlesing <strong>gjer deg ikkje anonym</strong> på Internett. Arbeidsgjevaren eller internettleverandøren din vil framleis kjenne til kva for sider du besøkjer</p>
+<p class="about-info">Les meir om <a id="learnMore">privat nettlesing</a>.</p>
+     ]]></string>
+
     <!-- This string is displayed in any button used for removing all the items in the current context.
          '%1$s' will be replaced at runtime with the app's name. -->
     <string name="homepage_hint">%1$s-startside (standard)</string>
@@ -730,8 +765,17 @@
     <!-- This string is displayed in the message of the notification message shown when the device loses internet connection. -->
     <string name="no_internet_message">Kontroller einingskonfigurasjonen for å løyse problemet.</string>
 
+    <!-- This string is displayed in the message of the notification message shown when the user tries to open a new window and
+      it has already opened the maximum number of allowed windows. %1$s expands to a integer value that represent the maximum windows
+      that can be opened (initially 3) -->
+    <string name="max_windows_message">Du kan ikkje ha meir enn %1$s vindauge opne om gongen. Lat att eitt vindauge før du opnar eit anna.</string>
+
     <!-- This string is displayed in the title of the alert dialog shown when the user does not have permission to run the application on the device. -->
     <string name="not_entitled_title">Kan ikkje køyre</string>
+
+    <!-- This string is displayed in the message body of the alert dialog shown when the user does not have permission to run the application on the device.
+         '%1$s' will be replace at runtime with the app's name. -->
+    <string name="not_entitled_message">%1$s har ikkje løyve til å køyre på denne eininga og vil no avslutte.</string>
 
     <!-- This string is displayed in a button that when pressed allows a user to view a page that has been blocked from being displayed.-->
     <string name="performance_unblock_page">Fjern blokkering av side</string>
