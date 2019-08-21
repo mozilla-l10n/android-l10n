@@ -455,13 +455,29 @@
          button used to initiate Voice Search. -->
     <string name="voice_search_start">Kva vil du søkje etter på nette?</string>
 
+    <!-- This string is displayed in the voice-search dialog box that is shown to the user when they press the
+         button used to initiate Voice Search. -->
+    <string name="voice_search_example">Døme: Sei «360 videoar, vêr, nyheiter…»</string>
+
     <!-- This string is displayed in a dialog box show to the user while the Voice Search is being
          performed. It indicates that the search query is running and they should wait for the result. -->
     <string name="voice_search_decoding">Søkjer…</string>
 
+    <!-- This string is displayed in a dialog box show to the user while the Voice Search is being
+         performed. It indicates that the search query is running and they should wait for the result. -->
+    <string name="voice_search_error">Beklagar! Eg forstod ikkje.</string>
+
     <!-- This string is displayed in a dialog box after a failed Voice Search and the system is prompting the
          user to try the Voice Search again. -->
     <string name="voice_search_try_again">Prøv igjen.</string>
+
+    <!-- This string is displayed in a dialog after the user has declined permission to use the
+         device's microphone. It explains why Voice Search is not working. -->
+    <string name="voice_search_permission_after_decline">Tillat mikrofontilgang for å bruke stemmesøk.</string>
+
+    <!-- This string is displayed in the URL bar when it is empty. It informs the user that they
+         may use the URL bar to search the Web or enter a Web address. -->
+    <string name="search_placeholder">Søk på nettet eller skriv inn adresse</string>
 
     <!-- This string labels a button that is used to cancel an action.
          This appears in such contexts as dialog boxes, `<select>` menus, etc. -->
@@ -473,6 +489,17 @@
 
     <!-- This string labels a button that is used to approve an action. -->
     <string name="back_button">Tilbake</string>
+
+    <!-- This string is displayed in a dialog after an application crash. -->
+    <string name="crash_dialog_heading">Vi hadde eit problem og krasja</string>
+
+    <!-- This string explains why Mozilla would like the user to allow the crash data to be uploaded.
+         '%1$s' will be replaced at runtime with the app's domain name. -->
+    <string name="crash_dialog_message">Hjelp Mozilla med å forbetre %1$s ved å sende inn krasjdata.</string>
+
+    <!-- This string labels a checkbox in the crash dialog box. When checked, the user will no longer
+         be prompted for permission to upload crash data after an application crash. -->
+    <string name="crash_dialog_send_data">Send alltid data utan å spørje</string>
 
     <!-- This string labels a button that, when pressed, allows the user to learn more about the
          currently open dialog. -->
@@ -576,9 +603,58 @@
     <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the 'Tags' of the bookmarked website. -->
     <string name="col_tags">Etikettar</string>
 
+    <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the 'Location' (or 'URL' or 'Address') of the bookmarked website. -->
+    <string name="col_url">Adresse</string>
+
+    <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the date of when the bookmarked website was most recently visited. -->
+    <string name="col_most_recent_visit">Sist besøkt</string>
+
+    <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the date of when the website was bookmarked. -->
+    <string name="col_date_added">Lagt til</string>
+
+    <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the date of when the bookmarked website was last edited. -->
+    <string name="col_date_last_modified">Sist endra</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Back' button in the browser's navigation bar.
+         'Back' refers to going back one page in 'History'. -->
+    <string name="back_tooltip">Tilbake</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Forward' button in the browser's navigation bar.
+         'Forward' refers to going back one page in 'History'. -->
+    <string name="forward_tooltip">Fram</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Refresh' button in the browser's navigation bar.
+         'Refresh' refers to reloading the current page. -->
+    <string name="refresh_tooltip">Oppdater</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Stop' button in the browser's navigation bar.
+         'Stop' stops the current page load. -->
+    <string name="stop_tooltip">Stopp lasting</string>
+
     <!-- This string is for the tooltip that appears upon hovering the 'Home' button in the browser's navigation bar.
          'Home' refers to the browser's start page (e.g., the Firefox Reality Home Page). -->
     <string name="home_tooltip">Startside</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Voice Search' (microphone) button in the
+         browser's navigation bar. 'Voice Search' refers to the browser's system for searching the Web using
+         speech-to-text recognition. -->
+    <string name="voice_search_tooltip">Stemmesøk</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'User Agent' button in the
+         browser's navigation bar. The button it labels, when pressed, change the currently used user agent. -->
+    <string name="user_agent_tooltip">Byt brukaragent</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Clear' button in the
+         browser's navigation bar. The button it labels, when pressed, clears the navigation bar text. -->
+    <string name="clear_tooltip">Tøm</string>
+
+    <!-- This string is for the tooltip that when clicking the 'Info' (ⓘ) icon visible next to the current website's
+         URL in the URL bar. The button it labels, when pressed, shows information about the site. -->
+    <string name="site_info_tooltip">Vis nettstadinfo.</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Servo' button in the browser's navigation bar.
+         'Servo' refers to the Servo engine. -->
+    <string name="servo_tooltip">Bruk Servo</string>
 
     <!-- This string is for the tooltip that appears upon hovering the 'Resize' button in the browser's navigation bar.
          'Resize' refers to the button used to resize the browset window. -->
@@ -589,11 +665,78 @@
     <string name="private_browsing_enter_tooltip">Start privat nettlesing</string>
 
 
+    <!-- This string is for the tooltip that appears when the user is in the browser's Private Browsing mode
+         and hovers over the 'Private Browsing' icon in the browser's tray menu. -->
+    <string name="private_browsing_exit_tooltip">Avslutt privat nettlesing</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the target url in a new window. -->
+    <string name="context_menu_open_new_window">Opne i nytt vindauge.</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Bookmark' icon in the
+         browser's navigation bar. The button it labels, when pressed, bookmarks the currently open web site. -->
+    <string name="bookmark_tooltip">Bokmerk denne sida</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Bookmarks' icon in the
+         tray. The button it labels, when pressed, opens a list view of the user's saved
+         Bookmarks. -->
+    <string name="bookmarks_tooltip">Bokmerke</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Bookmarks' icon in the
+         tray and the Bookmarks view is closed. The button it labels, when pressed, opens a list view of the user's saved
+         Bookmarks. -->
+    <string name="open_bookmarks_tooltip">Opne bokmerke</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Bookmarks' icon in the
+         tray and the Bookmarks view is closed. The button it labels, when pressed, closes the Bookmarks view. -->
+    <string name="close_bookmarks_tooltip">Lat att bokmerke</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Settings' icon in the
+         tray. The button it labels, when pressed, opens the Settings panel. -->
+    <string name="settings_tooltip">Innstillingar</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'New Window' icon in the
+         tray. The button it labels, when pressed, opens a new browser window. -->
+    <string name="new_window_tooltip">Opne i nytt vindauge</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the down-arrow icon that appears in the
+         URL bar upon hover. The icon it labels, when pressed, expands a list of recently visited websites in the
+         user's History. -->
+    <string name="show_history_tooltip">Vis historikk</string>
+
+    <!-- This string is displayed in any button used for removing all the items in the current context. -->
+    <string name="remove_all">Fjern alle</string>
+
+    <!-- This string is used as the title of the Private Browsing page that is opened when the
+         Private Browsing Mode button from the tray is clicked. -->
+    <string name="private_browsing_title">Privat nettlesing</string>
+
     <!-- This string is displayed in any button used for removing all the items in the current context.
          '%1$s' will be replaced at runtime with the app's name. -->
     <string name="homepage_hint">%1$s-startside (standard)</string>
 
 
+    <!-- This string is displayed in the title of an authentication prompt, which requests a username and a password. -->
+    <string name="authentication_required">Autentisering påkravd</string>
+    <!-- This string is displayed as the label of a username input in an authentication prompt. -->
+    <string name="authentication_username">Brukarnamn:</string>
+    <!-- This string is displayed as the label of a password input in an authentication prompt. -->
+    <string name="authentication_password">Passord:</string>
+    <!-- This string is displayed as the label of a switch of an authentication prompt in order to show or hide the text in a password field. -->
+    <string name="authentication_show_password">Vis passord:</string>
+
+
+    <!-- This string is displayed in the title of the notification message shown when the device loses internet connection. -->
+    <string name="no_internet_title">Ikkje noko internettsamband</string>
+    <!-- This string is displayed in the message of the notification message shown when the device loses internet connection. -->
+    <string name="no_internet_message">Kontroller einingskonfigurasjonen for å løyse problemet.</string>
+
+    <!-- This string is displayed in the title of the alert dialog shown when the user does not have permission to run the application on the device. -->
+    <string name="not_entitled_title">Kan ikkje køyre</string>
+
+    <!-- This string is displayed in a button that when pressed allows a user to view a page that has been blocked from being displayed.-->
+    <string name="performance_unblock_page">Fjern blokkering av side</string>
+    <!-- This string is displayed as the title of a dialog displayed when poor web page performance has been detected. -->
+    <string name="performance_title">Dårleg yting oppdaga</string>
     <!-- This string is displayed as the message body of a dialog displayed when poor web page performance has been detected and the page has been unloaded to restore performance. -->
     <string name="performance_message">Den gjeldande nettstaden påverkar ytinga og er sett i kvilemodus. Reduksjon av vindaugsstørrelsen kan bidra til å forbetre ei nettside med dårleg yting.</string>
 </resources>
