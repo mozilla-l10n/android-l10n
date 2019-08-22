@@ -121,6 +121,11 @@
     <string name="settings_language">Språk</string>
 
     <!-- This string is used to label a text label for selecting the language in the 'Language' dialog window
+         (accessible from the browser's Settings' dialog window). Below this string appears
+         the different options for language settings. -->
+    <string name="settings_language_settings">Språkinnstillinger</string>
+
+    <!-- This string is used to label a text label for selecting the language in the 'Language' dialog window
          (accessible from the browser's Settings' dialog window). Below this string appears a list of locales for
          the user to choose as their preferred reading languages for website content. Each locale,
          as `language-tag` strings, is then included in the browser's `Accept-Language` HTTP request
@@ -133,6 +138,18 @@
          Based on the user's selection, the printed language is mapped to its ISO 639-1 code
          (e.g., `Español` is mapped to `es`) when configured in the 'Voice Search' system. -->
     <string name="settings_language_choose_language_voice_search">Velg foretrukket språk for stemmesøk</string>
+
+    <!-- This string is used to label a text label that appears in the header of 'Language Settings' ->
+         'Firefox Display Language' dialog window (accessible from the browser's Settings dialog window).
+         Below this string appears a list of locales for the user to choose as their preferred display
+         language for the application UI. -->
+    <string name="settings_language_choose_display_language_title">%1$s visningsspråk</string>
+
+    <!-- This string is used to label a text label that appears in the header description of 'Language Settings' ->
+         'Firefox Display Language' dialog window (accessible from the browser's Settings dialog window).
+         Below this string appears a list of locales for the user to choose as their preferred display
+         language for the application UI. -->
+    <string name="settings_language_choose_language_display_description">Velg språket som brukes til å vise menyer, meldinger og varsler.</string>
 
     <!-- This string is used to label a radio button in the 'Settings' Language dialog that, when pressed,
          changes the app and the language of the speech-recognition-based search to 'English (US)'. -->
@@ -238,7 +255,7 @@
          A dialog should appear with a field labeled with the text, 'Enable Multiprocess'. -->
     <string name="developer_options_multiprocess">Aktiver multiprosess</string>
 
-    <!-- This string labels and On/Off switch in the developer options dialog and is used to toggle
+    <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
          the performance monitor. The Performance monitor is used to detect pages that cause the
          browser to run below a target framerate and pauses the page to restore performance.
     -->
@@ -428,22 +445,6 @@
          of this storage even though the storage may not reside on external removable media. -->
     <string name="security_options_permission_storage">Les ekstern lagring</string>
 
-    <!-- This string is a label above the group of switches that indicates that the switches below
-         relate to Firefox data collection and use. -->
-    <string name="security_options_speech_data_title">Firefox datainnsamling og bruk</string>
-
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to collect speech data. -->
-    <string name="security_options_speech_data">La Firefox samle taledata</string>
-
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to collect telemetry data. -->
-    <string name="security_options_telemetry_data">Tillat Firefox å sende tekniske- og interaksjonsdata til Mozilla</string>
-
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to send crash reports. -->
-    <string name="security_options_crash_reports_data">Tillat Firefox å sende etterslepne krasjrapporter på dine vegner</string>
-
     <!-- This string is displayed below the On/Off switch to indicate a switch's current state as 'On'. -->
     <string name="on">På</string>
 
@@ -617,6 +618,12 @@
     <!-- This string labels the Reset button that restores the default voice search language settings values. -->
     <string name="language_options_reset">Tilbakestill språkinnstillinger for stemmesøk</string>
 
+    <!-- This string labels the description in the Content Language header for preferred languages list. -->
+    <string name="language_options_preferred_languages">Foretrukket språk</string>
+
+    <!-- This string labels the description in the Content Language header for available languages list. -->
+    <string name="language_options_available_languages">Tilgjengelige språk</string>
+
     <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the 'Name' of the bookmarked website. -->
     <string name="col_name">Navn</string>
 
@@ -660,9 +667,9 @@
          speech-to-text recognition. -->
     <string name="voice_search_tooltip">Stemmesøk</string>
 
-    <!-- This string is for the tooltip that appears upon hovering the 'User Agent' button in the
+    <!-- This string is for the tooltip that appears upon hovering the 'Request desktop site' button in the
          browser's navigation bar. The button it labels, when pressed, change the currently used user agent. -->
-    <string name="user_agent_tooltip">Bytt brukeragent</string>
+    <string name="request_dekstop_site_tooltip">Vis skrivebordsversjon</string>
 
     <!-- This string is for the tooltip that appears upon hovering the 'Clear' button in the
          browser's navigation bar. The button it labels, when pressed, clears the navigation bar text. -->
@@ -768,6 +775,10 @@
       that can be opened (initially 3) -->
     <string name="max_windows_message">Du kan ikke ha mer enn %1$s vinduer åpne om gangen. Lukk ett vindu før du åpner et annet.</string>
 
+    <!-- This string is displayed in the button of the notification message shown when the user tries to open a new window and
+      it has already opened the maximum number of allowed windows. -->
+    <string name="max_windows_button">OK</string>
+
     <!-- This string is displayed in the title of the alert dialog shown when the user does not have permission to run the application on the device. -->
     <string name="not_entitled_title">Kan ikke kjøre</string>
 
@@ -781,4 +792,15 @@
     <string name="performance_title">Dårlig ytelse oppdaget</string>
     <!-- This string is displayed as the message body of a dialog displayed when poor web page performance has been detected and the page has been unloaded to restore performance. -->
     <string name="performance_message">Det gjeldende nettstedet påvirker ytelsen og er satt i hvilemodus. Reduksjon av vindusstørrelsen kan bidra til å forbedre en nettside med dårlig ytelse.</string>
+
+    <!-- This string is displayed in the button of the Voice Search samples collect dialog.
+         When clicked the user opts in to the voice data collection. -->
+    <string name="voice_samples_collect_dialog_allow">Tillat</string>
+
+    <!-- This string is displayed in the button of the Voice Search samples collect dialog.
+         When clicked the user opts out of the voice data collection. -->
+    <string name="voice_samples_collect_dialog_do_not_allow">Ikke tillat</string>
+
+    <!-- This string is displayed in the content language list in front of the system default language in between parenthesis -->
+    <string name="language_default">Standard</string>
 </resources>
