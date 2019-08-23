@@ -121,6 +121,11 @@
     <string name="settings_language">Taal</string>
 
     <!-- This string is used to label a text label for selecting the language in the 'Language' dialog window
+         (accessible from the browser's Settings' dialog window). Below this string appears
+         the different options for language settings. -->
+    <string name="settings_language_settings">Taalinstellingen</string>
+
+    <!-- This string is used to label a text label for selecting the language in the 'Language' dialog window
          (accessible from the browser's Settings' dialog window). Below this string appears a list of locales for
          the user to choose as their preferred reading languages for website content. Each locale,
          as `language-tag` strings, is then included in the browser's `Accept-Language` HTTP request
@@ -133,6 +138,35 @@
          Based on the user's selection, the printed language is mapped to its ISO 639-1 code
          (e.g., `Español` is mapped to `es`) when configured in the 'Voice Search' system. -->
     <string name="settings_language_choose_language_voice_search">Kies uw voorkeurstaal voor gesproken zoekopdrachten</string>
+
+    <!-- This string is used to label a text label that appears in the header of 'Language Settings' ->
+         'Firefox Display Language' dialog window (accessible from the browser's Settings dialog window).
+         Below this string appears a list of locales for the user to choose as their preferred display
+         language for the application UI. -->
+    <string name="settings_language_choose_display_language_title">Weergavetaal van %1$s</string>
+
+    <!-- This string is used to label a text label that appears in the header description of 'Language Settings' ->
+         'Firefox Display Language' dialog window (accessible from the browser's Settings dialog window).
+         Below this string appears a list of locales for the user to choose as their preferred display
+         language for the application UI. -->
+    <string name="settings_language_choose_language_display_description">Kies de taal die wordt gebruikt voor het weergeven van menu’s, berichten en notificaties.</string>
+
+    <!-- This string is used to label a text label that appears in the header of 'Language Settings' ->
+         'Voice Search Language' dialog window (accessible from the browser's Settings dialog window).
+         Below this string appears a list of locales for the user to choose as their preferred voice search
+         language. -->
+    <string name="settings_language_choose_language_voice_search_title">Taal voor gesproken zoekopdrachten</string>
+
+    <!-- This string is used to label a text label that appears in the header description of 'Language Settings' ->
+         'Voice Search Language' dialog window (accessible from the browser's Settings dialog window).
+         Below this string appears a list of locales for the user to choose as their preferred voice search
+         language. -->
+    <string name="settings_language_choose_language_voice_search_description">Kies uw voorkeurstaal voor gesproken zoekopdrachten.</string>
+
+    <!-- This string is used to label a text label that appears in the header of 'Language Settings' ->
+         'Preferred Language for Displaying Websites' dialog window (accessible from the browser's Settings dialog window).
+         Below this string appears a list of locales for the user to choose as their preferred languages for web content. -->
+    <string name="settings_language_choose_language_content_title">Voorkeurstalen voor websites</string>
 
     <!-- This string is used to label a radio button in the 'Settings' Language dialog that, when pressed,
          changes the app and the language of the speech-recognition-based search to 'English (US)'. -->
@@ -238,7 +272,7 @@
          A dialog should appear with a field labeled with the text, 'Enable Multiprocess'. -->
     <string name="developer_options_multiprocess">Multiproces inschakelen</string>
 
-    <!-- This string labels and On/Off switch in the developer options dialog and is used to toggle
+    <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
          the performance monitor. The Performance monitor is used to detect pages that cause the
          browser to run below a target framerate and pauses the page to restore performance.
     -->
@@ -345,6 +379,9 @@
     <!-- This string labels the 'Reset' button that restores the default developer settings values. -->
     <string name="developer_options_reset_button">Herinitialiseren</string>
 
+    <!-- This string is used to label buttons to enable editing of other options. -->
+    <string name="settings_button_edit">Bewerken</string>
+
     <!-- This string describes the radio buttons used to select the user's background environment
          (seen while not in Immersive Mode). -->
     <string name="developer_options_environments">Omgeving</string>
@@ -432,21 +469,21 @@
 
     <!-- This string is a label above the group of switches that indicates that the switches below
          relate to Firefox data collection and use. -->
-    <string name="security_options_speech_data_title">Verzamelen en gebruik van gegevens door Firefox</string>
+    <string name="security_options_speech_data_collection_title">Verzamelen en gebruik van gegevens door %1$s</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable permission to collect speech data. -->
-    <string name="security_options_speech_data">Firefox toestaan spraakgegevens te verzamelen</string>
+    <string name="security_options_speech_data_collect">%1$s toestaan spraakgegevens te verzamelen</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable permission to collect telemetry data. -->
-    <string name="security_options_telemetry_data">Firefox toestaan technische en interactiegegevens naar Mozilla te verzenden
+    <string name="security_options_telemetry_send_data">%1$s toestaan technische en interactiegegevens naar Mozilla te verzenden
  
  </string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable permission to send crash reports. -->
-    <string name="security_options_crash_reports_data">Firefox toestaan namens u achterstallige crashrapporten te verzenden</string>
+    <string name="security_options_crash_reports_send_data">%1$s toestaan namens u achterstallige crashrapporten te verzenden</string>
 
     <!-- This string is displayed below the On/Off switch to indicate a switch's current state as 'On'. -->
     <string name="on">Aan</string>
@@ -621,6 +658,21 @@
     <!-- This string labels the Reset button that restores the default voice search language settings values. -->
     <string name="language_options_reset">Taalinstellingen voor gesproken zoekopdrachten herinitialiseren</string>
 
+    <!-- This string labels the description in the Voice Search Language button in the main language setting dialog. -->
+    <string name="language_options_voice_search_language"><![CDATA[Taal voor gesproken zoekopdrachten: <br>&emsp;&emsp;<b>%1$s</b>]]></string>
+
+    <!-- This string labels the description in the Content Language button in the main language setting dialog. -->
+    <string name="language_options_content_language"><![CDATA[Voorkeurstaal voor weergeven van websites: <br>&emsp;&emsp;<b>%1$s</b>]]></string>
+
+    <!-- This string labels the description in the Display Language button in the main language setting dialog. -->
+    <string name="language_options_display_language"><![CDATA[Weergavetaal voor de app: <br>&emsp;&emsp;<b>%1$s</b>]]></string>
+
+    <!-- This string labels the description in the Content Language header for preferred languages list. -->
+    <string name="language_options_preferred_languages">Voorkeursta(a)l(en)</string>
+
+    <!-- This string labels the description in the Content Language header for available languages list. -->
+    <string name="language_options_available_languages">Beschikbare talen</string>
+
     <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the 'Name' of the bookmarked website. -->
     <string name="col_name">Naam</string>
 
@@ -664,9 +716,9 @@
          speech-to-text recognition. -->
     <string name="voice_search_tooltip">Gesproken zoekopdracht</string>
 
-    <!-- This string is for the tooltip that appears upon hovering the 'User Agent' button in the
+    <!-- This string is for the tooltip that appears upon hovering the 'Request desktop site' button in the
          browser's navigation bar. The button it labels, when pressed, change the currently used user agent. -->
-    <string name="user_agent_tooltip">Useragent wisselen</string>
+    <string name="request_dekstop_site_tooltip">Desktopwebsite opvragen</string>
 
     <!-- This string is for the tooltip that appears upon hovering the 'Clear' button in the
          browser's navigation bar. The button it labels, when pressed, clears the navigation bar text. -->
@@ -777,6 +829,10 @@
       that can be opened (initially 3) -->
     <string name="max_windows_message">U kunt niet meer dan %1$s vensters tegelijk open hebben. Sluit er een voordat u een ander opent.</string>
 
+    <!-- This string is displayed in the button of the notification message shown when the user tries to open a new window and
+      it has already opened the maximum number of allowed windows. -->
+    <string name="max_windows_button">OK</string>
+
     <!-- This string is displayed in the title of the alert dialog shown when the user does not have permission to run the application on the device. -->
     <string name="not_entitled_title">Kan niet uitvoeren</string>
     <!-- This string is displayed in the message body of the alert dialog shown when the user does not have permission to run the application on the device.
@@ -789,4 +845,23 @@
     <string name="performance_title">Slechte prestaties gedetecteerd</string>
     <!-- This string is displayed as the message body of a dialog displayed when poor web page performance has been detected and the page has been unloaded to restore performance. -->
     <string name="performance_message">De huidige webpagina is van invloed op de prestaties en is opgeschort. Door de venstergrootte te verkleinen, kunt u een webpagina met slechte prestaties verbeteren.</string>
+
+    <!-- This string is displayed in the title of the Voice Search samples collect dialog. That dialog is shown the first time
+         a user tries to use the voice search. -->
+    <string name="voice_samples_collect_data_dialog_title">%1$s toestaan om spraakgegevens te verzamelen voor onderzoek?</string>
+
+    <!-- This string is displayed in the description of the Voice Search samples collect dialog. That dialog is shown the first time
+         a user tries to use the voice search. -->
+    <string name="voice_samples_collect_dialog_description">Uw gegevens zijn altijd veilig en worden nooit gedeeld met derden. We verzamelen spraakmonsters om de ervaring en prestaties van onze producten te verbeteren. U kunt altijd gesproken zoekopdrachten gebruiken, zelfs als u verzameling niet toestaat. &lt;a href=&quot;privacy&quot;&gt;Meer info&lt;/a&gt;</string>
+
+    <!-- This string is displayed in the button of the Voice Search samples collect dialog.
+         When clicked the user opts in to the voice data collection. -->
+    <string name="voice_samples_collect_dialog_allow">Toestaan</string>
+
+    <!-- This string is displayed in the button of the Voice Search samples collect dialog.
+         When clicked the user opts out of the voice data collection. -->
+    <string name="voice_samples_collect_dialog_do_not_allow">Niet toestaan</string>
+
+    <!-- This string is displayed in the content language list in front of the system default language in between parenthesis -->
+    <string name="language_default">Standaard</string>
 </resources>
