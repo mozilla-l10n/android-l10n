@@ -218,7 +218,7 @@
 
     <!-- This string is used to label a button in the 'Settings' dialog window that, when pressed,
          opens a dialog box that contains controller-related options: pointer color and scroll direction. -->
-    <string name="settings_controller_options">Styrenhetsalternativ</string>
+    <string name="settings_controller_options">Kontrollalternativ</string>
 
     <!-- This string is displayed in the 'Settings' dialog window and, is used to label an,
          On/Off switch that enables/disables the speech-data reporting. -->
@@ -228,6 +228,10 @@
          that allows the user file an issue or problem they may have encountered while using the
          application or while visiting a site. -->
     <string name="settings_report_issue">Rapportera ett problem</string>
+
+    <!-- This string is used in place of the 'settings_version' string (e.g., `version 1.1`) when the user is running
+         a developer-build version of the app. -->
+    <string name="settings_version_developer">Utvecklarversion</string>
 
     <!-- This string is used to label a button in the 'Settings' dialog window that, when pressed,
         opens the Firfox Reality support web site in the browser window. -->
@@ -249,6 +253,35 @@
          from being restarted. -->
     <string name="restart_later_dialog_button">Starta om senare</string>
 
+    <!-- This string labels an On/Off switch in the 'Developer Options' dialog
+     and is used to enable or disable curved display. -->
+    <string name="developer_options_curved_display">Aktivera böjd skärm</string>
+
+    <!-- This string labels an On/Off switch in the 'Developer Options' dialog
+         and is used to toggle remote debugging of website content in the application. -->
+    <string name="developer_options_remote_debugging">Aktivera fjärrfelsökning</string>
+
+    <!-- This string labels an On/Off switch in the 'Developer Options' dialog
+         and is used to toggle redirecting JavaScript Console output to the Android Logcat (i.e., `adb logcat`). -->
+    <string name="developer_options_show_console">Omdirigera konsolen till Logcat</string>
+
+    <!-- This string labels an On/Off switch in the developer options dialog
+         and is used to customize background environments of the app. -->
+    <string name="developer_options_env_override">Aktivera åsidosättande av miljön</string>
+
+    <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
+         running content in a separate process.
+         Multiprocessing: the running of two or more programs or sequences of instructions
+         simultaneously by a computer with more than one central processor.
+         A dialog should appear with a field labeled with the text, 'Enable Multiprocess'. -->
+    <string name="developer_options_multiprocess">Aktivera multiprocess</string>
+
+    <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
+         the performance monitor. The Performance monitor is used to detect pages that cause the
+         browser to run below a target framerate and pauses the page to restore performance.
+    -->
+    <string name="developer_options_performance_monitor">Aktivera prestandaövervakning</string>
+
     <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
          debug logging. Debug logging provides runtime diagnostic information that may be collected
          to help diagnose and fix problems with the application.
@@ -262,8 +295,16 @@
          privacy options dialog. -->
     <string name="developer_options_clear_cache_cookies_site_description">Kakor och webbplatsdata</string>
 
+    <!-- The string labels the description text for the clear cached web content button in the
+         privacy options dialog. -->
+    <string name="developer_options_clear_cache_web_content_description">Cachat webbinnehåll</string>
+
     <!-- The string labels the button text for the clear cache buttons in the privacy options dialog. -->
     <string name="developer_options_clear_cache">Rensa data</string>
+
+    <!-- This string is used to label a numerical-entry field where the user may set a new value to
+         use for the display density. -->
+    <string name="developer_options_display_density">Skärmdensitet:</string>
 
     <!-- This string is used to label two integer-entry fields where the default width and height of
          the browser window may be set. -->
@@ -317,6 +358,16 @@
     <!-- This string is used to label the 'VR' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_vr">VR</string>
 
+    <!-- This string is used to label radio buttons for setting fixed-foveated-rendering (FFR) level.
+     The term "foveation" derives from "fovea", the area of higher-resolution vision in the human retina.
+     Higher values of this option result in larger parts of the peripheral vision being rendered
+     at lower resolutions than the content in the center of the view.  These higher values reduce
+     quality to increase performance.
+     The Oculus implementation of fixed-foveated-rendering is described in more detail here:
+     https://developer.oculus.com/blog/optimizing-oculus-go-for-performance/-->
+    <string name="developer_options_foveated_app">Foveation-nivå (App)</string>
+    <!-- This string is used to label radio buttons for setting foveated level for WebVR immersive experiences -->
+    <string name="developer_options_foveated_webvr">Foveation-nivå (WebVR)</string>
     <!-- This string is used to label the Foveated radio button that disables fixed-foveated-rendering in immersive mode. -->
     <string name="developer_options_foveated_disabled">Inaktiverad</string>
     <!-- This string is used to label the Foveated radio button that enables low-level fixed-foveated-rendering. -->
@@ -392,6 +443,10 @@
          for the home page. -->
     <string name="developer_options_homepage">Startsida</string>
 
+    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+     and is used to enable or disable playback of DRM controlled content. -->
+    <string name="security_options_drm_content">Spela DRM-kontrollerat innehåll (&lt;a href=&quot;http://somesite.com/&quot;&gt;Läs mer&lt;/a&gt;)</string>
+
     <!-- This string labels an On/Off switch in the Privacy and Security settings dialog
      and is used to enable or disable tracking protection. -->
     <string name="security_options_tracking_protection">Spårningsskydd</string>
@@ -404,6 +459,11 @@
          relate to Android system permissions granted to the app.
          '%1$s' will be replaced at runtime with the app's name. -->
     <string name="security_options_permissions_title">Behörigheter (Tillåt %1$s åtkomst till)</string>
+
+    <!-- This string is displayed in an alert box if the user attempts to disable an enabled
+         permission and informs the user that the app cannot disable the given permission, that
+         function being reserved by the system permissions app. -->
+    <string name="security_options_permissions_reject_message">Denna behörighet kan endast inaktiveras i systembehörigheter</string>
 
     <!-- This string labels the button that displays or enables application access to the device's
          camera, if a camera is present. -->
@@ -426,11 +486,36 @@
          of this storage even though the storage may not reside on external removable media. -->
     <string name="security_options_permission_storage">Läsa extern lagring</string>
 
+    <!-- This string is a label above the group of switches that indicates that the switches below
+         relate to Firefox data collection and use. -->
+    <string name="security_options_speech_data_collection_title">%1$s datainsamling och användning</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+     and is used to enable or disable permission to collect speech data. -->
+    <string name="security_options_speech_data_collect">Tillåt %1$s att samla in språkdata</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+     and is used to enable or disable permission to collect telemetry data. -->
+    <string name="security_options_telemetry_send_data">Tillåt %1$s att skicka tekniska data och interaktionsdata till Mozilla</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+     and is used to enable or disable permission to send crash reports. -->
+    <string name="security_options_crash_reports_send_data">Tillåt %1$s att skicka eftersläpande kraschrapporter för dina räkning
+</string>
+
     <!-- This string is displayed below the On/Off switch to indicate a switch's current state as 'On'. -->
     <string name="on">På</string>
 
     <!-- This string is displayed below the On/Off switch to indicate a switch's current state as 'Off'. -->
     <string name="off">Av</string>
+
+    <!-- This string is displayed in the voice-search dialog box that is shown to the user when they press the
+         button used to initiate Voice Search. -->
+    <string name="voice_search_start">Vad vill du söka på webben?</string>
+
+    <!-- This string is displayed in the voice-search dialog box that is shown to the user when they press the
+         button used to initiate Voice Search. -->
+    <string name="voice_search_example">Exempel: Vänligen säg &quot;360 videor, väder, nyheter…&quot;</string>
 
     <!-- This string is displayed in a dialog box show to the user while the Voice Search is being
          performed. It indicates that the search query is running and they should wait for the result. -->
@@ -581,6 +666,24 @@
     <!-- This string labels the Reset button that restores the default privacy and security settings values. -->
     <string name="privacy_options_reset">Återställ sekretess- och säkerhetsinställningar</string>
 
+    <!-- This string labels the Reset button that restores the default controller settings values. -->
+    <string name="controller_options_reset">Återställ kontrollinställningar</string>
+
+    <!-- This string labels the Reset button that restores the default environment settings values. -->
+    <string name="environment_options_reset">Återställ miljöinställningar</string>
+
+    <!-- This string labels the Reset button that restores the default voice search language settings values. -->
+    <string name="language_options_reset">Återställ språkinställningar för röstsökning</string>
+
+    <!-- This string labels the Reset button that restores the default display language settings values. -->
+    <string name="display_language_options_reset">Återställ visningsspråk</string>
+
+    <!-- This string labels the Reset button that restores the default content language settings values. -->
+    <string name="content_language_options_reset">Återställ föredraget webbplatsspråk</string>
+
+    <!-- This string labels the Reset button that restores all language settings values. -->
+    <string name="all_language_options_reset">Återställ alla språkinställningar</string>
+
     <!-- This string labels the description in the Voice Search Language button in the main language setting dialog. -->
     <string name="language_options_voice_search_language"><![CDATA[Röstsökningsspråk: <br>&emsp;&emsp;<b>%1$s</b>]]></string>
 
@@ -604,6 +707,9 @@
 
     <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the 'Location' (or 'URL' or 'Address') of the bookmarked website. -->
     <string name="col_url">Plats</string>
+
+    <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the date of when the bookmarked website was most recently visited. -->
+    <string name="col_most_recent_visit">Senast besökt</string>
 
     <!-- This string is for the table column name (in the browser's 'Bookmarks' list) for the date of when the website was bookmarked. -->
     <string name="col_date_added">Tillagd</string>
@@ -704,6 +810,21 @@
     <!-- This string is used as the title of the Private Browsing page that is opened when the
          Private Browsing Mode button from the tray is clicked. -->
     <string name="private_browsing_title">Privat surfning</string>
+
+    <!-- This string is used as the body of the Private Browsing page that is opened when the
+         Private Browsing Mode button from the tray is clicked.
+         '%1$s' will be replaced at runtime with the app's name. -->
+    <string name="private_browsing_body"><![CDATA[
+<p>När du surfar i ett privat fönster, sparar %1$s <strong>inte</strong>:</p>
+<ul class="two-column">
+  <li>besökta sidor</li>
+  <li>sökningar</li>
+  <li>kakor</li>
+  <li>tillfälliga filer</li>
+</ul>
+<p>Privat surfning <strong>gör dig inte anonym</strong> på Internet. Din arbetsgivare eller internetleverantör kan fortfarande se vilka sidor du besöker.</p>
+<p class="about-info">Läs mer om <a id="learnMore">Privat surfning</a>.</p>
+     ]]></string>
 
     <!-- This string is displayed in any button used for removing all the items in the current context.
          '%1$s' will be replaced at runtime with the app's name. -->
