@@ -638,6 +638,9 @@
     <!-- This string is displayed as the title of the Bookmarks List when the bookmarks list is empty. -->
     <string name="bookmarks_empty">您的书签列表为空</string>
 
+    <!-- This string is displayed under the bookmarks title in the bookmarks list. -->
+    <string name="bookmarks_description">点击页面中的 @ 图标，即可添加书签。</string>
+
     <!-- This string is displayed in the middle of the Bookmarks List while the bookmarks are being loaded. -->
     <string name="bookmarks_loading">正在载入书签</string>
 
@@ -675,6 +678,9 @@
     <!-- This string is displayed as the title of the history list when the history is empty. -->
     <string name="history_empty">你的历史记录为空</string>
 
+    <!-- This string is displayed under the history title in the history list. -->
+    <string name="history_description">你可在此访问浏览历史</string>
+
     <!-- This string is displayed in the middle of the history list while the history is being loaded. -->
     <string name="history_loading">正在载入历史记录</string>
 
@@ -686,6 +692,9 @@
 
     <!-- This string is displayed as the section title in the history list for history entries that happened last week. -->
     <string name="history_section_last_week">上周</string>
+
+    <!-- This string is displayed as the section title in the history list for history entries that happened before last week. -->
+    <string name="history_section_older">更早</string>
 
     <!-- This string is displayed is the "Clear History" button in the history list. When pressed a dialog for
          clearing history is displayed. -->
@@ -722,6 +731,14 @@
     <!-- This string is displayed is the history context menu that is displayed when
          the more button is pressed in a history item. It opens the selected history item in a new window. -->
     <string name="history_context_menu_new_window">在新窗口中打开</string>
+
+    <!-- This string is displayed is the history context menu that is displayed when
+         the more button is pressed in a history item. It add the selected items to favorites. -->
+    <string name="history_context_add_bookmarks">添加书签</string>
+
+    <!-- This string is displayed is the history context menu that is displayed when
+         the more button is pressed in a history item. It removes the selected item from favorites. -->
+    <string name="history_context_remove_bookmarks">移除书签</string>
 
     <!-- This string labels the Reset button that restores the default display settings values. -->
     <string name="display_options_reset">重置显示设置</string>
@@ -796,6 +813,14 @@
          'Stop' stops the current page load. -->
     <string name="stop_tooltip">停止加载</string>
 
+    <!-- This string is for the tooltip that appears upon hovering the 'Resume' button in the browser's title bar media buttons.
+         When clicked the current media playback is resumed. -->
+    <string name="media_resume_tooltip">继续</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Pause' button in the browser's title bar media buttons.
+         When clicked the current media playback is paused. -->
+    <string name="media_pause_tooltip">暂停</string>
+
     <!-- This string is for the tooltip that appears upon hovering the 'Home' button in the browser's navigation bar.
          'Home' refers to the browser's start page (e.g., the Firefox Reality Home Page). -->
     <string name="home_tooltip">主页</string>
@@ -862,6 +887,15 @@
          tray. The button it labels, when pressed, opens a new browser window. -->
     <string name="new_window_tooltip">打开新窗口</string>
 
+    <!-- This string is for the tooltip that appears when the user hovers over the 'History' icon in the
+         tray and the History view is closed. The button it labels, when pressed, opens a list view of the user's visited
+         pages. -->
+    <string name="open_history_tooltip">打开历史记录</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'History' icon in the
+         tray and the History view is closed. The button it labels, when pressed, closes the History view. -->
+    <string name="close_history_tooltip">关闭历史记录</string>
+
     <!-- This string is displayed in any button used for removing all the items in the current context. -->
     <string name="remove_all">全部移除</string>
 
@@ -902,6 +936,11 @@
     <!-- This string is displayed in the message of the notification message shown when the device loses internet connection. -->
     <string name="no_internet_message">检查设备配置来修正问题。</string>
 
+    <!-- This string is displayed in the message of the notification message shown when the user tries to open a new window and
+      it has already opened the maximum number of allowed windows. %1$s expands to a integer value that represent the maximum windows
+      that can be opened (initially 3) -->
+    <string name="max_windows_msg">仅可打开 %1$s 个窗口，请先关闭现有窗口才能继续打开。</string>
+
     <!-- This string is displayed in the button of the notification message shown when the user tries to open a new window and
       it has already opened the maximum number of allowed windows. -->
     <string name="max_windows_button">好</string>
@@ -923,6 +962,10 @@
          a user tries to use the voice search. -->
     <string name="voice_samples_collect_data_dialog_title">允许 %1$s 为研究收集语音样本吗？</string>
 
+    <!-- This string is displayed in the description of the Voice Search samples collect dialog. That dialog is shown the first time
+         a user tries to use the voice search. -->
+    <string name="voice_samples_collect_dialog_description2">为了改善语音识别和其他服务，我们需要收集语音样本进行研究。我们将会安全地存储您的数据，并抹除可识别性信息。即使拒绝收集，您仍可正常使用语音搜索。&lt;a href=&quot;privacy&quot;&gt;详细了解&lt;/a&gt;</string>
+
     <!-- This string is displayed in the button of the Voice Search samples collect dialog.
          When clicked the user opts in to the voice data collection. -->
     <string name="voice_samples_collect_dialog_allow">允许</string>
@@ -934,10 +977,17 @@
     <!-- This string is displayed in the content language list in front of the system default language in between parenthesis -->
     <string name="language_default">默认</string>
 
+    <!-- This string is displayed in the URL bar when the user is in the home page.
+         '%1$s' will be replaced at runtime with the app's name. -->
+    <string name="url_home_title">%1$s 主页</string>
+
     <!-- This string is displayed in the URL bar when the user is in the bookmarks panel -->
     <string name="url_bookmarks_title">书签</string>
 
     <!-- This string is displayed in the URL bar when the user is in the history panel -->
     <string name="url_history_title">历史记录</string>
 
-    </resources>
+    <!-- This string is displayed in the Clear button on top of the window when in private mode. It only appears
+         when there is one window left. When clicked, it closes the private session -->
+    <string name="private_clear_button">清除</string>
+</resources>
