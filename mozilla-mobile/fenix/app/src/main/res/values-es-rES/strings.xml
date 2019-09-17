@@ -2,6 +2,9 @@
 <resources>
 
 
+    <!-- App name for private browsing mode, only the "(Private)" portion should be localized. -->
+    <string name="app_name_private">Firefox Preview (Privado)</string>
+
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Más opciones</string>
@@ -23,6 +26,20 @@
     <!-- Delete session button to erase your history in a private session -->
     <string name="private_browsing_delete_session">Eliminar sesión</string>
 
+    <!-- Private mode shortcut "contextual feature recommender" (CFR) -->
+    <!-- Text for the main message -->
+    <string name="cfr_message">Añadir un acceso directo para abrir pestañas privadas desde la pantalla de inicio.</string>
+    <!-- Text for the positive button -->
+    <string name="cfr_pos_button_text">Agregar acceso directo</string>
+    <!-- Text for the negative button -->
+    <string name="cfr_neg_button_text">No, gracias</string>
+
+    <!-- Home screen icons - Long press shortcuts -->
+    <!-- Shortcut action to open new tab -->
+    <string name="home_screen_shortcut_open_new_tab">Abrir nueva pestaña</string>
+    <!-- Shortcut action to open new private tab -->
+    <string name="home_screen_shortcut_open_new_private_tab">Abrir nueva pestaña privada</string>
+
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
     <string name="browser_tabs_button">Pestañas abiertas</string>
@@ -36,12 +53,16 @@
     <string name="browser_menu_stop">Detener</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Ayuda</string>
+    <!-- Browser menu button that sends a to a the what's new article -->
+    <string name="browser_menu_whats_new">Novedades</string>
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Ajustes</string>
     <!-- Browser menu button that opens a user's library -->
     <string name="browser_menu_your_library">Tu catálogo</string>
     <!-- Browser menu toggle that requests a desktop site -->
     <string name="browser_menu_desktop_site">Sitio de escritorio</string>
+    <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
+    <string name="browser_menu_add_to_homescreen">Agregar a la pantalla de Inicio</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">Buscar en la página</string>
     <!-- Browser menu button that creates a private tab -->
@@ -79,6 +100,9 @@
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Buscar</string>
 
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">Buscar en la web</string>
+
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">Ajustes</string>
@@ -89,8 +113,6 @@
     <string name="preferences_category_about">Acerca de</string>
     <!-- Preference for settings related to changing the default search engine -->
     <string name="preferences_search_engine">Buscador</string>
-    <!-- Preference for showing visited sites and bookmarks in awesomebar -->
-    <string name="preference_show_visited_sites_bookmarks">Mostrar sitios visitados y marcadores</string>
     <!-- Preference linking to help about Fenix -->
     <string name="preferences_help">Ayuda</string>
     <!-- Preference link to rating Fenix on the Play Store -->
@@ -114,6 +136,8 @@
     <string name="preferences_category_privacy">Privacidad</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Permisos del sitio</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Agregar acceso directo a navegación privada</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Accesibilidad</string>
     <!-- Preference category for account information -->
@@ -142,6 +166,12 @@
     <string name="preferences_remote_debugging">Depuración remota vía USB</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Mostrar sugerencias de búsqueda</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Mostrar sugerencias del portapapeles</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Buscar historial de navegación</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">Buscar marcadores</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Ajustes de la cuenta</string>
 
@@ -503,8 +533,13 @@
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Desactivada</string>
 
+    <!-- Collections -->
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="collections_description">Guarda las cosas que te importan. Para empezar, guarda las pestañas abiertas en una nueva colección.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">Colecciones</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
+    <string name="collection_menu_button_content_description">Menú de la colección</string>
     <!-- No Open Tabs Message Header -->
     <string name="no_collections_header">No hay colecciones</string>
     <!-- No Open Tabs Message Description -->
@@ -577,6 +612,18 @@
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Entendido</string>
 
+    <!-- Share error message -->
+    <string name="share_error_snackbar">No se puede compartir con esta aplicación</string>
+
+    <!-- Notifications -->
+    <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
+    <string name="notification_pbm_channel_name">Sesión de navegación privada</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">Eliminar pestañas privadas</string>
+    <!-- Notification action to open Fenix and resume the current browsing session. -->
+    <string name="notification_pbm_action_open">Abrir</string>
+    <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
+    <string name="notification_pbm_action_delete_and_open">Eliminar y abrir</string>
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Colección eliminada</string>
 
@@ -635,13 +682,37 @@
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d direcciones</string>
+    <!-- Title for history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_history_title">Historial</string>
+    <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
+        number of history pages the user has -->
+    <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d páginas</string>
     <!-- Title for the collections item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_collections_title">Colecciones</string>
     <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
         number of collections that will be deleted -->
     <string name="preferences_delete_browsing_data_collections_subtitle">%d colecciones</string>
+    <!-- Title for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies">Cookies</string>
+    <!-- Subtitle for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Se cerrará sesión en la mayoría de los sitios</string>
+    <!-- Title for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files">Imágenes y archivos en caché</string>
+    <!-- Subtitle for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Libera espacio de almacenamiento</string>
+    <!-- Title for the site permissions item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_site_permissions">Permisos del sitio</string>
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Eliminar datos de navegación</string>
+
+    <!-- Title for the Delete browsing data on quit preference -->
+    <string name="preferences_delete_browsing_data_on_quit">Eliminar datos de navegación al salir</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit">Eliminar automáticamente los datos de navegación cuando selecciones &quot;Salir&quot; en el menú principal</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Eliminar automáticamente los datos de navegación cuando selecciones \&quot;Salir\&quot; en el menú principal</string>
+    <!-- Category for history items to delete on quit in delete browsing data on quit -->
+    <string name="preferences_delete_browsing_data_on_quit_browsing_history">Historial de navegación</string>
 
     <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">Se han eliminado los datos del navegador</string>
@@ -718,5 +789,5 @@
     <string name="sign_out_disconnect">Desconectar</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Cancelar</string>
-
+  
     </resources>
