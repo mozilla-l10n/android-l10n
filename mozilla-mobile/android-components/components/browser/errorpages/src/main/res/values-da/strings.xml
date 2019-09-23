@@ -43,13 +43,35 @@
     <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
     <string name="mozac_browser_errorpages_net_interrupt_title">Forbindelsen blev afbrudt</string>
 
+    <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
+    <string name="mozac_browser_errorpages_net_interrupt_message"><![CDATA[
+      <p>Browseren oprettede forbindelsen korrekt, men den blev afbrudt under overførsel af data. Prøv igen.</p>
+      <ul>
+        <li>Webstedet kan være midlertidigt utilgængelig eller optaget. Prøv igen senere.</li>
+        <li>Hvis du ikke kan indlæse nogen sider, skal du kontrollere din enheds data- eller wi-fi-forbindelse.</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of the error page shown when a website takes too long to load. -->
     <string name="mozac_browser_errorpages_net_timeout_title">Forbindelsens tidsfrist udløb</string>
 
+    <!-- The error message shown when a website took long to load. -->
+    <string name="mozac_browser_errorpages_net_timeout_message"><![CDATA[
+      <p>Det anmodede websted svarede ikke på en anmodning om forbindelse, og browseren er stoppet med at vente på et svar.</p>
+      <ul>
+        <li>Kan serveren opleve stor efterspørgsel eller være midlertidigt nede? Prøv igen senere.</li>
+        <li>Er du ikke i stand til at besøge andre websteder? Kontrollér computerens netværksforbindelse.</li>
+        <li>Er din computer eller dit netværk beskyttet af en firewall eller en proxy? Forkerte indstillinger kan forstyrre din webbrowsing.</li>
+        <li>Har du stadig problemer? Kontakt din netværksadministrator eller din internetudbyder for at få hjælp.</li>
+      </ul>
+    ]]></string>
+
+    <!-- The document title and heading of the error page shown when a website could not be reached. -->
+    <string name="mozac_browser_errorpages_connection_failure_title">Kan ikke oprette forbindelse</string>
     <!-- The error message shown when a website could not be reached. -->
     <string name="mozac_browser_errorpages_connection_failure_message"><![CDATA[
       <ul>
-        <li>Webstedet kan være midlertidigt utilgængeligt eller travlt optaget. Prøv igen om et øjeblik.</li>
+        <li>Webstedet kan være midlertidigt utilgængeligt eller travlt optaget. Prøv igen senere.</li>
         <li>Hvis du ikke kan indlæse nogen websider overhovedet, kontrollér da din enheds data- eller wi-fi-forbindelse.</li>
       </ul>
     ]]></string>
@@ -73,6 +95,17 @@
       </ul>
     ]]></string>
 
+    <!-- The document title and heading of the error page shown when a website cannot be loaded because the browser is in offline mode. -->
+    <string name="mozac_browser_errorpages_offline_title">Offline-tilstand</string>
+    <!-- The error message shown when a website cannot be loaded because the browser is in offline mode. -->
+    <string name="mozac_browser_errorpages_offline_message"><![CDATA[
+      <p>Browseren er sat i offline-tilstand og kan ikke oprette den anmodede forbindelse.</p>
+      <ul>
+        <li>Er computeren forbundet til et aktivt netværk?</li>
+        <li>Tryk på "Prøv igen" for at skifte til online-tilstand og genindlæse siden.</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of the error page shown when the browser prevents loading a website on a restricted port. -->
     <string name="mozac_browser_errorpages_port_blocked_title">Port begrænset af sikkerhedshensyn</string>
     <!-- The error message shown when the browser prevents loading a website on a restricted port. -->
@@ -82,6 +115,15 @@
 
     <!-- The document title and heading of the error page shown when the Internet connection is disrupted while loading a website. -->
     <string name="mozac_browser_errorpages_net_reset_title">Forbindelsen blev nulstillet</string>
+
+    <!-- The error message shown when the Internet connection is disrupted while loading a website. -->
+    <string name="mozac_browser_errorpages_net_reset_message"><![CDATA[
+      <p>Netværkslinket blev afbrudt under forhandlinger om en forbindelse. Prøv igen.</p>
+      <ul>
+        <li>Webstedet kan være midlertidig utilgængeligt eller have for travlt. Prøv igen senere.</li>
+        <li>Hvis du ikke kan indlæse nogen sider overhovedet, så skal du kontrolle din enheds data eller wi-fi-forbindelse.</li>
+      </ul>
+    ]]></string>
 
     <!-- The document title and heading of the error page shown when the browser refuses to load a type of file that is considered unsafe. -->
     <string name="mozac_browser_errorpages_unsafe_content_type_title">Usikker filtype</string>
@@ -112,6 +154,15 @@
     ]]></string>
 
     <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_invalid_content_encoding_title">Fejl i indholdskodning</string>
+    <string name="mozac_browser_errorpages_invalid_content_encoding_message"><![CDATA[
+      <p>Siden kunne ikke vises, da den bruger en ugyldig eller ikke-understøttet form for komprimering.</p>
+      <ul>
+        <li>Kontakt webstedets ejere omkring dette problem.</li>
+      </ul>
+    ]]></string>
+
+    <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_unknown_host_title">Adressen blev ikke fundet</string>
     <!-- In the example, the two URLs in markup do not need to be translated. -->
     <string name="mozac_browser_errorpages_unknown_host_message"><![CDATA[
@@ -133,8 +184,24 @@
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_malformed_uri_title_alternative">Adressen er ikke gyldig</string>
 
+    <!-- This string contains markup. The URL should not be localized. -->
+    <string name="mozac_browser_errorpages_malformed_uri_message_alternative"><![CDATA[
+      <ul>
+        <li>Webadresser skrives normalt som <strong>http://www.eksempel.dk/</strong></li>
+        <li>Kontrollér at du ikke benytter divisionstegn (dvs. <strong>/</strong>).</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_unknown_protocol_title">Ukendt protokol</string>
+
+    <string name="mozac_browser_errorpages_unknown_protocol_message"><![CDATA[
+      <p>Adressen starter med en protokol (fx <q>wxyz://</q>), der ikke genkendes af browseren. Det betyder, at browseren ikke kan oprette en korrekt forbindelse til webstedet.</p>
+      <ul>
+        <li>Prøver du at få adgang til multimedia eller andet indholder, der ikke er tekst? Kontrollér, om webstedet stiller særlige krav.</li>
+        <li>Nogle protokoller kan kræve, at du installere tredjeparts-software eller -plugins, før browseren kan genkende protokollen.</li>
+      </ul>
+    ]]></string>
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_file_not_found_title">Fil ikke fundet</string>
@@ -157,8 +224,26 @@
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_proxy_connection_refused_title">Proxyserveren afviste forbindelse</string>
 
+    <string name="mozac_browser_errorpages_proxy_connection_refused_message"><![CDATA[
+      <p>Browseren er indstillet til at anvende en proxyserver, men proxyserveren afviste forbindelsen.</p>
+      <ul>
+        <li>Er browserens proxy-indstillinger korrekte? Kontrollér indstillingerne og prøv igen.</li>
+        <li>Tillader proxy-tjenesten forbindelser fra dette netværk?</li>
+        <li>Har du stadig problemer? Kontakt din netværksadministrator eller din internetudbyder for at få hjælp.</li>
+      </ul>
+    ]]></string>
+
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_unknown_proxy_host_title">Proxyserver blev ikke fundet</string>
+
+    <string name="mozac_browser_errorpages_unknown_proxy_host_message"><![CDATA[      
+      <p>Browseren er indstillet til at anvende en proxyserver, men serveren kunne ikke findes.</p>
+      <ul>
+        <li>Er browserens proxy-indstillinger korrekte? Kontrollér indstillingerne og prøv igen.</li>
+        <li>Er computeren forbundet til et aktivt netværk?</li>
+        <li>Har du stadig problemer? Kontakt din netværksadministrator eller din internetudbyder for at få hjælp.</li>
+      </ul>
+    ]]></string>
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_safe_browsing_malware_uri_title">Problem med malware-websted</string>
