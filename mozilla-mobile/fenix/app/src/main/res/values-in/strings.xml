@@ -22,9 +22,21 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Anda berada dalam sesi pribadi</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description">
+         %1$s menghapus riwayat pencarian dan penjelajahan Anda ketika Anda keluar dari aplikasi atau menutup semua tab privat. Ketika hal ini tidak membuat Anda anonim pada situs web atau penyedia layanan internet Anda, ini akan mempermudah
+        dalam menjaga apa yang Anda lakukan daring secara privat dari siapapun yang menggunakan perangkat ini.
+    </string>
+    <string name="private_browsing_common_myths">
+       Mitos umum tentang penjelajahan privat
+    </string>
     <!-- Delete session button to erase your history in a private session -->
     <string name="private_browsing_delete_session">Hapus sesi</string>
 
+    <!-- Private mode shortcut "contextual feature recommender" (CFR) -->
+    <!-- Text for the main message -->
+    <string name="cfr_message">Tambahkan pintasan untuk membuka tab privat dari layar Beranda Anda.</string>
     <!-- Text for the positive button -->
     <string name="cfr_pos_button_text">Tambahkan pintasan</string>
     <!-- Text for the negative button -->
@@ -235,6 +247,8 @@
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Nyalakan untuk semua situs</string>
 
+    <!-- Text displayed when there are no exceptions -->
+    <string name="exceptions_empty_message_description">Pengecualian memungkinkan Anda menonaktifkan perlindungan pelacakan untuk situs terpilih.</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Pelajari lebih lanjut</string>
 
@@ -618,6 +632,13 @@
     <!-- Add new device screen title -->
     <string name="sync_add_new_device_title">Kirim ke peranti</string>
 
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">Tidak Ada Perangkat Terhubung</string>
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">Pelajari Tentang Pengiriman Tab…</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">Sambungkan Peranti Lain…</string>
+
     <!-- Notifications -->
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
     <string name="notification_pbm_channel_name">Sesi penjelajahan pribadi</string>
@@ -708,6 +729,8 @@
     <string name="preferences_delete_browsing_data_on_quit">Hapus data penjelajahan saat keluar</string>
     <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
     <string name="preference_summary_delete_browsing_data_on_quit">Otomatis menghapus data penjelajahan ketika Anda memilih &quot;Keluar&quot; pada menu utama</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Otomatis menghapus data penjelajahan ketika Anda memilih \&quot;Keluar\&quot; pada menu utama</string>
     <!-- Category for history items to delete on quit in delete browsing data on quit -->
     <string name="preferences_delete_browsing_data_on_quit_browsing_history">Riwayat jelajah</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
@@ -837,8 +860,16 @@
     <string name="preference_enhanced_tracking_protection_standard">Standar (disarankan)</string>
     <!-- Preference description for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_description">Seimbang untuk perlindungan dan kinerja.</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_2">Halaman akan dimuat secara normal, tetapi memblokir lebih sedikit pelacak.</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Ketat</string>
+    <!-- Preference for enhanced tracking protection for the strict protection settings, default setting -->
+    <string name="preference_enhanced_tracking_protection_strict_default">Ketat (Baku)</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_default_description">Perlindungan pelacakan yang lebih kuat dan kinerja yang lebih cepat, tetapi beberapa situs mungkin tidak berfungsi dengan baik.</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_recommended">Ketat (disarankan)</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict_description">Perlindungan yang lebih kuat, tetapi dapat menyebabkan beberapa situs atau konten rusak.</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
@@ -877,13 +908,22 @@
     <string name="about_your_rights">Hak anda</string>
     <!-- About page link text to open open source licenses screen -->
     <string name="about_open_source_licenses">Pustaka sumber terbuka yang kami gunakan</string>
+    <!-- About page link text to open what's new link -->
+    <string name="about_whats_new">Apa yang baru di %s</string>
     <!-- Open source licenses page title
     The first parameter is the app name -->
     <string name="open_source_licenses_title">%s | Pustaka OSS</string>
 
+    <!-- Content description of the tab counter toolbar button when one tab is open -->
+    <string name="tab_counter_content_description_one_tab">1 tab</string>
+    <!-- Content description of the tab counter toolbar button when multiple tabs are open. First parameter will be replaced with the number of tabs (always more than one) -->
+    <string name="tab_counter_content_description_multi_tab">%d tab</string>
+
     <!-- Browser long press popup menu -->
     <!-- Copy the current url -->
     <string name="browser_toolbar_long_press_popup_copy">Salin</string>
+    <!-- Paste & go the text in the clipboard. '&amp;' is replaced with the ampersand symbol: & -->
+    <string name="browser_toolbar_long_press_popup_paste_and_go">Tempelkan &amp; Kunjungi</string>
     <!-- Paste the text in the clipboard -->
     <string name="browser_toolbar_long_press_popup_paste">Tempel</string>
   
@@ -908,6 +948,16 @@
     <string name="preferences_passwords_autofill">Isi Otomatis</string>
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Sinkronkan log masuk</string>
+    <!-- Syncing saved logins in Fenix is on -->
+    <string name="preferences_passwords_sync_logins_on">Aktif</string>
+    <!-- Syncing saved logins in Fenix is off -->
+    <string name="preferences_passwords_sync_logins_off">Nonaktif</string>
+    <!-- Syncing saved logins in Fenix needs reconnect to sync -->
+    <string name="preferences_passwords_sync_logins_reconnect">Hubungkan kembali</string>
+    <!-- Syncing saved logins in Fenix needs login -->
+    <string name="preferences_passwords_sync_logins_sign_in">Masuk ke Sync</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins">Log masuk tersimpan</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Kekecualian</string>
     <!-- Option to sort logins list A-Z, alphabetically -->
