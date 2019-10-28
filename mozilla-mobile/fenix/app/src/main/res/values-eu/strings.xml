@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App name for private browsing mode, only the "(Private)" portion should be localized. -->
-    <string name="app_name_private">Firefox Preview (pribatua)</string>
+
+    <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
+    <string name="app_name_private_2">Firefox Preview pribatua</string>
 
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
@@ -21,8 +22,30 @@
     <!-- Title for private session option -->
     <string name="private_browsing_title">Saio pribatuan zaude</string>
 
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description">
+         %1$s(e)k zure bilaketa- eta nabigazio-historia garbitzen du aplikazioa ixtean edo nabigatze pribatuko fitxa guztiak ixtean. Honek ez zaitu anonimo egiten webguneen edo zure interneteko zerbitzu-hornitzailearen aurrean baina erraztu egiten du ordenagailu hau erabiltzen duten beste erabiltzaileengandik online duzun jarduera pribatu mantentzen.
+    </string>
+    <string name="private_browsing_common_myths">
+       Nabigatze pribatuari buruzko ohiko mitoak
+    </string>
     <!-- Delete session button to erase your history in a private session -->
     <string name="private_browsing_delete_session">Ezabatu saioa</string>
+
+    <!-- Private mode shortcut "contextual feature recommender" (CFR) -->
+    <!-- Text for the main message -->
+    <string name="cfr_message">Gehitu lasterbidea fitxa pribatuak zure hasierako pantailatik irekitzeko.</string>
+    <!-- Text for the positive button -->
+    <string name="cfr_pos_button_text">Gehitu lasterbidea</string>
+    <!-- Text for the negative button -->
+    <string name="cfr_neg_button_text">Ez, eskerrik asko</string>
+
+    <!-- Home screen icons - Long press shortcuts -->
+    <!-- Shortcut action to open new tab -->
+    <string name="home_screen_shortcut_open_new_tab_2">Fitxa berria</string>
+    <!-- Shortcut action to open new private tab -->
+    <string name="home_screen_shortcut_open_new_private_tab_2">Fitxa pribatu berria</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -37,12 +60,16 @@
     <string name="browser_menu_stop">Gelditu</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Laguntza</string>
+    <!-- Browser menu button that sends a to a the what's new article -->
+    <string name="browser_menu_whats_new">Nobedadeak</string>
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Ezarpenak</string>
     <!-- Browser menu button that opens a user's library -->
     <string name="browser_menu_your_library">Zure biltegia</string>
     <!-- Browser menu toggle that requests a desktop site -->
     <string name="browser_menu_desktop_site">Mahaigainerako gunea</string>
+    <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
+    <string name="browser_menu_add_to_homescreen">Gehitu hasierako pantailan</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">Bilatu orrian</string>
     <!-- Browser menu button that creates a private tab -->
@@ -90,6 +117,10 @@
     <string name="preferences_category_basics">Oinarrizkoak</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Honi buruz</string>
+    <!-- Preference for settings related to changing the default search engine -->
+    <string name="preferences_default_search_engine">Bilaketa-motor lehenetsia</string>
+    <!-- Preference for settings related to Search -->
+    <string name="preferences_search">Bilaketa</string>
     <!-- Preference linking to help about Fenix -->
     <string name="preferences_help">Laguntza</string>
     <!-- Preference link to rating Fenix on the Play Store -->
@@ -113,6 +144,10 @@
     <string name="preferences_category_privacy">Pribatutasuna</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Gunearen baimenak</string>
+    <!-- Preference for opening links in a private tab-->
+    <string name="preferences_open_links_in_a_private_tab">Ireki lotura fitxa pribatuan</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Gehitu nabigatze pribaturako lasterbidea</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Erabilgarritasuna</string>
     <!-- Preference category for account information -->
@@ -139,8 +174,16 @@
     <string name="developer_tools_category">Garatzaile-tresnak</string>
     <!-- Preference for developers -->
     <string name="preferences_remote_debugging">USB bidezko urruneko arazketa</string>
+    <!-- Preference title for switch preference to show search shortcuts -->
+    <string name="preferences_show_search_shortcuts">Erakutsi bilaketarako lasterbideak</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Erakutsi bilaketa-iradokizunak</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Erakutsi arbeleko gomendioak</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Bilatu nabigatze-historia</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">Bilatu laster-markak</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Kontu-ezarpenak</string>
 
@@ -153,6 +196,8 @@
     <string name="preferences_sync_history">Historia</string>
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">Laster-markak</string>
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">Saio-hasierak</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">Amaitu saioa</string>
     <!-- Preference displays and allows changing current FxA device name -->
@@ -202,6 +247,11 @@
     <string name="preferences_tracking_protection_exceptions_description">Jarraipenaren babesa desgaituta dago gune hauetarako</string>
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Gaitu gune guztietarako</string>
+
+    <!-- Text displayed when there are no exceptions -->
+    <string name="exceptions_empty_message_description">Salbuespenen bitartez jarraipenaren babesa desgai daiteke gune jakinetarako.</string>
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">Argibide gehiago</string>
 
     <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
     <string name="preferences_tracking_protection_turned_off_globally">Modu globalean desgaituta; gaitzeko, joan ezarpenetara.</string>
@@ -318,6 +368,8 @@
     <string name="add_tab">Gehitu fitxa</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Itxi fitxa</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">Itxi %s fitxa</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
     <string name="open_tabs_menu">Ireki fitxen menua</string>
     <!-- Open tabs menu item to close all tabs -->
@@ -474,6 +526,8 @@
     <string name="clear_permission">Garbitu baimena</string>
     <!-- Button label for clearing all the information on all sites-->
     <string name="clear_permissions_on_all_sites">Garbitu gune guztietako baimenak</string>
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">Erreprodukzio automatikoa</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">Kamera</string>
     <!-- Preference for altering the microphone access for all websites -->
@@ -497,6 +551,15 @@
     <string name="tracking_protection_on">Aktibatuta</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Desaktibatuta</string>
+
+    <!-- Label that indicates video and audio autoplay is blocked -->
+    <string name="preference_option_autoplay_blocked">Bideoa eta audioa blokeatuta</string>
+    <!-- Label that indicates video and audio autoplay is allowed -->
+    <string name="preference_option_autoplay_allowed">Bideoa eta audioa baimenduta</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to on -->
+    <string name="delete_browsing_data_quit_on">Aktibatuta</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to off -->
+    <string name="delete_browsing_data_quit_off">Desaktibatuta</string>
 
     <!-- Collections -->
     <!-- Label to describe what collections are to a new user without any collections -->
@@ -544,6 +607,8 @@
     <!-- Share -->
     <!-- Share screen header -->
     <string name="share_header">Bidali eta partekatu</string>
+    <!-- Share screen header -->
+    <string name="share_header_2">Partekatu</string>
     <!-- Content description (not visible, for screen readers etc.):
         "Share" button. Opens the share menu when pressed. -->
     <string name="share_button_content_description">Partekatu</string>
@@ -566,6 +631,26 @@
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Ulertuta</string>
 
+    <!-- Share error message -->
+    <string name="share_error_snackbar">Ezin da aplikazio honetara partekatu</string>
+    <!-- Add new device screen title -->
+    <string name="sync_add_new_device_title">Bidali gailura</string>
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">Konektatutako gailurik ez</string>
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">Fitxak bidaltzeari buruzko argibide gehiago…</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">Konektatu beste gailu bat…</string>
+
+    <!-- Notifications -->
+    <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
+    <string name="notification_pbm_channel_name">Nabigatze pribatuko saioa</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">Ezabatu fitxa pribatuak</string>
+    <!-- Notification action to open Fenix and resume the current browsing session. -->
+    <string name="notification_pbm_action_open">Ireki</string>
+    <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
+    <string name="notification_pbm_action_delete_and_open">Ezabatu eta ireki</string>
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Bilduma ezabatuta</string>
     <!-- Text shown in snackbar when user renames a collection -->
@@ -574,6 +659,14 @@
     <string name="snackbar_tab_deleted">Fitxa ezabatuta</string>
     <!-- Text shown in snackbar when user deletes all tabs -->
     <string name="snackbar_tabs_deleted">Fitxak ezabatuta</string>
+    <!-- Text shown in snackbar when user closes a tab -->
+    <string name="snackbar_tab_closed">Fitxa itxita</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
+    <string name="snackbar_tabs_closed">Fitxak itxita</string>
+    <!-- Text shown in snackbar when user closes a private tab -->
+    <string name="snackbar_private_tab_closed">Fitxa pribatua itxita</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
+    <string name="snackbar_private_tabs_closed">Fitxa pribatuak itxita</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">Fitxa pribatuak ezabatuta</string>
     <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
@@ -646,6 +739,10 @@
     <string name="preferences_delete_browsing_data_on_quit">Ezabatu nabigatze-datuak irteterakoan</string>
     <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
     <string name="preference_summary_delete_browsing_data_on_quit">Nabigatze-datuak automatikoki ezabatzen ditu menu nagusian &quot;Irten&quot; hautatzerakoan</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Nabigatze-datuak automatikoki ezabatzen ditu menu nagusian \&quot;Irten\&quot; hautatzerakoan</string>
+    <!-- Category for history items to delete on quit in delete browsing data on quit -->
+    <string name="preferences_delete_browsing_data_on_quit_browsing_history">Nabigatze-historia</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Irten</string>
 
@@ -659,6 +756,9 @@
     <string name="delete_browsing_data_prompt_allow">Ezabatu</string>
     <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">Nabigatze-datuak ezabatuta</string>
+
+    <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
+    <string name="deleting_browsing_data_in_progress">Nabigatze-datuak ezabatzen…</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
@@ -732,6 +832,10 @@
     <string name="sync_sent_tabs_snackbar">Fitxak bidalita!</string>
     <!-- Text shown in snackbar when one tab has been sent to device  -->
     <string name="sync_sent_tab_snackbar">Fitxa bidalita!</string>
+    <!-- Text shown in snackbar when sharing tabs failed  -->
+    <string name="sync_sent_tab_error_snackbar">Ezin da bidali</string>
+    <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
+    <string name="sync_sent_tab_error_snackbar_action">SAIATU BERRIRO</string>
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Eskaneatu kodea</string>
     <!-- Instructions on how to access pairing -->
@@ -762,6 +866,8 @@
     <string name="preference_enhanced_tracking_protection_explanation">Mantendu zure datuak zuretzat. Lineako zure jardueraren jarraipena egiten duten elementu ohikoenetatik babesten zaitu %s(e)k.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Argibide gehiago</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_option">Oinarrizkoa</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard">Oinarrizkoa (gomendatua)</string>
     <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -794,8 +900,6 @@
     <string name="etp_tracking_content_title">Edukiaren jarraipena</string>
     <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_description">Jarraipenerako kodea izan lezaketen kanpoko iragarkiak, bideoak eta bestelako edukia kargatzea eragozten du. Zenbait webguneren eginbideetan eragina izan lezake.</string>
-    <!-- Enhanced Tracking Protection Onboarding Message shown in a dialog above the toolbar. The first parameter is the name of the application (For example: Fenix) -->
-    <string name="etp_onboarding_message">Babesaren ikonoak kolorea aldatzen duenean, %s(e)k webgune batean jarraipen-elementuak blokeatzen ditu. Sakatu gainean blokeatzen ari dena ikusteko.</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">Babesak aktibo daude gune honetarako</string>
     <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
