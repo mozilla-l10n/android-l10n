@@ -2,7 +2,8 @@
 <resources>
     <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
     <string name="app_name_private_2">Private Firefox Preview</string>
-
+    <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
+    <string name="app_name_private_3">Firefox Preview (Private)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">More options</string>
@@ -64,7 +65,7 @@
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Help</string>
     <!-- Browser menu button that sends a to a the what's new article -->
-    <string name="browser_menu_whats_new">What\'s New</string>
+    <string name="browser_menu_whats_new">What\’s New</string>
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Settings</string>
     <!-- Browser menu button that opens a user's library -->
@@ -114,6 +115,16 @@
     <string name="search_shortcuts_search_with">Search with</string>
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
     <string name="awesomebar_clipboard_title">Fill link from clipboard</string>
+    <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_allow_button">Allow</string>
+    <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_do_not_allow_button">Don\’t allow</string>
+    <!-- Search suggestion onboarding hint title text -->
+    <string name="search_suggestions_onboarding_title">Allow search suggestions in private sessions?</string>
+    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="search_suggestions_onboarding_text">%s will share everything you type in the address bar with your default search engine.</string>
+    <!-- Search suggestion onboarding hint Learn more link text -->
+    <string name="search_suggestions_onboarding_learn_more_link">Learn more</string>
 
     <!-- Search Widget -->
     <!-- Text preview for smaller sized widgets -->
@@ -132,6 +143,8 @@
     <string name="preferences_default_search_engine">Default search engine</string>
     <!-- Preference for settings related to Search -->
     <string name="preferences_search">Search</string>
+    <!-- Preference for settings related to Search address bar -->
+    <string name="preferences_search_address_bar">Address bar</string>
     <!-- Preference linking to help about Fenix -->
     <string name="preferences_help">Help</string>
     <!-- Preference link to rating Fenix on the Play Store -->
@@ -165,6 +178,8 @@
     <string name="preferences_category_account">Account</string>
     <!-- Preference shown on banner to sign into account -->
     <string name="preferences_sign_in">Sign in</string>
+    <!-- Preference for changing where the toolbar is positioned -->
+    <string name="preferences_toolbar">Toolbar</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Theme</string>
     <!-- Preference description for banner about signing in -->
@@ -189,6 +204,8 @@
     <string name="preferences_show_search_shortcuts">Show search shortcuts</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Show search suggestions</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">Show in private sessions</string>
     <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
     <string name="preferences_show_clipboard_suggestions">Show clipboard suggestions</string>
     <!-- Preference title for switch preference to suggest browsing history when searching -->
@@ -300,6 +317,12 @@
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">Cancel</string>
 
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">Top</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">Bottom</string>
+
     <!-- Theme Preferences -->
     <!-- Preference for using light theme -->
     <string name="preference_light_theme">Light</string>
@@ -347,6 +370,8 @@
     <string name="tab_header_label">Open tabs</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_title">Private session</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">Private tabs</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Add tab</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
@@ -625,6 +650,8 @@
     <string name="notification_pbm_channel_name">Private browsing session</string>
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text">Delete private tabs</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text_2">Close private tabs</string>
     <!-- Notification action to open Fenix and resume the current browsing session. -->
     <string name="notification_pbm_action_open">Open</string>
     <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
@@ -854,6 +881,8 @@
     <string name="preference_enhanced_tracking_protection_standard_description">Balanced for protection and performance.</string>
     <!-- Preference description for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_description_2">Pages will load normally, but block fewer trackers.</string>
+    <!--  Accessibility text for the Standard protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_standard_info_button">What\’s blocked by standard tracking protection</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Strict</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings, default setting -->
@@ -864,6 +893,8 @@
     <string name="preference_enhanced_tracking_protection_strict_recommended">Strict (recommended)</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict_description">Stronger protection, but may cause some sites or content to break.</string>
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_strict_info_button">What\’s blocked by strict tracking protection</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Blocked</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
@@ -901,7 +932,7 @@
     <!-- About page link text to open open source licenses screen -->
     <string name="about_open_source_licenses">Open source libraries we use</string>
     <!-- About page link text to open what's new link -->
-    <string name="about_whats_new">What\'s new in %s</string>
+    <string name="about_whats_new">What\’s new in %s</string>
     <!-- Open source licenses page title
     The first parameter is the app name -->
     <string name="open_source_licenses_title">%s | OSS Libraries</string>
@@ -920,7 +951,7 @@
     <string name="browser_toolbar_long_press_popup_paste">Paste</string>
     <!-- Snackbar message shown after an URL has been copied to clipboard. -->
     <string name="browser_toolbar_url_copied_to_clipboard_snackbar">URL copied to clipboard</string>
-  
+
     <!-- Title text for the Add To Homescreen dialog -->
     <string name="add_to_homescreen_title">Add to Home screen</string>
     <!-- Cancel button text for the Add to Homescreen dialog -->
@@ -983,7 +1014,7 @@
     <!-- Positive confirmation that Fenix should save the new or updated login -->
     <string name="logins_doorhanger_save_confirmation">Save</string>
     <!-- Negative confirmation that Fenix should not save the new or updated login -->
-    <string name="logins_doorhanger_save_dont_save">Don\'t save</string>
+    <string name="logins_doorhanger_save_dont_save">Don\’t save</string>
     <!-- Shown in snackbar to tell user that the password has been copied -->
     <string name="logins_password_copied">Password copied to clipboard</string>
     <!-- Shown in snackbar to tell user that the username has been copied -->
