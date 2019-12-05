@@ -10,4 +10,5 @@ assignees: 'delphine'
 Please add my locale to an existing product contained within the android-l10n repository (this repository).
 
 Product Name:
+
 Locale Requested:
