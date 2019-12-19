@@ -13,6 +13,6 @@ Product Name:
 
 Locale Requested:
 
-You will be notified here once your locale has been enabled on Pontoon. Please note that actual localization work should then happen through Pontoon (here)[https://pontoon.mozilla.org/projects/android-l10n/], and not through pull requests in this repository. A specific link to the Pontoon folder will also be sent here.
+You will be notified here once your locale has been enabled on Pontoon. Please note that actual localization work should then happen through Pontoon [here](https://pontoon.mozilla.org/projects/android-l10n/), and not through pull requests in this repository. A specific link to the Pontoon folder will also be sent here.
 
-For any other Mozilla project localization request (such as Firefox, Firefox for iOS, mozila.org, etc), please follow the standard process that can be found (here)[https://mozilla-l10n.github.io/localizer-documentation/tools/pontoon/teams_projects.html#requesting-a-project].
+For any other Mozilla project localization request (such as Firefox, Firefox for iOS, mozila.org, etc), please follow the standard process that can be found [here](https://mozilla-l10n.github.io/localizer-documentation/tools/pontoon/teams_projects.html#requesting-a-project).
