@@ -22,6 +22,12 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Aql-ak deg tɣimit n usfaylu uslig</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description">
+         %1$s iseffeḍ azray-ik n unadi d tunigin mi ara teffɣeḍ seg usnas neɣ ad tmedleḍ iccaren n tunigin tusligin. Ɣas wama aya ur yettarra ara d udrig deg yismal web neɣ deg usaǧǧaw-ik n unekcum Internet,
+        aya ad k-yeǧǧ ad tḥerzeḍ tabaḍnit n urmud-ik srid i wid yesseqdacen ibenk-ik.
+    </string>
     <string name="private_browsing_common_myths">
 Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
      </string>
@@ -120,6 +126,8 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="search_suggestions_onboarding_do_not_allow_button">Ur sirig ara</string>
     <!-- Search suggestion onboarding hint title text -->
     <string name="search_suggestions_onboarding_title">Sireg isumar n unadi deg yisfuyla n tunigin tusligin?</string>
+    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="search_suggestions_onboarding_text">%s ad yazen sekra n wayen i tettaruḍ deg ufeggag n tansiwin ɣer umsedday-inek n unadi s wudem amezwer.</string>
     <!-- Search suggestion onboarding hint Learn more link text -->
     <string name="search_suggestions_onboarding_learn_more_link">Issin ugar</string>
 
@@ -132,6 +140,8 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">Iɣewwaṛen</string>
+    <!-- Preference category for basic settings -->
+    <string name="preferences_category_basics">Iɣewwaren igejdanen</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Ɣef</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -142,6 +152,8 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="preferences_search_address_bar">Afeggag n tansa</string>
     <!-- Preference linking to help about Fenix -->
     <string name="preferences_help">Tallalt</string>
+    <!-- Preference link to rating Fenix on the Play Store -->
+    <string name="preferences_rate">Mudd tazmilt deg Google Play</string>
     <!-- Preference for giving feedback about Fenix -->
     <string name="preferences_feedback">Efk-d tikti-k</string>
     <!-- Preference linking to about page for Fenix
@@ -151,6 +163,8 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="preferences_your_rights">Izerfan-inek/m</string>
     <!-- Preference for settings related to saved passwords -->
     <string name="preferences_passwords">Awalen uffiren</string>
+    <!-- Preference for settings related to saved credit cards and addresses -->
+    <string name="preferences_credit_cards_addresses">Tikarḍiwin n usmad akked tansiwin</string>
     <!-- Preference for settings related to changing the default browser -->
     <string name="preferences_set_as_default_browser">Sbadu-t d iminig amezwer</string>
     <!-- Preference category for advanced settings -->
@@ -162,6 +176,8 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="preferences_site_permissions">Tisirag n usmel</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Ldi iseɣwan deg iccer uslig</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Rnu anegzum i tunigin tusligin</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Tuffart</string>
     <!-- Preference category for account information -->
@@ -172,8 +188,12 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="preferences_toolbar">Afeggag n yifecka</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Asentel</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">Mtawi ticraḍ n yisebtar, azray, awalen uffiren, akked waṭas-nniḍen s umiḍan n Firefox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Amiḍan Firefox</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">Ales tuqqna akken ad ikemmel umtawi</string>
     <!-- Preference for language -->
     <string name="preferences_language">Tutlayt</string>
     <!-- Preference for data choices -->
@@ -221,11 +241,25 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <!-- Label indicating that sync is in progress -->
     <string name="sync_syncing_in_progress">Amtawi…</string>
 
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">Amtawi yecceḍ. Tiddin taneggarut: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">Amtawi yecceḍ. Amtawi aneggaru: urǧin</string>
     <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
     <string name="sync_last_synced_summary">Amtawi aneggaru: %s</string>
     <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">Asemtawi aneggaru: weṛǧin</string>
 
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name">%s deg %s %s</string>
+
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">Accaren yettwaremsen</string>
+    <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_description">Ilɣa n yiccaren yettwaremsen seg Firefox ɣef yibenlan-nniḍen.</string>
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">Iccaren yettwarmesen</string>
     <!-- When multiple tabs have been received -->
@@ -238,18 +272,33 @@ Tiktiwin tigejdanin yuzzlen ur nṣeḥḥi ara
     <string name="preferences_tracking_protection_settings">Ammesten mgal asfuɣel</string>
     <!-- Preference switch for tracking protection -->
     <string name="preferences_tracking_protection">Ammesten mgal asfuɣel</string>
+    <!-- Preference switch description for tracking protection -->
+    <string name="preferences_tracking_protection_description">Sewḥel agbur akked iskripten i k-yeṭṭafaṛen srid</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Tisuraf</string>
 
+    <!-- Preference description for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions_description">Ammesten mgal aḍfaṛ yensa i yismal-a web</string>
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Rmed deg ismal meṛṛa</string>
+    <!-- Text displayed when there are no exceptions -->
+    <string name="exceptions_empty_message_description">Tisuraf ad k-ǧǧent ad tsenseḍ aùùesten mgal aḍfaṛ i kra n yismal.</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Issin ugar</string>
 
+    <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
+    <string name="preferences_tracking_protection_turned_off_globally">Yensa s wudem amatu, ddu ɣer yiɣewwaren akken ad yermed.</string>
+
     <!-- Preference switch for Telemetry -->
     <string name="preferences_telemetry">Tilisɣelt</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data">Isefka itiknikanen akked useqdec</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">Ad yebḍu isefka ɣef timellit, aseqdec, arrum d wudem n yiminig-ik  i Mozilla akken ad aɣ-d-yefk afus i usnerni n %1$s</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Tisermiyin</string>
+    <!-- Summary for experiments preferences -->
+    <string name="preference_experiments_summary">Ad yeǧǧ Mozilla ad tesbedd daɣen ad telqeḍ isefka n tmahilin tirmitanin</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">Amassaɣay n uɣelluy</string>
 
