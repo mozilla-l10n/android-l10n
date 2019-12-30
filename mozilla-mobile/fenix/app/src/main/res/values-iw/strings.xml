@@ -110,6 +110,8 @@
     <string name="search_suggestions_onboarding_allow_button">לאפשר</string>
     <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
     <string name="search_suggestions_onboarding_do_not_allow_button">לא לאפשר</string>
+    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="search_suggestions_onboarding_text">‏%s ישתף את מה שיוקלד בשורת הכתובת עם מנוע החיפוש ברירת המחדל שלך.</string>
     <!-- Search suggestion onboarding hint Learn more link text -->
     <string name="search_suggestions_onboarding_learn_more_link">מידע נוסף</string>
 
@@ -183,6 +185,12 @@
     <string name="preferences_show_search_shortcuts">הצגת קיצורי דרך לחיפוש</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">הצגת הצעות חיפוש</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">הצגת הצעות מלוח העריכה</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">חיפוש בהיסטוריית הגלישה</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">חיפוש בסימניות</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">הגדרות חשבון</string>
 
@@ -224,16 +232,24 @@
     <string name="preferences_tracking_protection_settings">הגנת מעקב</string>
     <!-- Preference switch for tracking protection -->
     <string name="preferences_tracking_protection">הגנת מעקב</string>
+    <!-- Preference switch description for tracking protection -->
+    <string name="preferences_tracking_protection_description">חסימת תוכן ותסריטים שעוקבים אחריך ברשת</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">חריגות</string>
     <!-- Preference description for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions_description">הגנת מעקב כבויה עבור האתרים האלו</string>
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">הפעלה עבור כל האתרים</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">מידע נוסף</string>
 
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">משתף מידע על ביצועים, חומרה, שימוש והתאמות אישיות על הדפדפן שלך עם Mozilla כדי לסייע לנו בשיפור %1$s</string>
 
+    <!-- Title for experiments preferences -->
+    <string name="preference_experiments">ניסויים</string>
+    <!-- Summary for experiments preferences -->
+    <string name="preference_experiments_summary">מאפשר ל־Mozilla להתקין ולאסוף נתונים עבור תכונות ניסיוניות</string>
     <!-- Preference switch for crash reporter -->
     <string name="preferences_crash_reporter">מדווח הקריסות</string>
     <!-- Preference switch for Mozilla location service -->
@@ -251,6 +267,20 @@
     <string name="pair_open_camera">פתיחת מצלמה</string>
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">ביטול</string>
+
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">למעלה</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">למטה</string>
+
+    <!-- Theme Preferences -->
+    <!-- Preference for using light theme -->
+    <string name="preference_light_theme">בהיר</string>
+    <!-- Preference for using dark theme -->
+    <string name="preference_dark_theme">כהה</string>
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">שימוש בערכת הנושא של המכשיר</string>
 
     <!-- Option in Library to open Downloads page -->
     <string name="library_downloads">הורדות</string>
@@ -339,6 +369,11 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">אין היסטוריה כאן</string>
 
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">ל־%1$s אין אפשרות לטעון דף זה, עמך הסליחה.</string>
+    <!-- Description text displayed on the tab crash page -->
+    <string name="tab_crash_description">באפשרותך לנסות לשחזר או לסגור את הלשונית הזאת למטה.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
     <string name="tab_crash_send_report">שליחת דיווח קריסה אל Mozilla</string>
     <!-- Close tab button text on the tab crash page -->
@@ -385,14 +420,25 @@
     <string name="bookmark_add_folder_fragment_label">הוספת תיקייה</string>
     <!-- Bookmark select folder screen title -->
     <string name="bookmark_select_folder_fragment_label">בחירת תיקייה</string>
+    <!-- Bookmark editing error missing title -->
+    <string name="bookmark_empty_title_error">לסימנייה חייבת להיות כותרת</string>
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">כתובת לא תקנית</string>
+
+    <!-- Bookmark screen message for empty bookmarks folder -->
+    <string name="bookmarks_empty_message">אין סימניות כאן</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks -->
+    <string name="bookmark_deletion_multiple_snackbar_message">בתהליך מחיקת הסימניות שנבחרו</string>
+    <!-- Bookmark undo button for deletion snackbar action -->
+    <string name="bookmark_undo_deletion">ביטול</string>
 
     <!-- Site Permissions -->
     <!-- Site permissions preferences header -->
     <string name="permissions_header">הרשאות</string>
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">מעבר להגדרות</string>
+    <!-- Label that indicates that this option it the recommended one -->
+    <string name="phone_feature_recommended">מומלץ</string>
     <!-- button that allows editing site permissions settings -->
     <string name="quick_settings_sheet_manage_site_permissions">ניהול הרשאות אתר</string>
     <!-- Button label for clearing all the information of site permissions-->
@@ -401,6 +447,8 @@
     <string name="clear_permission">ניקוי הרשאה</string>
     <!-- Button label for clearing all the information on all sites-->
     <string name="clear_permissions_on_all_sites">ניקוי הרשאות בכל האתרים</string>
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">ניגון אוטומטי</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">מצלמה</string>
     <!-- Preference for altering the microphone access for all websites -->
@@ -409,8 +457,15 @@
     <string name="preference_phone_feature_location">מיקום</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">התרעה</string>
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">חסום על־ידי Android</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">חריגות</string>
+
+    <!-- Summary of tracking protection preference if tracking protection is set to on -->
+    <string name="tracking_protection_on">פעילה</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <string name="tracking_protection_off">כבויה</string>
 
     <!-- Collections header on home fragment -->
     <string name="collections_header">אוספים</string>
@@ -508,6 +563,12 @@
     <string name="snackbar_private_tabs_closed">הלשוניות הפרטיות נסגרו</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">הלשוניות הפרטיות נמחקו</string>
+    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <string name="snackbar_deleted_undo">ביטול</string>
+    <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
+    <string name="a11y_dialog_deleted_undo">ביטול</string>
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">האם ברצונך למחוק את %1$s?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">מחיקה</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
