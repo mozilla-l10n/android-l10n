@@ -5,6 +5,8 @@
     <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
     <string name="app_name_private_2">Firefox Preview 사생활 보호 모드</string>
 
+    <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
+    <string name="app_name_private_3">Firefox Preview (사생활 보호 모드)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">옵션 더보기</string>
@@ -72,6 +74,8 @@
     <string name="browser_menu_desktop_site">데스크탑 사이트</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">홈 화면에 추가</string>
+    <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
+    <string name="browser_menu_install_on_homescreen">설치</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">페이지내 검색</string>
     <!-- Browser menu button that creates a private tab -->
@@ -99,6 +103,9 @@
     <!-- Browser menu button to put the the current page in reader mode -->
     <string name="browser_menu_read">리더뷰</string>
 
+    <!-- Browser menu button to open the current page in an external app -->
+    <string name="browser_menu_open_app_link">앱으로 열기</string>
+
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
     <string name="search_scan_button">스캔</string>
@@ -106,7 +113,7 @@
     <string name="search_shortcuts_button">바로 가기</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">검색 엔진 설정</string>
-    <!-- Header displayed when selecting a shortcut search engine -->
+    <!-- DEPRECATED: Header displayed when selecting a shortcut search engine -->
     <string name="search_shortcuts_search_with">검색</string>
 
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
@@ -130,6 +137,8 @@
     <string name="preferences_default_search_engine">기본 검색 엔진</string>
     <!-- Preference for settings related to Search -->
     <string name="preferences_search">검색</string>
+    <!-- Preference for settings related to Search address bar -->
+    <string name="preferences_search_address_bar">주소 표시줄</string>
     <!-- Preference linking to help about Fenix -->
     <string name="preferences_help">도움말</string>
     <!-- Preference link to rating Fenix on the Play Store -->
@@ -181,8 +190,16 @@
     <string name="developer_tools_category">개발자 도구</string>
     <!-- Preference for developers -->
     <string name="preferences_remote_debugging">USB 원격 디버깅</string>
+    <!-- Preference title for switch preference to show search shortcuts -->
+    <string name="preferences_show_search_shortcuts">검색 바로 가기 표시</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">검색어 자동 완성 보기</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">사생활 보호 모드에서 보기</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">클립보드 추천 보기</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">방문 기록 검색</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
     <string name="preferences_search_bookmarks">북마크 검색</string>
     <!-- Preference for account settings -->
@@ -283,11 +300,17 @@
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">취소</string>
 
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">위쪽</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">아래쪽</string>
+
     <!-- Theme Preferences -->
     <!-- Preference for using light theme -->
-    <string name="preference_light_theme">밝은</string>
+    <string name="preference_light_theme">밝게</string>
     <!-- Preference for using dark theme -->
-    <string name="preference_dark_theme">어두운</string>
+    <string name="preference_dark_theme">어둡게</string>
     <!-- Preference for using using dark or light theme automatically set by battery -->
     <string name="preference_auto_battery_theme">배터리 세이버로 설정</string>
     <!-- Preference for using following device theme -->
@@ -330,10 +353,14 @@
     <string name="tab_header_label">열린 탭</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_title">사생활 보호 세션</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">사생활 보호 탭</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">탭 추가</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">탭 닫기</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">%s 탭 닫기</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
     <string name="open_tabs_menu">탭 메뉴 열기</string>
     <!-- Open tabs menu item to close all tabs -->
@@ -463,7 +490,7 @@
     <!-- Bookmark select folder screen title -->
     <string name="bookmark_select_folder_fragment_label">폴더 선택</string>
     <!-- Bookmark editing error missing title -->
-    <string name="bookmark_empty_title_error">타이틀이 있어야합니다</string>
+    <string name="bookmark_empty_title_error">제목이 있어야 합니다</string>
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">URL이 잘못되었습니다</string>
     <!-- Bookmark screen message for empty bookmarks folder -->
@@ -525,6 +552,8 @@
 
     <!-- Collections header on home fragment -->
     <string name="collections_header">모음집</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
+    <string name="collection_menu_button_content_description">모음집 메뉴</string>
     <!-- No Open Tabs Message Header -->
     <string name="no_collections_header">모음집 없음</string>
     <!-- No Open Tabs Message Description -->
@@ -600,6 +629,13 @@
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">알겠습니다</string>
 
+    <!-- Add new device screen title -->
+    <string name="sync_add_new_device_title">기기로 보내기</string>
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">연결된 기기 없음</string>
+
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text_2">사생활 보호 탭 닫기</string>
     <!-- Notification action to open Fenix and resume the current browsing session. -->
     <string name="notification_pbm_action_open">열기</string>
     <!-- Text shown in snackbar when user deletes a collection -->
@@ -665,10 +701,10 @@
     <!-- Title for history items in Delete browsing data -->
     <string name="preferences_delete_browsing_data_browsing_history_title">방문 기록</string>
     <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">컬렉션</string>
+    <string name="preferences_delete_browsing_data_collections_title">모음집</string>
     <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
         number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d개 컬랙션</string>
+    <string name="preferences_delete_browsing_data_collections_subtitle">%d개 모음집</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">쿠키</string>
     <!-- Text for the button to delete browsing data -->
