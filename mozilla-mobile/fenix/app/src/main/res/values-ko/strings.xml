@@ -653,6 +653,8 @@
     <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
     <string name="snackbar_deleted_undo">실행 취소</string>
 
+    <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
+    <string name="a11y_dialog_deleted_confirm">확인</string>
     <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
         First parameter is the name of the app, second parameter is the URL or text scanned-->
     <string name="qr_scanner_confirmation_dialog_message">%1$s가 %2$s를 열도록 허용</string>
@@ -684,7 +686,7 @@
     <string name="preference_accessibility_auto_size">자동 글꼴 크기 조정</string>
 
     <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
-    <string name="preference_accessibility_auto_size_summary">글꼴 크기는 Android 설정과 맞춰집니다. 이 곳의 글꼴 크기 관리는 비활성화합니다.</string>
+    <string name="preference_accessibility_auto_size_summary">글꼴 크기를 Android 설정과 맞춥니다. 비활성화하면 글꼴 크기를 여기서 조절할 수 있습니다.</string>
 
     <!-- Title for the Delete browsing data preference -->
     <string name="preferences_delete_browsing_data">인터넷 사용 정보 삭제</string>
@@ -707,8 +709,19 @@
     <string name="preferences_delete_browsing_data_collections_subtitle">%d개 모음집</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">쿠키</string>
+    <!-- Subtitle for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_subtitle">대부분의 사이트에서 로그아웃됩니다</string>
+    <!-- Title for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files">캐시에 저장된 이미지와 파일</string>
+    <!-- Subtitle for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">저장 공간 확보</string>
+    <!-- Title for the site permissions item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_site_permissions">사이트 권한</string>
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">탐색 정보 삭제</string>
+
+    <!-- Category for history items to delete on quit in delete browsing data on quit -->
+    <string name="preferences_delete_browsing_data_on_quit_browsing_history">방문 기록</string>
 
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">취소</string>
@@ -716,6 +729,9 @@
     <string name="delete_browsing_data_prompt_allow">삭제</string>
     <!-- Text for the snackbar confirmation that the data was deleted -->
     <string name="preferences_delete_browsing_data_snackbar">탐색 정보가 삭제되었습니다</string>
+
+    <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
+    <string name="deleting_browsing_data_in_progress">탐색 정보 삭제 중…</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
@@ -733,8 +749,12 @@
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">%s를 최대한 활용하세요.</string>
+    <!-- text for the automatic sign-in button while signing in is in process -->
+    <string name="onboarding_firefox_account_signing_in">로그인 중…</string>
     <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Firefox에 로그인</string>
+    <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
+    <string name="onboarding_firefox_account_automatic_signin_failed">로그인 실패</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">스스로를 보호</string>
     <!-- text for the tracking protection card description
@@ -776,6 +796,8 @@
     <string name="sync_scan_code">코드 스캔</string>
     <!-- Text shown for settings option for sign with pairing -->
     <string name="sign_in_with_camera">카메라로 로그인</string>
+    <!-- Text shown for settings option for sign with email -->
+    <string name="sign_in_with_email">대신 이메일 사용</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">취소</string>
 
@@ -798,6 +820,8 @@
     <string name="preference_enhanced_tracking_protection_standard_description">보호와 성능사이에서 균형이 잡혀있습니다.</string>
     <!-- Preference description for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_description_2">페이지는 정상적으로 로드되지만, 더 적은 추적기를 차단합니다.</string>
+    <!--  Accessibility text for the Standard protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_standard_info_button">표준 추적 방지 기능에 의해 차단된 것</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">엄격</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings, default setting -->
@@ -808,6 +832,8 @@
     <string name="preference_enhanced_tracking_protection_strict_recommended">엄격(권장)</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict_description">더 강력한 보호를 제공하지만, 일부 사이트 또는 컨텐츠의 손상을 야기할 수 있습니다.</string>
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_strict_info_button">엄격 추적 방지 기능에 의해 차단된 것</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">차단됨</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
@@ -828,9 +854,34 @@
     <string name="etp_fingerprinters_title">핑거프린터</string>
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">추적 콘텐츠</string>
+    <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
+    <string name="etp_panel_on">이 사이트에서 보호 켜짐</string>
+    <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
+    <string name="etp_panel_off">이 사이트에서 보호 꺼짐</string>
     <!-- About page Your rights link text -->
     <string name="about_your_rights">사용자 권리</string>
+    <!-- About page link text to open open source licenses screen -->
+    <string name="about_open_source_licenses">사용한 오픈 소스 라이브러리</string>
     <!-- About page link text to open what's new link -->
     <string name="about_whats_new">%s의 새 기능</string>
   
+    <!-- Browser long press popup menu -->
+    <!-- Copy the current url -->
+    <string name="browser_toolbar_long_press_popup_copy">복사</string>
+    <!-- Paste & go the text in the clipboard. '&amp;' is replaced with the ampersand symbol: & -->
+    <string name="browser_toolbar_long_press_popup_paste_and_go">붙여넣고 바로 가기</string>
+    <!-- Paste the text in the clipboard -->
+    <string name="browser_toolbar_long_press_popup_paste">붙여넣기</string>
+    <!-- Snackbar message shown after an URL has been copied to clipboard. -->
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">클립보드에 URL 복사됨</string>
+
+    <!-- Title text for the Add To Homescreen dialog -->
+    <string name="add_to_homescreen_title">홈 화면에 추가</string>
+    <!-- Cancel button text for the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_cancel">취소</string>
+    <!-- Add button text for the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_add">추가</string>
+    <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_text_placeholder">바로 가기 이름</string>
+
     </resources>
