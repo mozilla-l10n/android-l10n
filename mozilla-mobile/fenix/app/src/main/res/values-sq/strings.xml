@@ -21,6 +21,13 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Gjendeni në sesion privat</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description">%1$s e spastron historikun tuaj të kërkimeve dhe shfletimit, kur dilni nga aplikacioni apo mbyllni krejt skedat private. Edhe pse kjo s’ju bën anonim përballë sajteve apo furnizuesit të shërbimit tuaj internet,
+        e bën më të lehtë mbajtjen private të asaj çka bëni në internet, nga cilido tjetër që përdor këtë pajisje.</string>
+    <string name="private_browsing_common_myths">
+       Mite të rëndomtë mbi shfletimin privat
+    </string>
     <!-- Delete session button to erase your history in a private session -->
     <string name="private_browsing_delete_session">Fshije sesionin</string>
 
@@ -294,6 +301,8 @@
     <string name="preferences_telemetry">Telemetry</string>
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Të dhëna përdorimi dhe teknike</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">I jep Mozilla-s të dhëna rreth funksionimit, përdorimit, hardware-it dhe përshtatjeve të shfletuesit tuaj, për ta ndihmuar në përmirësimin e %1$s-it</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Eksperimente</string>
     <!-- Summary for experiments preferences -->
@@ -308,6 +317,8 @@
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Aktivizo Sync-un</string>
+    <!-- Preference for pairing -->
+    <string name="preferences_sync_pair">Skanoni kod çiftimi te Firefox-i në desktop</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Hyni</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -315,6 +326,9 @@
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">Hiqe llogarinë</string>
 
+    <!-- Pairing Feature strings -->
+    <!-- Instructions on how to access pairing -->
+    <string name="pair_instructions"><![CDATA[Që të merrni kodin tuaj QR, vizitoni <b>firefox.com/pair</b> në Firefox te kompjuteri juaj.]]></string>
     <!-- Button to open camera for pairing -->
     <string name="pair_open_camera">Hap Kamerën</string>
     <!-- Button to cancel pairing -->
@@ -363,6 +377,8 @@
     <string name="library_title">Bibliotekë</string>
     <!-- Settings Page Title -->
     <string name="settings_title">Rregullime</string>
+    <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
+    <string name="content_description_history_menu">Menu objektesh historiku</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Mbylleni</string>
 
@@ -564,6 +580,9 @@
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">Off</string>
 
+    <!-- Collections -->
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="collections_description">Koleksiononi gjërat që kanë rëndësi për ju. Për t’ia filluar, ruani skedat e hapura në një koleksion të ri.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">Koleksione</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
@@ -626,8 +645,12 @@
     <string name="sync_offline">Jo në linjë</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Lidhni pajisje tjetër</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">Për të dërguar një skedë, bëni hyrjen te Firefox-i të paktën në një pajisje tjetër.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">E mora vesh</string>
+    <!-- Share error message -->
+    <string name="share_error_snackbar">S’mund të ndahet me të tjerë te ky aplikacion</string>
     <!-- Add new device screen title -->
     <string name="sync_add_new_device_title">Dërgojeni në pajisje</string>
     <!-- Text for the warning message on the Add new device screen -->
@@ -758,12 +781,20 @@
     <!-- Text for the allow button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_allow">Fshije</string>
 
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">Të dhënat e shfletimit u fshinë</string>
+    <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
+    <string name="deleting_browsing_data_in_progress">Po fshihen të dhëna shfletimi…</string>
+
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_header">Mirë se vini te %s!</string>
     <!-- text for the Firefox Accounts section header -->
     <string name="onboarding_fxa_section_header">Keni tashmë një llogari?</string>
+    <!-- text for the Firefox Preview feature section header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_feature_section_header">Njihuni me %s</string>
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Zgjidhni temën tuaj</string>
     <!-- text for the theme picker onboarding card description -->
@@ -781,12 +812,24 @@
     <string name="onboarding_firefox_account_signing_in">Po hyhet…</string>
     <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">Hyni në Firefox</string>
+    <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
+    <string name="onboarding_firefox_account_stay_signed_out">Qëndro i dalë</string>
+    <!-- text to display in the snackbar once account is signed-in -->
+    <string name="onboarding_firefox_account_sync_is_on">Njëkohësimi është aktiv</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">S’u arrit të hyhej</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Mbroni veten</string>
+    <!-- text for the tracking protection card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_tracking_protection_description">%s bllokon gjurmues reklamash që ju ndjekin nëpër internet.
+    </string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Shfletoni privatisht</string>
+    <!-- text for the private browsing onboarding card description
+    The first parameter is an icon that represents private browsing -->
+    <string name="onboarding_private_browsing_description">Kur shihni ikonën %s, shfletimi privat është larg një prekje ekrani.
+   </string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Privatësia juaj</string>
     <!-- Text for the button to read the privacy notice -->
