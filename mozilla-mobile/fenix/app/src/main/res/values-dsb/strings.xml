@@ -320,6 +320,8 @@
     <string name="preferences_usage_data_description">Źěli wugbaśe, wužyśe, hardware a pśiměrjenja wašogo wobglědowaka z Mozilla, aby nam pomagała, %1$spólěpšyś</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketingowe daty</string>
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <string name="preferences_marketing_data_description">Źěli daty wó tom, kótare funkcije w %1$s wužywaśo, z Leanplum, našym póbitowarjom za mobilny marketing.</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Eksperimenty</string>
 
@@ -728,6 +730,8 @@
     <string name="snackbar_private_tabs_deleted">Priwatne rejtarki su se wulašowali</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">ANULĚROWAŚ</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">Sedło jo se wótwónoźeło</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Anulěrowaś</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
@@ -749,6 +753,8 @@
     <string name="full_screen_notification">Połna wobrazowka se pokazujo</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL jo kopěrowany</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">To jo pśikładowy tekst. Pokazujo wam how, kak se tekst pokazujo, gaž wjelikosć z toś tym nastajenim pówušujośo abo pómjeńšujośo.</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Pówětšćo abo pómjeńšćo tekst na websedłach</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -821,6 +827,13 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">%s póznaś</string>
+    <!-- text for the "What's New" onboarding card header -->
+    <string name="onboarding_whats_new_header1">Cytajśo, což jo nowe</string>
+    <!-- text for the "what's new" onboarding card description
+    The first parameter is the short name of the app (e.g. Firefox) -->
+    <string name="onboarding_whats_new_description">Maśo pšašanja wó nowo wugótowanem %s? Cośo wěźeś, což jo se změniło?</string>
+    <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
+    <string name="onboarding_whats_new_description_linktext">How dostanjośo wótegrona</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Wuwónoźćo nejlěpše z %s.</string>
@@ -842,9 +855,22 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">Pśizjawjenje njejo se raźiło</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Šćitajśo se</string>
+    <!-- text for the tracking protection card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_tracking_protection_description1">%s tomu zajźujo, až websedła wam online slěduju.</string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button">Standard</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_button">Striktny (dopórucony)</string>
+    <!-- text for the toolbar position card header
+        In English this is an idiom for "choose a side as in an argument or fight"
+        but it is ok to make this more literally about "choosing a position in a physical space -->
+    <string name="onboarding_toolbar_position_header">Rozsuźćo se</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Priwatnje pśeglědowaś</string>
 
+    <!-- text for the private browsing onbording card button, that launches settings -->
+    <string name="onboarding_private_browsing_button">Nastajenja wócyniś</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Waša priwatnosć</string>
     <!-- text for the privacy notice onboarding card description
@@ -1032,6 +1058,8 @@
     <string name="preferences_passwords_sync_logins_sign_in">Pla Sync pśizjawiś</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">Skłaźone pśizjawjenja</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Zgóńśo wěcej wó Sync.</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Wuwześa</string>
     <!-- Empty description of list of login exceptions that we never save logins for -->
@@ -1140,4 +1168,35 @@
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">Pytnica %s jo wulašowana</string>
 
-    </resources>
+    <!-- Text on the disabled button while in progress. Placeholder replaced with app name -->
+    <string name="migration_updating_app_button_text">%s se aktualizěrujo…</string>
+    <!-- Text on the enabled button. Placeholder replaced with app name-->
+    <string name="migration_update_app_button">%s startowaś</string>
+    <!-- Accessibility description text for a completed migration item -->
+    <string name="migration_icon_description">Migracija jo dokóńcona</string>
+    <!--Text on list of migrated items (e.g. Settings, History, etc.)-->
+    <string name="migration_text_passwords">Gronidła</string>
+
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">Aby to dowólił:</string>
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Źiśo k nastajenjam Android</string>
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Pótusniśo zapisk <b>Berechtigungen</b> (Pšawa)]]></string>
+    <!-- Third step for the allowing a permission (Fore example: Camera) -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. ZAŠALTUJŚO <b>%1$s</b>]]></string>
+
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection">Wěsty zwisk</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection">Njewěsty zwisk</string>
+    <!-- Label for the Pocket default top site -->
+    <string name="pocket_top_articles">Nejwažnjejše nastawki</string>
+    <!-- Browser menu button that adds a top site to the home fragment -->
+    <string name="browser_menu_add_to_top_sites">Woblubowanym sedłam pśidaś</string>
+    <!-- text shown before the issuer name to indicate who its verified by, parameter is the name of
+     the certificate authority that verified the ticket-->
+    <string name="certificate_info_verified_by">Pśeglědany wót: %1$s </string>
+    <!-- Login overflow menu delete button -->
+    <string name="login_menu_delete_button">Lašowaś</string>
+</resources>
