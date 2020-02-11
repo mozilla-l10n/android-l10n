@@ -61,6 +61,10 @@
     <string name="browser_menu_bookmark">Nod Tudalen</string>
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">Golygu nod tudalen</string>
+    <!-- Browser menu button that opens the addon manager -->
+    <string name="browser_menu_addon_manager">Rheolwr Ychwanegion</string>
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">Dim ychwanegion yma</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Cymorth</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -150,6 +154,8 @@
     <string name="settings">Gosodiadau</string>
     <!-- Preference category for basic settings -->
     <string name="preferences_category_basics">Hanfodion</string>
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">Cyffredinol</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Ynghylch</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -180,8 +186,12 @@
     <string name="preferences_category_advanced">Uwch</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">Preifatrwydd</string>
+    <!-- Preference category for privacy and security settings -->
+    <string name="preferences_category_privacy_security">Preifatrwydd a diogelwch</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Caniatâd gwefan</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Pori preifat</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Agor dolen mewn tab preifat</string>
     <!-- Preference for adding private browsing shortcut -->
@@ -196,6 +206,8 @@
     <string name="preferences_toolbar">Bar Offer</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Thema</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Cyfaddasu</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">Cydweddu nodau tudalen, hanes, a mwy gyda’ch Cyfrif Firefox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -231,6 +243,9 @@
 
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Agor dolenni mewn apiau</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Ychwanegion</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -304,6 +319,8 @@
     <string name="preference_usage_data">Data defnydd a thechnegol</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">Mae’n rhannu data perfformiad, defnydd, caledwedd a chyfaddasu eich porwr gyda Mozilla er mwyn gwella %1$s</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">Data marchnata</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Arbrofion</string>
     <!-- Summary for experiments preferences -->
@@ -697,7 +714,7 @@
     <string name="snackbar_private_tabs_closed">Tabiau preifat wedi’u cau</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">Tabiau preifat wedi’u dileu</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">DADWNEUD</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Dadwneud</string>
@@ -720,8 +737,6 @@
     <string name="full_screen_notification">Mynd i’r sgrin lawn</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL wedi’i gopïo</string>
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">Mae’r llwynog brown cyflym yn neidio dros y ci diog. Mae’r llwynog brown cyflym yn neidio dros y ci diog. Mae’r llwynog brown cyflym yn neidio dros y ci diog. Mae’r llwynog brown cyflym yn neidio dros y ci diog.</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Gwneud testun ar wefannau yn fwy neu’n llai</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -748,11 +763,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d tudalen</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">Casgliadau</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d casgliad</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Cwcis</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
@@ -798,10 +808,6 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">Dod i adnabod %s</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Dewis eich thema</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">Rhowch gynnig ar thema dywyll: haws ar eich batri a’ch llygaid.</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Cael y gorau o %s.</string>
@@ -824,16 +830,8 @@
 
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Diogelwch eich hun</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">Mae %s yn rhwystro tracwyr hysbysebion sy’n eich dilyn o amgylch y we.
-    </string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Pori’n breifat</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">Pan welwch yr eicon %s, mae pori preifat un tap i ffwrdd.
-   </string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Eich preifatrwydd</string>
     <!-- text for the privacy notice onboarding card description
@@ -848,6 +846,8 @@
     <string name="onboarding_finish">Cychwyn pori</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Dewis eich thema</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Awtomatig</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1123,4 +1123,5 @@
     <string name="search_edit_custom_engine_success_message">Cadwyd %s</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">Dilëwyd %s</string>
-</resources>
+
+    </resources>
