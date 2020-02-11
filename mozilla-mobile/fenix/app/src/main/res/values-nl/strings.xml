@@ -69,6 +69,8 @@
     <string name="browser_menu_bookmark">Bladwijzer maken</string>
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">Bladwijzer bewerken</string>
+    <!-- Browser menu button that opens the addon manager -->
+    <string name="browser_menu_addon_manager">Add-onbeheerder</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Help</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -161,6 +163,8 @@
     <string name="settings">Instellingen</string>
     <!-- Preference category for basic settings -->
     <string name="preferences_category_basics">Basisinstellingen</string>
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">Algemeen</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Over</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -190,8 +194,12 @@
     <string name="preferences_category_advanced">Geavanceerd</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">Privacy</string>
+    <!-- Preference category for privacy and security settings -->
+    <string name="preferences_category_privacy_security">Privacy en beveiliging</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Websitemachtigingen</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Privénavigatie</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Koppelingen openen in een privétabblad</string>
     <!-- Preference for adding private browsing shortcut -->
@@ -206,6 +214,8 @@
     <string name="preferences_toolbar">Werkbalk</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Thema</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Aanpassen</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">Synchroniseer bladwijzers, geschiedenis en meer met uw Firefox-account</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -241,6 +251,9 @@
 
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Koppelingen openen in apps</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Add-ons</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -438,6 +451,9 @@
     <string name="collection_open_tabs">Tabbladen openen</string>
 
 
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Verwijderen</string>
+
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Geschiedenis verwijderen</string>
@@ -511,6 +527,8 @@
     <string name="bookmark_menu_open_in_private_tab_button">Openen in privétabblad</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Verwijderen</string>
+    <!--Bookmark overflow menu save button -->
+    <string name="bookmark_menu_save_button">Opslaan</string>
     <!-- Bookmark multi select title in app bar
      The first parameter is the number of bookmarks selected -->
     <string name="bookmarks_multi_select_title">%1$d geselecteerd</string>
@@ -653,6 +671,10 @@
     <string name="share_link_subheader">Een koppeling delen</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Verzenden naar apparaat</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">Alle acties</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">Onlangs gebruikt</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Aanmelden bij Sync</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -712,8 +734,10 @@
     <string name="snackbar_private_tabs_closed">Privétabbladen gesloten</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">Privétabbladen verwijderd</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">ONGEDAAN MAKEN</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">Website verwijderd</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Ongedaan maken</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
@@ -735,8 +759,6 @@
     <string name="full_screen_notification">Volledig scherm wordt geopend</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL gekopieerd</string>
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">Pa’s wijze lynx bezag vroom het fikse aquaduct. Pa’s wijze lynx bezag vroom het fikse aquaduct. Pa’s wijze lynx bezag vroom het fikse aquaduct. Pa’s wijze lynx bezag vroom het fikse aquaduct.</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Tekst op websites groter of kleiner maken</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -763,11 +785,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d pagina’s</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">Collecties</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d collecties</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Cookies</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
@@ -815,10 +832,6 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">Maak kennis met %s</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Kies uw thema</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">Probeer het donkere thema: zachter voor uw batterij en uw ogen.</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Haal het meeste uit %s.</string>
@@ -840,18 +853,18 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">Aanmelden mislukt</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Bescherm uzelf</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">%s blokkeert advertentietrackers die u volgen op het internet.
-    
-    </string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button">Standaard</string>
+    <!-- text for standard blocking option button description -->
+    <string name="onboarding_tracking_protection_standard_button_description">Blokkeert minder trackers, maar staat toe dat pagina’s normaal worden geladen</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_button">Streng (aanbevolen)</string>
+    <!-- text for strict blocking option button description -->
+    <string name="onboarding_tracking_protection_strict_button_description">Blokkeert meer trackers voor betere bescherming en prestaties, maar kan ervoor zorgen dat sommige websites niet goed werken</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Surf privé</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">Wanneer u het pictogram %s ziet, is privénavigatie slechts een tik verwijderd.
-   
-   </string>
+    <!-- text for the private browsing onbording card button, that launches settings -->
+    <string name="onboarding_private_browsing_button">Instellingen openen</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Uw privacy</string>
     <!-- text for the privacy notice onboarding card description
@@ -868,6 +881,8 @@
     <string name="onboarding_finish">Beginnen met surfen</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Kies uw thema</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Automatisch</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1038,6 +1053,8 @@
     <string name="preferences_passwords_sync_logins_sign_in">Aanmelden bij Sync</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">Opgeslagen aanmeldingen</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Meer info over Sync.</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Uitzonderingen</string>
     <!-- Empty description of list of login exceptions that we never save logins for -->
@@ -1143,4 +1160,14 @@
     <string name="search_edit_custom_engine_success_message">%s opgeslagen</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">%s verwijderd</string>
+
+    <!--Text on list of migrated items (e.g. Settings, History, etc.)-->
+    <string name="migration_text_passwords">Wachtwoorden</string>
+
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection">Beveiligde verbinding</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection">Niet-beveiligde verbinding</string>
+    <!-- Login overflow menu delete button -->
+    <string name="login_menu_delete_button">Verwijderen</string>
 </resources>
