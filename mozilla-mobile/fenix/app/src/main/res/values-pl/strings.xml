@@ -65,6 +65,10 @@
     <string name="browser_menu_bookmark">Dodaj zakładkę</string>
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">Edytuj zakładkę</string>
+    <!-- Browser menu button that opens the addon manager -->
+    <string name="browser_menu_addon_manager">Dodatki</string>
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">Nie ma tu żadnych dodatków</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Pomoc</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -157,6 +161,8 @@
     <string name="settings">Ustawienia</string>
     <!-- Preference category for basic settings -->
     <string name="preferences_category_basics">Podstawowe</string>
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">Ogólne</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">O programie</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -186,8 +192,12 @@
     <string name="preferences_category_advanced">Zaawansowane</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">Prywatność</string>
+    <!-- Preference category for privacy and security settings -->
+    <string name="preferences_category_privacy_security">Prywatność i bezpieczeństwo</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Uprawnienia witryn</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Tryb prywatny</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Otwieranie odnośników w prywatnej karcie</string>
     <!-- Preference for adding private browsing shortcut -->
@@ -708,7 +718,7 @@
     <string name="snackbar_private_tabs_closed">Zamknięto prywatne karty</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">Usunięto prywatne karty</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">Cofnij</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Cofnij</string>
@@ -731,8 +741,6 @@
     <string name="full_screen_notification">Włączono tryb pełnoekranowy</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">Skopiowano adres</string>
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">Pchnąć w tę łódź jeża lub ośm skrzyń fig. Pchnąć w tę łódź jeża lub ośm skrzyń fig. Pchnąć w tę łódź jeża lub ośm skrzyń fig. Pchnąć w tę łódź jeża lub ośm skrzyń fig.</string>
 
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Powiększenie lub pomniejszenie tekstu na stronach</string>
@@ -760,11 +768,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">Strony: %d</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">Kolekcje</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">Kolekcje: %d</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Ciasteczka</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
@@ -812,10 +815,6 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">Poznaj przeglądarkę %s</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Wybierz motyw</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">Wypróbuj ciemny motyw: lżejszy dla baterii i dla oczu.</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">W pełni wykorzystuj możliwości przeglądarki %s.</string>
@@ -837,16 +836,8 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">Logowanie się nie powiodło</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Chroń się</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">%s blokuje reklamy śledzące Cię w Internecie.
-    </string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Przeglądaj prywatnie</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">Tryb prywatny jest dostępny po jednym stuknięciu ikony %s.
-   </string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Twoja prywatność</string>
     <!-- text for the privacy notice onboarding card description
@@ -861,6 +852,8 @@
     <string name="onboarding_finish">Zacznij przeglądać Internet</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Wybierz motyw</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Automatyczny</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1136,4 +1129,5 @@
     <string name="search_edit_custom_engine_success_message">Zapisano „%s”</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">Usunięto „%s”</string>
-</resources>
+
+    </resources>
