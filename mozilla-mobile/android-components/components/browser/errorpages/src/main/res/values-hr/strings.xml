@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- The default document title of an error page (i.e., the contents of the `<title>` tag). -->
+    <string name="mozac_browser_errorpages_page_title">Greška pri učitavanju stranice</string>
+
     <!-- The button that appears at the bottom of an error page. -->
     <string name="mozac_browser_errorpages_page_refresh">Pokušaj ponovo</string>
 
@@ -9,6 +12,25 @@
 
     <!-- The document title and heading of an error page shown when a website cannot be loaded for an unknown reason. -->
     <string name="mozac_browser_errorpages_generic_title">Nije moguće dovršiti zahtjev</string>
+
+    <!-- The error message shown when a website cannot be loaded for an unknown reason. -->
+    <string name="mozac_browser_errorpages_generic_message"><![CDATA[<p>Dodatne informacije o ovom problemu ili grešci trenutno nisu dostupne.</p>]]></string>
+
+    <!-- The document title and heading of the error page shown when a website sends back unusual and incorrect credentials for an SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_ssl_title">Sigurna veza nije uspjela</string>
+    <!-- The error message shown when a website sends back unusual and incorrect credentials for an SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_ssl_message"><![CDATA[<ul>
+        <li>Stranicu kojoj pokušavate pristupiti nije moguće prikazati jer nije moguće provjeriti autentičnost primljenih podataka.</li>
+        <li>Kontaktirajte vlasnika web stranice i obavijestite ih o ovom problemu.</li>
+      </ul>]]></string>
+
+    <!-- The document title and heading of the error page shown when a website sends has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_title">Sigurna veza nije uspjela</string>
+    <!-- The error message shown when a website sends has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[<ul>
+        <li>Ovo može biti uzrokovano postavkama na poslužitelju ili je moguće da netko pokušava oponašati ovaj poslužitelj.</li>
+        <li>Ako ste se na ovaj poslužitelj u prošlosti bez problema spajali, moguće je da je greška privremena, stoga možete pokušati ponovno kasnije.</li>
+      </ul>]]></string>
 
     <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website has an invalid SSL certificate. -->
     <string name="mozac_browser_errorpages_security_bad_cert_advanced">Napredno …</string>
@@ -23,11 +45,29 @@
     <!-- The document title and heading of the error page shown when a website takes too long to load. -->
     <string name="mozac_browser_errorpages_net_timeout_title">Vezi je isteklo vrijeme</string>
 
+    <!-- The error message shown when a website took long to load. -->
+    <string name="mozac_browser_errorpages_net_timeout_message"><![CDATA[<p>Zatražena stranica nije odgovorila na zahtjev te je pretraživač prestao čekati odgovor.</p>
+      <ul>
+        <li>Možda je poslužitelj opterećen velikom količinom zahtjeva ili je privremeno ostao bez napajanja? Pokušajte ponovo kasnije.</li>
+        <li>Možete li pretraživati ostale stranice? Provjerite mrežnu vezu svog računala.</li>
+        <li>Je li vaše računalo ili mreža zaštićena vatrozidom ili proxyem? Neispravne postavke mogu prouzročiti probleme prilikom pretraživanja Weba.</li>
+        <li>Ukoliko još uvijek imate probleme, za pomoć se obratite svojem administratoru mreže ili pružatelju Internet usluga.</li>
+      </ul>]]></string>
+
     <!-- The document title and heading of the error page shown when a website could not be reached. -->
     <string name="mozac_browser_errorpages_connection_failure_title">Povezivanje nije moguće</string>
 
+    <!-- The error message shown when a website could not be reached. -->
+    <string name="mozac_browser_errorpages_connection_failure_message"><![CDATA[<ul>
+        <li>Stranica je možda privremeno nedostupna ili preopterećena. Pokušajte ponovno malo kasnije.</li>
+        <li>Ukoliko ne možete učitati niti jednu stranicu, provjerite podatkovnu ili Wi-Fi vezu vašeg uređaja.</li>
+      </ul>]]></string>
+
     <!-- The document title and heading of the error page shown when a website responds in an unexpected way and the browser cannot continue. -->
     <string name="mozac_browser_errorpages_unknown_socket_type_title">Neočekivani odgovor od poslužitelja</string>
+
+    <!-- The error message shown when a website responds in an unexpected way and the browser cannot continue. -->
+    <string name="mozac_browser_errorpages_unknown_socket_type_message"><![CDATA[<p>Stranica je na mreži zahtjev odgovorila na neočekivani način, te stoga pretraživač ne može nastaviti.</p>]]></string>
 
     <!-- The document title and heading of the error page shown when the browser gets stuck in an infinite loop when loading a website. -->
     <string name="mozac_browser_errorpages_redirect_loop_title">Stranica ne preusmjerava ispravno</string>
@@ -69,5 +109,8 @@
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_file_access_denied_title">Pristup datoteci je odbijen</string>
+
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_proxy_connection_refused_title">Proxy poslužitelj odbija povezivanje</string>
 
     </resources>
