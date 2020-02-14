@@ -191,6 +191,8 @@
     <string name="preferences_toolbar">Bara de i stromenti</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Tema</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Personalixa</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">Sincronixa segnaƚibri, cronologìa e molto altro co&amp;apos;l tò account Firefox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -225,6 +227,9 @@
     <string name="preferences_account_settings">Inpostasion account</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Vèrxi coƚegamenti ne ƚe app</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Conponenti che se pole xontare</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -418,6 +423,9 @@
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">Vèrxi schede</string>
 
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Rimovi</string>
+
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Scanseƚa cronologìa</string>
@@ -491,6 +499,8 @@
     <string name="bookmark_menu_open_in_private_tab_button">Vèrxi en scheda anonima</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Scanseƚa</string>
+    <!--Bookmark overflow menu save button -->
+    <string name="bookmark_menu_save_button">Salva</string>
     <!-- Bookmark multi select title in app bar
      The first parameter is the number of bookmarks selected -->
     <string name="bookmarks_multi_select_title">%1$d seƚesionà</string>
@@ -631,6 +641,8 @@
     <string name="share_link_subheader">Condividi on link</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Manda a dispoxitivo</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">Utilixà de recente</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Accedi a Sync</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -687,8 +699,10 @@
     <string name="snackbar_private_tabs_closed">Schede anonime sarà</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">Scanseƚa schede anonime</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">ANUȽA</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">Sito cavà</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Anuƚa</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
@@ -710,8 +724,6 @@
     <string name="full_screen_notification">Pasa a schermo intiero</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">Indiriso copià</string>
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Aumenta o ridusi ƚa dimension de&amp;apos;l testo de i siti web</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -738,11 +750,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d pàgine</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">Racolte</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d racolte</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Cookie</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
@@ -788,10 +795,6 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">A ƚa scoperta de %s</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Sèji el tò tema</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">Prova el tema scuro: fà ben a ƚa baterìa e a i tò òci.</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Otien el masimo da %s.</string>
@@ -813,14 +816,12 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">Aceso no riusìo</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Protegete</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">%s bloca ƚe publicità tracianti che ƚe te pedina sul Web.</string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button">Normaƚe</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_button">Restritiva (consijà)</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Naviga en modo riservà</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">Cuando te vedi l’icona %s, te basta on toco par pasare a ƚa navigasion anonima.</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Ƚa tò privacy</string>
     <!-- text for the privacy notice onboarding card description
@@ -833,6 +834,8 @@
     <string name="onboarding_finish">Scomisia a navegare</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Sèji el tò tema</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Otomàtico</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1106,4 +1109,12 @@
     <string name="search_edit_custom_engine_success_message">%s salvà</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">%s scanseƚà</string>
-</resources>
+
+    <!-- Text on the disabled button while in progress. Placeholder replaced with app name -->
+    <string name="migration_updating_app_button_text">Axornamento de %s…</string>
+    <!-- Text on the enabled button. Placeholder replaced with app name-->
+    <string name="migration_update_app_button">Invìa %s</string>
+    <!--Text on list of migrated items (e.g. Settings, History, etc.)-->
+    <string name="migration_text_passwords">Password</string>
+
+    </resources>
