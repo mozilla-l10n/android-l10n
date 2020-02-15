@@ -68,6 +68,10 @@
     <string name="browser_menu_bookmark">Добавить в закладки</string>
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">Изменить закладку</string>
+    <!-- Browser menu button that opens the addon manager -->
+    <string name="browser_menu_addon_manager">Управление дополнениями</string>
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">Дополнения отсутствуют</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Справка</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -161,6 +165,8 @@
 
     <!-- Preference category for basic settings -->
     <string name="preferences_category_basics">Основные</string>
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">Общие</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">О приложении</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -190,8 +196,12 @@
     <string name="preferences_category_advanced">Дополнительные</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">Приватность</string>
+    <!-- Preference category for privacy and security settings -->
+    <string name="preferences_category_privacy_security">Приватность и защита</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Разрешения для сайтов</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Приватный просмотр</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Открывать ссылки в приватной вкладке</string>
     <!-- Preference for adding private browsing shortcut -->
@@ -206,6 +216,8 @@
     <string name="preferences_toolbar">Панель инструментов</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Тема</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Персонализация</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">Синхронизируйте закладки, историю и многое другое с вашим Аккаунтом Firefox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -241,6 +253,9 @@
 
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Открывать ссылки в приложениях</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Дополнения</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -316,6 +331,10 @@
     <string name="preference_usage_data">Использование и технические данные</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">Делиться сведениями о производительности, использовании, аппаратном обеспечении и настройках вашего браузера с Mozilla, чтобы помогать нам делать %1$s ещё лучше</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">Маркетинговые данные</string>
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <string name="preferences_marketing_data_description">Делиться данными о том, что вы используете в %1$s, с Leanplum, нашим мобильным маркетинговым вендором.</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Исследования</string>
     <!-- Summary for experiments preferences -->
@@ -439,6 +458,9 @@
     <string name="collection_open_tabs">Открыть вкладки</string>
 
 
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Удалить</string>
+
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Удалить историю</string>
@@ -515,6 +537,8 @@
     <string name="bookmark_menu_open_in_private_tab_button">Открыть в приватной вкладке</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Удалить</string>
+    <!--Bookmark overflow menu save button -->
+    <string name="bookmark_menu_save_button">Сохранить</string>
     <!-- Bookmark multi select title in app bar
      The first parameter is the number of bookmarks selected -->
     <string name="bookmarks_multi_select_title">%1$d выбрана(ы)</string>
@@ -669,6 +693,10 @@
     <string name="share_link_subheader">Поделиться ссылкой</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Отправить на устройство</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">Все действия</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">Недавно использованные</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Войти в синхронизацию</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -723,15 +751,19 @@
     <string name="snackbar_tab_closed">Вкладка закрыта</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Вкладки закрыты</string>
+    <!-- Text shown in snackbar when user adds a site to home fragment. Placeholder replaced with app name -->
+    <string name="snackbar_added_to_firefox_home">Добавлено на главный экран %s!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">Приватная вкладка закрыта</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">Приватные вкладки закрыты</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">Приватные вкладки удалены</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">ОТМЕНИТЬ</string>
 
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">Сайт удалён</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Отмена</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
@@ -756,8 +788,6 @@
     <string name="url_copied">URL скопирован</string>
 
 
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">The quick brown fox jumps over the lazy dog. Съешь же ещё этих мягких французских булок, да выпей чаю. The quick brown fox jumps over the lazy dog. Съешь же ещё этих мягких французских булок, да выпей чаю.</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Увеличение или уменьшение размера шрифта на сайтах</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -784,11 +814,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d страницу(ы)</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">Коллекции</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d коллекций</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Куки</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
@@ -836,10 +861,6 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">Познакомьтесь с %s</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Выберите вашу тему</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">Попробуйте темную тему: экономит батарею и легче для ваших глаз.</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Получите максимум от %s.</string>
@@ -861,16 +882,8 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">Не удалось выполнить вход</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Защитите себя</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">%s блокирует рекламные трекеры, которые отслеживают вас в Интернете.
-    </string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Приватный режим</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">Заметив значок %s, знайте — в приватный режим можно перейти всего одним нажатием.
-   </string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Ваша приватность</string>
 
@@ -886,6 +899,8 @@
     <string name="onboarding_finish">Начать веб-сёрфинг</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Выберите вашу тему</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Автоматически</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1160,4 +1175,5 @@
     <string name="search_edit_custom_engine_success_message">%s сохранена</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">%s удалён</string>
-</resources>
+
+    </resources>
