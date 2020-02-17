@@ -65,6 +65,8 @@
     <string name="browser_menu_edit_bookmark">ブックマークを編集</string>
     <!-- Browser menu button that opens the addon manager -->
     <string name="browser_menu_addon_manager">アドオンマネージャー</string>
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">アドオンがありません</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">ヘルプ</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -326,6 +328,10 @@
     <string name="preference_usage_data">使用状況と技術データ</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">パフォーマンス情報、使用状況、ハードウェア情報、設定を Mozilla に送信して %1$s の改善に役立てます</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">マーケティングデータ</string>
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <string name="preferences_marketing_data_description">%1$s で使用した機能に関するデータをモバイルマーケティングベンダーの Leanplum と共有します。</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">実験的な機能</string>
     <!-- Summary for experiments preferences -->
@@ -449,6 +455,9 @@
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">タブを開く</string>
 
+
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">削除</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -673,6 +682,10 @@
     <string name="share_link_subheader">リンクを共有</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">端末へ送信</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">すべての操作</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">最近使用</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Sync にログイン</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -725,6 +738,8 @@
     <string name="snackbar_tab_closed">タブを閉じました</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">すべてのタブを閉じました</string>
+    <!-- Text shown in snackbar when user adds a site to home fragment. Placeholder replaced with app name -->
+    <string name="snackbar_added_to_firefox_home">%s ホームに追加されました！</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">プライベートタブを閉じました</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
@@ -733,6 +748,8 @@
     <string name="snackbar_private_tabs_deleted">プライベートタブを削除しました</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">元に戻す</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">サイトを削除しました</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">元に戻す</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
@@ -757,6 +774,8 @@
     <string name="url_copied">URL をコピーしました</string>
 
 
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">これはサンプルテキストです。この設定でテキストサイズを変更したときに、テキストがどのように表示されるかを示します。</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">ウェブサイト上のテキストを拡大または縮小します</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -830,6 +849,8 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">%s を知ろう</string>
+    <!-- text for the "What's New" onboarding card header -->
+    <string name="onboarding_whats_new_header1">新機能の紹介</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">%s を最大限に活用しよう。</string>
@@ -851,8 +872,14 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">ログインに失敗しました</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">自己防衛しよう</string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button">標準</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_button">厳格 (推奨)</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">プライベートなブラウジング</string>
+    <!-- text for the private browsing onbording card button, that launches settings -->
+    <string name="onboarding_private_browsing_button">設定を開く</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">あなたのプライバシー</string>
     <!-- text for the privacy notice onboarding card description
@@ -1037,6 +1064,8 @@
     <string name="preferences_passwords_sync_logins_sign_in">Sync にログイン</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">保存されたログイン情報</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Sync についての詳細情報。</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">例外</string>
     <!-- Empty description of list of login exceptions that we never save logins for -->
@@ -1144,4 +1173,20 @@
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">%s を削除しました</string>
 
-    </resources>
+    <!--Text on list of migrated items (e.g. Settings, History, etc.)-->
+    <string name="migration_text_passwords">パスワード</string>
+
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection">安全な接続</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection">安全でない接続</string>
+    <!-- Bookmark deletion confirmation -->
+    <string name="bookmark_deletion_confirmation">本当にこのブックマークを削除してもよろしいですか？</string>
+    <!-- Browser menu button that adds a top site to the home fragment -->
+    <string name="browser_menu_add_to_top_sites">トップサイトに追加</string>
+    <!-- text shown before the issuer name to indicate who its verified by, parameter is the name of
+     the certificate authority that verified the ticket-->
+    <string name="certificate_info_verified_by">認証局: %1$s</string>
+    <!-- Login overflow menu delete button -->
+    <string name="login_menu_delete_button">削除</string>
+</resources>
