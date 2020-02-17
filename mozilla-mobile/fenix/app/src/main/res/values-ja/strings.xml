@@ -63,6 +63,8 @@
     <string name="browser_menu_bookmark">ブックマーク</string>
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">ブックマークを編集</string>
+    <!-- Browser menu button that opens the addon manager -->
+    <string name="browser_menu_addon_manager">アドオンマネージャー</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">ヘルプ</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -157,6 +159,8 @@
     <!-- Preference category for basic settings -->
     <string name="preferences_category_basics">基本設定</string>
 
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">一般</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">製品情報</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -186,8 +190,12 @@
     <string name="preferences_category_advanced">詳細設定</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">プライバシー</string>
+    <!-- Preference category for privacy and security settings -->
+    <string name="preferences_category_privacy_security">プライバシーとセキュリティ</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">サイトの許可設定</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">プライベートブラウジング</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">リンクをプライベートタブで開く</string>
     <!-- Preference for adding private browsing shortcut -->
@@ -202,6 +210,8 @@
     <string name="preferences_toolbar">ツールバー</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">テーマ</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">カスタマイズ</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">ブックマーク、履歴などを Firefox アカウントと同期します</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -237,6 +247,9 @@
 
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">リンクをアプリで開く</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">アドオン</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -512,6 +525,8 @@
     <string name="bookmark_menu_open_in_private_tab_button">プライベートタブで開く</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">削除</string>
+    <!--Bookmark overflow menu save button -->
+    <string name="bookmark_menu_save_button">保存</string>
     <!-- Bookmark multi select title in app bar
      The first parameter is the number of bookmarks selected -->
     <string name="bookmarks_multi_select_title">%1$d 件選択</string>
@@ -716,7 +731,7 @@
     <string name="snackbar_private_tabs_closed">すべてのプライベートタブを閉じました</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">プライベートタブを削除しました</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">元に戻す</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">元に戻す</string>
@@ -742,8 +757,6 @@
     <string name="url_copied">URL をコピーしました</string>
 
 
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">ウェブサイト上のテキストを拡大または縮小します</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -770,11 +783,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d ページ</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">コレクション</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d 件のコレクション</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Cookie</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
@@ -822,10 +830,6 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">%s を知ろう</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">テーマを選んでください</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">バッテリーと目に優しいダークテーマを試しましょう。</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">%s を最大限に活用しよう。</string>
@@ -847,14 +851,8 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">ログインに失敗しました</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">自己防衛しよう</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">%s はウェブ上でユーザーを追跡する広告トラッカーをブロックします。</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">プライベートなブラウジング</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">%s アイコンが表示されたら、タップするだけでプライベートブラウジングモードになります。</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">あなたのプライバシー</string>
     <!-- text for the privacy notice onboarding card description
@@ -867,6 +865,8 @@
     <string name="onboarding_finish">ブラウジングを始める</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">テーマを選んでください</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">自動設定</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1143,4 +1143,5 @@
     <string name="search_edit_custom_engine_success_message">%s を保存しました</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">%s を削除しました</string>
-</resources>
+
+    </resources>
