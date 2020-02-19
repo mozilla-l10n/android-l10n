@@ -65,6 +65,10 @@
     <string name="browser_menu_bookmark">Markah</string>
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">Edit markah</string>
+    <!-- Browser menu button that opens the addon manager -->
+    <string name="browser_menu_addon_manager">Pengelola Pengaya</string>
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">Tidak ada pengaya di sini</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Bantuan</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -159,6 +163,8 @@
     <string name="settings">Setelan</string>
     <!-- Preference category for basic settings -->
     <string name="preferences_category_basics">Dasar</string>
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">Umum</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Tentang</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -190,8 +196,12 @@
     <string name="preferences_category_privacy">Privasi</string>
 
 
+    <!-- Preference category for privacy and security settings -->
+    <string name="preferences_category_privacy_security">Privasi dan keamanan</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Izin situs</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Penjelajahan pribadi</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Buka tautan di tab pribadi</string>
     <!-- Preference for adding private browsing shortcut -->
@@ -206,6 +216,8 @@
     <string name="preferences_toolbar">Bilah alat</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Tema</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Ubahsuai</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">Sinkronkan markah, riwayat, dan lainnya dengan Akun Firefox Anda</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -241,6 +253,9 @@
 
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Buka tautan di aplikasi</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Pengaya</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -317,6 +332,10 @@
     <string name="preference_usage_data">Data penggunaan dan teknis</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">Bagikan data kinerja, penggunaan, perangkat keras dan pengubahsuaian peramban Anda dengan Mozilla untuk membantu kami membuat %1$s semakin baik</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">Data pemasaran</string>
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <string name="preferences_marketing_data_description">Bagikan data mengenai fitur yang Anda gunakan pada %1$s dengan Leanplum, vendor pemasaran seluler kami.</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Eksperimen</string>
     <!-- Summary for experiments preferences -->
@@ -442,6 +461,9 @@
     <string name="collection_open_tabs">Buka tab</string>
 
 
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Hapus</string>
+
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Hapus riwayat</string>
@@ -517,6 +539,8 @@
     <string name="bookmark_menu_open_in_private_tab_button">Buka di tab pribadi</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Hapus</string>
+    <!--Bookmark overflow menu save button -->
+    <string name="bookmark_menu_save_button">Simpan</string>
     <!-- Bookmark multi select title in app bar
      The first parameter is the number of bookmarks selected -->
     <string name="bookmarks_multi_select_title">%1$d terpilih</string>
@@ -661,6 +685,10 @@
     <string name="share_link_subheader">Bagikan tautan</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Kirim ke peranti</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">Semua tindakan</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">Baru saja digunakan</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Masuk ke Sync</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -719,7 +747,7 @@
     <string name="snackbar_private_tabs_closed">Tab pribadi ditutup</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">Tab pribadi dihapus</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">URUNGKAN</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Urungkan</string>
@@ -742,8 +770,6 @@
     <string name="full_screen_notification">Memasuki mode layar penuh</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL disalin</string>
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Besarkan atau kecilkan teks pada situs web</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -771,11 +797,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d laman</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">Koleksi</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d koleksi</string>
 
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Kuki</string>
@@ -825,10 +846,8 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">Ketahui tentang %s</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Pilih tema Anda</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">Coba tema gelap: lebih menghemat baterai dan menyamankan mata Anda.</string>
+    <!-- text for the "What's New" onboarding card header -->
+    <string name="onboarding_whats_new_header1">Lihat apa yang baru</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Dapatkan hasil maksimal dari %s.</string>
@@ -850,23 +869,13 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">Gagal masuk</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Lindungi diri Anda</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">%s memblokir pelacak iklan yang mengikuti Anda di web.
-    </string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Menjelajah dengan privat</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">Jika Anda melihat ikon %s, penjelajahan privat dapat diakses dalam satu ketukan.
-   </string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Privasi Anda</string>
     <!-- text for the privacy notice onboarding card description
     The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_privacy_notice_description">Kami merancang %s untuk memberi Anda kendali atas apa yang Anda bagikan
-        daring dan apa yang Anda bagikan kepada kami.
-    </string>
+    <string name="onboarding_privacy_notice_description">Kami merancang %s untuk memberi Anda kendali atas apa yang Anda bagikan secara daring dan apa yang Anda bagikan kepada kami.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Pelajari pemberitahuan privasi kami</string>
 
@@ -874,6 +883,8 @@
     <string name="onboarding_finish">Mulai menjelajah</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Pilih tema Anda</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Otomatis</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -944,7 +955,6 @@
     <string name="preference_enhanced_tracking_protection_strict_description">Perlindungan yang lebih kuat, tetapi dapat menyebabkan beberapa situs atau konten rusak.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Apa yang diblokir oleh perlindungan pelacakan ketat</string>
-    <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Diblokir</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_allowed">Diizinkan</string>
@@ -1149,4 +1159,5 @@
     <string name="search_edit_custom_engine_success_message">%s disimpan</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">%s dihapus</string>
-</resources>
+
+    </resources>
