@@ -66,6 +66,8 @@
     <string name="browser_menu_edit_bookmark">Upravit záložku</string>
     <!-- Browser menu button that opens the addon manager -->
     <string name="browser_menu_addon_manager">Správce doplňků</string>
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">Žádné doplňky</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Nápověda</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -741,8 +743,8 @@
     <string name="snackbar_tab_closed">Panel zavřen</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Panely zavřen</string>
-    <!-- Text shown in snackbar when user adds a site to home fragment. Placeholder replaced with app name -->
-    <string name="snackbar_added_to_firefox_home">Přidáno na domovskou stránku!</string>
+    <!-- Text shown in snackbar when user adds a site to top sites -->
+    <string name="snackbar_added_to_top_sites">Přidáno do top stránek</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">Anonymní panel zavřen</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
@@ -853,6 +855,11 @@
     <string name="onboarding_feature_section_header">Poznejte aplikaci %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Co je nového</string>
+    <!-- text for the "what's new" onboarding card description
+    The first parameter is the short name of the app (e.g. Firefox) -->
+    <string name="onboarding_whats_new_description">Zajímají vás novinky v přepracované aplikaci %s? Chcete vědět, co se změnilo?</string>
+    <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
+    <string name="onboarding_whats_new_description_linktext">Zde najdete všechny odpovědi</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Využijte aplikaci %s naplno.</string>
@@ -879,12 +886,21 @@
     <string name="onboarding_tracking_protection_description1">%s brání stránkám, aby vás sledovaly online.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button">Standardní</string>
+    <!-- text for standard blocking option button description -->
+    <string name="onboarding_tracking_protection_standard_button_description">Blokuje méně sledovacích prvků, díky čemuž umožňuje, aby se některé stránky načítaly správně</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_button">Striktní (doporučeno)</string>
     <!-- text for strict blocking option button description -->
     <string name="onboarding_tracking_protection_strict_button_description">Blokuje více sledovacích prvků pro vaši ochranu a lepší výkon, ale může rozbít některé stránky</string>
+    <!-- text for the toolbar position card description -->
+    <string name="onboarding_toolbar_position_description">Zkuste po webu brouzdat jednou rukou s adresním řádkem vespod obrazovky, nebo ho přesuňte nahoru.</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Prohlížejte v soukromí</string>
+    <!-- text for the private browsing onboarding card description
+    The first parameter is an icon that represents private browsing -->
+    <string name="onboarding_private_browsing_description1">Pro jednorázové otevření anonymního panelu stačí použít ikonku %s.</string>
+    <!-- text for the private browsing onboarding card description, explaining how to always using private browsing -->
+    <string name="onboarding_private_browsing_always_description">Pokud chcete anonymní panel otevírat pokaždé, můžete změnit nastavení anonymního prohlížení.</string>
     <!-- text for the private browsing onbording card button, that launches settings -->
     <string name="onboarding_private_browsing_button">Otevřít nastavení</string>
     <!-- text for the privacy notice onboarding card header -->
@@ -973,7 +989,31 @@
     <string name="preference_enhanced_tracking_protection_strict_description">Silnější ochrana. Může omezit fungování některých stránek.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Co blokuje přísné nastavení ochrany proti sledování</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom">Vlastní</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_description">Vyberte sledovací prvky a skripty, které chcete blokovat</string>
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_custom_info_button">Co blokuje vlastní nastavení ochrany proti sledování</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
+    <!-- Preference for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies">Cookies</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_1">Sledovací cookies, např. sociálních sítí</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_2">Cookies z dosud nenavštívených stránek</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_3">Všechny cookies třetích stran (může omezit fungování některých stránek)</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">Všechny cookies (omezí fungování některých stránek)</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Sledující obsah</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Ve všech panelech</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">jen v anonymních panelech</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_3">Jen ve vlastních panelech</string>
     <string name="enhanced_tracking_protection_blocked">Blokováno</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_allowed">Povoleno</string>
