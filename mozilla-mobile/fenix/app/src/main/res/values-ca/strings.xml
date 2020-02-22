@@ -104,6 +104,9 @@
     <!-- Browser menu button to configure reader mode appearance e.g. the used font type and size -->
     <string name="browser_menu_read_appearance">Aparença</string>
 
+    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <string name="locale_search_hint">Cerca una llengua</string>
+
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
     <string name="search_scan_button">Escaneja</string>
@@ -141,6 +144,8 @@
     <string name="settings">Paràmetres</string>
     <!-- Preference category for basic settings -->
     <string name="preferences_category_basics">Bàsics</string>
+    <!-- Preference category for general settings -->
+    <string name="preferences_category_general">General</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Quant a</string>
     <!-- Preference for settings related to changing the default search engine -->
@@ -172,8 +177,12 @@
     <string name="preferences_category_advanced">Avançat</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">Privadesa</string>
+    <!-- Preference category for privacy and security settings -->
+    <string name="preferences_category_privacy_security">Privadesa i seguretat</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">Permisos dels llocs</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Navegació privada</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Obre els enllaços en una pestanya privada</string>
     <!-- Preference for adding private browsing shortcut -->
@@ -188,6 +197,8 @@
     <string name="preferences_toolbar">Barra d’eines</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Tema</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Personalitza</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description">Sincronitzeu les adreces d’interès, l’historial i molt més amb el vostre compte del Firefox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -220,6 +231,9 @@
     <string name="preferences_search_bookmarks">Cerca en les adreces d’interès</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Paràmetres del compte</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Complements</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -686,7 +700,7 @@
     <string name="snackbar_private_tabs_closed">S’han tancat les pestanyes privades</string>
     <!-- Text shown in snackbar when user deletes all private tabs -->
     <string name="snackbar_private_tabs_deleted">S’han suprimit les pestanyes privades</string>
-    <!-- Text for action to undo deleting a tab or collection shown in snackbar -->
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">DESFÉS</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Desfés</string>
@@ -710,8 +724,6 @@
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">S’ha copiat l’URL</string>
 
-    <!-- Sample text for accessibility font size -->
-    <string name="accessibility_text_size_sample_text">Jove xef, porti whisky amb quinze glaçons d’hidrogen, coi! Jove xef, porti whisky amb quinze glaçons d’hidrogen, coi! Jove xef, porti whisky amb quinze glaçons d’hidrogen, coi! Jove xef, porti whisky amb quinze glaçons d’hidrogen, coi!</string>
     <!-- Summary for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_text_size_summary">Augmenteu o disminuïu la mida del text dels llocs web</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -738,11 +750,6 @@
     <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
         number of history pages the user has -->
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d pàgines</string>
-    <!-- Title for the collections item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_collections_title">Col·leccions</string>
-    <!-- Subtitle for the collections item in Delete browsing data, parameter will be replaced with the
-        number of collections that will be deleted -->
-    <string name="preferences_delete_browsing_data_collections_subtitle">%d col·leccions</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Galetes</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
@@ -791,10 +798,6 @@
     <!-- text for the Firefox Preview feature section header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_feature_section_header">Coneixeu el %s</string>
-    <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Trieu el tema</string>
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description">Proveu el tema fosc: és millor per a la bateria i per als vostres ulls.</string>
     <!-- text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Traieu tot el profit al %s.</string>
@@ -816,16 +819,8 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">No s’ha pogut iniciar la sessió</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header">Protegiu-vos</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description">El %s bloca els elements publicitaris que us fan el seguiment mentre navegueu.
-    </string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Navegueu amb privadesa</string>
-    <!-- text for the private browsing onboarding card description
-    The first parameter is an icon that represents private browsing -->
-    <string name="onboarding_private_browsing_description">Quan veieu la icona %s, la navegació privada és a només un toc.
-   </string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">La vostra privadesa</string>
     <!-- text for the privacy notice onboarding card description
@@ -839,6 +834,8 @@
     <string name="onboarding_finish">Comença a navegar</string>
 
     <!-- Onboarding theme -->
+    <!-- text for the theme picker onboarding card header -->
+    <string name="onboarding_theme_picker_header">Trieu el tema</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Automàtic</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -909,7 +906,6 @@
     <string name="preference_enhanced_tracking_protection_strict_description">Més protecció, però pot fer que alguns llocs o algun contingut no funcionin correctament.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Què es bloca en la protecció contra el seguiment estricta</string>
-    <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Blocat</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_allowed">Permès</string>
@@ -1088,8 +1084,6 @@
     <!-- Text for the menu button to delete a search engine -->
     <string name="search_engine_delete">Suprimeix</string>
 
-    <!-- Text for the button to create a custom search engine on the Add search engine screen -->
-    <string name="search_add_custom_engine_label">Personalitzat</string>
     <!-- Placeholder text shown in the Search Engine Name TextField before a user enters text -->
     <string name="search_add_custom_engine_name_hint">Nom</string>
     <!-- Placeholder text shown in the Search String TextField before a user enters text -->
@@ -1115,4 +1109,5 @@
     <string name="search_edit_custom_engine_success_message">S’ha desat %s</string>
     <!-- Text shown when a user successfully deletes a custom search engine -->
     <string name="search_delete_search_engine_success_message">S’ha suprimit %s</string>
-</resources>
+
+    </resources>
