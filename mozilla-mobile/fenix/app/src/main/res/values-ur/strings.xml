@@ -66,6 +66,14 @@
     <!-- Browser menu button that saves the current tab to a collection -->
     <string name="browser_menu_save_to_collection">مجموعہ میں محفوظ کریں</string>
 
+    <!-- Browser menu button that open a share menu to share the current site -->
+    <string name="browser_menu_share">شیئر کریں</string>
+    <!-- Browser menu button to open the current page in an external app -->
+    <string name="browser_menu_open_app_link">ایپ میں کھولیں</string>
+
+    <!-- Locale Settings Fragment -->
+    <!-- Content description for tick mark on selected language -->
+    <string name="a11y_selected_locale_content_description">منتخب زبان</string>
     <!-- Content description for search icon -->
     <string name="a11y_search_icon_content_description">تلاش</string>
 
@@ -122,6 +130,8 @@
     <string name="preferences_category_privacy_security">رازداری اور سلامتی</string>
     <!-- Preference for private browsing options -->
     <string name="preferences_private_browsing_options">نجی برائوزنگ</string>
+    <!-- Preference for opening links in a private tab-->
+    <string name="preferences_open_links_in_a_private_tab">لنکس نجی ٹیب میں کھولیں</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">رسائی پزیری</string>
     <!-- Preference category for account information -->
@@ -150,6 +160,11 @@
     <!-- Preference for add_ons -->
     <string name="preferences_addons">ایڈ اون</string>
 
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
+    <string name="preferences_sync_now">ابھی sync کریں</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">چنیں کیا sync کرنا ہے</string>
     <!-- Preference for syncing history -->
     <string name="preferences_sync_history">سابقات</string>
     <!-- Preference for syncing bookmarks -->
@@ -160,6 +175,9 @@
     <string name="preferences_sign_out">سائن آؤٹ</string>
     <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">آلہ کا نام</string>
+
+    <!-- Label indicating that sync is in progress -->
+    <string name="sync_syncing_in_progress">sync ہو رہا ہے…</string>
 
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">استثنيات</string>
@@ -173,11 +191,16 @@
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">تجربات</string>
 
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string name="preferences_sync">سینک آن کریں</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">سائن ان کریں</string>
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">اکائونٹ ہٹائیں</string>
 
+    <!-- Button to open camera for pairing -->
+    <string name="pair_open_camera">کیمرا کھولیں</string>
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">منسوخ کریں</string>
 
@@ -209,6 +232,8 @@
     <string name="library_desktop_bookmarks_unfiled">دیگر نشانیاں</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">سابقات</string>
+    <!-- Option in Library to open Reading List -->
+    <string name="library_reading_list">پڑھنے کی فہرست</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">تلاش کریں</string>
     <!-- Library Page Title -->
@@ -236,18 +261,40 @@
     <!-- Button in the current session menu. Opens the share menu when pressed -->
     <string name="current_session_share">شیئر کریں</string>
 
+    <!-- Text for positive action to delete history in deleting history dialog -->
+    <string name="history_clear_dialog">صاف کریں</string>
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">مٹائیں</string>
+
+    <!-- Text for the header that groups the history for last 24 hours -->
+    <string name="history_24_hours">آخری 24 گھنٹے</string>
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">پچھلے 7 دن</string>
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">پچھلے 30 دن</string>
+    <!-- Text for the header that groups the history older than the last month -->
+    <string name="history_older">‏‏زیادہ پرانا</string>
+    <!-- Text shown when no history exists -->
+    <string name="history_empty_message">یہاں کوئی تاریخ نہیں ہے</string>
 
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">ٹیب بند کر دیں</string>
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">ٹیب بحال کریں</string>
 
+    <!-- Bookmarks -->
+    <!-- Content description for bookmarks library menu -->
+    <string name="bookmark_menu_content_description">بکمارک مینیو</string>
+    <!-- Screen title for editing bookmarks -->
+    <string name="bookmark_edit">بکمارک میں ترمیم کریں</string>
     <!-- Screen title for selecting a bookmarks folder -->
     <string name="bookmark_select_folder">فولڈر منتخب کریں</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">فولڈر بناؤ</string>
+    <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_created_snackbar">بُکمارک بنایا گیا۔</string>
+    <!-- Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_saved_snackbar">بکمارک محفوظ!</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">تدوین کریں</string>
     <!-- Bookmark overflow menu edit button -->
@@ -266,10 +313,16 @@
     <string name="bookmark_menu_delete_button">مٹائیں</string>
     <!--Bookmark overflow menu save button -->
     <string name="bookmark_menu_save_button">محفوظ کریں</string>
+    <!-- Bookmark editing screen title -->
+    <string name="edit_bookmark_fragment_title">بکمارک میں ترمیم کریں</string>
     <!-- Bookmark folder editing screen title -->
     <string name="edit_bookmark_folder_fragment_title">فولڈر تدوین کریں</string>
     <!-- Bookmark URL editing field label -->
     <string name="bookmark_url_label">URL</string>
+    <!-- Bookmark FOLDER editing field label -->
+    <string name="bookmark_folder_label">فولڈر</string>
+    <!-- Bookmark NAME editing field label -->
+    <string name="bookmark_name_label">نام</string>
     <!-- Bookmark add folder screen title -->
     <string name="bookmark_add_folder_fragment_label">فولڈر بناؤ</string>
     <!-- Bookmark select folder screen title -->
@@ -279,11 +332,23 @@
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">غلط URL ہے</string>
 
+    <!-- Bookmark screen message for empty bookmarks folder -->
+    <string name="bookmarks_empty_message">یہاں کوئی بُکمارک نہیں ہے</string>
+    <!-- Bookmark snackbar message on deletion
+     The first parameter is the host part of the URL of the bookmark deleted, if any -->
+    <string name="bookmark_deletion_snackbar_message">حذف شدہ %s</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks -->
+    <string name="bookmark_deletion_multiple_snackbar_message">منتخب کردہ بُکمارک کو حذف ہو رہا ہے</string>
+    <!-- Bookmark undo button for deletion snackbar action -->
+    <string name="bookmark_undo_deletion">‏‏پہلے جیسا کریں</string>
+
     <!-- Site Permissions -->
     <!-- Site permissions preferences header -->
     <string name="permissions_header">اجازتیں</string>
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">ترتیبات پر جائیں</string>
+    <!-- Label that indicates that this option it the recommended one -->
+    <string name="phone_feature_recommended">تجویز کردہ</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">کیمرہ</string>
     <!-- Preference for altering the microphone access for all websites -->
