@@ -220,16 +220,69 @@
     <string name="preferences_show_search_suggestions_in_private">Montri en privataj seancoj</string>
     <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
     <string name="preferences_show_clipboard_suggestions">Montri sugestojn el la tondujo</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Serĉi en retuma historio</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">Serĉi legosignojn</string>
+    <!-- Preference for account settings -->
+    <string name="preferences_account_settings">Agordoj de konto</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Malfermi ligilojn per programoj</string>
+
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Aldonaĵoj</string>
+
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
+    <string name="preferences_sync_now">Speguli nun</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">Elekti kion speguli</string>
+    <!-- Preference for syncing history -->
+    <string name="preferences_sync_history">historion</string>
+    <!-- Preference for syncing bookmarks -->
+    <string name="preferences_sync_bookmarks">legosignojn</string>
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">legitimilojn</string>
+    <!-- Preference for signing out -->
+    <string name="preferences_sign_out">Fini seancon</string>
+    <!-- Preference displays and allows changing current FxA device name -->
+    <string name="preferences_sync_device_name">Nomo de aparato</string>
+    <!-- Text shown when user enters empty device name -->
+    <string name="empty_device_name_error">La nomo de aparato ne povas esti malplena.</string>
+    <!-- Label indicating that sync is in progress -->
+    <string name="sync_syncing_in_progress">Spegulado…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">Malsukcesa spegulado. Lasta sukceso: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">Malsukcesa spegulado. Lasta spegulado: neniam</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">Lasta spegulado: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">Lasta spegulado: neniam</string>
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name">%s en %s %s</string>
+
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">Ricevitaj langetoj</string>
 
     <!-- Button to open camera for pairing -->
     <string name="pair_open_camera">Malfermi filmilon</string>
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">Nuligi</string>
 
+    <!-- Theme Preferences -->
+    <!-- Preference for using light theme -->
+    <string name="preference_light_theme">Hela</string>
+    <!-- Preference for using dark theme -->
+    <string name="preference_dark_theme">Malhela</string>
     <!-- Preference for using using dark or light theme automatically set by battery -->
     <string name="preference_auto_battery_theme">Difinita de la ŝparado de energio</string>
+
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">Uzi la etoson de la aparato</string>
 
     <!-- Library -->
     <!-- Option in Library to open Sessions page -->
@@ -252,12 +305,26 @@
     <string name="library_history">Historio</string>
     <!-- Option in Library to open Reading List -->
     <string name="library_reading_list">Legolisto</string>
+    <!-- Menu Item Label for Search in Library -->
+    <string name="library_search">Serĉi</string>
+    <!-- Library Page Title -->
+    <string name="library_title">Biblioteko</string>
+    <!-- Settings Page Title -->
+    <string name="settings_title">Agordoj</string>
+    <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
+    <string name="content_description_history_menu">Menuo por elementoj de historio</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Fermi</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Malfermitaj langetoj</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_title">Privata seanco</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">Privataj langetoj</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_tab">Aldoni langeton</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Fermi langeton</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
@@ -273,6 +340,10 @@
     <string name="tabs_menu_save_to_collection">Konservi en kolekto</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Menuo de langeto</string>
+    <!-- Tab menu item to share the tab -->
+    <string name="tab_share">Kundividi langeton</string>
+    <!-- Button in the current session menu. Deletes the session when pressed -->
+    <string name="current_session_delete">Forigi</string>
     <!-- Button in the current session menu. Saves the session when pressed -->
     <string name="current_session_save">Konservi</string>
     <!-- Button in the current session menu. Opens the share menu when pressed -->
@@ -280,11 +351,52 @@
     <!-- Button to save the current set of tabs into a collection -->
     <string name="save_to_collection">Konservi en kolekto</string>
 
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">Forigi kolekton</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">Renomi kolekton</string>
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">Malfermi langetojn</string>
 
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Forigi</string>
+
+    <!-- History -->
+    <!-- Text for the button to clear all history -->
+    <string name="history_delete_all">Forigi historion</string>
+    <!-- Text for the dialog to confirm clearing all history -->
+    <string name="history_delete_all_dialog">Ĉu vi certe volas forigi vian historion?</string>
+    <!-- Text for positive action to delete history in deleting history dialog -->
+    <string name="history_clear_dialog">Viŝi</string>
+    <!-- Text for the button to delete a single history item -->
+    <string name="history_delete_item">Forigi</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">%1$d elektitaj</string>
+    <!-- Text for the button to clear selected history items. The first parameter
+        is a digit showing the number of items you have selected -->
+    <string name="history_delete_some">Forigi %1$d elementojn</string>
+    <!-- Text for the header that groups the history for last 24 hours -->
+    <string name="history_24_hours">Lastaj 24 horoj</string>
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">Lastaj 7 tagoj</string>
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">Lastaj 30 tagoj</string>
+    <!-- Text for the header that groups the history older than the last month -->
+    <string name="history_older">Pli malnovaj</string>
+    <!-- Text shown when no history exists -->
+    <string name="history_empty_message">Neniu historio estas ĉi tie</string>
+
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">Bedaŭrinde %1$s ne povas ŝargi tiun paĝon.</string>
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">Sendi raporton pri paneo al Mozilla</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Fermi langeton</string>
+
+    <!-- Restore tab button text on the tab crash page -->
+    <string name="tab_crash_restore">Restarigi langeton</string>
 
     <!-- Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_saved_snackbar">Legosigno konservita!</string>
