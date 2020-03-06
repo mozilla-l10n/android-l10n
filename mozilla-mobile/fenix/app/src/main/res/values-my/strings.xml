@@ -210,6 +210,26 @@
     <!-- Preference category for developer tools -->
     <string name="developer_tools_category">ဖန်တီးသူသုံး ကိရိယာများ</string>
 
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">စာမှတ်များကို ရှာရန်</string>
+    <!-- Preference for account settings -->
+    <string name="preferences_account_settings">အကောင့်ဆက်တင်များ</string>
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">အက်ပ်များမှလင့်များကိုဖွင့်ပါ</string>
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">အတ်အွန်များ</string>
+
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
+    <string name="preferences_sync_now">ယခုချိတ်ပါ</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">ထပ်တူပြုလိုသည်များကို ရွေးပါ</string>
+    <!-- Preference for syncing history -->
+    <string name="preferences_sync_history">မှတ်တမ်း</string>
+    <!-- Preference for syncing bookmarks -->
+    <string name="preferences_sync_bookmarks">စာမှတ်များ</string>
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">ဝင်ရောက်မှုများ</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">ထွက်ရန်</string>
     <!-- Preference displays and allows changing current FxA device name -->
@@ -219,10 +239,19 @@
 
     <!-- Label indicating that sync is in progress -->
     <string name="sync_syncing_in_progress">တစ်ပြေးညီ ဖြစ်စေရန် ဆောင်ရွက်နေသည်…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">ထပ်တူပြုခြင်းမအောင်မြင်ပါ။ နောက်ဆုံးအောင်မြင်မှု - %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">ထပ်တူပြုခြင်းမအောင်မြင်ပါ။ နောက်ဆုံးထပ်တူပြုခြင်း: ဘယ်တော့မှ</string>
     <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
     <string name="sync_last_synced_summary">နောက်ဆုံး တစ်ပြေးညီ ဆောင်ရွက်ခဲ့သော အချိန် %s</string>
     <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">နောက်ဆုံး ထပ်တူပြုသည့်အချိန် : မရှိပါ</string>
+
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name">%s %s အပေါ် %s</string>
 
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
@@ -329,5 +358,56 @@
     <string name="tab_header_label">တပ်ဗ်များကို ဖွင့်ပါ</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_title">သီးသန့် အပိုင်း</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_tab">တက်ဗ် ထည့်ပါ</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
+    <string name="close_tab">တပ်ဗ်ကို ပိတ်ရန်</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">%s တပ်ဗ်ကို ပိတ်ရန်</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
+    <string name="open_tabs_menu">တက်ဗ်များ စာရင်းကို ဖွင့်ပါ</string>
+    <!-- Open tabs menu item to close all tabs -->
+    <string name="tabs_menu_close_all_tabs">တပ်ဗ်အားလုံးကို ပိတ်ပါ</string>
+    <!-- Open tabs menu item to share all tabs -->
+    <string name="tabs_menu_share_tabs">တပ်ဗ်များကို မျှဝေပါ</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection">စုဆောင်းမှုသို့သိမ်းဆည်းပါ</string>
+    <!-- Button in the current session menu. Saves the session when pressed -->
+    <string name="current_session_save">သိမ်းဆည်းပါ</string>
+    <!-- Button in the current session menu. Opens the share menu when pressed -->
+    <string name="current_session_share">မျှဝေ</string>
+    <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
+    <string name="current_session_image">လက်ရှိ session ပုံ</string>
+    <!-- Button to save the current set of tabs into a collection -->
+    <string name="save_to_collection">စုဆောင်းမှုသို့သိမ်းဆည်းပါ</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">စုဆောင်းမှုကိုဖျက်ပါ</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">စုဆောင်းမှုအမည်ပြောင်းပါ</string>
+    <!-- Text for the button to open tabs of the selected collection -->
+    <string name="collection_open_tabs">တပ်ဗ်များကို ဖွင့်ပါ</string>
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">ဖယ်ရှားပါ</string>
+
+    <!-- History -->
+    <!-- Text for the button to clear all history -->
+    <string name="history_delete_all">မှတ်တမ်းကို ဖျက်ပါ</string>
+    <!-- Text for the dialog to confirm clearing all history -->
+    <string name="history_delete_all_dialog">သင့် မှတ်တမ်းကို ဖျက်ပစ်မှာ သေချာပြီလား?</string>
+    <!-- Text for positive action to delete history in deleting history dialog -->
+    <string name="history_clear_dialog">ရှင်းလင်းပါ</string>
+    <!-- Text for the button to delete a single history item -->
+    <string name="history_delete_item">ဖျက်ပါ</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">%1$d ရွေးထားပြီး</string>
+    <!-- Text for the button to clear selected history items. The first parameter
+        is a digit showing the number of items you have selected -->
+    <string name="history_delete_some">%1$d ပစ္စည်းများ ဖျက်ပါ</string>
+    <!-- Text for the header that groups the history for last 24 hours -->
+    <string name="history_24_hours">နောက်ဆုံး 24 နာရီ</string>
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">လွန်ခဲ့သော 7 ရက်က</string>
 
     </resources>
