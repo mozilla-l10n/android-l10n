@@ -567,6 +567,10 @@
     <string name="collections_header">စုဆည်းမှုများ</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">စုဆောင်းခြင်းမီနူး</string>
+    <!-- No Open Tabs Message Header -->
+    <string name="no_collections_header">စုစည်းမှု မရှိပါ</string>
+    <!-- No Open Tabs Message Description -->
+    <string name="no_collections_description">သင်၏ စုစည်းမှုများကိုဤနေရာတွင်ပြလိမ့်မည်။</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">တက်ပ်များကိုရွေးပါ</string>
     <!-- Title for the "select collection" step of the collection creator -->
@@ -580,11 +584,30 @@
     <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_deselect_all">ရွေးထားသည်များကို ပယ်ပါ</string>
 
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">သိမ်းဆည်းရန် tabs များကိုရွေးချယ်ပါ</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">% d tabs များရွေးချယ်ထားပါသည်</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">% d tabs ကိုရွေးချယ်ထားပါသည်</string>
     <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
     <string name="create_collection_close">ပိတ်ပါ</string>
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
     <string name="create_collection_save">သိမ်းပါ</string>
 
+    <!-- Share screen header -->
+    <string name="share_header_2">မျှဝေ</string>
+    <!-- Content description (not visible, for screen readers etc.):
+        "Share" button. Opens the share menu when pressed. -->
+    <string name="share_button_content_description">မျှဝေ</string>
+    <!-- Sub-header in the dialog to share a link to another app -->
+    <string name="share_link_subheader">လင်ခ့်အားမျှဝေပါ</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">ကိရိယာသို့ ပို့ရန်</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">လုပ်ရပ်အားလုံး</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
     <string name="share_link_recent_apps_subheader">မကြာသေးမီကအသုံးပြုခဲ့သည်</string>
     <!-- An option from the share dialog to sign into sync -->
@@ -625,6 +648,12 @@
     <string name="notification_pbm_action_delete_and_open">ဖျက်ပါ။ ဖွင့်ပါ</string>
     <!-- Name of the "Powered by Fenix" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_powered_by_channel_name">မှပံ့ပိုးသည်</string>
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">စုဆောင်းမှုကိုဖျက်လိုက်သည်</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">စုဆောင်းမှုအမည်ပြောင်းခဲ့သည်</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">tab ကိုဖျက်လိုက်သည်</string>
     <!-- Text shown in snackbar when user closes a tab -->
     <string name="snackbar_tab_closed">Tab ပိတ်လိုက်တယ်</string>
     <!-- Text shown in snackbar when user closes all tabs -->
@@ -710,6 +739,13 @@
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button">စံ</string>
 
+    <!-- text for the toolbar position card header
+        In English this is an idiom for "choose a side as in an argument or fight"
+        but it is ok to make this more literally about "choosing a position in a physical space -->
+    <string name="onboarding_toolbar_position_header">နေရာယူပါ</string>
+    <!-- text for the private browsing onboarding card header -->
+    <string name="onboarding_private_browsing_header">သီးသန့်ရှာဖွေပါ</string>
+
     <!-- Theme setting for dark mode -->
     <string name="onboarding_theme_dark_title">အမှောင်အခင်းအကျင်း</string>
     <!-- Theme setting for light mode -->
@@ -740,6 +776,22 @@
     <string name="preference_enhanced_tracking_protection_standard_option">စံ</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">စိတ်ကြိုက်</string>
+
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">လက်ဗွေများ</string>
+    <string name="enhanced_tracking_protection_blocked">ပိတ်ဆို့ထားသည်</string>
+    <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
+    <string name="enhanced_tracking_protection_allowed">ခွင့်ပြုထားသည်</string>
+    <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_title">လူမှုမီဒီယာ ခြေရာခံသူများ</string>
+    <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_title">Cross-Site ခြေရာခံ Cookies</string>
+    <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_title">Cryptominers</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_title">လက်ဗွေများ</string>
 
     <!-- Cancel button text for the Add to Homescreen dialog -->
     <string name="add_to_homescreen_cancel">ပယ်​ဖျက်ပါ</string>
