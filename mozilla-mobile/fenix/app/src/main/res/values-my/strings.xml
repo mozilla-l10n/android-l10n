@@ -212,10 +212,14 @@
     <!-- Preference category for developer tools -->
     <string name="developer_tools_category">ဖန်တီးသူသုံး ကိရိယာများ</string>
 
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">USB မှတဆင့် Remote debugging</string>
     <!-- Preference title for switch preference to show search shortcuts -->
     <string name="preferences_show_search_shortcuts">ရှာဖွေမှုဖြတ်လမ်းများကိုပြပါ</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">ရှာဖွေရေး အကြံပြုချက်များကို ဖေါ်ပြပါ</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">ကိုယ်ပိုင်သီးသန့်အပိုင်းများတွင်ပြပါ</string>
     <!-- Preference title for switch preference to suggest browsing history when searching -->
     <string name="preferences_search_browsing_history">ကြည့်ရှုမှတ်တမ်းကို ရှာပါ</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
@@ -367,6 +371,8 @@
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_title">သီးသန့် အပိုင်း</string>
 
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">သီးသန့် တဗ် များ</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">တက်ဗ် ထည့်ပါ</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
@@ -381,6 +387,12 @@
     <string name="tabs_menu_share_tabs">တပ်ဗ်များကို မျှဝေပါ</string>
     <!-- Open tabs menu item to save tabs to collection -->
     <string name="tabs_menu_save_to_collection">စုဆောင်းမှုသို့သိမ်းဆည်းပါ</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string name="tab_menu">တဗ်မန်နူး</string>
+    <!-- Tab menu item to share the tab -->
+    <string name="tab_share">မျှဝေခြင်း tab</string>
+    <!-- Button in the current session menu. Deletes the session when pressed -->
+    <string name="current_session_delete">ဖျက်ပါ</string>
     <!-- Button in the current session menu. Saves the session when pressed -->
     <string name="current_session_save">သိမ်းဆည်းပါ</string>
     <!-- Button in the current session menu. Opens the share menu when pressed -->
@@ -418,6 +430,11 @@
     <!-- Text for the header that groups the history the past 7 days -->
     <string name="history_7_days">လွန်ခဲ့သော 7 ရက်က</string>
 
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">ပြီးခဲ့သည့်ရက်ပေါင်း 30</string>
+
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">Mozillaသို့ ပျက်စီးမှုအစီရင်ခံစာပို့ပါ</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">တပ်ဗ်ကို ပိတ်ရန်</string>
     <!-- Restore tab button text on the tab crash page -->
@@ -438,6 +455,24 @@
     <string name="bookmark_select_folder">ဖိုင်တွဲကိုရွေးပါ</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">ဖိုင်တွဲထည့်ပါ</string>
+    <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_created_snackbar">စာမှတ်ဖန်တီးပြီးပြီ</string>
+    <!-- Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_saved_snackbar">စာမှတ်သိမ်းပြီးပြီ</string>
+    <!-- Snackbar edit button shown after a bookmark has been created. -->
+    <string name="edit_bookmark_snackbar_action">ပြင်ဆင်ပါ</string>
+    <!-- Bookmark overflow menu edit button -->
+    <string name="bookmark_menu_edit_button">ပြင်ဆင်ပါ</string>
+    <!-- Bookmark overflow menu select button -->
+    <string name="bookmark_menu_select_button">ရွေးချယ်ပါ</string>
+    <!-- Bookmark overflow menu copy button -->
+    <string name="bookmark_menu_copy_button">ကူးပါ</string>
+    <!-- Bookmark overflow menu share button -->
+    <string name="bookmark_menu_share_button">မျှဝေ</string>
+    <!-- Bookmark overflow menu open in new tab button -->
+    <string name="bookmark_menu_open_in_new_tab_button">တပ်ဗ်အသစ်တစ်ခုဖွင့်ပါ</string>
+    <!-- Bookmark overflow menu open in private tab button -->
+    <string name="bookmark_menu_open_in_private_tab_button">တစ်ကိုယ်ရေသုံးတပ်ဗ်ဖွင့်</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">ဖျက်ပါ</string>
     <!--Bookmark overflow menu save button -->
@@ -447,11 +482,64 @@
     <string name="bookmarks_multi_select_title">%1$d ရွေးထားပြီး</string>
     <!-- Bookmark editing screen title -->
     <string name="edit_bookmark_fragment_title">စာမှတ်ကို ပြင်ရန်</string>
+    <!-- Bookmark folder editing screen title -->
+    <string name="edit_bookmark_folder_fragment_title">ဖိုင်ပြင်ဆင်ပါ</string>
     <!-- Bookmark URL editing field label -->
     <string name="bookmark_url_label">URL</string>
     <!-- Bookmark editing error missing title -->
     <string name="bookmark_empty_title_error">ခေါင်းစဉ်ရှိရမည်</string>
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">မမှန်ကန်သောURL</string>
+
+    <!-- Bookmark screen message for empty bookmarks folder -->
+    <string name="bookmarks_empty_message">ဒီမှာ စာမှတ်များမရှိပါ</string>
+
+    <!-- Label that indicates that this option it the recommended one -->
+    <string name="phone_feature_recommended">အကြံပြုထားသည်</string>
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">ဆိုက်ခွင့်ပြုချက်များကိုစီမံပါ</string>
+    <!-- Button label for clearing all the information of site permissions-->
+    <string name="clear_permissions">ခွင့်ပြုချက် ရှင်းလင်းပါ</string>
+    <!-- Button label for clearing a site permission-->
+    <string name="clear_permission">ခွင့်ပြုချက် ရှင်းလင်းပါ</string>
+    <!-- Button label for clearing all the information on all sites-->
+    <string name="clear_permissions_on_all_sites">ဆိုဒ်အားလုံးတွင်ခွင့်ပြုချက်ကိုရှင်းပါ</string>
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">Autoplay</string>
+    <!-- Preference for altering the camera access for all websites -->
+    <string name="preference_phone_feature_camera">ကင်မရာ</string>
+    <!-- Preference for altering the microphone access for all websites -->
+    <string name="preference_phone_feature_microphone">မိုက်ကရိုဖုန်း</string>
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">တည်နေရာ</string>
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">အသိပေးချက်</string>
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">ခွင့်ပြုရန်တောင်းပါ</string>
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">ပိတ်ဆို့ထားသည်</string>
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">ခွင့်ပြုထားသည်</string>
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Android မှပိတ်ဆို့ထားခြင်း</string>
+    <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
+    <string name="preference_exceptions">ခြွင်းချက်များ</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to on -->
+    <string name="tracking_protection_on">ဖွင့်ပါ</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <string name="tracking_protection_off">ပိတ်ပါ</string>
+    <!-- Label that indicates video and audio autoplay is blocked -->
+    <string name="preference_option_autoplay_blocked">ဗွီဒီယိုနှင့်အသံပိတ်ဆို့ခြင်း</string>
+    <!-- Label that indicates video and audio autoplay is allowed -->
+    <string name="preference_option_autoplay_allowed">ဗီဒီယိုနှင့်အသံခွင့်ပြုသည်</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to on -->
+    <string name="delete_browsing_data_quit_on">ဖွင့်ပါ</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to off -->
+    <string name="delete_browsing_data_quit_off">ပိတ်ပါ</string>
+
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_all">အားလုံး ရွေးချယ်ပါ</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">ရွေးထားသည်များကို ပယ်ပါ</string>
 
     </resources>
