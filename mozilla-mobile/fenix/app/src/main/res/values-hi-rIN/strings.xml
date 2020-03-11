@@ -343,6 +343,8 @@
 
     <!-- Preference for using dark theme -->
     <string name="preference_dark_theme">अंधेरा</string>
+    <!-- Preference for using using dark or light theme automatically set by battery -->
+    <string name="preference_auto_battery_theme">बैटरी सेवर द्वारा सेट करें</string>
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">डिवाइस थीम का पालन करें</string>
 
@@ -365,6 +367,8 @@
     <string name="library_desktop_bookmarks_unfiled">अन्य बुकमार्क</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">इतिहास</string>
+    <!-- Option in Library to open Reading List -->
+    <string name="library_reading_list">पठन सूची</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">खोजें</string>
     <!-- Library Page Title -->
@@ -395,6 +399,8 @@
     <string name="tabs_menu_close_all_tabs">सभी टैब बंद करें</string>
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">टैब साझा करें</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection">संग्रहण में सहेजें</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">टैब मेन्यू</string>
     <!-- Tab menu item to share the tab -->
@@ -407,6 +413,12 @@
     <string name="current_session_share">साझा करें</string>
     <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
     <string name="current_session_image">वर्तमान सत्र की छवि</string>
+    <!-- Button to save the current set of tabs into a collection -->
+    <string name="save_to_collection">संग्रहण में सहेजें</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">संग्रहण को मिटाएं</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">संग्रहण का नाम बदलें</string>
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">खुले टैब</string>
     <!-- Text for the menu button to remove a top site -->
@@ -421,6 +433,12 @@
     <string name="history_clear_dialog">साफ करें</string>
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">मिटाएं</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">%1$d चयनित</string>
+    <!-- Text for the button to clear selected history items. The first parameter
+        is a digit showing the number of items you have selected -->
+    <string name="history_delete_some">%1$d चीज़ों को मिटाएं</string>
     <!-- Text for the header that groups the history for last 24 hours -->
     <string name="history_24_hours">पिछले 24 घंटे</string>
     <!-- Text for the header that groups the history the past 7 days -->
@@ -486,6 +504,8 @@
     <string name="edit_bookmark_fragment_title">बुकमार्क संपादित करें</string>
     <!-- Bookmark folder editing screen title -->
     <string name="edit_bookmark_folder_fragment_title">फ़ोल्डर सम्पादित करें</string>
+    <!-- Bookmark sign in button message -->
+    <string name="bookmark_sign_in_button">सिंक किए हुए बुकमार्क को देखने के लिए साइन इन करें</string>
     <!-- Bookmark URL editing field label -->
     <string name="bookmark_url_label">URL</string>
     <!-- Bookmark FOLDER editing field label -->
@@ -503,14 +523,32 @@
     <!-- Bookmark screen message for empty bookmarks folder -->
     <string name="bookmarks_empty_message">यहां कोई बुकमार्क नहीं है</string>
 
+    <!-- Bookmark snackbar message on deletion
+     The first parameter is the host part of the URL of the bookmark deleted, if any -->
+    <string name="bookmark_deletion_snackbar_message">%1$s मिटाया गया</string>
     <!-- Bookmark snackbar message on deleting multiple bookmarks -->
     <string name="bookmark_deletion_multiple_snackbar_message">चयनित बुकमार्क मिटा रहे है</string>
+
+    <!-- Bookmark undo button for deletion snackbar action -->
+    <string name="bookmark_undo_deletion">पूर्ववत करें</string>
 
     <!-- Site Permissions -->
     <!-- Site permissions preferences header -->
     <string name="permissions_header">अनुमति‌</string>
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">सेटिंग्स पर जायें</string>
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">त्वरित सेटिंग्स शीट</string>
+    <!-- Label that indicates that this option it the recommended one -->
+    <string name="phone_feature_recommended">अनुशंसित</string>
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">साइट अनुमतियां प्रबंधित करें</string>
+    <!-- Button label for clearing all the information of site permissions-->
+    <string name="clear_permissions">अनुमतियां हटाएं</string>
+    <!-- Button label for clearing a site permission-->
+    <string name="clear_permission">अनुमति हटाएं</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">कैमरा</string>
     <!-- Preference for altering the microphone access for all websites -->
