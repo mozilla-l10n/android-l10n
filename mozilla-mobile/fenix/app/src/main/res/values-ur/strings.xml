@@ -253,6 +253,11 @@
     <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
     <string name="sync_last_synced_summary">آخری بار synced: %s</string>
 
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name">%s پر %s%s</string>
+
     <!--  The body for these is the URL of the tab received  -->
     <string name="fxa_tab_received_notification_name">ٹیب حاصل ہوا</string>
     <!-- When multiple tabs have been received -->
@@ -366,10 +371,14 @@
     <string name="open_tabs_menu">ٹیبز کا مینو کھولیں</string>
     <!-- Open tabs menu item to close all tabs -->
     <string name="tabs_menu_close_all_tabs">تمام ٹیبز بند کریں</string>
+    <!-- Open tabs menu item to share all tabs -->
+    <string name="tabs_menu_share_tabs">ٹیبز شیئر کریں</string>
     <!-- Open tabs menu item to save tabs to collection -->
     <string name="tabs_menu_save_to_collection">مجموعہ میں محفوظ کریں</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">ٹیب مینو</string>
+    <!-- Tab menu item to share the tab -->
+    <string name="tab_share">ٹیب شیئر کریں</string>
     <!-- Button in the current session menu. Deletes the session when pressed -->
     <string name="current_session_delete">مٹائیں</string>
     <!-- Button in the current session menu. Saves the session when pressed -->
@@ -377,8 +386,14 @@
     <!-- Button in the current session menu. Opens the share menu when pressed -->
     <string name="current_session_share">شیئر کریں</string>
 
+    <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
+    <string name="current_session_image">موجودہ سیشن کی تصویر</string>
     <!-- Button to save the current set of tabs into a collection -->
     <string name="save_to_collection">مجموعہ میں محفوظ کریں</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">مجموعہ حذف کریں</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">مجموعہ کا نام تبدیل کریں</string>
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">ٹیب کھولیں</string>
     <!-- Text for the menu button to remove a top site -->
@@ -394,6 +409,9 @@
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">مٹائیں</string>
 
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">%1$d منتخب کیا گیا</string>
     <!-- Text for the header that groups the history for last 24 hours -->
     <string name="history_24_hours">آخری 24 گھنٹے</string>
     <!-- Text for the header that groups the history the past 7 days -->
@@ -411,6 +429,12 @@
     <string name="tab_crash_close">ٹیب بند کر دیں</string>
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">ٹیب بحال کریں</string>
+
+    <!-- Content Description for session item menu button -->
+    <string name="content_description_session_menu">سیشن کے آپشن</string>
+
+    <!-- Content Description for session item share button -->
+    <string name="content_description_session_share">سیشن شیئر کریں</string>
 
     <!-- Bookmarks -->
     <!-- Content description for bookmarks library menu -->
@@ -443,6 +467,9 @@
     <string name="bookmark_menu_delete_button">مٹائیں</string>
     <!--Bookmark overflow menu save button -->
     <string name="bookmark_menu_save_button">محفوظ کریں</string>
+    <!-- Bookmark multi select title in app bar
+     The first parameter is the number of bookmarks selected -->
+    <string name="bookmarks_multi_select_title">%1$d منتخب کیا گیا</string>
     <!-- Bookmark editing screen title -->
     <string name="edit_bookmark_fragment_title">بکمارک میں ترمیم کریں</string>
     <!-- Bookmark folder editing screen title -->
@@ -521,6 +548,14 @@
     <string name="preference_option_autoplay_blocked">ویڈیو اور آڈیو مسدود ہے</string>
     <!-- DEPRECATED: Label that indicates video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed">ویڈیو اور آڈیو کی اجازت ہے</string>
+    <!-- Label that indicates that all video and audio autoplay is allowed -->
+    <string name="preference_option_autoplay_allowed2">آڈیو اور ویڈیو کی اجازت دیں</string>
+    <!-- Label that indicates that video and audio autoplay is only allowed over WIFI -->
+    <string name="preference_option_autoplay_allowed_wifi_only">آڈیو اور ویڈیو کو صرف Wi-Fi پر اجازت دیں</string>
+    <!-- Label that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="preference_option_autoplay_block_audio">آڈیو کو مسدود کریں</string>
+    <!-- Label that indicates that all video and audio autoplay is blocked -->
+    <string name="preference_option_autoplay_blocked2">ویڈیو اور آڈیو کو مسدود کریں</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">چالو</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
@@ -548,6 +583,14 @@
     <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_deselect_all">متخب کو ہٹایں</string>
 
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">محفوظ کرنے کے لئے ٹیبز کو منتخب کریں</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d ٹیبز منتخب کی گئیں</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d ٹیب منتخب کیا گیا</string>
     <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
     <string name="create_collection_close">بند کریں</string>
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
