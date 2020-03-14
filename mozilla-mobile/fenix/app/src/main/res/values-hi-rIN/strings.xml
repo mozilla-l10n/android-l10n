@@ -669,8 +669,12 @@
     <string name="snackbar_private_tab_closed">निजी टैब बंद हो गया</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">निजी टैब बंद हो गया</string>
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
+    <string name="snackbar_deleted_undo">UNDO</string>
     <!-- Text shown in snackbar when user removes a top site -->
     <string name="snackbar_top_site_removed">साइट हटायी गई</string>
+    <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
+    <string name="a11y_dialog_deleted_undo">Undo</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_confirm">पुष्टि करें</string>
     <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
@@ -679,6 +683,8 @@
     <string name="qr_scanner_dialog_negative">मना करें</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">क्या आप वाकई %1$s को हटाना चाहते हैं?</string>
+    <!-- Tab collection deletion prompt dialog option to delete the collection -->
+    <string name="tab_collection_dialog_positive">मिटाएं</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">रद्द करें</string>
     <!-- Text displayed in a notification when the user enters full screen mode -->
@@ -699,6 +705,9 @@
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d पता</string>
     <!-- Title for history items in Delete browsing data -->
     <string name="preferences_delete_browsing_data_browsing_history_title">इतिहास</string>
+    <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
+        number of history pages the user has -->
+    <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d पृष्ठ</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">कुकीज़</string>
     <!-- Title for the site permissions item in Delete browsing data -->
@@ -708,12 +717,20 @@
     <!-- Category for history items to delete on quit in delete browsing data on quit -->
     <string name="preferences_delete_browsing_data_on_quit_browsing_history">ब्राउज़िंग इतिहास</string>
 
+    <!-- Action item in menu for the Delete browsing data on quit feature -->
+    <string name="delete_browsing_data_on_quit_action">निकास</string>
+
     <!-- Dialog message to the user asking to delete browsing data. -->
     <string name="delete_browsing_data_prompt_message">यह आपके सभी ब्राउज़िंग डेटा को मिटा देगा।</string>
     <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
     <string name="delete_browsing_data_prompt_message_3">%s चयनित ब्राउज़िंग डेटा को मिटा देगा।</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">रद्द करें</string>
+
+    <!-- Text for the allow button for the data deletion dialog -->
+    <string name="delete_browsing_data_prompt_allow">मिटाएं</string>
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">ब्राउज़िंग डेटा मिटा दिया गया</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
@@ -723,12 +740,16 @@
     <string name="onboarding_fxa_section_header">पहले से ही एक खाता है?</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">नया क्या है, देखें</string>
+    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
+    <string name="onboarding_firefox_account_sign_in">Firefox में साइन इन करें</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">सिंक चालू है</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">लॉगिन करने में असफल</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">निजी तौर पर ब्राउज़ करें</string>
+    <!-- text for the private browsing onbording card button, that launches settings -->
+    <string name="onboarding_private_browsing_button">सेटिंग खोलें</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">आपकी गोपनीयता</string>
     <!-- Text for the button to read the privacy notice -->
@@ -742,6 +763,9 @@
     <string name="onboarding_theme_picker_header">अपनी थीम चुनें</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">स्वचालित</string>
+
+    <!-- Theme setting for dark mode -->
+    <string name="onboarding_theme_dark_title">डार्क थीम</string>
 
     <!-- Text shown in snackbar when multiple tabs have been sent to device -->
     <string name="sync_sent_tabs_snackbar">टैब भेजा गया!</string>
@@ -785,8 +809,22 @@
     <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">केवल निजी टैब में</string>
 
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">क्रिप्टोमाइनर</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">फिंगरप्रिंटर</string>
+    <string name="enhanced_tracking_protection_blocked">अवरूद्ध</string>
+    <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_title">सोशल मीडिया ट्रैकर</string>
+    <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_title">क्रिप्टोमाइनर</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_title">फिंगरप्रिंटर</string>
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">ट्रैकिंग सामग्री</string>
+
+    <!-- About page Your rights link text -->
+    <string name="about_your_rights">आपके अधिकार</string>
 
     <!-- About page link text to open support link -->
     <string name="about_support">समर्थन</string>
