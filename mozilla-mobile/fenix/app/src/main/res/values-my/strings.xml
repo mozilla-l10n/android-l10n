@@ -206,6 +206,8 @@
     <string name="preferences_theme">အခင်းအကျင်းများ</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">စိတ်ကြိုက်လုပ်ပါ</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">စာမှတ်များ၊မှတ်တမ်းများနှင့်အခြားအရာများကို Firefox အကောင့်ဖြင့် တပ်တူပြုပါ။</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Firefox အကောင့်</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
@@ -323,6 +325,8 @@
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">ထပ်တူပြုခြင်းကိုဖွင့်ပါ</string>
+    <!-- Preference for pairing -->
+    <string name="preferences_sync_pair">desktop Firefox တွင် တွဲဆက်ကုဒ်ကိုစစ်ပါ။</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">၀င်ပါ</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -456,6 +460,9 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">မှတ်တမ်းများ ဒီမှာ မရှိပါ</string>
 
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">တောင်းပန်ပါတယ်။ ဒီစာမျက်နှာကို %1$s မှမတင်နိုင်ပါ။</string>
     <!-- Send crash report checkbox text on the tab crash page -->
     <string name="tab_crash_send_report">Mozillaသို့ ပျက်စီးမှုအစီရင်ခံစာပို့ပါ</string>
     <!-- Close tab button text on the tab crash page -->
@@ -580,6 +587,8 @@
     <string name="preference_option_autoplay_allowed">ဗီဒီယိုနှင့်အသံခွင့်ပြုသည်</string>
     <!-- Label that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">အသံနှင့်ဗီဒီယိုကိုခွင့်ပြုပါ။</string>
+    <!-- Label that indicates that video and audio autoplay is only allowed over WIFI -->
+    <string name="preference_option_autoplay_allowed_wifi_only">ဝိုင်ဖိုင်တွင်သာ အသံနှင့်ဗီဒီယိုကိုခွင့်ပြုပါ။</string>
     <!-- Label that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio">အသံပိတ်ပါ။</string>
     <!-- Label that indicates that all video and audio autoplay is blocked -->
@@ -712,6 +721,9 @@
     <string name="a11y_dialog_deleted_undo">မလုပ်တော့ပါ</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_confirm">အတည်ပြုပါ</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">%2$s ကိုဖွင့်ရန် %1$s ကိုခွင့်ပြုပါ။</string>
     <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
     <string name="qr_scanner_dialog_positive">ခွင့်ပြုပါ</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
@@ -804,6 +816,8 @@
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button">စံ</string>
 
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_button">တင်းကြပ်စွာ (အကြံပြုသည်)</string>
     <!-- text for the toolbar position card header
         In English this is an idiom for "choose a side as in an argument or fight"
         but it is ok to make this more literally about "choosing a position in a physical space -->
@@ -854,6 +868,9 @@
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">မဆောင်ရွက်တော့ပါ</string>
 
+    <!-- Error message snackbar shown after the user tried to select a default folder which cannot be altered -->
+    <string name="bookmark_cannot_edit_root">စံပုံစံဖိုင်တွဲများကိုမပြင်ဆင်နိုင်ပါ။</string>
+
     <!-- Enhanced Tracking Protection -->
     <!-- Link displayed in enhanced tracking protection panel to access tracking protection settings -->
     <string name="etp_settings">ကာကွယ်မှုဆိုင်ရာ အပြင်အဆင်များ</string>
@@ -863,6 +880,8 @@
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">ပိုမိုလေ့လာရန်</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_option">စံ</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard">စံ (အကြံပြုချက်)</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">တင်းကျပ်ပါ</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings, default setting -->
@@ -870,15 +889,23 @@
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">စိတ်ကြိုက်</string>
 
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_description">ပိတ်ဆို့ရန် ခြေရာခံသူများနှင့် scriptsများကို ရွေးချယ်ပါ။</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
     <!-- Preference for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies">ကွတ်ကီးများ</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies_2">မလည်ပတ်သောဆိုက်များမှ ကွတ်ကီးများ</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_4">ကွတ်ကီးအားလုံး (ဝဘ်ဆိုက်များကိုဖျက်ဆီးစေနိုင်သည်)</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content">နောက်ယောင်ခံသည့် အရာများ</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">တဗ်များအားလုံးတွင်</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">သီးသန့်တဗ်များတွင်သာ</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_3">စိတ်ကြိုက်တဗ်များတွင်သာ</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -897,6 +924,10 @@
 
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">နောက်ယောင်ခံသည့် အရာများ</string>
+    <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
+    <string name="etp_panel_on">ဤဆိုက်အတွက် ကာကွယ်မှုဖွင့်ထားသည်။</string>
+    <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
+    <string name="etp_panel_off">ဤဆိုက်အတွက် ကာကွယ်မှုပိတ်ထားသည်။</string>
     <!-- About page Your rights link text -->
     <string name="about_your_rights">သင့်လုပ်ပိုင်ခွင့်များ</string>
 
