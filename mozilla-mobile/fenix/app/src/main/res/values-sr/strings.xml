@@ -690,6 +690,8 @@
     <string name="sync_connect_device_dialog">Да бисте послали језичак, пријавите се у Firefox на барем једном уређају.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Важи</string>
+    <!-- Share error message -->
+    <string name="share_error_snackbar">Не могу делити са овом апликацијом</string>
     <!-- Add new device screen title -->
     <string name="sync_add_new_device_title">Пошаљи на уређај</string>
     <!-- Text for the warning message on the Add new device screen -->
@@ -722,6 +724,16 @@
     <string name="snackbar_tabs_deleted">Језичци обрисани</string>
     <!-- Text shown in snackbar when user closes a tab -->
     <string name="snackbar_tab_closed">Језичак затворен</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
+    <string name="snackbar_tabs_closed">Језичци затворени</string>
+    <!-- Text shown in snackbar when user adds a site to top sites -->
+    <string name="snackbar_added_to_top_sites">Додато у омиљене странице!</string>
+    <!-- Text shown in snackbar when user closes a private tab -->
+    <string name="snackbar_private_tab_closed">Приватни језичак затворен</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
+    <string name="snackbar_private_tabs_closed">Приватни језичци затворени</string>
+    <!-- Text shown in snackbar when user deletes all private tabs -->
+    <string name="snackbar_private_tabs_deleted">Приватни језичци обрисани</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">ОПОЗОВИ</string>
     <!-- Text shown in snackbar when user removes a top site -->
@@ -730,40 +742,87 @@
     <string name="a11y_dialog_deleted_undo">Опозови</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_confirm">Потврди</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Дозволити апликацији %1$s да отвори %2$s</string>
     <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
     <string name="qr_scanner_dialog_positive">ДОЗВОЛИ</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">ОДБИЈ</string>
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">Да ли сте сигурни да желите обрисати збирку %1$s?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">Обриши</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">Откажи</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">Улазим у режим целог екрана</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">Адреса копирана</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">Ово је пример текста. Постављен је овде да би вам био дочаран изглед текста када повећавате или смањујете величину коришћењем овог подешавања.</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Чини текст на веб страницама већим или мањим</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_font_size_title">Величина фонта</string>
 
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size">Самостална величина фонта</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Величина фонта ће пратити ваша Андроид подешавања. Онемогућите ово да бисте овде подесили величину фонта.</string>
+
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">Обриши податке прегледања</string>
     <!-- Title for the tabs item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_tabs_title">Отворени језичци</string>
+    <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
+    <string name="preferences_delete_browsing_data_tabs_subtitle">%d језичака</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">Историјат прегледања и подаци страница</string>
+    <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
+        number of history items the user has -->
+    <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d  адреса</string>
     <!-- Title for history items in Delete browsing data -->
     <string name="preferences_delete_browsing_data_browsing_history_title">Историјат</string>
+    <!-- Subtitle for the history items in delete browsing data, parameter will be replaced with the
+        number of history pages the user has -->
+    <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d страница</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Колачићи</string>
+    <!-- Subtitle for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Бићете одјављени са већине страница</string>
+    <!-- Title for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files">Кеширане слике и датотеке</string>
+    <!-- Subtitle for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Ослобађа простор у складишту</string>
     <!-- Title for the site permissions item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_site_permissions">Дозволе на страници</string>
     <!-- Text for the button to delete browsing data -->
-    <string name="preferences_delete_browsing_data_button">Обриши податке о прегледању</string>
+    <string name="preferences_delete_browsing_data_button">Обриши податке прегледања</string>
     <!-- Title for the Delete browsing data on quit preference -->
-    <string name="preferences_delete_browsing_data_on_quit">Обриши податке о прегледању при изласку</string>
+    <string name="preferences_delete_browsing_data_on_quit">Обриши податке прегледања при изласку</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit">Самостално брише податке прегледања када изаберете „Изађи“ у главном менију</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Самостално брише податке прегледања када изаберете \&quot;Изађи\&quot; у главном менију</string>
     <!-- Category for history items to delete on quit in delete browsing data on quit -->
     <string name="preferences_delete_browsing_data_on_quit_browsing_history">Историјат прегледања</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Изађи</string>
 
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">Ово ће обрисати све ваше податке прегледања.</string>
+    <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
+    <string name="delete_browsing_data_prompt_message_3">Апликација %s ће обрисати изабране податке прегледања.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">Откажи</string>
     <!-- Text for the allow button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_allow">Обриши</string>
+
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">Подаци прегледања обрисани</string>
+    <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
+    <string name="deleting_browsing_data_in_progress">Бришем податке прегледања…</string>
 
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Погледајте шта је ново</string>
@@ -792,6 +851,8 @@
     <string name="sync_sent_tab_error_snackbar_action">ПОКУШАЈ ПОНОВО</string>
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Скенирај код</string>
+    <!-- Text shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_confirmation_message">Firefox ће престати са снихронизацијом вашег налога али неће обрисати ваше податке прегледања на овом уређају.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Прекини везу</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
@@ -824,6 +885,9 @@
     <string name="enhanced_tracking_protection_blocked">Блокирано</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_allowed">Дозвољено</string>
+
+    <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cookies_description">Блокира колачиће које оглашавачке мреже и аналитичке фирме користе за састављање профила прегледања о вама, на више страница.</string>
 
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">Пријаве и лозинке</string>
