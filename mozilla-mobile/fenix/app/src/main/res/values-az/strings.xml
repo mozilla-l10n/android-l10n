@@ -263,26 +263,99 @@
     <!-- Text shown when user enters empty device name -->
     <string name="empty_device_name_error">Cihaz adı boş ola bilməz.</string>
 
+    <!-- Label indicating that sync is in progress -->
+    <string name="sync_syncing_in_progress">Sinxronlaşır…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">Sinxronlaşdırmaq mümkün olmadı. Son uğurlu olan: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">Sinxronlaşdırmaq mümkün olmadı. Son uğurlu olan: heç vaxt</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">Son uğurlu olan: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">Son uğurlu olan: heç vaxt</string>
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name">%s - %s %s</string>
+
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Alınan vərəqlər</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_description">Digər Firefox cihazlarından alınan vərəqlər üçün bildirişlər.</string>
 
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">Vərəq alındı</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">Vərəqlər alındı</string>
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">%s tərəfindən vərəq</string>
+
     <!-- Advanced Preferences -->
     <!-- Preference for tracking protection settings -->
     <string name="preferences_tracking_protection_settings">İzlənmə Qoruması</string>
 
+    <!-- Preference switch for tracking protection -->
+    <string name="preferences_tracking_protection">İzlənmə Qoruması</string>
+    <!-- Preference for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions">İstisnalar</string>
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Bütün saytlar üçün aktivləşdir</string>
 
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">Ətraflı öyrən</string>
+
     <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
     <string name="preferences_tracking_protection_turned_off_globally">Qlobal olaraq söndürülüb, açmaq üçün Tənzimləmələrə gedin.</string>
+
+    <!-- Preference switch for Telemetry -->
+    <string name="preferences_telemetry">Telemetriya</string>
+    <!-- Title for experiments preferences -->
+    <string name="preference_experiments">Eksperimentlər</string>
+    <!-- Preference switch for crash reporter -->
+    <string name="preferences_crash_reporter">Çökmə məlumatçısı</string>
+    <!-- Preference switch for Mozilla location service -->
+    <string name="preferences_mozilla_location_service">Mozilla mövqe xidməti</string>
 
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">Sinxronlaşdırmanı aktivləşdir</string>
 
+    <!-- Preference for account login -->
+    <string name="preferences_sync_sign_in">Daxil ol</string>
+    <!-- Preference for reconnecting to FxA sync -->
+    <string name="preferences_sync_sign_in_to_reconnect">Təkrar qoşulmaq üçün daxil ol</string>
+    <!-- Preference for removing FxA account -->
+    <string name="preferences_sync_remove_account">Hesabı sil</string>
+
+    <!-- Button to open camera for pairing -->
+    <string name="pair_open_camera">Kameranı aç</string>
+    <!-- Button to cancel pairing -->
+    <string name="pair_cancel">Ləğv et</string>
+
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">Üstdə</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">Altda</string>
+
+    <!-- Theme Preferences -->
+    <!-- Preference for using light theme -->
+    <string name="preference_light_theme">Açıq</string>
+    <!-- Preference for using dark theme -->
+    <string name="preference_dark_theme">Tünd</string>
+    <!-- Preference for using using dark or light theme automatically set by battery -->
+    <string name="preference_auto_battery_theme">Batareya Qoruyucusuna görə</string>
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">Cihaz mövzusuna uyğun</string>
+
+    <!-- Library -->
+    <!-- Option in Library to open Sessions page -->
+    <string name="library_sessions">Sessiyalar</string>
+    <!-- Option in Library to open Screenshots page -->
+    <string name="library_screenshots">Ekran görüntüləri</string>
+    <!-- Option in Library to open Downloads page -->
+    <string name="library_downloads">Endirmələr</string>
     <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">Əlfəcinlər</string>
     <!-- Option in library to open Desktop Bookmarks root page -->
@@ -296,6 +369,12 @@
     <string name="library_desktop_bookmarks_unfiled">Digər əlfəcinlər</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">Tarixçə</string>
+    <!-- Option in Library to open Reading List -->
+    <string name="library_reading_list">Oxuma siyahısı</string>
+    <!-- Menu Item Label for Search in Library -->
+    <string name="library_search">Axtar</string>
+    <!-- Library Page Title -->
+    <string name="library_title">Kitabxana</string>
     <!-- Settings Page Title -->
     <string name="settings_title">Tənzimləmələr</string>
     <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
@@ -306,8 +385,16 @@
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Açıq vərəqlər</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_title">Məxfi sessiya</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">Məxfi vərəqlər</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Vərəq əlavə et</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
+    <string name="close_tab">Vərəqi qapat</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">%s vərəqini qapat</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
     <string name="open_tabs_menu">Açıq vərəqlər menyusunu aç</string>
     <!-- Open tabs menu item to close all tabs -->
@@ -316,8 +403,27 @@
     <string name="tabs_menu_share_tabs">Vərəqləri paylaş</string>
     <!-- Open tabs menu item to save tabs to collection -->
     <string name="tabs_menu_save_to_collection">Kolleksiyaya saxla</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string name="tab_menu">Vərəq menyusu</string>
+    <!-- Tab menu item to share the tab -->
+    <string name="tab_share">Vərəqi paylaş</string>
+    <!-- Button in the current session menu. Deletes the session when pressed -->
+    <string name="current_session_delete">Sil</string>
+    <!-- Button in the current session menu. Saves the session when pressed -->
+    <string name="current_session_save">Saxla</string>
+    <!-- Button in the current session menu. Opens the share menu when pressed -->
+    <string name="current_session_share">Paylaş</string>
+    <!-- Button to save the current set of tabs into a collection -->
+    <string name="save_to_collection">Kolleksiyaya saxla</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">Kolleksiyanı sil</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">Kolleksiyanın adını dəyişdir</string>
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">Vərəqləri aç</string>
+
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Sil</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -344,6 +450,9 @@
     <string name="history_older">Daha əvvəl</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Burda tarixçə yoxdur</string>
+
+    <!-- Close tab button text on the tab crash page -->
+    <string name="tab_crash_close">Vərəqi qapat</string>
 
     <!-- Bookmarks -->
     <!-- Content description for bookmarks library menu -->
