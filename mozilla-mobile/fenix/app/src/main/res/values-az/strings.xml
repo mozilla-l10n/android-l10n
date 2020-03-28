@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
+    <string name="app_name_private_2">Məxfi Firefox Preview</string>
+    <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
+    <string name="app_name_private_3">Firefox Preview (Məxfi)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Digər seçimlər</string>
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_private_browsing_button">Məxfi səyahəti aktivləşdir</string>
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_disable_private_browsing_button">Məxfi səyahəti söndür</string>
     <!-- Placeholder text shown in the search bar before a user enters text -->
     <string name="search_hint">Ünvanı daxil et və ya axtar</string>
     <!-- No Open Tabs Message Header -->
@@ -13,6 +21,11 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Məxfi sessiyadasınız</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description">%1$s tətbiqdən çıxdığınızda və ya bütün məxfi səyahət vərəq və pəncərələrini qapatdığınızda axtarış və səyahət tarixçənizi təmizləyir. Bu sizi saytlar və internet provayderiniz üçün anonim etməsə də,
+        onlayn məlumatlarınızı bu cihazı işlədən digər şəxslərdən saxlamağınızı asanlaşdırır.</string>
+    <string name="private_browsing_common_myths">Məxfi səyahət haqqında olan əfsanələr</string>
     <!-- Delete session button to erase your history in a private session -->
     <string name="private_browsing_delete_session">Sessiyanı sil</string>
 
@@ -46,7 +59,7 @@
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">Əlfəcini düzəlt</string>
     <!-- Browser menu button that opens the addon manager -->
-    <string name="browser_menu_addon_manager">Əlavə idarəçisi</string>
+    <string name="browser_menu_add_ons">Əlavələr</string>
     <!-- Text displayed when there are no add-ons to be shown -->
     <string name="no_add_ons">Burada heç bir əlavə yoxdur</string>
     <!-- Browser menu button that sends a user to help articles -->
@@ -56,7 +69,7 @@
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Tənzimləmələr</string>
     <!-- Browser menu button that opens a user's library -->
-    <string name="browser_menu_your_library">Kitabxananız</string>
+    <string name="browser_menu_library">Kitabxana</string>
     <!-- Browser menu toggle that requests a desktop site -->
     <string name="browser_menu_desktop_site">Masaüstü saytı</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
@@ -70,7 +83,7 @@
     <!-- Browser menu button that creates a new tab -->
     <string name="browser_menu_new_tab">Yeni vərəq</string>
     <!-- Browser menu button that saves the current tab to a collection -->
-    <string name="browser_menu_save_to_collection">Kolleksiyaya saxla</string>
+    <string name="browser_menu_save_to_collection_2">Kolleksiyaya saxla</string>
     <!-- Browser menu button that opens a dialog to report issues with the current site -->
     <string name="browser_menu_report_issue">Saytla bağlı problem xəbər et</string>
     <!-- Browser menu button that open a share menu to share the current site -->
@@ -191,25 +204,64 @@
     <string name="preferences_theme">Mövzu</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Fərdiləşdir</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">Firefox hesabınız ilə əlfəcin, tarixçə və daha çoxunu sinxronlaşdırın</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Firefox Hesabı</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">Sinxronlaşdırmaya qayıtmaq üçün təkrar qoşul</string>
     <!-- Preference for language -->
     <string name="preferences_language">Dil</string>
     <!-- Preference for data choices -->
     <string name="preferences_data_choices">Məlumat seçimi</string>
 
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">Məlumat yığma</string>
+    <!-- Preference linking to the privacy notice -->
+    <string name="preferences_privacy_link">Məxfilik bildirişi</string>
+    <!-- Preference category for developer tools -->
+    <string name="developer_tools_category">Tərtibatçı alətləri</string>
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">USB ilə məsafəli sazlama</string>
     <!-- Preference title for switch preference to show search shortcuts -->
     <string name="preferences_show_search_shortcuts">Axtarış qısayollarını göstər</string>
+    <!-- Preference title for switch preference to show search suggestions -->
+    <string name="preferences_show_search_suggestions">Axtarış təkliflərini göstər</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">Məxfi sessiyalarda göstər</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Mübadilə buferi təkliflərini göstər</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Axtarış tarixçəsində axtar</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
     <string name="preferences_search_bookmarks">Əlfəcinlərdə axtar</string>
 
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Hesab tənzimləmələri</string>
 
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">Keçidləri tətbiqlərdə aç</string>
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Əlavələr</string>
+
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
+    <string name="preferences_sync_now">İndi sinxronlaşdır</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">Nəyi sinxronlaşdıracağınızı seçin</string>
     <!-- Preference for syncing history -->
     <string name="preferences_sync_history">Tarixçə</string>
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">Əlfəcinlər</string>
+
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">Hesablar</string>
+    <!-- Preference for signing out -->
+    <string name="preferences_sign_out">Çıx</string>
+    <!-- Preference displays and allows changing current FxA device name -->
+    <string name="preferences_sync_device_name">Cihaz adı</string>
+    <!-- Text shown when user enters empty device name -->
+    <string name="empty_device_name_error">Cihaz adı boş ola bilməz.</string>
 
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
@@ -221,8 +273,15 @@
     <!-- Preference for tracking protection settings -->
     <string name="preferences_tracking_protection_settings">İzlənmə Qoruması</string>
 
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Bütün saytlar üçün aktivləşdir</string>
+
     <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
     <string name="preferences_tracking_protection_turned_off_globally">Qlobal olaraq söndürülüb, açmaq üçün Tənzimləmələrə gedin.</string>
+
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string name="preferences_sync">Sinxronlaşdırmanı aktivləşdir</string>
 
     <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">Əlfəcinlər</string>
