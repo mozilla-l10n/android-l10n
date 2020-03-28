@@ -1022,12 +1022,25 @@
     <string name="etp_cryptominers_description">डिजिटल चलन उत्खननासाठी आपल्या डिव्हाइसवर प्रवेश मिळविण्यापासून दुर्भावनायुक्त स्क्रिप्टला प्रतिबंधित करते.</string>
     <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_fingerprinters_title">फिंगरप्रिंटर</string>
+    <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_description">आपल्या डिव्हाइसबद्दल ट्रॅकिंग करण्यायोग्य आपली ओळख पटवणारी माहिती गोळ्या करण्यापासून अवरोधित करते.</string>
+    <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_title">ट्रॅकिंग मजकूर</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">या संकेतस्थळासाठी संरक्षण चालू आहे</string>
+    <!-- Content description (not visible, for screen readers etc.): Navigate
+    back from ETP details (Ex: Tracking content) -->
+    <string name="etp_back_button_content_description">मागे नॅव्हिगेट करा</string>
     <!-- About page Your rights link text -->
     <string name="about_your_rights">आपले हक्क</string>
+    <!-- About page link text to open open source licenses screen -->
+    <string name="about_open_source_licenses">आम्ही वापरत असलेल्या मुक्त स्त्रोत लायब्ररी</string>
     <!-- About page link text to open what's new link -->
     <string name="about_whats_new">%s मध्ये नवीन काय आहे</string>
+
+    <!-- Open source licenses page title
+    The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | ओएसएस लायब्ररी</string>
 
     <!-- About page link text to open support link -->
     <string name="about_support">मदत</string>
@@ -1038,6 +1051,14 @@
     <!-- About page link text to open licensing information link -->
     <string name="about_licensing_information">अनुज्ञप्तीची माहिती</string>
 
+    <!-- About page link text to open a screen with libraries that are used -->
+    <string name="about_other_open_source_libraries">आम्ही वापरत असलेल्या लायब्ररी</string>
+
+    <!-- Content description of the tab counter toolbar button when one tab is open -->
+    <string name="tab_counter_content_description_one_tab">1 टॅब</string>
+    <!-- Content description of the tab counter toolbar button when multiple tabs are open. First parameter will be replaced with the number of tabs (always more than one) -->
+    <string name="tab_counter_content_description_multi_tab">%d टॅब</string>
+
     <!-- Browser long press popup menu -->
     <!-- Copy the current url -->
     <string name="browser_toolbar_long_press_popup_copy">प्रत बनवा</string>
@@ -1046,6 +1067,9 @@
     <!-- Paste the text in the clipboard -->
     <string name="browser_toolbar_long_press_popup_paste">चिकटवा</string>
 
+    <!-- Snackbar message shown after an URL has been copied to clipboard. -->
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">क्लिपबोर्डवर URL ची प्रत बनवली</string>
+
     <!-- Title text for the Add To Homescreen dialog -->
     <string name="add_to_homescreen_title">मुख्य पटलावर जोडा</string>
     <!-- Cancel button text for the Add to Homescreen dialog -->
@@ -1053,20 +1077,43 @@
     <!-- Add button text for the Add to Homescreen dialog -->
     <string name="add_to_homescreen_add">जोडा</string>
 
+    <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_text_placeholder">शॉर्टकट नाव</string>
+
+    <!-- Preference for managing the settings for logins and passwords in Fenix -->
+    <string name="preferences_passwords_logins_and_passwords">लॉगिन आणि पासवर्ड</string>
+    <!-- Preference for managing the saving of logins and passwords in Fenix -->
+    <string name="preferences_passwords_save_logins">लॉगिन आणि पासवर्ड जतन करा</string>
     <!-- Preference option for asking to save passwords in Fenix -->
     <string name="preferences_passwords_save_logins_ask_to_save">जतन करण्याबद्दल विचारा</string>
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">कधीही जतन करू नका</string>
     <!-- Preference for autofilling saved logins in Fenix -->
     <string name="preferences_passwords_autofill">स्वयंचलितपणे भरा</string>
+    <!-- Preference for syncing saved logins in Fenix -->
+    <string name="preferences_passwords_sync_logins">लॉगिन सिंक करा</string>
     <!-- Syncing saved logins in Fenix is on -->
     <string name="preferences_passwords_sync_logins_on">सुरू</string>
     <!-- Syncing saved logins in Fenix is off -->
     <string name="preferences_passwords_sync_logins_off">बंद करा</string>
     <!-- Syncing saved logins in Fenix needs reconnect to sync -->
     <string name="preferences_passwords_sync_logins_reconnect">पुनर्जोडणी करा</string>
+    <!-- Syncing saved logins in Fenix needs login -->
+    <string name="preferences_passwords_sync_logins_sign_in">सिंक करण्यासाठी साइन इन करा</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins">साठवलेले लॉगइन</string>
+    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
+    <string name="preferences_passwords_saved_logins_description_empty_text">आपण %s वर जतन किंवा सिंक केलेले लॉगिन येथे दर्शविले जातील.</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Sync बाबत अधिक जाणून घ्या.</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">अपवाद</string>
+    <!-- Empty description of list of login exceptions that we never save logins for -->
+    <string name="preferences_passwords_exceptions_description_empty">जतन न केलेले लॉगिन आणि पासवर्ड येथे दर्शविले जातील.</string>
+    <!-- Description of list of login exceptions that we never save logins for -->
+    <string name="preferences_passwords_exceptions_description">या साइटसाठी लॉगिन आणि पासवर्ड जतन होणार नाहीत.</string>
+    <!-- Hint for search box in logins list -->
+    <string name="preferences_passwords_saved_logins_search">लॉगिन शोधा</string>
     <!-- Option to sort logins list A-Z, alphabetically -->
     <string name="preferences_passwords_saved_logins_alphabetically">वर्णक्रमानुसार</string>
     <!-- Option to sort logins list by most recently used -->
@@ -1080,14 +1127,20 @@
     <!-- Message displayed in security prompt to reenter a secret pin to access saved logins -->
     <string name="preferences_passwords_saved_logins_enter_pin">पिन पुन्हा प्रविष्ट करा</string>
 
+    <!-- Message displayed in security prompt to access saved logins -->
+    <string name="preferences_passwords_saved_logins_enter_pin_description">आपले जतन केलेले लॉगिन पाहण्यासाठी अनलॉक करा</string>
     <!-- Message displayed when a connection is insecure and we detect the user is entering a password -->
     <string name="logins_insecure_connection_warning">ही जोडणी सुरक्षित नाही. येथे प्रविष्ट केलेल्या लॉगिनचा गैरवापर होऊ शकतो.</string>
     <!-- Learn more link that will link to a page with more information displayed when a connection is insecure and we detect the user is entering a password -->
     <string name="logins_insecure_connection_warning_learn_more">अधिक जाणा</string>
+    <!-- Prompt message displayed when Fenix detects a user has entered a password and user decides if Fenix should save it. The first parameter is the name of the application (For example: Fenix)  -->
+    <string name="logins_doorhanger_save">%s ने हे लॉगिन जतन करावे का?</string>
     <!-- Positive confirmation that Fenix should save the new or updated login -->
     <string name="logins_doorhanger_save_confirmation">जतन करा</string>
     <!-- Negative confirmation that Fenix should not save the new or updated login -->
     <string name="logins_doorhanger_save_dont_save">जतन करू नका</string>
+    <!-- Shown in snackbar to tell user that the password has been copied -->
+    <string name="logins_password_copied">पासवर्डची क्लिपबोर्डवर प्रत बनवली</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">नंतर</string>
 
