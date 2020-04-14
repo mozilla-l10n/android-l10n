@@ -445,6 +445,8 @@
     <string name="history_menu_share_button">વહેંચો</string>
     <!-- History overflow menu open in new tab button -->
     <string name="history_menu_open_in_new_tab_button">નવી ટૅબમાં ખોલો</string>
+    <!-- History overflow menu open in private tab button -->
+    <string name="history_menu_open_in_private_tab_button">ખાનગી ટૅબમાં ખોલો</string>
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">કાઢો</string>
     <!-- History multi select title in app bar
@@ -558,10 +560,16 @@
     <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">ભલામણ કરેલ</string>
 
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">સાઇટ પરવાનગીઓ મેનેજ કરો</string>
     <!-- Button label for clearing all the information of site permissions-->
     <string name="clear_permissions">પરવાનગીઓ સાફ કરો</string>
     <!-- Button label for clearing a site permission-->
     <string name="clear_permission">પરવાનગીઓ સાફ કરો</string>
+    <!-- Button label for clearing all the information on all sites-->
+    <string name="clear_permissions_on_all_sites">બધી સાઇટ્સ પર પરવાનગીઓ સાફ કરો</string>
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">સ્વયંસંચાલિત</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">કેમેરા</string>
     <!-- Preference for altering the microphone access for all websites -->
@@ -570,8 +578,12 @@
     <string name="preference_phone_feature_location">સ્થાન</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">સૂચના</string>
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">પરવાનગી પૂછો</string>
     <!-- Label that indicates that a permission must be blocked -->
     <string name="preference_option_phone_feature_blocked">અવરોધિત</string>
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">મંજૂર</string>
     <!--Label that indicates a permission is by the Android OS-->
     <string name="phone_feature_blocked_by_android">Android દ્વારા અવરોધિત</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
@@ -581,16 +593,34 @@
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">બંધ કરો</string>
 
+    <!-- Summary of delete browsing data on quit preference if it is set to on -->
+    <string name="delete_browsing_data_quit_on">ચાલુ</string>
+    <!-- Summary of delete browsing data on quit preference if it is set to off -->
+    <string name="delete_browsing_data_quit_off">બંધ</string>
+
+    <!-- Collections -->
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="collections_description">તમને જે બાબતો છે તે એકત્રિત કરો. પ્રારંભ કરવા માટે, નવા સંગ્રહમાં ખુલ્લા ટેબ્સ સાચવો.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">સંગ્રહો</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
+    <string name="collection_menu_button_content_description">સંગ્રહ મેનૂ</string>
     <!-- No Open Tabs Message Header -->
     <string name="no_collections_header">કોઈ સંગ્રહ નથી</string>
+    <!-- No Open Tabs Message Description -->
+    <string name="no_collections_description">તમારા સંગ્રહ અહીં બતાવવામાં આવશે.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">ટેબ્સ પસંદ કરો</string>
     <!-- Title for the "select collection" step of the collection creator -->
     <string name="create_collection_select_collection">સંગ્રહ પસંદ કરો</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">સંગ્રહ નામ</string>
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">નવો સંગ્રહ ઉમેરો</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_select_all">બધું પસંદ કરો</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">બધા નાપસંદ કરો</string>
     <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
     <string name="create_collection_save_to_collection_empty">સાચવવા માટે ટેબ્સ પસંદ કરો</string>
     <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
@@ -608,6 +638,9 @@
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
     <string name="create_collection_save">સાચવો</string>
 
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">સંગ્રહો %d</string>
+
     <!-- Share -->
     <!-- Share screen header -->
     <string name="share_header">મોકલો અને શેર કરો</string>
@@ -620,6 +653,10 @@
     <string name="share_link_subheader">લિંક વહેંચો</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">ઉપકરણ પર મોકલો</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">બધી ક્રિયાઓ</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">તાજેતરમાં વપરાયેલ</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">સમન્વયન કરવા માટે સાઇન ઇન કરો</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -630,6 +667,80 @@
     <string name="sync_offline">ઑફલાઇન</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">બીજા ઉપકરણ સાથે જોડાણ કરો</string>
+
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">ટેબ મોકલવા માટે, ઓછામાં ઓછા એક અન્ય ઉપકરણ પર Firefox માં સાઇન ઇન કરો.</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">સમજાઈ ગયું</string>
+    <!-- Share error message -->
+    <string name="share_error_snackbar">આ એપ્લિકેશન પર શેર કરી શકતા નથી</string>
+    <!-- Add new device screen title -->
+    <string name="sync_add_new_device_title">ઉપકરણ પર મોકલો</string>
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">કોઈ ઉપકરણો જોડાયેલ નથી</string>
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">ટૅબ્સ મોકલવા વિશે જાણો…</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">બીજા ઉપકરણ સાથે જોડાણ કરો…</string>
+
+    <!-- Notifications -->
+    <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
+    <string name="notification_pbm_channel_name">ખાનગી બ્રાઉઝિંગ સત્ર</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">ખાનગી ટેબ્સ કાઢી નાખો</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text_2">ખાનગી ટૅબ્સ બંધ કરો</string>
+    <!-- Notification action to open Fenix and resume the current browsing session. -->
+    <string name="notification_pbm_action_open">ખોલો</string>
+    <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
+    <string name="notification_pbm_action_delete_and_open">કાઢી નાખો અને ખોલો</string>
+    <!-- Name of the "Powered by Fenix" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="notification_powered_by_channel_name">દ્વારા સંચાલિત</string>
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">સંગ્રહ કાઢી નાખ્યા</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">સંગ્રહનું નામ બદલ્યું</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">ટેબ કાઢી નાખ્યું</string>
+    <!-- Text shown in snackbar when user deletes all tabs -->
+    <string name="snackbar_tabs_deleted">ટેબ્સ કાઢી નાખ્યાં</string>
+    <!-- Text shown in snackbar when user closes a tab -->
+    <string name="snackbar_tab_closed">ટેબ બંધ કર્યું</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
+    <string name="snackbar_tabs_closed">ટેબ્સ બંધ કર્યા</string>
+    <!-- Text shown in snackbar when user adds a site to top sites -->
+    <string name="snackbar_added_to_top_sites">ટોચની સાઇટ્સ પર ઉમેર્યું!</string>
+    <!-- Text shown in snackbar when user closes a private tab -->
+    <string name="snackbar_private_tab_closed">ખાનગી ટેબ બંધ કર્યું</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
+    <string name="snackbar_private_tabs_closed">ખાનગી ટેબ્સ બંધ કર્યા</string>
+    <!-- Text shown in snackbar when user deletes all private tabs -->
+    <string name="snackbar_private_tabs_deleted">ખાનગી ટેબ્સ કાઢી નાખ્યા</string>
+    <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
+    <string name="snackbar_deleted_undo">પૂર્વવત્ કરો</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">સાઇટ દૂર કરી</string>
+    <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
+    <string name="a11y_dialog_deleted_undo">પૂર્વવત્ કરો</string>
+    <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
+    <string name="a11y_dialog_deleted_confirm">ખાતરી કરો</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">%1$s ને %2$s ખોલવાની મંજૂરી આપો</string>
+    <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
+    <string name="qr_scanner_dialog_positive">પરવાનગી આપો</string>
+    <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
+    <string name="qr_scanner_dialog_negative">નકારો</string>
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">શું તમે ખરેખર %1$s ને કાઢી નાખવા માંગો છો?</string>
+    <!-- Tab collection deletion prompt dialog option to delete the collection -->
+    <string name="tab_collection_dialog_positive">કાઢી નાખો</string>
+    <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
+    <string name="tab_collection_dialog_negative">રદ કરો</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">પૂર્ણ સ્ક્રીન મોડમાં દાખલ થઈ રહ્યું છે</string>
+    <!-- Message for copying the URL via long press on the toolbar -->
+    <string name="url_copied">URL નકલ કરી</string>
 
     <!-- Category for history items to delete on quit in delete browsing data on quit -->
     <string name="preferences_delete_browsing_data_on_quit_browsing_history">બ્રાઉઝિંગ ઇતિહાસ</string>
