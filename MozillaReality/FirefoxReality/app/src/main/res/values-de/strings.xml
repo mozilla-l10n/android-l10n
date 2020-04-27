@@ -108,7 +108,7 @@
 
     <!-- This string is used as the title of the pop-ups dialog used to remove sites from the currently
          allowed pop-up sites. -->
-    <string name="settings_privacy_policy_popups_title">Pop-up-Berechtigungen</string>
+    <string name="settings_privacy_policy_popups_title_v1">Ausnahmen für Pop-ups</string>
 
     <!-- This string is displayed under the title the pop-ups dialog used to remove sites from the currently
          allowed pop-up sites. -->
@@ -443,6 +443,10 @@
          User-Agent (UA) string of the browser. -->
     <string name="developer_options_ua_mode">User-Agent-Modus</string>
 
+    <!-- This string is used to label a set of radio buttons that allow the user to change the
+         default downloads storage. -->
+    <string name="security_options_downloads_storage">Standardspeicherplatz für Downloads</string>
+
     <!-- This string is used to label the 'Desktop' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_desktop">Desktop</string>
 
@@ -451,6 +455,12 @@
 
     <!-- This string is used to label the 'VR' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_vr">VR</string>
+
+    <!-- This string is used to label the 'Internal Storage' radio button of the 'Downloads Storage' settings option. -->
+    <string name="privacy_options_downloads_storage_internal">Intern</string>
+
+    <!-- This string is used to label the 'External Storage' radio button of the 'Downloads Storage' settings option. -->
+    <string name="privacy_options_downloads_storage_external">Extern</string>
 
     <!-- This string is used to label the 'Standard' radio button of the 'Enhanced Tracking protection' settings option. -->
     <string name="privacy_options_tracking_etp">Standard</string>
@@ -608,9 +618,9 @@
          when that the content was just synced some time ago. -->
     <string name="fxa_account_last_synced">Zuletzt synchronisiert vor %1$d Minuten</string>
 
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+        <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable playback of DRM controlled content. -->
-    <string name="security_options_drm_content">DRM-kontrollierte Inhalte wiedergeben (&lt;a href=&quot;http://somesite.com/&quot;&gt;Weitere Informationen&lt;/a&gt;)</string>
+    <string name="security_options_drm_content_v1">Websites automatisch erlauben, Ihr Gerät zu identifizieren, um DRM-kontrollierte Inhalte wiederzugeben. (&lt;a href=&quot;%1$s&quot;&gt;Weitere Informationen&lt;/a&gt;)</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the tabs restoration after a fresh app start. -->
@@ -670,6 +680,10 @@
     <!-- This string labels the button in the privacy option panel that enables/disables Virtual Reality
         Devices access to websites (WebXR). -->
     <string name="security_options_permission_webxr">Virtual-Reality-Geräte (WebXR)</string>
+
+    <!-- This string labels the button in the privacy option panel that open the dialog to add/remove
+         webxr blocked sites. -->
+    <string name="security_options_webxr_settings">Erweitert</string>
 
     <!-- This string is a label above the group of switches that indicates that the switches below
          relate to Firefox data collection and use. -->
@@ -865,6 +879,10 @@
          bookmarks tray button then a new item is bookmarked. -->
     <string name="bookmarks_saved_notification">Lesezeichen hinzugefügt!</string>
 
+    <!-- This string is displayed in a notification that appears in the tray bar on top of the
+         downloads tray button then a download finishes. %1$s will be replaced with the downloaded file name. -->
+    <string name="download_completed_notification">%1$s heruntergeladen</string>
+
     <!-- This string is displayed in a tooltip that appears when a user hovers
          over an icon representing 'Edit This Bookmark' for an individual bookmark
          item listed in the Bookmarks List. -->
@@ -915,6 +933,15 @@
     <!-- This string is displayed is the "Clear History" button in the history list. When pressed a dialog for
          clearing history is displayed. -->
     <string name="history_clear">Chronik löschen</string>
+
+    <!-- This string is displayed as the title of the downloads list, which contains the user's downloaded files. -->
+    <string name="downloads_title">Downloads</string>
+
+    <!-- This string is displayed as the title of the downloads list when the downloads is empty. -->
+    <string name="downloads_empty">Ihre Download-Liste ist leer</string>
+
+    <!-- This string is displayed under the downloads title in the downloads list. -->
+    <string name="downloads_description">Hier können Sie auf Ihre Downloads zugreifen</string>
 
     <!-- This string is displayed is the "Sync" button in the history panel. When pressed the
          history is synced with the Firefox account. -->
@@ -997,9 +1024,6 @@
     <!-- This string labels the Reset button that removes all the sites from the stored allowed pop-ups sites. -->
     <string name="privacy_options_popups_reset">Einstellungen zu Pop-up-Fenstern zurücksetzen</string>
 
-    <!-- This string is displayed on top of the allowed sites list in the allowed pop-ups panel. -->
-    <string name="privacy_options_popups_list_header">Die folgenden Websites bitten um die Erlaubnis, Pop-up-Fenster zu öffnen:</string>
-
     <!-- This string is displayed in the first line of a text that's displayed in the middle of allowed pop-ups panel instead of the exceptions list
          when there are no exceptions. -->
     <string name="privacy_options_popups_list_empty_first">Wenn Sie eine Website mit Pop-up-Fenstern öffnen, wird ein Dialogfeld angezeigt, in dem Sie auswählen können, ob Pop-up-Fenster blockiert werden sollen.</string>
@@ -1010,10 +1034,6 @@
 
     <!-- This string is used to label radio buttons for setting ETP in. -->
     <string name="privacy_options_tracking">Verbesserter Tracking-Schutz. (&lt;a href=&quot;%1$s&quot;&gt;Weitere Informationen&lt;/a&gt;)</string>
-
-    <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
-         Tracking protection exceptions. -->
-    <string name="privacy_options_tracking_exceptions">Ausnahmen</string>
 
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">Controller-Einstellungen zurücksetzen</string>
@@ -1454,16 +1474,12 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <string name="slow_script_dialog_action_wait">Warten</string>
 
 
-    <!-- This string is displayed in the title of the quick WebXR blocking dialog, accessed from the VR icon in the URL bar.
-     '%1$s' will be replaced at runtime with the app's name. -->
-    <string name="webxr_block_dialog_message">„%1$s“ möchte auf die WebXR-API zugreifen</string>
-
-    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
+    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar.
+         '%1$s' will be replaced at runtime with the status of the setting.
+         '%2$s' will be replaced at runtime with the Learn More page link. -->
     <string name="tracking_dialog_message">Verbesserter Tracking-Schutz ist für diese Website %1$s. (&lt;a href=&quot;%2$s&quot;&gt;Weitere Informationen&lt;/a&gt;)</string>
-
-    <!-- This string is displayed in the enable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
-    <string name="tracking_dialog_button_enable">Aktivieren</string>
-
+  
     <!-- This string is displayed in the disable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_disable">Deaktivieren</string>
-</resources>
+
+    </resources>
