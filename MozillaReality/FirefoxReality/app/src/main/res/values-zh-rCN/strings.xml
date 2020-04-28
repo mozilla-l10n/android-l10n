@@ -677,6 +677,10 @@
         Devices access to websites (WebXR). -->
     <string name="security_options_permission_webxr">虚拟现实设备（WebXR）</string>
 
+    <!-- This string labels the button in the privacy option panel that open the dialog to add/remove
+         webxr blocked sites. -->
+    <string name="security_options_webxr_settings">高级</string>
+
     <!-- This string is a label above the group of switches that indicates that the switches below
          relate to Firefox data collection and use. -->
     <string name="security_options_speech_data_collection_title">%1$s 数据收集与使用</string>
@@ -870,6 +874,10 @@
          bookmarks tray button then a new item is bookmarked. -->
     <string name="bookmarks_saved_notification">已保存至书签！</string>
 
+    <!-- This string is displayed in a notification that appears in the tray bar on top of the
+         downloads tray button then a download finishes. %1$s will be replaced with the downloaded file name. -->
+    <string name="download_completed_notification">%1$s 下载完成</string>
+
     <!-- This string is displayed in a tooltip that appears when a user hovers
          over an icon representing 'Edit This Bookmark' for an individual bookmark
          item listed in the Bookmarks List. -->
@@ -921,8 +929,17 @@
          clearing history is displayed. -->
     <string name="history_clear">清除历史记录</string>
 
+    <!-- This string is displayed as the title of the downloads list, which contains the user's downloaded files. -->
+    <string name="downloads_title">下载项</string>
+
     <!-- This string is displayed as the title of the downloads list when the downloads is empty. -->
     <string name="downloads_empty">您的下载列表为空</string>
+
+    <!-- This string is displayed under the downloads title in the downloads list. -->
+    <string name="downloads_description">您可以在此处访问下载项</string>
+
+    <!-- This string is displayed in the middle of the downloads list while the downloads is being loaded. -->
+    <string name="downloads_loading">正在加载下载项</string>
 
     <!-- This string is displayed in the "Delete All" button in the downloads list.
          When pressed the all the downloads in the list are deleted both from the list and the disk. -->
@@ -1156,6 +1173,16 @@
          browser's navigation bar. The button it labels, when pressed, Shows the pop-up blocked dialog. -->
     <string name="popup_tooltip">已阻止弹出窗口</string>
 
+    <!-- This string is for the tooltip that appears upon hovering the 'DRM' button in the
+         browser's navigation bar when DRM is allowed for the site. The button it labels, when pressed,
+         shows the DRM bubble on top of the button. -->
+    <string name="drm_enabled_tooltip">允许 DRM</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'DRM' button in the
+         browser's navigation bar when DRM not allowed for the site. The button it labels, when pressed,
+         shows the DRM bubble on top of the button. -->
+    <string name="drm_disabled_tooltip">不允许 DRM</string>
+
     <!-- This string is for the tooltip that when clicking the 'Info' (ⓘ) icon visible next to the current website's
          URL in the URL bar. The button it labels, when pressed, shows information about the site. -->
     <string name="site_info_tooltip">显示网站信息。</string>
@@ -1175,6 +1202,11 @@
     <!-- This string is for the tooltip that appears upon hovering the 'WebXR' button in the
  browser's navigation bar. The button it labels, when pressed, Shows the WebXR permission dialog. -->
     <string name="webxr_blocked_tooltip">已阻止 WebXR</string>
+
+    <!-- This string appears in the WebXR interstial next to an arrow pointing to the controller button that
+     has to be used to exit from WebXR. It's preferred to separate it in two lines if possible.
+     \n is used to create a new line  -->
+    <string name="webxr_interstitial_exit_webxr">退出\nWebXR</string>
 
     <!-- This string appears in the WebXR interstitial. -->
     <string name="webxr_interstitial_how_to_continue_1">按下任意键继续</string>
@@ -1270,6 +1302,10 @@
     <!-- This string is for the tooltip that appears when the user hovers over the 'History' icon in the
          tray and the History view is closed. The button it labels, when pressed, closes the History view. -->
     <string name="close_history_tooltip">关闭历史记录</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Downloads' icon in the
+         tray and the Downloads view is closed. The button it labels, when pressed, opens a list view of the user's downloads. -->
+    <string name="open_downloads_tooltip">打开下载项</string>
 
     <!-- This string is displayed in any button used for removing all the items in the current context. -->
     <string name="remove_all">全部移除</string>
@@ -1513,14 +1549,40 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <string name="slow_script_dialog_action_wait">等待</string>
 
 
+    <!-- This string is displayed in the on button of the quick Popup blocking dialog when it's in enabled state. It's accessed from the Popup icon in the URL bar. -->
+    <string name="popup_dialog_button_on">允许</string>
+
+    <!-- This string is displayed in the off button of the quick Popup blocking dialog when it's in disabled state. It's accessed from the Popup icon in the URL bar. -->
+    <string name="popup_dialog_button_off">阻止</string>
+
+    <!-- This string is displayed in the title of the quick WebXR blocking dialog, accessed from the VR icon in the URL bar.
+     '%1$s' will be replaced at runtime with the status of the setting.
+     '%2$s' will be replaced at runtime with the Learn More page link. -->
+    <string name="webxr_permission_dialog_message">此网站的 WebXR 功能已%1$s。&lt;a href=&quot;%2$s&quot;&gt;详细了解&lt;/a&gt;</string>
+
+    <!-- This string is displayed in the on button of the quick WebXR blocking dialog when it's in enabled state. It's accessed from the WebXR icon in the URL bar. -->
+    <string name="webxr_dialog_button_on">开启</string>
+
+    <!-- This string is displayed in the off button of the quick WebXR blocking dialog when it's in disabled state. It's accessed from the WebXR icon in the URL bar. -->
+    <string name="webxr_dialog_button_off">关闭</string>
+
     <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar.
          '%1$s' will be replaced at runtime with the status of the setting.
          '%2$s' will be replaced at runtime with the Learn More page link. -->
     <string name="tracking_dialog_message">对此网站已%1$s增强型跟踪保护。（&lt;a href=&quot;%2$s&quot;&gt;详细了解&lt;/a&gt;）</string>
   
+    <!-- This string is displayed in the on button of the quick Tracking Protection dialog when it's in enabled state. It's accessed from the Tracking Protection icon in the URL bar. -->
+    <string name="tracking_dialog_button_on">开启</string>
+
+    <!-- This string is displayed in the off button of the quick Tracking Protection dialog when it's in disabled state. It's accessed from the Tracking Protection icon in the URL bar. -->
+    <string name="tracking_dialog_button_off">关闭</string>
+
+    <!-- This string is displayed in the switch button of the quick DRM dialog when it's in enabled state. It's accessed from the DRM icon in the URL bar. -->
+    <string name="drm_dialog_button_on">开启</string>
+
     <!-- This string is displayed as the title of a dialog that is displayed the first time a user access DRM content if they haven't
          explicitly enable/Disable the DRM setting yet. -->
-    <string name="drm_first_use_title_v1">此网站包含 DRM 内容。</string>
+    <string name="drm_first_use_title_v1">此网站包含数字版权管理（DRM）内容。</string>
   
     <!-- This string is displayed in the enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
