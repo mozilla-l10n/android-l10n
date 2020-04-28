@@ -106,10 +106,6 @@
          describes Mozilla's Privacy Policy. -->
     <string name="settings_privacy_policy">隐私政策</string>
 
-    <!-- This string is used as the title of the pop-ups dialog used to remove sites from the currently
-         allowed pop-up sites. -->
-    <string name="settings_privacy_policy_popups_title">弹出窗口权限</string>
-
     <!-- This string is displayed under the title the pop-ups dialog used to remove sites from the currently
          allowed pop-up sites. -->
     <string name="settings_privacy_policy_popups_description">您可以指定允许哪些网站打开弹出窗口</string>
@@ -608,11 +604,7 @@
          when that the content was just synced some time ago. -->
     <string name="fxa_account_last_synced">上次同步于 %1$d 分钟前</string>
 
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable playback of DRM controlled content. -->
-    <string name="security_options_drm_content">播放 DRM 控制内容（&lt;a href=&quot;http://somesite.com/&quot;&gt;详细了解&lt;/a&gt;）</string>
-
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+        <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the tabs restoration after a fresh app start. -->
     <string name="security_options_restore_tabs">重启浏览器后恢复标签页和窗口</string>
 
@@ -915,6 +907,13 @@
          clearing history is displayed. -->
     <string name="history_clear">清除历史记录</string>
 
+    <!-- This string is displayed as the title of the downloads list when the downloads is empty. -->
+    <string name="downloads_empty">您的下载列表为空</string>
+
+    <!-- This string is displayed in the "Delete All" button in the downloads list.
+         When pressed the all the downloads in the list are deleted both from the list and the disk. -->
+    <string name="downloads_delete">全部删除</string>
+
     <!-- This string is displayed is the "Sync" button in the history panel. When pressed the
          history is synced with the Firefox account. -->
     <string name="fxa_sync">同步</string>
@@ -996,9 +995,6 @@
     <!-- This string labels the Reset button that removes all the sites from the stored allowed pop-ups sites. -->
     <string name="privacy_options_popups_reset">重置弹出窗口阻止设置</string>
 
-    <!-- This string is displayed on top of the allowed sites list in the allowed pop-ups panel. -->
-    <string name="privacy_options_popups_list_header">下列网站请求打开弹出窗口：</string>
-
     <!-- This string is displayed in the first line of a text that's displayed in the middle of allowed pop-ups panel instead of the exceptions list
          when there are no exceptions. -->
     <string name="privacy_options_popups_list_empty_first">打开包含弹出窗口的网站时，会看到是否要阻止弹出窗口的对话框。</string>
@@ -1009,10 +1005,6 @@
 
     <!-- This string is used to label radio buttons for setting ETP in. -->
     <string name="privacy_options_tracking">增强型跟踪保护。（&lt;a href=&quot;%1$s&quot;&gt;详细了解&lt;/a&gt;）</string>
-
-    <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
-         Tracking protection exceptions. -->
-    <string name="privacy_options_tracking_exceptions">例外</string>
 
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">重置控制器设置</string>
@@ -1151,6 +1143,12 @@
 
     <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the target url in a new tab. -->
     <string name="context_menu_open_new_tab_1">新建标签页打开</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it triggers the video element download. -->
+    <string name="context_menu_download_video">下载视频</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it triggers the audio element download. -->
+    <string name="context_menu_download_audio">下载音频</string>
 
     <!-- This string is shown in the context menu after a longpress on a link. When clicked it copies the target to the clipboard -->
     <string name="context_menu_copy_link">复制链接</string>
@@ -1452,16 +1450,41 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <string name="slow_script_dialog_action_wait">等待</string>
 
 
-    <!-- This string is displayed in the title of the quick WebXR blocking dialog, accessed from the VR icon in the URL bar.
-     '%1$s' will be replaced at runtime with the app's name. -->
-    <string name="webxr_block_dialog_message">“%1$s”想要访问 WebXR API</string>
-
-    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
+    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar.
+         '%1$s' will be replaced at runtime with the status of the setting.
+         '%2$s' will be replaced at runtime with the Learn More page link. -->
     <string name="tracking_dialog_message">对此网站已%1$s增强型跟踪保护。（&lt;a href=&quot;%2$s&quot;&gt;详细了解&lt;/a&gt;）</string>
-
-    <!-- This string is displayed in the enable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
-    <string name="tracking_dialog_button_enable">启用</string>
-
+  
     <!-- This string is displayed in the disable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_disable">禁用</string>
+
+    <!-- This string is displayed in the title of the dialog displayed when the user tries to open an unsupported
+         file from the Downloads library panel. -->
+    <string name="download_open_file_unsupported_title">不支持的文件类型</string>
+
+    <!-- This string is displayed in the cancel button of the dialog displayed when the user tries to open an unsupported
+         file from the Downloads library panel. When clicked the dialog is closed.-->
+    <string name="download_open_file_unsupported_cancel">取消</string>
+
+    <!-- This string is displayed in the cancel button of the dialog displayed when the user tries to open an unsupported
+         file from the Downloads library panel. When clicked we hand over the file open to the system.-->
+    <string name="download_open_file_unsupported_open">打开</string>
+
+    <!-- This string is displayed in the title of the dialog displayed when we try to hand over the file open to
+         the system but the system can't handle it either. -->
+    <string name="download_open_file_error_title">错误</string>
+
+    <!-- This string is displayed in the "Cancel" button of the dialog displayed when a download has been requested
+         so the user can confirm if they want to actually download the file. If clicked the download is not started. -->
+    <string name="download_confirm_cancel">取消</string>
+
+    <!-- This string is displayed in the confirmation dialog when a downloaded file is deleted from the downloads list. -->
+    <string name="download_delete_file_confirm_title">删除文件</string>
+
+    <!-- This string is displayed in the confirmation dialog when a downloaded file is deleted from the downloads list. -->
+    <string name="download_delete_file_confirm_body">您确定要删除这个文件吗？</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when an unknown error happened. -->
+    <string name="download_status_unknown_error">未知错误</string>
+
 </resources>
