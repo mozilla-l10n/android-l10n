@@ -619,6 +619,10 @@
     <string name="fxa_account_last_synced">上次同步于 %1$d 分钟前</string>
 
         <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+     and is used to enable or disable playback of DRM controlled content. -->
+    <string name="security_options_drm_content_v1">自动允许网站识别您的设备，播放受 DRM 控制的内容。（&lt;a href=&quot;%1$s&quot;&gt;详细了解&lt;/a&gt;）</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the tabs restoration after a fresh app start. -->
     <string name="security_options_restore_tabs">重启浏览器后恢复标签页和窗口</string>
 
@@ -1307,6 +1311,10 @@
          tray and the Downloads view is closed. The button it labels, when pressed, opens a list view of the user's downloads. -->
     <string name="open_downloads_tooltip">打开下载项</string>
 
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Downloads' icon in the
+         tray and the Downloads view is closed. The button it labels, when pressed, closes the Downloads view. -->
+    <string name="close_downloads_tooltip">关闭下载项</string>
+
     <!-- This string is displayed in any button used for removing all the items in the current context. -->
     <string name="remove_all">全部移除</string>
 
@@ -1397,6 +1405,9 @@
 
     <!-- This string is displayed in the URL bar when the user is in the history panel -->
     <string name="url_history_title">历史记录</string>
+
+    <!-- This string is displayed in the URL bar when the user is in the downloads panel -->
+    <string name="url_downloads_title">下载项</string>
 
     <!-- This string is displayed in the Clear button on top of the window when in private mode. It only appears
          when there is one window left. When clicked, it closes the private session -->
@@ -1549,6 +1560,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <string name="slow_script_dialog_action_wait">等待</string>
 
 
+    <!-- This string is displayed in the title of the quick PopUp blocking dialog, accessed from the PopUp icon in the URL bar.
+     '%1$s' will be replaced at runtime with the status of the setting. -->
+    <string name="popup_permission_dialog_message">已%1$s此网站弹出窗口。</string>
+
     <!-- This string is displayed in the on button of the quick Popup blocking dialog when it's in enabled state. It's accessed from the Popup icon in the URL bar. -->
     <string name="popup_dialog_button_on">允许</string>
 
@@ -1580,9 +1595,17 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the switch button of the quick DRM dialog when it's in enabled state. It's accessed from the DRM icon in the URL bar. -->
     <string name="drm_dialog_button_on">开启</string>
 
+    <!-- This string is displayed in the switch button of the quick DRM dialog when it's in disabled state. It's accessed from the DRM icon in the URL bar. -->
+    <string name="drm_dialog_button_off">关闭</string>
+
     <!-- This string is displayed as the title of a dialog that is displayed the first time a user access DRM content if they haven't
          explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_title_v1">此网站包含数字版权管理（DRM）内容。</string>
+  
+    <!-- This string is displayed as the body of a dialog that is displayed the first time a user access DRM content if they haven't
+         explicitly enable/Disable the DRM setting yet.
+         '%1$s' will be replaced at runtime with the Learn More page link. -->
+    <string name="drm_first_use_body_v1">允许 DRM 会让此网站在您每次访问时识别该设备。（&lt;a href=&quot;%1$s&quot;&gt;详细了解&lt;/a&gt;）</string>
   
     <!-- This string is displayed in the enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
@@ -1595,6 +1618,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the disable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_disable">禁用</string>
 
+    <!-- This string is displayed in the body of the confirm dialog shown in some platforms when the back button is pressed to quit the app.
+         '%1$s' will be replaced at runtime with the app name. -->
+    <string name="exit_confirm_dialog_body">您确定要退出“%1$s”吗？</string>
+
     <!-- This string is displayed in the Cancel button of the confirm dialog shown in some platforms when the back button is pressed to quit the app.  -->
     <string name="exit_confirm_dialog_button_cancel">取消</string>
 
@@ -1604,6 +1631,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the title of the dialog displayed when the user tries to open an unsupported
          file from the Downloads library panel. -->
     <string name="download_open_file_unsupported_title">不支持的文件类型</string>
+
+    <!-- This string is displayed in the body of the dialog displayed when the user tries to open an unsupported
+         file from the Downloads library panel. -->
+    <string name="download_open_file_unsupported_body">无法打开此文件，您要使用外部应用程序打开吗？</string>
 
     <!-- This string is displayed in the cancel button of the dialog displayed when the user tries to open an unsupported
          file from the Downloads library panel. When clicked the dialog is closed.-->
@@ -1616,6 +1647,14 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the title of the dialog displayed when we try to hand over the file open to
          the system but the system can't handle it either. -->
     <string name="download_open_file_error_title">错误</string>
+
+    <!-- This string is displayed in the body of the dialog displayed when we try to hand over the file open to
+         the system but the system can't handle it either. -->
+    <string name="download_open_file_error_body">找不到处理此类型文件的应用程序</string>
+
+    <!-- This string is displayed in the title of the dialog displayed when a download has been requested
+         so the user can confirm if they want to actually download the file. -->
+    <string name="download_confirm_title">您确定要下载此文件吗？</string>
 
     <!-- This string is displayed in the "Cancel" button of the dialog displayed when a download has been requested
          so the user can confirm if they want to actually download the file. If clicked the download is not started. -->
@@ -1634,6 +1673,15 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the confirmation dialog checkbox to also delete the file from disk. -->
     <string name="download_delete_file_confirm_checkbox">同时将文件从磁盘删除</string>
 
+    <!-- This string is displayed in the confirmation dialog when the delete all button is clicked in the downloads list. -->
+    <string name="download_delete_all_confirm_title">删除所有已下载的文件</string>
+
+    <!-- This string is displayed in the confirmation dialog when the delete all button is clicked in the downloads list. -->
+    <string name="download_delete_all_confirm_body">您确定要删除所有已下载的文件吗？</string>
+
+    <!-- This string is displayed in the delete download confirmation dialog checkbox to also delete the file from disk. -->
+    <string name="download_delete_all_confirm_checkbox">同时将文件从磁盘删除</string>
+
     <!-- This string is displayed in the delete download confirmation dialog cancel button. -->
     <string name="download_delete_confirm_cancel">取消</string>
 
@@ -1642,6 +1690,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
 
     <!-- This string is displayed in the title of the download error dialog. -->
     <string name="download_error_title">发生了一个错误</string>
+
+    <!-- This string is displayed in the body of the download error dialog.
+         '%1$s' will be replaced at runtime with the name of the downloaded file. -->
+    <string name="download_error_body">下载 %1$s 时出错，请重试。</string>
 
     <!-- This string is displayed in the button to dismiss the download error dialog. -->
     <string name="download_error_ok">确定</string>
