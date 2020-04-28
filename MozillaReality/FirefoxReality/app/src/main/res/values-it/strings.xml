@@ -619,6 +619,10 @@
     <string name="fxa_account_last_synced">Ultima sincronizzazione: %1$d minuti fa</string>
 
         <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+     and is used to enable or disable playback of DRM controlled content. -->
+    <string name="security_options_drm_content_v1">Consenti automaticamente ai siti di identificare il tuo dispositivo per riprodurre contenuti gestiti con DRM (&lt;a href=&quot;%1$s&quot;&gt;ulteriori informazioni&lt;/a&gt;).</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the tabs restoration after a fresh app start. -->
     <string name="security_options_restore_tabs">Ripristina schede e finestre dopo il riavvio</string>
 
@@ -931,6 +935,9 @@
     <!-- This string is displayed as the title of the downloads list when the downloads is empty. -->
     <string name="downloads_empty">L’elenco dei download è vuoto</string>
 
+    <!-- This string is displayed under the downloads title in the downloads list. -->
+    <string name="downloads_description">Puoi accedere ai file scaricati qui</string>
+
     <!-- This string is displayed in the middle of the downloads list while the downloads is being loaded. -->
     <string name="downloads_loading">Caricamento dei download…</string>
 
@@ -1196,6 +1203,9 @@
      has to be used to exit from WebXR. It's preferred to separate it in two lines if possible.
      \n is used to create a new line  -->
     <string name="webxr_interstitial_exit_webxr">Esci da\nWebXR</string>
+
+    <!-- This string appears in the WebXR interstitial. -->
+    <string name="webxr_interstitial_how_to_continue_1">Premi un pulsante qualsiasi per continuare</string>
 
     <!-- This string is for the tooltip that appears upon hovering the 'Tracking' button in the
      browser's navigation bar. The button it labels, when pressed, Shows the Tracking dialog. -->
@@ -1579,11 +1589,20 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the off button of the quick Tracking Protection dialog when it's in disabled state. It's accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_off">Disattivata</string>
 
+    <!-- This string is displayed in the title of the quick DRM dialog, accessed from the DRM icon in the URL bar.
+         '%1$s' will be replaced at runtime with the status of the setting.
+         '%2$s' will be replaced at runtime with the Learn More page link. -->
+    <string name="drm_dialog_message">Alcuni contenuti audio o video in questo sito utilizzano software DRM. Questo potrebbe limitare le azioni dell’utente in %1$s. &lt;a href=&quot;%2$s&quot;&gt;Ulteriori informazioni&lt;/a&gt;</string>
+
     <!-- This string is displayed in the switch button of the quick DRM dialog when it's in enabled state. It's accessed from the DRM icon in the URL bar. -->
     <string name="drm_dialog_button_on">Attivato</string>
 
     <!-- This string is displayed in the switch button of the quick DRM dialog when it's in disabled state. It's accessed from the DRM icon in the URL bar. -->
     <string name="drm_dialog_button_off">Disattivato</string>
+  
+    <!-- This string is displayed as the title of a dialog that is displayed the first time a user access DRM content if they haven't
+         explicitly enable/Disable the DRM setting yet. -->
+    <string name="drm_first_use_title_v1">Questo sito presenta contenuti DRM.</string>
   
     <!-- This string is displayed in the enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
