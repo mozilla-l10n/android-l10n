@@ -107,10 +107,6 @@
          describes Mozilla's Privacy Policy. -->
     <string name="settings_privacy_policy">Privacybeleid</string>
 
-    <!-- This string is used as the title of the pop-ups dialog used to remove sites from the currently
-         allowed pop-up sites. -->
-    <string name="settings_privacy_policy_popups_title">Pop-uptoestemmingen</string>
-
     <!-- This string is displayed under the title the pop-ups dialog used to remove sites from the currently
          allowed pop-up sites. -->
     <string name="settings_privacy_policy_popups_description">U kunt opgeven welke websites pop-upvensters mogen openen</string>
@@ -453,6 +449,12 @@
     <!-- This string is used to label the 'VR' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_vr">VR</string>
 
+    <!-- This string is used to label the 'Internal Storage' radio button of the 'Downloads Storage' settings option. -->
+    <string name="privacy_options_downloads_storage_internal">Intern</string>
+
+    <!-- This string is used to label the 'External Storage' radio button of the 'Downloads Storage' settings option. -->
+    <string name="privacy_options_downloads_storage_external">Extern</string>
+
     <!-- This string is used to label the 'Standard' radio button of the 'Enhanced Tracking protection' settings option. -->
     <string name="privacy_options_tracking_etp">Standaard</string>
 
@@ -611,11 +613,7 @@
          when that the content was just synced some time ago. -->
     <string name="fxa_account_last_synced">Laatst gesynchroniseerd: %1$d minuten geleden</string>
 
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable playback of DRM controlled content. -->
-    <string name="security_options_drm_content">DRM-gecontroleerde inhoud afspelen (&lt;a href=&quot;http://somesite.com/&quot;&gt;Meer info&lt;/a&gt;)</string>
-
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+        <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the tabs restoration after a fresh app start. -->
     <string name="security_options_restore_tabs">Tabbladen en vensters herstellen na herstarten</string>
 
@@ -673,6 +671,10 @@
     <!-- This string labels the button in the privacy option panel that enables/disables Virtual Reality
         Devices access to websites (WebXR). -->
     <string name="security_options_permission_webxr">Virtual Reality-apparaten (WebXR)</string>
+
+    <!-- This string labels the button in the privacy option panel that open the dialog to add/remove
+         webxr blocked sites. -->
+    <string name="security_options_webxr_settings">Geavanceerd</string>
 
     <!-- This string is a label above the group of switches that indicates that the switches below
          relate to Firefox data collection and use. -->
@@ -869,6 +871,10 @@
          bookmarks tray button then a new item is bookmarked. -->
     <string name="bookmarks_saved_notification">Opgeslagen als bladwijzer!</string>
 
+    <!-- This string is displayed in a notification that appears in the tray bar on top of the
+         downloads tray button then a download finishes. %1$s will be replaced with the downloaded file name. -->
+    <string name="download_completed_notification">%1$s gedownload</string>
+
     <!-- This string is displayed in a tooltip that appears when a user hovers
          over an icon representing 'Edit This Bookmark' for an individual bookmark
          item listed in the Bookmarks List. -->
@@ -920,6 +926,41 @@
     <!-- This string is displayed is the "Clear History" button in the history list. When pressed a dialog for
          clearing history is displayed. -->
     <string name="history_clear">Geschiedenis wissen</string>
+
+    <!-- This string is displayed as the title of the downloads list, which contains the user's downloaded files. -->
+    <string name="downloads_title">Downloads</string>
+
+    <!-- This string is displayed in the "Delete All" button in the downloads list.
+         When pressed the all the downloads in the list are deleted both from the list and the disk. -->
+    <string name="downloads_delete">Alles verwijderen</string>
+
+    <!-- This string is displayed in the "Sort By" button in the downloads list.
+         When pressed a dropdown menu is displayed with the sorting options. -->
+    <string name="downloads_sort">Sorteren op</string>
+
+    <!-- This string is displayed as an option in the downloads sorting menu
+         When pressed the download list is sorted in alphabetical order from A to Z. -->
+    <string name="downloads_filename_sort_az">Op naam (van A tot Z)</string>
+
+    <!-- This string is displayed as an option in the downloads sorting menu
+         When pressed the download list is sorted in alphabetically order from Z to A. -->
+    <string name="downloads_filename_sort_za">Op naam (van Z tot A)</string>
+
+    <!-- This string is displayed as an option in the downloads sorting menu
+         When pressed the download list is sorted in download date ascending order. -->
+    <string name="downloads_sort_download_date_asc">Oudste</string>
+
+    <!-- This string is displayed as an option in the downloads sorting menu
+         When pressed the download list is sorted in download date descending order. -->
+    <string name="downloads_sort_download_date_desc">Nieuwste</string>
+
+    <!-- This string is displayed as an option in the downloads sorting menu
+         When pressed the download list is sorted in download date ascending order. -->
+    <string name="downloads_sort_download_size_asc">Kleinste</string>
+
+    <!-- This string is displayed as an option in the downloads sorting menu
+         When pressed the download list is sorted in download date descending order. -->
+    <string name="downloads_sort_download_size_desc">Grootste</string>
 
     <!-- This string is displayed is the "Sync" button in the history panel. When pressed the
          history is synced with the Firefox account. -->
@@ -990,6 +1031,11 @@
          the more button is pressed in a history item. It removes the selected item from favorites. -->
     <string name="history_context_remove_bookmarks">Verwijderen uit bladwijzers</string>
 
+    <!-- This string is displayed is the downloads context menu that is displayed when
+         the more button is pressed in a downloads item. It deletes the selected item from the downloads list
+         and also from disk. -->
+    <string name="download_context_delete">Verwijderen</string>
+
     <!-- This string labels the Reset button that restores the default display settings values. -->
     <string name="display_options_reset">Weergave-instellingen herinitialiseren</string>
 
@@ -1001,9 +1047,6 @@
 
     <!-- This string labels the Reset button that removes all the sites from the stored allowed pop-ups sites. -->
     <string name="privacy_options_popups_reset">Instellingen voor blokkeren van pop-upvensters herinitialiseren</string>
-
-    <!-- This string is displayed on top of the allowed sites list in the allowed pop-ups panel. -->
-    <string name="privacy_options_popups_list_header">De volgende websites hebben het openen van pop-upvensters aangevraagd:</string>
 
     <!-- This string is displayed in the first line of a text that's displayed in the middle of allowed pop-ups panel instead of the exceptions list
          when there are no exceptions. -->
@@ -1018,7 +1061,7 @@
 
     <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
          Tracking protection exceptions. -->
-    <string name="privacy_options_tracking_exceptions">Uitzonderingen</string>
+    <string name="privacy_options_tracking_exceptions_v1">Geavanceerd</string>
 
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">Controllerinstellingen herinitialiseren</string>
@@ -1115,6 +1158,16 @@
     <!-- This string is for the tooltip that appears upon hovering the 'Pop-Up' button in the
          browser's navigation bar. The button it labels, when pressed, Shows the pop-up blocked dialog. -->
     <string name="popup_tooltip">Pop-up geblokkeerd</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'DRM' button in the
+         browser's navigation bar when DRM is allowed for the site. The button it labels, when pressed,
+         shows the DRM bubble on top of the button. -->
+    <string name="drm_enabled_tooltip">DRM toegestaan</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'DRM' button in the
+         browser's navigation bar when DRM not allowed for the site. The button it labels, when pressed,
+         shows the DRM bubble on top of the button. -->
+    <string name="drm_disabled_tooltip">DRM niet toegestaan</string>
 
     <!-- This string is for the tooltip that when clicking the 'Info' (ⓘ) icon visible next to the current website's
          URL in the URL bar. The button it labels, when pressed, shows information about the site. -->
@@ -1216,6 +1269,10 @@
          tray and the History view is closed. The button it labels, when pressed, closes the History view. -->
     <string name="close_history_tooltip">Geschiedenis sluiten</string>
 
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Downloads' icon in the
+         tray and the Downloads view is closed. The button it labels, when pressed, closes the Downloads view. -->
+    <string name="close_downloads_tooltip">Downloads sluiten</string>
+
     <!-- This string is displayed in any button used for removing all the items in the current context. -->
     <string name="remove_all">Alles verwijderen</string>
 
@@ -1312,6 +1369,9 @@
 
     <!-- This string is displayed in the URL bar when the user is in the history panel -->
     <string name="url_history_title">Geschiedenis</string>
+
+    <!-- This string is displayed in the URL bar when the user is in the downloads panel -->
+    <string name="url_downloads_title">Downloads</string>
 
     <!-- This string is displayed in the Clear button on top of the window when in private mode. It only appears
          when there is one window left. When clicked, it closes the private session -->
@@ -1464,16 +1524,118 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <string name="slow_script_dialog_action_wait">Wachten</string>
 
 
-    <!-- This string is displayed in the title of the quick WebXR blocking dialog, accessed from the VR icon in the URL bar.
-     '%1$s' will be replaced at runtime with the app's name. -->
-    <string name="webxr_block_dialog_message">‘%1$s’ wil toegang tot de WebXR-API</string>
+    <!-- This string is displayed in the on button of the quick Popup blocking dialog when it's in enabled state. It's accessed from the Popup icon in the URL bar. -->
+    <string name="popup_dialog_button_on">Aan</string>
 
-    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
+    <!-- This string is displayed in the off button of the quick Popup blocking dialog when it's in disabled state. It's accessed from the Popup icon in the URL bar. -->
+    <string name="popup_dialog_button_off">Uit</string>
+
+    <!-- This string is displayed in the on button of the quick WebXR blocking dialog when it's in enabled state. It's accessed from the WebXR icon in the URL bar. -->
+    <string name="webxr_dialog_button_on">Aan</string>
+
+    <!-- This string is displayed in the off button of the quick WebXR blocking dialog when it's in disabled state. It's accessed from the WebXR icon in the URL bar. -->
+    <string name="webxr_dialog_button_off">Uit</string>
+
+    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar.
+         '%1$s' will be replaced at runtime with the status of the setting.
+         '%2$s' will be replaced at runtime with the Learn More page link. -->
     <string name="tracking_dialog_message">Verbeterde bescherming tegen volgen is %1$s voor deze website. (&lt;a href=&quot;%2$s&quot;&gt;Meer info&lt;/a&gt;)</string>
 
-    <!-- This string is displayed in the enable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
-    <string name="tracking_dialog_button_enable">Inschakelen</string>
+    <!-- This string is displayed in the on button of the quick Tracking Protection dialog when it's in enabled state. It's accessed from the Tracking Protection icon in the URL bar. -->
+    <string name="tracking_dialog_button_on">Aan</string>
+
+    <!-- This string is displayed in the off button of the quick Tracking Protection dialog when it's in disabled state. It's accessed from the Tracking Protection icon in the URL bar. -->
+    <string name="tracking_dialog_button_off">Uit</string>
+
+    <!-- This string is displayed in the switch button of the quick DRM dialog when it's in enabled state. It's accessed from the DRM icon in the URL bar. -->
+    <string name="drm_dialog_button_on">Aan</string>
+
+    <!-- This string is displayed in the switch button of the quick DRM dialog when it's in disabled state. It's accessed from the DRM icon in the URL bar. -->
+    <string name="drm_dialog_button_off">Uit</string>
+  
+    <!-- This string is displayed in the enable button that is displayed inside the dialog that is displayed the first time a user access
+         access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
+    <string name="drm_first_use_allow">Toestaan</string>
+  
+    <!-- This string is displayed in the do not enable button that is displayed inside the dialog that is displayed the first time a user access
+         access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
+    <string name="drm_first_use_do_not_allow">Niet toestaan</string>
 
     <!-- This string is displayed in the disable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_disable">Uitschakelen</string>
+
+    <!-- This string is displayed in the body of the confirm dialog shown in some platforms when the back button is pressed to quit the app.
+         '%1$s' will be replaced at runtime with the app name. -->
+    <string name="exit_confirm_dialog_body">Weet u zeker dat u %1$s wilt afsluiten?</string>
+
+    <!-- This string is displayed in the Cancel button of the confirm dialog shown in some platforms when the back button is pressed to quit the app.  -->
+    <string name="exit_confirm_dialog_button_cancel">Annuleren</string>
+
+    <!-- This string is displayed in the Quit button of the confirm dialog shown in some platforms when the back button is pressed to quit the app.  -->
+    <string name="exit_confirm_dialog_button_quit">Afsluiten</string>
+
+    <!-- This string is displayed in the title of the dialog displayed when the user tries to open an unsupported
+         file from the Downloads library panel. -->
+    <string name="download_open_file_unsupported_title">Niet-ondersteund bestandstype</string>
+
+    <!-- This string is displayed in the cancel button of the dialog displayed when the user tries to open an unsupported
+         file from the Downloads library panel. When clicked the dialog is closed.-->
+    <string name="download_open_file_unsupported_cancel">Annuleren</string>
+
+    <!-- This string is displayed in the cancel button of the dialog displayed when the user tries to open an unsupported
+         file from the Downloads library panel. When clicked we hand over the file open to the system.-->
+    <string name="download_open_file_unsupported_open">Openen</string>
+
+    <!-- This string is displayed in the title of the dialog displayed when we try to hand over the file open to
+         the system but the system can't handle it either. -->
+    <string name="download_open_file_error_title">Fout</string>
+
+    <!-- This string is displayed in the title of the dialog displayed when a download has been requested
+         so the user can confirm if they want to actually download the file. -->
+    <string name="download_confirm_title">Wilt u dit bestand downloaden?</string>
+
+    <!-- This string is displayed in the "Cancel" button of the dialog displayed when a download has been requested
+         so the user can confirm if they want to actually download the file. If clicked the download is not started. -->
+    <string name="download_confirm_cancel">Annuleren</string>
+
+    <!-- This string is displayed in the "Download" button of the dialog displayed when a download has been requested
+         so the user can confirm if they want to actually download the file. If clicked the download is queued. -->
+    <string name="download_confirm_download">Downloaden</string>
+
+    <!-- This string is displayed in the confirmation dialog when a downloaded file is deleted from the downloads list. -->
+    <string name="download_delete_file_confirm_title">Bestand verwijderen</string>
+
+    <!-- This string is displayed in the confirmation dialog when a downloaded file is deleted from the downloads list. -->
+    <string name="download_delete_file_confirm_body">Weet u zeker dat u dit bestand wilt verwijderen?</string>
+
+    <!-- This string is displayed in the confirmation dialog when the delete all button is clicked in the downloads list. -->
+    <string name="download_delete_all_confirm_title">Alle gedownloade bestanden verwijderen</string>
+
+    <!-- This string is displayed in the confirmation dialog when the delete all button is clicked in the downloads list. -->
+    <string name="download_delete_all_confirm_body">Weet u zeker dat u alle gedownloade bestanden wilt verwijderen?</string>
+
+    <!-- This string is displayed in the delete download confirmation dialog cancel button. -->
+    <string name="download_delete_confirm_cancel">Annuleren</string>
+
+    <!-- This string is displayed in the confirmation dialog delete button. -->
+    <string name="download_delete_confirm_delete">Verwijderen</string>
+
+    <!-- This string is displayed in the title of the download error dialog. -->
+    <string name="download_error_title">Er is een fout opgetreden</string>
+
+    <!-- This string is displayed in the button to dismiss the download error dialog. -->
+    <string name="download_error_ok">OK</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when the download has failed. -->
+    <string name="download_status_failed">Mislukt</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when the download is paused. -->
+    <string name="download_status_paused">Gepauzeerd</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when the resource is no longer available. -->
+    <string name="download_status_unavailable">Niet beschikbaar</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when an unknown error happened. -->
+    <string name="download_status_unknown_error">Onbekende fout</string>
+
 </resources>
