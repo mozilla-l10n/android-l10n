@@ -18,13 +18,15 @@
     <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">Skedat tuaja të hapura do të shfaqen këtu.</string>
 
+    <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
+    <string name="about_content">%1$s prodhohet nga Mozilla.</string>
+
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Gjendeni në sesion privat</string>
     <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="private_browsing_placeholder_description">%1$s e spastron historikun tuaj të kërkimeve dhe shfletimit, kur dilni nga aplikacioni apo mbyllni krejt skedat private. Edhe pse kjo s’ju bën anonim përballë sajteve apo furnizuesit të shërbimit tuaj internet,
-        e bën më të lehtë mbajtjen private të asaj çka bëni në internet, nga cilido tjetër që përdor këtë pajisje.</string>
+    <string name="private_browsing_placeholder_description_2">%1$s e spastron historikun tuaj të kërkimeve dhe shfletimit prej skedash private, kur i mbyllni ato ose dilni nga aplikacioni. Edhe pse kjo s’ju bën anonim përballë sajteve apo furnizuesit të shërbimit tuaj internet, e bën më të lehtë mbajtjen private të asaj çka bëni në internet, nga cilido tjetër që përdor këtë pajisje.</string>
     <string name="private_browsing_common_myths">
        Mite të rëndomtë mbi shfletimin privat
     </string>
@@ -411,8 +413,6 @@
     <string name="library_reading_list">Listë Leximesh</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">Kërkoni</string>
-    <!-- Library Page Title -->
-    <string name="library_title">Bibliotekë</string>
     <!-- Settings Page Title -->
     <string name="settings_title">Rregullime</string>
     <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
@@ -466,11 +466,18 @@
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">Hiqe</string>
 
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (Mënyrë Private)</string>
+
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Fshije historikun</string>
     <!-- Text for the dialog to confirm clearing all history -->
     <string name="history_delete_all_dialog">Jeni i sigurt se doni të spastrohet historiku juaj?</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">Historiku u Fshi</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">%1$s u fshi</string>
     <!-- Text for positive action to delete history in deleting history dialog -->
     <string name="history_clear_dialog">Spastroje</string>
     <!-- History overflow menu copy button -->
@@ -525,6 +532,10 @@
     <string name="bookmark_edit">Përpunoni faqerojtësin</string>
     <!-- Screen title for selecting a bookmarks folder -->
     <string name="bookmark_select_folder">Përzgjidhni dosje</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">Jeni i sigurt se doni të fshihet kjo dosje?</string>
+    <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
+    <string name="bookmark_delete_folder_snackbar">%1$s u fshi</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Shtoni dosje</string>
     <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
@@ -578,7 +589,7 @@
      The first parameter is the host part of the URL of the bookmark deleted, if any -->
     <string name="bookmark_deletion_snackbar_message">U fshi %1$s</string>
     <!-- Bookmark snackbar message on deleting multiple bookmarks -->
-    <string name="bookmark_deletion_multiple_snackbar_message">Po fshihen faqerojtësit e përzgjedhur</string>
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Faqerojtësit u fshinë</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">ZHBËJE</string>
 
@@ -849,6 +860,10 @@
     <string name="preferences_delete_browsing_data_snackbar">Të dhënat e shfletimit u fshinë</string>
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">Po fshihen të dhëna shfletimi…</string>
+
+    <!-- Tips -->
+    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header">“Firefox Preview” tanimë është “Firefox Nightly”</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
@@ -1315,4 +1330,4 @@
     <string name="login_deletion_confirmation">Jeni i sigurt se doni të fshihen këto kredenciale hyrjeje?</string>
     <!-- Positive action of a dialog asking to delete  -->
     <string name="dialog_delete_positive">Fshije</string>
-</resources>
+    </resources>
