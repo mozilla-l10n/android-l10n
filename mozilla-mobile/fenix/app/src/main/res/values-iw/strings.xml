@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_5">%s במצב פרטיות</string>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="app_name_private_4">‏%s (פרטי)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
@@ -19,9 +21,18 @@
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">‏%1$s נוצר על־ידי Mozilla.</string>
 
+    <!-- Private Browsing -->
+    <!-- Title for private session option -->
+    <string name="private_browsing_title">הפעלה זו היא הפעלה פרטית</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description_2">%1$s מנקה את היסטוריית החיפוש והגלישה שלך מלשוניות פרטיות בעת סגירתן או שהיישומון נסגר. פעולה זו אמנם לא הופכת אותך לאלמוני כלפי אתרים או ספק האינטרנט שלך, אבל כן מקלה עליך בשמירה על הפעולות המקוונות שלך מפני כל מי שמשתמש במכשיר זה.</string>
     <string name="private_browsing_common_myths">
        מיתוסים נפוצים על גלישה פרטית
     </string>
+
+    <!-- Delete session button to erase your history in a private session -->
+    <string name="private_browsing_delete_session">מחיקת הפעלה</string>
 
     <!-- Private mode shortcut "contextual feature recommender" (CFR) -->
     <!-- Text for the main message -->
@@ -103,6 +114,13 @@
     <!-- Browser menu button to configure reader mode appearance e.g. the used font type and size -->
     <string name="browser_menu_read_appearance">תצוגה</string>
 
+    <!-- Error message to show when the user tries to access a scheme not
+        handled by the app (Ex: blob, tel etc) -->
+    <string name="unknown_scheme_error_message">לא ניתן להתחבר. מבנה הכתובת אינו ברור.</string>
+
+    <!-- Locale Settings Fragment -->
+    <!-- Content description for tick mark on selected language -->
+    <string name="a11y_selected_locale_content_description">שפה נבחרת</string>
     <!-- Content description for search icon -->
     <string name="a11y_search_icon_content_description">חיפוש</string>
     <!-- Text for default locale item -->
@@ -127,6 +145,8 @@
     <string name="search_suggestions_onboarding_allow_button">לאפשר</string>
     <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
     <string name="search_suggestions_onboarding_do_not_allow_button">לא לאפשר</string>
+    <!-- Search suggestion onboarding hint title text -->
+    <string name="search_suggestions_onboarding_title">לאפשר הצעות חיפוש בהפעלות פרטיות?</string>
     <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="search_suggestions_onboarding_text">‏%s ישתף את מה שיוקלד בשורת הכתובת עם מנוע החיפוש ברירת המחדל שלך.</string>
     <!-- Search suggestion onboarding hint Learn more link text -->
@@ -229,6 +249,8 @@
     <string name="preferences_show_search_suggestions">הצגת הצעות חיפוש</string>
     <!-- Preference title for switch preference to show voice search button -->
     <string name="preferences_show_voice_search">הצגת חיפוש קולי</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">הצגה בהפעלות פרטיות</string>
     <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
     <string name="preferences_show_clipboard_suggestions">הצגת הצעות מלוח העריכה</string>
     <!-- Preference title for switch preference to suggest browsing history when searching -->
@@ -272,6 +294,11 @@
     <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">סנכרון אחרון: אף פעם</string>
 
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name_2">‏%1$s על %2$s %3$s</string>
+
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">לשוניות שהתקבלו</string>
@@ -305,6 +332,10 @@
     <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
     <string name="preferences_tracking_protection_turned_off_globally">כבויה באופן גלובלי, יש לעבור להגדרות כדי להפעיל אותה.</string>
 
+    <!-- Preference switch for Telemetry -->
+    <string name="preferences_telemetry">Telemetry</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data">נתוני שימוש וטכניים</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">שיתוף נתונים של ביצועים, חומרה, שימוש והתאמות אישיות על הדפדפן שלך עם Mozilla כדי לסייע לנו בשיפור %1$s</string>
 
@@ -326,6 +357,8 @@
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">הפעלת Sync</string>
+    <!-- Preference for pairing -->
+    <string name="preferences_sync_pair">סריקת קוד צימוד ב־Firefox לשולחן העבודה</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">כניסה</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -355,6 +388,9 @@
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">שימוש בערכת הנושא של המכשיר</string>
 
+    <!-- Library -->
+    <!-- Option in Library to open Sessions page -->
+    <string name="library_sessions">הפעלות</string>
     <!-- Option in Library to open Screenshots page -->
     <string name="library_screenshots">צילומי מסך</string>
     <!-- Option in Library to open Downloads page -->
@@ -386,6 +422,8 @@
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">לשוניות פתוחות</string>
     <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_title">הפעלה פרטית</string>
+    <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">לשוניות פרטיות</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">הוספת לשונית</string>
@@ -413,6 +451,8 @@
     <string name="current_session_save">שמירה</string>
     <!-- Button in the current session menu. Opens the share menu when pressed -->
     <string name="current_session_share">שיתוף</string>
+    <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
+    <string name="current_session_image">תמונת הפעלה נוכחית</string>
     <!-- Button to save the current set of tabs into a collection -->
     <string name="save_to_collection">שמירה לאוסף</string>
     <!-- Text for the menu button to delete a collection -->
