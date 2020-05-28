@@ -39,6 +39,10 @@
 
     <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website has an invalid SSL certificate. -->
     <string name="mozac_browser_errorpages_security_bad_cert_advanced">מתקדם…</string>
+    <!-- The advanced certificate information shown when a website sends has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[<label>יכול להיות שמישהו מנסה להתחזות לאתר ועדיף שלא להמשיך.</label>
+        <br><br>
+        <label>אתרים מוכיחים את מהימנותם באמצעות אישורים. ל־%1$s אין אמון ב־<b>%2$s</b> כיוון שמנפיק האישור אינו מוכר, האישור נחתם עצמאית, או שהשרת לא שולח את אישורי הביניים הנכונים.</label>]]></string>
     <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
     <string name="mozac_browser_errorpages_security_bad_cert_back">חזרה (מומלץ)</string>
     <!-- The text shown inside the advanced options button used to bypass the invalid SSL certificate. It's only shown if the user has expanded the advanced options. -->
@@ -46,6 +50,13 @@
 
     <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
     <string name="mozac_browser_errorpages_net_interrupt_title">החיבור הופסק</string>
+
+    <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
+    <string name="mozac_browser_errorpages_net_interrupt_message"><![CDATA[<p>הדפדפן התחבר בהצלחה אך החיבור הופסק במהלך העברת המידע. נא לנסות שוב.</p>
+      <ul>
+        <li>יכול להיות שהאתר אינו זמין או עמוס מדי. יש לנסות שוב בעוד מספר רגעים.</li>
+        <li>אם אף דף אינו נטען, יש לוודא שחיבור הנתונים הסלולריים או לרשת ה־Wi-Fi תקין.</li>
+      </ul>]]></string>
 
     <!-- The document title and heading of the error page shown when a website takes too long to load. -->
     <string name="mozac_browser_errorpages_net_timeout_title">תם הזמן המוקצב לחיבור</string>
@@ -112,6 +123,13 @@
     <!-- The document title and heading of the error page shown when the Internet connection is disrupted while loading a website. -->
     <string name="mozac_browser_errorpages_net_reset_title">החיבור הופסק</string>
 
+    <!-- The error message shown when the Internet connection is disrupted while loading a website. -->
+    <string name="mozac_browser_errorpages_net_reset_message"><![CDATA[<p>קישור הרשת נקטע במהלך המשא והמתן על החיבור. נא לנסות שוב.</p>
+      <ul>
+        <li>יכול להיות שהאתר אינו זמין או עמוס מדי. יש לנסות שוב בעוד מספר רגעים.</li>
+        <li>אם אף דף אינו נטען, יש לוודא שחיבור הנתונים הסלולריים או רשת ה־Wi-Fi תקין.</li>
+      </ul>]]></string>
+
     <!-- The document title and heading of the error page shown when the browser refuses to load a type of file that is considered unsafe. -->
     <string name="mozac_browser_errorpages_unsafe_content_type_title">סוג קובץ מסוכן</string>
     <!-- The error message shown when the browser refuses to load a type of file that is considered unsafe. -->
@@ -131,6 +149,8 @@
       </ul>
     ]]></string>
 
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_content_crashed_title">התוכן קרס</string>
     <string name="mozac_browser_errorpages_content_crashed_message"><![CDATA[
       <p>לא ניתן להציג את הדף המבוקש מכיוון שאותרה שגיאה בתעבורת הנתונים.</p>
       <ul>
@@ -149,6 +169,15 @@
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_unknown_host_title">הכתובת לא נמצאה</string>
+
+    <!-- In the example, the two URLs in markup do not need to be translated. -->
+    <string name="mozac_browser_errorpages_unknown_host_message"><![CDATA[<p>האתר לא הצליח למצוא את השרת המארח לכתובת שסופקה.</p>
+      <ul>
+        <li>יש לבדוק שהכתובת אינה מכילה שגיאות כגון
+          <strong>ww</strong>.example.com במקום
+          <strong>www</strong>.example.com.</li>
+        <li>אם אף דף אינו נטען, יש לוודא שחיבור הנתונים הסלולריים או רשת ה־Wi-Fi תקין.</li>
+      </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_no_internet_title">אין חיבור לרשת</string>
@@ -181,6 +210,14 @@
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_file_not_found_title">קובץ לא נמצא</string>
+
+    <string name="mozac_browser_errorpages_file_not_found_message"><![CDATA[
+      <ul>
+        <li>האם ייתכן שהפריט הוסר, הועבר, או שינה שם?</li>
+        <li>האם ישנה שגיאת איות, שגיאת רישיות, או שגיאות טופוגרפיות אחרות בכתובת?</li>
+        <li>האם יש לך הרשאות גישה מספיקות אל הפריט המבוקש?</li>
+      </ul>
+    ]]></string>
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_file_access_denied_title">הגישה לקובץ נדחתה</string>
