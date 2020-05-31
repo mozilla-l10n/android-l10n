@@ -109,7 +109,7 @@
 
     <!-- This string is used as the title of the pop-ups dialog used to remove sites from the currently
          allowed pop-up sites. -->
-    <string name="settings_privacy_policy_popups_title">Uprawnienia do wyskakujących okien</string>
+    <string name="settings_privacy_policy_popups_title_v1">Wyjątki dla wyskakujących okien</string>
 
     <!-- This string is displayed under the title the pop-ups dialog used to remove sites from the currently
          allowed pop-up sites. -->
@@ -229,6 +229,10 @@
          changes the app and the language of the speech-recognition-based search to 'English (US)'. -->
     <string name="settings_language_english">angielski (Stany Zjednoczone)</string>
 
+    <!-- This string is used to label a radio button in the 'Settings' Language dialog that, when pressed,
+         changes the app and the language of the speech-recognition-based search to 'English (UK)'. -->
+    <string name="settings_language_english_uk">angielski (Zjednoczone Królestwo)</string>
+
     <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
          changes the app and the language of the speech-recognition-based search to 'Chinese (Traditional/Zhuyin)'. -->
     <string name="settings_language_traditional_chinese">chiński (tradycyjny/zhuyin)</string>
@@ -254,6 +258,10 @@
     <string name="settings_language_spanish">hiszpański</string>
 
     <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
+         changes the app and the language of the speech-recognition-based search to 'Spanish (Spain)'. -->
+    <string name="settings_language_spanish_spain">hiszpański (Hiszpania)</string>
+
+    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
          changes the app and the language of the speech-recognition-based search to 'Korean'. -->
     <string name="settings_language_korean">koreański</string>
 
@@ -276,6 +284,14 @@
     <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
      changes the app and the language of the speech-recognition-based search to 'Norwegian'. -->
     <string name="settings_language_norwegian">norweski</string>
+  
+    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
+ changes the app and the language of the speech-recognition-based search to 'Norwegian (Bokmaal)'. -->
+    <string name="settings_language_norwegian_bokmaal">norweski (bokmål)</string>
+
+    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
+ changes the app and the language of the speech-recognition-based search to 'Norwegian (Nynorsk)'. -->
+    <string name="settings_language_norwegian_nynorsk">norweski (nynorsk)</string>
   
     <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
      changes the app and the language of the speech-recognition-based search to 'Danish'. -->
@@ -444,6 +460,10 @@
          User-Agent (UA) string of the browser. -->
     <string name="developer_options_ua_mode">Tryb identyfikatora programu</string>
 
+    <!-- This string is used to label a set of radio buttons that allow the user to change the
+         default downloads storage. -->
+    <string name="security_options_downloads_storage">Domyślne miejsce zapisywania pobranych plików</string>
+
     <!-- This string is used to label the 'Desktop' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_desktop">Na komputery</string>
 
@@ -452,6 +472,9 @@
 
     <!-- This string is used to label the 'VR' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_vr">VR</string>
+
+    <!-- This string is used to label the 'Internal Storage' radio button of the 'Downloads Storage' settings option. -->
+    <string name="privacy_options_downloads_storage_internal">Wewnętrzne</string>
 
     <!-- This string is used to label the 'Standard' radio button of the 'Enhanced Tracking protection' settings option. -->
     <string name="privacy_options_tracking_etp">Standardowa</string>
@@ -609,11 +632,7 @@
          when that the content was just synced some time ago. -->
     <string name="fxa_account_last_synced">Ostatnia synchronizacja: %1$d min temu</string>
 
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable playback of DRM controlled content. -->
-    <string name="security_options_drm_content">Odtwarzanie treści chronionych przez DRM (&lt;a href=&quot;http://somesite.com/&quot;&gt;więcej informacji&lt;/a&gt;)</string>
-
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+        <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the tabs restoration after a fresh app start. -->
     <string name="security_options_restore_tabs">Przywracanie kart i okien po ponownym uruchomieniu</string>
 
@@ -999,9 +1018,6 @@
     <!-- This string labels the Reset button that removes all the sites from the stored allowed pop-ups sites. -->
     <string name="privacy_options_popups_reset">Przywróć ustawienia blokowania wyskakujących okien</string>
 
-    <!-- This string is displayed on top of the allowed sites list in the allowed pop-ups panel. -->
-    <string name="privacy_options_popups_list_header">Te witryny poprosiły o zezwolenie na otwieranie wyskakujących okien:</string>
-
     <!-- This string is displayed in the first line of a text that's displayed in the middle of allowed pop-ups panel instead of the exceptions list
          when there are no exceptions. -->
     <string name="privacy_options_popups_list_empty_first">Po otwarciu witryny z wyskakującym oknem zostanie wyświetlone okno dialogowe umożliwiające wybranie opcji ich blokowania.</string>
@@ -1012,10 +1028,6 @@
 
     <!-- This string is used to label radio buttons for setting ETP in. -->
     <string name="privacy_options_tracking">Wzmocniona ochrona przed śledzeniem (&lt;a href=&quot;%1$s&quot;&gt;więcej informacji&lt;/a&gt;).</string>
-
-    <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
-         Tracking protection exceptions. -->
-    <string name="privacy_options_tracking_exceptions">Wyjątki</string>
 
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">Przywróć ustawienia kontrolera</string>
@@ -1108,10 +1120,6 @@
     <!-- This string is for the tooltip that appears upon hovering the 'Clear' button in the
          browser's navigation bar. The button it labels, when pressed, clears the navigation bar text. -->
     <string name="clear_tooltip">Wyczyść</string>
-
-    <!-- This string is for the tooltip that appears upon hovering the 'Pop-Up' button in the
-         browser's navigation bar. The button it labels, when pressed, Shows the pop-up blocked dialog. -->
-    <string name="popup_tooltip">Zablokowano wyskakujące okno</string>
 
     <!-- This string is for the tooltip that when clicking the 'Info' (ⓘ) icon visible next to the current website's
          URL in the URL bar. The button it labels, when pressed, shows information about the site. -->
@@ -1457,16 +1465,12 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <string name="slow_script_dialog_action_wait">Poczekaj</string>
 
 
-    <!-- This string is displayed in the title of the quick WebXR blocking dialog, accessed from the VR icon in the URL bar.
-     '%1$s' will be replaced at runtime with the app's name. -->
-    <string name="webxr_block_dialog_message">„%1$s” prosi o dostęp do API WebXR</string>
-
-    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
+    <!-- This string is displayed in the title of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar.
+         '%1$s' will be replaced at runtime with the status of the setting.
+         '%2$s' will be replaced at runtime with the Learn More page link. -->
     <string name="tracking_dialog_message">Wzmocniona ochrona przed śledzeniem jest %1$s na tej witrynie (&lt;a href=&quot;%2$s&quot;&gt;więcej informacji&lt;/a&gt;).</string>
-
-    <!-- This string is displayed in the enable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
-    <string name="tracking_dialog_button_enable">Włącz</string>
-
+  
     <!-- This string is displayed in the disable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_disable">Wyłącz</string>
-</resources>
+
+    </resources>
