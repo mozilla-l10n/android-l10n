@@ -636,6 +636,10 @@
     <string name="fxa_account_last_synced">Senest synkroniseret for %1$d minutter siden</string>
 
         <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
+     and is used to enable or disable playback of DRM controlled content. -->
+    <string name="security_options_drm_content_v1">Tillad automatisk websteder at identificere din enhed for at afspille DRM-kontrolleret indhold (&lt;a href=&quot;%1$s&quot;&gt;Læs mere &lt;/a&gt;)</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the tabs restoration after a fresh app start. -->
     <string name="security_options_restore_tabs">Gendan faneblade og vinduer efter genstart</string>
 
@@ -1627,6 +1631,11 @@ the Select` button. When clicked it closes all the previously selected tabs -->
          explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_title_v1">Dette websted indeholder DRM-indhold.</string>
   
+    <!-- This string is displayed as the body of a dialog that is displayed the first time a user access DRM content if they haven't
+         explicitly enable/Disable the DRM setting yet.
+         '%1$s' will be replaced at runtime with the Learn More page link. -->
+    <string name="drm_first_use_body_v2">Hvis du tillader DRM, kan websteder identificere denne enhed ved hvert besøg. &lt;a href=&quot;%1$s&quot;&gt;Læs mere &lt;/a&gt;</string>
+  
     <!-- This string is displayed in the enable button that is displayed inside the dialog that is displayed the first time a user access
          access DRM content if they haven't explicitly enable/Disable the DRM setting yet. -->
     <string name="drm_first_use_allow">Tillad</string>
@@ -1671,6 +1680,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the body of the dialog displayed when the file type cannot be opened and
      there is no system app available to handle it either. -->
     <string name="download_open_file_open_unsupported_body">Filtypen understøttes ikke.</string>
+
+    <!-- This string is displayed in the body of the dialog displayed when we try to hand over the file open to
+         the system but the system can't handle it either. -->
+    <string name="download_open_file_error_body">Ingen applikationer blev fundet, der kan håndtere denne filtype.</string>
 
     <!-- This string is displayed in the title of the dialog displayed when a download has been requested
          so the user can confirm if they want to actually download the file. -->
