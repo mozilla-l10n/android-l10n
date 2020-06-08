@@ -581,6 +581,8 @@
     <!-- text for the button to finish onboarding -->
     <string name="onboarding_finish">Έναρξη περιήγησης</string>
 
+    <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content">Περιεχόμενο καταγραφής</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content_1">Σε όλες τις καρτέλες</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -591,11 +593,21 @@
     <string name="etp_cryptominers_title">Cryptominers</string>
     <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_fingerprinters_title">Fingerprinters</string>
+    <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_title">Περιεχόμενο καταγραφής</string>
     <!-- About page Your rights link text -->
     <string name="about_your_rights">Τα δικαιώματά σας</string>
 
+    <!-- About page link text to open what's new link -->
+    <string name="about_whats_new">Τι νέο υπάρχει στο %s</string>
+    <!-- Open source licenses page title
+    The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Βιβλιοθήκες OSS</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Υποστήριξη</string>
+    <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
+    <string name="about_crashes">Καταρρεύσεις</string>
     <!-- About page link text to open privacy notice link -->
     <string name="about_privacy_notice">Πολιτική απορρήτου</string>
 
@@ -621,10 +633,22 @@
 
     <!-- Preference for autofilling saved logins in Fenix -->
     <string name="preferences_passwords_autofill">Αυτόματη συμπλήρωση</string>
+    <!-- Syncing saved logins in Fenix is on -->
+    <string name="preferences_passwords_sync_logins_on">Ενεργό</string>
+    <!-- Syncing saved logins in Fenix is off -->
+    <string name="preferences_passwords_sync_logins_off">Ανενεργό</string>
+    <!-- Syncing saved logins in Fenix needs reconnect to sync -->
+    <string name="preferences_passwords_sync_logins_reconnect">Επανασύνδεση</string>
     <!-- Syncing saved logins in Fenix needs login -->
     <string name="preferences_passwords_sync_logins_sign_in">Σύνδεση στο Sync</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Εξαιρέσεις</string>
+    <!-- Hint for search box in logins list -->
+    <string name="preferences_passwords_saved_logins_search">Αναζήτηση συνδέσεων</string>
+    <!-- Option to sort logins list A-Z, alphabetically -->
+    <string name="preferences_passwords_saved_logins_alphabetically">Αλφαβητικά</string>
+    <!-- Option to sort logins list by most recently used -->
+    <string name="preferences_passwords_saved_logins_recently_used">Πρόσφατη χρήση</string>
     <!-- The header for the site that a login is for -->
     <string name="preferences_passwords_saved_logins_site">Ιστοσελίδα</string>
     <!-- The header for the username for a login -->
@@ -633,6 +657,12 @@
     <string name="preferences_passwords_saved_logins_password">Κωδικός πρόσβασης</string>
     <!-- Learn more link that will link to a page with more information displayed when a connection is insecure and we detect the user is entering a password -->
     <string name="logins_insecure_connection_warning_learn_more">Μάθετε περισσότερα</string>
+    <!-- Prompt message displayed when Fenix detects a user has entered a password and user decides if Fenix should save it. The first parameter is the name of the application (For example: Fenix)  -->
+    <string name="logins_doorhanger_save">Θέλετε το %s να αποθηκεύσει αυτή τη σύνδεση;</string>
+    <!-- Positive confirmation that Fenix should save the new or updated login -->
+    <string name="logins_doorhanger_save_confirmation">Αποθήκευση</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
+    <string name="saved_login_copy_site">Αντιγραφή ιστοσελίδας</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">Αργότερα</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -660,6 +690,41 @@
     <!-- Placeholder text shown in the Search Engine Name TextField before a user enters text -->
     <string name="search_add_custom_engine_name_hint">Όνομα</string>
 
+    <!-- Text shown when we aren't able to validate the custom search query. The first parameter is the url of the custom search engine -->
+    <string name="search_add_custom_engine_error_cannot_reach">Σφάλμα σύνδεσης στο “%s”</string>
+
+    <!-- Text on the disabled button while in progress. Placeholder replaced with app name -->
+    <string name="migration_updating_app_button_text">Ενημέρωση του %s…</string>
+    <!-- Text on the enabled button. Placeholder replaced with app name-->
+    <string name="migration_update_app_button">Έναρξη του %s</string>
+    <!-- Accessibility description text for a completed migration item -->
+    <string name="migration_icon_description">Η μεταφορά ολοκληρώθηκε</string>
+    <!--Text on list of migrated items (e.g. Settings, History, etc.)-->
+    <string name="migration_text_passwords">Κωδικοί πρόσβασης</string>
+
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. Μεταβείτε στις Ρυθμίσεις Android</string>
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Πατήστε το <b>Δικαιώματα</b>]]></string>
+    <!-- Third step for the allowing a permission (Fore example: Camera) -->
+    <string name="phone_feature_blocked_step_feature"><![CDATA[3. Ενεργοποιήστε το <b>%1$s</b>]]></string>
+
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection">Ασφαλής σύνδεση</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection">Μη ασφαλής σύνδεση</string>
+    <!-- Label for the Pocket default top site -->
+    <string name="pocket_top_articles">Κορυφαία άρθρα</string>
+    <!-- Login overflow menu delete button -->
+    <string name="login_menu_delete_button">Διαγραφή</string>
+    <!-- Login overflow menu edit button -->
+    <string name="login_menu_edit_button">Επεξεργασία</string>
+    <!-- Message in delete confirmation dialog for logins -->
+    <string name="login_deletion_confirmation">Θέλετε σίγουρα να διαγράψετε αυτή τη σύνδεση;</string>
+    <!-- Positive action of a dialog asking to delete  -->
+    <string name="dialog_delete_positive">Διαγραφή</string>
+    <!--  The saved login options menu description. -->
+    <string name="login_options_menu">Επιλογές σύνδεσης</string>
     <!--  The button description to discard changes to an edited login. -->
     <string name="discard_changes">Απόρριψη αλλαγών</string>
     <!--  The page title for editing a saved login. -->
@@ -673,9 +738,11 @@
 
     <!-- Synced Tabs -->
     <!-- Text displayed when user is not logged into a Firefox Account -->
-    <string name="synced_tabs_connect_to_sync_account">Σύνδεση με λογαριασμό Firefox.</string>
+    <string name="synced_tabs_connect_to_sync_account">Συνδεθείτε με ένα λογαριασμό Firefox.</string>
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
-    <string name="synced_tabs_connect_another_device">Σύνδεση άλλης συσκευής.</string>
+    <string name="synced_tabs_connect_another_device">Συνδέστε μια άλλη συσκευή.</string>
+    <!-- Text displayed asking user to re-authenticate -->
+    <string name="synced_tabs_reauth">Παρακαλούμε επαληθεύστε ξανά την ταυτότητά σας.</string>
     <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Παρακαλούμε ενεργοποιήστε το συγχρονισμό καρτελών.</string>
 
