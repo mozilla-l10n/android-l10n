@@ -432,12 +432,19 @@
     <string name="collection_delete">Διαγραφή συλλογής</string>
     <!-- Text for the menu button to rename a collection -->
     <string name="collection_rename">Μετονομασία συλλογής</string>
+    <!-- Text for the button to open tabs of the selected collection -->
+    <string name="collection_open_tabs">Άνοιγμα καρτελών</string>
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">Αφαίρεση</string>
+
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (Ιδιωτική λειτουργία)</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Διαγραφή ιστορικού</string>
+    <!-- Text for the dialog to confirm clearing all history -->
+    <string name="history_delete_all_dialog">Θέλετε σίγουρα να διαγράψετε το ιστορικό σας;</string>
     <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
     <string name="history_delete_multiple_items_snackbar">Το ιστορικό διαγράφηκε</string>
     <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
@@ -454,6 +461,9 @@
     <string name="history_menu_open_in_private_tab_button">Άνοιγμα σε ιδιωτική καρτέλα</string>
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">Διαγραφή</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">Επιλέχθηκαν %1$d</string>
     <!-- Text for the button to clear selected history items. The first parameter
         is a digit showing the number of items you have selected -->
     <string name="history_delete_some">Διαγραφή %1$d στοιχείων</string>
@@ -666,6 +676,13 @@
     <!-- About page link text to open privacy notice link -->
     <string name="about_privacy_notice">Πολιτική απορρήτου</string>
 
+    <!-- About page link text to open know your rights link -->
+    <string name="about_know_your_rights">Μάθετε τα δικαιώματά σας</string>
+    <!-- About page link text to open licensing information link -->
+    <string name="about_licensing_information">Πληροφορίες άδειας</string>
+    <!-- About page link text to open a screen with libraries that are used -->
+    <string name="about_other_open_source_libraries">Βιβλιοθήκες που χρησιμοποιούμε</string>
+
     <!-- Content description of the tab counter toolbar button when one tab is open -->
     <string name="tab_counter_content_description_one_tab">1 καρτέλα</string>
     <!-- Content description of the tab counter toolbar button when multiple tabs are open. First parameter will be replaced with the number of tabs (always more than one) -->
@@ -679,6 +696,11 @@
     <!-- Paste the text in the clipboard -->
     <string name="browser_toolbar_long_press_popup_paste">Επικόλληση</string>
 
+    <!-- Snackbar message shown after an URL has been copied to clipboard. -->
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">Το URL αντιγράφτηκε στο πρόχειρο</string>
+
+    <!-- Title text for the Add To Homescreen dialog -->
+    <string name="add_to_homescreen_title">Προσθήκη στην αρχική οθόνη</string>
     <!-- Cancel button text for the Add to Homescreen dialog -->
     <string name="add_to_homescreen_cancel">Ακύρωση</string>
     <!-- Add button text for the Add to Homescreen dialog -->
@@ -686,8 +708,21 @@
     <!-- Continue to website button text for the first-time Add to Homescreen dialog -->
     <string name="add_to_homescreen_continue">Συνέχεια στην ιστοσελίδα</string>
 
+    <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
+    <string name="add_to_homescreen_text_placeholder">Όνομα συντόμευσης</string>
+
+    <!-- Preference for managing the settings for logins and passwords in Fenix -->
+    <string name="preferences_passwords_logins_and_passwords">Συνδέσεις και κωδικοί πρόσβασης</string>
+    <!-- Preference for managing the saving of logins and passwords in Fenix -->
+    <string name="preferences_passwords_save_logins">Αποθήκευση συνδέσεων και κωδικών πρόσβασης</string>
+    <!-- Preference option for asking to save passwords in Fenix -->
+    <string name="preferences_passwords_save_logins_ask_to_save">Ερώτηση για αποθήκευση</string>
+    <!-- Preference option for never saving passwords in Fenix -->
+    <string name="preferences_passwords_save_logins_never_save">Ποτέ αποθήκευση</string>
     <!-- Preference for autofilling saved logins in Fenix -->
     <string name="preferences_passwords_autofill">Αυτόματη συμπλήρωση</string>
+    <!-- Preference for syncing saved logins in Fenix -->
+    <string name="preferences_passwords_sync_logins">Συγχρονισμός συνδέσεων</string>
     <!-- Syncing saved logins in Fenix is on -->
     <string name="preferences_passwords_sync_logins_on">Ενεργό</string>
     <!-- Syncing saved logins in Fenix is off -->
@@ -696,6 +731,10 @@
     <string name="preferences_passwords_sync_logins_reconnect">Επανασύνδεση</string>
     <!-- Syncing saved logins in Fenix needs login -->
     <string name="preferences_passwords_sync_logins_sign_in">Σύνδεση στο Sync</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins">Αποθηκευμένες συνδέσεις</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Μάθετε περισσότερα σχετικά με το Sync.</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Εξαιρέσεις</string>
     <!-- Hint for search box in logins list -->
@@ -716,8 +755,24 @@
     <string name="logins_doorhanger_save">Θέλετε το %s να αποθηκεύσει αυτή τη σύνδεση;</string>
     <!-- Positive confirmation that Fenix should save the new or updated login -->
     <string name="logins_doorhanger_save_confirmation">Αποθήκευση</string>
+    <!-- Negative confirmation that Fenix should not save the new or updated login -->
+    <string name="logins_doorhanger_save_dont_save">Χωρίς αποθήκευση</string>
+    <!-- Shown in snackbar to tell user that the password has been copied -->
+    <string name="logins_password_copied">Ο κωδικός πρόσβασης έχει αντιγραφεί στο πρόχειρο</string>
+    <!-- Shown in snackbar to tell user that the username has been copied -->
+    <string name="logins_username_copied">Το όνομα χρήστη αντιγράφτηκε στο πρόχειρο</string>
+    <!-- Shown in snackbar to tell user that the site has been copied -->
+    <string name="logins_site_copied">Η ιστοσελίδα αντιγράφτηκε στο πρόχειρο</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
+    <string name="saved_logins_copy_password">Αντιγραφή κωδικού πρόσβασης</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
+    <string name="saved_login_copy_username">Αντιγραφή ονόματος χρήστη</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">Αντιγραφή ιστοσελίδας</string>
+    <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
+    <string name="saved_login_reveal_password">Εμφάνιση κωδικού πρόσβασης</string>
+    <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
+    <string name="saved_login_hide_password">Απόκρυψη κωδικού πρόσβασης</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">Αργότερα</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -726,6 +781,9 @@
     <string name="saved_logins_sort_strategy_alphabetically">Όνομα (Α-Ω)</string>
     <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
     <string name="saved_logins_sort_strategy_last_used">Τελευταία χρήση</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Ταξινόμηση μενού σύνδεσης</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Προσθήκη μηχανής αναζήτησης</string>
@@ -745,9 +803,14 @@
     <!-- Placeholder text shown in the Search Engine Name TextField before a user enters text -->
     <string name="search_add_custom_engine_name_hint">Όνομα</string>
 
+    <!-- Text for the button to learn more about adding a custom search engine -->
+    <string name="search_add_custom_engine_learn_more_label">Μάθετε περισσότερα</string>
+
     <!-- Text shown when we aren't able to validate the custom search query. The first parameter is the url of the custom search engine -->
     <string name="search_add_custom_engine_error_cannot_reach">Σφάλμα σύνδεσης στο “%s”</string>
 
+    <!-- Title text shown for the migration screen to the new browser. Placeholder replaced with app name -->
+    <string name="migration_title">Καλώς ορίσατε στο νέο %s</string>
     <!-- Text on the disabled button while in progress. Placeholder replaced with app name -->
     <string name="migration_updating_app_button_text">Ενημέρωση του %s…</string>
     <!-- Text on the enabled button. Placeholder replaced with app name-->
