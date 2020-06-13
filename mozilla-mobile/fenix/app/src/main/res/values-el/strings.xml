@@ -22,6 +22,11 @@
     <!-- No Private Tabs Message Description -->
     <string name="no_private_tabs_description">Οι ιδιωτικές καρτέλες σας θα εμφανίζονται εδώ.</string>
 
+    <!-- Message announced to the user when tab tray is selected with 1 tab -->
+    <string name="open_tab_tray_single">1 ανοικτή καρτέλα. Πατήστε για εναλλαγή καρτελών.</string>
+    <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
+    <string name="open_tab_tray_plural">%1$s ανοικτές καρτέλες. Πατήστε για εναλλαγή καρτελών.</string>
+
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">Το %1$s αναπτύσσεται από τη Mozilla.</string>
 
@@ -208,6 +213,10 @@
     <string name="preferences_private_browsing_options">Ιδιωτική περιήγηση</string>
     <!-- Preference for opening links in a private tab-->
     <string name="preferences_open_links_in_a_private_tab">Άνοιγμα συνδέσμων σε ιδιωτική καρτέλα</string>
+    <!-- Preference for allowing screenshots to be taken while in a private tab-->
+    <string name="preferences_allow_screenshots_in_private_mode">Να επιτρέπονται στιγμιότυπα στην ιδιωτική περιήγηση</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Προσθήκη συντόμευσης ιδιωτικής περιήγησης</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Προσβασιμότητα</string>
     <!-- Preference category for account information -->
@@ -225,6 +234,8 @@
     <string name="preferences_sign_in_description">Συγχρονισμός σελιδοδεικτών, ιστορικού και άλλων δεδομένων με ένα λογαριασμό Firefox</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Λογαριασμός Firefox</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">Συνδεθείτε ξανά για συνέχεια συγχρονισμού</string>
     <!-- Preference for language -->
     <string name="preferences_language">Γλώσσα</string>
     <!-- Preference for data choices -->
@@ -269,6 +280,8 @@
     <string name="preferences_sync_bookmarks">Σελιδοδείκτες</string>
     <!-- Preference for syncing logins -->
     <string name="preferences_sync_logins">Συνδέσεις</string>
+    <!-- Preference for syncing tabs -->
+    <string name="preferences_sync_tabs_2">Ανοικτές καρτέλες</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">Αποσύνδεση</string>
     <!-- Preference displays and allows changing current FxA device name -->
@@ -394,6 +407,24 @@
     <string name="tabs_header_private_tabs_title">Ιδιωτικές καρτέλες</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Προσθήκη καρτέλας</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_private_tab">Προσθήκη ιδιωτικής καρτέλας</string>
+    <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
+    <string name="tab_drawer_fab_content">Ιδιωτική</string>
+    <!-- Text shown as the title of the open tab tray -->
+    <string name="tab_tray_title">Ανοικτές καρτέλες</string>
+    <!-- Text shown in the menu for saving tabs to a collection -->
+    <string name="tab_tray_menu_item_save">Αποθήκευση στη συλλογή</string>
+    <!-- Text shown in the menu for sharing all tabs -->
+    <string name="tab_tray_menu_item_share">Κοινή χρήση όλων των καρτελών</string>
+    <!-- Text shown in the menu for closing all tabs -->
+    <string name="tab_tray_menu_item_close">Κλείσιμο όλων των καρτελών</string>
+    <!-- Shortcut action to open new tab -->
+    <string name="tab_tray_menu_open_new_tab">Νέα καρτέλα</string>
+    <!-- Shortcut action to open the home screen -->
+    <string name="tab_tray_menu_home">Μετάβαση στην αρχική</string>
+    <!-- Shortcut action to toggle private mode -->
+    <string name="tab_tray_menu_toggle">Εναλλαγή λειτουργίας καρτελών</string>
     <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
     <string name="remove_tab_from_collection">Αφαίρεση καρτέλας από τη συλλογή</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
@@ -406,6 +437,8 @@
     <string name="tabs_menu_close_all_tabs">Κλείσιμο όλων των καρτελών</string>
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">Κοινή χρήση καρτελών</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection1">Αποθήκευση καρτελών στη συλλογή</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Μενού καρτελών</string>
     <!-- Tab menu item to share the tab -->
@@ -471,6 +504,13 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Δεν υπάρχει ιστορικό</string>
 
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">Συγγνώμη. Το %1$s δεν μπορεί να φορτώσει αυτή τη σελίδα.</string>
+    <!-- Description text displayed on the tab crash page -->
+    <string name="tab_crash_description">Μπορείτε να προσπαθήσετε να επαναφέρετε ή να κλείσετε αυτή την καρτέλα παρακάτω.</string>
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">Αποστολή αναφοράς κατάρρευσης στη Mozilla</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Κλείσιμο καρτέλας</string>
 
@@ -479,6 +519,9 @@
 
     <!-- Content Description for session item menu button -->
     <string name="content_description_session_menu">Επιλογές συνεδρίας</string>
+
+    <!-- Content Description for session item share button -->
+    <string name="content_description_session_share">Κοινή χρήση συνεδρίας</string>
 
     <!-- Bookmarks -->
     <!-- Content description for bookmarks library menu -->
@@ -515,10 +558,15 @@
     <string name="bookmark_menu_delete_button">Διαγραφή</string>
     <!--Bookmark overflow menu save button -->
     <string name="bookmark_menu_save_button">Αποθήκευση</string>
+    <!-- Bookmark multi select title in app bar
+     The first parameter is the number of bookmarks selected -->
+    <string name="bookmarks_multi_select_title">Επιλέχθηκαν %1$d</string>
     <!-- Bookmark editing screen title -->
     <string name="edit_bookmark_fragment_title">Επεξεργασία σελιδοδείκτη</string>
     <!-- Bookmark folder editing screen title -->
     <string name="edit_bookmark_folder_fragment_title">Επεξεργασία φακέλου</string>
+    <!-- Bookmark sign in button message -->
+    <string name="bookmark_sign_in_button">Συνδεθείτε για προβολή συγχρονισμένων σελιδοδεικτών</string>
     <!-- Bookmark URL editing field label -->
     <string name="bookmark_url_label">URL</string>
     <!-- Bookmark FOLDER editing field label -->
@@ -533,14 +581,34 @@
     <string name="bookmark_empty_title_error">Πρέπει να έχει τίτλο</string>
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">Άκυρο URL</string>
+    <!-- Bookmark screen message for empty bookmarks folder -->
+    <string name="bookmarks_empty_message">Κανένας σελιδοδείκτης εδώ</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks -->
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Οι σελιδοδείκτες διαγράφηκαν</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">ΑΝΑΙΡΕΣΗ</string>
 
     <!-- Site Permissions -->
     <!-- Site permissions preferences header -->
     <string name="permissions_header">Δικαιώματα</string>
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Μεταβείτε στις ρυθμίσεις</string>
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">Σελίδα γρήγορων ρυθμίσεων</string>
     <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">Προτείνεται</string>
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">Διαχείριση δικαιωμάτων ιστοσελίδας</string>
+    <!-- Button label for clearing all the information of site permissions-->
+    <string name="clear_permissions">Απαλοιφή δικαιωμάτων</string>
+    <!-- Button label for clearing a site permission-->
+    <string name="clear_permission">Απαλοιφή δικαιώματος</string>
+    <!-- Button label for clearing all the information on all sites-->
+    <string name="clear_permissions_on_all_sites">Απαλοιφή δικαιωμάτων σε όλες τις ιστοσελίδες</string>
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">Αυτόματη αναπαραγωγή</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">Κάμερα</string>
     <!-- Preference for altering the microphone access for all websites -->
@@ -549,6 +617,14 @@
     <string name="preference_phone_feature_location">Τοποθεσία</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">Ειδοποίηση</string>
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Ερώτηση για αποδοχή</string>
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Αποκλεισμένο</string>
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Επιτρέπεται</string>
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Αποκλείστηκε από Android</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Εξαιρέσεις</string>
     <!-- Summary of tracking protection preference if tracking protection is set to on -->
@@ -563,30 +639,97 @@
     <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">Συλλογές</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Επιλογή συλλογής</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Ονομασία συλλογής</string>
     <!-- Button to add new collection for the "select collection" step of the collection creator -->
     <string name="create_collection_add_new_collection">Προσθήκη νέας συλλογής</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_select_all">Επιλογή όλων</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Από-επιλογή όλων</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">Επιλέξτε καρτέλες για αποθήκευση</string>
     <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
     <string name="create_collection_close">Κλείσιμο</string>
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
     <string name="create_collection_save">Αποθήκευση</string>
 
+    <!-- Snackbar action to view the collection the user just created or updated -->
+    <string name="create_collection_view">Προβολή</string>
+
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">Συλλογή %d</string>
+
+    <!-- Share -->
+    <!-- Share screen header -->
+    <string name="share_header">Αποστολή και κοινή χρήση</string>
     <!-- Share screen header -->
     <string name="share_header_2">Κοινή χρήση</string>
     <!-- Content description (not visible, for screen readers etc.):
         "Share" button. Opens the share menu when pressed. -->
     <string name="share_button_content_description">Κοινή χρήση</string>
+    <!-- Sub-header in the dialog to share a link to another app -->
+    <string name="share_link_subheader">Κοινή χρήση συνδέσμου</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Αποστολή σε συσκευή</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">Όλες οι ενέργειες</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">Πρόσφατη χρήση</string>
+    <!-- An option from the share dialog to sign into sync -->
+    <string name="sync_sign_in">Σύνδεση στο Sync</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">Αποστολή σε όλες τις συσκευές</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">Εκ νέου σύνδεση στο Sync</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
+    <string name="sync_offline">Εκτός σύνδεσης</string>
+    <!-- An option to connect additional devices -->
+    <string name="sync_connect_device">Σύνδεση άλλης συσκευής</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">Το κατάλαβα</string>
     <!-- Add new device screen title -->
     <string name="sync_add_new_device_title">Αποστολή σε συσκευή</string>
 
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">Καμία συνδεδεμένη συσκευή</string>
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">Μάθετε για την αποστολή καρτελών…</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">Σύνδεση άλλης συσκευής…</string>
+
+    <!-- Notifications -->
+    <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
+    <string name="notification_pbm_channel_name">Συνεδρία ιδιωτικής περιήγησης</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">Διαγραφή ιδιωτικών καρτελών</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text_2">Κλείσιμο ιδιωτικών καρτελών</string>
     <!-- Notification action to open Fenix and resume the current browsing session. -->
     <string name="notification_pbm_action_open">Άνοιγμα</string>
     <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
     <string name="notification_pbm_action_delete_and_open">Διαγραφή και άνοιγμα</string>
 
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">Η συλλογή διαγράφηκε</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">Η συλλογή μετονομάστηκε</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">Η καρτέλα διαγράφηκε</string>
+    <!-- Text shown in snackbar when user deletes all tabs -->
+    <string name="snackbar_tabs_deleted">Οι καρτέλες διαγράφηκαν</string>
+    <!-- Text shown in snackbar when user closes a tab -->
+    <string name="snackbar_tab_closed">Η καρτέλα έκλεισε</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
+    <string name="snackbar_tabs_closed">Οι καρτέλες έκλεισαν</string>
+    <!-- Text shown in snackbar when user closes a private tab -->
+    <string name="snackbar_private_tab_closed">Η ιδιωτική καρτέλα έκλεισε</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
+    <string name="snackbar_private_tabs_closed">Οι ιδιωτικές καρτέλες έκλεισαν</string>
+    <!-- Text shown in snackbar when user deletes all private tabs -->
+    <string name="snackbar_private_tabs_deleted">Οι ιδιωτικές καρτέλες διαγράφηκαν</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">ΑΝΑΙΡΕΣΗ</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
