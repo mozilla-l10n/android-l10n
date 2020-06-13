@@ -14,13 +14,16 @@
     <string name="content_description_disable_private_browsing_button">Tắt duyệt web riêng tư</string>
     <!-- Placeholder text shown in the search bar before a user enters text -->
     <string name="search_hint">Tìm kiếm hoặc nhập địa chỉ</string>
-    <!-- No Open Tabs Message Header -->
-    <string name="no_open_tabs_header_2">Không có thẻ đang mở</string>
     <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">Các thẻ đang mở của bạn sẽ được hiển thị ở đây.</string>
 
     <!-- No Private Tabs Message Description -->
     <string name="no_private_tabs_description">Các thẻ riêng tư của bạn sẽ được hiển thị ở đây.</string>
+
+    <!-- Message announced to the user when tab tray is selected with 1 tab -->
+    <string name="open_tab_tray_single">1 thẻ đang mở. Chạm để chuyển thẻ.</string>
+    <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
+    <string name="open_tab_tray_plural">%1$s thẻ đang mở. Chạm để chuyển thẻ.</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">%1$s được sản xuất bởi Mozilla.</string>
@@ -293,7 +296,7 @@
     <!-- Preference for syncing logins -->
     <string name="preferences_sync_logins">Đăng nhập</string>
     <!-- Preference for syncing tabs -->
-    <string name="preferences_sync_tabs">Thẻ</string>
+    <string name="preferences_sync_tabs_2">Các thẻ đang mở</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">Đăng xuất</string>
     <!-- Preference displays and allows changing current FxA device name -->
@@ -479,7 +482,7 @@
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">Chia sẻ các thẻ</string>
     <!-- Open tabs menu item to save tabs to collection -->
-    <string name="tabs_menu_save_to_collection">Lưu vào bộ sưu tập</string>
+    <string name="tabs_menu_save_to_collection1">Lưu các thẻ vào bộ sưu tập</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Menu thẻ</string>
     <!-- Tab menu item to share the tab -->
@@ -691,16 +694,14 @@
     <string name="delete_browsing_data_quit_off">Tắt</string>
 
     <!-- Collections -->
-    <!-- Label to describe what collections are to a new user without any collections -->
-    <string name="collections_description">Thu thập những thứ quan trọng với bạn. Để bắt đầu, lưu các thẻ đang mở vào một bộ sưu tập mới.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">Bộ sưu tập</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">Menu bộ sưu tập</string>
     <!-- No Open Tabs Message Header -->
-    <string name="no_collections_header">Không có bộ sưu tập</string>
-    <!-- No Open Tabs Message Description -->
-    <string name="no_collections_description">Bộ sưu tập của bạn sẽ được hiển thị ở đây.</string>
+    <string name="no_collections_header1">Thu thập những thứ quan trọng với bạn</string>
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description1">Nhóm các tìm kiếm, trang web và thẻ tương tự để truy cập nhanh sau này.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">Chọn các thẻ</string>
     <!-- Title for the "select collection" step of the collection creator -->
@@ -905,8 +906,9 @@
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description">Firefox Nightly được cập nhật mỗi đêm và có các tính năng mới thử nghiệm.
         Tuy nhiên, nó có thể kém ổn định hơn. Tải xuống trình duyệt beta của chúng tôi để có trải nghiệm ổn định hơn.</string>
-    <!-- text for firefox preview moving tip button. "Mozilla Firefox Browser" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_button">Tải trình duyệt Mozilla Firefox</string>
+
+    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_button_2">Tải Firefox Beta dành cho Android</string>
 
     <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_header_preview_installed">Firefox Nightly đã di chuyển</string>
@@ -1408,6 +1410,9 @@
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
     <string name="voice_search_explainer">Nói bây giờ</string>
 
+    <!--  The error message in edit login view when a duplicate username exists. -->
+    <string name="saved_login_duplicate">Một thông tin đăng nhập với tên người dùng đó đã tồn tại</string>
+
     <!-- Synced Tabs -->
     <!-- Text displayed when user is not logged into a Firefox Account -->
     <string name="synced_tabs_connect_to_sync_account">Kết nối với tài khoản Firefox.</string>
@@ -1417,5 +1422,14 @@
     <string name="synced_tabs_reauth">Vui lòng xác thực lại.</string>
     <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Vui lòng kích hoạt đồng bộ hóa thẻ.</string>
+    <!-- Text displayed when user has no tabs that have been synced -->
+    <string name="synced_tabs_no_tabs">Bạn không có bất kỳ thẻ nào mở trong Firefox trên các thiết bị khác của bạn.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_sign_in_message">Xem danh sách các thẻ từ các thiết bị khác của bạn.</string>
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <string name="synced_tabs_sign_in_button">Đăng nhập vào đồng bộ hóa</string>
 
-</resources>
+    <!-- Top Sites -->
+    <!-- Title text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_title">Đã đạt đến giới hạn trang web hàng đầu</string>
+    </resources>
