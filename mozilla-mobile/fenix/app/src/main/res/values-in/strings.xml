@@ -15,13 +15,14 @@
     <!-- Placeholder text shown in the search bar before a user enters text -->
     <string name="search_hint">Cari atau masukkan alamat</string>
 
-    <!-- No Open Tabs Message Header -->
-    <string name="no_open_tabs_header_2">Tidak ada tab terbuka</string>
     <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">Tab terbuka Anda akan ditampilkan di sini.</string>
 
     <!-- No Private Tabs Message Description -->
     <string name="no_private_tabs_description">Tab privat Anda akan muncul di sini.</string>
+
+    <!-- Message announced to the user when tab tray is selected with 1 tab -->
+    <string name="open_tab_tray_single">1 tab terbuka. Ketuk untuk beralih tab.</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">%1$s diproduksi oleh Mozilla.</string>
@@ -106,8 +107,6 @@
     <string name="browser_menu_new_tab">Tab baru</string>
     <!-- Browser menu button that saves the current tab to a collection -->
     <string name="browser_menu_save_to_collection_2">Simpan ke koleksi</string>
-    <!-- Browser menu button that opens a dialog to report issues with the current site -->
-    <string name="browser_menu_report_issue">Laporkan masalah situs</string>
     <!-- Browser menu button that open a share menu to share the current site -->
     <string name="browser_menu_share">Bagikan</string>
     <!-- Share menu title, displayed when a user is sharing their current site -->
@@ -124,7 +123,7 @@
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_powered_by2">Diberdayakan oleh %1$s</string>
 
-    <!-- Browser menu button to put the the current page in reader mode -->
+    <!-- Browser menu button to put the current page in reader mode -->
     <string name="browser_menu_read">Tampilan baca</string>
     <!-- Browser menu button to open the current page in an external app -->
     <string name="browser_menu_open_app_link">Buka di Aplikasi</string>
@@ -300,8 +299,6 @@
     <string name="preferences_sync_bookmarks">Markah</string>
     <!-- Preference for syncing logins -->
     <string name="preferences_sync_logins">Log Masuk</string>
-    <!-- Preference for syncing tabs -->
-    <string name="preferences_sync_tabs">Tab</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">Keluar</string>
     <!-- Preference displays and allows changing current FxA device name -->
@@ -473,8 +470,6 @@
     <string name="tabs_menu_close_all_tabs">Tutup semua tab</string>
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">Bagikan tab</string>
-    <!-- Open tabs menu item to save tabs to collection -->
-    <string name="tabs_menu_save_to_collection">Simpan ke koleksi</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Menu tab</string>
     <!-- Tab menu item to share the tab -->
@@ -690,16 +685,10 @@
     <string name="delete_browsing_data_quit_off">Nonaktif</string>
 
     <!-- Collections -->
-    <!-- Label to describe what collections are to a new user without any collections -->
-    <string name="collections_description">Kumpulkan hal-hal yang penting bagi Anda. Untuk memulai, simpan tab terbuka ke koleksi baru.</string>
     <!-- Collections header on home fragment -->
     <string name="collections_header">Koleksi</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">Menu koleksi</string>
-    <!-- No Open Tabs Message Header -->
-    <string name="no_collections_header">Tidak ada koleksi</string>
-    <!-- No Open Tabs Message Description -->
-    <string name="no_collections_description">Koleksi Anda akan muncul di sini.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">Pilih Tab</string>
     <!-- Title for the "select collection" step of the collection creator -->
@@ -907,8 +896,6 @@
     <!-- text for firefox preview moving tip description -->
     <string name="tip_firefox_preview_moved_description">Firefox Nightly mendapatkan pemutakhiran setiap malam dan memiliki fitur eksperimental baru.
         Namun, fitur ini mungkin kurang stabil. Unduh peramban beta kami untuk pengalaman yang lebih stabil.</string>
-    <!-- text for firefox preview moving tip button. "Mozilla Firefox Browser" is intentionally hardcoded -->
-    <string name="tip_firefox_preview_moved_button">Dapatkan Peramban Mozilla Firefox</string>
 
     <!-- text for firefox preview moving tip header. "Firefox Nightly" is intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_header_preview_installed">Firefox Nightly telah pindah</string>
@@ -963,21 +950,10 @@
     <string name="onboarding_firefox_account_sync_is_on">Sinkronisasi aktif</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">Gagal masuk</string>
-    <!-- text for the tracking protection onboarding card header -->
-    <string name="onboarding_tracking_protection_header">Lindungi diri Anda</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description1">%s membantu menghentikan laman web untuk melacak Anda secara daring.</string>
-    <!-- text for tracking protection radio button option for standard level of blocking -->
-    <string name="onboarding_tracking_protection_standard_button">Standar</string>
-    <!-- text for standard blocking option button description -->
-    <string name="onboarding_tracking_protection_standard_button_description">Memblokir lebih sedikit pelacak tetapi memungkinkan laman untuk dimuat secara normal</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_button">Ketat (disarankan)</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">Ketat</string>
-    <!-- text for strict blocking option button description -->
-    <string name="onboarding_tracking_protection_strict_button_description">Memblokir lebih banyak pelacak untuk perlindungan dan kinerja yang lebih baik, tetapi mungkin dapat menyebabkan beberapa situs tidak berfungsi dengan semestinya</string>
     <!-- text for the toolbar position card header
         In English this is an idiom for "choose a side as in an argument or fight"
         but it is ok to make this more literally about "choosing a position in a physical space -->
@@ -1062,32 +1038,14 @@
     <string name="preference_enhanced_tracking_protection_explanation">Simpan data Anda untuk diri sendiri. %s melindungi Anda dari banyak pelacak umum yang mengikuti apa yang Anda lakukan daring.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Pelajari lebih lanjut</string>
-    <!-- Preference for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_option">Standar</string>
-    <!-- Preference for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard">Standar (disarankan)</string>
-    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_description">Seimbang untuk perlindungan dan kinerja.</string>
-    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_description_2">Halaman akan dimuat secara normal, tetapi memblokir lebih sedikit pelacak.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Apa yang diblokir oleh perlindungan pelacakan standar</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Ketat</string>
-    <!-- Preference for enhanced tracking protection for the strict protection settings, default setting -->
-    <string name="preference_enhanced_tracking_protection_strict_default">Ketat (Baku)</string>
-    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_default_description">Perlindungan pelacakan yang lebih kuat dan kinerja yang lebih cepat, tetapi beberapa situs mungkin tidak berfungsi dengan baik.</string>
-    <!-- Preference for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_recommended">Ketat (disarankan)</string>
-    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_description">Perlindungan yang lebih kuat, tetapi dapat menyebabkan beberapa situs atau konten rusak.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Apa yang diblokir oleh perlindungan pelacakan ketat</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">Ubahsuai</string>
-    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_custom_description">Pilih pelacak dan skrip yang akan diblokir</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_custom_info_button">Apa yang diblokir oleh perlindungan pelacakan ubahsuai</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
@@ -1136,8 +1094,6 @@
     <string name="etp_tracking_content_title">Pelacakan Konten</string>
     <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_description">Menghentikan iklan, video, dan konten lain dari luar yang memuat kode pelacakan. Dapat memengaruhi beberapa fungsionalitas situs web.</string>
-    <!-- Enhanced Tracking Protection Onboarding Message shown in a dialog above the toolbar. The first parameter is the name of the application (For example: Fenix) -->
-    <string name="etp_onboarding_message_2">%s memblokir pelacak di situs ini ketika perisai berwarna ungu. Ketuk untuk melihat apa yang diblokir.</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">Perlindungan DIAKTIFKAN untuk situs ini</string>
     <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
@@ -1431,4 +1387,4 @@
     <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Harap aktifkan sinkronisasi tab.</string>
 
-</resources>
+    </resources>
