@@ -238,9 +238,34 @@
     <string name="preferences_data_collection">Kolekcije podataka</string>
     <!-- Preference linking to the privacy notice -->
     <string name="preferences_privacy_link">Pravila privatnosti</string>
+    <!-- Preference category for developer tools -->
+    <string name="developer_tools_category">Razvojni alati</string>
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">Udaljeno debagiranje preko USB-a</string>
+    <!-- Preference title for switch preference to show search shortcuts -->
+    <string name="preferences_show_search_shortcuts">Prikaži prečice za pretraživanje</string>
+    <!-- Preference title for switch preference to show search suggestions -->
+    <string name="preferences_show_search_suggestions">Prikaži prijedloge za pretraživanje</string>
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Prikaži glasovno pretraživanje</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">Prikaži u privatnim sesijama</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Prikaži clipboard prijedloge</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Pretraži historiju surfanja</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">Pretraži zabilješke</string>
+    <!-- Preference for account settings -->
+    <string name="preferences_account_settings">Postavke računa</string>
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">Otvori linkove u aplikacijama</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">Add-oni</string>
 
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
+    <string name="preferences_sync_now">Sinhr. odmah</string>
     <!-- Preference category for sync -->
     <string name="preferences_sync_category">Izaberite šta ćete sinhronizovati</string>
     <!-- Preference for syncing history -->
@@ -276,6 +301,12 @@
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Primljeni tabovi</string>
+    <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_description">Obavještenja za tabove primljene od drugih Firefox uređaja.</string>
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">Tab primljen</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">Tabovi primljeni</string>
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Tab iz %s</string>
 
@@ -298,14 +329,23 @@
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Saznajte više</string>
 
+    <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
+    <string name="preferences_tracking_protection_turned_off_globally">Globalno isključeno, možete uključiti u Postavkama.</string>
+
     <!-- Preference switch for Telemetry -->
     <string name="preferences_telemetry">Telemetrija</string>
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Tehnički i podaci o upotrebi</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">Šalje podatke Mozilli o performansama, upotrebi, hardveru i prilagođenjima vašeg browsera kako bi nam pomogli da poboljšamo %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketinški podaci</string>
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <string name="preferences_marketing_data_description">Šalje podatke Leanplumu, našem mobile marketing vendoru, o opcijama koje koristite u %1$s</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Eksperimenti</string>
+    <!-- Summary for experiments preferences -->
+    <string name="preference_experiments_summary">Dozvoljava Mozilli da instalira i prikuplja podatke o eksperimentalnim opcijama</string>
     <!-- Preference switch for Mozilla location service -->
     <string name="preferences_mozilla_location_service">Mozilla lokacijski servis</string>
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
@@ -363,6 +403,10 @@
     <!-- Option in Library to open History page -->
     <string name="library_history">Historija</string>
 
+    <!-- Option in Library to open Synced Tabs page -->
+    <string name="library_synced_tabs">Sinhronizovani tabovi</string>
+    <!-- Option in Library to open Reading List -->
+    <string name="library_reading_list">Lista za čitanje</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">Traži</string>
     <!-- Settings Page Title -->
@@ -760,10 +804,33 @@
     <!-- Title for the Delete browsing data on quit preference -->
     <string name="preferences_delete_browsing_data_on_quit">Obriši podatke surfanja pri izlazu</string>
 
+    <!-- Category for history items to delete on quit in delete browsing data on quit -->
+    <string name="preferences_delete_browsing_data_on_quit_browsing_history">Historija surfanja</string>
+    <!-- Action item in menu for the Delete browsing data on quit feature -->
+    <string name="delete_browsing_data_on_quit_action">Ugasi</string>
+
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">Ovo će obrisati sve vaše podatke surfanja.</string>
+    <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
+    <string name="delete_browsing_data_prompt_message_3">%s će obrisati izabrane podatke surfanja.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">Otkaži</string>
     <!-- Text for the allow button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_allow">Obriši</string>
+
+    <!-- Text for the snackbar confirmation that the data was deleted -->
+    <string name="preferences_delete_browsing_data_snackbar">Podaci surfanja izbrisani</string>
+    <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
+    <string name="deleting_browsing_data_in_progress">Brišem podatke surfanja…</string>
+
+    <!-- Tips -->
+    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header">Firefox Preview je sada Firefox Nightly</string>
+    <!-- text for firefox preview moving tip description -->
+    <string name="tip_firefox_preview_moved_description">Firefox Nightly se ažurira svake noći i sadrži eksperimentalne opcije.
+        Međutim, može biti manje stabilan. Za više stabilnosti, preuzmite naš beta browser.</string>
+    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_button_2">Preuzmi Firefox za Android Beta</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
@@ -784,6 +851,25 @@
     <string name="onboarding_firefox_account_sign_in">Prijava u Firefox</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Ostanite odjavljeni</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header_2">Automatska privatnost</string>
+    <!-- text for the private browsing onboarding card header -->
+    <string name="onboarding_private_browsing_header">Surfajte privatno</string>
+    <!-- text for the private browsing onboarding card description
+    The first parameter is an icon that represents private browsing -->
+    <string name="onboarding_private_browsing_description1">Otvorite privatni tab jednom: dodirnite %s ikonicu.</string>
+    <!-- text for the private browsing onboarding card description, explaining how to always using private browsing -->
+    <string name="onboarding_private_browsing_always_description">Otvorite privatni tab svaki put: ažurirajte postavke privatnog surfanja.</string>
+    <!-- text for the private browsing onbording card button, that launches settings -->
+    <string name="onboarding_private_browsing_button">Otvori postavke</string>
+    <!-- text for the privacy notice onboarding card header -->
+    <string name="onboarding_privacy_notice_header">Vaša privatnost</string>
+    <!-- text for the privacy notice onboarding card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_privacy_notice_description">%s smo dizajnirali da vam pruži kontrolu nad onim što dijelite
+        online i što dijelite s nama.</string>
+    <!-- Text for the button to read the privacy notice -->
+    <string name="onboarding_privacy_notice_read_button">Pročitajte naša pravila privatnosti</string>
     <!-- Content description (not visible, for screen readers etc.): Close onboarding screen -->
     <string name="onboarding_close">Zatvori</string>
 
@@ -793,6 +879,8 @@
     <!-- Onboarding theme -->
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Izaberite vašu temu</string>
+    <!-- text for the theme picker onboarding card description -->
+    <string name="onboarding_theme_picker_description1">Štedite bateriju i vid omogućavanjem tamnog režima.</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Automatski</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -817,6 +905,14 @@
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Spreman za skeniranje</string>
 
+    <!-- Text shown for settings option for sign with pairing -->
+    <string name="sign_in_with_camera">Prijavite se pomoću kamere</string>
+    <!-- Text shown for settings option for sign with email -->
+    <string name="sign_in_with_email">Radije koristi email</string>
+    <!-- Text shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_confirmation_message">Firefox će zaustaviti sinhronizaciju s vašim računom, ali neće obrisati ništa od vaših podataka surfanja na ovom uređaju.</string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="sign_out_confirmation_message_2">%s će zaustaviti sinhronizaciju s vašim računom, ali neće obrisati ništa od vaših podataka surfanja na ovom uređaju.</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Otkaži</string>
 
