@@ -122,6 +122,10 @@
     <!-- Browser menu button to configure reader mode appearance e.g. the used font type and size -->
     <string name="browser_menu_read_appearance">Външен вид</string>
 
+    <!-- Error message to show when the user tries to access a scheme not
+        handled by the app (Ex: blob, tel etc) -->
+    <string name="unknown_scheme_error_message">Грешка при свързване. Неразпознат протокол.</string>
+
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
     <string name="a11y_selected_locale_content_description">Избран език</string>
@@ -162,13 +166,37 @@
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">Търсене</string>
 
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">Търсене в интернет</string>
+    <!-- Content description (not visible, for screen readers etc.): Voice search -->
+    <string name="search_widget_voice">Гласово търсене</string>
+
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">Настройки</string>
+    <!-- Preference category for basic settings -->
+    <string name="preferences_category_basics">Основни</string>
     <!-- Preference category for general settings -->
     <string name="preferences_category_general">Общи</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">Относно</string>
+    <!-- Preference for settings related to changing the default search engine -->
+    <string name="preferences_default_search_engine">Стандартна търсеща машина</string>
+    <!-- Preference for settings related to Search -->
+    <string name="preferences_search">Търсене</string>
+    <!-- Preference for settings related to Search address bar -->
+    <string name="preferences_search_address_bar">Адресна лента</string>
+    <!-- Preference linking to help about Fenix -->
+    <string name="preferences_help">Помощ</string>
+    <!-- Preference link to rating Fenix on the Play Store -->
+    <string name="preferences_rate">Оценете в Google Play</string>
+    <!-- Preference for giving feedback about Fenix -->
+    <string name="preferences_feedback">Дайте обратна връзка</string>
+    <!-- Preference linking to about page for Fenix
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="preferences_about">Относно %1$s</string>
+    <!-- Preference linking to the your rights SUMO page -->
+    <string name="preferences_your_rights">Вашите права</string>
     <!-- Preference for settings related to saved passwords -->
     <string name="preferences_passwords">Пароли</string>
     <!-- Preference for settings related to saved credit cards and addresses -->
@@ -183,6 +211,104 @@
     <!-- Preference category for privacy and security settings -->
     <string name="preferences_category_privacy_security">Поверителност и сигурност</string>
 
+    <!-- Preference for advanced site permissions -->
+    <string name="preferences_site_permissions">Права на страницата</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Поверително разглеждане</string>
+    <!-- Preference for opening links in a private tab-->
+    <string name="preferences_open_links_in_a_private_tab">Отваряне препратките в поверителен раздел</string>
+    <!-- Preference for accessibility -->
+    <string name="preferences_accessibility">Достъпност</string>
+    <!-- Preference category for account information -->
+    <string name="preferences_category_account">Сметка</string>
+    <!-- Preference shown on banner to sign into account -->
+    <string name="preferences_sign_in">Вход</string>
+    <!-- Preference for changing where the toolbar is positioned -->
+    <string name="preferences_toolbar">Лента с инструменти</string>
+    <!-- Preference for changing default theme to dark or light mode -->
+    <string name="preferences_theme">Тема</string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize">Персонализиране</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">Синхронизирайте отметки, пароли и други с вашия Firefox Account</string>
+    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
+    <string name="preferences_account_default_name">Firefox Account</string>
+    <!-- Preference for language -->
+    <string name="preferences_language">Език</string>
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices">Избор на данни</string>
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">Събирани данни</string>
+    <!-- Preference linking to the privacy notice -->
+    <string name="preferences_privacy_link">Политика за личните данни</string>
+    <!-- Preference category for developer tools -->
+    <string name="developer_tools_category">Развойни инструменти</string>
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">Отдалечено отстраняване на дефекти през USB</string>
+    <!-- Preference title for switch preference to show search shortcuts -->
+    <string name="preferences_show_search_shortcuts">Преки пътища за търсене</string>
+    <!-- Preference title for switch preference to show search suggestions -->
+    <string name="preferences_show_search_suggestions">Показване на предложения</string>
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Показване на гласово търсене</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Показване на предложения от буфера</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Търсене на историята на разглеждане</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">Търсене в отметките</string>
+    <!-- Preference for account settings -->
+    <string name="preferences_account_settings">Настройки на сметката</string>
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">Отваряне на препратки в приложения</string>
+    <!-- Preference for add_ons -->
+    <string name="preferences_addons">Добавки</string>
+
+    <!-- Account Preferences -->
+    <!-- Preference for triggering sync -->
+    <string name="preferences_sync_now">Синхронизиране</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">Изберете какво да бъде синхронизирано</string>
+    <!-- Preference for syncing history -->
+    <string name="preferences_sync_history">История</string>
+    <!-- Preference for syncing bookmarks -->
+    <string name="preferences_sync_bookmarks">Отметки</string>
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">Регистрации</string>
+    <!-- Preference for syncing tabs -->
+    <string name="preferences_sync_tabs_2">Отворени раздели</string>
+    <!-- Preference for signing out -->
+    <string name="preferences_sign_out">Изход</string>
+    <!-- Preference displays and allows changing current FxA device name -->
+    <string name="preferences_sync_device_name">Име на устройството</string>
+    <!-- Text shown when user enters empty device name -->
+    <string name="empty_device_name_error">Името не може да е празно.</string>
+    <!-- Label indicating that sync is in progress -->
+    <string name="sync_syncing_in_progress">Синхронизиране…</string>
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name_2">%1$s на %2$s %3$s</string>
+
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">Получени раздели</string>
+    <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_description">Известия за раздели, получени от други устройства на Firefox.</string>
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">Получен раздел</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">Получени раздели</string>
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">Раздел от %s</string>
+
+    <!-- Advanced Preferences -->
+    <!-- Preference for tracking protection settings -->
+    <string name="preferences_tracking_protection_settings">Защита от проследяване</string>
+    <!-- Preference switch for tracking protection -->
+    <string name="preferences_tracking_protection">Защита от проследяване</string>
+    <!-- Preference for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions">Изключения</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Научете повече</string>
 
