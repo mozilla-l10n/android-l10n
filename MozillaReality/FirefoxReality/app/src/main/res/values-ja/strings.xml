@@ -930,7 +930,7 @@
     <string name="history_clear">履歴を消去</string>
 
     <!-- This string is displayed as the title of the downloads list, which contains the user's downloaded files. -->
-    <string name="downloads_title">ダウンロード一覧</string>
+    <string name="downloads_title">ダウンロードリスト</string>
 
     <!-- This string is displayed as the title of the downloads list when the downloads is empty. -->
     <string name="downloads_empty">ダウンロードリストが空です</string>
@@ -1046,6 +1046,10 @@
     <!-- This string is used to label radio buttons for setting ETP in. -->
     <string name="privacy_options_tracking">強化型トラッキング防止。 (&lt;a href=&quot;%1$s&quot;&gt;詳細情報&lt;/a&gt;)</string>
 
+    <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
+         Tracking protection exceptions. -->
+    <string name="privacy_options_tracking_exceptions_v1">詳細設定</string>
+
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">コントローラーの設定をリセット</string>
 
@@ -1150,6 +1154,11 @@
          'Resize' refers to the button used to resize the browset window. -->
     <string name="resize_tooltip">サイズ変更します</string>
 
+    <!-- This string appears in the WebXR interstial next to an arrow pointing to the controller button that
+     has to be used to exit from WebXR. It's preferred to separate it in two lines if possible.
+     \n is used to create a new line  -->
+    <string name="webxr_interstitial_exit_webxr">WebXR\nを終了</string>
+
     <!-- This string is for the tooltip that appears upon hovering the 'Tracking' button in the
      browser's navigation bar. The button it labels, when pressed, Shows the Tracking dialog. -->
     <string name="tracking_allowed_tooltip">トラッキング防止は有効です</string>
@@ -1171,6 +1180,33 @@
 
     <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the target url in a new tab. -->
     <string name="context_menu_open_new_tab_1">新しいタブで開く</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the target url in a new window. -->
+    <string name="context_menu_open_link_new_window_1">リンクを新しいウィンドウで開く</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the target url in a new tab. -->
+    <string name="context_menu_open_link_new_tab_1">リンクを新しいタブで開く</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the image in the current window. -->
+    <string name="context_menu_view_image">画像だけを表示</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the video in the current window. -->
+    <string name="context_menu_view_video">動画だけを表示</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the audio in the current window. -->
+    <string name="context_menu_view_audio">音声だけを表示</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it triggers a linked element download. -->
+    <string name="context_menu_download_link">リンク先をダウンロード</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it triggers the video element download. -->
+    <string name="context_menu_download_video">動画をダウンロード</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it triggers the audio element download. -->
+    <string name="context_menu_download_audio">音声をダウンロード</string>
+
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it triggers the image element download. -->
+    <string name="context_menu_download_image">画像をダウンロード</string>
 
     <!-- This string is shown in the context menu after a longpress on a link. When clicked it copies the target to the clipboard -->
     <string name="context_menu_copy_link">リンクをコピー</string>
@@ -1229,6 +1265,14 @@
     <!-- This string is for the tooltip that appears when the user hovers over the 'History' icon in the
          tray and the History view is closed. The button it labels, when pressed, closes the History view. -->
     <string name="close_history_tooltip">履歴を閉じます</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Downloads' icon in the
+         tray and the Downloads view is closed. The button it labels, when pressed, opens a list view of the user's downloads. -->
+    <string name="open_downloads_tooltip">ダウンロードリストを開きます</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Downloads' icon in the
+         tray and the Downloads view is closed. The button it labels, when pressed, closes the Downloads view. -->
+    <string name="close_downloads_tooltip">ダウンロードリストを閉じます</string>
 
     <!-- This string is displayed in any button used for removing all the items in the current context. -->
     <string name="remove_all">すべて削除</string>
@@ -1475,4 +1519,26 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed in the disable button of the quick Tracking Protection dialog, accessed from the Tracking Protection icon in the URL bar. -->
     <string name="tracking_dialog_button_disable">無効化</string>
 
-    </resources>
+    <!-- This string is displayed in the body of the download error dialog.
+         '%1$s' will be replaced at runtime with the name of the downloaded file. -->
+    <string name="download_error_body">%1$s のダウンロード中にエラーが発生しました。もう一度試してください。</string>
+
+    <!-- This string is displayed in the button to dismiss the download error dialog. -->
+    <string name="download_error_ok">OK</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when the download has failed. -->
+    <string name="download_status_failed">失敗しました</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when the download is paused. -->
+    <string name="download_status_paused">一時停止中</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when the download is pending. -->
+    <string name="download_status_pending">保留中</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when the resource is no longer available. -->
+    <string name="download_status_unavailable">利用できません</string>
+
+    <!-- This string is displayed in the downloads panel, in the download status when an unknown error happened. -->
+    <string name="download_status_unknown_error">原因不明のエラーです</string>
+
+</resources>
