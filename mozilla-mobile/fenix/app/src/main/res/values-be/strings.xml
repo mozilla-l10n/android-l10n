@@ -245,6 +245,19 @@
     <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">Назва прылады</string>
 
+    <!-- Text shown when user enters empty device name -->
+    <string name="empty_device_name_error">Назва прылады не можа быць пустой.</string>
+    <!-- Label indicating that sync is in progress -->
+    <string name="sync_syncing_in_progress">Сінхранізацыя…</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">Апошняя сінхранізацыя: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">Апошняя сінхранізацыя: ніколі</string>
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name_2">%1$s на %2$s %3$s</string>
+
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Атрыманыя карткі</string>
@@ -262,25 +275,61 @@
     <string name="preferences_tracking_protection">Ахова ад сачэння</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Выключэнні</string>
+    <!-- Preference description for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions_description">Ахова ад сачэння выключана на гэтых сайтах</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Даведацца больш</string>
 
     <!-- Preference switch for Telemetry -->
     <string name="preferences_telemetry">Тэлеметрыя</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">Дзяліцца звесткамі пра прадукцыйнасць, выкарыстанне, апаратнае забеспячэнне і налады вашага браўзера з Mozilla, каб дапамагчы ўдасканаліць %1$s</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">Доследы</string>
 
+    <!-- Preference switch for crash reporter -->
+    <string name="preferences_crash_reporter">Паведамляльнік пра крахі</string>
+    <!-- Preference switch for Mozilla location service -->
+    <string name="preferences_mozilla_location_service">Служба месцазнаходжання Mozilla</string>
+
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string name="preferences_sync">Уключыць сінхранізацыю</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Увайсці</string>
+
+    <!-- Preference for removing FxA account -->
+    <string name="preferences_sync_remove_account">Выдаліць уліковы запіс</string>
 
     <!-- Button to open camera for pairing -->
     <string name="pair_open_camera">Адкрыць камеру</string>
 
+    <!-- Button to cancel pairing -->
+    <string name="pair_cancel">Адмяніць</string>
+
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">Зверху</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">Знізу</string>
+
+    <!-- Theme Preferences -->
+    <!-- Preference for using light theme -->
+    <string name="preference_light_theme">Светлая</string>
+    <!-- Preference for using dark theme -->
+    <string name="preference_dark_theme">Цёмная</string>
+
     <!-- Library -->
     <!-- Option in Library to open Sessions page -->
     <string name="library_sessions">Сеансы</string>
+    <!-- Option in Library to open Screenshots page -->
+    <string name="library_screenshots">Здымкі экрана</string>
+    <!-- Option in Library to open Downloads page -->
+    <string name="library_downloads">Сцягванні</string>
     <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">Закладкі</string>
+    <!-- Option in library to open Desktop Bookmarks root page -->
+    <string name="library_desktop_bookmarks_root">Закладкі камп’ютара</string>
     <!-- Option in library to open Desktop Bookmarks "menu" page -->
     <string name="library_desktop_bookmarks_menu">Меню закладак</string>
     <!-- Option in library to open Desktop Bookmarks "toolbar" page -->
@@ -326,6 +375,8 @@
     <string name="tab_tray_menu_item_close">Закрыць усе карткі</string>
     <!-- Shortcut action to open new tab -->
     <string name="tab_tray_menu_open_new_tab">Новая картка</string>
+    <!-- Shortcut action to open the home screen -->
+    <string name="tab_tray_menu_home">Дадому</string>
     <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
     <string name="remove_tab_from_collection">Выдаліць картку з калекцыі</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
@@ -336,6 +387,8 @@
     <string name="tabs_menu_close_all_tabs">Закрыць усе карткі</string>
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">Падзяліцца карткамі</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection1">Захаваць карткі у калекцыі</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Меню картак</string>
     <!-- Tab menu item to share the tab -->
@@ -359,8 +412,30 @@
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">Выдаліць</string>
 
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (Прыватны рэжым)</string>
+
+    <!-- History -->
+    <!-- Text for the button to clear all history -->
+    <string name="history_delete_all">Выдаліць гісторыю</string>
+    <!-- Text for the dialog to confirm clearing all history -->
+    <string name="history_delete_all_dialog">Вы ўпэўненыя, што хочаце выдаліць сваю гісторыю?</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">Гісторыя выдалена</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">%1$s выдалены</string>
+    <!-- Text for positive action to delete history in deleting history dialog -->
+    <string name="history_clear_dialog">Ачысціць</string>
+    <!-- History overflow menu copy button -->
+    <string name="history_menu_copy_button">Капіраваць</string>
     <!-- History overflow menu share button -->
     <string name="history_menu_share_button">Падзяліцца</string>
+    <!-- History overflow menu open in new tab button -->
+    <string name="history_menu_open_in_new_tab_button">Адкрыць у новай картцы</string>
+    <!-- History overflow menu open in private tab button -->
+    <string name="history_menu_open_in_private_tab_button">Адкрыць у прыватнай картцы</string>
+    <!-- Text for the button to delete a single history item -->
+    <string name="history_delete_item">Выдаліць</string>
     <!-- History multi select title in app bar
     The first parameter is the number of bookmarks selected -->
     <string name="history_multi_select_title">Выбрана: %1$d</string>
@@ -374,6 +449,11 @@
     <!-- Text for the header that groups the history the past 30 days -->
     <string name="history_30_days">Апошнія 30 дзён</string>
 
+    <!-- Text for the header that groups the history older than the last month -->
+    <string name="history_older">Даўней</string>
+
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">Адправіць справаздачу аб краху ў Mozilla</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">Закрыць картку</string>
     <!-- Restore tab button text on the tab crash page -->
@@ -388,6 +468,8 @@
     <!-- Bookmarks -->
     <!-- Content description for bookmarks library menu -->
     <string name="bookmark_menu_content_description">Меню закладак</string>
+    <!-- Screen title for editing bookmarks -->
+    <string name="bookmark_edit">Рэдагаваць закладку</string>
     <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_created_snackbar">Закладка створана.</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
