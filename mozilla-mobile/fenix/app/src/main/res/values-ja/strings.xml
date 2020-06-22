@@ -988,8 +988,19 @@
     <string name="onboarding_firefox_account_automatic_signin_failed">ログインに失敗しました</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_2">自動プライバシー保護</string>
+    <!-- text for the tracking protection card description
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_tracking_protection_description_2">プライバシーとセキュリティの設定で、あなたを追跡するトラッカー、マルウェア、企業をブロックします。</string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button_2">標準 (既定)</string>
+    <!-- text for standard blocking option button description -->
+    <string name="onboarding_tracking_protection_standard_button_description_2">トラッカーのブロックを少なくします。ページが正常に読み込まれます。</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_button">厳格 (推奨)</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_option">厳格</string>
+    <!-- text for strict blocking option button description -->
+    <string name="onboarding_tracking_protection_strict_button_description_2">より多くのトラッカー、広告、ポップアップをブロックします。ページの読み込みが速くなりますが、一部の機能が動作しない場合があります。</string>
     <!-- text for the toolbar position card header
         In English this is an idiom for "choose a side as in an argument or fight"
         but it is ok to make this more literally about "choosing a position in a physical space -->
@@ -1073,14 +1084,22 @@
     <string name="preference_enhanced_tracking_protection_explanation">個人データの収集を防止します。%s はオンラインでのあなたの行動を追跡するよく知られた数多くのトラッカーからあなたを守ります。</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">詳細情報</string>
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_default_1">標準 (既定)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_3">トラッカーのブロックを少なくします。ページが正常に読み込まれます。</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">標準のトラッキング防止でブロックされるもの</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">厳格</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_description_2">より多くのトラッカー、広告、ポップアップをブロックします。ページの読み込みが速くなりますが、一部の機能が動作しない場合があります。</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">厳格なトラッキング防止でブロックされるもの</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">カスタム</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_description_2">ブロックするトラッカーとスクリプトを選択します。</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_custom_info_button">カスタム設定のトラッキング防止でブロックされるもの</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
@@ -1129,6 +1148,8 @@
     <string name="etp_tracking_content_title">トラッキングコンテンツ</string>
     <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_description">追跡コードを含む外部の広告、動画、その他のコンテンツの読み込みを停止します。一部のウェブサイトの機能に影響する場合があります。</string>
+    <!-- Enhanced Tracking Protection Onboarding Message shown in a dialog above the toolbar. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="etp_onboarding_cfr_message">盾アイコンが紫色になるたびに、%s がサイトのトラッカーをブロックしています。詳細情報はタップしてください。</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">このサイトでは保護が有効になっています</string>
     <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
@@ -1415,6 +1436,9 @@
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
     <string name="voice_search_explainer">話してください</string>
 
+    <!--  The error message in edit login view when a duplicate username exists. -->
+    <string name="saved_login_duplicate">このユーザー名を持つログイン情報がすでに存在します。</string>
+
     <!-- Synced Tabs -->
     <!-- Text displayed when user is not logged into a Firefox Account -->
     <string name="synced_tabs_connect_to_sync_account">Firefox アカウントで接続してください。</string>
@@ -1423,4 +1447,21 @@
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">再認証してください。</string>
 
-    </resources>
+    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <string name="synced_tabs_enable_tab_syncing">タブの同期を有効にしてください。</string>
+    <!-- Text displayed when user has no tabs that have been synced -->
+    <string name="synced_tabs_no_tabs">他の端末の Firefox で開いているタブはありません。</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_sign_in_message">他の端末のタブの一覧を表示できます。</string>
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <string name="synced_tabs_sign_in_button">Sync にログイン</string>
+
+    <!-- Top Sites -->
+    <!-- Title text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_title">トップサイトの上限に達しました</string>
+    <!-- Content description text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_content">新しいトップサイトを追加するには、いずれかを削除してください。サイトを長押しして削除を選択します。</string>
+    <!-- Confirmation dialog button text when top sites limit is reached. -->
+    <string name="top_sites_max_limit_confirmation_button">OK</string>
+
+</resources>
