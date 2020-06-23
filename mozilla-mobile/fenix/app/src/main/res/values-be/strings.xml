@@ -827,6 +827,14 @@
     <string name="sync_sent_tab_error_snackbar_action">ПАЎТАРЫЦЬ</string>
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Скануйце код</string>
+    <!-- Instructions on how to access pairing -->
+    <string name="sign_in_instructions"><![CDATA[Адкрыйце Firefox на сваім камп’ютары і перайдзіце на <b>https://firefox.com/pair</b>]]></string>
+    <!-- Text shown for sign in pairing when ready -->
+    <string name="sign_in_ready_for_scan">Гатовы да сканавання</string>
+    <!-- Text shown for settings option for sign with pairing -->
+    <string name="sign_in_with_camera">Увайдзіце з дапамогай камеры</string>
+    <!-- Text shown for settings option for sign with email -->
+    <string name="sign_in_with_email">Выкарыстаць электронную пошту</string>
     <!-- Text shown in confirmation dialog to sign out of account -->
     <string name="sign_out_confirmation_message">Firefox спыніць сінхранізацыю з вашым уліковым запісам, але не выдаліць дадзеныя аглядання на гэтай прыладзе.</string>
     <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
@@ -959,8 +967,39 @@
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Выключэнні</string>
 
+    <!-- The header for the site that a login is for -->
+    <string name="preferences_passwords_saved_logins_site">Сайт</string>
+    <!-- The header for the username for a login -->
+    <string name="preferences_passwords_saved_logins_username">Імя карыстальніка</string>
+    <!-- The header for the password for a login -->
+    <string name="preferences_passwords_saved_logins_password">Пароль</string>
     <!-- Learn more link that will link to a page with more information displayed when a connection is insecure and we detect the user is entering a password -->
     <string name="logins_insecure_connection_warning_learn_more">Даведацца больш</string>
+
+    <!-- Positive confirmation that Fenix should save the new or updated login -->
+    <string name="logins_doorhanger_save_confirmation">Захаваць</string>
+    <!-- Negative confirmation that Fenix should not save the new or updated login -->
+    <string name="logins_doorhanger_save_dont_save">Не захоўваць</string>
+    <!-- Shown in snackbar to tell user that the password has been copied -->
+    <string name="logins_password_copied">Пароль скапіяваны ў буфер абмену</string>
+    <!-- Shown in snackbar to tell user that the username has been copied -->
+    <string name="logins_username_copied">Імя карыстальніка скапіявана ў буфер абмену</string>
+    <!-- Shown in snackbar to tell user that the site has been copied -->
+    <string name="logins_site_copied">Сайт скапіяваны ў буфер абмену</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
+    <string name="saved_logins_copy_password">Капіяваць пароль</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
+    <string name="saved_login_copy_username">Капіяваць імя карыстальніка</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
+    <string name="saved_login_copy_site">Капіяваць сайт</string>
+    <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
+    <string name="saved_login_reveal_password">Паказаць пароль</string>
+    <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
+    <string name="saved_login_hide_password">Схаваць пароль</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their logins -->
+    <string name="logins_biometric_prompt_message">Разблакуйце, каб пабачыць захаваныя лагіны</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_title">Абараніце свае лагіны і паролі</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Дадаць пашукавік</string>
@@ -969,6 +1008,13 @@
     <!-- Content description (not visible, for screen readers etc.): Title for the button to save a search engine in the action bar -->
     <string name="search_engine_add_custom_search_engine_edit_button_content_description">Захаваць</string>
 
+    <!-- Text for the menu button to edit a search engine -->
+    <string name="search_engine_edit">Змяніць</string>
+    <!-- Text for the menu button to delete a search engine -->
+    <string name="search_engine_delete">Выдаліць</string>
+
+    <!-- Placeholder text shown in the Search Engine Name TextField before a user enters text -->
+    <string name="search_add_custom_engine_name_hint">Назва</string>
     <!-- Text for the button to learn more about adding a custom search engine -->
     <string name="search_add_custom_engine_learn_more_label">Падрабязней</string>
 
@@ -1003,9 +1049,27 @@
      the certificate authority that verified the ticket-->
     <string name="certificate_info_verified_by">Пацверджана: %1$s</string>
 
+    <!-- Login overflow menu delete button -->
+    <string name="login_menu_delete_button">Выдаліць</string>
+    <!-- Login overflow menu edit button -->
+    <string name="login_menu_edit_button">Змяніць</string>
+    <!-- Message in delete confirmation dialog for logins -->
+    <string name="login_deletion_confirmation">Вы сапраўды хочаце выдаліць гэтае лагін?</string>
+    <!-- Positive action of a dialog asking to delete  -->
+    <string name="dialog_delete_positive">Выдаліць</string>
+    <!--  The error message in edit login view when password field is blank. -->
+    <string name="saved_login_password_required">Патрабуецца пароль</string>
+    <!-- Voice search button content description  -->
+    <string name="voice_search_content_description">Галасавы пошук</string>
+    <!-- Voice search prompt description displayed after the user presses the voice search button -->
+    <string name="voice_search_explainer">Гаварыце</string>
+
     <!-- Synced Tabs -->
     <!-- Text displayed when user is not logged into a Firefox Account -->
     <string name="synced_tabs_connect_to_sync_account">Падключыцеся да ўліковага запісу Firefox.</string>
+
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <string name="synced_tabs_connect_another_device">Падключыць іншую прыладу.</string>
 
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">OK, зразумела</string>
