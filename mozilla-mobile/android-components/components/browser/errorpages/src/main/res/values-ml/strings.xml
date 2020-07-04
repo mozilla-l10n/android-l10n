@@ -34,6 +34,10 @@
 
     <!-- The text shown inside the advanced button used to expand the advanced options. It's only shown when a website has an invalid SSL certificate. -->
     <string name="mozac_browser_errorpages_security_bad_cert_advanced">സങ്കീർണ്ണമായവ...</string>
+    <!-- The advanced certificate information shown when a website sends has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[<label>ആരോ ആൾമാറാട്ടം നടത്താൻ ശ്രമിക്കുന്നതിനാൽ നിങ്ങൾ പോജിൽ തുടരരുത്.</label>
+        <br><br>
+        <label>വെബ്‌സൈറ്റുകൾ സർട്ടിഫിക്കറ്റുകൾ വഴി അവരുടെ ഐഡന്റിറ്റി തെളിയിക്കുന്നു. %1$s നെ<b>%2$s</b> വിശ്വസിയ്ക്കുന്നില്ല, കാരണം അതിന്റെ സർ‌ട്ടിഫിക്കറ്റ് നൽ‌കുന്നയാൾ‌ ഒന്നുകിൽ അജ്ഞാതനാണ് അല്ലെങ്കിൽ സർ‌ട്ടിഫിക്കറ്റ് സ്വയം ഒപ്പിട്ടതാണ്, അതുമല്ലെങ്കിൽ‌ സെർ‌വർ‌ ശരിയായ ഇന്റർ‌മീഡിയറ്റ് സർ‌ട്ടിഫിക്കറ്റുകൾ‌ അയയ്‌ക്കുന്നില്ല.</label>]]></string>
     <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
     <string name="mozac_browser_errorpages_security_bad_cert_back">തിരികെ പോകുക (ശുപാർശചെയ്യുന്നു)</string>
     <!-- The text shown inside the advanced options button used to bypass the invalid SSL certificate. It's only shown if the user has expanded the advanced options. -->
@@ -73,10 +77,26 @@
     <string name="mozac_browser_errorpages_unknown_socket_type_title">സെര്‍വറില്‍ നിന്നും പ്രതീക്ഷിക്കാത്ത പ്രതികരണം</string>
 
     <!-- The error message shown when a website responds in an unexpected way and the browser cannot continue. -->
-    <string name="mozac_browser_errorpages_unknown_socket_type_message"><![CDATA[<p>നെറ്റ്‌വർക്ക് അപേക്ഷയ്ക്ക് സൈറ്റ് അപ്രതീക്ഷിതമായ രീതിയിൽ പ്രതികരിച്ചതിനാൽ ബ്രൗസറിനു് തുടരാനാവില്ല.</p>]]></string>
+    <string name="mozac_browser_errorpages_unknown_socket_type_message"><![CDATA[<p>നെറ്റ്‍വർക്കിൽ നിന്നും അപ്രതീക്ഷിതമായ പ്രതികരണമുണ്ടായി, അതിനാല്‍ ബ്രൗസറിനു് മുമ്പോട്ട് തുടരുവാന്‍ സാധ്യമാകുന്നില്ല.</p>]]></string>
+
+    <!-- The document title and heading of the error page shown when the browser gets stuck in an infinite loop when loading a website. -->
+    <string name="mozac_browser_errorpages_redirect_loop_title">ഈ പേജ് ശരിയായി റീഡയറക്‌ട് ചെയ്യുന്നില്ല</string>
+    <!-- The error message shown when the browser gets stuck in an infinite loop when loading a website. -->
+    <string name="mozac_browser_errorpages_redirect_loop_message"><![CDATA[<p>ആവശ്യപ്പെട്ട താള്‍ ലഭ്യമാക്കുന്നതിനുള്ള ശ്രമം ബ്രൌസര്‍ നിര്‍ത്തിയിരിക്കുന്നു. താള്‍ റീഡയറക്‌ട് ചെയ്യുന്നത് ഒരിക്കലും അവസാനിക്കുന്നില്ല.</p>
+      <ul>
+        <li>ഈ താളിന് ആവശ്യമുള്ള കൂക്കികള്‍ നിങ്ങള്‍ നിര്‍ജ്ജീവമാക്കുകയോ ഇല്ലാതാക്കുകയോ ചെയ്തിട്ടുണ്ടോ?</li>
+        <li>സൈറ്റിനുള്ള കുക്കികള്‍ അനുവദിച്ചിട്ടും പ്രശ്നം പരിഹരിക്കപ്പെട്ടില്ലയെങ്കിൽ അത് സെര്‍വറിന്റെ സജ്ജീകരണത്തിലുള്ള പിശക് ആകാം</li>
+      </ul>]]></string>
 
     <!-- The document title and heading of the error page shown when a website cannot be loaded because the browser is in offline mode. -->
     <string name="mozac_browser_errorpages_offline_title">ഓഫ്‌ലൈൻ മോഡ്</string>
+
+    <!-- The error message shown when a website cannot be loaded because the browser is in offline mode. -->
+    <string name="mozac_browser_errorpages_offline_message"><![CDATA[<p>ബ്രൌസര്‍ ഓഫ്‌ലൈന്‍ മോഡില്‍ പ്രവര്‍ത്തിയ്ക്കുന്നതിനാല്‍ ആവശ്യപ്പെട്ട താളിലേയ്ക്കു് കണക്ട് ചെയ്യുവാന്‍ സാധിയ്ക്കന്നില്ല.</p>
+      <ul>
+        <li>കമ്പ്യൂട്ടര്‍ സജീവമായൊരു നെറ്റ്‌വര്‍ക്കിലേയ്ക്ക് കണക്ട് ചെയ്തിട്ടുണ്ടോ?</li>
+        <li>വീണ്ടും ശ്രമിയ്ക്കുന്നതിനായി “വീണ്ടും ശ്രമിയ്ക്കുക” അമര്‍ത്തുക.</li>
+      </ul>]]></string>
 
     <!-- The document title and heading of the error page shown when the browser prevents loading a website on a restricted port. -->
     <string name="mozac_browser_errorpages_port_blocked_title">സുരക്ഷാ കാരണങ്ങളാല്‍ പോര്‍ട്ടിലേക്കു് പ്രവേശനം നിഷേധിച്ചിരിയ്ക്കുന്നു</string>
@@ -102,10 +122,35 @@
     <!-- The document title and heading of the error page shown when a file cannot be loaded because of a detected data corruption. -->
     <string name="mozac_browser_errorpages_corrupted_content_title">ഉള്ളടക്കത്തിന്റെ തകരാറ് മൂലമുള്ള പിശക്</string>
 
+    <!-- The error message shown when shown when a file cannot be loaded because of a detected data corruption. -->
+    <string name="mozac_browser_errorpages_corrupted_content_message"><![CDATA[<p>ഡേറ്റാ അയയ്ക്കുന്നതിലെ പിശകു് കാരണം നിങ്ങള്‍ കാണുവാന്‍ ശ്രമിയ്ക്കുന്ന പേജ് ലഭ്യമല്ല.</p>
+      <ul>
+        <li>ഈ പ്രശ്നത്തെപ്പറ്റി ദയവായി വെബ്സൈറ്റിന്റെ ഉടമസ്ഥരെ അറിയിയ്ക്കുക.</li>
+      </ul>]]></string>
+
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_content_crashed_title">ഉള്ളടക്കം തകർന്നു</string>
 
     <!-- The document title and heading of an error page. -->
     <string name="mozac_browser_errorpages_unknown_host_title">വിലാസം ലഭ്യമായില്ല</string>
+
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_title">ഇന്റർനെറ്റ് കണക്ഷൻ ലഭ്യമല്ല</string>
+    <!-- Text that will show up on the button at the bottom of the error page -->
+    <string name="mozac_browser_errorpages_no_internet_refresh_button">വീണ്ടും ലഭ്യമാക്കുക</string>
+
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_malformed_uri_title">അസാധുവായ വിലാസം</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_malformed_uri_title_alternative">ഈ വിലാസം സാധുവല്ല</string>
+
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_unknown_protocol_title">അപരിചിതമായ പ്രോട്ടോക്കോള്‍</string>
+
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_file_not_found_title">ഫയൽ കണ്ടെത്താനായില്ല</string>
+
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_unknown_proxy_host_title">പ്രോക്സി സെർവർ കണ്ടെത്താനായില്ല</string>
 
     </resources>
