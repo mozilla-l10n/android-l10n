@@ -269,6 +269,8 @@
     <string name="preferences_search_bookmarks">അടയാളക്കുറിപ്പുകള്‍ തിരയുക</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">അക്കൗണ്ട് ക്രമീകരണങ്ങൾ</string>
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">ആപ്പുകളിൽ കണ്ണികൾ തുറക്കുക</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">ആഡ്-ഓണുകള്‍</string>
 
@@ -282,6 +284,12 @@
 
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">അടയാളക്കുറിപ്പുകള്‍</string>
+    <!-- Preference for syncing logins -->
+    <string name="preferences_sync_logins">ലോഗിനുകൾ</string>
+    <!-- Preference for syncing tabs -->
+    <string name="preferences_sync_tabs_2">തുറന്നിരിക്കുന്ന ടാബുകൾ</string>
+    <!-- Preference for signing out -->
+    <string name="preferences_sign_out">പുറത്ത് കടക്കുക</string>
     <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">ഉപകരണത്തിന്റെ പേര്</string>
     <!-- Text shown when user enters empty device name -->
@@ -327,16 +335,22 @@
 
     <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
     <string name="preferences_tracking_protection_exceptions_turn_on_for_all">എല്ലാ സൈറ്റുകൾക്കും ഓണാക്കുക</string>
+    <!-- Text displayed when there are no exceptions -->
+    <string name="exceptions_empty_message_description">തിരഞ്ഞെടുത്ത സൈറ്റുകൾക്കായുള്ള പിന്തുടരൽ പരിരക്ഷ പ്രവർത്തനരഹിതമാക്കാൻ ഒഴിവാക്കലുകൾ താങ്കളെ അനുവദിക്കുന്നു.</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">കൂടുതല്‍ അറിയുക</string>
 
     <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
     <string name="preferences_tracking_protection_turned_off_globally">ആഗോളതലത്തിൽ ഓഫാക്കി, അത് ഓണാക്കാൻ ക്രമീകരണങ്ങളിലേക്ക് പോകുക.</string>
 
+    <!-- Preference switch for Telemetry -->
+    <string name="preferences_telemetry">ടെലിമെട്രി</string>
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">ഉപയോഗവും സാങ്കേതിക ഡാറ്റയും</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">പ്രകടനം, ഉപയോഗം, ഹാർഡ്‌വെയർ തുടങ്ങിയ വിവരങ്ങൾ മോഡില്ലയുമായിമായി പങ്കു വെച്ച്  %1$s മെച്ചപ്പെടുത്തുവാൻ സഹായിക്കുക</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">വിപണനത്തിനായുള്ള ഡാറ്റ</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">പരീക്ഷണങ്ങള്‍</string>
     <!-- Summary for experiments preferences -->
@@ -519,11 +533,24 @@
     <!-- Text for the header that groups the history older than the last month -->
     <string name="history_older">പഴയത്</string>
 
+    <!-- Text shown when no history exists -->
+    <string name="history_empty_message">ഇവിടെ ചരിത്രമൊന്നുമില്ല</string>
+
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">ക്ഷമിക്കണം. %1$s ന് ആ പേജ് ലഭ്യമാക്കാൻ കഴിഞ്ഞില്ല.</string>
+    <!-- Description text displayed on the tab crash page -->
+    <string name="tab_crash_description">താങ്കൾക്ക് ചുവടെയുള്ള ഈ ടാബ് പുനഃസ്ഥാപിക്കാൻ ശ്രമിക്കുകയോ അടയ്ക്കുകയോ ചെയ്യാം.</string>
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">തകരാർ റിപ്പോ‍ർട്ട് മോസില്ലയിലേക്ക് അയയ്ക്കുക</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">ടാബ് അടയ്ക്കുക</string>
 
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">ടാബ് പുനസ്ഥാപിക്കുക</string>
+
+    <!-- Content Description for session item menu button -->
+    <string name="content_description_session_menu">സെഷൻ ഐച്ഛികങ്ങൾ</string>
 
     <!-- Content Description for session item share button -->
     <string name="content_description_session_share">സെഷൻ പങ്കിടുക</string>
@@ -571,6 +598,10 @@
     <string name="edit_bookmark_fragment_title">അടയാളക്കുറിപ്പ് തിരുത്തുക</string>
     <!-- Bookmark folder editing screen title -->
     <string name="edit_bookmark_folder_fragment_title">ഫോള്‍ഡര്‍ തിരുത്തുക</string>
+    <!-- Bookmark sign in button message -->
+    <string name="bookmark_sign_in_button">സമന്വയിപ്പിച്ച ബുക്ക്മാർക്കുകൾ കാണാൻ പ്രവേശിക്കുക</string>
+    <!-- Bookmark URL editing field label -->
+    <string name="bookmark_url_label">URL</string>
     <!-- Bookmark FOLDER editing field label -->
     <string name="bookmark_folder_label">ഫോൾഡർ</string>
     <!-- Bookmark NAME editing field label -->
@@ -626,6 +657,8 @@
     <string name="preference_option_phone_feature_blocked">തടഞ്ഞവ</string>
     <!-- Label that indicates that a permission must be allowed -->
     <string name="preference_option_phone_feature_allowed">അനുവദനീയം</string>
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">ആൻഡ്രോയിഡ് തടഞ്ഞു</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">വിട്ടുവീഴ്ചകള്‍</string>
     <!-- Summary of tracking protection preference if tracking protection is set to on -->
@@ -659,6 +692,8 @@
     <string name="create_collection_select_all">എല്ലാം തിരഞ്ഞെടുക്കുക</string>
     <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_deselect_all">തിരഞ്ഞെടുത്തവ വേണ്ടെന്ന് വയ്ക്കുക</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">സംരക്ഷിക്കേണ്ട ടാബുകൾ തിരഞ്ഞെടുക്കുക</string>
     <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
      %d is a placeholder for the number of tabs selected. -->
     <string name="create_collection_save_to_collection_tabs_selected">%d ടാബുകൾ തിരഞ്ഞെടുത്തു</string>
@@ -698,10 +733,16 @@
     <string name="sync_send_to_all">എല്ലാ ഉപകരണങ്ങളിലേക്കും അയയ്ക്കുക</string>
     <!-- An option from the share dialog to reconnect to sync -->
     <string name="sync_reconnect">സമന്വയിക്കാൻ വീണ്ടും ബന്ധിപ്പിക്കുക</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
+    <string name="sync_offline">ഓഫ്‌ലൈൻ</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">മറ്റൊരു ഉപകരണം ബന്ധിപ്പിക്കുക</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">ഒരു ടാബ് അയയ്‌ക്കാൻ, മറ്റ് ഒരു ഉപകരണത്തിലെങ്കിലും ഫയർഫോക്‌സിൽ പ്രവേശിക്കുക.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">മനസ്സിലായി</string>
+    <!-- Share error message -->
+    <string name="share_error_snackbar">ഈ ആപ്പിലേക്ക് പങ്കിടാൻ സാധിക്കില്ല</string>
     <!-- Add new device screen title -->
     <string name="sync_add_new_device_title">ഉപകരണത്തിലേക്ക് അയക്കു</string>
     <!-- Text for the warning message on the Add new device screen -->
@@ -715,9 +756,13 @@
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
     <string name="notification_pbm_channel_name">സ്വകാര്യ ബ്രൗസിങ് സെഷൻ</string>
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">സ്വകാര്യ ടാബുകൾ നീക്കം ചെയ്യുക</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">സ്വകാര്യ ടാബുകള്‍ അടയ്ക്കുക</string>
     <!-- Notification action to open Fenix and resume the current browsing session. -->
     <string name="notification_pbm_action_open">തുറക്കുക</string>
+    <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
+    <string name="notification_pbm_action_delete_and_open">നീക്കം ചെയ്തിട്ട് തുറക്കുക</string>
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">ശേഖരം ഇല്ലാതാക്കി</string>
     <!-- Text shown in snackbar when user renames a collection -->
@@ -866,6 +911,9 @@
     <string name="onboarding_toolbar_position_description">ചുവടെയുള്ള ടൂൾബാർ ഉപയോഗിച്ച് ഒറ്റ കൈ ബ്രൗസിംഗ് പരീക്ഷിക്കുക അല്ലെങ്കിൽ മുകളിലേക്ക് നീക്കുക.</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">സ്വകാര്യമായി ബ്രൗസ് ചെയ്യുക</string>
+    <!-- text for the private browsing onboarding card description
+    The first parameter is an icon that represents private browsing -->
+    <string name="onboarding_private_browsing_description1">ഒരു സ്വകാര്യ ടാബ് ഒരിക്കൽ തുറക്കുക: %s ഐക്കൺ അമർത്തുക.</string>
     <!-- text for the private browsing onboarding card description, explaining how to always using private browsing -->
     <string name="onboarding_private_browsing_always_description">എല്ലാ സമയത്തും സ്വകാര്യ ടാബുകൾ തുറക്കുക: നിങ്ങളുടെ സ്വകാര്യ ബ്രൗസിംഗ് ക്രമീകരണങ്ങൾ പുനക്രമീകരിക്കുക.</string>
     <!-- text for the private browsing onbording card button, that launches settings -->
