@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_5">கமுக்க %s</string>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_4">%s (கமுக்க)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">கூடுதல் தேர்வுகள்</string>
@@ -14,6 +18,9 @@
     <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">உங்கள் திறந்த கீற்றுகள் இங்கே காண்பிக்கப்படும்.</string>
 
+    <!-- No Private Tabs Message Description -->
+    <string name="no_private_tabs_description">உங்களின் ககுக்க கீற்றுகள் இங்கே காண்பிக்கப்படும்.</string>
+
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">நீங்கள் ஒரு தனிப்பட்ட அமர்வில் இருக்கிறீர்கள்</string>
@@ -25,11 +32,19 @@
     <!-- Text for the negative button -->
     <string name="cfr_neg_button_text">பரவாயில்லை நன்றி</string>
 
+    <!-- Text for the positive button -->
+    <string name="search_widget_cfr_pos_button_text">சட்டகத்தைச் சேர்க்கவும்</string>
+    <!-- Text for the negative button -->
+    <string name="search_widget_cfr_neg_button_text">இப்போதில்லை</string>
+
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
     <string name="home_screen_shortcut_open_new_tab_2">புதிய கீற்று</string>
     <!-- Shortcut action to open new private tab -->
     <string name="home_screen_shortcut_open_new_private_tab_2">புதிய தனிப்பயன் கீற்று</string>
+
+    <!-- Heading for the Top Sites block -->
+    <string name="home_screen_top_sites_heading">சிறந்த தளங்கள்</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -46,14 +61,26 @@
     <string name="browser_menu_bookmark">புத்தகக்குறி</string>
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">புத்தகக்குறியை திருத்து</string>
+    <!-- Browser menu button that opens the addon manager -->
+    <string name="browser_menu_add_ons">துணை நிரல்கள்</string>
+    <!-- Text displayed when there are no add-ons to be shown -->
+    <string name="no_add_ons">இங்கே துணை நிரல்கள் இல்லை</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">உதவி</string>
+    <!-- Browser menu button that sends a to a the what's new article -->
+    <string name="browser_menu_whats_new">புதியவை என்ன</string>
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">அமைப்புகள்</string>
+    <!-- Browser menu button that opens a user's library -->
+    <string name="browser_menu_library">நூலகம்</string>
+    <!-- Browser menu toggle that requests a desktop site -->
+    <string name="browser_menu_desktop_site">மேசைக்கணினி தளம்</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">முகப்பு திரையில் சேர்</string>
     <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
     <string name="browser_menu_install_on_homescreen">நிறுவுக</string>
+    <!-- Menu option on the toolbar that takes you to synced tabs page-->
+    <string name="synced_tabs">ஒத்திசைவு கீற்றுகள்</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">பக்கத்தில் தேடு</string>
     <!-- Browser menu button that creates a private tab -->
@@ -61,6 +88,8 @@
     <!-- Browser menu button that creates a new tab -->
     <string name="browser_menu_new_tab">புதிய கீற்று</string>
 
+    <!-- Browser menu button that saves the current tab to a collection -->
+    <string name="browser_menu_save_to_collection_2">திரட்டில் சேமி</string>
     <!-- Browser menu button that open a share menu to share the current site -->
     <string name="browser_menu_share">பகிர்</string>
     <!-- Share menu title, displayed when a user is sharing their current site -->
@@ -76,8 +105,16 @@
     <string name="browser_menu_powered_by2">%1$s மூலம் இயக்கப்படுகிறது</string>
     <!-- Browser menu button to put the current page in reader mode -->
     <string name="browser_menu_read">வாசகர் பார்வை</string>
+    <!-- Browser menu button content description to close reader mode and return the user to the regular browser -->
+    <string name="browser_menu_read_close">வாசிப்பு தோற்றத்தை மூடு</string>
+    <!-- Browser menu button to open the current page in an external app -->
+    <string name="browser_menu_open_app_link">செயலியில் திற</string>
     <!-- Browser menu button to configure reader mode appearance e.g. the used font type and size -->
     <string name="browser_menu_read_appearance">தோற்றம்</string>
+
+    <!-- Error message to show when the user tries to access a scheme not
+        handled by the app (Ex: blob, tel etc) -->
+    <string name="unknown_scheme_error_message">இணைக்க முடியவில்லை. அடையாளம் காண முடியாத URL திட்டம்.</string>
 
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
@@ -915,5 +952,32 @@
     <string name="logins_insecure_connection_warning">இத்தளத்துடனான இணைப்பு பாதுகாப்பற்றது. இங்கு உள்ளிட்ட உள்நுழைவுகளைச் சமரசம் செய்ய முடியும்.</string>
     <!-- Learn more link that will link to a page with more information displayed when a connection is insecure and we detect the user is entering a password -->
     <string name="logins_insecure_connection_warning_learn_more">மேலும் அறிய</string>
+
+    <!-- Prompt message displayed when Fenix detects a user has entered a password and user decides if Fenix should save it. The first parameter is the name of the application (For example: Fenix)  -->
+    <string name="logins_doorhanger_save">உள்நுழைவைச் %s சேமிக்க வேண்டுமா?</string>
+    <!-- Positive confirmation that Fenix should save the new or updated login -->
+    <string name="logins_doorhanger_save_confirmation">சேமி</string>
+    <!-- Negative confirmation that Fenix should not save the new or updated login -->
+    <string name="logins_doorhanger_save_dont_save">சேமிக்க வேண்டாம்</string>
+    <!-- Shown in snackbar to tell user that the password has been copied -->
+    <string name="logins_password_copied">கடவுச்சொல் ஒட்டுப்பலகைக்கு நகலெடுக்கப்பட்டது</string>
+    <!-- Shown in snackbar to tell user that the username has been copied -->
+    <string name="logins_username_copied">பயனர் ஒட்டுப்பலகைக்கு நகலெடுக்கப்பட்டது</string>
+    <!-- Shown in snackbar to tell user that the site has been copied -->
+    <string name="logins_site_copied">தளம் ஒட்டுப்பலகைக்கு நகலெடுக்கப்பட்டது</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
+    <string name="saved_logins_copy_password">கடவுச்சொல்லை நகலெடு</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
+    <string name="saved_login_copy_username">பயனர் பெயரை நகலெடு</string>
+    <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
+    <string name="saved_login_copy_site">தளத்தை நகலெடு</string>
+    <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
+    <string name="saved_login_reveal_password">கடவுச்சொல்லை காட்டு</string>
+    <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
+    <string name="saved_login_hide_password">கடவுச்சொல்லை மறை</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their logins -->
+    <string name="logins_biometric_prompt_message">நீங்கள் சேமித்த உள்நுழைவுகளைக் காண திறக்கவும்</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_title">உங்கள் உள்நுழைவுகளையும் கடவுச்சொற்களையும் பாதுகாக்கவும்</string>
 
     </resources>
