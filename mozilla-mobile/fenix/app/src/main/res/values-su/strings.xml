@@ -475,6 +475,31 @@
     <!-- Text for the header that groups the history for last 24 hours -->
     <string name="history_24_hours">24 jam terakhir</string>
 
+    <!-- Text for the header that groups the history the past 7 days -->
+    <string name="history_7_days">7 dinten kapungkur</string>
+    <!-- Text for the header that groups the history the past 30 days -->
+    <string name="history_30_days">30 dinten kapungkur</string>
+    <!-- Text for the header that groups the history older than the last month -->
+    <string name="history_older">Lawas</string>
+    <!-- Text shown when no history exists -->
+    <string name="history_empty_message">Teu aya jujutan di dieu</string>
+
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">Hampura. %1$s teu tiasa nyungsi ieu kaca.</string>
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">Kirim laporan nu ruksak ka Mozilla</string>
+    <!-- Close tab button text on the tab crash page -->
+    <string name="tab_crash_close">Tutup tab</string>
+    <!-- Restore tab button text on the tab crash page -->
+    <string name="tab_crash_restore">Malikkeun tab</string>
+
+    <!-- Content Description for session item menu button -->
+    <string name="content_description_session_menu">Pilihan sési</string>
+
+    <!-- Content Description for session item share button -->
+    <string name="content_description_session_share">Bagikeun sési</string>
+
     <!-- Bookmarks -->
     <!-- Content description for bookmarks library menu -->
     <string name="bookmark_menu_content_description">Menu markah</string>
@@ -482,6 +507,10 @@
     <string name="bookmark_edit">Édit markah</string>
     <!-- Screen title for selecting a bookmarks folder -->
     <string name="bookmark_select_folder">Pilih map</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">Yakin anjeun rék mupus ieu folder?</string>
+    <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
+    <string name="bookmark_delete_folder_snackbar">%1$s nu dipiceun</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Tambah map</string>
     <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
@@ -532,9 +561,27 @@
     <!-- Bookmark screen message for empty bookmarks folder -->
     <string name="bookmarks_empty_message">Euweuh markah di dieu</string>
 
+    <!-- Bookmark snackbar message on deletion
+     The first parameter is the host part of the URL of the bookmark deleted, if any -->
+    <string name="bookmark_deletion_snackbar_message">%1$s nu dipiceun</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks -->
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Markah dipiceun</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">BEDO</string>
 
+    <!-- Site Permissions -->
+    <!-- Site permissions preferences header -->
+    <string name="permissions_header">Idin</string>
+    <!-- Button label that take the user to the Android App setting -->
+    <string name="phone_feature_go_to_settings">Buka Setélan</string>
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">Sepré sétélan gancang</string>
+    <!-- Label that indicates that this option it the recommended one -->
+    <string name="phone_feature_recommended">Disarankeun</string>
+    <!-- button that allows editing site permissions settings -->
+    <string name="quick_settings_sheet_manage_site_permissions">Ngatur idin loka</string>
     <!-- Button label for clearing all the information of site permissions-->
     <string name="clear_permissions">Beresihan idin</string>
     <!-- Button label for clearing a site permission-->
@@ -542,6 +589,8 @@
     <!-- Button label for clearing all the information on all sites-->
     <string name="clear_permissions_on_all_sites">Beresihan idin di sadaya loka</string>
 
+    <!-- Preference for altering video and audio autoplay for all websites -->
+    <string name="preference_browser_feature_autoplay">Autoplay</string>
     <!-- Preference for altering the camera access for all websites -->
     <string name="preference_phone_feature_camera">Kaméra</string>
     <!-- Preference for altering the microphone access for all websites -->
@@ -550,13 +599,73 @@
     <string name="preference_phone_feature_location">Lokasi</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">Iber</string>
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">Nyuhunkeun diidinan</string>
+    <!-- Label that indicates that a permission must be blocked -->
+    <string name="preference_option_phone_feature_blocked">Dipeungpeuk</string>
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Idinan</string>
+    <!--Label that indicates a permission is by the Android OS-->
+    <string name="phone_feature_blocked_by_android">Diblokir ku Android</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Iwal</string>
 
+    <!-- Summary of tracking protection preference if tracking protection is set to on -->
+    <string name="tracking_protection_on">Hurung</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <string name="tracking_protection_off">Pareum</string>
+    <!-- Label that indicates that all video and audio autoplay is allowed -->
+    <string name="preference_option_autoplay_allowed2">Ngidinan sora jeung pidéo</string>
+    <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
+    <string name="preference_option_autoplay_allowed_wifi_only2">Blokir sora jeung pidéo dina data sélulér wungkul</string>
+    <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Sora jeung pidéo bakal dimaénkeun dina Wi-Fi</string>
+    <!-- Label that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="preference_option_autoplay_block_audio2">Blokir sora hungkul</string>
+    <!-- Label that indicates that all video and audio autoplay is blocked -->
+    <string name="preference_option_autoplay_blocked3">Blokir sora jueng pidéo</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">Hurung</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">Pareum</string>
+
+    <!-- Collections -->
+    <!-- Collections header on home fragment -->
+    <string name="collections_header">Koléksi</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
+    <string name="collection_menu_button_content_description">Menu koléksi</string>
+    <!-- No Open Tabs Message Header -->
+    <string name="no_collections_header1">Kumpulkeun hal anu penting pikeun anjeun</string>
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description1">Ngagabungkeun pamaluruhan, loka sareng tab anu sami pikeun aksés gancang engké.</string>
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">Pilih Tab</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Pilih koléksi</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Ngaran koléksi</string>
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">Nambihkeun koléksi anyar</string>
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_all">Pilih Kabéh</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Ulah Pilih Kabéh</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">Pilih tab pikeun disimpen</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d tab dipilih</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d tab dipilih</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">Tab diteundeun!</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">Tab disimpen!</string>
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
+    <string name="create_collection_close">Tutup</string>
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">Teundeun</string>
 
     <!-- Notifications -->
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
