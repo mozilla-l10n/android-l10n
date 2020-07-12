@@ -30,7 +30,7 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Anjeun keur dina rintakan nyamuni</string>
-    <string name="private_browsing_common_myths">Mitos umum ngeunaan jujutan langlangan nyamuni</string>
+    <string name="private_browsing_common_myths">Mitos umum ngeunaan langlangan nyamuni</string>
     <!-- Delete session button to erase your history in a private session -->
     <string name="private_browsing_delete_session">Hapus rintakan</string>
 
@@ -223,10 +223,18 @@
     <string name="preferences_data_choices">Pilihan data</string>
     <!-- Preference for data collection -->
     <string name="preferences_data_collection">Koléksi data</string>
+    <!-- Preference linking to the privacy notice -->
+    <string name="preferences_privacy_link">Wawar privasi</string>
+    <!-- Preference category for developer tools -->
+    <string name="developer_tools_category">Parabot pamekar</string>
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">Debugging ti kajauhan liwat USB</string>
     <!-- Preference title for switch preference to show search shortcuts -->
     <string name="preferences_show_search_shortcuts">Témbongkeun takulan pamaluruhan</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Témbongkeun anjuran maluruh</string>
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Tampilkeun panyungsi sora</string>
     <!-- Preference title for switch preference to show search suggestions also in private mode -->
     <string name="preferences_show_search_suggestions_in_private">Témbongkeun dina rintakan nyamuni</string>
 
@@ -264,20 +272,90 @@
     <!-- Label indicating that sync is in progress -->
     <string name="sync_syncing_in_progress">Nyingkronkeun…</string>
 
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">Singkronan panungtung: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">Singkronan panungtung: acan pernah</string>
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name_2">%1$s dina %2$s %3$s</string>
+
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">Tab nu katampa</string>
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">Tab Katampa</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">Tab Katampa</string>
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">Tab ti %s</string>
+
+    <!-- Advanced Preferences -->
+    <!-- Preference for tracking protection settings -->
+    <string name="preferences_tracking_protection_settings">Kilung Palacakan</string>
+    <!-- Preference switch for tracking protection -->
+    <string name="preferences_tracking_protection">Kilung Palacakan</string>
+    <!-- Preference for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions">Iwal</string>
     <!-- Preference description for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions_description">Kilung Palacakan pikeun ieu loka ayeuna pareum</string>
 
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">Lenyepan</string>
+
+    <!-- Preference switch for Telemetry -->
+    <string name="preferences_telemetry">Telemétri</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">Data pamasaran</string>
+    <!-- Title for experiments preferences -->
+    <string name="preference_experiments">Éksperimén</string>
+    <!-- Summary for experiments preferences -->
+    <string name="preference_experiments_summary">Ngidinan Mozilla masang sareng ngumpulkeun data kanggo fitur ékspérimén</string>
+    <!-- Preference switch for crash reporter -->
+    <string name="preferences_crash_reporter">Laporan karuksakan</string>
+    <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preferences_fenix_health_report">Laporan kaséhatan %s</string>
+
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string name="preferences_sync">Hurungkeun Sync</string>
     <!-- Preference for pairing -->
     <string name="preferences_sync_pair">Pinday sandi papasangan dina Firefox déstop</string>
 
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">Asup</string>
+    <!-- Preference for reconnecting to FxA sync -->
+    <string name="preferences_sync_sign_in_to_reconnect">Asup pikeun nyambungkeun deui</string>
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">Cabut akun</string>
 
+    <!-- Button to open camera for pairing -->
+    <string name="pair_open_camera">Buka Kaméra</string>
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">Bolay</string>
 
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">Luhur</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">Handap</string>
+
+    <!-- Theme Preferences -->
+    <!-- Preference for using light theme -->
+    <string name="preference_light_theme">Caang</string>
+    <!-- Preference for using dark theme -->
+    <string name="preference_dark_theme">Poék</string>
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">Turutan téma paranti</string>
+
+    <!-- Library -->
+    <!-- Option in Library to open Sessions page -->
+    <string name="library_sessions">Sesi</string>
+    <!-- Option in Library to open Screenshots page -->
+    <string name="library_screenshots">Téwakan layar</string>
+    <!-- Option in Library to open Downloads page -->
+    <string name="library_downloads">Undeuran</string>
     <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">Markah</string>
     <!-- Option in library to open Desktop Bookmarks root page -->
@@ -288,22 +366,114 @@
     <string name="library_desktop_bookmarks_toolbar">Palang Parabot Markah</string>
     <!-- Option in library to open Desktop Bookmarks "unfiled" page -->
     <string name="library_desktop_bookmarks_unfiled">Markah Lianna</string>
+    <!-- Option in Library to open History page -->
+    <string name="library_history">Jujutan</string>
+    <!-- Option in Library to open Synced Tabs page -->
+    <string name="library_synced_tabs">Tab singkron</string>
+    <!-- Option in Library to open Reading List -->
+    <string name="library_reading_list">Daptar Bacaeun</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">Paluruh</string>
+
+    <!-- Settings Page Title -->
+    <string name="settings_title">Setélan</string>
+    <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
+    <string name="content_description_history_menu">Menu barang jujutan</string>
+    <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
+    <string name="content_description_close_button">Tutup</string>
+
+    <!-- Sessions -->
+    <!-- Title for the list of tabs -->
+    <string name="tab_header_label">Buka tab</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_title">Sesi nyamuni</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">Tab nyamuni</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_tab">Tambah tab</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_private_tab">Tambah tab nyamuni</string>
+    <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
+    <string name="tab_drawer_fab_content">Salindungan</string>
+    <!-- Text shown as the title of the open tab tray -->
+    <string name="tab_tray_title">Buka Tab</string>
+    <!-- Text shown in the menu for saving tabs to a collection -->
+    <string name="tab_tray_menu_item_save">Simpen kana koléksi</string>
+    <!-- Text shown in the menu for sharing all tabs -->
+    <string name="tab_tray_menu_item_share">Bagikeun sadaya tab</string>
+    <!-- Text shown in the menu for closing all tabs -->
+    <string name="tab_tray_menu_item_close">Tutup kabéh tab</string>
+    <!-- Shortcut action to open new tab -->
+    <string name="tab_tray_menu_open_new_tab">Tab anyar</string>
+    <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
+    <string name="remove_tab_from_collection">Cabut tab tina koléksi</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
+    <string name="close_tab">Tutup tab</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">Tutup tab %s</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
+    <string name="open_tabs_menu">Buka menu tab</string>
+    <!-- Open tabs menu item to close all tabs -->
+    <string name="tabs_menu_close_all_tabs">Tutup kabéh tab</string>
+    <!-- Open tabs menu item to share all tabs -->
+    <string name="tabs_menu_share_tabs">Bagikeun tab</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection1">Simpen tab kana koléksi</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string name="tab_menu">Menu tab</string>
+    <!-- Tab menu item to share the tab -->
+    <string name="tab_share">Bagikeun tab</string>
+    <!-- Button in the current session menu. Deletes the session when pressed -->
+    <string name="current_session_delete">Pupus</string>
+    <!-- Button in the current session menu. Saves the session when pressed -->
+    <string name="current_session_save">Teundeun</string>
+    <!-- Button in the current session menu. Opens the share menu when pressed -->
+    <string name="current_session_share">Bagikeun</string>
+    <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
+    <string name="current_session_image">Gambaran sési kiwari</string>
+    <!-- Button to save the current set of tabs into a collection -->
+    <string name="save_to_collection">Simpen kana koléksi</string>
+    <!-- Text for the menu button to delete a collection -->
+    <string name="collection_delete">Hapus koléksi</string>
+    <!-- Text for the menu button to rename a collection -->
+    <string name="collection_rename">Ganti ngaran koléksi</string>
+    <!-- Text for the button to open tabs of the selected collection -->
+    <string name="collection_open_tabs">Buka tab</string>
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Piceun</string>
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (Mode Nyamuni)</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Hapus jujutan</string>
     <!-- Text for the dialog to confirm clearing all history -->
     <string name="history_delete_all_dialog">Yakin rék meresihan jujutan anjeun?</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">Jujutan Dipiceun</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">Mupus %1$s</string>
     <!-- Text for positive action to delete history in deleting history dialog -->
     <string name="history_clear_dialog">Beresihan</string>
+    <!-- History overflow menu copy button -->
+    <string name="history_menu_copy_button">Tiron</string>
+    <!-- History overflow menu share button -->
+    <string name="history_menu_share_button">Bagikeun</string>
+    <!-- History overflow menu open in new tab button -->
+    <string name="history_menu_open_in_new_tab_button">Buka dina tab anyar</string>
+    <!-- History overflow menu open in private tab button -->
+    <string name="history_menu_open_in_private_tab_button">Buka dina tab nyamuni</string>
+    <!-- Text for the button to delete a single history item -->
+    <string name="history_delete_item">Pupus</string>
     <!-- History multi select title in app bar
     The first parameter is the number of bookmarks selected -->
     <string name="history_multi_select_title">%1$d dipilih</string>
     <!-- Text for the button to clear selected history items. The first parameter
         is a digit showing the number of items you have selected -->
     <string name="history_delete_some">Hapus %1$d item</string>
+
+    <!-- Text for the header that groups the history for last 24 hours -->
+    <string name="history_24_hours">24 jam terakhir</string>
 
     <!-- Bookmarks -->
     <!-- Content description for bookmarks library menu -->
