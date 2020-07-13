@@ -210,6 +210,11 @@
     <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">పరికరం పేరు</string>
 
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name_2">%2$s %3$sలో %1$s</string>
+
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">అందుకన్న ట్యాబులు</string>
@@ -221,6 +226,8 @@
     <string name="preferences_tracking_protection">ట్రాకింగ్ సంరక్షణ</string>
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">మినహాయింపులు</string>
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">సైట్లన్నిటికీ చేతనం చేయి</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">ఇంకా తెలుసుకోండి</string>
 
@@ -236,6 +243,8 @@
     <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preferences_fenix_health_report">%s ఆరోగ్య నివేదిక</string>
 
+    <!-- Preference for account login -->
+    <string name="preferences_sync_sign_in">ప్రవేశించండి</string>
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">ఖాతాను తొలగించు</string>
 
@@ -372,12 +381,20 @@
     <!-- Content Description for session item menu button -->
     <string name="content_description_session_menu">సెషను ఎంపికలు</string>
 
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">మీరు నిజంగానే ఈ సంచయాన్ని తొలగించాలనుకుంటున్నారా?</string>
     <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
     <string name="bookmark_delete_folder_snackbar">%1$s తొలగించబడింది</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">సంచయం చేర్చు</string>
+    <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
+    <string name="bookmark_created_snackbar">ఇష్టాంశం సృష్టించబడింది.</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_saved_snackbar">ఇష్టాంశం భద్రమయింది!</string>
+    <!-- Snackbar edit button shown after a bookmark has been created. -->
+    <string name="edit_bookmark_snackbar_action">మార్చు</string>
+    <!-- Bookmark overflow menu edit button -->
+    <string name="bookmark_menu_edit_button">మార్చు</string>
     <!-- Bookmark overflow menu open in new tab button -->
     <string name="bookmark_menu_open_in_new_tab_button">కొత్త ట్యాబులో తెరువు</string>
     <!-- Bookmark overflow menu open in private tab button -->
@@ -386,11 +403,18 @@
     <string name="bookmark_menu_delete_button">తొలగించు</string>
     <!--Bookmark overflow menu save button -->
     <string name="bookmark_menu_save_button">భద్రపరుచు</string>
+    <!-- Bookmark multi select title in app bar
+     The first parameter is the number of bookmarks selected -->
+    <string name="bookmarks_multi_select_title">%1$d ఎంచుకున్నారు</string>
     <!-- Bookmark FOLDER editing field label -->
     <string name="bookmark_folder_label">సంచయం</string>
     <!-- Bookmark NAME editing field label -->
     <string name="bookmark_name_label">పేరు</string>
 
+    <!-- Bookmark add folder screen title -->
+    <string name="bookmark_add_folder_fragment_label">సంచయం చేర్చు</string>
+    <!-- Bookmark editing error missing title -->
+    <string name="bookmark_empty_title_error">శీర్షిక తప్పనిసరిగా ఉండాలి</string>
     <!-- Bookmark editing error missing or improper URL -->
     <string name="bookmark_invalid_url_error">చెల్లని URL</string>
 
@@ -622,6 +646,8 @@
     <string name="onboarding_tracking_protection_strict_button">కఠినం (సిఫార్సు చేయబడింది)</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">కఠినం</string>
+    <!-- text for the private browsing onboarding card header -->
+    <string name="onboarding_private_browsing_header">అంతరంగికంగా విహరించండి</string>
     <!-- text for the private browsing onbording card button, that launches settings -->
     <string name="onboarding_private_browsing_button">అమరికలను తెరువు</string>
     <!-- text for the privacy notice onboarding card header -->
@@ -657,12 +683,37 @@
     <!-- Preference for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies">కుకీలు</string>
 
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">అంతరంగిక ట్యాబులలో మాత్రమే</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
+    <string name="preference_enhanced_tracking_protection_custom_tracking_content_3">అభిమత సంరక్షణ ట్యాబులలో మాత్రమే</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_cryptominers">క్రిప్టోమైనర్లు</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">ఫింగర్‌ప్రింటర్లు</string>
+    <string name="enhanced_tracking_protection_blocked">నిరోధించబడినవి</string>
+    <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
+    <string name="enhanced_tracking_protection_allowed">అనుమతించినవి</string>
+    <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_social_media_trackers_title">సామాజిక మాధ్యమాల ట్రాకర్లు</string>
+    <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_cryptominers_title">క్రిప్టోమైనర్లు</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_fingerprinters_title">ఫింగర్‌ప్రింటర్లు</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">తోడ్పాటు</string>
+    <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
+    <string name="about_crashes">క్రాషులు</string>
+    <!-- About page link text to open privacy notice link -->
+    <string name="about_privacy_notice">గోప్యతా నోటీసు</string>
     <!-- About page link text to open know your rights link -->
     <string name="about_know_your_rights">మీ హక్కులు తెలుసుకోండి</string>
     <!-- About page link text to open licensing information link -->
     <string name="about_licensing_information">లైసెన్సింగ్ సమాచారం</string>
+
+    <!-- About page link text to open a screen with libraries that are used -->
+    <string name="about_other_open_source_libraries">మేము వాడే లైబ్రరీలు</string>
 
     <!-- Content description of the tab counter toolbar button when one tab is open -->
     <string name="tab_counter_content_description_one_tab">1 ట్యాబు</string>
