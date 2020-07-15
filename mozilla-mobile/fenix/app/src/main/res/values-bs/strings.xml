@@ -661,6 +661,18 @@
     <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">Kolekcije</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
+    <string name="collection_menu_button_content_description">Izbornik kolekcija</string>
+    <!-- No Open Tabs Message Header -->
+    <string name="no_collections_header1">Sakupite stvari koje su vam važne</string>
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description1">Grupišite slične pretrage, stranice i tabove za brži pristup kasnije.</string>
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">Izaberite tabove</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Izaberite kolekciju</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Imenujte kolekciju</string>
     <!-- Button to add new collection for the "select collection" step of the collection creator -->
     <string name="create_collection_add_new_collection">Dodaj novu kolekciju</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
@@ -715,6 +727,8 @@
     <string name="sync_offline">Offline</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Poveži drugi uređaj</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">Da pošaljete tab, prijavite se u Firefox bar na još jednom uređaju.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">Razumijem</string>
     <!-- Share error message -->
@@ -753,6 +767,8 @@
     <string name="snackbar_tab_closed">Tab zatvoren</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Tabovi zatvoreni</string>
+    <!-- Text shown in snackbar when user adds a site to top sites -->
+    <string name="snackbar_added_to_top_sites">Dodano u top stranice!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">Privatni tab zatvoren</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
@@ -780,10 +796,21 @@
     <string name="tab_collection_dialog_positive">Obriši</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">Otkaži</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">Ulazim u režim cijelog ekrana</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL kopiran</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">Ovo je primjer teksta. Ovdje se nalazi kako bi vam prikazali kako će tekst izgledati kada povećate ili smanjite veličinu pomoću ove postavke.</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Učini tekst na web stranicama većim ili manjim</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_font_size_title">Veličina fonta</string>
+
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_2">Automatsko određivanje veličine fonta</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Veličina fonta će odgovarati vašim Android postavkama. Onemogućite za upravljanje veličinama fonta ovdje.</string>
 
     <!-- Title for the Delete browsing data preference -->
     <string name="preferences_delete_browsing_data">Obriši podatke surfanja</string>
@@ -817,6 +844,10 @@
     <!-- Title for the Delete browsing data on quit preference -->
     <string name="preferences_delete_browsing_data_on_quit">Obriši podatke surfanja pri izlazu</string>
 
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit">Automatski briše podatke o surfanju kada izaberete &quot;Ugasi&quot; iz menija</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Automatski briše podatke o surfanju kada izaberete \&quot;Ugasi\&quot; iz menija</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Ugasi</string>
 
@@ -843,6 +874,12 @@
     <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
     <string name="tip_firefox_preview_moved_button_2">Preuzmi Firefox za Android Beta</string>
 
+    <!-- text for firefox preview moving tip button  -->
+    <string name="tip_firefox_preview_moved_button_preview_installed">Prebacite se na novi Nightly</string>
+
+    <!-- text for firefox preview moving tip button  -->
+    <string name="tip_firefox_preview_moved_button_preview_not_installed">Nabavite novi Nightly</string>
+
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
     The first parameter is the name of the app (e.g. Firefox Preview) -->
@@ -854,6 +891,18 @@
     <string name="onboarding_feature_section_header">Upoznajte %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Pogledajte šta je novo</string>
+    <!-- text for the "what's new" onboarding card description
+    The first parameter is the short name of the app (e.g. Firefox) -->
+    <string name="onboarding_whats_new_description">Imate pitanja o redizajniranom %su? Želite znati šta se promijenilo?</string>
+    <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
+    <string name="onboarding_whats_new_description_linktext">Dobijte odgovore ovdje</string>
+    <!-- text for the firefox account onboarding card header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_firefox_account_header">Izvucite maksimum iz %s.</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated)
+        The first parameter is the email of the detected user's account -->
+    <string name="onboarding_firefox_account_auto_signin_header_2">Prijavljeni ste kao %s na drugim Firefox browseru na ovom telefonu. Da li se želite prijaviti s ovim računom?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">Da, prijavi me</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
@@ -862,8 +911,16 @@
     <string name="onboarding_firefox_account_sign_in">Prijava u Firefox</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Ostanite odjavljeni</string>
+    <!-- text to display in the snackbar once account is signed-in -->
+    <string name="onboarding_firefox_account_sync_is_on">Sync je uključen</string>
+    <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
+    <string name="onboarding_firefox_account_automatic_signin_failed">Neuspješna prijava</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_2">Automatska privatnost</string>
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button_2">Standardno (izvorno)</string>
+    <!-- text for standard blocking option button description -->
+    <string name="onboarding_tracking_protection_standard_button_description_2">Blokira manje trackera. Stranice se normalno učitavaju.</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Surfajte privatno</string>
     <!-- text for the private browsing onboarding card description
@@ -924,8 +981,13 @@
     <string name="sign_out_confirmation_message">Firefox će zaustaviti sinhronizaciju s vašim računom, ali neće obrisati ništa od vaših podataka surfanja na ovom uređaju.</string>
     <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="sign_out_confirmation_message_2">%s će zaustaviti sinhronizaciju s vašim računom, ali neće obrisati ništa od vaših podataka surfanja na ovom uređaju.</string>
+    <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
+    <string name="sign_out_disconnect">Prekini vezu</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Otkaži</string>
+
+    <!-- Error message snackbar shown after the user tried to select a default folder which cannot be altered -->
+    <string name="bookmark_cannot_edit_root">Ne mogu se uređivati direktoriji</string>
 
     <!-- Enhanced Tracking Protection -->
     <!-- Link displayed in enhanced tracking protection panel to access tracking protection settings -->
@@ -939,12 +1001,18 @@
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Saznajte više</string>
 
+    <!-- Preference for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_default_1">Standardno (izvorno)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_3">Blokira manje trackera. Stranice se normalno učitavaju.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Šta je blokirano od strane standardne tracking zaštite</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Striktno</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict_description_2">Blokira više trackera, reklama i popupa. Stranice se brže učitavaju, ali neke funkcionalnosti možda neće raditi.</string>
+    <!--  Accessibility text for the Strict protection information icon  -->
+    <string name="preference_enhanced_tracking_protection_strict_info_button">Šta je blokirano od strane striktne tracking zaštite</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">Prilagođeno</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
