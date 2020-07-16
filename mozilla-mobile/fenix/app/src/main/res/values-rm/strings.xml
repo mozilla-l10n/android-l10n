@@ -228,6 +228,8 @@
     <string name="preferences_override_fxa_server">Server persunalisà per tes conto da Firefox</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Server persunalisà per Sync</string>
+    <!-- Toast shown after updating the FxA/Sync server override preferences -->
+    <string name="toast_override_fxa_sync_server_done">Il server per il conto da Firefox/Sync è vegnì modifitgà. L\'applicaziun vegn serrada per applitgar las midadas…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Conto</string>
     <!-- Preference shown on banner to sign into account -->
@@ -260,6 +262,8 @@
     <string name="preferences_show_search_shortcuts">Mussar las scursanidas per tschertgas</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Mussar propostas da tschertga</string>
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Mussar la tschertga vocala</string>
     <!-- Preference title for switch preference to show search suggestions also in private mode -->
     <string name="preferences_show_search_suggestions_in_private">Mussar en sesidas privatas</string>
 
@@ -287,6 +291,8 @@
     <string name="preferences_sync_bookmarks">Segnapaginas</string>
     <!-- Preference for syncing logins -->
     <string name="preferences_sync_logins">Infurmaziuns d\'annunzia</string>
+    <!-- Preference for syncing tabs -->
+    <string name="preferences_sync_tabs_2">Tabs averts</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">Sortir</string>
     <!-- Preference displays and allows changing current FxA device name -->
@@ -303,6 +309,11 @@
     <string name="sync_last_synced_summary">Ultima sincronisaziun: %s</string>
     <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">Ultima sincronisaziun: anc mai</string>
+
+    <!-- Text for displaying the default device name.
+        The first parameter is the application name, the second is the device manufacturer name
+        and the third is the device model. -->
+    <string name="default_device_name_2">%1$s sin %2$s %3$s</string>
 
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
@@ -371,6 +382,9 @@
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">Allontanar il conto</string>
 
+    <!-- Pairing Feature strings -->
+    <!-- Instructions on how to access pairing -->
+    <string name="pair_instructions_2"><![CDATA[Scannescha il code QR mussà sin <b>firefox.com/pair</b>]]></string>
     <!-- Button to open camera for pairing -->
     <string name="pair_open_camera">Avrir la camera</string>
     <!-- Button to cancel pairing -->
@@ -411,6 +425,8 @@
     <string name="library_desktop_bookmarks_unfiled">Auters segnapaginas</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">Cronologia</string>
+    <!-- Option in Library to open Synced Tabs page -->
+    <string name="library_synced_tabs">Tabs sincronisads</string>
     <!-- Option in Library to open Reading List -->
     <string name="library_reading_list">Glista da lectura</string>
     <!-- Menu Item Label for Search in Library -->
@@ -431,6 +447,26 @@
     <string name="tabs_header_private_tabs_title">Tabs privats</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Agiuntar in tab</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_private_tab">Agiuntar in tab privat</string>
+    <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
+    <string name="tab_drawer_fab_content">Privat</string>
+    <!-- Text shown as the title of the open tab tray -->
+    <string name="tab_tray_title">Tabs averts</string>
+    <!-- Text shown in the menu for saving tabs to a collection -->
+    <string name="tab_tray_menu_item_save">Memorisar en ina collecziun</string>
+    <!-- Text shown in the menu for sharing all tabs -->
+    <string name="tab_tray_menu_item_share">Cundivider tut ils tabs</string>
+    <!-- Text shown in the menu for closing all tabs -->
+    <string name="tab_tray_menu_item_close">Serrar tut ils tabs</string>
+    <!-- Shortcut action to open new tab -->
+    <string name="tab_tray_menu_open_new_tab">Nov tab</string>
+    <!-- Shortcut action to open the home screen -->
+    <string name="tab_tray_menu_home">Ir a la pagina da partenza</string>
+    <!-- Shortcut action to toggle private mode -->
+    <string name="tab_tray_menu_toggle">Midar il modus da tab</string>
+    <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
+    <string name="remove_tab_from_collection">Allontanar il tab da la collecziun</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Serrar il tab</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
@@ -441,6 +477,8 @@
     <string name="tabs_menu_close_all_tabs">Serrar tut ils tabs</string>
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">Cundivider tabs</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection1">Memorisar ils tabs en ina collecziun</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Menu dal tab</string>
     <!-- Tab menu item to share the tab -->
@@ -464,13 +502,28 @@
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">Allontanar</string>
 
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (modus privat)</string>
+
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Stizzar la cronologia</string>
     <!-- Text for the dialog to confirm clearing all history -->
     <string name="history_delete_all_dialog">Vuls ti propi stizzar tia cronologia?</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">Stizzà la cronologia</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">Stizzà %1$s</string>
     <!-- Text for positive action to delete history in deleting history dialog -->
     <string name="history_clear_dialog">Stizzar</string>
+    <!-- History overflow menu copy button -->
+    <string name="history_menu_copy_button">Copiar</string>
+    <!-- History overflow menu share button -->
+    <string name="history_menu_share_button">Cundivider</string>
+    <!-- History overflow menu open in new tab button -->
+    <string name="history_menu_open_in_new_tab_button">Avrir en in nov tab</string>
+    <!-- History overflow menu open in private tab button -->
+    <string name="history_menu_open_in_private_tab_button">Avrir en in tab privat</string>
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">Stizzar</string>
     <!-- History multi select title in app bar
@@ -515,6 +568,10 @@
     <string name="bookmark_edit">Modifitgar il segnapagina</string>
     <!-- Screen title for selecting a bookmarks folder -->
     <string name="bookmark_select_folder">Tscherner in ordinatur</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">Vuls ti propi stizzar quest ordinatur?</string>
+    <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
+    <string name="bookmark_delete_folder_snackbar">Stizzà %1$s</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Agiuntar in ordinatur</string>
     <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
@@ -567,6 +624,8 @@
     <!-- Bookmark snackbar message on deletion
      The first parameter is the host part of the URL of the bookmark deleted, if any -->
     <string name="bookmark_deletion_snackbar_message">Stizzà %1$s</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks -->
+    <string name="bookmark_deletion_multiple_snackbar_message_2">Stizzà ils segnapaginas</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">REVOCAR</string>
 
