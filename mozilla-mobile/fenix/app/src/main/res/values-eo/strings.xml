@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
-    <string name="app_name_private_2">FIrefox Preview privata</string>
-    <!-- App name for private browsing mode, only the "Private" portion should be localized. -->
-    <string name="app_name_private_3">Firefox Preview (privata)</string>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_5">%s en reĝimo de privata retumo</string>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_4">%s (Private)</string>
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Pli da elektebloj</string>
@@ -14,10 +14,18 @@
     <string name="content_description_disable_private_browsing_button">Malaktivigi privatan retumon</string>
     <!-- Placeholder text shown in the search bar before a user enters text -->
     <string name="search_hint">Serĉo aŭ adreso</string>
-    <!-- No Open Tabs Message Header -->
-    <string name="no_open_tabs_header_2">Neniu malfermita langeto</string>
     <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">Viaj malfermitaj langetoj aperos ĉi tie.</string>
+
+    <!-- No Private Tabs Message Description -->
+    <string name="no_private_tabs_description">Viaj privataj langetoj aperos ĉi tie.</string>
+    <!-- Message announced to the user when tab tray is selected with 1 tab -->
+    <string name="open_tab_tray_single">1 malfermita langeto. Tuŝetu por ŝanĝi langeton.</string>
+    <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
+    <string name="open_tab_tray_plural">%1$s malfermitaj langetoj. Tuŝetu por ŝanĝi langetojn.</string>
+
+    <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
+    <string name="about_content">%1$s estas kreita de Mozilla.</string>
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
@@ -33,6 +41,9 @@
     <string name="home_screen_shortcut_open_new_tab_2">Nova langeto</string>
     <!-- Shortcut action to open new private tab -->
     <string name="home_screen_shortcut_open_new_private_tab_2">Nova privata langeto</string>
+
+    <!-- Heading for the Top Sites block -->
+    <string name="home_screen_top_sites_heading">Plej vizititaj</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -50,7 +61,7 @@
     <!-- Content description (not visible, for screen readers etc.): Un-bookmark the current page -->
     <string name="browser_menu_edit_bookmark">Redakti legosignon</string>
     <!-- Browser menu button that opens the addon manager -->
-    <string name="browser_menu_addon_manager">Administrilo de aldonaĵoj</string>
+    <string name="browser_menu_add_ons">Aldonaĵoj</string>
     <!-- Text displayed when there are no add-ons to be shown -->
     <string name="no_add_ons">Neniu aldonaĵo estas ĉi tie</string>
     <!-- Browser menu button that sends a user to help articles -->
@@ -60,22 +71,22 @@
     <!-- Browser menu button that opens the settings menu -->
     <string name="browser_menu_settings">Agordoj</string>
     <!-- Browser menu button that opens a user's library -->
-    <string name="browser_menu_your_library">Via biblioteko</string>
+    <string name="browser_menu_library">Biblioteko</string>
     <!-- Browser menu toggle that requests a desktop site -->
     <string name="browser_menu_desktop_site">Labortabla retejo</string>
     <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
     <string name="browser_menu_install_on_homescreen">Instali</string>
+    <!-- Menu option on the toolbar that takes you to synced tabs page-->
+    <string name="synced_tabs">Spegulitaj langetoj</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">Serĉi en paĝo</string>
     <!-- Browser menu button that creates a private tab -->
     <string name="browser_menu_private_tab">Privata langeto</string>
     <!-- Browser menu button that creates a new tab -->
     <string name="browser_menu_new_tab">Nova langeto</string>
-    <!-- Browser menu button that saves the current tab to a collection -->
-    <string name="browser_menu_save_to_collection">Konservi en kolekto</string>
 
-    <!-- Browser menu button that opens a dialog to report issues with the current site -->
-    <string name="browser_menu_report_issue">Raporti problemon kun retejo</string>
+    <!-- Browser menu button that saves the current tab to a collection -->
+    <string name="browser_menu_save_to_collection_2">Konservi en kolekto</string>
     <!-- Browser menu button that open a share menu to share the current site -->
     <string name="browser_menu_share">Kundividi</string>
     <!-- Share menu title, displayed when a user is sharing their current site -->
@@ -89,8 +100,10 @@
     <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_powered_by2">Kun teknologio de %1$s</string>
-    <!-- Browser menu button to put the the current page in reader mode -->
+    <!-- Browser menu button to put the current page in reader mode -->
     <string name="browser_menu_read">Legila vido</string>
+    <!-- Browser menu button content description to close reader mode and return the user to the regular browser -->
+    <string name="browser_menu_read_close">Fermi legilan vidon</string>
     <!-- Browser menu button to open the current page in an external app -->
     <string name="browser_menu_open_app_link">Malfermi per programo</string>
 
@@ -136,6 +149,9 @@
     <string name="search_widget_text_short">Serĉi</string>
     <!-- Text preview for larger sized widgets -->
     <string name="search_widget_text_long">Serĉi en la reto</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Voice search -->
+    <string name="search_widget_voice">Voĉa serĉo</string>
 
     <!-- Preferences -->
     <!-- Title for the settings page-->
@@ -216,6 +232,8 @@
     <string name="preferences_show_search_shortcuts">Montri serĉajn ŝparvojojn</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Montri serĉajn sugestojn</string>
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Montri voĉan serĉon</string>
     <!-- Preference title for switch preference to show search suggestions also in private mode -->
     <string name="preferences_show_search_suggestions_in_private">Montri en privataj seancoj</string>
     <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
@@ -243,6 +261,8 @@
     <string name="preferences_sync_bookmarks">legosignojn</string>
     <!-- Preference for syncing logins -->
     <string name="preferences_sync_logins">legitimilojn</string>
+    <!-- Preference for syncing tabs -->
+    <string name="preferences_sync_tabs_2">Malfermitaj langetoj</string>
     <!-- Preference for signing out -->
     <string name="preferences_sign_out">Fini seancon</string>
     <!-- Preference displays and allows changing current FxA device name -->
@@ -259,19 +279,53 @@
     <string name="sync_last_synced_summary">Lasta spegulado: %s</string>
     <!-- Label summary showing never synced -->
     <string name="sync_never_synced_summary">Lasta spegulado: neniam</string>
+
     <!-- Text for displaying the default device name.
         The first parameter is the application name, the second is the device manufacturer name
         and the third is the device model. -->
-    <string name="default_device_name">%s en %s %s</string>
+    <string name="default_device_name_2">%1$s en %2$s %3$s</string>
 
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Ricevitaj langetoj</string>
 
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">Langeto ricevita</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">Langetoj ricevitaj</string>
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">Langeto el %s</string>
+
+    <!-- Advanced Preferences -->
+    <!-- Preference for tracking protection settings -->
+    <string name="preferences_tracking_protection_settings">Protekto kontraŭ spurado</string>
+    <!-- Preference switch for tracking protection -->
+    <string name="preferences_tracking_protection">Protekto kontraŭ spurado</string>
+    <!-- Preference for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions">Esceptoj</string>
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">Pli da informo</string>
+
+    <!-- Preference switch for Telemetry -->
+    <string name="preferences_telemetry">Telemezuro</string>
+    <!-- Title for experiments preferences -->
+    <string name="preference_experiments">Eksperimentoj</string>
+
+    <!-- Preference for account login -->
+    <string name="preferences_sync_sign_in">Komenci seancon</string>
+    <!-- Preference for removing FxA account -->
+    <string name="preferences_sync_remove_account">Forigi konton</string>
+
     <!-- Button to open camera for pairing -->
     <string name="pair_open_camera">Malfermi filmilon</string>
     <!-- Button to cancel pairing -->
     <string name="pair_cancel">Nuligi</string>
+
+    <!-- Toolbar Preferences -->
+    <!-- Preference for using top toolbar -->
+    <string name="preference_top_toolbar">Supre</string>
+    <!-- Preference for using bottom toolbar -->
+    <string name="preference_bottom_toolbar">Malsupre</string>
 
     <!-- Theme Preferences -->
     <!-- Preference for using light theme -->
@@ -303,12 +357,12 @@
     <string name="library_desktop_bookmarks_unfiled">Aliaj legosignoj</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">Historio</string>
+    <!-- Option in Library to open Synced Tabs page -->
+    <string name="library_synced_tabs">Spegulitaj langetoj</string>
     <!-- Option in Library to open Reading List -->
     <string name="library_reading_list">Legolisto</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">Serĉi</string>
-    <!-- Library Page Title -->
-    <string name="library_title">Biblioteko</string>
     <!-- Settings Page Title -->
     <string name="settings_title">Agordoj</string>
     <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
@@ -325,6 +379,22 @@
     <string name="tabs_header_private_tabs_title">Privataj langetoj</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Aldoni langeton</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_private_tab">Aldoni privatan langeton</string>
+    <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
+    <string name="tab_drawer_fab_content">Privata</string>
+    <!-- Text shown as the title of the open tab tray -->
+    <string name="tab_tray_title">Malfermi langetojn</string>
+    <!-- Text shown in the menu for saving tabs to a collection -->
+    <string name="tab_tray_menu_item_save">Konservi en kolekto</string>
+    <!-- Text shown in the menu for sharing all tabs -->
+    <string name="tab_tray_menu_item_share">Dividi ĉiujn langetojn</string>
+    <!-- Text shown in the menu for closing all tabs -->
+    <string name="tab_tray_menu_item_close">Fermi ĉiujn langetojn</string>
+    <!-- Shortcut action to open new tab -->
+    <string name="tab_tray_menu_open_new_tab">Nova langeto</string>
+    <!-- Shortcut action to open the home screen -->
+    <string name="tab_tray_menu_home">Iri al la komenco</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Fermi langeton</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
@@ -337,7 +407,7 @@
     <!-- Open tabs menu item to share all tabs -->
     <string name="tabs_menu_share_tabs">Kundividi langetojn</string>
     <!-- Open tabs menu item to save tabs to collection -->
-    <string name="tabs_menu_save_to_collection">Konservi en kolekto</string>
+    <string name="tabs_menu_save_to_collection1">Konservi langetojn en kolekto</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">Menuo de langeto</string>
     <!-- Tab menu item to share the tab -->
@@ -348,6 +418,8 @@
     <string name="current_session_save">Konservi</string>
     <!-- Button in the current session menu. Opens the share menu when pressed -->
     <string name="current_session_share">Kundividi</string>
+    <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
+    <string name="current_session_image">Bildo por la nuna seanco</string>
     <!-- Button to save the current set of tabs into a collection -->
     <string name="save_to_collection">Konservi en kolekto</string>
 
@@ -361,13 +433,28 @@
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">Forigi</string>
 
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (Privata reĝimo)</string>
+
     <!-- History -->
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Forigi historion</string>
     <!-- Text for the dialog to confirm clearing all history -->
     <string name="history_delete_all_dialog">Ĉu vi certe volas forigi vian historion?</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">Historio viŝita</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">%1$s forigita</string>
     <!-- Text for positive action to delete history in deleting history dialog -->
     <string name="history_clear_dialog">Viŝi</string>
+    <!-- History overflow menu copy button -->
+    <string name="history_menu_copy_button">Kopii</string>
+    <!-- History overflow menu share button -->
+    <string name="history_menu_share_button">Dividi</string>
+    <!-- History overflow menu open in new tab button -->
+    <string name="history_menu_open_in_new_tab_button">Malfermi en nova langeto</string>
+    <!-- History overflow menu open in private tab button -->
+    <string name="history_menu_open_in_private_tab_button">Malfermi en privata langeto</string>
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">Forigi</string>
     <!-- History multi select title in app bar
@@ -411,6 +498,10 @@
     <string name="bookmark_edit">Redakti legosignon</string>
     <!-- Screen title for selecting a bookmarks folder -->
     <string name="bookmark_select_folder">Elekti dosierujon</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">Ĉu vi certe volas forigi tiun ĉi dosierujon?</string>
+    <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
+    <string name="bookmark_delete_folder_snackbar">%1$s forigita</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Aldoni dosierujon</string>
     <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
@@ -464,8 +555,6 @@
     <!-- Bookmark snackbar message on deletion
      The first parameter is the host part of the URL of the bookmark deleted, if any -->
     <string name="bookmark_deletion_snackbar_message">%1$s forigita</string>
-    <!-- Bookmark snackbar message on deleting multiple bookmarks -->
-    <string name="bookmark_deletion_multiple_snackbar_message">Elektitaj legosignoj forigataj</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">MALFARI</string>
 
@@ -509,10 +598,6 @@
     <string name="tracking_protection_on">Ŝaltita</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Malŝaltita</string>
-    <!-- Label that indicates video and audio autoplay is blocked -->
-    <string name="preference_option_autoplay_blocked">Video kaj sono blokitaj</string>
-    <!-- Label that indicates video and audio autoplay is allowed -->
-    <string name="preference_option_autoplay_allowed">Video kaj sono permesitaj</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">Ŝaltita</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
@@ -520,10 +605,6 @@
 
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">Menuo de kolektoj</string>
-    <!-- No Open Tabs Message Header -->
-    <string name="no_collections_header">Neniu kolekto</string>
-    <!-- No Open Tabs Message Description -->
-    <string name="no_collections_description">Viaj kolektoj aperos ĉi tie.</string>
     <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
     <string name="create_collection_save_to_collection_empty">Elektu konservotajn langetojn</string>
     <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
@@ -566,8 +647,6 @@
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">Nuligi</string>
 
-    <!-- Title for the tabs item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_tabs_title">Malfermitaj langetoj</string>
     <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
     <string name="preferences_delete_browsing_data_tabs_subtitle">%d langetoj</string>
 
