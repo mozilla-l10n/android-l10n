@@ -970,6 +970,8 @@
     <string name="onboarding_tracking_protection_strict_button">Strictă (recomandat)</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">Strictă</string>
+    <!-- text for strict blocking option button description -->
+    <string name="onboarding_tracking_protection_strict_button_description_2">Blochează mai multe elemente de urmărire, reclame și ferestre pop-up. Paginile se încarcă mai repede, dar se poate ca unele funcționalități să nu meargă.</string>
     <!-- text for the toolbar position card header
         In English this is an idiom for "choose a side as in an argument or fight"
         but it is ok to make this more literally about "choosing a position in a physical space -->
@@ -1058,14 +1060,20 @@
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Află mai multe</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (implicit)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_3">Blochează mai puține elemente de urmărire. Paginile se vor încărca normal.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Ce blochează protecția standard împotriva urmăririi</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Strictă</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_description_2">Blochează mai multe elemente de urmărire, reclame și ferestre pop-up. Paginile se încarcă mai repede, dar se poate ca unele funcționalități să nu meargă.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Ce blochează protecția strictă împotriva urmăririi</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">Personalizat</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_description_2">Alege ce elemente de urmărire și scripturi să blochezi.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_custom_info_button">Ce blochează protecția personalizată împotriva urmăririi</string>
     <!-- Header for categories that are being blocked by current Enhanced Tracking Protection settings -->
@@ -1115,6 +1123,8 @@
 
     <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_description">Oprește încărcarea reclamelor, videoclipurilor și a altor conținuturi externe care conțin coduri de urmărire. Poate afecta anumite funcționalități ale site-ului.</string>
+    <!-- Enhanced Tracking Protection Onboarding Message shown in a dialog above the toolbar. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="etp_onboarding_cfr_message">Când scutul este violet, %s a blocat elemente de urmărire de pe un site. Atinge pentru mai multe informații.</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">Protecțiile sunt ACTIVE pentru acest site</string>
     <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
@@ -1136,6 +1146,8 @@
 
     <!-- About page link text to open support link -->
     <string name="about_support">Asistență</string>
+    <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
+    <string name="about_crashes">Defecțiuni</string>
     <!-- About page link text to open privacy notice link -->
     <string name="about_privacy_notice">Politică de confidențialitate</string>
     <!-- About page link text to open know your rights link -->
@@ -1271,6 +1283,13 @@
     <!-- Summary for Accessibility Force Enable Zoom Preference -->
     <string name="preference_accessibility_force_enable_zoom_summary">Activează permiterea apropierii/depărtării cu degetele pentru zoom, chiar și pe site-uri web care împiedică acest gest.</string>
 
+    <!-- Saved logins sorting strategy menu item -by name- (if selected, it will sort saved logins alphabetically) -->
+    <string name="saved_logins_sort_strategy_alphabetically">Denumire (A-Z)</string>
+    <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
+    <string name="saved_logins_sort_strategy_last_used">Folosite ultima dată</string>
+    <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Meniu de sortare a datelor de autentificare</string>
+
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Adaugă un motor de căutare</string>
     <!-- Title of the Edit search engine screen -->
@@ -1363,11 +1382,57 @@
     <string name="certificate_info_verified_by">Verificat de: %1$s</string>
     <!-- Login overflow menu delete button -->
     <string name="login_menu_delete_button">Șterge</string>
+    <!-- Login overflow menu edit button -->
+    <string name="login_menu_edit_button">Editează</string>
     <!-- Message in delete confirmation dialog for logins -->
     <string name="login_deletion_confirmation">Sigur vrei să ștergi aceste date de autentificare?</string>
     <!-- Positive action of a dialog asking to delete  -->
     <string name="dialog_delete_positive">Șterge</string>
 
+    <!--  The saved login options menu description. -->
+    <string name="login_options_menu">Opțiuni de autentificare</string>
+    <!--  The editable text field for a login's web address. -->
+    <string name="saved_login_hostname_description">Câmpul de text editabil pentru adresa web a datelor de autentificare.</string>
+    <!--  The editable text field for a login's username. -->
+    <string name="saved_login_username_description">Câmpul de text editabil pentru numele de utilizator al datelor de autentificare.</string>
+    <!--  The editable text field for a login's password. -->
+    <string name="saved_login_password_description">Câmp de text editabil pentru parola datelor de autentificare.</string>
+    <!--  The button description to save changes to an edited login. -->
+    <string name="save_changes_to_login">Salvează modificările datelor de autentificare.</string>
+    <!--  The button description to discard changes to an edited login. -->
+    <string name="discard_changes">Renunță la modificări</string>
+    <!--  The page title for editing a saved login. -->
+    <string name="edit">Editează</string>
+    <!--  The error message in edit login view when password field is blank. -->
+    <string name="saved_login_password_required">Necesită o parolă</string>
+    <!-- Voice search button content description  -->
+    <string name="voice_search_content_description">Căutare vocală</string>
+    <!-- Voice search prompt description displayed after the user presses the voice search button -->
+    <string name="voice_search_explainer">Vorbește acum</string>
+    <!--  The error message in edit login view when a duplicate username exists. -->
+    <string name="saved_login_duplicate">Există un set de date de autentificare cu acest nume de utilizator</string>
+
+    <!-- Synced Tabs -->
+    <!-- Text displayed when user is not logged into a Firefox Account -->
+    <string name="synced_tabs_connect_to_sync_account">Conectare cu un cont Firefox.</string>
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <string name="synced_tabs_connect_another_device">Conectează alt dispozitiv.</string>
+    <!-- Text displayed asking user to re-authenticate -->
+    <string name="synced_tabs_reauth">Te rugăm să te autentifici din nou.</string>
+    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <string name="synced_tabs_enable_tab_syncing">Te rugăm să activezi sincronizarea filelor.</string>
+    <!-- Text displayed when user has no tabs that have been synced -->
+    <string name="synced_tabs_no_tabs">Nu ai nicio filă deschisă în Firefox pe celelalte dispozitive.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_sign_in_message">Afișează o listă de file de pe celelalte dispozitive.</string>
+    <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
+    <string name="synced_tabs_sign_in_button">Autentifică-te în Sync</string>
+
+    <!-- Top Sites -->
+    <!-- Title text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_title">A fost atinsă limita de site-uri de top</string>
+    <!-- Content description text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_content">Pentru a adăuga un site de top nou, trebuie să elimini unul existent. Ține degetul pe denumirea site-ului pentru selectare și apoi atinge „Elimină”.</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">Ok, am înțeles</string>
 
