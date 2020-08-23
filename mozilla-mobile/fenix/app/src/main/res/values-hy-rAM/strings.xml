@@ -266,7 +266,7 @@
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Հարմարեցնել</string>
     <!-- Preference description for banner about signing in -->
-    <string name="preferences_sign_in_description">Համաժամեցեք էջանիշները, պատմությունը և ավելին ձեր Firefox հաշվի հետ</string>
+    <string name="preferences_sign_in_description">Համաժամեցրեք էջանիշները, պատմությունը և ավելին ձեր Firefox հաշվի հետ</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Firefox-ի հաշիվ</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
@@ -303,8 +303,13 @@
     <string name="preferences_account_settings">Հաշվի կարգավորումներ</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Բացել հղումները հավելվածներում</string>
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">Ներբեռնումների արտաքին հավելված</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">Հավելումներ</string>
+
+    <!-- Preference for notifications -->
+    <string name="preferences_notifications">Ծանուցումներ</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -571,6 +576,13 @@
     <string name="history_older">Ավելի հին</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Այստեղ պատմություն չկա</string>
+
+    <!-- Downloads -->
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message">Չկան նեևբեռնումներ</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">Ընտրված է %1$d-ը</string>
 
     <!-- Crashes -->
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
@@ -982,6 +994,8 @@
     <string name="onboarding_whats_new_description_linktext">Ստացեք պատասխանները այստեղ</string>
     <!-- text for the firefox account onboarding card header -->
     <string name="onboarding_firefox_account_header">Օգտագործեք առավելագույնը %s-ից:</string>
+    <!-- Text for the button to learn more about signing in to your Firefox account -->
+    <string name="onboarding_manual_sign_in_learn_more">Իմանալ ավելին</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
         another Firefox browser. (The word `Firefox` should not be translated)
         The first parameter is the email of the detected user's account -->
@@ -1033,8 +1047,8 @@
 
     <!-- text for the privacy notice onboarding card description
     The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_privacy_notice_description">Մենք պատրաստել ենք %s-ը, որպեսզի տանք Ձեզ հսկողություն սահմանելու այն ամենի նկատմամբ, ինչ որ համօգտագործում եք
-        առցանց և այն, ինչ դուք համօգտագործում եք մեզ հետ:</string>
+    <string name="onboarding_privacy_notice_description">Մենք պատրաստել ենք %s-ը, որպեսզի Ձեզ տանք հսկողություն սահմանելը այն ամենի նկատմամբ, ինչ որ համօգտագործում եք
+        առցանց և մեզ հետ:</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Կարդացեք մեր գաղտնիության ծանուցումը</string>
 
@@ -1253,7 +1267,7 @@
     <!-- Syncing saved logins in Fenix needs login -->
     <string name="preferences_passwords_sync_logins_sign_in">Մուտք գործեք՝ համաժամեցնելու համար</string>
     <!-- Preference to access list of saved logins -->
-    <string name="preferences_passwords_saved_logins">Պահպանված մուտքաանուններ</string>
+    <string name="preferences_passwords_saved_logins">Պահպանված մուտքագրումներ</string>
     <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
     <string name="preferences_passwords_saved_logins_description_empty_text">Ձեր պահպանած կամ համաժամեցրած մուտքանունները կցուցադրվեն այստեղ:</string>
     <!-- Preference to access list of saved logins -->
@@ -1288,7 +1302,7 @@
     <!-- Learn more link that will link to a page with more information displayed when a connection is insecure and we detect the user is entering a password -->
     <string name="logins_insecure_connection_warning_learn_more">Իմանալ ավելին</string>
     <!-- Prompt message displayed when Fenix detects a user has entered a password and user decides if Fenix should save it. The first parameter is the name of the application (For example: Fenix)  -->
-    <string name="logins_doorhanger_save">Ցանկանո՞ւմ եք, որ %s-ը պահպանի այս մուտքաանունը:</string>
+    <string name="logins_doorhanger_save">Ցանկանո՞ւմ եք, որ %s-ը պահպանի այս մուտքագրումը:</string>
     <!-- Positive confirmation that Fenix should save the new or updated login -->
     <string name="logins_doorhanger_save_confirmation">Պահպանել</string>
     <!-- Negative confirmation that Fenix should not save the new or updated login -->
@@ -1382,10 +1396,10 @@
     <string name="search_delete_search_engine_success_message">%s-ը ջնջվել է</string>
 
     <!-- Title text shown for the migration screen to the new browser. Placeholder replaced with app name -->
-    <string name="migration_title">Բարի գալուստ բոլորովին նոր %s</string>
+    <string name="migration_title">Բարի գալուստ նոր %s</string>
 
     <!-- Description text followed by a list of things migrating (e.g. Bookmarks, History). Placeholder replaced with app name-->
-    <string name="migration_description">Ամբողջովին վերափոխված դիտարկիչը Ձեզ է սպասում՝ բարելավված արտադրողականությամբ և յուրահատկություններով, որոնք կօգնեն ավելին անել առցանց:\n\nԽնդրում ենք սպասել, մինչ մենք կթարմացնենք %s-ը ձեր</string>
+    <string name="migration_description">Ամբողջովին վերափոխված դիտարկիչը Ձեզ է սպասում՝ բարելավված արտադրողականությամբ և յուրահատկություններով, որոնք կօգնեն անել ավելին առցանց:\n\nԽնդրում ենք սպասել, մինչ մենք կթարմացնենք %s-ի հետևյալ բաղադրիչները՝</string>
     <!-- Text on the disabled button while in progress. Placeholder replaced with app name -->
     <string name="migration_updating_app_button_text">%s-ը արդիացվում է…</string>
     <!-- Text on the enabled button. Placeholder replaced with app name-->
@@ -1471,6 +1485,9 @@
     <string name="synced_tabs_sign_in_message">Դիտեք այլ սարքերում ձեր ներդիրների ցանկը:</string>
     <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
     <string name="synced_tabs_sign_in_button">Մուտք գործեք՝ համաժամեցնելու համար</string>
+
+    <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
+    <string name="synced_tabs_no_open_tabs">Չկան բացված ներդիրներ</string>
 
     <!-- Top Sites -->
     <!-- Title text displayed in the dialog when top sites limit is reached. -->
