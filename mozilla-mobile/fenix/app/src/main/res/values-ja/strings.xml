@@ -46,6 +46,11 @@
     <!-- Content description announcement when exiting multiselect mode in tab tray -->
     <string name="tab_tray_exit_multiselect_content_description">複数選択モードを終了しました</string>
 
+    <!-- Content description announcement when entering multiselect mode in tab tray -->
+    <string name="tab_tray_enter_multiselect_content_description">複数選択モードです。コレクションの保存するタブを選択してください</string>
+    <!-- Content description on checkmark while tab is selected in multiselect mode in tab tray -->
+    <string name="tab_tray_multiselect_selected_content_description">選択</string>
+
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">%1$s は Mozilla の製品です。</string>
 
@@ -76,6 +81,28 @@
     <string name="search_widget_cfr_pos_button_text">ウィジェットを追加</string>
     <!-- Text for the negative button -->
     <string name="search_widget_cfr_neg_button_text">後で</string>
+
+    <!-- Open in App "contextual feature recommendation" (CFR) -->
+    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">アプリでリンクを自動的に開くように Firefox を設定できます。</string>
+    <!-- Text for the positive action button -->
+    <string name="open_in_app_cfr_positive_button_text">設定を開く</string>
+    <!-- Text for the negative action button -->
+    <string name="open_in_app_cfr_negative_button_text">閉じる</string>
+
+    <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
+    <string name="camera_permissions_needed_message">カメラへのアクセスが必要です。Android の設定から、権限をタップし、許可をタップしてください。</string>
+    <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
+    <string name="camera_permissions_needed_positive_button_text">設定を開く</string>
+    <!-- Text for the negative action button to dismiss the dialog. -->
+    <string name="camera_permissions_needed_negative_button_text">閉じる</string>
+
+    <!-- Text for the banner message to tell users about our auto close feature. -->
+    <string name="tab_tray_close_tabs_banner_message">開いたタブのうち、過去の一定期間表示されていないものを自動的に閉じるように設定します。</string>
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_close_tabs_banner_positive_button_text">オプションを表示</string>
+    <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
+    <string name="tab_tray_close_tabs_banner_negative_button_text">閉じる</string>
 
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
@@ -265,6 +292,8 @@
     <string name="preferences_toolbar">ツールバー</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">テーマ</string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home">ホーム画面</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">カスタマイズ</string>
     <!-- Preference description for banner about signing in -->
@@ -305,8 +334,13 @@
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">リンクをアプリで開く</string>
 
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">外部のダウンロードマネージャー</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">アドオン</string>
+
+    <!-- Preference for notifications -->
+    <string name="preferences_notifications">通知</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -468,6 +502,31 @@
     <string name="content_description_history_menu">履歴項目メニュー</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">閉じる</string>
+
+    <!-- Option in library for Recently Closed Tabs -->
+    <string name="library_recently_closed_tabs">最近閉じたタブ</string>
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">すべての履歴を表示</string>
+    <!-- Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tabs">%d 個のタブ</string>
+    <!-- Text to show users they have one tab saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tab">%d 個のタブ</string>
+    <!-- Recently closed tabs screen message when there are no recently closed tabs -->
+    <string name="recently_closed_empty_message">最近閉じたタブはありません</string>
+
+    <!-- Tab Management -->
+    <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
+    <string name="preferences_close_tabs">タブを閉じる期間</string>
+    <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
+    <string name="close_tabs_manually">手動</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one day -->
+    <string name="close_tabs_after_one_day">1 日後</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one week -->
+    <string name="close_tabs_after_one_week">1 週間後</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one month -->
+    <string name="close_tabs_after_one_month">1 か月後</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
