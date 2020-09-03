@@ -32,8 +32,18 @@
     <string name="tab_tray_add_new_collection_name">نام</string>
     <!-- Label of button in save to collection dialog for selecting a current collection  -->
     <string name="tab_tray_select_collection">انتخاب مجموعه</string>
+    <!-- Content description for close button while in multiselect mode in tab tray -->
+    <string name="tab_tray_close_multiselect_content_description">از حالت چند انتخابی خارج شوید</string>
+    <!-- Content description for save to collection button while in multiselect mode in tab tray -->
+    <string name="tab_tray_collection_button_multiselect_content_description">ذخیره‌سازی زبانه‌های انتخاب شده داخل مجموعه</string>
     <!-- Content description for checkmark while tab is selected while in multiselect mode in tab tray. The first parameter is the title of the tab selected -->
     <string name="tab_tray_item_selected_multiselect_content_description">%1$s انتخاب شد</string>
+    <!-- Content description when tab is unselected while in multiselect mode in tab tray. The first parameter is the title of the tab unselected -->
+    <string name="tab_tray_item_unselected_multiselect_content_description">انتخاب نشدند %1$s</string>
+    <!-- Content description announcement when exiting multiselect mode in tab tray -->
+    <string name="tab_tray_exit_multiselect_content_description">از حالت چند انتخابی خارج شوید</string>
+    <!-- Content description announcement when entering multiselect mode in tab tray -->
+    <string name="tab_tray_enter_multiselect_content_description">شما وارد حالت چند انتخابی شده‌اید،‌ جهت ذخیره‌ سازی زبانه ها در مجموعه آن‌ها را انتخاب کنید</string>
     <!-- Content description on checkmark while tab is selected in multiselect mode in tab tray -->
     <string name="tab_tray_multiselect_selected_content_description">انتخاب شده</string>
 
@@ -66,8 +76,28 @@
     <!-- Text for the negative button -->
     <string name="search_widget_cfr_neg_button_text">اکنون نه</string>
 
+    <!-- Open in App "contextual feature recommendation" (CFR) -->
+    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">می توانید Firefox را طوری تنظیم کنید تا پیوندها را به صورت خودکار در برنامه ها باز کند.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">برو به تنظیمات</string>
+
+    <!-- Text for the negative action button -->
+    <string name="open_in_app_cfr_negative_button_text">رد کردن</string>
+
+    <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
+    <string name="camera_permissions_needed_message">دسترسی به دوربین مورد نیاز است. به تنظیمات Android بروید ، روی مجوزها ضربه بزنید و روی اجازه ضربه بزنید.</string>
+    <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
+    <string name="camera_permissions_needed_positive_button_text">برو به تنظیمات</string>
+    <!-- Text for the negative action button to dismiss the dialog. -->
+    <string name="camera_permissions_needed_negative_button_text">رد کردن</string>
+
+    <!-- Text for the banner message to tell users about our auto close feature. -->
+    <string name="tab_tray_close_tabs_banner_message">زبانه‌های باز رو طوری تنظیم کنید که پس از چند روز، هفته یا ماه  عدم استفاه بسته شوند.</string>
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_close_tabs_banner_positive_button_text">دیدن گزینه‌ها</string>
+    <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
+    <string name="tab_tray_close_tabs_banner_negative_button_text">رد کردن</string>
 
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
@@ -252,6 +282,8 @@
     <string name="preferences_toolbar">نوار ابزار</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">زمینه</string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home">خانه</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">سفارشی‌سازی</string>
     <!-- Preference description for banner about signing in -->
@@ -291,8 +323,13 @@
     <string name="preferences_account_settings">تنظیمات حساب</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">پیوندها را در برنامه ها باز کنید</string>
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">  مدیریت بارگیری خارجی</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">افزونه‌ها</string>
+
+    <!-- Preference for notifications -->
+    <string name="preferences_notifications">اعلان‌ها</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -450,6 +487,19 @@
     <string name="content_description_history_menu">مورد تاریخ در فهرست</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">بستن</string>
+
+    <!-- Option in library for Recently Closed Tabs -->
+    <string name="library_recently_closed_tabs">زبانه‌های تازه بسته شده</string>
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">نمایش تمام تاریخچه</string>
+    <!-- Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tabs">زبانه‌های %d</string>
+    <!-- Text to show users they have one tab saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tab">زبانه‌ %d</string>
+    <!-- Recently closed tabs screen message when there are no recently closed tabs -->
+    <string name="recently_closed_empty_message">زبانه‌هایی که اخیرا بسته نشدند</string>
 
     <!-- Tab Management -->
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
@@ -741,6 +791,8 @@
     <string name="collections_header">مجموعه‌ها</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">فهرست مجموعه</string>
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description2">مواردی را که برای شما مهم هستند جمع آوری کنید.\nجستجوهای مشابه ، سایتها و برگه ها را با هم گروه کنید تا بعدا دسترسی سریع داشته باشید.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">انتخاب زبانه‌ها</string>
 
