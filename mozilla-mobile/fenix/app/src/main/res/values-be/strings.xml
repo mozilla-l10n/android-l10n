@@ -77,6 +77,9 @@
     <!-- Text for the negative button -->
     <string name="search_widget_cfr_neg_button_text">Не зараз</string>
 
+    <!-- Open in App "contextual feature recommendation" (CFR) -->
+    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">Вы можаце наладзіць Firefox аўтаматычна адкрываць спасылкі ў праграмах.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">Перайсці ў налады</string>
     <!-- Text for the negative action button -->
@@ -91,6 +94,8 @@
 
     <!-- Text for the banner message to tell users about our auto close feature. -->
     <string name="tab_tray_close_tabs_banner_message">Наладзіць аўтаматычнае закрыццё картак, якія не праглядаліся на працягу дня, месяца ці года.</string>
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_close_tabs_banner_positive_button_text">Паглядзець параметры</string>
     <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
     <string name="tab_tray_close_tabs_banner_negative_button_text">Адхіліць</string>
 
@@ -461,6 +466,29 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Закрыць</string>
 
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">Паказаць усю гісторыю</string>
+    <!-- Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tabs">%d карткі(-ак)</string>
+    <!-- Text to show users they have one tab saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tab">%d картка</string>
+    <!-- Recently closed tabs screen message when there are no recently closed tabs -->
+    <string name="recently_closed_empty_message">Тут няма нядаўна закрытых картак</string>
+
+    <!-- Tab Management -->
+    <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
+    <string name="preferences_close_tabs">Закрываць карткі</string>
+    <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
+    <string name="close_tabs_manually">Уручную</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one day -->
+    <string name="close_tabs_after_one_day">Праз дзень</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one week -->
+    <string name="close_tabs_after_one_week">Праз тыдзень</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one month -->
+    <string name="close_tabs_after_one_month">Праз месяц</string>
+
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Адкрытыя карткі</string>
@@ -481,6 +509,10 @@
     <string name="tab_tray_menu_item_save">Захаваць у калекцыі</string>
     <!-- Text shown in the menu for sharing all tabs -->
     <string name="tab_tray_menu_item_share">Падзяліцца ўсімі карткамі</string>
+    <!-- Text shown in the menu to view recently closed tabs -->
+    <string name="tab_tray_menu_recently_closed">Нядаўна закрытыя карткі</string>
+    <!-- Text shown in the menu to view tab settings -->
+    <string name="tab_tray_menu_tab_settings">Налады картак</string>
     <!-- Text shown in the menu for closing all tabs -->
     <string name="tab_tray_menu_item_close">Закрыць усе карткі</string>
     <!-- Shortcut action to open new tab -->
@@ -526,8 +558,13 @@
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">Выдаліць</string>
 
+    <!-- Text for the menu button to delete a top site from history -->
+    <string name="delete_from_history">Выдаліць з гісторыі</string>
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (Прыватны рэжым)</string>
+
+    <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
+    <string name="tab_tray_save_to_collection">Захаваць</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -569,6 +606,13 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Няма гісторыі</string>
 
+    <!-- Downloads -->
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message">Тут яшчэ няма спамповак</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">Вылучана: %1$d</string>
+
     <!-- Crashes -->
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">Выбачайце. %1$s не можа загрузіць гэтую старонку.</string>
@@ -596,6 +640,8 @@
     <string name="bookmark_select_folder">Выбраць папку</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">Вы ўпэўнены, што жадаеце выдаліць гэту папку?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s выдаліць вылучаныя элементы.</string>
     <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
     <string name="bookmark_delete_folder_snackbar">%1$s выдалена</string>
     <!-- Screen title for adding a bookmarks folder -->
@@ -662,6 +708,10 @@
     <string name="permissions_header">Дазволы</string>
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">Перайсці ў налады</string>
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">Панэль хуткіх налад</string>
     <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">Рэкамендуецца</string>
     <!-- button that allows editing site permissions settings -->
@@ -700,6 +750,8 @@
     <string name="tracking_protection_off">Выключана</string>
     <!-- Label that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Дазволіць гук і відэа</string>
+    <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Аўдыё і відэа будуць прайгравацца праз Wi-Fi</string>
     <!-- Label that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">Блакаваць толькі гук</string>
     <!-- Label that indicates that all video and audio autoplay is blocked -->
