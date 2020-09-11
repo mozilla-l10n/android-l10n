@@ -777,9 +777,17 @@
     <string name="preferences_delete_browsing_data_button">احذف بيانات التصفح</string>
     <!-- Title for the Delete browsing data on quit preference -->
     <string name="preferences_delete_browsing_data_on_quit">احذف بيانات التصفح عند المغادرة</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit">يحذف بيانات التصفح تلقائيا حين تنقر ”غادِر“ من القائمة الرئيسية</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">يحذف بيانات التصفح تلقائيا حين تنقر ”غادِر“ من القائمة الرئيسية</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
-    <string name="delete_browsing_data_on_quit_action">أغلِق</string>
+    <string name="delete_browsing_data_on_quit_action">غادِر</string>
 
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">سيحذف هذا كل بيانات تصفحك.</string>
+    <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
+    <string name="delete_browsing_data_prompt_message_3">سيحذف %s بيانات التصفح المحددّة.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">ألغِ</string>
     <!-- Text for the allow button for the data deletion dialog -->
@@ -789,6 +797,19 @@
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">يحذف بيانات التصفح…</string>
 
+    <!-- Tips -->
+    <!-- text for firefox preview moving tip header "Firefox Preview" and "Firefox Nightly" are intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_header">صار Firefox Preview الآن Firefox Nightly</string>
+    <!-- text for firefox preview moving tip button. "Firefox for Android Beta" is intentionally hardcoded -->
+    <string name="tip_firefox_preview_moved_button_2">نزّل نسخة Firefox لأندرويد التجريبية</string>
+
+    <!-- text for firefox preview moving tip button  -->
+    <string name="tip_firefox_preview_moved_button_preview_not_installed">نزّل النسخة الليلية الجديدة</string>
+
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome message
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_header">مرحبًا بك في %s!</string>
     <!-- text for the Firefox Accounts section header -->
     <string name="onboarding_fxa_section_header">ألديك حساب؟</string>
     <!-- text for the Firefox Preview feature section header
@@ -796,8 +817,12 @@
     <string name="onboarding_feature_section_header">تعرف على %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">اعرف ما الجديد</string>
+    <!-- text for the automatic sign-in button while signing in is in process -->
+    <string name="onboarding_firefox_account_signing_in">تَلج الآن…</string>
     <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">لِج إلى Firefox</string>
+    <!-- text to display in the snackbar once account is signed-in -->
+    <string name="onboarding_firefox_account_sync_is_on">التزامن يعمل</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">فشل الولوج</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
@@ -837,6 +862,10 @@
     <string name="sync_sent_tab_error_snackbar">تعذر الإرسال</string>
     <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
     <string name="sync_sent_tab_error_snackbar_action">أعِد المحاولة</string>
+    <!-- Instructions on how to access pairing -->
+    <string name="sign_in_instructions"><![CDATA[افتح Firefox على حاسوبك وانتقل إلى <b>https://firefox.com/pair</b>]]></string>
+    <!-- Text shown for settings option for sign with pairing -->
+    <string name="sign_in_with_camera">لِج باستخدام كمرتك</string>
     <!-- Text shown in confirmation dialog to sign out of account -->
     <string name="sign_out_confirmation_message">سيتوقف Firefox عن مزامنة حسابك، لكن لن يحذف أيًا من بيانات تصفحك على هذا الجهاز.</string>
     <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
@@ -902,6 +931,8 @@
     <string name="etp_cryptominers_title">المُعدّنات المعمّاة</string>
     <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_fingerprinters_title">مسجّلات البصمات</string>
+    <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_tracking_content_title">المحتوى الذي يتعقّبك</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">فُعّلت الحماية في هذا الموقع</string>
     <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
@@ -988,8 +1019,12 @@
     <string name="preferences_passwords_saved_logins_username">اسم المستخدم</string>
     <!-- The header for the password for a login -->
     <string name="preferences_passwords_saved_logins_password">كلمة السر</string>
+    <!-- Message displayed when a connection is insecure and we detect the user is entering a password -->
+    <string name="logins_insecure_connection_warning">هذا الاتصال ليس آمنا. بيانات الولوج المدخلة هنا عرضة للخطر.</string>
     <!-- Learn more link that will link to a page with more information displayed when a connection is insecure and we detect the user is entering a password -->
     <string name="logins_insecure_connection_warning_learn_more">اطّلع على المزيد</string>
+    <!-- Prompt message displayed when Fenix detects a user has entered a password and user decides if Fenix should save it. The first parameter is the name of the application (For example: Fenix)  -->
+    <string name="logins_doorhanger_save">أتريد أن يحفظ %s جلسة الولوج هذه؟</string>
     <!-- Positive confirmation that Fenix should save the new or updated login -->
     <string name="logins_doorhanger_save_confirmation">احفظ</string>
     <!-- Negative confirmation that Fenix should not save the new or updated login -->
@@ -1037,15 +1072,34 @@
     <!-- Text for the button to learn more about adding a custom search engine -->
     <string name="search_add_custom_engine_learn_more_label">اطّلع على المزيد</string>
 
+    <!-- Accessibility description for the 'Learn more' link -->
+    <string name="search_add_custom_engine_learn_more_description">رابط ”اطّلع على المزيد“</string>
+
     <!-- Text shown when a user leaves the name field empty -->
     <string name="search_add_custom_engine_error_empty_name">أدخِل اسم محرك البحث</string>
     <!-- Text shown when a user leaves the search string field empty -->
     <string name="search_add_custom_engine_error_empty_search_string">أدخِل نص البحث</string>
 
+    <!-- Text shown when a user creates a new search engine -->
+    <string name="search_add_custom_engine_success_message">أُنشئ %s</string>
+    <!-- Text shown when a user successfully edits a custom search engine -->
+    <string name="search_edit_custom_engine_success_message">حُفظ %s</string>
+    <!-- Text shown when a user successfully deletes a custom search engine -->
+    <string name="search_delete_search_engine_success_message">حُذف %s</string>
+
+    <!-- Text on the disabled button while in progress. Placeholder replaced with app name -->
+    <string name="migration_updating_app_button_text">يحدّث %s…</string>
     <!-- Text on the enabled button. Placeholder replaced with app name-->
     <string name="migration_update_app_button">ابدأ %s</string>
     <!--Text on list of migrated items (e.g. Settings, History, etc.)-->
     <string name="migration_text_passwords">كلمات السر</string>
+
+    <!-- Heading for the instructions to allow a permission -->
+    <string name="phone_feature_blocked_intro">لتسمح بالتصريح:</string>
+    <!-- First step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_settings">1. انتقل إلى إعدادات أندرويد</string>
+    <!-- Second step for the allowing a permission -->
+    <string name="phone_feature_blocked_step_permissions"><![CDATA[2. انقر <b>الأذونات</b>]]></string>
 
     <!-- Label that indicates a site is using a secure connection -->
     <string name="quick_settings_sheet_secure_connection">اتصال آمن</string>
@@ -1057,6 +1111,8 @@
     <string name="confirm_clear_permissions_site">أمتأكد من مسح كل الصلاحيات لهذا الموقع؟</string>
     <!-- Confirmation message for a dialog confirming if the user wants to set default value a permission for a site-->
     <string name="confirm_clear_permission_site">أمتأكد من مسح التصريح لهذا الموقع؟</string>
+    <!-- label shown when there are not site exceptions to show in the site exception settings -->
+    <string name="no_site_exceptions">ما من مواقع مستثناة</string>
     <!-- Browser menu button that adds a top site to the home fragment -->
     <string name="browser_menu_add_to_top_sites">أضِف للمواقع الشائعة</string>
     <!-- Login overflow menu delete button -->
