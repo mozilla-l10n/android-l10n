@@ -27,8 +27,28 @@
 
     <!-- Tab tray multi select title in app bar. The first parameter is the number of tabs selected -->
     <string name="tab_tray_multi_select_title">حدّدتَ %1$d</string>
+    <!-- Label of button in create collection dialog for creating a new collection  -->
+    <string name="tab_tray_add_new_collection">أضِف تجميعة جديدة</string>
     <!-- Label of editable text in create collection dialog for naming a new collection  -->
     <string name="tab_tray_add_new_collection_name">الاسم</string>
+
+    <!-- Label of button in save to collection dialog for selecting a current collection  -->
+    <string name="tab_tray_select_collection">اختر تجميعة</string>
+    <!-- Content description for close button while in multiselect mode in tab tray -->
+    <string name="tab_tray_close_multiselect_content_description">اخرج من وضع التحديد المتعدد</string>
+    <!-- Content description for save to collection button while in multiselect mode in tab tray -->
+    <string name="tab_tray_collection_button_multiselect_content_description">احفظ الألسنة المحدّدة في التجميعة</string>
+    <!-- Content description for checkmark while tab is selected while in multiselect mode in tab tray. The first parameter is the title of the tab selected -->
+    <string name="tab_tray_item_selected_multiselect_content_description">حدّدت %1$s</string>
+    <!-- Content description when tab is unselected while in multiselect mode in tab tray. The first parameter is the title of the tab unselected -->
+    <string name="tab_tray_item_unselected_multiselect_content_description">ألغيت تحديد %1$s</string>
+    <!-- Content description announcement when exiting multiselect mode in tab tray -->
+    <string name="tab_tray_exit_multiselect_content_description">خرجت من وضع التحديد المتعدد</string>
+    <!-- Content description announcement when entering multiselect mode in tab tray -->
+    <string name="tab_tray_enter_multiselect_content_description">دخلت وضع التحديد المتعدد، حدّد الألسنة لحفظها في تجميعة</string>
+
+    <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
+    <string name="about_content">%1$s من Mozilla.</string>
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
@@ -52,10 +72,27 @@
     <!-- Text for the negative button -->
     <string name="search_widget_cfr_neg_button_text">ليس الآن</string>
 
+    <!-- Open in App "contextual feature recommendation" (CFR) -->
+    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">يمكنك ضبط Firefox ليفتح الروابط في التطبيقات تلقائيا.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">انتقل إلى الإعدادات</string>
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">أهمِل</string>
+
+    <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
+    <string name="camera_permissions_needed_message">الوصول إلى الكمرة مطلوب. افتح إعدادات أندرويد، وانقر ”الأذونات“ ثم انقر ”سماح“.</string>
+    <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
+    <string name="camera_permissions_needed_positive_button_text">انتقل إلى الإعدادات</string>
+    <!-- Text for the negative action button to dismiss the dialog. -->
+    <string name="camera_permissions_needed_negative_button_text">أهمِل</string>
+
+    <!-- Text for the banner message to tell users about our auto close feature. -->
+    <string name="tab_tray_close_tabs_banner_message">اضبط الألسنة المفتوحة لتُغلق من تلقاء نفسها إن لم تُعرض منذ اليوم أو الأسبوع أو الشهر الماضي.</string>
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_close_tabs_banner_positive_button_text">خيارات المنظور</string>
+    <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
+    <string name="tab_tray_close_tabs_banner_negative_button_text">أهمِل</string>
 
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
@@ -150,6 +187,8 @@
     <!-- Button in the search view that lets a user search by scanning a QR code -->
     <string name="search_scan_button">امسح ضوئيًا</string>
 
+    <!-- Button in the search view that lets a user change their search engine -->
+    <string name="search_engine_button">محرّك البحث</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">إعدادات محرّك البحث</string>
     <!-- Header displayed when selecting a shortcut search engine -->
@@ -240,6 +279,10 @@
     <string name="preferences_toolbar">شريط الأدوات</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">السمة</string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home">صفحة البداية</string>
+    <!-- Preference for gestures based actions -->
+    <string name="preferences_gestures">الإيماءات</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">خصّص</string>
     <!-- Preference description for banner about signing in -->
@@ -260,6 +303,8 @@
     <string name="developer_tools_category">أدوات المطوّرين</string>
     <!-- Preference for developers -->
     <string name="preferences_remote_debugging">التنقيح عن بعد عبر USB</string>
+    <!-- Preference title for switch preference to show search engines -->
+    <string name="preferences_show_search_engines">اعرض محركات البحث</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">اعرض اقتراحات البحث</string>
     <!-- Preference title for switch preference to show voice search button -->
@@ -276,8 +321,13 @@
     <string name="preferences_account_settings">إعدادات الحساب</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">افتح الروابط في التطبيقات</string>
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">مدير التنزيل الخارجي</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">الإضافات</string>
+
+    <!-- Preference for notifications -->
+    <string name="preferences_notifications">التنبيهات</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
