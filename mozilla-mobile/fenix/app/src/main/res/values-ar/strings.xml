@@ -48,7 +48,7 @@
     <string name="tab_tray_enter_multiselect_content_description">دخلت وضع التحديد المتعدد، حدّد الألسنة لحفظها في تجميعة</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
-    <string name="about_content">%1$s من Mozilla.</string>
+    <string name="about_content">‏%1$s من Mozilla.</string>
 
     <!-- Private Browsing -->
     <!-- Title for private session option -->
@@ -444,6 +444,12 @@
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">اتبع سمة الجهاز</string>
 
+    <!-- Gestures Preferences-->
+    <!-- Preferences for using pull to refresh in a webpage -->
+    <string name="preference_gestures_website_pull_to_refresh">اسحب للإنعاش</string>
+    <!-- Preference for using the dynamic toolbar -->
+    <string name="preference_gestures_dynamic_toolbar">مرّر لإخفاء شريط الأدوات</string>
+
     <!-- Library -->
     <!-- Option in Library to open Sessions page -->
     <string name="library_sessions">الجلسات</string>
@@ -475,6 +481,25 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">أغلِق</string>
 
+    <!-- Option in library for Recently Closed Tabs -->
+    <string name="library_recently_closed_tabs">الألسنة المُغلقة حديثًا</string>
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">اعرض التأريخ كاملا</string>
+    <!-- Recently closed tabs screen message when there are no recently closed tabs -->
+    <string name="recently_closed_empty_message">ما من ألسنة أُغلقت حديثًا</string>
+
+    <!-- Tab Management -->
+    <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
+    <string name="preferences_close_tabs">إغلاق الألسنة</string>
+    <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
+    <string name="close_tabs_manually">يدويًا</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one day -->
+    <string name="close_tabs_after_one_day">بعد يوم واحد</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one week -->
+    <string name="close_tabs_after_one_week">بعد أسبوع واحد</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one month -->
+    <string name="close_tabs_after_one_month">بعد شهر واحد</string>
+
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">الألسنة المفتوحة</string>
@@ -494,6 +519,10 @@
     <string name="tab_tray_menu_item_save">احفظ في التجميعة</string>
     <!-- Text shown in the menu for sharing all tabs -->
     <string name="tab_tray_menu_item_share">شارِك كل الألسنة</string>
+    <!-- Text shown in the menu to view recently closed tabs -->
+    <string name="tab_tray_menu_recently_closed">الألسنة المُغلقة حديثًا</string>
+    <!-- Text shown in the menu to view tab settings -->
+    <string name="tab_tray_menu_tab_settings">إعدادات اللسان</string>
     <!-- Text shown in the menu for closing all tabs -->
     <string name="tab_tray_menu_item_close">أغلِق كل الألسنة</string>
     <!-- Shortcut action to open new tab -->
@@ -535,6 +564,10 @@
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">أزِل</string>
 
+    <!-- Text for the menu button to delete a top site from history -->
+    <string name="delete_from_history">احذف من التأريخ</string>
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">‏%1$s (الوضع الخاص)</string>
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">احفظ</string>
 
@@ -574,6 +607,16 @@
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">ما من تأريخ هنا</string>
 
+    <!-- Downloads -->
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message">لا تنزيلات هنا</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">حدّدتَ %1$d</string>
+
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">نأسف. يتعذر على %1$s تحميل هذه الصفحة.</string>
     <!-- Description text displayed on the tab crash page -->
     <string name="tab_crash_description">يمكنك محاولة استعادة اللسان أو إغلاقه أسفله.</string>
     <!-- Send crash report checkbox text on the tab crash page -->
@@ -598,6 +641,8 @@
     <string name="bookmark_select_folder">اختر مجلدًا</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">أمتأكّد من حذف هذا المجلد؟</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">سيحذف %s العناصر المحدّدة.</string>
     <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
     <string name="bookmark_delete_folder_snackbar">حُذف %1$s</string>
     <!-- Screen title for adding a bookmarks folder -->
@@ -715,10 +760,14 @@
     <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">التجميعات</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
+    <string name="collection_menu_button_content_description">قائمة التجميعات</string>
     <!-- Label to describe what collections are to a new user without any collections -->
     <string name="no_collections_description2">اجمع ما يهمّك.\nضَع عمليات البحث والمواقع والألسنة المتشابهة مع بعضها لتصل إليها لاحقا بسهولة.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">اختر الألسنة</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">اختر التجميعة</string>
     <!-- Title for the "name collection" step of the collection creator -->
     <string name="create_collection_name_collection">ضَع اسما للتجميعة</string>
     <!-- Button to add new collection for the "select collection" step of the collection creator -->
@@ -796,8 +845,14 @@
     <string name="snackbar_collection_deleted">حُذفت التجميعة</string>
     <!-- Text shown in snackbar when user renames a collection -->
     <string name="snackbar_collection_renamed">تغيّر اسم التجميعة</string>
+    <!-- Text shown in snackbar when user deletes a tab -->
+    <string name="snackbar_tab_deleted">حُذف اللسان</string>
+    <!-- Text shown in snackbar when user deletes all tabs -->
+    <string name="snackbar_tabs_deleted">حُذفت الألسنة</string>
     <!-- Text shown in snackbar when user closes a tab -->
     <string name="snackbar_tab_closed">أُغلق اللسان</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
+    <string name="snackbar_tabs_closed">أُغلقت الألسنة</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">أُغلق اللسان الخاص</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
