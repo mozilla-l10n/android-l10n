@@ -25,6 +25,11 @@
     <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
     <string name="open_tab_tray_plural">%1$s من الألسنة مفتوح. انقر لتبديل الألسنة.</string>
 
+    <!-- Tab tray multi select title in app bar. The first parameter is the number of tabs selected -->
+    <string name="tab_tray_multi_select_title">حدّدتَ %1$d</string>
+    <!-- Label of editable text in create collection dialog for naming a new collection  -->
+    <string name="tab_tray_add_new_collection_name">الاسم</string>
+
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">أنت في جلسة خاصة</string>
@@ -46,6 +51,11 @@
 
     <!-- Text for the negative button -->
     <string name="search_widget_cfr_neg_button_text">ليس الآن</string>
+
+    <!-- Text for the positive action button -->
+    <string name="open_in_app_cfr_positive_button_text">انتقل إلى الإعدادات</string>
+    <!-- Text for the negative action button -->
+    <string name="open_in_app_cfr_negative_button_text">أهمِل</string>
 
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
@@ -336,6 +346,8 @@
 
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">الاستخدام والبيانات التقنية</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">شارك بيانات المتصفح فيما يتعلق بالأداء و الاستخدام و العتاد و التخصيصات مع Mozilla لمساعدتنا في جعل %1$s أفضل</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">بيانات التسويق</string>
     <!-- Title for experiments preferences -->
@@ -609,6 +621,12 @@
     <string name="preference_phone_feature_camera">الكمرة</string>
     <!-- Preference for altering the microphone access for all websites -->
     <string name="preference_phone_feature_microphone">الميكروفون</string>
+    <!-- Preference for altering the location access for all websites -->
+    <string name="preference_phone_feature_location">المكان</string>
+    <!-- Preference for altering the notification access for all websites -->
+    <string name="preference_phone_feature_notification">التنبيهات</string>
+    <!-- Label that indicates that a permission must be asked always -->
+    <string name="preference_option_phone_feature_ask_to_allow">اطلب السماح</string>
     <!-- Label that indicates that a permission must be blocked -->
     <string name="preference_option_phone_feature_blocked">محجوبة</string>
     <!-- Label that indicates that a permission must be allowed -->
@@ -640,6 +658,10 @@
     <string name="create_collection_select_all">اختر الكل</string>
     <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_deselect_all">ألغِ تحديد الكل</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">حُفظت الألسنة!</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">حُفظ اللسان!</string>
     <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
     <string name="create_collection_close">أغلِق</string>
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
@@ -667,10 +689,14 @@
     <string name="sync_sign_in">لِج إلى «المزامنة»</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
     <string name="sync_send_to_all">أرسله إلى كل الأجهزة</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">أعِد الاتصال بالتزامن</string>
     <!-- Text displayed when sync is offline and cannot be accessed -->
     <string name="sync_offline">غير متصل</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">صِلْ جهازًا آخر</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">لِج إلى Firefox على جهاز واحد آخر على الأقل لإرسال لسان إليه.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">فهمت</string>
     <!-- Add new device screen title -->
@@ -686,10 +712,16 @@
     <!-- Notifications -->
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
     <string name="notification_pbm_channel_name">جلسة تصفح خاصة</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">حذف الألسنة الخاصة</string>
     <!-- Notification action to open Fenix and resume the current browsing session. -->
     <string name="notification_pbm_action_open">افتح</string>
     <!-- Text shown in snackbar when user closes a tab -->
     <string name="snackbar_tab_closed">أُغلق اللسان</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
+    <string name="snackbar_private_tabs_closed">أُغلقت الألسنة الخاصة</string>
+    <!-- Text shown in snackbar when user deletes all private tabs -->
+    <string name="snackbar_private_tabs_deleted">حُذفت الألسنة الخاصة</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">تراجَع</string>
     <!-- Text shown in snackbar when user removes a top site -->
@@ -698,16 +730,53 @@
     <string name="a11y_dialog_deleted_undo">تراجَع</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_confirm">أكّد</string>
+    <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
+    <string name="qr_scanner_dialog_positive">اسمح</string>
+    <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
+    <string name="qr_scanner_dialog_negative">ارفض</string>
+    <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
+    <string name="tab_collection_dialog_message">أمتأكّد من حذف %1$s؟</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">احذف</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">ألغِ</string>
 
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">تدخل وضع ملء الشاشة</string>
+    <!-- Message for copying the URL via long press on the toolbar -->
+    <string name="url_copied">نُسخ المسار</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">هذه عينة من نص، وتعرض لك شكل النص حين تزيد مقاسه باستعمال هذا الإعداد، أو تقلّله.</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">كبرّ أو صغّر مقاس النص على المواقع</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_font_size_title">حجم الخط</string>
 
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_2">غيّر مقاس النص تلقائيا</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">سيتطابق مقاس الخط مع إعدادات أندرويد. عطّل الإعداد لإدارة المقاس هنا.</string>
+
+    <!-- Title for the Delete browsing data preference -->
+    <string name="preferences_delete_browsing_data">حذف بيانات التصفح</string>
+    <!-- Title for the tabs item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_tabs_title_2">الألسنة المفتوحة</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">تأريخ التصفح وبيانات الموقع</string>
     <!-- Title for history items in Delete browsing data -->
     <string name="preferences_delete_browsing_data_browsing_history_title">التأريخ</string>
+    <!-- Title for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies">الكعكات</string>
+    <!-- Subtitle for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_subtitle">ستخرج من معظم المواقع</string>
+    <!-- Title for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files">الصور والملفات المخبّأة</string>
+    <!-- Title for the site permissions item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_site_permissions">تصاريح المواقع</string>
+    <!-- Text for the button to delete browsing data -->
+    <string name="preferences_delete_browsing_data_button">احذف بيانات التصفح</string>
+    <!-- Title for the Delete browsing data on quit preference -->
+    <string name="preferences_delete_browsing_data_on_quit">احذف بيانات التصفح عند المغادرة</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">أغلِق</string>
 
@@ -727,9 +796,6 @@
     <string name="onboarding_feature_section_header">تعرف على %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">اعرف ما الجديد</string>
-    <!-- text for the firefox account onboarding card header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_firefox_account_header">استغلّ %s إلى أقصى حد.</string>
     <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
     <string name="onboarding_firefox_account_sign_in">لِج إلى Firefox</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
@@ -1015,7 +1081,7 @@
     <string name="saved_login_duplicate">يوجد بالفعل جلسة ولوج باسم المستخدم هذا</string>
 
     <!-- Synced Tabs -->
-   <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
     <string name="synced_tabs_connect_another_device">صِلْ جهازا آخر.</string>
     <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">من فضلك فعّل مزامنة الألسنة.</string>
@@ -1026,9 +1092,11 @@
     <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
     <string name="synced_tabs_sign_in_button">لِج إلى «المزامنة»</string>
 
-    <!-- Content description text displayed in the dialog when top sites limit is reached. -->
-    <string name="top_sites_max_limit_content">لإضافة موقع شائع جديد، أزِل واحدًا. انقر مطولًا على الموقع واختر ”أزِل“.</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">حسنًا، فهمت</string>
 
-</resources>
+    <!-- depcrecated: text for the firefox account onboarding card header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_firefox_account_header">استغلّ %s إلى أقصى حد.</string>
+
+    </resources>
