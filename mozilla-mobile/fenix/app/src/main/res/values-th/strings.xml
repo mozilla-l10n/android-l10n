@@ -289,6 +289,8 @@
     <string name="preferences_theme">ชุดตกแต่ง</string>
     <!-- Preference for customizing the home screen -->
     <string name="preferences_home">หน้าแรก</string>
+    <!-- Preference for gestures based actions -->
+    <string name="preferences_gestures">ท่าทาง</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">ปรับแต่ง</string>
     <!-- Preference description for banner about signing in -->
@@ -325,6 +327,8 @@
     <string name="preferences_search_bookmarks">ค้นหาที่คั่นหน้า</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">การตั้งค่าบัญชี</string>
+    <!-- Preference for enabling url autocomplete-->
+    <string name="preferences_enable_autocomplete_urls">เติม URL อัตโนมัติ</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">เปิดลิงก์ในแอป</string>
 
@@ -461,6 +465,16 @@
     <string name="preference_auto_battery_theme">กำหนดโดยตัวประหยัดแบตเตอรี่</string>
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">ตามชุดตกแต่งอุปกรณ์</string>
+
+    <!-- Gestures Preferences-->
+    <!-- Preferences for using pull to refresh in a webpage -->
+    <string name="preference_gestures_website_pull_to_refresh">ดึงเพื่อรีเฟรช</string>
+    <!-- Preference for using the dynamic toolbar -->
+    <string name="preference_gestures_dynamic_toolbar">เลื่อนเพื่อซ่อนแถบเครื่องมือ</string>
+    <!-- Preference for switching tabs by swiping horizontally on the toolbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">ปัดแถบเครื่องมือไปด้านข้างเพื่อสลับแท็บ</string>
+    <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
+    <string name="preference_gestures_swipe_toolbar_show_tabs">ปัดแถบเครื่องมือไปด้านบนเพื่อเปิดแท็บ</string>
 
     <!-- Library -->
     <!-- Option in Library to open Sessions page -->
@@ -1048,6 +1062,10 @@
     <string name="onboarding_account_sign_in_header">เริ่มซิงค์ที่คั่นหน้า รหัสผ่าน และอื่น ๆ ด้วยบัญชี Firefox ของคุณ</string>
     <!-- Text for the button to learn more about signing in to your Firefox account -->
     <string name="onboarding_manual_sign_in_learn_more">เรียนรู้เพิ่มเติม</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated)
+        The first parameter is the email of the detected user's account -->
+    <string name="onboarding_firefox_account_auto_signin_header_3">คุณลงชื่อเข้าในชื่อ %s บนเบราว์เซอร์ Firefox อื่นบนอุปกรณ์นี้ คุณต้องการลงชื่อเข้าด้วยบัญชีนี้หรือไม่?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">ใช่ ให้ฉันลงชื่อเข้า</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
@@ -1290,6 +1308,9 @@
     <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">ชื่อทางลัด</string>
 
+    <!-- Describes the add to homescreen functionality -->
+    <string name="add_to_homescreen_description_2">คุณสามารถเพิ่มเว็บไซต์นี้ลงในหน้าจอหลักของอุปกรณ์ของคุณเพื่อเข้าถึงและเรียกดูได้เร็วขึ้นด้วยประสบการณ์ที่เหมือนแอป</string>
+
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">การเข้าสู่ระบบและรหัสผ่าน</string>
     <!-- Preference for managing the saving of logins and passwords in Fenix -->
@@ -1359,8 +1380,12 @@
     <string name="logins_site_copied">คัดลอกไซต์ไปยังคลิปบอร์ดแล้ว</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
     <string name="saved_logins_copy_password">คัดลอกรหัสผ่าน</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a password while editing a login-->
+    <string name="saved_logins_clear_password">ล้างรหัสผ่าน</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
     <string name="saved_login_copy_username">คัดลอกชื่อผู้ใช้</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
+    <string name="saved_login_clear_username">ล้างชื่อผู้ใช้</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">คัดลอกไซต์</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1536,6 +1561,8 @@
     <!-- Top Sites -->
     <!-- Title text displayed in the dialog when top sites limit is reached. -->
     <string name="top_sites_max_limit_title">ถึงขีดจำกัดของไซต์เด่นแล้ว</string>
+    <!-- Content description text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_content_2">การเพิ่มไซต์ยอดนิยมต้องลบอันเก่าออก แตะค้างที่ไซต์และเลือกลบ</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">ตกลง เข้าใจแล้ว</string>
 
@@ -1545,7 +1572,7 @@
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">ลบ</string>
 
-    <!-- depcrecated: text for the firefox account onboarding card header
+    <!-- Deprecated: text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">รับประโยชน์สูงสุดจาก %s</string>
 
