@@ -143,6 +143,8 @@
     <string name="browser_menu_install_on_homescreen">Инсталирај</string>
     <!-- Menu option on the toolbar that takes you to synced tabs page-->
     <string name="synced_tabs">Синхронизовани језичци</string>
+    <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
+    <string name="resync_button_content_description">Поново синхронизујте</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">Нађи на страници</string>
     <!-- Browser menu button that creates a private tab -->
@@ -267,6 +269,8 @@
     <string name="preferences_open_links_in_a_private_tab">Отварај везе у приватном језичку</string>
     <!-- Preference for allowing screenshots to be taken while in a private tab-->
     <string name="preferences_allow_screenshots_in_private_mode">Дозволи снимке екрана у приватном прегледању</string>
+    <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Ако је дозвољено, приватни језичци биће видљиви и кад је отворено више апликација</string>
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">Додајте пречицу за приватно прегледање</string>
     <!-- Preference for accessibility -->
@@ -287,6 +291,8 @@
     <string name="preferences_theme">Тема</string>
     <!-- Preference for customizing the home screen -->
     <string name="preferences_home">Почетна</string>
+    <!-- Preference for gestures based actions -->
+    <string name="preferences_gestures">Гестикулације</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Прилагоди</string>
     <!-- Preference description for banner about signing in -->
@@ -321,8 +327,12 @@
     <string name="preferences_search_browsing_history">Претражи историјат прегледања</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
     <string name="preferences_search_bookmarks">Претражи забелешке</string>
+    <!-- Preference title for switch preference to suggest synced tabs when searching -->
+    <string name="preferences_search_synced_tabs">Претражи синхронизоване језичке</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Подешавања налога</string>
+    <!-- Preference for enabling url autocomplete-->
+    <string name="preferences_enable_autocomplete_urls">Аутоматско завршавање адреса</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Отвори везе у апликацијама</string>
     <!-- Preference for open download with an external download manager app -->
@@ -459,6 +469,10 @@
     <string name="preference_auto_battery_theme">Постави у подешавањима за штедњу батерије</string>
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">Прати тему уређаја</string>
+
+    <!-- Gestures Preferences-->
+    <!-- Preferences for using pull to refresh in a webpage -->
+    <string name="preference_gestures_website_pull_to_refresh">Повуците да освежите</string>
 
     <!-- Library -->
     <!-- Option in Library to open Sessions page -->
@@ -1048,10 +1062,6 @@
     <string name="onboarding_account_sign_in_header">Почните са синхронизовањем забелешки, лозинки и других делова са вашим Firefox налогом.</string>
     <!-- Text for the button to learn more about signing in to your Firefox account -->
     <string name="onboarding_manual_sign_in_learn_more">Сазнајте више</string>
-    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated)
-        The first parameter is the email of the detected user's account -->
-    <string name="onboarding_firefox_account_auto_signin_header_2">Пријављени сте као %s у другом Firefox прегледачу, на овом телефону. Желите ли да се пријавите са тим налогом?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">Да, пријави ме</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
@@ -1299,9 +1309,6 @@
     <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">Назив пречице</string>
 
-    <!-- Describes the add to homescreen functionality -->
-    <string name="add_to_homescreen_description">Ову страницу можете лако додати на почетни екран вашег телефона за тренутни приступ и брже прегледање.</string>
-
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">Пријаве и лозинке</string>
     <!-- Preference for managing the saving of logins and passwords in Fenix -->
@@ -1528,7 +1535,7 @@
     <string name="saved_login_duplicate">Пријава са овим корисничким именом већ постоји</string>
 
     <!-- Synced Tabs -->
-   <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
     <string name="synced_tabs_connect_another_device">Повежите други уређај.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Поново потврдите идентитет.</string>
@@ -1548,8 +1555,6 @@
     <!-- Top Sites -->
     <!-- Title text displayed in the dialog when top sites limit is reached. -->
     <string name="top_sites_max_limit_title">Достигнуто је ограничење популарних страница</string>
-    <!-- Content description text displayed in the dialog when top sites limit is reached. -->
-    <string name="top_sites_max_limit_content">Да бисте додали нову популарну страницу, избришите постојећу. Дуже притисните страницу и одаберите уклањање.</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">Важи, разумем</string>
 
@@ -1559,7 +1564,7 @@
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Уклони</string>
 
-    <!-- depcrecated: text for the firefox account onboarding card header
+    <!-- Deprecated: text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Искористите %s у потпуности.</string>
 
@@ -1567,4 +1572,9 @@
     <string name="no_collections_header1">Сакупљајте ствари које су вам важне</string>
     <!-- Deprecated: Label to describe what collections are to a new user without any collections -->
     <string name="no_collections_description1">Групишите сличне претраге, странице и језичке за брз приступ касније.</string>
-</resources>
+    <!-- Deprecated: text for the firefox account onboarding card header when we detect you're already signed in to -->
+    <string name="onboarding_firefox_account_auto_signin_header_2">Пријављени сте као %s у другом Firefox прегледачу, на овом телефону. Желите ли да се пријавите са тим налогом?</string>
+    <!-- Deprecated: Describes the add to homescreen functionality -->
+    <string name="add_to_homescreen_description">Ову страницу можете лако додати на почетни екран вашег телефона за тренутни приступ и брже прегледање.</string>
+
+    </resources>
