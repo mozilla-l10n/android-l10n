@@ -15,6 +15,8 @@
     <string name="search_hint">ᱥᱮᱸᱫᱽᱨᱟ ᱵᱟᱝᱠᱷᱟᱱ ᱴᱷᱤᱠᱟᱹᱬᱟᱹ ᱠᱚ ᱟᱫᱮᱨ</string>
     <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">ᱟᱢᱟᱜ ᱠᱷᱩᱞᱟᱹ ᱟᱠᱟᱱ ᱴᱮᱵ ᱠᱚ ᱫᱚ ᱱᱚᱰᱮ ᱫᱮᱠᱷᱟᱣᱼᱜᱟ ᱾</string>
+    <!-- No Private Tabs Message Description -->
+    <string name="no_private_tabs_description">ᱟᱢᱟᱜ ᱱᱤᱡᱚᱨᱟᱜ ᱴᱮᱵ ᱠᱚ ᱫᱚ ᱱᱚᱱᱰᱮ ᱩᱫᱩᱜ ᱦᱩᱭᱩᱜ-ᱟ ᱾</string>
     <!-- Message announced to the user when tab tray is selected with 1 tab -->
     <string name="open_tab_tray_single">1 ᱴᱮᱵ ᱠᱷᱩᱞᱟᱹᱭ ᱢᱮ ᱾ ᱴᱮᱵ ᱵᱚᱫᱚᱞ ᱞᱟᱹᱜᱤᱫ ᱴᱤᱯᱟᱹᱣ ᱢᱮ ᱾</string>
     <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
@@ -33,6 +35,8 @@
     <string name="tab_tray_collection_button_multiselect_content_description">ᱵᱟᱪᱷᱟᱣᱠᱟᱱ ᱴᱮᱵ ᱠᱚ ᱛᱩᱢᱟᱹᱞ ᱡᱟᱨᱣᱟ ᱥᱟᱸᱪᱟᱣ ᱢᱮ</string>
     <!-- Content description for checkmark while tab is selected while in multiselect mode in tab tray. The first parameter is the title of the tab selected -->
     <string name="tab_tray_item_selected_multiselect_content_description">ᱵᱟᱪᱷᱟᱣᱮᱱᱟ %1$s</string>
+    <!-- Content description when tab is unselected while in multiselect mode in tab tray. The first parameter is the title of the tab unselected -->
+    <string name="tab_tray_item_unselected_multiselect_content_description">ᱵᱟᱝ ᱪᱚᱭᱚᱱᱟᱜ%1$s</string>
     <!-- Content description announcement when exiting multiselect mode in tab tray -->
     <string name="tab_tray_exit_multiselect_content_description">ᱵᱟᱹᱰ ᱟᱠᱟᱱᱟ ᱢᱟᱹᱴᱤᱥᱤᱞᱮᱼᱴ ᱢᱳᱰ</string>
     <!-- Content description announcement when entering multiselect mode in tab tray -->
@@ -131,13 +135,15 @@
     <!-- Browser menu button that opens a user's library -->
     <string name="browser_menu_library">ᱯᱩᱛᱷᱤ ᱚᱲᱟᱜ</string>
     <!-- Browser menu toggle that requests a desktop site -->
-    <string name="browser_menu_desktop_site">ᱰᱮᱥᱠᱴᱟᱸᱯ ᱥᱟᱭᱤᱴ</string>
+    <string name="browser_menu_desktop_site">ᱰᱮᱥᱠᱴᱟᱹᱯ ᱥᱟᱭᱤᱴ</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
-    <string name="browser_menu_add_to_homescreen">ᱚᱲᱟᱜ ᱤᱥᱠᱨᱤᱱ ᱨᱮ ᱥᱮᱞᱮᱫ ᱢᱮ</string>
+    <string name="browser_menu_add_to_homescreen">ᱚᱲᱟᱜ ᱥᱠᱨᱤᱱ ᱨᱮ ᱥᱮᱞᱮᱫ ᱢᱮ</string>
     <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
     <string name="browser_menu_install_on_homescreen">ᱵᱚᱦᱟᱞ ᱢᱮ</string>
     <!-- Menu option on the toolbar that takes you to synced tabs page-->
     <string name="synced_tabs">ᱥᱤᱸᱠᱼᱰ ᱴᱮᱵ ᱠᱚ </string>
+    <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
+    <string name="resync_button_content_description">ᱨᱭᱥᱤᱸᱠ</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">ᱥᱟᱦᱴᱟ ᱨᱮ ᱥᱮᱸᱫᱽᱨᱟᱭ ᱢᱮ</string>
     <!-- Browser menu button that creates a private tab -->
@@ -169,13 +175,17 @@
     <!-- Browser menu button to configure reader mode appearance e.g. the used font type and size -->
     <string name="browser_menu_read_appearance">ᱧᱮᱞ ᱵᱤᱰᱟᱹᱣ</string>
 
+    <!-- Error message to show when the user tries to access a scheme not
+        handled by the app (Ex: blob, tel etc) -->
+    <string name="unknown_scheme_error_message">ᱵᱟᱝ ᱡᱩᱲᱟᱹᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾ URL ᱥᱠᱤᱢ ᱵᱟᱝ ᱪᱤᱱᱦᱟᱹᱣ ᱫᱟᱲᱮᱞᱟᱱᱟ ᱾</string>
+
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
     <string name="a11y_selected_locale_content_description">ᱵᱟᱪᱷᱟᱣᱟᱠᱟᱱ ᱯᱟᱹᱨᱥᱤ</string>
     <!-- Content description for search icon -->
     <string name="a11y_search_icon_content_description">ᱥᱮᱸᱫᱽᱨᱟ</string>
     <!-- Text for default locale item -->
-    <string name="default_locale_text">ᱥᱟᱫᱷᱚᱱ ᱨᱮᱭᱟᱜ ᱯᱟᱹᱨᱥᱤ ᱯᱟᱸᱡᱟᱭ ᱢᱮ</string>
+    <string name="default_locale_text">ᱥᱟᱫᱷᱚᱱ ᱨᱮᱭᱟᱜ ᱯᱟᱹᱨᱥᱤ ᱯᱟᱸᱪᱟᱣ ᱢᱮ</string>
     <!-- Placeholder text shown in the search bar before a user enters text -->
     <string name="locale_search_hint">ᱯᱟᱹᱨᱥᱤ ᱥᱮᱸᱫᱽᱨᱟᱭ ᱢᱮ</string>
 
@@ -186,8 +196,21 @@
     <string name="search_engine_button">ᱥᱮᱸᱫᱽᱨᱟ ᱤᱱᱡᱤᱱ</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">ᱥᱮᱸᱫᱽᱨᱟᱭ ᱤᱱᱡᱤᱱ ᱥᱟᱡᱟᱣ ᱠᱚ</string>
+    <!-- Header displayed when selecting a shortcut search engine -->
+    <string name="search_engines_search_with">ᱱᱤᱭᱟᱹ ᱫᱷᱟᱣ, ᱱᱚᱶᱟ ᱛᱮ ᱥᱮᱸᱫᱽᱨᱟᱭ ᱢᱮᱺ</string>
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
-    <string name="awesomebar_clipboard_title">ᱠᱞᱤᱯᱵᱚᱰ ᱠᱷᱚᱱ ᱞᱤᱸᱠ ᱯᱮᱨᱮᱡ ᱢᱮ</string>
+    <string name="awesomebar_clipboard_title">ᱠᱞᱤᱯᱷᱵᱚᱰ ᱠᱷᱚᱱ ᱞᱤᱸᱠ ᱯᱮᱨᱮᱡ ᱢᱮ</string>
+
+    <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_allow_button">ᱦᱮᱥᱟᱨᱤᱭᱟᱹ</string>
+    <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_do_not_allow_button">ᱟᱞᱚ ᱢᱟᱸᱡᱩᱨᱮᱭᱟᱢ</string>
+    <!-- Search suggestion onboarding hint title text -->
+    <string name="search_suggestions_onboarding_title">ᱥᱮᱸᱫᱽᱨᱟ ᱥᱚᱞᱦᱟ ᱱᱤᱡᱮᱨᱟᱜ ᱚᱠᱛᱚ ᱨᱮ ᱵᱟᱛᱟᱣ ᱮᱢᱟᱢ ᱥᱮ?</string>
+    <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="search_suggestions_onboarding_text">ᱟᱢᱟᱜ ᱢᱩᱞ ᱥᱟᱸᱽᱨᱟ ᱤᱱᱡᱤᱱ ᱨᱮᱭᱟᱜ ᱴᱷᱤᱠᱬᱟ ᱵᱟᱨ ᱨᱮ ᱡᱟᱦᱟᱸ ᱜᱮ ᱚᱞᱟᱢ ᱚᱱᱟ ᱠᱚ %s ᱡᱷᱚᱛᱚ ᱦᱟᱹᱴᱤᱧᱟᱭ ᱾</string>
+    <!-- Search suggestion onboarding hint Learn more link text -->
+    <string name="search_suggestions_onboarding_learn_more_link">ᱰᱷᱮᱨ ᱥᱮᱬᱟᱭ ᱢᱮ</string>
 
     <!-- Search Widget -->
     <!-- Text preview for smaller sized widgets -->
@@ -200,6 +223,8 @@
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">ᱥᱟᱡᱟᱣ ᱠᱚ</string>
+    <!-- Preference category for basic settings -->
+    <string name="preferences_category_basics">ᱥᱟᱫᱷᱟᱨᱚᱬ</string>
     <!-- Preference category for general settings -->
     <string name="preferences_category_general">ᱥᱟᱫᱷᱟᱨᱚᱱ</string>
     <!-- Preference category for all links about Fenix -->
@@ -209,7 +234,7 @@
     <!-- Preference for settings related to Search -->
     <string name="preferences_search">ᱥᱮᱸᱫᱽᱨᱟ</string>
     <!-- Preference for settings related to Search address bar -->
-    <string name="preferences_search_address_bar">ᱴᱷᱤᱠᱟᱹᱱᱟ ᱦᱩᱨᱠᱟᱹᱲ</string>
+    <string name="preferences_search_address_bar">ᱴᱷᱤᱠᱟᱹᱱᱟ ᱦᱩᱨᱠᱟᱹᱬ</string>
     <!-- Preference linking to help about Fenix -->
     <string name="preferences_help">ᱜᱚᱲᱚ</string>
     <!-- Preference link to rating Fenix on the Play Store -->
@@ -223,26 +248,32 @@
     <string name="preferences_your_rights">ᱟᱢᱟᱜ ᱦᱚᱠ ᱠᱚ</string>
     <!-- Preference for settings related to saved passwords -->
     <string name="preferences_passwords">ᱫᱟᱱᱟᱝ ᱥᱟᱵᱟᱫ ᱠᱚ</string>
+    <!-- Preference for settings related to saved credit cards and addresses -->
+    <string name="preferences_credit_cards_addresses">ᱠᱨᱮᱰᱤᱴ ᱠᱟᱰ ᱠᱚ ᱟᱨ ᱴᱷᱤᱠᱚᱬᱟᱹ ᱠᱚ</string>
     <!-- Preference for settings related to changing the default browser -->
-    <string name="preferences_set_as_default_browser">ᱢᱩᱞ ᱵᱨᱟᱩᱡᱚᱨ ᱞᱮᱠᱟ ᱥᱟᱡᱟᱣ ᱢᱮ</string>
+    <string name="preferences_set_as_default_browser">ᱢᱩᱞ ᱵᱨᱟᱩᱡᱚᱨ ᱞᱮᱠᱷᱟ ᱥᱟᱡᱟᱣ ᱢᱮ</string>
     <!-- Preference category for advanced settings -->
-    <string name="preferences_category_advanced">ᱞᱟᱦᱟᱣᱟᱜ</string>
+    <string name="preferences_category_advanced">ᱞᱟᱦᱟᱱᱛᱤ</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">ᱱᱤᱡᱮᱨᱟᱜ</string>
     <!-- Preference category for privacy and security settings -->
-    <string name="preferences_category_privacy_security">ᱱᱤᱡᱮᱨᱟᱜ ᱟᱨ ᱡᱟᱹᱯᱛᱤ</string>
+    <string name="preferences_category_privacy_security">ᱱᱤᱡᱚᱨᱟᱜ ᱟᱨ ᱡᱟᱹᱯᱛᱤ</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions">ᱥᱟᱭᱤᱴ ᱨᱮᱭᱟᱜ ᱪᱷᱟᱰ ᱠᱚ</string>
     <!-- Preference for private browsing options -->
     <string name="preferences_private_browsing_options">ᱱᱤᱡᱮᱨᱟᱜ ᱯᱟᱱᱛᱮᱭᱟᱜ</string>
     <!-- Preference for opening links in a private tab-->
-    <string name="preferences_open_links_in_a_private_tab">ᱞᱤᱸᱠ ᱠᱚ ᱱᱤᱡᱮᱨᱟᱜ ᱴᱮᱵ ᱨᱮ ᱡᱷᱤᱜ ᱢᱮ</string>
+    <string name="preferences_open_links_in_a_private_tab">ᱞᱤᱸᱠ ᱠᱚ ᱱᱤᱡᱮᱨᱟᱜ ᱴᱮᱵ ᱨᱮ ᱡᱷᱤᱡ ᱢᱮ</string>
     <!-- Preference for allowing screenshots to be taken while in a private tab-->
     <string name="preferences_allow_screenshots_in_private_mode">ᱱᱤᱡᱮᱨᱟᱜ ᱯᱟᱱᱛᱮᱭᱟᱜ ᱨᱮ ᱤᱥᱠᱨᱤᱱᱥᱚᱴ ᱵᱟᱛᱟᱣ ᱮᱢ ᱢᱮ</string>
+    <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+    <string name="preferences_screenshots_in_private_mode_disclaimer">ᱡᱩᱫᱤ ᱢᱟᱸᱡᱩᱨ ᱮᱱᱟ, ᱯᱨᱟᱭᱣᱮᱴ ᱴᱮᱵ ᱠᱚ ᱫᱚ ᱧᱮᱞᱚᱜ ᱜᱮᱭᱟ ᱡᱩᱫᱤ ᱢᱟᱹᱞᱴᱤᱯᱟᱹᱞ ᱮᱯᱯ ᱠᱚ ᱠᱷᱩᱞᱟᱹ ᱛᱟᱦᱮᱸᱱᱟ</string>
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">ᱱᱤᱡᱮᱨᱟᱜ ᱯᱟᱱᱛᱮᱭᱟᱜ ᱠᱷᱟᱴᱚᱢᱟᱪᱷᱟ ᱥᱮᱞᱮᱫ ᱢᱮ</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">ᱟᱹᱛᱩᱨ ᱫᱟᱲᱮᱭᱟᱜ</string>
+    <!-- Preference to override the Firefox Account server -->
+    <string name="preferences_override_fxa_server">ᱠᱟᱹᱥᱴᱚᱢ Firefox  ᱠᱷᱟᱛᱟ ᱥᱟᱹᱨᱣᱟᱹᱨ</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">ᱠᱷᱟᱛᱟ</string>
     <!-- Preference shown on banner to sign into account -->
