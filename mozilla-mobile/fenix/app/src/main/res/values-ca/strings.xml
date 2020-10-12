@@ -144,6 +144,8 @@
     <string name="browser_menu_install_on_homescreen">Instal·la</string>
     <!-- Menu option on the toolbar that takes you to synced tabs page-->
     <string name="synced_tabs">Pestanyes sincronitzades</string>
+    <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
+    <string name="resync_button_content_description">Resincronitza</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">Cerca a la pàgina</string>
     <!-- Browser menu button that creates a private tab -->
@@ -270,6 +272,8 @@
     <string name="preferences_open_links_in_a_private_tab">Obre els enllaços en una pestanya privada</string>
     <!-- Preference for allowing screenshots to be taken while in a private tab-->
     <string name="preferences_allow_screenshots_in_private_mode">Permet les captures de pantalla en la navegació privada</string>
+    <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Si es permet, les pestanyes privades també seran visibles quan hi hagi diverses aplicacions obertes</string>
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">Afegeix una drecera de navegació privada</string>
     <!-- Preference for accessibility -->
@@ -290,6 +294,8 @@
     <string name="preferences_theme">Tema</string>
     <!-- Preference for customizing the home screen -->
     <string name="preferences_home">Inici</string>
+    <!-- Preference for gestures based actions -->
+    <string name="preferences_gestures">Gestos</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Personalitza</string>
     <!-- Preference description for banner about signing in -->
@@ -324,6 +330,8 @@
     <string name="preferences_search_browsing_history">Cerca en l’historial de navegació</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
     <string name="preferences_search_bookmarks">Cerca en les adreces d’interès</string>
+    <!-- Preference title for switch preference to suggest synced tabs when searching -->
+    <string name="preferences_search_synced_tabs">Cerca en les pestanyes sincronitzades</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Paràmetres del compte</string>
 
@@ -508,7 +516,6 @@
     <!-- Recently closed tabs screen message when there are no recently closed tabs -->
     <string name="recently_closed_empty_message">No hi ha cap pestanya tancada recentment</string>
 
-    <!-- Tab Management -->
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Tanca les pestanyes</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -1052,10 +1059,6 @@
     <string name="onboarding_account_sign_in_header">Comenceu a sincronitzar les adreces d’interès, les contrasenyes i molt més amb el vostre compte del Firefox.</string>
     <!-- Text for the button to learn more about signing in to your Firefox account -->
     <string name="onboarding_manual_sign_in_learn_more">Més informació</string>
-    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated)
-        The first parameter is the email of the detected user's account -->
-    <string name="onboarding_firefox_account_auto_signin_header_2">Ja heu iniciat la sessió com a %s en un altre navegador Firefox d’aquest telèfon. Voleu iniciar la sessió amb aquest compte?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">Sí, inicia la sessió</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
@@ -1298,9 +1301,6 @@
     <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">Nom de la drecera</string>
 
-    <!-- Describes the add to homescreen functionality -->
-    <string name="add_to_homescreen_description">Podeu afegir fàcilment aquest lloc web a la pantalla d’inici del telèfon per accedir-hi directament i navegar-hi com si fos una aplicació.</string>
-
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">Inicis de sessió i contrasenyes</string>
     <!-- Preference for managing the saving of logins and passwords in Fenix -->
@@ -1528,7 +1528,7 @@
     <string name="saved_login_duplicate">Ja existeix un inici de sessió amb aquest nom d’usuari</string>
 
     <!-- Synced Tabs -->
-   <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
     <string name="synced_tabs_connect_another_device">Connecteu un altre dispositiu.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">Torneu a autenticar-vos.</string>
@@ -1548,8 +1548,6 @@
     <!-- Top Sites -->
     <!-- Title text displayed in the dialog when top sites limit is reached. -->
     <string name="top_sites_max_limit_title">S’ha arribat al límit de llocs principals</string>
-    <!-- Content description text displayed in the dialog when top sites limit is reached. -->
-    <string name="top_sites_max_limit_content">Per afegir un lloc principal nou, primer cal que n’elimineu algun altre. Manteniu premut el lloc i seleccioneu eliminar-lo.</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">Entesos</string>
 
@@ -1559,7 +1557,7 @@
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Elimina</string>
 
-    <!-- depcrecated: text for the firefox account onboarding card header
+    <!-- Deprecated: text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Traieu tot el profit al %s.</string>
 
@@ -1567,4 +1565,9 @@
     <string name="no_collections_header1">Recolliu tot allò que us insteressa</string>
     <!-- Deprecated: Label to describe what collections are to a new user without any collections -->
     <string name="no_collections_description1">Agrupeu les cerques, els llocs i les pestanyes similars per accedir-hi ràpidament en el futur.</string>
+    <!-- Deprecated: text for the firefox account onboarding card header when we detect you're already signed in to -->
+    <string name="onboarding_firefox_account_auto_signin_header_2">Ja heu iniciat la sessió com a %s en un altre navegador Firefox d’aquest telèfon. Voleu iniciar la sessió amb aquest compte?</string>
+    <!-- Deprecated: Describes the add to homescreen functionality -->
+    <string name="add_to_homescreen_description">Podeu afegir fàcilment aquest lloc web a la pantalla d’inici del telèfon per accedir-hi directament i navegar-hi com si fos una aplicació.</string>
+
     </resources>
