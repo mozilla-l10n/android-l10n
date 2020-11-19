@@ -102,6 +102,13 @@
          opens a dialog box that contains privacy and security related settings. -->
     <string name="settings_privacy_security">隱私權與安全性</string>
 
+    <!-- This string is used to label a button in the 'Saved Logins' dialog window that, when pressed,
+         opens a dialog box that contains a list of saved logins. -->
+    <string name="settings_privacy_saved_logins">儲存的登入資訊</string>
+
+    <!-- This string is used inm the title of the settings panel for the Logins and Passwords management. -->
+    <string name="settings_privacy_logins">登入資訊與密碼</string>
+
     <!-- This string is used to label a button that, when pressed, loads a website that
          describes Mozilla's Privacy Policy. -->
     <string name="settings_privacy_policy">隱私權保護政策</string>
@@ -139,6 +146,19 @@
 
     <!-- This string labels the Reset button that removes all the sites not allowed to access WebXR -->
     <string name="settings_privacy_policy_tracking_reset">重設對加強型追蹤保護的例外。</string>
+
+    <!-- This string is used as the title of the Tracking dialog used to do not allow websites to bypass tracking protection. -->
+    <string name="settings_privacy_policy_login_exceptions_title">登入例外</string>
+
+    <!-- This string is displayed under the title the  Tracking dialog used to do not allow websites to bypass tracking protection. -->
+    <string name="settings_privacy_policy_login_exceptions_description">不儲存登入資訊的網站將顯示於此處</string>
+
+    <!-- This string is displayed in the first line of a text that's displayed in the middle of the etp exceptions instead of the exceptions list
+     when there are no exceptions. -->
+    <string name="settings_privacy_policy_login_exceptions_empty_description">不儲存登入資訊的網站將顯示於此處。</string>
+
+    <!-- This string labels the Reset button that removes all the sites not allowed to access WebXR -->
+    <string name="settings_privacy_policy_login_exceptions_reset">重設登入資訊例外網站。</string>
 
     <!-- This string is displayed in the switch of each item of the the pop-up blocking list when the site is allowed. -->
     <string name="pop_up_site_switch_allow">允許</string>
@@ -193,7 +213,8 @@
     <!-- This string is used to label a text label that appears in the header of 'Language Settings' ->
          'Firefox Display Language' dialog window (accessible from the browser's Settings dialog window).
          Below this string appears a list of locales for the user to choose as their preferred display
-         language for the application UI. -->
+         language for the application UI.
+         '%1$s' Will be replaced at runtime with the app name. -->
     <string name="settings_language_choose_display_language_title">%1$s 顯示語言</string>
 
     <!-- This string is used to label a text label that appears in the header description of 'Language Settings' ->
@@ -224,7 +245,9 @@
          Below this string appears a list of locales for the user to choose as their preferred languages for web content. -->
     <string name="settings_language_choose_language_content_description">一張網頁有時候會有不同語言的版本，請將要顯示的語言版本順序放到左方。</string>
 
-    <!-- The string is used in the keyboard space bar to show the current keyboard language and in
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'English (US)'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
     the keyboard languages panel list. -->
     <string name="settings_language_english">英語（美國）</string>
 
@@ -641,6 +664,9 @@
     <!-- This string is used to in the FxA account manage panel as a description for the History sync switch. -->
     <string name="fxa_account_options_history_sync">瀏覽紀錄</string>
 
+    <!-- This string is used to in the FxA account manage panel as a description for the Logins sync switch. -->
+    <string name="fxa_account_options_logins_sync">登入資訊</string>
+
     <!-- This string is used to in the FxA account manage panel as a description for the Sign In/Out button. -->
     <string name="fxa_account_options_reset">重設</string>
 
@@ -667,7 +693,8 @@
     <string name="fxa_account_last_sync_error">同步錯誤</string>
 
     <!-- This string is used to in the Library panels to the left of the sync button to indicate
-         when that the content was just synced some time ago. -->
+         when that the content was just synced some time ago.
+         '%1$s' Will be replaced at runtime with the minutes since the last sync. -->
     <string name="fxa_account_last_synced">最近同步: %1$d 分鐘前</string>
 
         <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
@@ -682,6 +709,33 @@
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
      and is used to enable or disable the address bar autocomplete. -->
     <string name="security_options_autocomplete">網址列自動完成</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Logins And Passwords settings dialog
+     and is used to enable or disable logins and passwords saving. If disabled the user won't be prompted
+     when a new login/password pair is eligible to be saved by the browser -->
+    <string name="security_options_login_save">儲存登入資訊與密碼</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Logins And Passwords settings dialog
+     and is used to enable or disable login auto-fill. If disabled the logins forms won't be auto-filled. -->
+    <string name="security_options_login_autofill">自動填寫</string>
+
+    <!-- This string labels an Allow/Don't Allow switch in the Logins And Passwords settings dialog
+     and is used to enable or disable login sync with Firefox Account. If disabled the logins
+     won't be synced with the Firefox Account. -->
+    <string name="security_options_login_sync">使用 Firefox 帳號同步登入資訊</string>
+
+    <!-- This string labels a button in the Logins And Passwords settings dialog
+     that when clicked opens the Firefox Accounts settings panel. -->
+    <string name="security_options_login_fxa">帳號…</string>
+
+    <!-- This string labels a button in the Logins And Passwords settings dialog
+     that when clicked opens the saved logins panel which lists all the stored logins/password entries. -->
+    <string name="security_options_login_saved">已存登入資訊…</string>
+
+    <!-- This string labels a button in the Logins And Passwords settings dialog
+     that when clicked opens the login exceptions panel which lists all the save login exceptions
+     that are added when clicking on the "Never Save" button in the login save dialog. -->
+    <string name="security_options_login_exceptions">例外網站…</string>
 
     <!-- This string labels an On/Off switch in the Privacy and Security settings dialog
      and is used to enable or disable tracking protection. -->
@@ -743,19 +797,23 @@
     <string name="security_options_webxr_settings">進階</string>
 
     <!-- This string is a label above the group of switches that indicates that the switches below
-         relate to Firefox data collection and use. -->
+         relate to Firefox data collection and use.
+         '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_speech_data_collection_title">%1$s 資料收集與使用</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to collect speech data. -->
+     and is used to enable or disable permission to collect speech data.
+     '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_speech_data_collect">允許 %1$s 收集語音資料</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to collect telemetry data. -->
+     and is used to enable or disable permission to collect telemetry data.
+     '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_telemetry_send_data">允許 %1$s 傳送技術與互動資料給 Mozilla</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to send crash reports. -->
+     and is used to enable or disable permission to send crash reports.
+     '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_crash_reports_send_data">允許 %1$s 為您傳送錯誤報告</string>
 
     <!-- This string is displayed below the On/Off switch to indicate a switch's current state as 'On'. -->
@@ -1050,6 +1108,46 @@
          When pressed the download list is sorted in download date descending order. -->
     <string name="downloads_sort_download_size_desc">最大</string>
 
+    <!-- This string is displayed in the middle of the addons list while the addons is being loaded. -->
+    <string name="addons_title">附加元件</string>
+
+    <!-- This string is displayed in the title bar when a web extension session is displayed. -->
+    <string name="web_extensions_title">Web Extension</string>
+
+    <!-- This string is displayed in the middle of the addons list while the addons is being loaded. -->
+    <string name="addons_loading">正在載入附加元件</string>
+
+    <!-- This string is displayed under the addons title in the addons list. -->
+    <string name="addons_description">附加元件描述</string>
+
+    <!-- This string is displayed in the Addon Details description text when no description is available. -->
+    <string name="addons_no_description">無描述</string>
+
+    <!-- This string is displayed in the Addon Details authors property text. -->
+    <string name="addons_authors_title">作者</string>
+
+    <!-- This string is displayed as the Addon Details authors property text value when no authors available. -->
+    <string name="addons_no_authors">無作者</string>
+
+    <!-- This string is displayed in the Addon Details version property text. -->
+    <string name="addons_version_title">版本</string>
+
+    <!-- This string is displayed in the Addon Details last updated property text. -->
+    <string name="addons_last_updated_title">最近更新</string>
+
+    <!-- This string is displayed in the Addon Details homepage property text. -->
+    <string name="addons_homepage_title">首頁</string>
+
+    <!-- This string is displayed in the Addon Details rating property text. -->
+    <string name="addons_rating_title">評分</string>
+
+    <!-- This string is for the tooltip that appears upon hovering the 'Close' button in the addons panel.
+         'Close' refers to closing the Addons panel and showing the latest active tab. -->
+    <string name="addons_close_tooltip">關閉附加元件</string>
+
+    <!-- This string is displayed in the Addon Details enable/disable switch text that determines the global status of the Addon when the addon is enabled. -->
+    <string name="addons_details_enabled">啟用</string>
+
     <!-- This string is displayed is the "Sync" button in the history panel. When pressed the
          history is synced with the Firefox account. -->
     <string name="fxa_sync">Sync</string>
@@ -1062,10 +1160,6 @@
 
     <!-- This string is displayed in the body of the FxA sign out dialog displayed when the user clicks on the Sign out button. -->
     <string name="fxa_signout_confirmation_body">登出後，就無法傳送分頁或收到來自其他裝置的分頁，也會停止同步書籤與上網紀錄。</string>
-
-    <!-- This string is displayed in the checkbox text of the FxA sign out dialog displayed when the user clicks on the Sign out button.
-         When checked the history and Bookmarks will be deleted from gthe device after signing in. -->
-    <string name="fxa_signout_confirmation_checkbox">清除此裝置上的瀏覽紀錄與書籤</string>
 
     <!-- This string is displayed in the cancel button of the FxA sign out dialog displayed when the user clicks on the Sign out button.
          If clicked the user will be signed out from their FxA account and the dialog will be dismissed. -->
@@ -1501,7 +1595,8 @@
     <string name="performance_message">目前頁面影響效能，已經暫停運作。縮小視窗大小，可幫助改善效能不佳的頁面。</string>
 
     <!-- This string is displayed in the title of the Voice Search samples collect dialog. That dialog is shown the first time
-         a user tries to use the voice search. -->
+         a user tries to use the voice search.
+         '%1$s' Will be replaced at runtime with the app name. -->
     <string name="voice_samples_collect_data_dialog_title">要允許 %1$s 收集語音樣本進行研究嗎？</string>
 
     <!-- This string is displayed in the description of the Voice Search samples collect dialog. That dialog is shown the first time
@@ -1855,4 +1950,4 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is shown in the title of the error dialog displayed if there is any error during an environment setup. -->
     <string name="environment_error_title">環境錯誤</string>
 
-</resources>
+    </resources>
