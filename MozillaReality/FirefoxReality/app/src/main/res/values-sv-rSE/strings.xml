@@ -1112,6 +1112,9 @@
     <!-- This string is displayed in the middle of the addons list while the addons is being loaded. -->
     <string name="addons_title">Tillägg</string>
 
+    <!-- This string is displayed in the title bar when a web extension session is displayed. -->
+    <string name="web_extensions_title">Web Extension</string>
+
     <!-- This string is displayed in the middle of the addons list while the addons is being loaded. -->
     <string name="addons_loading">Laddar tillägg</string>
 
@@ -1167,6 +1170,10 @@
     <!-- This string is displayed in the Addon install dialog title text. This dialog is displayed when an addon is installed.
      %1$s will be replaced by the add-on name -->
     <string name="addons_install_dialog_title">Lägg till %1$s?</string>
+
+    <!-- This string is displayed in the Addon install dialog body text and it will list the permissions that the addon requires. This dialog is displayed when an addon is installed.
+     %1$s will be replaced by the permissions list-->
+    <string name="addons_install_dialog_body"><![CDATA[<p ALIGN=LEFT>Det kräver din tillåtelse att:<ul>%1$s</ul></p>]]></string>
 
     <!-- This string is displayed in the Addon install dialog "Cancel"" button, when pressed the dialog will be dismissed and the Addon install will be canceled.
     This dialog is displayed when an addon is installed. -->
@@ -1341,6 +1348,15 @@
          when there are no saved logins. -->
     <string name="privacy_options_saved_logins_list_empty_second">En lista över sparade inloggningar visas här.</string>
 
+    <!-- This string labels the Reset button that restores the default saved logins settings values. -->
+    <string name="privacy_options_saved_logins_reset">Återställ sparade inloggningsinställningar</string>
+
+    <!-- This string labels the Clear All button that removes all the saved logins from the stored saved logins. -->
+    <string name="privacy_options_saved_logins_clear_all">Rensa alla</string>
+
+    <!-- This string labels the Delete button from the Login edit dialog deletes the current login. -->
+    <string name="privacy_options_saved_login_delete">Ta bort</string>
+
     <!-- This string is used to label radio buttons for setting ETP in.
          '%1$' Will be replaced at runtime with the Learn More url for ETP. -->
     <string name="privacy_options_tracking"><![CDATA[Förbättrat spårningsskydd. (<a href="%1$s">Läs mer</a>)]]></string>
@@ -1348,6 +1364,12 @@
     <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
          Tracking protection exceptions. -->
     <string name="privacy_options_tracking_exceptions_v1">Avancerat</string>
+
+    <!-- This string labels the description of the button in the privacy option panel that opens the dialog to manage the logins and passwords. -->
+    <string name="privacy_options_logins">Inloggningar och lösenord</string>
+
+    <!-- This string labels the button in the privacy option panel that opens the dialog to manage the logins and passwords. -->
+    <string name="privacy_options_logins_button">Avancerat</string>
 
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">Återställ kontrollinställningar</string>
@@ -1617,6 +1639,14 @@
          tray and the Downloads view is closed. The button it labels, when pressed, closes the Downloads view. -->
     <string name="close_downloads_tooltip">Stäng hämtningar</string>
 
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Library' icon in the
+         tray and the Library view is closed. The button it labels, when pressed, opens the library panel. -->
+    <string name="open_library_tooltip">Öppna biblioteket</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Library' icon in the
+         tray and the Library view is closed. The button it labels, when pressed, closes the Library panel. -->
+    <string name="close_library_tooltip">Stäng biblioteket</string>
+
     <!-- This string is for the tooltip that appears when the user hovers over the 'What's New' icon in the
          Navigation Bar. The button it labels, when pressed, open the release notes page. -->
     <string name="whats_new_tooltip">Vad är nytt</string>
@@ -1727,6 +1757,12 @@
     <!-- This string is displayed in the URL bar when the user is in the downloads panel -->
     <string name="url_downloads_title">Hämtningar</string>
 
+    <!-- This string is displayed in the URL bar when the user is in the addons panel -->
+    <string name="url_addons_title">Tillägg</string>
+
+    <!-- This string is displayed in the URL bar when the user is in the Library panel -->
+    <string name="url_library_title">Bibliotek</string>
+
     <!-- This string is displayed in the Clear button on top of the window when in private mode. It only appears
          when there is one window left. When clicked, it closes the private session -->
     <string name="private_clear_button">Rensa</string>
@@ -1815,6 +1851,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
          it opens the window resize panel -->
     <string name="hamburger_menu_resize">Ändra fönsterstorlek</string>
+
+    <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
+         it opens the addons panel -->
+    <string name="hamburger_menu_addons">Tillägg</string>
 
     <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
          it switches User Agent from desktop to mobile and vice versa -->
@@ -2050,4 +2090,66 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is shown in the title of the error dialog displayed if there is any error during an environment setup. -->
     <string name="environment_error_title">Miljöfel</string>
 
-    </resources>
+    <!-- This string is shown in the title of the auto-fill save dialog. This dialog is displayed when the user send a login form and the system
+    prompts the user to save that login to auto-fill the future. -->
+    <string name="autofill_dialog_save_title">Spara den här inloggningen?</string>
+
+    <!-- This string is shown in the "Save" button of the auto-fill login save dialog. When pressed this will save the login information into the storage. -->
+    <string name="autofill_dialog_save_button_text">Spara</string>
+
+    <!-- This string is shown in the "Never Save" button of the auto-fill llgin save dialog. When pressed this won't save the login information into the storage and also
+    add an exception rule so the user is not prompted in the future for that site. -->
+    <string name="autofill_dialog_never_save_button_text">Spara aldrig</string>
+
+    <!-- This string is shown in the "username" field name of the auto-fill login save dialog. -->
+    <string name="autofill_dialog_save_username_text">Användarnamn</string>
+
+    <!-- This string is shown in the "password" field name of the auto-fill login save dialog. -->
+    <string name="autofill_dialog_save_password_text">Lösenord</string>
+
+    <!-- This string is shown in the title of the select login dialog. -->
+    <string name="autofill_dialog_use_login_title_text">Använd sparad inloggning</string>
+
+    <!-- This string is shown in the "settings" button of the select login dialog. When pressed the saved logins settings panel would be displayed.-->
+    <string name="autofill_dialog_use_login_settings_button">Inställningar…</string>
+
+    <!-- This string is shown in the saved logins list items for autogenerated logins.-->
+    <string name="autofill_item_autogenerated">Autogenererad</string>
+
+    <!-- This string is shown inside the "Open" button of the edit login dialog. When pressed the site URL is opened.-->
+    <string name="login_edit_dialog_site_button">Öppna</string>
+
+    <!-- This string is shown in the "Open" button description of the edit login dialog. -->
+    <string name="login_edit_dialog_site_description">Webbplats</string>
+
+    <!-- This string is shown as the description that is shown in front of the the username input field in the login edit dialog. -->
+    <string name="login_edit_dialog_username_description">Användarnamn</string>
+
+    <!-- This string is shown as the description that is shown in front of the the password input field in the login edit dialog. -->
+    <string name="login_edit_dialog_password_description">Lösenord</string>
+
+    <!-- This string is shown under the password text edit in the Login edit dialog when the password is left empty. -->
+    <string name="login_edit_password_empty_error">Lösenordet kan inte vara tomt</string>
+
+    <!-- This string is displayed in any edit text field where the value should be a username. -->
+    <string name="username_hint">användarnamn</string>
+
+    <!-- This string is displayed in any edit text field where the value should be a password. -->
+    <string name="password_hint">lösenord</string>
+
+    <!-- This string is shown in the tooltip of the wifi icon in the tray whenever WiFi is not connected to a WiFi network. -->
+    <string name="tray_wifi_no_connection">Ingen anslutning</string>
+
+    <!-- This string is shown in the tooltip of the left controller status bar icon when hovered.
+    '%1$s' Will be replaced at runtime with the left controller battery level. -->
+    <string name="tray_status_left_controller">Vänster styrenhet: %1$s</string>
+
+    <!-- This string is shown in the tooltip of the right controller status bar icon when hovered.
+    '%1$s' Will be replaced at runtime with the right controller battery level. -->
+    <string name="tray_status_right_controller">Höger styrenhet: %1$s</string>
+
+    <!-- This string is shown in the tooltip of the headset status bar icon when hovered.
+    '%1$s' Will be replaced at runtime with headset battery level. -->
+    <string name="tray_status_headset">Headset: %1$s</string>
+
+</resources>
