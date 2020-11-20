@@ -1141,6 +1141,10 @@
     <!-- This string is displayed in the Addon Details rating property text. -->
     <string name="addons_rating_title">Voto</string>
 
+    <!-- This string is for the tooltip that appears upon hovering the 'Close' button in the addons panel.
+         'Close' refers to closing the Addons panel and showing the latest active tab. -->
+    <string name="addons_close_tooltip">Chiudi i componenti aggiuntivi</string>
+
     <!-- This string is displayed in the Addon Details enable/disable switch text that determines the global status of the Addon when the addon is enabled. -->
     <string name="addons_details_enabled">Attivo</string>
 
@@ -1186,6 +1190,16 @@
     This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
     <string name="addons_downloading_dialog_cancel">Annulla</string>
 
+    <!-- This string is displayed in the Addon downloaded dialog title text.
+    This dialog is displayed after the addon downloading dialog if the addon has been successfully installed.
+    '%1$s' will be replaced at runtime with the add-on name.
+    '%2$s' will be replaced at runtime with the app name. -->
+    <string name="addons_download_success_dialog_title">%1$s è stato installato in %2$s</string>
+
+    <!-- This string is displayed in the Addon downloaded dialog body text.
+    This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
+    <string name="addons_download_success_dialog_body">Aprilo nel menu</string>
+
     <!-- This string is displayed in the Addon downloaded dialog checkbox text.
     This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
     <string name="addons_download_success_dialog_checkbox">Consenti in navigazione anonima</string>
@@ -1212,10 +1226,18 @@
     If the button is clicked, the dialog is dismissed. -->
     <string name="addons_remove_success_dialog_ok">OK</string>
 
+    <!-- This string is displayed in the remove Addon error dialog title text.
+    This dialog is displayed if the user clicks on the remove button from the Addon Details panel and the addon uninstall fails.
+    '%1$' Will be replaced at runtime with the add-on name. -->
+    <string name="addons_remove_error_dialog_title">Si è verificato un errore durante la rimozione di %1$s</string>
+
     <!-- This string is displayed in the remove Addon dialog button text.
     This dialog is displayed if the user clicks on the remove button from the Addon Details panel and the addon uninstall fails.
     If the button is clicked, the dialog is dismissed. -->
     <string name="addons_remove_error_dialog_ok">OK</string>
+
+    <!-- This string is displayed at the bottom of the addon permissions list view. When clicked it will open a new tab with the addons permissions SUMO page -->
+    <string name="addons_permissions_learn_more">Ulteriori informazioni sui permessi</string>
 
     <!-- This string is displayed is the "Sync" button in the history panel. When pressed the
          history is synced with the Firefox account. -->
@@ -1229,6 +1251,10 @@
 
     <!-- This string is displayed in the body of the FxA sign out dialog displayed when the user clicks on the Sign out button. -->
     <string name="fxa_signout_confirmation_body">Quando ti disconnetti, non potrai più inviare o ricevere scheda dagli altri dispositivi. Anche la sincronizzazione dei segnalibri e della cronologia verrà interrotta.</string>
+
+    <!-- This string is displayed in the checkbox text of the FxA sign out dialog displayed when the user clicks on the Sign out button.
+         When checked the history and Bookmarks will be deleted from gthe device after signing in. -->
+    <string name="fxa_signout_confirmation_checkbox_v1">Cancella la cronologia, i segnalibri e le credenziali da questo dispositivo</string>
 
     <!-- This string is displayed in the cancel button of the FxA sign out dialog displayed when the user clicks on the Sign out button.
          If clicked the user will be signed out from their FxA account and the dialog will be dismissed. -->
@@ -1310,6 +1336,22 @@
          when there are no exceptions. -->
     <string name="privacy_options_popups_list_empty_second">In questo spazio verrà visualizzato l’elenco di siti con permessi.</string>
 
+    <!-- This string is displayed on top of the saved logins list in the Saved Logins panel. -->
+    <string name="privacy_options_saved_logins_list_header">Credenziali salvate:</string>
+
+    <!-- This string is displayed in the second line of a text that's displayed in the middle of the saved logins instead of the logins list
+         when there are no saved logins. -->
+    <string name="privacy_options_saved_logins_list_empty_second">Un elenco delle credenziali salvate verrà mostrato qui.</string>
+
+    <!-- This string labels the Reset button that restores the default saved logins settings values. -->
+    <string name="privacy_options_saved_logins_reset">Reimposta le impostazioni delle credenziali salvate</string>
+
+    <!-- This string labels the Clear All button that removes all the saved logins from the stored saved logins. -->
+    <string name="privacy_options_saved_logins_clear_all">Elimina tutto</string>
+
+    <!-- This string labels the Delete button from the Login edit dialog deletes the current login. -->
+    <string name="privacy_options_saved_login_delete">Elimina</string>
+
     <!-- This string is used to label radio buttons for setting ETP in.
          '%1$' Will be replaced at runtime with the Learn More url for ETP. -->
     <string name="privacy_options_tracking"><![CDATA[Protezione antitracciamento avanzata. (<a href="%1$s">Ulteriori informazioni</a>)]]></string>
@@ -1317,6 +1359,12 @@
     <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
          Tracking protection exceptions. -->
     <string name="privacy_options_tracking_exceptions_v1">Avanzate...</string>
+
+    <!-- This string labels the description of the button in the privacy option panel that opens the dialog to manage the logins and passwords. -->
+    <string name="privacy_options_logins">Credenziali e password</string>
+
+    <!-- This string labels the button in the privacy option panel that opens the dialog to manage the logins and passwords. -->
+    <string name="privacy_options_logins_button">Avanzate</string>
 
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">Ripristina impostazioni controller</string>
@@ -1586,6 +1634,14 @@
          tray and the Downloads view is closed. The button it labels, when pressed, closes the Downloads view. -->
     <string name="close_downloads_tooltip">Chiudi l’elenco dei download</string>
 
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Library' icon in the
+         tray and the Library view is closed. The button it labels, when pressed, opens the library panel. -->
+    <string name="open_library_tooltip">Apri Libreria</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Library' icon in the
+         tray and the Library view is closed. The button it labels, when pressed, closes the Library panel. -->
+    <string name="close_library_tooltip">Chiudi Libreria</string>
+
     <!-- This string is for the tooltip that appears when the user hovers over the 'What's New' icon in the
          Navigation Bar. The button it labels, when pressed, open the release notes page. -->
     <string name="whats_new_tooltip">Novità</string>
@@ -1700,6 +1756,12 @@
     <!-- This string is displayed in the URL bar when the user is in the downloads panel -->
     <string name="url_downloads_title">Download</string>
 
+    <!-- This string is displayed in the URL bar when the user is in the addons panel -->
+    <string name="url_addons_title">Componenti aggiuntivi</string>
+
+    <!-- This string is displayed in the URL bar when the user is in the Library panel -->
+    <string name="url_library_title">Libreria</string>
+
     <!-- This string is displayed in the Clear button on top of the window when in private mode. It only appears
          when there is one window left. When clicked, it closes the private session -->
     <string name="private_clear_button">Cancella</string>
@@ -1789,6 +1851,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
          it opens the window resize panel -->
     <string name="hamburger_menu_resize">Ridimensionamento della finestra</string>
+
+    <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
+         it opens the addons panel -->
+    <string name="hamburger_menu_addons">Componenti aggiuntivi</string>
 
     <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
          it switches User Agent from desktop to mobile and vice versa -->
@@ -2023,5 +2089,45 @@ the Select` button. When clicked it closes all the previously selected tabs -->
 
     <!-- This string is shown in the title of the error dialog displayed if there is any error during an environment setup. -->
     <string name="environment_error_title">Errore ambiente</string>
+
+    <!-- This string is shown in the "Save" button of the auto-fill login save dialog. When pressed this will save the login information into the storage. -->
+    <string name="autofill_dialog_save_button_text">Salva</string>
+
+    <!-- This string is shown in the "Never Save" button of the auto-fill llgin save dialog. When pressed this won't save the login information into the storage and also
+    add an exception rule so the user is not prompted in the future for that site. -->
+    <string name="autofill_dialog_never_save_button_text">Non salvare mai</string>
+
+    <!-- This string is shown in the "username" field name of the auto-fill login save dialog. -->
+    <string name="autofill_dialog_save_username_text">Nome utente</string>
+
+    <!-- This string is shown in the "password" field name of the auto-fill login save dialog. -->
+    <string name="autofill_dialog_save_password_text">Password</string>
+
+    <!-- This string is shown in the "settings" button of the select login dialog. When pressed the saved logins settings panel would be displayed.-->
+    <string name="autofill_dialog_use_login_settings_button">Impostazioni…</string>
+
+    <!-- This string is shown in the saved logins list items for autogenerated logins.-->
+    <string name="autofill_item_autogenerated">Generato automaticamente</string>
+
+    <!-- This string is shown inside the "Open" button of the edit login dialog. When pressed the site URL is opened.-->
+    <string name="login_edit_dialog_site_button">Apri</string>
+
+    <!-- This string is shown in the "Open" button description of the edit login dialog. -->
+    <string name="login_edit_dialog_site_description">Sito</string>
+
+    <!-- This string is shown as the description that is shown in front of the the username input field in the login edit dialog. -->
+    <string name="login_edit_dialog_username_description">Nome utente</string>
+
+    <!-- This string is shown as the description that is shown in front of the the password input field in the login edit dialog. -->
+    <string name="login_edit_dialog_password_description">Password</string>
+
+    <!-- This string is displayed in any edit text field where the value should be a username. -->
+    <string name="username_hint">nome utente</string>
+
+    <!-- This string is displayed in any edit text field where the value should be a password. -->
+    <string name="password_hint">password</string>
+
+    <!-- This string is shown in the tooltip of the wifi icon in the tray whenever WiFi is not connected to a WiFi network. -->
+    <string name="tray_wifi_no_connection">Nessuna connessione</string>
 
     </resources>
