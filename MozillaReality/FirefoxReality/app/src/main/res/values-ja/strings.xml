@@ -1171,6 +1171,10 @@
      %1$s will be replaced by the add-on name -->
     <string name="addons_install_dialog_title">%1$s を追加しますか？</string>
 
+    <!-- This string is displayed in the Addon install dialog body text and it will list the permissions that the addon requires. This dialog is displayed when an addon is installed.
+     %1$s will be replaced by the permissions list-->
+    <string name="addons_install_dialog_body"><![CDATA[<p ALIGN=LEFT>次の許可が必要です:<ul>%1$s</ul></p>]]></string>
+
     <!-- This string is displayed in the Addon install dialog "Cancel"" button, when pressed the dialog will be dismissed and the Addon install will be canceled.
     This dialog is displayed when an addon is installed. -->
     <string name="addons_install_dialog_cancel">キャンセル</string>
@@ -1178,6 +1182,63 @@
     <!-- This string is displayed in the Addon install dialog "Add" button, when pressed the dialog will be dismissed and the Addon install dialog will be displayed.
     This dialog is displayed when an addon is installed. -->
     <string name="addons_install_dialog_add">追加</string>
+
+    <!-- This string is displayed in the Addon downloading dialog title text.
+    This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
+    <string name="addons_downloading_dialog_title">アドオンをダウンロードして検証しています…</string>
+
+    <!-- This string is displayed in the Addon downloading dialog cancel button.
+    This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
+    <string name="addons_downloading_dialog_cancel">キャンセル</string>
+
+    <!-- This string is displayed in the Addon downloaded dialog title text.
+    This dialog is displayed after the addon downloading dialog if the addon has been successfully installed.
+    '%1$s' will be replaced at runtime with the add-on name.
+    '%2$s' will be replaced at runtime with the app name. -->
+    <string name="addons_download_success_dialog_title">%1$s が %2$s に追加されました</string>
+
+    <!-- This string is displayed in the Addon downloaded dialog body text.
+    This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
+    <string name="addons_download_success_dialog_body">メニューから開いてください</string>
+
+    <!-- This string is displayed in the Addon downloaded dialog checkbox text.
+    This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
+    <string name="addons_download_success_dialog_checkbox">プライベートブラウジングモードでの動作を許可する</string>
+
+    <!-- This string is displayed in the Addon downloaded dialog ok button text.
+    This dialog is displayed after the addon install dialog if the addon install is confirmed. -->
+    <string name="addons_download_success_dialog_ok">了解しました</string>
+
+    <!-- This string is displayed in the Addon download error dialog title text.
+    This dialog is displayed after the addon downloading dialog if there was an error during the addon install. -->
+    <string name="addons_download_error_dialog_title">ダウンロード中にエラーが発生しました。もう一度試してください。</string>
+
+    <!-- This string is displayed in the Addon download error dialog ok button text.
+    This dialog is displayed after the addon downloading dialog if there was an error during the addon install. -->
+    <string name="addons_download_error_dialog_ok">OK</string>
+
+    <!-- This string is displayed in the remove Addon error dialog title text.
+    This dialog is displayed if the user clicks on the remove button from the Addon Details panel and the addon is successfully uninstalled.
+    '%1$' Will be replaced at runtime with the add-on name. -->
+    <string name="addons_remove_success_dialog_title">%1$s のアンインストールが完了しました</string>
+
+    <!-- This string is displayed in the remove Addon dialog button text.
+    This dialog is displayed if the user clicks on the remove button from the Addon Details panel and the addon is successfully uninstalled.
+    If the button is clicked, the dialog is dismissed. -->
+    <string name="addons_remove_success_dialog_ok">OK</string>
+
+    <!-- This string is displayed in the remove Addon error dialog title text.
+    This dialog is displayed if the user clicks on the remove button from the Addon Details panel and the addon uninstall fails.
+    '%1$' Will be replaced at runtime with the add-on name. -->
+    <string name="addons_remove_error_dialog_title">%1$s の削除中にエラーが発生しました</string>
+
+    <!-- This string is displayed in the remove Addon dialog button text.
+    This dialog is displayed if the user clicks on the remove button from the Addon Details panel and the addon uninstall fails.
+    If the button is clicked, the dialog is dismissed. -->
+    <string name="addons_remove_error_dialog_ok">OK</string>
+
+    <!-- This string is displayed at the bottom of the addon permissions list view. When clicked it will open a new tab with the addons permissions SUMO page -->
+    <string name="addons_permissions_learn_more">許可設定の詳細</string>
 
     <!-- This string is displayed is the "Sync" button in the history panel. When pressed the
          history is synced with the Firefox account. -->
@@ -1191,6 +1252,10 @@
 
     <!-- This string is displayed in the body of the FxA sign out dialog displayed when the user clicks on the Sign out button. -->
     <string name="fxa_signout_confirmation_body">ログアウトすると、他の端末とタブを送受信できなくなります。ブックマークと履歴の同期も停止します。</string>
+
+    <!-- This string is displayed in the checkbox text of the FxA sign out dialog displayed when the user clicks on the Sign out button.
+         When checked the history and Bookmarks will be deleted from gthe device after signing in. -->
+    <string name="fxa_signout_confirmation_checkbox_v1">履歴とブックマーク、ログイン情報をこの端末から消去する</string>
 
     <!-- This string is displayed in the cancel button of the FxA sign out dialog displayed when the user clicks on the Sign out button.
          If clicked the user will be signed out from their FxA account and the dialog will be dismissed. -->
@@ -1272,6 +1337,26 @@
          when there are no exceptions. -->
     <string name="privacy_options_popups_list_empty_second">許可したサイトのリストがここに表示されます。</string>
 
+    <!-- This string is displayed on top of the saved logins list in the Saved Logins panel. -->
+    <string name="privacy_options_saved_logins_list_header">保存されたログイン情報:</string>
+
+    <!-- This string is displayed in the first line of a text that's displayed in the middle of the saved logins panel instead of the logins list
+         when there are saved logins. -->
+    <string name="privacy_options_saved_logins_list_empty_first">ログイン情報を保存できる場合、保存のためのダイアログが表示されます。</string>
+
+    <!-- This string is displayed in the second line of a text that's displayed in the middle of the saved logins instead of the logins list
+         when there are no saved logins. -->
+    <string name="privacy_options_saved_logins_list_empty_second">保存されたログイン情報のリストがここに表示されます。</string>
+
+    <!-- This string labels the Reset button that restores the default saved logins settings values. -->
+    <string name="privacy_options_saved_logins_reset">保存されたログイン情報をリセット</string>
+
+    <!-- This string labels the Clear All button that removes all the saved logins from the stored saved logins. -->
+    <string name="privacy_options_saved_logins_clear_all">すべて消去</string>
+
+    <!-- This string labels the Delete button from the Login edit dialog deletes the current login. -->
+    <string name="privacy_options_saved_login_delete">削除</string>
+
     <!-- This string is used to label radio buttons for setting ETP in.
          '%1$' Will be replaced at runtime with the Learn More url for ETP. -->
     <string name="privacy_options_tracking"><![CDATA[強化型トラッキング防止。 (<a href="%1$s">詳細情報</a>)]]></string>
@@ -1279,6 +1364,12 @@
     <!-- This string labels the button in the privacy option panel that opens the dialog to add/remove
          Tracking protection exceptions. -->
     <string name="privacy_options_tracking_exceptions_v1">詳細設定</string>
+
+    <!-- This string labels the description of the button in the privacy option panel that opens the dialog to manage the logins and passwords. -->
+    <string name="privacy_options_logins">ログイン情報とパスワード</string>
+
+    <!-- This string labels the button in the privacy option panel that opens the dialog to manage the logins and passwords. -->
+    <string name="privacy_options_logins_button">詳細設定</string>
 
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">コントローラーの設定をリセット</string>
@@ -1548,6 +1639,14 @@
          tray and the Downloads view is closed. The button it labels, when pressed, closes the Downloads view. -->
     <string name="close_downloads_tooltip">ダウンロードリストを閉じます</string>
 
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Library' icon in the
+         tray and the Library view is closed. The button it labels, when pressed, opens the library panel. -->
+    <string name="open_library_tooltip">ライブラリーを開く</string>
+
+    <!-- This string is for the tooltip that appears when the user hovers over the 'Library' icon in the
+         tray and the Library view is closed. The button it labels, when pressed, closes the Library panel. -->
+    <string name="close_library_tooltip">ライブラリーを閉じる</string>
+
     <!-- This string is for the tooltip that appears when the user hovers over the 'What's New' icon in the
          Navigation Bar. The button it labels, when pressed, open the release notes page. -->
     <string name="whats_new_tooltip">新着情報</string>
@@ -1659,6 +1758,12 @@
     <!-- This string is displayed in the URL bar when the user is in the downloads panel -->
     <string name="url_downloads_title">ダウンロード</string>
 
+    <!-- This string is displayed in the URL bar when the user is in the addons panel -->
+    <string name="url_addons_title">アドオン</string>
+
+    <!-- This string is displayed in the URL bar when the user is in the Library panel -->
+    <string name="url_library_title">ライブラリー</string>
+
     <!-- This string is displayed in the Clear button on top of the window when in private mode. It only appears
          when there is one window left. When clicked, it closes the private session -->
     <string name="private_clear_button">消去</string>
@@ -1748,6 +1853,10 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
          it opens the window resize panel -->
     <string name="hamburger_menu_resize">ウィンドウサイズを変更</string>
+
+    <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
+         it opens the addons panel -->
+    <string name="hamburger_menu_addons">アドオン</string>
 
     <!-- This string is displayed inside the Hamburger menu at the right of the navigation bar. When clicked
          it switches User Agent from desktop to mobile and vice versa -->
@@ -1983,4 +2092,66 @@ the Select` button. When clicked it closes all the previously selected tabs -->
     <!-- This string is shown in the title of the error dialog displayed if there is any error during an environment setup. -->
     <string name="environment_error_title">環境エラー</string>
 
-    </resources>
+    <!-- This string is shown in the title of the auto-fill save dialog. This dialog is displayed when the user send a login form and the system
+    prompts the user to save that login to auto-fill the future. -->
+    <string name="autofill_dialog_save_title">このログイン情報を保存しますか？</string>
+
+    <!-- This string is shown in the "Save" button of the auto-fill login save dialog. When pressed this will save the login information into the storage. -->
+    <string name="autofill_dialog_save_button_text">保存する</string>
+
+    <!-- This string is shown in the "Never Save" button of the auto-fill llgin save dialog. When pressed this won't save the login information into the storage and also
+    add an exception rule so the user is not prompted in the future for that site. -->
+    <string name="autofill_dialog_never_save_button_text">保存しない</string>
+
+    <!-- This string is shown in the "username" field name of the auto-fill login save dialog. -->
+    <string name="autofill_dialog_save_username_text">ユーザー名</string>
+
+    <!-- This string is shown in the "password" field name of the auto-fill login save dialog. -->
+    <string name="autofill_dialog_save_password_text">パスワード</string>
+
+    <!-- This string is shown in the title of the select login dialog. -->
+    <string name="autofill_dialog_use_login_title_text">保存されたログイン情報を使用</string>
+
+    <!-- This string is shown in the "settings" button of the select login dialog. When pressed the saved logins settings panel would be displayed.-->
+    <string name="autofill_dialog_use_login_settings_button">設定…</string>
+
+    <!-- This string is shown in the saved logins list items for autogenerated logins.-->
+    <string name="autofill_item_autogenerated">自動生成</string>
+
+    <!-- This string is shown inside the "Open" button of the edit login dialog. When pressed the site URL is opened.-->
+    <string name="login_edit_dialog_site_button">開く</string>
+
+    <!-- This string is shown in the "Open" button description of the edit login dialog. -->
+    <string name="login_edit_dialog_site_description">サイト</string>
+
+    <!-- This string is shown as the description that is shown in front of the the username input field in the login edit dialog. -->
+    <string name="login_edit_dialog_username_description">ユーザー名</string>
+
+    <!-- This string is shown as the description that is shown in front of the the password input field in the login edit dialog. -->
+    <string name="login_edit_dialog_password_description">パスワード</string>
+
+    <!-- This string is shown under the password text edit in the Login edit dialog when the password is left empty. -->
+    <string name="login_edit_password_empty_error">パスワードを空にすることはできません</string>
+
+    <!-- This string is displayed in any edit text field where the value should be a username. -->
+    <string name="username_hint">ユーザー名</string>
+
+    <!-- This string is displayed in any edit text field where the value should be a password. -->
+    <string name="password_hint">パスワード</string>
+
+    <!-- This string is shown in the tooltip of the wifi icon in the tray whenever WiFi is not connected to a WiFi network. -->
+    <string name="tray_wifi_no_connection">接続なし</string>
+
+    <!-- This string is shown in the tooltip of the left controller status bar icon when hovered.
+    '%1$s' Will be replaced at runtime with the left controller battery level. -->
+    <string name="tray_status_left_controller">左コントローラー: %1$s</string>
+
+    <!-- This string is shown in the tooltip of the right controller status bar icon when hovered.
+    '%1$s' Will be replaced at runtime with the right controller battery level. -->
+    <string name="tray_status_right_controller">右コントローラー: %1$s</string>
+
+    <!-- This string is shown in the tooltip of the headset status bar icon when hovered.
+    '%1$s' Will be replaced at runtime with headset battery level. -->
+    <string name="tray_status_headset">ヘッドセット: %1$s</string>
+
+</resources>
