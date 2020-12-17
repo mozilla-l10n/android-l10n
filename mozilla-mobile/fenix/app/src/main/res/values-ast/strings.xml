@@ -178,7 +178,7 @@
 
     <!-- Error message to show when the user tries to access a scheme not
         handled by the app (Ex: blob, tel etc) -->
-    <string name="unknown_scheme_error_message">Nun pue coneutase porque nun se reconoz l\'esquema de la URL.</string>
+    <string name="unknown_scheme_error_message">Nun pue conectase porque nun se reconoz l\'esquema de la URL.</string>
 
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
@@ -446,7 +446,7 @@
     <string name="preferences_sync">Activación de Sync</string>
 
     <!-- Preference for reconnecting to FxA sync -->
-    <string name="preferences_sync_sign_in_to_reconnect">Aniciar sesión pa reconeutar</string>
+    <string name="preferences_sync_sign_in_to_reconnect">Aniciar sesión pa reconectar</string>
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">Desaniciar la cuenta</string>
 
@@ -674,8 +674,14 @@
     <string name="download_delete_all">Desaniciar les descargues</string>
     <!-- Text for the dialog to confirm clearing all downloads -->
     <string name="download_delete_all_dialog">¿De xuru que quies llimpiar les descargues?</string>
-    <!-- Text shown when no download exists -->
-    <string name="download_empty_message">Equí nun hai descargues</string>
+
+
+    <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
+    <string name="download_delete_multiple_items_snackbar_1">Desaniciáronse les descargues</string>
+    <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
+    <string name="download_delete_single_item_snackbar">Desanicióse %1$s</string>
+    <!-- Text for the button to remove a single download item -->
+    <string name="download_delete_item_1">Desaniciar</string>
 
 
     <!-- Crashes -->
@@ -784,10 +790,14 @@
     <string name="preference_phone_feature_notification">Avisos</string>
     <!-- Preference for altering the persistent storage access for all websites -->
     <string name="preference_phone_feature_persistent_storage">Almacenamientu permanente</string>
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">Conteníu con DRM</string>
     <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">Entrugar pa permitir</string>
     <!-- Label that indicates that a permission must be blocked -->
     <string name="preference_option_phone_feature_blocked">Blóquiase</string>
+    <!-- Label that indicates that a permission must be allowed -->
+    <string name="preference_option_phone_feature_allowed">Permítese</string>
     <!--Label that indicates a permission is by the Android OS-->
     <string name="phone_feature_blocked_by_android">Blóquiase por Android</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
@@ -889,7 +899,7 @@
     <!-- Add new device screen title -->
     <string name="sync_add_new_device_title">Unviu a un preséu</string>
     <!-- Text for the warning message on the Add new device screen -->
-    <string name="sync_add_new_device_message">Nun hai preseos coneutaos</string>
+    <string name="sync_add_new_device_message">Nun hai preseos conectaos</string>
     <!-- Text for the button to learn about sending tabs -->
     <string name="sync_add_new_device_learn_button">Deprender tocante al unviu de llingüetes…</string>
     <!-- Text for the button to connect another device -->
@@ -1176,7 +1186,7 @@
     <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="sign_out_confirmation_message_2">%s va dexar de sincronizase cola to cuenta mas nun va desaniciar nengún datu d\'esti preséu.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
-    <string name="sign_out_disconnect">Desconeutar</string>
+    <string name="sign_out_disconnect">Desconectar</string>
 
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
     <string name="sign_out_cancel">Encaboxar</string>
@@ -1354,7 +1364,7 @@
     <!-- Syncing saved logins in Fenix is off -->
     <string name="preferences_passwords_sync_logins_off">Non</string>
     <!-- Syncing saved logins in Fenix needs reconnect to sync -->
-    <string name="preferences_passwords_sync_logins_reconnect">Calca equí pa reconeutar</string>
+    <string name="preferences_passwords_sync_logins_reconnect">Calca equí pa reconectar</string>
     <!-- Syncing saved logins in Fenix needs login -->
     <string name="preferences_passwords_sync_logins_sign_in">Anicia sesión en Sync</string>
     <!-- Preference to access list of saved logins -->
@@ -1476,7 +1486,7 @@
     <!-- Text shown when a user leaves out the required template string -->
     <string name="search_add_custom_engine_error_missing_template">Comprueba que la cadena de busca concase col formatu del exemplu</string>
     <!-- Text shown when we aren't able to validate the custom search query. The first parameter is the url of the custom search engine -->
-    <string name="search_add_custom_engine_error_cannot_reach">Fallu al coneutar con «%s»</string>
+    <string name="search_add_custom_engine_error_cannot_reach">Fallu al conectar con «%s»</string>
     <!-- Text shown when a user creates a new search engine -->
     <string name="search_add_custom_engine_success_message">Creóse %s</string>
     <!-- Text shown when a user successfully edits a custom search engine -->
@@ -1578,10 +1588,17 @@
     <!-- Label for the show most visited sites preference -->
     <string name="top_sites_toggle_top_frecent_sites">Amosar los sitios más visitaos</string>
 
-    <!-- Button caption to confirm the renaming of the top site. -->
+    <!-- Title text displayed in the rename top site dialog. -->
+	<string name="top_sites_rename_dialog_title">Nome</string>
+	<!-- Hint for renaming title of a top site -->
+	<string name="top_site_name_hint">Nome del sitiu destacáu</string>
+	<!-- Button caption to confirm the renaming of the top site. -->
 	<string name="top_sites_rename_dialog_ok">Aceutar</string>
 	<!-- Dialog button text for canceling the rename top site prompt. -->
 	<string name="top_sites_rename_dialog_cancel">Encaboxar</string>
+
+    <!-- Content description for close button in collection placeholder. -->
+    <string name="remove_home_collection_placeholder_content_description">Desaniciar</string>
 
     <!-- Deprecated: text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
