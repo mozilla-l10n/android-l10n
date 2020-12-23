@@ -70,8 +70,6 @@
     <string name="search_clear_content_description">Effacer le texte de la barre de recherche</string>
     <!-- This is shown when a user has entered search terms that have filtered the list of logins to find no results -->
     <string name="no_matching_logins">Aucun identifiant correspondant.</string>
-    <!-- This explains that if no logins are found and were expected, to add new logins through the Firefox desktop browser -->
-    <string name="save_firefox_disclaimer">Pour voir plus d’identifiants ici, vous devrez les enregistrer dans Firefox.</string>
 
     <!-- This is a heading that appears above the URL in context of a detailed item view -->
     <string name="hint_hostname">Adresse web</string>
@@ -191,7 +189,7 @@
     <!-- This label is used by screenreaders to inform the user that the message contains an image of a warning icon -->
     <string name="warningIcon">Icône d’avertissement</string>
     <!-- This is used as the title for an alert message to inform the user that the app does not detect network connectivity -->
-    <string name="no_internet_connection">Aucune connexion Internet</string>
+    <string name="no_internet_connection">Aucune connexion internet</string>
     <!-- This is used in the app logs to inform that network connectivity has successfully been detected -->
     <string name="network_connection_success">Connexion au réseau réussie.</string>
 
@@ -219,16 +217,13 @@
     <string name="all_set">C’est tout !</string>
     <!-- This is the button to dismiss the final onboarding screen -->
     <string name="finish">Terminer</string>
+
     <!-- This description of the app functionality is shown on the final onboarding screen -->
-    <string name="access_description">Accédez depuis votre téléphone aux identifiants enregistrés dans Firefox</string>
-    <!-- This is an accessible content description for the security information link text. %1$s will be replaced with application name -->
-    <string name="security_content_description">Lien vers la description des bonnes pratiques de sécurité dans %1$s.</string>
+    <string name="onboarding_access_description">Accédez depuis votre téléphone aux identifiants enregistrés dans Firefox</string>
     <!-- This description of the app security is shown on the final onboarding screen. %s will be replaced with the security link. -->
-    <string name="security_description">Synchronisez vos appareils avec un %s</string>
-    <!-- This text is displayed as a link in the security description. -->
-    <string name="security_link">chiffrement 256 bits</string>
+    <string name="onboarding_security_description">Synchronisez vos appareils avec un chiffrement sécurisé à 256 bits</string>
     <!-- This description of the app convenience is shown on the final onboarding screen. -->
-    <string name="convenience_description">Déverrouillez facilement l’application avec votre empreinte digitale</string>
+    <string name="onboarding_convenience_description">Déverrouillez facilement l’application avec votre empreinte digitale</string>
 
     <!-- This is the title of the device security dialog box. -->
     <string name="secure_your_device">Sécurisez votre appareil.</string>
@@ -259,20 +254,12 @@
     <!-- This is the confirmation message title seen when attempting to delete a login. -->
     <string name="delete_this_login">Supprimer cet identifiant ?</string>
     <!-- This is the description for the deletion dialog. -->
-    <string name="delete_description">Cette action supprimera l’identifiant à la fois de %1$s et de Firefox.</string>
+    <string name="delete_description">Cette action supprimera l’identifiant à la fois pour %1$s et pour Firefox.</string>
     <!-- This is the text on an item in the item detail toolbar menu to edit an entry. -->
     <string name="edit">Modifier</string>
-    <!-- This is the hint in the edit entry view for the entry name. -->
-    <string name="entry_name_description">Nom de l’entrée</string>
-    <!-- This is a heading that appears above an entry name in context of a edit item view -->
-    <string name="hint_entryname">Nom</string>
-    <!-- This is the hint in the edit entry view for the entry name. -->
-    <string name="input_name_description">Impossible de modifier le nom de l’entrée pour le moment.</string>
-    <!-- This is the hint in the edit entry view for formatting the entry hostname. -->
-    <string name="hostname_entry_description">Assurez-vous que cela correspond au domaine exact du site web que vous recherchez (« https:// » et « www » inclus).</string>
+
+    <!-- This is the description for the entry password in context of an edit item view. -->
     <string name="entry_password_description">Mot de passe pour cette entrée.</string>
-    <!-- This is the text on the button in the edit view that allows you to delete the entry. -->
-    <string name="delete_entry">Supprimer l’entrée</string>
     <!-- This is the title text on the dialog when you attempt to close the edit view and changes have been made. -->
     <string name="discard_changes">Abandonner les modifications ?</string>
     <!-- This is the additional text when you attempt to close the edit view and changes have been made. -->
@@ -285,4 +272,41 @@
     <string name="username_description">Nom d’utilisateur</string>
     <!-- This is the title of the edit login page. -->
     <string name="edit_login_title">Modifier l’identifiant</string>
+
+    <!-- This is the error message that is shown in edit or create view when input text for password is not valid. -->
+    <string name="password_invalid_text">Le champ mot de passe ne peut pas être vide</string>
+
+    <!-- This is the error message that is shown in edit or create view when a username matches a previously existing credential for that domain combination. -->
+    <string name="username_duplicate_exists">Un identifiant avec ce nom d’utilisateur existe déjà</string>
+
+    <!-- This is the text description that is shown in the manual create view underneath the hostname field to describe a valid hostname. -->
+    <string name="create_hostname_description">Assurez-vous que cela correspond au domaine exact du site web que vous recherchez (« https:// » et « www » inclus).</string>
+
+    <!-- This is the title of the create new login page. -->
+    <string name="create_title">Nouvel identifiant</string>
+
+    <!-- This is the hint text that is shown inline on the username field of the create new login page. -->
+    <string name="create_username_hint_text">par exemple, mariedubois</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. -->
+    <string name="create_hostname_hint_text">https://www.example.com</string>
+
+    <!-- This is an error message shown below the hostname field of the create new login page when a hostname is invalid. -->
+    <string name="hostname_invalid_text">L’adresse web doit contenir « https:// » ou « http:// »</string>
+
+    <!-- This is an error message shown below the hostname field of the create new login page when a hostname is invalid. -->
+    <string name="hostname_invalid_host">L’adresse web doit avoir un nom d’hôte valide</string>
+
+    <!-- This is the error message that is shown in the create view when input text for hostname is empty. -->
+    <string name="hostname_empty_invalid_text">Le nom d’hôte ne peut pas rester vide</string>
+
+    <!-- This is the toast message that is shown when a new entry has been successfully created. -->
+    <string name="successful_create_toast">Identifiant ajouté avec succès</string>
+
+    <!-- This is the content description for the icon that appears on the toast notification. -->
+    <string name="toast_icon_description">L’icône qui apparaît sur une notification toast.</string>
+
+    <!-- This is the toast message that appears when an entry has been successfully deleted.  -->
+    <string name="entry_deleted_toast">%1$s supprimé</string>
+
 </resources>

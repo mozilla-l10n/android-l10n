@@ -89,11 +89,6 @@
          sdcard. '%1$s' will be replaced at runtime with the website's domain name. -->
     <string name="permission_persistent_storage">¿Desea permitir que %1$s guarde datos en el almacenamiento persistente?</string>
 
-    <!-- This string is displayed in the Settings dialog box and how
-         the user can know which version of the application they are currently running.
-         '%1$s' will be replaced at runtime with the application version number. -->
-    <string name="settings_version">versión %1$s</string>
-
     <!-- This string is displayed in the Settings dialog box and is used to label an
          On/Off switch which toggles whether an application crash is reported without first
          prompting the user. -->
@@ -107,17 +102,67 @@
          opens a dialog box that contains privacy and security related settings. -->
     <string name="settings_privacy_security">Privacidad &amp; Seguridad</string>
 
+    <!-- This string is used to label a button in the 'Saved Logins' dialog window that, when pressed,
+         opens a dialog box that contains a list of saved logins. -->
+    <string name="settings_privacy_saved_logins">Inicios de sesión guardados</string>
+
+    <!-- This string is used inm the title of the settings panel for the Logins and Passwords management. -->
+    <string name="settings_privacy_logins">Inicios de Sesión y Contraseñas</string>
+
     <!-- This string is used to label a button that, when pressed, loads a website that
          describes Mozilla's Privacy Policy. -->
     <string name="settings_privacy_policy">Política de privacidad</string>
+
+    <!-- This string is used as the title of the pop-ups dialog used to remove sites from the currently
+         allowed pop-up sites. -->
+    <string name="settings_privacy_policy_popups_title_v1">Excepciones para ventanas emergentes</string>
+
+    <!-- This string is displayed under the title the pop-ups dialog used to remove sites from the currently
+         allowed pop-up sites. -->
+    <string name="settings_privacy_policy_popups_description">Puedes especificar qué sitios web tienen permitido abrir ventanas emergentes</string>
+
+    <!-- This string is used as the title of the WebXR dialog used to do not allow websites to access WebXR devices. -->
+    <string name="settings_privacy_policy_webxr_title">Permisos de realidad virtual</string>
+
+    <!-- This string is displayed under the title the  WebXR dialog used to do not allow websites to access WebXR devices. -->
+    <string name="settings_privacy_policy_webxr_description">Los siguientes sitios no permiten que la API de WebXR acceda a tu dispositivo de realidad virtual.</string>
+
+    <!-- This string is displayed under the title the  Tracking dialog used to do not allow websites to bypass tracking protection. -->
+    <string name="settings_privacy_policy_tracking_description">Has desactivado las protecciones en estos sitios web.</string>
+
+    <!-- This string labels the Reset button that removes all the sites not allowed to access WebXR -->
+    <string name="settings_privacy_policy_login_exceptions_reset">Restablecer las excepciones de inicio de sesión.</string>
+
+    <!-- This string is displayed in the switch of each item of the the pop-up blocking list when the site is allowed. -->
+    <string name="pop_up_site_switch_allow">Permitir</string>
+
+    <!-- This string is displayed in the switch of each item of the the pop-up blocking list when the site is denied. -->
+    <string name="pop_up_site_switch_block">Bloquear</string>
 
     <!-- This string is used to label a button in the 'Settings' dialog window that, when pressed,
          opens a dialog box that contains settings that an application or Web developer might want to change. -->
     <string name="settings_developer_options">Opciones para desarrolladores</string>
 
+    <!-- This string is used in the 'Settings' window when user is not signed into a Firefox Account -->
+    <string name="settings_fxa_account_sign_in">Iniciar sesión en cuenta</string>
+
+    <!-- This string is used in the 'Settings' window when user is signed into a Firefox Account -->
+    <string name="settings_fxa_account_manage">Administrar cuenta</string>
+
+    <!-- This string is used in the 'Account' window when user is signed into a Firefox Account -->
+    <string name="settings_fxa_account_sign_out">Cerrar sesión</string>
+
+    <!-- This string is used in the 'Settings' window when user is signed into a Firefox Account, but needs to re-enter their password.
+         Most common reason for this state is that the account password was changed on another device. -->
+    <string name="settings_fxa_account_reconnect">Reconectar</string>
+
     <!-- This string is used to label a button in the 'Settings' dialog window that, when pressed,
          opens a dialog box that contains language-related settings. -->
     <string name="settings_language">Idioma</string>
+
+    <!-- This string is used to label the first string in the language list for voice and display languages.
+         If chosen the device will use the system language as the main language. -->
+    <string name="settings_language_follow_device">Usar el idioma del dispositivo</string>
 
     <!-- This string is used to label a text label for selecting the language in the 'Language' dialog window
          (accessible from the browser's Settings' dialog window). Below this string appears
@@ -141,7 +186,8 @@
     <!-- This string is used to label a text label that appears in the header of 'Language Settings' ->
          'Firefox Display Language' dialog window (accessible from the browser's Settings dialog window).
          Below this string appears a list of locales for the user to choose as their preferred display
-         language for the application UI. -->
+         language for the application UI.
+         '%1$s' Will be replaced at runtime with the app name. -->
     <string name="settings_language_choose_display_language_title">%1$s Idioma visualizado</string>
 
     <!-- This string is used to label a text label that appears in the header description of 'Language Settings' ->
@@ -172,45 +218,123 @@
          Below this string appears a list of locales for the user to choose as their preferred languages for web content. -->
     <string name="settings_language_choose_language_content_description">Las páginas web a veces se muestran en más de un idioma. En el panel izquierdo, elige los idiomas en los que quieres que se muestren en orden de preferencia.</string>
 
-    <!-- This string is used to label a radio button in the 'Settings' Language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'English (US)'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'English (US)'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_english">Español (EE. UU.)</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'Chinese (Traditional/Zhuyin)'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'English (US)'. -->
+    <string name="settings_language_english_us">Inglés (EE.UU.)</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'English (UK)'. -->
+    <string name="settings_language_english_uk">Inglés (Reino Unido)</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Chinese (Traditional/Zhuyin)'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_traditional_chinese">Chino (tradicional/zhuyin)</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'Chinese (Simplified/Pinyin)'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Chinese (Simplified/Pinyin)'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_simplified_chinese">Chino (simplificado/pinyin)</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'Japanese'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Japanese'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_japanese">Japonés</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'French'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'French'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_french">Francés</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'German'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'German'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_german">Alemán</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'Spanish'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Spanish'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_spanish">Español</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'Korean'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Spanish (Spain)'. -->
+    <string name="settings_language_spanish_spain">Español (España)</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Korean'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_korean">Coreano</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-         changes the app and the language of the speech-recognition-based search to 'Italian'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Italian'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_italian">Italiano</string>
 
-    <!-- This string is used to label a radio button in the settings language dialog that, when pressed,
-     changes the app and the language of the speech-recognition-based search to 'Russian'. -->
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Russian'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
     <string name="settings_language_russian">Ruso</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Polish'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
+    <string name="settings_language_polish">Polaco</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Danish'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
+    <string name="settings_language_danish">Danés</string>
+
+    <!-- The string is used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
+    <string name="settings_language_norwegian">Noruego</string>
+  
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Norwegian (Bokmaal)'. -->
+    <string name="settings_language_norwegian_bokmaal">Noruego (Bokmaal)</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Norwegian (Nynorsk)'. -->
+    <string name="settings_language_norwegian_nynorsk">Noruego (Nynorsk)</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Swedish'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
+    <string name="settings_language_swedish">Sueco</string>
+
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Finnish'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
+    <string name="settings_language_finnish">Finlandés</string>
+  
+    <!-- This string is used to label a radio button in the 'Settings' Voice Search and the Display Language dialogs that, when pressed,
+    changes the app and the language of the speech-recognition-based search to 'Dutch'.
+    The string is also used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
+    <string name="settings_language_dutch">Holandés</string>
+
+    <!-- The string is used in the keyboard space bar to show the current keyboard language and in
+    the keyboard languages panel list. -->
+    <string name="settings_language_thai">Tailandés</string>
 
     <!-- This string is used to label a button in the 'Settings' dialog window that, when pressed,
         opens a dialog box that contains display-related settings: window size, pixel density, etc. -->
@@ -237,6 +361,24 @@
         opens the Firfox Reality support web site in the browser window. -->
     <string name="settings_help">Ayuda</string>
 
+    <!-- This string is displayed in the settings header under the Firefox Reality logo. When clicked the settings panel is closed
+         a the survey web site in opened in the currently focused window -->
+    <string name="settings_send_your_feedback">Enviar comentarios</string>
+
+    <!-- This string is used in the 'Settings' window when user is signed-out of Firefox Accounts -->
+    <string name="settings_accounts_sign_in">Iniciar sesión</string>
+
+    <!-- This string is used in the 'Settings' window when user is signed into a Firefox Account -->
+    <string name="settings_accounts_sign_out">Cerrar sesión</string>
+
+    <!-- This string is used in the 'Settings' window when user is signed into a Firefox Account, but needs to re-enter their password.
+         Most common reason for this state is that the account password was changed on another device. -->
+    <string name="settings_accounts_reconnect">Reconectar</string>
+
+    <!-- This string is used to label a button in the 'Settings' dialog window that, when pressed,
+        opens the Release Notes web site for the current app version. -->
+    <string name="settings_whats_new">Novedades</string>
+
     <!-- This string is the title of a dialog box shown to the user when a settings
          change requires the application to restart. -->
     <string name="restart_dialog_restart">Reinicio requerido</string>
@@ -261,20 +403,9 @@
          and is used to toggle remote debugging of website content in the application. -->
     <string name="developer_options_remote_debugging">Activar la depuración remota</string>
 
-    <!-- This string labels an On/Off switch in the 'Developer Options' dialog
-         and is used to toggle redirecting JavaScript Console output to the Android Logcat (i.e., `adb logcat`). -->
-    <string name="developer_options_show_console">Redirigir la consola a Logcat</string>
-
     <!-- This string labels an On/Off switch in the developer options dialog
          and is used to customize background environments of the app. -->
     <string name="developer_options_env_override">Habilitar la invalidación del entorno</string>
-
-    <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
-         running content in a separate process.
-         Multiprocessing: the running of two or more programs or sequences of instructions
-         simultaneously by a computer with more than one central processor.
-         A dialog should appear with a field labeled with the text, 'Enable Multiprocess'. -->
-    <string name="developer_options_multiprocess">Habilitar multiproceso</string>
 
     <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
          the performance monitor. The Performance monitor is used to detect pages that cause the
@@ -287,6 +418,12 @@
          to help diagnose and fix problems with the application.
     -->
     <string name="developer_options_debug_logging">Habilitar registro de depuración</string>
+
+    <!-- This string labels an On/Off switch in the developer options dialog and is used to toggle
+         Multi-e10s. Multi-e10s allocates a process for each open window instead of having only one
+         process for all windows.
+    -->
+    <string name="multi_e10s_switch">Habilitar Multi-e10s</string>
 
     <!-- The string labels an On/Off switch in the developer options dialog and is used to toggle enabling Servo. -->
     <string name="developer_options_servo">Habilitar Servo</string>
@@ -349,6 +486,21 @@
 
     <!-- This string is used to label the 'VR' radio button of the 'User-Agent Mode' settings option. -->
     <string name="developer_options_ua_vr">VR</string>
+
+    <!-- This string is used to label the 'Internal Storage' radio button of the 'Downloads Storage' settings option. -->
+    <string name="privacy_options_downloads_storage_internal">Interno</string>
+
+    <!-- This string is used to label the 'External Storage' radio button of the 'Downloads Storage' settings option. -->
+    <string name="privacy_options_downloads_storage_external">Externo</string>
+
+    <!-- This string is used to label the 'Standard' radio button of the 'Enhanced Tracking protection' settings option. -->
+    <string name="privacy_options_tracking_etp">Estándar</string>
+
+    <!-- This string is used to label the 'Strict' radio button of the 'Tracking protection' settings option. -->
+    <string name="privacy_options_tracking_strict">Estricto</string>
+
+    <!-- This string is used to label the 'Off' radio button of the 'Tracking protection' settings option. -->
+    <string name="privacy_options_tracking_off">Desactivado</string>
 
     <!-- This string is used to label radio buttons for setting fixed-foveated-rendering (FFR) level.
      The term "foveation" derives from "fovea", the area of higher-resolution vision in the human retina.
@@ -435,9 +587,35 @@
          for the home page. -->
     <string name="developer_options_homepage">Página de inicio</string>
 
-    <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable playback of DRM controlled content. -->
-    <string name="security_options_drm_content">Reproducir contenido controlado por DRM (&lt;a href=&quot;http://somesite.com/&quot;&gt;Saber más &lt;/a&gt;)</string>
+    <!-- This string is used to in the FxA account manage panel as a description of the Sign In/Out button. -->
+    <string name="fxa_account_options_account">Cuenta</string>
+
+    <!-- This string is used to in the FxA account manage panel as a header for the sync options. -->
+    <string name="fxa_account_options_sync_title">Ajustes de sincronización</string>
+
+    <!-- This string is used to in the FxA account manage panel as a description for the Logins sync switch. -->
+    <string name="fxa_account_options_logins_sync">Inicios de sesión</string>
+
+    <!-- This string is used to in the FxA account manage panel as a description for the Sign In/Out button. -->
+    <string name="fxa_account_options_reset">Restablecer</string>
+
+    <!-- This string is used to in the Library panels in the sync button when the user is not signed in. -->
+    <string name="fxa_account_sing_to_sync">Iniciar sesión en la cuenta para sincronizar</string>
+
+    <!-- This string is used to in the Library panels in the sync button when syncing is off. -->
+    <string name="fxa_account_sync_settings">Ajustes de sincronización</string>
+
+    <!-- This string is used to in the Library panels to the left of the sync button to indicate
+         that the content has never been synced yet. -->
+    <string name="fxa_account_last_no_synced">Aún no sincronizado</string>
+
+    <!-- This string is used to in the Library panels to the left of the sync button to indicate
+         that the syncing is off. -->
+    <string name="fxa_account_syncing_off">La sincronización está desactivada</string>
+
+    <!-- This string is used to in the Library panels to the left of the sync button to indicate
+         that there was an error while syncing. -->
+    <string name="fxa_account_last_sync_error">Error de sincronización</string>
 
     <!-- This string labels an On/Off switch in the Privacy and Security settings dialog
      and is used to enable or disable tracking protection. -->
@@ -478,21 +656,33 @@
          of this storage even though the storage may not reside on external removable media. -->
     <string name="security_options_permission_storage">Leer almacenamiento externo</string>
 
+    <!-- This string labels the button in the privacy option panel that enables/disables the pop-up
+         blocking. -->
+    <string name="security_options_block_pup_up_windows">Bloquear ventanas emergentes</string>
+
+    <!-- This string labels the button in the privacy option panel that open the dialog to add/remove
+         pop-up blocked sites. -->
+    <string name="security_options_block_pup_up_settings">Avanzado</string>
+
     <!-- This string is a label above the group of switches that indicates that the switches below
-         relate to Firefox data collection and use. -->
+         relate to Firefox data collection and use.
+         '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_speech_data_collection_title">%1$s Recopilación y uso de datos</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to collect speech data. -->
+     and is used to enable or disable permission to collect speech data.
+     '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_speech_data_collect">Permitir que %1$s recopile datos de voz</string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to collect telemetry data. -->
+     and is used to enable or disable permission to collect telemetry data.
+     '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_telemetry_send_data">Permitir que %1$s envíe datos técnicos y de interacción a Mozilla
  </string>
 
     <!-- This string labels an Allow/Don't Allow switch in the Privacy and Security settings dialog
-     and is used to enable or disable permission to send crash reports. -->
+     and is used to enable or disable permission to send crash reports.
+     '%1$s' Will be replaced at runtime with the app name. -->
     <string name="security_options_crash_reports_send_data">Permitir que %1$s envíe informes de fallos acumulados en tu nombre
 </string>
 
@@ -546,7 +736,7 @@
 
     <!-- This string explains why Mozilla would like the user to allow the crash data to be uploaded.
          '%1$s' will be replaced at runtime with the app's domain name. -->
-    <string name="crash_dialog_message">Ayude a Mozilla a mejorar %1$s enviando los datos de su fallo.</string>
+    <string name="crash_dialog_message"><![CDATA[Ayude a Mozilla a mejorar %1$s enviando los datos de su fallo.]]></string>
 
     <!-- This string labels a checkbox in the crash dialog box. When checked, the user will no longer
          be prompted for permission to upload crash data after an application crash. -->
@@ -614,6 +804,9 @@
     <!-- This string is displayed in a tooltip below the video controls UI. -->
     <string name="video_controls_volume">Volumen</string>
 
+    <!-- This string is displayed in a tooltip below the video controls UI. -->
+    <string name="video_controls_projection">Proyección de video</string>
+
     <!-- This string is displayed in a tooltip in the video controls UI (e.g., 'Seek +30 seconds').
     '%1$s' will be replaced at runtime with a duration in seconds (e.g., '30'). -->
     <string name="video_controls_seek_forward">Buscar +%1$s segundos</string>
@@ -638,6 +831,21 @@
     <!-- This string is displayed in the middle of the Bookmarks List while the bookmarks are being loaded. -->
     <string name="bookmarks_loading">Cargando marcadores</string>
 
+    <!-- This string is displayed as the title of the folder containing mobile bookmarks (after they're synced). -->
+    <string name="bookmarks_mobile_folder_title">Marcadores móviles</string>
+
+    <!-- This string is displayed as the title of the folder containing desktop bookmarks (after they're synced). -->
+    <string name="bookmarks_desktop_folder_title">Marcadores de escritorio</string>
+
+    <!-- This string is displayed as the title of the desktop "menu" bookmarks folder. -->
+    <string name="bookmarks_desktop_menu_title">Menú de marcadores</string>
+
+    <!-- This string is displayed as the title of the desktop "toolbar" bookmarks folder. -->
+    <string name="bookmarks_desktop_toolbar_title">Barra de herramientas de marcadores</string>
+
+    <!-- This string is displayed as the title of the desktop "unfiled" bookmarks folder. -->
+    <string name="bookmarks_desktop_unfiled_title">Otros marcadores</string>
+
     <!-- This string is displayed in a tooltip that appears when a user hovers
          over an icon representing 'Remove Bookmark' for an individual bookmark
          item listed in the Bookmarks List. -->
@@ -646,6 +854,10 @@
     <!-- This string is displayed in a tooltip that appears in the tray bar on top of the
          bookmarks tray button then a new item is bookmarked. -->
     <string name="bookmarks_saved_notification">¡Guardado en Marcadores!</string>
+
+    <!-- This string is displayed in a notification that appears in the tray bar on top of the
+         downloads tray button then a download finishes. %1$s will be replaced with the downloaded file name. -->
+    <string name="download_completed_notification">%1$s descargado</string>
 
     <!-- This string is displayed in a tooltip that appears when a user hovers
          over an icon representing 'Edit This Bookmark' for an individual bookmark
@@ -740,6 +952,12 @@
     <!-- This string labels the Reset button that restores the default privacy and security settings values. -->
     <string name="privacy_options_reset">Restablecer los ajustes de Privacidad &amp; Seguridad</string>
 
+    <!-- This string labels the Clear All button that removes all the sites from the stored allowed pop-ups sites. -->
+    <string name="privacy_options_popups_clear_all">Limpiar todo</string>
+
+    <!-- This string labels the Reset button that removes all the sites from the stored allowed pop-ups sites. -->
+    <string name="privacy_options_popups_reset">Restablecer configuración de ventanas emergentes</string>
+
     <!-- This string labels the Reset button that restores the default controller settings values. -->
     <string name="controller_options_reset">Restablecer ajustes del controlador</string>
 
@@ -759,13 +977,13 @@
     <string name="all_language_options_reset">Restablecer todas las configuraciones de idioma</string>
 
     <!-- This string labels the description in the Voice Search Language button in the main language setting dialog. -->
-    <string name="language_options_voice_search_language"><![CDATA[Idioma de búsqueda por voz: <br>&emsp;&emsp;<b>%1$s</b>]]></string>
+    <string name="language_options_voice_search_language_title">Idioma de búsqueda por voz:</string>
 
     <!-- This string labels the description in the Content Language button in the main language setting dialog. -->
-    <string name="language_options_content_language"><![CDATA[Idioma preferido para mostrar sitios web: <br>&emsp;&emsp;<b>%1$s</b>]]></string>
+    <string name="language_options_content_language_title">Idioma preferido para mostrar sitios web:</string>
 
     <!-- This string labels the description in the Display Language button in the main language setting dialog. -->
-    <string name="language_options_display_language"><![CDATA[Idioma de visualización para la aplicación: <br>&emsp;&emsp;<b>%1$s</b>]]></string>
+    <string name="language_options_display_language_title">Idioma para mostrar la aplicación:</string>
 
     <!-- This string labels the description in the Content Language header for preferred languages list. -->
     <string name="language_options_preferred_languages">Idioma(s) preferido(s)</string>
@@ -852,8 +1070,23 @@
          and hovers over the 'Private Browsing' icon in the browser's tray menu. -->
     <string name="private_browsing_exit_tooltip">Salir de la navegación privada</string>
 
-    <!-- This string is shown in the context menu after a longpress on a link. When clicked it opens the target url in a new window. -->
-    <string name="context_menu_open_new_window">Abrir en una ventana nueva.</string>
+    <!-- This string is shown in the context menu after a longpress on a link. When clicked it copies the target to the clipboard -->
+    <string name="context_menu_copy_link">Copiar enlace</string>
+
+    <!-- This string is shown in the context menu after a longpress on a text. When clicked it cuts the selected text and can be pasted later. -->
+    <string name="context_menu_cut_text">Cortar</string>
+
+    <!-- This string is shown in the context menu after a longpress on a text. When clicked it copies the selected text and can be pasted later. -->
+    <string name="context_menu_copy_text">Copiar</string>
+
+    <!-- This string is shown in the context menu after a longpress on a input. When clicked it pastes the current text on the clipboard. -->
+    <string name="context_menu_paste_text">Pegar</string>
+
+    <!-- This string is shown in the context menu after a longpress on a text. When clicked it selects all text from the longpressed page area. -->
+    <string name="context_menu_select_all_text">Seleccionar todo</string>
+
+    <!-- This string is shown in the context menu after a longpress on a text. When clicked it unselects the selected text. -->
+    <string name="context_menu_unselect">Desmarcar</string>
 
     <!-- This string is for the tooltip that appears when the user hovers over the 'Bookmark' icon in the
          browser's navigation bar. The button it labels, when pressed, bookmarks the currently open web site. -->
@@ -946,6 +1179,7 @@
          '%1$s' will be replace at runtime with the app's name. -->
     <string name="not_entitled_message">%1$s no tiene permiso para ejecutarse en este dispositivo y se cerrará.</string>
 
+
     <!-- This string is displayed in a button that when pressed allows a user to view a page that has been blocked from being displayed.-->
     <string name="performance_unblock_page">Desbloquear página</string>
     <!-- This string is displayed as the title of a dialog displayed when poor web page performance has been detected. -->
@@ -954,12 +1188,13 @@
     <string name="performance_message">Reducir el tamaño de la ventana puede ayudar a mejorar una página web con bajo rendimiento. Si desbloqueas esta página, puede que la aplicación se cuelgue.</string>
 
     <!-- This string is displayed in the title of the Voice Search samples collect dialog. That dialog is shown the first time
-         a user tries to use the voice search. -->
+         a user tries to use the voice search.
+         '%1$s' Will be replaced at runtime with the app name. -->
     <string name="voice_samples_collect_data_dialog_title">¿Permitir que %1$s recopile muestras de voz para investigación?</string>
 
     <!-- This string is displayed in the description of the Voice Search samples collect dialog. That dialog is shown the first time
          a user tries to use the voice search. -->
-    <string name="voice_samples_collect_dialog_description2">Para mejorar nuestro reconocimiento de voz y otros servicios, necesitamos recopilar muestras de voz para investigación. Almacenamos tus datos de forma segura y sin información de identificación. Siempre podrás usar la búsqueda por voz, incluso si no permites la recopilación. &lt;a href=&quot;privacy&quot;&gt;Más información&lt;/a&gt;</string>
+    <string name="voice_samples_collect_dialog_description2"><![CDATA[Para mejorar nuestro reconocimiento de voz y otros servicios, necesitamos recopilar muestras de voz para investigación. Almacenamos tus datos de forma segura y sin información de identificación. Siempre podrás usar la búsqueda por voz, incluso si no permites la recopilación. <a href="privacy">Más información</a>]]></string>
 
     <!-- This string is displayed in the button of the Voice Search samples collect dialog.
          When clicked the user opts in to the voice data collection. -->
@@ -985,4 +1220,67 @@
     <!-- This string is displayed in the Clear button on top of the window when in private mode. It only appears
          when there is one window left. When clicked, it closes the private session -->
     <string name="private_clear_button">Limpiar</string>
-</resources>
+
+    <!-- This string is displayed on the right of the checkbox in the the pop-up blocking dialog.
+         If the checkbox is checked Firefox will never ask again to block pop-ups for this site -->
+    <string name="popup_block_checkbox">No volver a preguntar en este sitio</string>
+
+    <!-- This string is displayed on the left button of the pop-up blocking dialog.
+         If the button is clicked the pop-up will be shown -->
+    <string name="popup_block_button_show">Mostrar</string>
+
+    <!-- This string is displayed in a button on the header of the tabs dialog. When clicked,
+        it allows to select tabs from the tab -->
+    <string name="tabs_select">Seleccionar</string>
+
+    <!-- This string is displayed in a button on the header of the tabs dialog, after selection mode is enabled with
+        the Select` button. When clicked it closes the selection mode -->
+    <string name="tabs_select_done">Hecho</string>
+
+    <!-- This string is displayed in a button on the header of the tabs dialog, after selection mode is enabled with
+    the Select` button. When clicked it selects all the available tabs -->
+    <string name="tabs_select_all">Seleccionar todo</string>
+
+    <!-- This string is displayed in a button on the header of the tabs dialog, after selection mode is enabled with
+the Select` button. When clicked it closes all the previously selected tabs -->
+    <string name="tabs_close_selected">Cerrar pestañas</string>
+
+    <!-- This string is displayed in a button on the header of the tabs dialog.
+     When clicked it closes all the available tabs -->
+    <string name="tabs_close_all">Cerrar todo</string>
+
+    <!-- This string is displayed in a button on the header of the tabs dialog.
+       When clicked it unselects all the tabs -->
+    <string name="tabs_unselect">Desmarcar todo</string>
+
+    <!-- This string is displayed in a label on the header of the tabs dialog. It indicates that there is one tab
+        available -->
+    <string name="tabs_counter_singular">1 pestaña</string>
+
+    <!-- This string is displayed in a label on the header of the tabs dialog. It indicates that there are n tabs available.
+        %1$s expands to a integer which indicates the number of tabs. This number is always larger than 1, ortherwise
+        tabs_counter_singular key is used-->
+    <string name="tabs_counter_plural">%1$s pestañas</string>
+
+    <!-- This string is displayed in a label on the header of the tabs dialog. It's only visible in tab selection mode.
+        It indicates that there is one tab selected -->
+    <string name="tabs_selected_counter_singular">Una pestaña seleccionada</string>
+
+    <!-- This string is displayed in a label on the header of the tabs dialog. It's only visible in tab selection mode.
+        It indicates that there are n tabs selected. %1$s expands to a integer which indicates the number of tabs.
+        This number is always larger than 1, ortherwise tabs_selected_counter_singular key is used-->
+    <string name="tabs_selected_counter_plural">%1$s pestañas seleccionadas</string>
+
+    <!-- This string is displayed in a label on the header of the tabs dialog. It's only visible in tab selection mode.
+     It indicates that there are no tabs selected -->
+    <string name="tabs_selected_counter_none">0 pestañas seleccionadas</string>
+
+    <!-- This string is for the tooltip that appears when the users hovers in the tabs icon in the browser's
+        tray menu. When clicked it opens the tray dialog in the current active window -->
+    <string name="tabs_tray_tooltip">Ver pestañas</string>
+
+    <!-- This string is displayed in a tooltip that appears in the tray bar on top of the
+     tabs tray button then a tab has been added on the background. -->
+    <string name="tab_added_notification">¡Nueva pestaña añadida!</string>
+  
+    </resources>

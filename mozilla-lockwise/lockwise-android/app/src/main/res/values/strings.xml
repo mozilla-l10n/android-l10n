@@ -70,8 +70,6 @@
     <string name="search_clear_content_description">Clear search bar text</string>
     <!-- This is shown when a user has entered search terms that have filtered the list of logins to find no results -->
     <string name="no_matching_logins">No matching logins.</string>
-    <!-- This explains that if no logins are found and were expected, to add new logins through the Firefox desktop browser -->
-    <string name="save_firefox_disclaimer">To see more logins here, you’ll need to save them to Firefox.</string>
 
     <!-- This is a heading that appears above the URL in context of a detailed item view -->
     <string name="hint_hostname">Web address</string>
@@ -222,15 +220,11 @@
     <!-- This is the button to dismiss the final onboarding screen -->
     <string name="finish">Finish</string>
     <!-- This description of the app functionality is shown on the final onboarding screen -->
-    <string name="access_description">Access logins saved to Firefox from your phone</string>
-    <!-- This is an accessible content description for the security information link text. %1$s will be replaced with application name -->
-    <string name="security_content_description">This is a link to a description of security practices in %1$s.</string>
+    <string name="onboarding_access_description">Access logins saved to Firefox from your phone</string>
     <!-- This description of the app security is shown on the final onboarding screen. %s will be replaced with the security link. -->
-    <string name="security_description">Sync between devices with secure %s</string>
-    <!-- This text is displayed as a link in the security description. -->
-    <string name="security_link">256-bit encryption</string>
+    <string name="onboarding_security_description">Sync between devices with secure 256-bit encryption</string>
     <!-- This description of the app convenience is shown on the final onboarding screen. -->
-    <string name="convenience_description">Unlock the app with ease using your fingerprint</string>
+    <string name="onboarding_convenience_description">Unlock the app with ease using your fingerprint</string>
 
     <!-- This is the title of the device security dialog box. -->
     <string name="secure_your_device">Secure your device.</string>
@@ -264,19 +258,9 @@
     <string name="delete_description">This will delete the login from both %1$s and Firefox.</string>
     <!-- This is the text on an item in the item detail toolbar menu to edit an entry. -->
     <string name="edit">Edit</string>
-    <!-- This is the hint in the edit entry view for the entry name. -->
-    <string name="entry_name_description">The entry name</string>
-    <!-- This is a heading that appears above an entry name in context of a edit item view -->
-    <string name="hint_entryname">Name</string>
-    <!-- This is the hint in the edit entry view for the entry name. -->
-    <string name="input_name_description">Entry name is not editable at this time.</string>
-    <!-- This is the hint in the edit entry view for formatting the entry hostname. -->
-    <string name="hostname_entry_description">Make sure this matches the exact domain for the website you are referencing
-        (“https://” and “www” included).
-    </string>
+
+    <!-- This is the description for the entry password in context of an edit item view. -->
     <string name="entry_password_description">Password for this entry.</string>
-    <!-- This is the text on the button in the edit view that allows you to delete the entry. -->
-    <string name="delete_entry">Delete Entry</string>
     <!-- This is the title text on the dialog when you attempt to close the edit view and changes have been made. -->
     <string name="discard_changes">Discard changes?</string>
     <!-- This is the additional text when you attempt to close the edit view and changes have been made. -->
@@ -289,4 +273,40 @@
     <string name="username_description">The username</string>
     <!-- This is the title of the edit login page. -->
     <string name="edit_login_title">Edit Login</string>
+
+    <!-- This is the error message that is shown in edit or create view when input text for password is not valid. -->
+    <string name="password_invalid_text">Password cannot be empty</string>
+
+    <!-- This is the error message that is shown in edit or create view when a username matches a previously existing credential for that domain combination. -->
+    <string name="username_duplicate_exists">A login with that username already exists</string>
+
+    <!-- This is the text description that is shown in the manual create view underneath the hostname field to describe a valid hostname. -->
+    <string name="create_hostname_description">Make sure this matches the exact domain for the website you are referencing (“https://” and “www” included).</string>
+
+    <!-- This is the title of the create new login page. -->
+    <string name="create_title">New Login</string>
+
+    <!-- This is the hint text that is shown inline on the username field of the create new login page. -->
+    <string name="create_username_hint_text">e.g., janedoe</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. -->
+    <string name="create_hostname_hint_text">https://www.example.com</string>
+
+    <!-- This is an error message shown below the hostname field of the create new login page when a hostname is invalid. -->
+    <string name="hostname_invalid_text">Web address must contain \“https://\“ or \“http://\“</string>
+
+    <!-- This is an error message shown below the hostname field of the create new login page when a hostname is invalid. -->
+    <string name="hostname_invalid_host">Web address must have a valid hostname</string>
+
+    <!-- This is the error message that is shown in the create view when input text for hostname is empty. -->
+    <string name="hostname_empty_invalid_text">Hostname cannot be empty</string>
+
+    <!-- This is the toast message that is shown when a new entry has been successfully created. -->
+    <string name="successful_create_toast">Login added successfully</string>
+
+    <!-- This is the content description for the icon that appears on the toast notification. -->
+    <string name="toast_icon_description">The icon that appears on a toast notification.</string>
+
+    <!-- This is the toast message that appears when an entry has been successfully deleted.  -->
+    <string name="entry_deleted_toast">%1$s deleted</string>
 </resources>

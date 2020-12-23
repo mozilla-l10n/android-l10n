@@ -70,8 +70,6 @@
     <string name="search_clear_content_description">Xóa văn bản trên thanh tìm kiếm</string>
     <!-- This is shown when a user has entered search terms that have filtered the list of logins to find no results -->
     <string name="no_matching_logins">Không có thông tin đăng nhập phù hợp.</string>
-    <!-- This explains that if no logins are found and were expected, to add new logins through the Firefox desktop browser -->
-    <string name="save_firefox_disclaimer">Để xem thêm thông tin đăng nhập tại đây, bạn sẽ cần lưu chúng vào Firefox.</string>
 
     <!-- This is a heading that appears above the URL in context of a detailed item view -->
     <string name="hint_hostname">Địa chỉ web</string>
@@ -85,11 +83,11 @@
     <!-- This describes an icon to screenreaders that the button tapped will copy the username to the device clipboard to paste and use in another application -->
     <string name="copy_username_content_description">Sao chép tên người dùng</string>
     <!-- This message appears when the user taps to copy the username to the device clipboard -->
-    <string name="toast_username_copied">Tên người dùng đã được sao chép</string>
+    <string name="toast_username_copied">Đã sao chép tên người dùng</string>
     <!-- This describes an icon to screenreaders that the button tapped will copy the password to the device clipboard to paste and use in another application -->
     <string name="copy_password_content_description">Sao chép mật khẩu</string>
     <!-- This message appears when the user taps to copy the password to the device clipboard -->
-    <string name="toast_password_copied">Mật khẩu đã được sao chép</string>
+    <string name="toast_password_copied">Đã sao chép mật khẩu</string>
     <!-- This describes an icon to screenreaders that the button tapped will display the password in plain text for immediate reading or use -->
     <string name="display_password_content_description">Hiển thị mật khẩu của bạn ở dạng văn bản thuần túy</string>
 
@@ -221,16 +219,13 @@
     <string name="all_set">Bạn đã cài đặt tất cả!</string>
     <!-- This is the button to dismiss the final onboarding screen -->
     <string name="finish">Kết thúc</string>
+
     <!-- This description of the app functionality is shown on the final onboarding screen -->
-    <string name="access_description">Truy cập thông tin đăng nhập được lưu vào Firefox từ điện thoại của bạn</string>
-    <!-- This is an accessible content description for the security information link text. %1$s will be replaced with application name -->
-    <string name="security_content_description">Đây là liên kết đến mô tả về các hoạt động bảo mật trong %1$s.</string>
+    <string name="onboarding_access_description">Truy cập thông tin đăng nhập được lưu vào Firefox từ điện thoại của bạn</string>
     <!-- This description of the app security is shown on the final onboarding screen. %s will be replaced with the security link. -->
-    <string name="security_description">Đồng bộ hóa giữa các thiết bị với %s</string>
-    <!-- This text is displayed as a link in the security description. -->
-    <string name="security_link">Mã hóa 256-bit</string>
+    <string name="onboarding_security_description">Đồng bộ hóa giữa các thiết bị với mã hóa 256-bit an toàn</string>
     <!-- This description of the app convenience is shown on the final onboarding screen. -->
-    <string name="convenience_description">Mở khóa ứng dụng một cách dễ dàng bằng dấu vân tay của bạn</string>
+    <string name="onboarding_convenience_description">Mở khóa ứng dụng một cách dễ dàng bằng dấu vân tay của bạn</string>
 
     <!-- This is the title of the device security dialog box. -->
     <string name="secure_your_device">Bảo mật thiết bị của bạn.</string>
@@ -242,7 +237,7 @@
     <string name="set_up_now">Thiết lập ngay</string>
 
     <!-- This header appears above the Privacy page of the application website. -->
-    <string name="privacy">Quyền riêng tư</string>
+    <string name="privacy">Riêng tư</string>
 
     <!-- This is the prompt when autofill is triggered and the application is locked. It appears on top of the login form as an action available to the user to take. %1$s will be replaced with application name -->
     <string name="autofill_authenticate_cta">Mở khóa %1$s</string>
@@ -264,19 +259,9 @@
     <string name="delete_description">Điều này sẽ xóa thông tin đăng nhập từ cả %1$s và Firefox.</string>
     <!-- This is the text on an item in the item detail toolbar menu to edit an entry. -->
     <string name="edit">Chỉnh sửa</string>
-    <!-- This is the hint in the edit entry view for the entry name. -->
-    <string name="entry_name_description">Tên mục</string>
-    <!-- This is a heading that appears above an entry name in context of a edit item view -->
-    <string name="hint_entryname">Tên</string>
-    <!-- This is the hint in the edit entry view for the entry name. -->
-    <string name="input_name_description">Không thể chỉnh sửa tên mục vào lúc này.</string>
-    <!-- This is the hint in the edit entry view for formatting the entry hostname. -->
-    <string name="hostname_entry_description">Nội dung của trường này phải giống hệt như tên miền tương ứng
-        (Bao gồm “https://” và “www”).
-    </string>
+
+    <!-- This is the description for the entry password in context of an edit item view. -->
     <string name="entry_password_description">Mật khẩu cho mục này.</string>
-    <!-- This is the text on the button in the edit view that allows you to delete the entry. -->
-    <string name="delete_entry">Xóa mục</string>
     <!-- This is the title text on the dialog when you attempt to close the edit view and changes have been made. -->
     <string name="discard_changes">Loại bỏ những thay đổi?</string>
     <!-- This is the additional text when you attempt to close the edit view and changes have been made. -->
@@ -289,4 +274,41 @@
     <string name="username_description">Tên đăng nhập</string>
     <!-- This is the title of the edit login page. -->
     <string name="edit_login_title">Chỉnh sửa thông tin đăng nhập</string>
+
+    <!-- This is the error message that is shown in edit or create view when input text for password is not valid. -->
+    <string name="password_invalid_text">Mật khẩu không được để trống</string>
+
+    <!-- This is the error message that is shown in edit or create view when a username matches a previously existing credential for that domain combination. -->
+    <string name="username_duplicate_exists">Một thông tin đăng nhập với tên người dùng đó đã tồn tại</string>
+
+    <!-- This is the text description that is shown in the manual create view underneath the hostname field to describe a valid hostname. -->
+    <string name="create_hostname_description">Đảm bảo tên này khớp với tên miền chính xác cho trang web bạn đang tham khảo (bao gồm “https://” và “www”).</string>
+
+    <!-- This is the title of the create new login page. -->
+    <string name="create_title">Đăng nhập mới</string>
+
+    <!-- This is the hint text that is shown inline on the username field of the create new login page. -->
+    <string name="create_username_hint_text">ví dụ: janedoe</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. -->
+    <string name="create_hostname_hint_text">https://www.example.com</string>
+
+    <!-- This is an error message shown below the hostname field of the create new login page when a hostname is invalid. -->
+    <string name="hostname_invalid_text">Địa chỉ web phải chứa \“https://\“ hoặc \“http://\“</string>
+
+    <!-- This is an error message shown below the hostname field of the create new login page when a hostname is invalid. -->
+    <string name="hostname_invalid_host">Địa chỉ web phải có tên máy chủ hợp lệ</string>
+
+    <!-- This is the error message that is shown in the create view when input text for hostname is empty. -->
+    <string name="hostname_empty_invalid_text">Tên máy chủ không thể để trống</string>
+
+    <!-- This is the toast message that is shown when a new entry has been successfully created. -->
+    <string name="successful_create_toast">Đã thêm thông tin đăng nhập thành công</string>
+
+    <!-- This is the content description for the icon that appears on the toast notification. -->
+    <string name="toast_icon_description">Biểu tượng xuất hiện trên thông báo nổi.</string>
+
+    <!-- This is the toast message that appears when an entry has been successfully deleted.  -->
+    <string name="entry_deleted_toast">Đã xóa %1$s</string>
+
 </resources>
