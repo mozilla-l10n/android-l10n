@@ -319,8 +319,12 @@
     <string name="preferences_telemetry">টেলিমেট্রি</string>
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">ব্যবহার এবং প্রযুক্তিগত তথ্য</string>
+    <!-- Preference description for usage and technical data collection -->
+    <string name="preferences_usage_data_description">আমাদের %1$s আরও উন্নত করতে সহায়তা করতে Mozilla -র সাথে আপনার ব্রাউজার সম্পর্কিত কর্মক্ষমতা, ব্যবহার, হার্ডওয়্যার এবং কাস্টমাইজেশন তথ্য শেয়ার করুন</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">বিপণন তথ্য</string>
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <string name="preferences_marketing_data_description">আমাদের মোবাইল বিপণন বিক্রেতা লিয়ানপ্লামের সাথে আপনি %1$s এ কী বৈশিষ্ট্যগুলি ব্যবহার করেন সে সম্পর্কে তথ্য শেয়ার করুন।</string>
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">পরীক্ষানিরীক্ষা</string>
     <!-- Summary for experiments preferences -->
@@ -388,9 +392,14 @@
     <string name="library_search">অনুসন্ধান</string>
     <!-- Settings Page Title -->
     <string name="settings_title">সেটিংস</string>
+    <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
+    <string name="content_description_history_menu">ইতিহাস আইটেম মেনু</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">বন্ধ করুন</string>
 
+    <!-- Sessions -->
+    <!-- Title for the list of tabs -->
+    <string name="tab_header_label">ট্যাব খুলুন</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_title">ব্যক্তিগত সেশন</string>
     <!-- Title for the list of tabs in the current private session -->
@@ -405,6 +414,8 @@
     <string name="open_tabs_menu">ট্যাব মেনু খুলুন</string>
     <!-- Open tabs menu item to close all tabs -->
     <string name="tabs_menu_close_all_tabs">সব ট্যাব বন্ধ করুন</string>
+    <!-- Open tabs menu item to share all tabs -->
+    <string name="tabs_menu_share_tabs">ট্যাব শেয়ার করুন</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
     <string name="tab_menu">ট্যাব মেনু</string>
     <!-- Tab menu item to share the tab -->
@@ -415,14 +426,21 @@
     <string name="current_session_save">সংরক্ষণ</string>
     <!-- Button in the current session menu. Opens the share menu when pressed -->
     <string name="current_session_share">শেয়ার</string>
+    <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
+    <string name="current_session_image">বর্তমান সেশনের চিত্র</string>
     <!-- Button to save the current set of tabs into a collection -->
     <string name="save_to_collection">সংগ্রহে সংরক্ষণ করুন</string>
     <!-- Text for the menu button to delete a collection -->
     <string name="collection_delete">সংগ্রহ মুছে ফেলুন</string>
     <!-- Text for the menu button to rename a collection -->
     <string name="collection_rename">সংগ্রহর নাম পরিবর্তন করুন</string>
+    <!-- Text for the button to open tabs of the selected collection -->
+    <string name="collection_open_tabs">ট্যাব খুলুন</string>
     <!-- Text for the menu button to remove a top site -->
 	<string name="remove_top_site">অপসারণ</string>
+
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (ব্যক্তিগত মোড)</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -435,6 +453,8 @@
     <string name="history_delete_single_item_snackbar">%1$s মুছে ফেলা হয়েছে</string>
     <!-- Text for positive action to delete history in deleting history dialog -->
     <string name="history_clear_dialog">পরিষ্কার</string>
+    <!-- History overflow menu copy button -->
+    <string name="history_menu_copy_button">অনুলিপি</string>
     <!-- History overflow menu share button -->
     <string name="history_menu_share_button">শেয়ার</string>
     <!-- History overflow menu open in new tab button -->
@@ -474,6 +494,9 @@
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">ট্যাব পুনরুদ্ধার করুন</string>
 
+    <!-- Content Description for session item menu button -->
+    <string name="content_description_session_menu">সেশন অপশন</string>
+
     <!-- Content Description for session item share button -->
     <string name="content_description_session_share">শেয়ার সেশন</string>
 
@@ -484,6 +507,8 @@
     <string name="bookmark_edit">বুকমার্ক সম্পাদনা করুন</string>
     <!-- Screen title for selecting a bookmarks folder -->
     <string name="bookmark_select_folder">ফোল্ডার নির্বাচন করুন</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">আপনি কি নিশ্চিত যে আপনি এই ফোল্ডারটি মুছতে চান?</string>
     <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
     <string name="bookmark_delete_folder_snackbar">%1$s কে মুছে ফেলা হয়েছে</string>
     <!-- Screen title for adding a bookmarks folder -->
@@ -539,6 +564,8 @@
     <!-- Bookmark snackbar message on deletion
      The first parameter is the host part of the URL of the bookmark deleted, if any -->
     <string name="bookmark_deletion_snackbar_message">%1$s মুছে ফেলা হয়েছে</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks not including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_2">বুকমার্ক মুছে ফেলা হয়েছে</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">UNDO</string>
 
@@ -585,6 +612,10 @@
     <string name="tracking_protection_off">বন্ধ</string>
     <!-- Label that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">অডিও এবং ভিডিওর অনুমোদন দিন</string>
+    <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
+    <string name="preference_option_autoplay_allowed_wifi_only2">অডিও ও ভিডিও শুধু সেলুলার ডাটাতে ব্লক করুন</string>
+    <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
+    <string name="preference_option_autoplay_allowed_wifi_subtext">অডিও এবং ভিডিও Wi-Fi চালু হবে</string>
     <!-- Label that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">কেবল অডিওকে অবরুদ্ধ করুন</string>
     <!-- Label that indicates that all video and audio autoplay is blocked -->
