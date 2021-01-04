@@ -1000,6 +1000,12 @@
     <string name="snackbar_tab_closed">Pestaña cerrada</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Pestañas cerradas</string>
+    <!-- Text shown in snackbar when user closes tabs -->
+    <string name="snackbar_message_tabs_closed">¡Pestañas cerradas!</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">¡Marcadores guardados!</string>
+    <!-- Text shown in snackbar action for viewing bookmarks -->
+    <string name="snackbar_message_bookmarks_view">Ver</string>
     <!-- Text shown in snackbar when user adds a site to top sites -->
     <string name="snackbar_added_to_top_sites">¡Añadido a sitios favoritos!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
@@ -1148,6 +1154,10 @@
     <string name="onboarding_account_sign_in_header">Empieza a sincronizar marcadores, contraseñas y más con tu cuenta de Firefox.</string>
     <!-- Text for the button to learn more about signing in to your Firefox account -->
     <string name="onboarding_manual_sign_in_learn_more">Saber más</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated)
+        The first parameter is the email of the detected user's account -->
+    <string name="onboarding_firefox_account_auto_signin_header_3">Te has conectado como %s en otro navegador Firefox en este dispositivo. ¿Quieres conectarte con esta cuenta?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string name="onboarding_firefox_account_auto_signin_confirm">Sí, iniciar sesión</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
@@ -1238,6 +1248,8 @@
     <string name="sign_in_with_camera">Inicia sesión con tu cámara</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Usar correo electrónico en su lugar</string>
+    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[¿No tienes cuenta? <u>Crea una</u> para sincronizar Firefox entre dispositivos.]]></string>
     <!-- Text shown in confirmation dialog to sign out of account -->
     <string name="sign_out_confirmation_message">Firefox dejará de sincronizar tu cuenta, pero no se eliminarán los datos de navegación en este dispositivo.</string>
     <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
@@ -1349,6 +1361,11 @@
     The first parameter is the app name -->
     <string name="open_source_licenses_title">%s | Bibliotecas OSS</string>
 
+    <!-- Category of trackers (redirect trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_redirect_trackers_title">Rastreadores de redirección</string>
+    <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_redirect_trackers_description">Limpia las cookies creadas por redirecciones a sitios web de seguimiento conocidos.</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Ayuda</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1391,6 +1408,9 @@
     <string name="add_to_homescreen_continue">Continuar al sitio web</string>
     <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">Nombre del acceso directo</string>
+
+    <!-- Describes the add to homescreen functionality -->
+    <string name="add_to_homescreen_description_2">Puedes añadir fácilmente este sitio web a la pantalla de inicio de tu dispositivo para tener acceso instantáneo y navegar rápidamente, consiguiendo una experiencia similar a la de una aplicación real.</string>
 
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">Inicios de sesión y contraseñas</string>
@@ -1461,8 +1481,12 @@
     <string name="logins_site_copied">Sitio copiado al portapapeles</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
     <string name="saved_logins_copy_password">Copiar contraseña</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a password while editing a login-->
+    <string name="saved_logins_clear_password">Borrar contraseña</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
     <string name="saved_login_copy_username">Copiar nombre de usuario</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
+    <string name="saved_login_clear_username">Borrar nombre de usuario</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">Copiar sitio</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1635,11 +1659,22 @@
     <!-- Top Sites -->
     <!-- Title text displayed in the dialog when top sites limit is reached. -->
     <string name="top_sites_max_limit_title">Límite de sitios frecuentes alcanzado</string>
+    <!-- Content description text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_content_2">Para agregar un nuevo sitio favorito, elimina uno. Toca y mantén presionado el sitio y selecciona eliminar.</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">Vale, entendido</string>
 
     <!-- Label for the show most visited sites preference -->
     <string name="top_sites_toggle_top_frecent_sites">Mostrar los sitios más visitados</string>
+
+    <!-- Title text displayed in the rename top site dialog. -->
+	<string name="top_sites_rename_dialog_title">Nombre</string>
+	<!-- Hint for renaming title of a top site -->
+	<string name="top_site_name_hint">Nombre del sitio principal</string>
+	<!-- Button caption to confirm the renaming of the top site. -->
+	<string name="top_sites_rename_dialog_ok">Aceptar</string>
+	<!-- Dialog button text for canceling the rename top site prompt. -->
+	<string name="top_sites_rename_dialog_cancel">Cancelar</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Eliminar</string>
@@ -1647,6 +1682,9 @@
     <!-- Deprecated: text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">Saca el máximo provecho de %s.</string>
+
+    <!-- Content description radio buttons with a link to more information -->
+    <string name="radio_preference_info_content_description">Clic para más detalles</string>
 
     <!-- Deprecated: No Open Tabs Message Header -->
     <string name="no_collections_header1">Colecciona las cosas que te importan</string>
