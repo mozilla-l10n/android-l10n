@@ -20,6 +20,8 @@
     <!-- No Private Tabs Message Description -->
     <string name="no_private_tabs_description">आपके निजी टैब यहाँ दिखाए जाएंगे।</string>
 
+    <!-- Default title for pinned JD top site that links to JD home page  -->
+    <string name="default_top_site_jd">JD</string>
     <!-- Message announced to the user when tab tray is selected with 1 tab -->
     <string name="open_tab_tray_single">1 खुला टैब। टैब स्विच करने के लिए टैप करें।</string>
     <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
@@ -70,19 +72,14 @@
     <!-- Text for the negative button -->
     <string name="cfr_neg_button_text">नहीं धन्यवाद</string>
 
-    <!-- Search widget "contextual feature recommendation" (CFR) -->
-    <!-- Text for the main message. 'Firefox' intentionally hardcoded here.-->
-    <string name="search_widget_cfr_message">ओर तेज Firefox करने के लिए, अपने होम स्क्रीन पर एक विजेट जोड़ें।</string>
-    <!-- Text for the positive button -->
-    <string name="search_widget_cfr_pos_button_text">विजेट जोड़ें</string>
-    <!-- Text for the negative button -->
-    <string name="search_widget_cfr_neg_button_text">अभी नहीं</string>
-
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">सेटिंग पर जाएं</string>
 
     <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
     <string name="camera_permissions_needed_positive_button_text">सेटिंग पर जाएं</string>
+
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_grid_view_banner_positive_button_text">सेटिंग पर जाएं</string>
 
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
@@ -132,8 +129,6 @@
     <string name="browser_menu_find_in_page">पृष्ठ में ढूँढें</string>
     <!-- Browser menu button that creates a private tab -->
     <string name="browser_menu_private_tab">निजी टैब</string>
-    <!-- Browser menu button that creates a new tab -->
-    <string name="browser_menu_new_tab">नया टैब</string>
 
     <!-- Browser menu button that saves the current tab to a collection -->
     <string name="browser_menu_save_to_collection_2">संग्रहण में सहेजें</string>
@@ -199,7 +194,6 @@
     <!-- Search suggestion onboarding hint Learn more link text -->
     <string name="search_suggestions_onboarding_learn_more_link">अधिक जानें</string>
 
-    <!-- Search Widget -->
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">खोजें</string>
 
@@ -317,6 +311,9 @@
 
     <!-- Preference for notifications -->
     <string name="preferences_notifications">अधिसूचनाएं</string>
+
+    <!-- Button caption to abort the add-on collection configuration -->
+    <string name="customize_addon_collection_cancel">रद्द करें</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -490,7 +487,6 @@
     %d is a placeholder for the number of tabs selected. -->
     <string name="recently_closed_tab">%d टैब</string>
 
-    <!-- Tab Management -->
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">टैब बंद करें</string>
     <!-- Option for auto closing tabs that will auto close tabs after one day -->
@@ -531,6 +527,10 @@
     <string name="tab_tray_menu_home">मुख्य पृष्ठ पर जाएं</string>
     <!-- Shortcut action to toggle private mode -->
     <string name="tab_tray_menu_toggle">टैब मोड को टॉगल करें</string>
+    <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
+    <string name="tab_tray_multiselect_menu_item_bookmark">बुकमार्क</string>
+    <!-- Text shown in the multiselect menu for closing selected tabs. -->
+    <string name="tab_tray_multiselect_menu_item_close">बंद करें</string>
     <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
     <string name="remove_tab_from_collection">संग्रहण से टैब हटायें</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
@@ -567,7 +567,7 @@
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">खुले टैब</string>
     <!-- Text for the menu button to remove a top site -->
-    <string name="remove_top_site">हटाएं</string>
+	<string name="remove_top_site">हटाएं</string>
 
     <!-- Text for the menu button to delete a top site from history -->
     <string name="delete_from_history">इतिहास से मिटाएं</string>
@@ -614,6 +614,7 @@
     <string name="history_older">पुराना</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">यहां कोई इतिहास नहीं</string>
+
 
     <!-- Crashes -->
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
@@ -1070,10 +1071,6 @@
     <string name="onboarding_private_browsing_button">सेटिंग खोलें</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">आपकी गोपनीयता</string>
-    <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_privacy_notice_description">आपने जो हमारे साथ साझा करते है या जो आप ऑनलाइन साझा करते हैं 
-        उस पर नियंत्रण देने के लिए हमने %s डिज़ाइन किया हैं।</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">हमारी गोपनीयता सूचना पढ़ें</string>
 
@@ -1535,9 +1532,17 @@
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">ठीक है, समझ गए</string>
 
+    <!-- Title text displayed in the rename top site dialog. -->
+	<string name="top_sites_rename_dialog_title">नाम</string>
+	<!-- Dialog button text for canceling the rename top site prompt. -->
+	<string name="top_sites_rename_dialog_cancel">रद्द करें</string>
+
     <!-- Deprecated: text for the firefox account onboarding card header
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_firefox_account_header">%s का अधिकतम लाभ उठाएं।</string>
+
+    <!-- Content description radio buttons with a link to more information -->
+    <string name="radio_preference_info_content_description">अधिक जानकारी के लिए क्लिक करें</string>
 
     <!-- Deprecated: No Open Tabs Message Header -->
     <string name="no_collections_header1">जो चीजें आपके लिए मायने रखती हैं, उन्हें इकट्ठा करें</string>
