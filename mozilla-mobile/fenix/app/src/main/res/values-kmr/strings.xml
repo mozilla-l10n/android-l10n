@@ -977,6 +977,18 @@
     <!-- Text for the warning message on the Add new device screen -->
     <string name="sync_add_new_device_message">Amûra girêdayî nîn e</string>
 
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">Derbarê Şandina Hilpekînan de agahiyan bistîne…</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">Bi amûreke din ve girê bide…</string>
+
+    <!-- Notifications -->
+    <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
+    <string name="notification_pbm_channel_name">Danişîna gera nepen</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">Hilpekînên nepen jê bibe</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text_2">Hilpekînên nepen bigire</string>
     <!-- Notification action to open Fenix and resume the current browsing session. -->
     <string name="notification_pbm_action_open">Veke</string>
     <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
@@ -985,6 +997,8 @@
     <string name="notification_powered_by_channel_name">Bihêzkirin ji aliyê</string>
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Koleksiyon hate jêbirin</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">Navê koleksiyê hat guhertin</string>
     <!-- Text shown in snackbar when user deletes a tab -->
     <string name="snackbar_tab_deleted">Hilpekîn hate jêbirin</string>
     <!-- Text shown in snackbar when user deletes all tabs -->
@@ -995,6 +1009,8 @@
     <string name="snackbar_tabs_closed">Hilpekîn hatin girtin</string>
     <!-- Text shown in snackbar when user closes tabs -->
     <string name="snackbar_message_tabs_closed">Hilpekîn hatin girtin!</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">Bijare hatin tomarkirin!</string>
     <!-- Text shown in snackbar action for viewing bookmarks -->
     <string name="snackbar_message_bookmarks_view">Bibîne</string>
     <!-- Text shown in snackbar when user adds a site to top sites -->
@@ -1013,22 +1029,38 @@
     <string name="a11y_dialog_deleted_undo">Vegerîne</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_confirm">Bipejirîne</string>
+    <!-- QR code scanner prompt which appears after scanning a code, but before navigating to it
+        First parameter is the name of the app, second parameter is the URL or text scanned-->
+    <string name="qr_scanner_confirmation_dialog_message">Destûrê bide %1$sê ku %2$sê veke</string>
     <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
     <string name="qr_scanner_dialog_positive">BIHÊLE</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">NEHÊLE</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Tu bi rastî jî dixwazî koleksiyana %1$s’ê were jêbirin?</string>
+    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_message">Jêbirina vê hilpekînê dê hemû koleksiyê jê bibe. Kengê bixwazî dikarî koleksiyoneke nû biafirînî.</string>
     <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
     <string name="delete_tab_and_collection_dialog_title">%1$s’ê jê bibe?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">Jê bibe</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">Betal bike</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">Têketina moda ekrana dagirtî</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL hate kopîkirin</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">Ev nivîseke nimûneyî ye. Li virê xuya dibe ka gava tu bi vê sazkariyê mezinahiyê biguherînî dê çawa be.</string>
+    <!-- Summary for Accessibility Text Size Scaling Preference -->
+    <string name="preference_accessibility_text_size_summary">Nivîsên li ser malperan mezintir yan biçûktir bike</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_font_size_title">Mezinahiya fontê</string>
+
+    <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_2">Lêaîna mezinahiya nivîsan ya xweber</string>
+    <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
+    <string name="preference_accessibility_auto_size_summary">Mezinahiya nivîsan dê li gorî sazkariyên Androîda te be. Ji bo mezinahiyê nivîsê li virê biguherînî vê wê betal bike.</string>
 
     <!-- Title for the Delete browsing data preference -->
     <string name="preferences_delete_browsing_data">Daneyên gerînê jê bibe</string>
@@ -1048,13 +1080,29 @@
     <string name="preferences_delete_browsing_data_browsing_history_subtitle">%d rûpel</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies">Kûkî</string>
+    <!-- Subtitle for the cookies item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_subtitle">Danişînên li ser gelek malperan dê bên girtin</string>
+    <!-- Title for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files">Wêne û pelên di pêşbîrê de</string>
+    <!-- Subtitle for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Ciyê depokirinê vala dike</string>
+    <!-- Title for the site permissions item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_site_permissions">Destûrên malperan</string>
     <!-- Title for the downloads item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_downloads">Daxistinên te</string>
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Daneyên gerînê jê bibe</string>
+    <!-- Title for the Delete browsing data on quit preference -->
+    <string name="preferences_delete_browsing_data_on_quit">Daneyên gerê di dema derketinê de jê bibe</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit">Gava tu ji menuya giştî &quot;Derkeve&quot;yê hilbijêrî daneyên gerê xweber paqij dike</string>
+    <!-- Summary for the Delete browsing data on quit preference. "Quit" translation should match delete_browsing_data_on_quit_action translation. -->
+    <string name="preference_summary_delete_browsing_data_on_quit_2">Gava tu ji menuya giştî \&quot;Derkeve\&quot;yê hilbijêrî daneyên gerê xweber paqij dike</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Derkeve</string>
 
+    <!-- Dialog message to the user asking to delete browsing data. -->
+    <string name="delete_browsing_data_prompt_message">Ev ê hemû daneyên te yên gerê jê bibe</string>
     <!-- Text for the cancel button for the data deletion dialog -->
     <string name="delete_browsing_data_prompt_cancel">Betal bike</string>
     <!-- Text for the allow button for the data deletion dialog -->
