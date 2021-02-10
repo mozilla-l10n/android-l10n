@@ -224,6 +224,8 @@
     <string name="preferences_help">Tulong</string>
     <!-- Preference link to rating Fenix on the Play Store -->
     <string name="preferences_rate">I-rate sa Google Play</string>
+    <!-- Preference for giving feedback about Fenix -->
+    <string name="preferences_feedback">Magbigay ng puna</string>
     <!-- Preference linking to about page for Fenix
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="preferences_about">Tungkol sa %1$s</string>
@@ -231,10 +233,24 @@
     <string name="preferences_your_rights">Your Rights</string>
     <!-- Preference for settings related to saved passwords -->
     <string name="preferences_passwords">Mga Password</string>
+    <!-- Preference for settings related to saved credit cards and addresses -->
+    <string name="preferences_credit_cards_addresses">Mga credit card at tirahan</string>
+    <!-- Preference for settings related to changing the default browser -->
+    <string name="preferences_set_as_default_browser">Itakda bilang default browser</string>
     <!-- Preference category for privacy settings -->
     <string name="preferences_category_privacy">Pribasiya</string>
     <!-- Preference category for privacy and security settings -->
     <string name="preferences_category_privacy_security">Pribasiya at Seguridad</string>
+    <!-- Preference for advanced site permissions -->
+    <string name="preferences_site_permissions">Mga site permission</string>
+    <!-- Preference for private browsing options -->
+    <string name="preferences_private_browsing_options">Private browsing</string>
+    <!-- Preference for opening links in a private tab-->
+    <string name="preferences_open_links_in_a_private_tab">Buksan ang mga link sa pribadong tab</string>
+    <!-- Preference for allowing screenshots to be taken while in a private tab-->
+    <string name="preferences_allow_screenshots_in_private_mode">Payagan ang mga screenshot sa private browsing</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Magdagdag ng private browsing shortcut</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Accessibility</string>
     <!-- Preference category for account information -->
@@ -251,17 +267,54 @@
     <string name="preferences_gestures">Gestures</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Customize</string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">Mag-sync ng mga bookmark, kasaysayan, at iba pa gamit ang iyong Firefox Account</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Firefox Account</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">Muling kumonekta para maipagpatuloy ang pag-sync</string>
     <!-- Preference for language -->
     <string name="preferences_language">Wika</string>
 
 
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices">Mga pamimilian sa data</string>
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">Pagkolekta ng data</string>
     <!-- Preference category for developer tools -->
     <string name="developer_tools_category">Developer tools</string>
 
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">Remote debugging via USB</string>
+    <!-- Preference title for switch preference to show search engines -->
+    <string name="preferences_show_search_engines">Ipakita ang mga search engine</string>
+    <!-- Preference title for switch preference to show search suggestions -->
+    <string name="preferences_show_search_suggestions">Ipakita ang mga mungkahi sa paghanap</string>
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Ipakita ang voice search</string>
+    <!-- Preference title for switch preference to show search suggestions also in private mode -->
+    <string name="preferences_show_search_suggestions_in_private">Ipakita sa mga pribadong session</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Ipakita ang mga mungkahi mula sa clipboard</string>
+    <!-- Preference title for switch preference to suggest browsing history when searching -->
+    <string name="preferences_search_browsing_history">Ipakita ang kasaysayan ng pag-browse</string>
+    <!-- Preference title for switch preference to suggest bookmarks when searching -->
+    <string name="preferences_search_bookmarks">Hanapin sa mga bookmark</string>
+    <!-- Preference title for switch preference to suggest synced tabs when searching -->
+    <string name="preferences_search_synced_tabs">Hanapin sa mga naka-sync na tab</string>
+    <!-- Preference for account settings -->
+    <string name="preferences_account_settings">Mga account setting</string>
+    <!-- Preference for enabling url autocomplete-->
+    <string name="preferences_enable_autocomplete_urls">Autocomplete URLs</string>
+    <!-- Preference for open links in third party apps -->
+    <string name="preferences_open_links_in_apps">Buksan ang mga link sa mga app</string>
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">Hiwalay na download manager</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">Add-ons</string>
+
+    <!-- Preference for notifications -->
+    <string name="preferences_notifications">Mga abiso</string>
 
     <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">OK</string>
@@ -269,9 +322,22 @@
     <!-- Button caption to abort the add-on collection configuration -->
     <string name="customize_addon_collection_cancel">Kanselahin</string>
 
+    <!-- Hint displayed on input field for custom collection name -->
+    <string name="customize_addon_collection_hint">Pangalan ng collection</string>
+    <!-- Hint displayed on input field for custom collection user ID-->
+    <string name="customize_addon_collection_user_hint">May-ari ng collection (User ID)</string>
+
+    <!-- Add-on Installation from AMO-->
+    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
+    <string name="addon_not_supported_error">Hindi suportado ang add-on</string>
+    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
+    <string name="addon_already_installed">Naka-install na ang add-on</string>
+
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Sync now</string>
+    <!-- Preference category for sync -->
+    <string name="preferences_sync_category">Piliin alin ang isi-sync</string>
     <!-- Preference for syncing history -->
     <string name="preferences_sync_history">Kasaysayan</string>
     <!-- Preference for syncing bookmarks -->
@@ -285,15 +351,55 @@
     <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">Ngalan ng device</string>
 
+    <!-- Text shown when user enters empty device name -->
+    <string name="empty_device_name_error">Hindi maaaring blangko ang pangalan ng device.</string>
     <!-- Label indicating that sync is in progress -->
     <string name="sync_syncing_in_progress">Syncing…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">Bigong pag-sync. Huling matagumpay na pag-sync: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">Bigong pag-sync. Huling pag-sync: hindi pa ni minsan</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">Huling na-sync: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">Huling na-sync: hindi pa ni minsan</string>
     <!-- Text for displaying the default device name.
         The first parameter is the application name, the second is the device manufacturer name
         and the third is the device model. -->
     <string name="default_device_name_2">%1$s ng %2$s %3$s</string>
 
+    <!-- Send Tab -->
+    <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="fxa_received_tab_channel_name">Mga natanggap na tab</string>
+    <!--  The body for these is the URL of the tab received  -->
+    <string name="fxa_tab_received_notification_name">May natanggap na tab</string>
+    <!-- When multiple tabs have been received -->
+    <string name="fxa_tabs_received_notification_name">May natanggap na mga tab</string>
+    <!-- %s is the device name -->
+    <string name="fxa_tab_received_from_notification_name">Tab mula sa %s</string>
+
+    <!-- Advanced Preferences -->
+    <!-- Preference for tracking protection settings -->
+    <string name="preferences_tracking_protection_settings">Tracking Protection</string>
+    <!-- Preference switch for tracking protection -->
+    <string name="preferences_tracking_protection">Tracking Protection</string>
+    <!-- Preference switch description for tracking protection -->
+    <string name="preferences_tracking_protection_description">Harangin ang content at mga script na sumusubaybay sa iyo online</string>
+    <!-- Preference for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions">Mga exception</string>
+    <!-- Preference description for tracking protection exceptions -->
+    <string name="preferences_tracking_protection_exceptions_description">Nakasara ang Tracking Protection sa mga website na ito</string>
+    <!-- Button in Exceptions Preference to turn on tracking protection for all sites (remove all exceptions) -->
+    <string name="preferences_tracking_protection_exceptions_turn_on_for_all">Buksan sa lahat ng mga site</string>
+    <!-- Text displayed when there are no exceptions -->
+    <string name="exceptions_empty_message_description">Nakakapag-disable ka ng tracking protection sa mga piling site gamit ang mga exception.</string>
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">Alamin</string>
+
     <!-- Preference switch for Telemetry -->
     <string name="preferences_telemetry">Telemetry</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data">Usage at technical data</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Marketing data</string>
     <!-- Title for studies preferences -->
@@ -341,12 +447,42 @@
     <!-- Preference for using dark theme -->
     <string name="preference_dark_theme">Madilim</string>
 
+    <!-- Preference for using following device theme -->
+    <string name="preference_follow_device_theme">Sundin ang tema ng device</string>
+
+    <!-- Gestures Preferences-->
+    <!-- Preferences for using pull to refresh in a webpage -->
+    <string name="preference_gestures_website_pull_to_refresh">Hilahin pababa para mag-refresh</string>
+    <!-- Preference for using the dynamic toolbar -->
+    <string name="preference_gestures_dynamic_toolbar">Mag-scroll para maitago ang toolbar</string>
+    <!-- Preference for switching tabs by swiping horizontally on the toolbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs">Mag-swipe patagilid sa toolbar para makalipat ng tab</string>
+    <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
+    <string name="preference_gestures_swipe_toolbar_show_tabs">Mag-swipe pataas sa toolbar para maipakita ang mga tab</string>
+
+    <!-- Library -->
+    <!-- Option in Library to open Sessions page -->
+    <string name="library_sessions">Mga session</string>
     <!-- Option in Library to open Screenshots page -->
     <string name="library_screenshots">Mga Screenshot</string>
     <!-- Option in Library to open Downloads page -->
     <string name="library_downloads">Mga Download</string>
     <!-- Option in library to open Bookmarks page -->
     <string name="library_bookmarks">Mga Bookmark</string>
+    <!-- Option in library to open Desktop Bookmarks root page -->
+    <string name="library_desktop_bookmarks_root">Mga Desktop Bookmark</string>
+    <!-- Option in library to open Desktop Bookmarks "menu" page -->
+    <string name="library_desktop_bookmarks_menu">Menu ng mga Bookmark</string>
+    <!-- Option in library to open Desktop Bookmarks "toolbar" page -->
+    <string name="library_desktop_bookmarks_toolbar">Bookmarks Toolbar</string>
+    <!-- Option in library to open Desktop Bookmarks "unfiled" page -->
+    <string name="library_desktop_bookmarks_unfiled">Iba pang mga Bookmark</string>
+    <!-- Option in Library to open History page -->
+    <string name="library_history">Kasaysayan</string>
+    <!-- Option in Library to open Synced Tabs page -->
+    <string name="library_synced_tabs">Mga naka-sync na tab</string>
+    <!-- Option in Library to open Reading List -->
+    <string name="library_reading_list">Reading List</string>
     <!-- Menu Item Label for Search in Library -->
     <string name="library_search">Hanapin</string>
     <!-- Settings Page Title -->
