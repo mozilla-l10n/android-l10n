@@ -55,6 +55,10 @@
     <!-- Private Browsing -->
     <!-- Title for private session option -->
     <string name="private_browsing_title">Ikaw ay nasa pribadong sesyon</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="private_browsing_placeholder_description_2">
+        Inaalis ng %1$s ang iyong bakas sa paghahanap at pag-browse sa mga pribadong tab kapag isinara mo sila o umalis sa app. Bagaman makikilala ka pa rin ng mga website o internet service provider mo, nakatutulong pa rin ito para mapanatiling pribado ang mga gawain mo online sa ibang gagamit ng device na ito.</string>
     <string name="private_browsing_common_myths">
        Mga karaniwang pamahiin tungkol sa pribadong pag-browse
     </string>
@@ -91,6 +95,8 @@
     <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
     <string name="tab_tray_close_tabs_banner_negative_button_text">Alisin</string>
 
+    <!-- Text for the banner message to tell users about our grid view feature. -->
+    <string name="tab_tray_grid_view_banner_message">Baguhin ang layout ng mga nakabukas na tab. Pumunta sa mga setting at piliin ang grid sa tab view.</string>
     <!-- Text for the positive action button to go to Settings for auto close tabs. -->
     <string name="tab_tray_grid_view_banner_positive_button_text">Pumunta sa settings</string>
     <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
@@ -561,6 +567,8 @@
     <!-- Tab Management -->
     <!-- Title of preference for tabs management -->
     <string name="preferences_tabs">Mga Tab</string>
+    <!-- Title of preference that allows a user to specify the tab view -->
+    <string name="preferences_tab_view">Tab view</string>
     <!-- Option for a list tab view -->
     <string name="tab_view_list">Listahan</string>
     <!-- Option for a grid tab view -->
@@ -616,6 +624,8 @@
     <string name="tab_tray_menu_item_close">Isara lahat ng mga tab</string>
     <!-- Shortcut action to open new tab -->
     <string name="tab_tray_menu_open_new_tab">Bagong Tab</string>
+    <!-- Shortcut action to toggle private mode -->
+    <string name="tab_tray_menu_toggle">i-Toggle ang tab mode</string>
     <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_bookmark">Bookmark</string>
     <!-- Text shown in the multiselect menu for closing selected tabs. -->
@@ -759,6 +769,9 @@
     <!-- Content Description for session item share button -->
     <string name="content_description_session_share">Ibahagi ang session</string>
 
+    <!-- Bookmarks -->
+    <!-- Content description for bookmarks library menu -->
+    <string name="bookmark_menu_content_description">Bookmark menu</string>
     <!-- Screen title for editing bookmarks -->
     <string name="bookmark_edit">i-Edit ang bookmark</string>
     <!-- Screen title for selecting a bookmarks folder -->
@@ -865,16 +878,22 @@
     <string name="tracking_protection_on">Nakabukas</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Nakasara</string>
-    <!-- Label that indicates that all video and audio autoplay is allowed -->
+    <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Payagan ang audio at video</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
+    <string name="quick_setting_option_autoplay_allowed">Payagan ang audio at video</string>
     <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
     <string name="preference_option_autoplay_allowed_wifi_only2">Harangin ang audio at video kapag naka-cellular data lamang</string>
     <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
     <string name="preference_option_autoplay_allowed_wifi_subtext">Aandar ang audio at video sa Wi-Fi</string>
-    <!-- Label that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">Harangin ang audio lamang</string>
-    <!-- Label that indicates that all video and audio autoplay is blocked -->
+    <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_block_audio">Harangin ang audio lamang</string>
+    <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
     <string name="preference_option_autoplay_blocked3">Harangin ang audio at video</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_blocked">Harangin ang audio at video</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">On</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
@@ -1053,6 +1072,8 @@
     <string name="preferences_delete_browsing_data_tabs_title_2">Mga nakabukas na tab</string>
     <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
     <string name="preferences_delete_browsing_data_tabs_subtitle">%d tab</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_data_title">Kasaysayan ng pag-browse at site data</string>
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d address</string>
@@ -1067,6 +1088,8 @@
     <string name="preferences_delete_browsing_data_cookies_subtitle">Mala-log out ka sa karamihan ng mga site</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cached_files">Mga naka-cache na larawan at file</string>
+    <!-- Subtitle for the cached images and files item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cached_files_subtitle">Nagpapaluwag ng storage space</string>
     <!-- Title for the site permissions item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_site_permissions">Mga site permission</string>
     <!-- Title for the downloads item in Delete browsing data -->
@@ -1161,6 +1184,8 @@
     <string name="onboarding_firefox_account_sync_is_on">Nakabukas ang Sync</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">Bigong makapag-sign-in</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header_2">Awtomatikong pribasiya</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Karaniwan (default)</string>
     <!-- text for standard blocking option button description -->
@@ -1353,9 +1378,24 @@
     <!-- About page link text to open a screen with libraries that are used -->
     <string name="about_other_open_source_libraries">Mga library na ginagamit namin</string>
 
+    <!-- Content description of the tab counter toolbar button when one tab is open -->
+    <string name="tab_counter_content_description_one_tab">1 tab</string>
+    <!-- Content description of the tab counter toolbar button when multiple tabs are open. First parameter will be replaced with the number of tabs (always more than one) -->
+    <string name="tab_counter_content_description_multi_tab">%d tab</string>
+
     <!-- Browser long press popup menu -->
     <!-- Copy the current url -->
     <string name="browser_toolbar_long_press_popup_copy">Kopyahin</string>
+
+    <!-- Paste & go the text in the clipboard. '&amp;' is replaced with the ampersand symbol: & -->
+    <string name="browser_toolbar_long_press_popup_paste_and_go">i-Paste at Puntahan</string>
+    <!-- Paste the text in the clipboard -->
+    <string name="browser_toolbar_long_press_popup_paste">i-Paste</string>
+    <!-- Snackbar message shown after an URL has been copied to clipboard. -->
+    <string name="browser_toolbar_url_copied_to_clipboard_snackbar">Nakopya na ang URL sa clipboard</string>
+
+    <!-- Title text for the Add To Homescreen dialog -->
+    <string name="add_to_homescreen_title">Idagdag sa Home screen</string>
 
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">Mga login at password</string>
