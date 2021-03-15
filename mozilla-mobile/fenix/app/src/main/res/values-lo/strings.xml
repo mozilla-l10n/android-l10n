@@ -19,6 +19,10 @@
     <!-- No Private Tabs Message Description -->
     <string name="no_private_tabs_description">ແທັບສ່ວນຕົວຂອງທ່ານຈະຖືກສະແດງຢູ່ບ່ອນນີ້.</string>
 
+    <!-- Default title for pinned Baidu top site that links to Baidu home page  -->
+    <string name="default_top_site_baidu">Baidu</string>
+    <!-- Default title for pinned JD top site that links to JD home page  -->
+    <string name="default_top_site_jd">JD</string>
     <!-- Message announced to the user when tab tray is selected with 1 tab -->
     <string name="open_tab_tray_single">ເປີດ 1 ແຖບ. ແຕະເພື່ອປ່ຽນແທັບ.</string>
     <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
@@ -41,14 +45,6 @@
     <string name="cfr_pos_button_text">ເພີ່ມທາງລັດ</string>
     <!-- Text for the negative button -->
     <string name="cfr_neg_button_text">ບໍ່, ຂອບໃຈ</string>
-
-    <!-- Search widget "contextual feature recommendation" (CFR) -->
-    <!-- Text for the main message. 'Firefox' intentionally hardcoded here.-->
-    <string name="search_widget_cfr_message">ເຂົ້າ Firefox ໄດ້ໄວຂຶ້ນ. ເພີ່ມ widget ໃສ່ໜ້າຈໍຫລັກຂອງທ່ານ.</string>
-    <!-- Text for the positive button -->
-    <string name="search_widget_cfr_pos_button_text">ເພີ່ມ widget</string>
-    <!-- Text for the negative button -->
-    <string name="search_widget_cfr_neg_button_text">ບໍ່ແມ່ນຕອນນີ້</string>
 
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
@@ -99,8 +95,6 @@
     <string name="browser_menu_find_in_page">ຄົ້ນຫາໃນຫນ້ານີ້</string>
     <!-- Browser menu button that creates a private tab -->
     <string name="browser_menu_private_tab">ແທັບສ່ວນຕົວ</string>
-    <!-- Browser menu button that creates a new tab -->
-    <string name="browser_menu_new_tab">ແທັບໃຫມ່</string>
     <!-- Browser menu button that saves the current tab to a collection -->
     <string name="browser_menu_save_to_collection_2">ບັນທຶກໄປໄວ້ບ່ອນເກັບສະສົມ</string>
     <!-- Browser menu button that open a share menu to share the current site -->
@@ -157,7 +151,6 @@
     <!-- Search suggestion onboarding hint Learn more link text -->
     <string name="search_suggestions_onboarding_learn_more_link">ຮຽນຮູ້ເພີ່ມເຕີມ</string>
 
-    <!-- Search Widget -->
     <!-- Text preview for smaller sized widgets -->
     <string name="search_widget_text_short">ຄົ້ນຫາ</string>
     <!-- Text preview for larger sized widgets -->
@@ -498,7 +491,7 @@
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">ເປີດແທັບ</string>
     <!-- Text for the menu button to remove a top site -->
-    <string name="remove_top_site">ລຶບ</string>
+	<string name="remove_top_site">ລຶບ</string>
 
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (ໂຫມດສ່ວນຕົວ)</string>
@@ -542,6 +535,7 @@
     <string name="history_older">ເກົ່າກວ່າ</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">ບໍ່ມີປະຫວັດການໃຊ້ງານຢູ່ນີ້</string>
+
 
     <!-- Crashes -->
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
@@ -675,16 +669,16 @@
     <string name="tracking_protection_on">ເປີດ</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">ປິດ</string>
-    <!-- Label that indicates that all video and audio autoplay is allowed -->
+    <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">ອະນຸຍາດໃຫ້ເປີດສຽງ ແລະ ວີດີໂອ</string>
 
     <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
     <string name="preference_option_autoplay_allowed_wifi_only2">ບັອກສຽງ ແລະ ວິດີໂອໃນການນໍາໃຊ້ຂໍ້ມູນອິນເຕີເນັດໃນໂທລະສັບມືຖືເທົ່ານັ້ນ</string>
     <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
     <string name="preference_option_autoplay_allowed_wifi_subtext">ສຽງ ແລະ ວິດີໂອຈະເປີດໃນ Wi-Fi</string>
-    <!-- Label that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">ບັອກສຽງເທົ່ານັ້ນ</string>
-    <!-- Label that indicates that all video and audio autoplay is blocked -->
+    <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
     <string name="preference_option_autoplay_blocked3">ບັອກສຽງ ແລະ ວີດີໂອ</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">ເປີດ</string>
@@ -696,10 +690,6 @@
     <string name="collections_header">ການສະສົມ</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">ເມນູການສະສົມ</string>
-    <!-- No Open Tabs Message Header -->
-    <string name="no_collections_header1">ເກັບກຳສິ່ງທີ່ສຳຄັນສຳລັບທ່ານ</string>
-    <!-- Label to describe what collections are to a new user without any collections -->
-    <string name="no_collections_description1">ເອົາການຄົ້ນຫາ, ເວັບໄຊທ ແລະ ແທັບທີ່ຄ້າຍຄືກັນມາໄວ້ໃນກຸ່ມດຽວກັນ ເພື່ອເຮັດໃຫ້ສາມາດເຂົ້າໄດ້ງ່າຍໃນພາຍຫລັງ.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">ເລືອກແທັບ</string>
     <!-- Title for the "select collection" step of the collection creator -->
@@ -938,15 +928,6 @@
     <string name="onboarding_whats_new_description">ມີຄຳຖາມກ່ຽວກັບການອອກແບບ %s ຄືນໃຫມ່ບໍ່? ຕ້ອງການຢາກຮູ້ຈັກວ່າມີຫຍັງປ່ຽນແປງແດ່ບໍ່?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string name="onboarding_whats_new_description_linktext">ພົບຄຳຕອບໄດ້ທີ່ນີ້</string>
-    <!-- text for the firefox account onboarding card header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_firefox_account_header">ຮັບຜົນປະໂຫຍດສູງສຸດຈາກ %s.</string>
-
-    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
-        another Firefox browser. (The word `Firefox` should not be translated)
-        The first parameter is the email of the detected user's account -->
-    <string name="onboarding_firefox_account_auto_signin_header_2">ທ່ານໄດ້ລົງຊື່ເຂົ້າໃຊ້ດ້ວຍຖານະ %s ໃນ Firefox  ໃນໂທລະສັບເຄື່ອງນີ້. ທ່ານຕ້ອງການຈະລົງຊື່ເຂົ້າໃຊ້ດ້ວຍບັນຊີນີ້ບໍ່?</string>
-
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">ກຳລັງລົງຊື່ເຂົ້າໃຊ້…</string>
     <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
@@ -1135,13 +1116,15 @@
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">ບັກທຶກການລັອກອິນໄວ້</string>
 
-    <!-- DEPRECATED STRINGS -->
-    <!-- Button in the search view that lets a user search by using a shortcut -->
-    <string name="search_shortcuts_button">ທາງລັດ</string>
-    <!-- DEPRECATED: Header displayed when selecting a shortcut search engine -->
-    <string name="search_shortcuts_search_with">ຄົ້ນຫາດ້ວຍ</string>
-    <!-- Header displayed when selecting a shortcut search engine -->
-    <string name="search_shortcuts_search_with_2">ຄັ້ງນີ້ ຄົ້ນຫາດ້ວຍ:</string>
-    <!-- Preference title for switch preference to show search shortcuts -->
-    <string name="preferences_show_search_shortcuts">ສະແດງທາງລັດການຄົ້ນຫາ</string>
+    <!-- Deprecated: text for the firefox account onboarding card header
+    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="onboarding_firefox_account_header">ຮັບຜົນປະໂຫຍດສູງສຸດຈາກ %s.</string>
+
+    <!-- Deprecated: No Open Tabs Message Header -->
+    <string name="no_collections_header1">ເກັບກຳສິ່ງທີ່ສຳຄັນສຳລັບທ່ານ</string>
+    <!-- Deprecated: Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description1">ເອົາການຄົ້ນຫາ, ເວັບໄຊທ ແລະ ແທັບທີ່ຄ້າຍຄືກັນມາໄວ້ໃນກຸ່ມດຽວກັນ ເພື່ອເຮັດໃຫ້ສາມາດເຂົ້າໄດ້ງ່າຍໃນພາຍຫລັງ.</string>
+    <!-- Deprecated: text for the firefox account onboarding card header when we detect you're already signed in to -->
+    <string name="onboarding_firefox_account_auto_signin_header_2">ທ່ານໄດ້ລົງຊື່ເຂົ້າໃຊ້ດ້ວຍຖານະ %s ໃນ Firefox  ໃນໂທລະສັບເຄື່ອງນີ້. ທ່ານຕ້ອງການຈະລົງຊື່ເຂົ້າໃຊ້ດ້ວຍບັນຊີນີ້ບໍ່?</string>
+
     </resources>
