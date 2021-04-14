@@ -20,10 +20,6 @@
     <!-- No Private Tabs Message Description -->
     <string name="no_private_tabs_description">E vostre unghjette private seranu affissate quì.</string>
 
-    <!-- Default title for pinned Baidu top site that links to Baidu home page  -->
-    <string name="default_top_site_baidu">Baidu</string>
-    <!-- Default title for pinned JD top site that links to JD home page  -->
-    <string name="default_top_site_jd">JD</string>
     <!-- Message announced to the user when tab tray is selected with 1 tab -->
     <string name="open_tab_tray_single">1 unghjetta aperta. Picchichjà per cambià d’unghjetta.</string>
     <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
@@ -187,6 +183,11 @@
 
     <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
     <string name="browser_menu_customize_reader_view">Persunalizà u modu di lettura</string>
+    <!-- Browser menu label for adding a bookmark -->
+    <string name="browser_menu_add">Aghjunghje</string>
+    <!-- Browser menu label for editing a bookmark -->
+    <string name="browser_menu_edit">Mudificà</string>
+
     <!-- Error message to show when the user tries to access a scheme not
         handled by the app (Ex: blob, tel etc) -->
     <string name="unknown_scheme_error_message">Impussibule di cunnettassi. Schema d’URL scunnisciutu.</string>
@@ -611,12 +612,16 @@
     <string name="tabs_header_private_title">Sessione privata</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">Unghjette private</string>
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">Unghjette sincrunizate</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Aghjunghje un’unghjetta</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_private_tab">Apre una nova unghjetta privata</string>
     <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
     <string name="tab_drawer_fab_content">Unghjetta privata</string>
+    <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
+    <string name="tab_drawer_fab_sync">Sincrunizazione</string>
     <!-- Text shown as the title of the open tab tray -->
     <string name="tab_tray_title">Unghjette aperte</string>
     <!-- Text shown in the menu for saving tabs to a collection -->
@@ -985,6 +990,10 @@
     <string name="share_link_all_apps_subheader">Tutte l’azzioni</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
     <string name="share_link_recent_apps_subheader">Impiegate pocu fà</string>
+    <!-- An string shown when an account is signed in where %1$s is a placeholder for the email-->
+    <string name="sync_signed_as">Autenticatu cum’è %1$s</string>
+    <!-- An option from the three dot menu to into sync -->
+    <string name="sync_menu_sign_in">Cunnettassi per sincrunizà</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Cunnettassi à Sync</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -1179,9 +1188,6 @@
     <string name="onboarding_header">Benvenuta in %s !</string>
     <!-- text for the Firefox Accounts section header -->
     <string name="onboarding_fxa_section_header">Avete dighjà un contu ?</string>
-    <!-- text for the Firefox Preview feature section header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_feature_section_header">Scuprite %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Fighjate ciò chì hè novu</string>
     <!-- text for the "what's new" onboarding card description
@@ -1189,10 +1195,10 @@
     <string name="onboarding_whats_new_description">Avete dumande apprupositu di u rinnovu di %s ? Vulete sapè ciò chì hà cambiatu ?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string name="onboarding_whats_new_description_linktext">Truvate risposte quì</string>
-    <!-- text for the Firefox account onboarding sign in card header -->
-    <string name="onboarding_account_sign_in_header">Sincrunizate l’indette, e parolle d’entrata è ancu di più cù u vostru contu Firefox.</string>
+    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sincrunizate Firefox trà i vostri apparechji</string>
     <!-- Text for the button to learn more about signing in to your Firefox account -->
-    <string name="onboarding_manual_sign_in_learn_more">Sapene di più</string>
+    <string name="onboarding_manual_sign_in_description">Impurtate e vostre indette, cronolugia è parolle d’entrata in Firefox nant’à st’apparechju.</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
         another Firefox browser. (The word `Firefox` should not be translated)
         The first parameter is the email of the detected user's account -->
@@ -1201,35 +1207,20 @@
     <string name="onboarding_firefox_account_auto_signin_confirm">Iè, cunnettatemi</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">Cunnessione…</string>
-    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
-    <string name="onboarding_firefox_account_sign_in">Cunnettatevvi à u vostru contu Firefox</string>
+    <!-- text for the button to manually sign into Firefox account. -->
+    <string name="onboarding_firefox_account_sign_in_1">Arregistrassi</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Stà disghjuntu</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sincrunizazione attivata</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">Fiascu di cunnessione</string>
-    <!-- text for the tracking protection onboarding card header -->
-    <string name="onboarding_tracking_protection_header_2">Rispettu autumaticu di a vita privata</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description_2">E preferenze di vita privata è di sicurità bloccanu i perseguitatori, prugrammi animosi è sucietà chì vo seguitanu.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Classica (predefinita)</string>
-    <!-- text for standard blocking option button description -->
-    <string name="onboarding_tracking_protection_standard_button_description_2">Bluccheghja menu di perseguitatori. E pagine si caricanu nurmalmente.</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_button">Severa (ricumandata)</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">Severa</string>
-    <!-- text for strict blocking option button description -->
-    <string name="onboarding_tracking_protection_strict_button_description_2">Bluccheghja più perseguitatori, publicità è annunzii micca richiesti. E pagine si caricanu più prestu, ma certi siti puderianu ùn micca funziunà currettamente.</string>
-    <!-- text for the toolbar position card header
-        In English this is an idiom for "choose a side as in an argument or fight"
-        but it is ok to make this more literally about "choosing a position in a physical space -->
-    <string name="onboarding_toolbar_position_header">Piglià pusizione</string>
-    <!-- text for the toolbar position card description -->
-    <string name="onboarding_toolbar_position_description">Pruvate a navigazione à una manu sola cù a barra d’attrezzi inghjò o dispiazzatella insù.</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Navigazione privata</string>
     <!-- text for the private browsing onboarding card description
@@ -1242,7 +1233,7 @@
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">A vostra vita privata</string>
     <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
+    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
     <string name="onboarding_privacy_notice_description2">Avemu cuncivitu %s per davvi u cuntrollu nant’à ciò chì vò spartite in linea è nant’à ciò chì vò spartite cù noi.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Leghjite a nostra pulitica di cunfidenzialità</string>
@@ -1257,8 +1248,6 @@
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Sciglite u vostru tema</string>
 
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description1">Ecunumizate a vostra batteria è i vostri ochji grazia à u modu scuru.</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Autumaticu</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1312,14 +1301,10 @@
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Sapene di più</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Classica (predefinita)</string>
-    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_description_3">Bluccheghja menu perseguitatori. E pagine si caricanu nurmalmente.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Ciò chì hè bluccatu da a prutezzione classica contr’à u spiunagiu</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Severa</string>
-    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_description_2">Bluccheghja più perseguitatori, publicità è annunzii micca richiesti. E pagine si caricanu più prestu, ma certi siti puderianu ùn micca funziunà currettamente.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Ciò chì hè bluccatu da a prutezzione severa contr’à u spiunagiu</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
