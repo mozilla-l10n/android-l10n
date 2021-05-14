@@ -441,6 +441,10 @@
     <string name="preference_usage_data">بەکارهێنان و زانیاری تەکنیکی</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">زانیاری بازاڕیکردن</string>
+    <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
+    <string name="preferences_marketing_data_description">ئەو زانیارییانە بڵاودەکاتەوە کە چ تایبەتمەندییەک بەکاردێنیت لە %1$s لەگەڵ Leanplum، کە بریتییە لە فرۆشیاری بازاڕی مۆبایل ئێمە کاری لەگەڵ دەکەین.</string>
+    <!-- Preference description for marketing data collection -->
+    <string name="preferences_marketing_data_description2">زانیاری سەرەتایی بڵاودەکاتەوە لەگەڵ Adjust، کە بریتییە لە فرۆشیارێکی ئێمە بۆ بازاڕی مۆبایل.</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">توێژینەوە</string>
     <!-- Summary for studies preferences -->
@@ -448,9 +452,20 @@
     <!-- Title for experiments preferences -->
     <string name="preference_experiments">تاقیکردنەوەکان</string>
 
+    <!-- Summary for experiments preferences -->
+    <string name="preference_experiments_summary">ڕێگەدەدات کە مۆزیلا زانیاری وەدەستبخات دامەزراندن ئەنجام بدات بۆ ئەو تایبەتمەندییە تاقیکارییانەی پێشکەشی دەکەین</string>
+    <!-- Preference switch for crash reporter -->
+    <string name="preferences_crash_reporter">ڕاپۆرت لێدەری تێکشکان</string>
+    <!-- Preference switch for Mozilla location service -->
+    <string name="preferences_mozilla_location_service">خزمەتگوزاری شوێنی مۆزیلا</string>
+    <!-- Preference switch for app health report. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preferences_fenix_health_report">ڕاپۆرت تەندروستی %s</string>
+
     <!-- Turn On Sync Preferences -->
     <!-- Header of the Turn on Sync preference view -->
     <string name="preferences_sync">هاوکاتگەری پێبکە</string>
+    <!-- Preference for pairing -->
+    <string name="preferences_sync_pair">کۆدی پێکبەستنەوە سکان بکە لە فایەرفۆکس (ڕوومێز)</string>
     <!-- Preference for account login -->
     <string name="preferences_sync_sign_in">بچۆژوورەوە</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -525,6 +540,8 @@
     <string name="library_search">گەڕان</string>
     <!-- Settings Page Title -->
     <string name="settings_title">ڕێکخستنەکان</string>
+    <!-- Content description (not visible, for screen readers etc.): "Menu icon for items on a history item" -->
+    <string name="content_description_history_menu">پێڕستی بڕگەی مێژووی کار</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">داخستن</string>
 
@@ -544,6 +561,8 @@
     <!-- Tab Management -->
     <!-- Title of preference for tabs management -->
     <string name="preferences_tabs">بازدەرەکان</string>
+    <!-- Title of preference that allows a user to specify the tab view -->
+    <string name="preferences_tab_view">پێشبینینی بازدەر</string>
     <!-- Option for a list tab view -->
     <string name="tab_view_list">لیست</string>
     <!-- Option for a grid tab view -->
@@ -605,16 +624,44 @@
     <string name="tab_tray_menu_open_new_tab">بازدەری نوێ</string>
     <!-- Shortcut action to open the home screen -->
     <string name="tab_tray_menu_home">بڕۆ پەڕەی سەرەکی</string>
+    <!-- Shortcut action to toggle private mode -->
+    <string name="tab_tray_menu_toggle">دۆخی گۆڕینی بازدەر</string>
     <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_bookmark">نیشانەکراو</string>
     <!-- Text shown in the multiselect menu for closing selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_close">داخستن</string>
+    <!-- Content description for tabs tray multiselect share button -->
+    <string name="tab_tray_multiselect_share_content_description">بازدەری دیاریکراو بڵاوبکەرەوە</string>
+    <!-- Content description for tabs tray multiselect menu -->
+    <string name="tab_tray_multiselect_menu_content_description">پێڕستی بازدەری دیاریکراو</string>
+    <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
+    <string name="remove_tab_from_collection">بازدەر بسڕەوە لە کۆکەرەوە</string>
+    <!-- Text for button to enter multiselect mode in tabs tray -->
+    <string name="tabs_tray_select_tabs">بازدەر دیاریبکە</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
+    <string name="close_tab">بازدەر دابخە</string>
+    <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
+    <string name="close_tab_title">بازدەری %s دابخە</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
+    <string name="open_tabs_menu">پێڕستی بازدەرەکان بکەرەوە</string>
+    <!-- Open tabs menu item to close all tabs -->
+    <string name="tabs_menu_close_all_tabs">هەموو بازدەرەکان دابخە</string>
+    <!-- Open tabs menu item to share all tabs -->
+    <string name="tabs_menu_share_tabs">بازدەرەکان بڵاوبکەرەوە</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection1">بازدەرەکان هەڵبگرە لە کۆکەرەوە</string>
+    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
+    <string name="tab_menu">پێڕستی بازدەر</string>
+    <!-- Tab menu item to share the tab -->
+    <string name="tab_share">بازدەری بڵاوکردنەوە</string>
     <!-- Button in the current session menu. Deletes the session when pressed -->
     <string name="current_session_delete">سڕینەوە</string>
     <!-- Button in the current session menu. Saves the session when pressed -->
     <string name="current_session_save">پاشەکەوتکردن</string>
     <!-- Button in the current session menu. Opens the share menu when pressed -->
     <string name="current_session_share">بڵاوکردنەوە</string>
+    <!-- Content description (not visible, for screen readers etc.): Title icon for current session menu -->
+    <string name="current_session_image">وێنەی دانیشتنی ئێستا</string>
     <!-- Button to save the current set of tabs into a collection -->
     <string name="save_to_collection">هەڵگرتن لە کۆکەرەوە</string>
     <!-- Text for the menu button to delete a collection -->
@@ -633,6 +680,8 @@
 	<string name="remove_top_site">بیسڕەوە</string>
     <!-- Text for the menu button to delete a top site from history -->
     <string name="delete_from_history">سڕینەوە لە مێژووی کار</string>
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (دۆخی تایبەت)</string>
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">پاشەکەوتکردن</string>
 
@@ -818,6 +867,8 @@
     <string name="preference_phone_feature_notification">ئاگانامەکان</string>
     <!-- Preference for altering the persistent storage access for all websites -->
     <string name="preference_phone_feature_persistent_storage">بیرگەی هەمیشەیی</string>
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">ناوەڕۆکی کۆنتڕۆڵکراوی DRM</string>
     <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">داوای ڕێگەپێدان بکە</string>
     <!-- Label that indicates that a permission must be blocked -->
@@ -859,9 +910,93 @@
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">پێڕستی کۆکەرەوەکان</string>
 
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">بازدەرەکان دیاریبکە</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">کۆکەرەوە هەڵبژێرە</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">کۆکەرەوە ناوبنی</string>
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">کۆکەرەوەیەکی نوێ زیادبکە</string>
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_all">هەمووی دیاریبکە</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">دیاریکردنی هەموو لابدە</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">بازدەر هەڵبژیرە بە هەڵگرتن</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d بازدەر دیاریکراوە</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d بازدەر دیاریکراوە</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">بازدەرەکان پاشەکەوتکرا!</string>
+    <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+    <string name="create_collection_tabs_saved_new_collection">کۆکەرەوە پاشەکەوتکرا!</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">بازدەر پاشەکەوتکرا!</string>
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
+    <string name="create_collection_close">داخستن</string>
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">پاشەکەوتکردن</string>
+    <!-- Snackbar action to view the collection the user just created or updated -->
+    <string name="create_collection_view">پیشاندان</string>
+
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">کۆکەرەوەی %d</string>
+
+    <!-- Share -->
+    <!-- Share screen header -->
+    <string name="share_header">بینێرە و بڵاویبکەرەوە</string>
+    <!-- Share screen header -->
+    <string name="share_header_2">بڵاوکردنەوە</string>
+    <!-- Content description (not visible, for screen readers etc.):
+        "Share" button. Opens the share menu when pressed. -->
+    <string name="share_button_content_description">بڵاوکردنەوە</string>
+    <!-- Sub-header in the dialog to share a link to another app -->
+    <string name="share_link_subheader">بەستەر بڵاوبکەرەوە</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">بینێرە بۆ ئامێر</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">هەموو کردارەکان</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">دووا بەکارهێنراو</string>
+    <!-- An option from the three dot menu to into sync -->
+    <string name="sync_menu_sign_in">بۆ هاوکاتکردن بچۆژوورەوە</string>
+    <!-- An option from the share dialog to sign into sync -->
+    <string name="sync_sign_in">بچۆژوورەوە بۆ هاوکاتگەری</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">بینێرە بۆ هەموو ئامێرەکان</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">بیبەستەرەوە بۆ هاوکاتگەری</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
+    <string name="sync_offline">دەرهێڵ</string>
+    <!-- An option to connect additional devices -->
+    <string name="sync_connect_device">پەیوەندی بکە بە ئامێرێکی تر</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">بۆ ناردنی بازدەر، پێویستە بەلایەنی کەمەوە بچیتە ژوورەوە لە ئامێرێکی تری فایەرفۆکس.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">تێگەیشتم</string>
 
+    <!-- Share error message -->
+    <string name="share_error_snackbar">ناتوانرێت بڵاوبکرێتەوە بۆ ئەم بەرنامەیە</string>
+    <!-- Add new device screen title -->
+    <string name="sync_add_new_device_title">بینێرە بۆ ئامێر</string>
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">هیچ ئامێرێک پەیوەست نیە</string>
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">زیاتر بزانە دەربارەی ناردنی بازدەرەکان...</string>
+    <!-- Text for the button to connect another device -->
+    <string name="sync_add_new_device_connect_button">پەیوەندی بکە بە ئامێرێکی تر...</string>
+
+    <!-- Notifications -->
+    <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active. -->
+    <string name="notification_pbm_channel_name">دانیشتنی گەڕانی تایبەت</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text">بازدەری تایبەت بسڕەوە</string>
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
+    <string name="notification_pbm_delete_text_2">بازدەری تایبەت دابخە</string>
     <!-- Notification action to open Fenix and resume the current browsing session. -->
     <string name="notification_pbm_action_open">کردنەوە</string>
     <!-- Notification action to delete all current private browsing sessions AND switch to Fenix (bring it to the foreground) -->
@@ -912,14 +1047,20 @@
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">ئایا تۆ دڵنیایت کە دەتەوێت %1$s بسڕیتەوە؟</string>
 
+    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_message">سڕینەوەی ئەم بازدەرە هەموو کۆکەرەوەکە دەسڕێتەوە. دەتوانیت کۆکەرەوەیەکی تر درووست بکەیت لە هەر کاتێکی تردا.</string>
     <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
     <string name="delete_tab_and_collection_dialog_title">%1$s دەسڕیتەوە؟</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">سڕینەوە</string>
     <!-- Tab collection deletion prompt dialog option to cancel deleting the collection -->
     <string name="tab_collection_dialog_negative">پاشگەزبوونەوە</string>
+    <!-- Text displayed in a notification when the user enters full screen mode -->
+    <string name="full_screen_notification">چوونە دۆخی پراوپڕی شاشە</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">بەستەر لەبەرگیرا</string>
+    <!-- Sample text for accessibility font size -->
+    <string name="accessibility_text_size_sample_text_1">ئەم دەقێکی نمونەییە. لێرە پیشان دەدرێت بۆ ئەوەی بزانی چۆن دەردەچێت کاتێک قەبارەی نووسدینەکە زیاد و کەم دەکەیت.</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
     <string name="preference_accessibility_font_size_title">قەبارەی جۆرەپیت</string>
 
