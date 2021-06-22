@@ -5,6 +5,7 @@
     <string name="app_name_private_5">Поверителен %s</string>
     <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="app_name_private_4">%s (поверителен)</string>
+
     <!-- Home Fragment -->
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Повече настройки</string>
@@ -21,10 +22,6 @@
     <!-- No Private Tabs Message Description -->
     <string name="no_private_tabs_description">Поверителните раздели ще бъдат показани тук.</string>
 
-    <!-- Default title for pinned Baidu top site that links to Baidu home page  -->
-    <string name="default_top_site_baidu">Baidu</string>
-    <!-- Default title for pinned JD top site that links to JD home page  -->
-    <string name="default_top_site_jd">JD</string>
     <!-- Message announced to the user when tab tray is selected with 1 tab -->
     <string name="open_tab_tray_single">1 отворен раздел. Докоснете за превключване на раздели.</string>
     <!-- Message announced to the user when tab tray is selected with 0 or 2+ tabs -->
@@ -97,13 +94,6 @@
     <string name="tab_tray_close_tabs_banner_positive_button_text">Настройки</string>
     <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
     <string name="tab_tray_close_tabs_banner_negative_button_text">Прекратяване</string>
-
-    <!-- Text for the banner message to tell users about our grid view feature. -->
-    <string name="tab_tray_grid_view_banner_message">Променете изгледа на отворените раздели. Отворете настройки и изберете „мрежа“ в „преглед на раздел“.</string>
-    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
-    <string name="tab_tray_grid_view_banner_positive_button_text">Към настройки</string>
-    <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
-    <string name="tab_tray_grid_view_banner_negative_button_text">Прекратяване</string>
 
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
@@ -179,6 +169,9 @@
     <!-- Browser menu button to configure reader mode appearance e.g. the used font type and size -->
     <string name="browser_menu_read_appearance">Външен вид</string>
 
+    <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
+    <string name="browser_menu_customize_reader_view">Настройки на режим за четене</string>
+
     <!-- Error message to show when the user tries to access a scheme not
         handled by the app (Ex: blob, tel etc) -->
     <string name="unknown_scheme_error_message">Грешка при свързване. Неразпознат протокол.</string>
@@ -216,6 +209,11 @@
     <string name="search_suggestions_onboarding_text">%s ще споделя със стандартната търсачката, въвежданото в адресната лента.</string>
     <!-- Search suggestion onboarding hint Learn more link text -->
     <string name="search_suggestions_onboarding_learn_more_link">Научете повече</string>
+
+    <!-- Search engine suggestion title text. The first parameter is the name of teh suggested engine-->
+    <string name="search_engine_suggestions_title">Търсене с %s</string>
+    <!-- Search engine suggestion description text -->
+    <string name="search_engine_suggestions_description">Търсете директно от адресната лента</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
@@ -364,6 +362,12 @@
     <!-- Toast shown after confirming the custom add-on collection configuration -->
     <string name="toast_customize_addon_collection_done">Списъкът с добавки е променен. Излизане от приложението за прилагане на промените…</string>
 
+    <!-- Add-on Installation from AMO-->
+    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
+    <string name="addon_not_supported_error">Добавката не се поддържа</string>
+    <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
+    <string name="addon_already_installed">Добавката вече е инсталирана</string>
+
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Синхронизиране</string>
@@ -427,9 +431,6 @@
     <string name="exceptions_empty_message_description">Изключенията ви позволяват да спрете защитата от проследяване за избрани сайтове.</string>
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">Научете повече</string>
-
-    <!-- Description in Quick Settings that tells user tracking protection is off globally for all sites, and links to Settings to turn it on -->
-    <string name="preferences_tracking_protection_turned_off_globally">Изключено глобално, посетете Настройки, за да го включите.</string>
 
     <!-- Preference switch for Telemetry -->
     <string name="preferences_telemetry">Телеметрия</string>
@@ -526,8 +527,10 @@
     <string name="library_desktop_bookmarks_unfiled">Други отметки</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">История</string>
-    <!-- Option in Library to open Synced Tabs page -->
-    <string name="library_synced_tabs">Синхронизирани раздели</string>
+    <!-- Option in Library to open a new tab -->
+    <string name="library_new_tab">Нов раздел</string>
+    <!-- Option in Library to find text in page -->
+    <string name="library_find_in_page">Търсене в страницата</string>
     <!-- Option in Library to open Reading List -->
     <string name="library_reading_list">Списък за четене</string>
     <!-- Menu Item Label for Search in Library -->
@@ -722,6 +725,12 @@
     <string name="download_delete_all">Изтриване на изтеглени файлове</string>
     <!-- Text for the dialog to confirm clearing all downloads -->
     <string name="download_delete_all_dialog">Сигурни ли сте, че желаете да изтриете изтеглените файлове?</string>
+    <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
+    <string name="download_delete_multiple_items_snackbar_1">Изтеглените файлове са премахнати</string>
+    <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
+    <string name="download_delete_single_item_snackbar">Файлът „%1$s“ е премахнат</string>
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message_1">Няма изтеглени файлове</string>
     <!-- History multi select title in app bar
     The first parameter is the number of downloads selected -->
     <string name="download_multi_select_title">%1$d избрани</string>
@@ -729,6 +738,10 @@
 
     <!-- History overflow menu open in new tab button -->
     <string name="download_menu_open">Отваряне</string>
+
+
+    <!-- Text for the button to remove a single download item -->
+    <string name="download_delete_item_1">Премахване</string>
 
 
     <!-- Crashes -->
@@ -764,8 +777,6 @@
     <string name="bookmark_delete_folder_snackbar">Изтрита %1$s</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Добавяне на папка</string>
-    <!-- deprecated: Snackbar title shown after a bookmark has been created. -->
-    <string name="bookmark_created_snackbar">Отметката е създадена.</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_saved_snackbar">Отметката е запазена!</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
@@ -855,6 +866,8 @@
     <string name="preference_phone_feature_notification">Известие</string>
     <!-- Preference for altering the persistent storage access for all websites -->
     <string name="preference_phone_feature_persistent_storage">Постоянно хранилище</string>
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">Съдържание под DRM</string>
     <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">Винаги да пита</string>
     <!-- Label that indicates that a permission must be blocked -->
@@ -873,6 +886,20 @@
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Разрешаване на звук и видео</string>
 
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
+    <string name="quick_setting_option_autoplay_allowed">Разрешаване на звук и видео</string>
+    <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
+    <string name="preference_option_autoplay_allowed_wifi_only2">Без звук и видео през мобилни данни</string>
+    <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
+    <string name="preference_option_autoplay_allowed_wifi_subtext">Звук и видео ще бъдат възпроизвеждани само по Wi-Fi</string>
+    <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="preference_option_autoplay_block_audio2">Само без звук</string>
+    <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_block_audio">Само без звук</string>
+    <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
+    <string name="preference_option_autoplay_blocked3">Без звук и видео</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_blocked">Без звук и видео</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">Включено</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
@@ -887,6 +914,10 @@
     <string name="no_collections_description2">Съберете важните за вас неща.\nГрупирайте търсения, страници и раздели за бърз достъп по-късно.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">Избиране на раздели</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Избор на списък</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Наименуване на списък</string>
     <!-- Button to add new collection for the "select collection" step of the collection creator -->
     <string name="create_collection_add_new_collection">Създаване на списък</string>
     <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
@@ -929,6 +960,8 @@
 
     <!-- Sub-header in the dialog to share a link to another app -->
     <string name="share_link_subheader">Споделяне на препратка</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">Изпращане към устройство</string>
     <!-- Sub-header in the dialog to share a link to an app from the full list -->
     <string name="share_link_all_apps_subheader">Всички действия</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -972,6 +1005,10 @@
     <string name="notification_pbm_action_delete_and_open">Изчистване и отваряне</string>
     <!-- Name of the "Powered by Fenix" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_powered_by_channel_name">С подкрепата на</string>
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">Списъкът е изтрит</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">Списъкът е преименуван</string>
     <!-- Text shown in snackbar when user deletes a tab -->
     <string name="snackbar_tab_deleted">Разделът е изтрит</string>
     <!-- Text shown in snackbar when user deletes all tabs -->
@@ -982,6 +1019,8 @@
     <string name="snackbar_tabs_closed">Разделите са затворени</string>
     <!-- Text shown in snackbar when user closes tabs -->
     <string name="snackbar_message_tabs_closed">Разделите са затворени!</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">Отметките са запазени!</string>
     <!-- Text shown in snackbar action for viewing bookmarks -->
     <string name="snackbar_message_bookmarks_view">Преглед</string>
     <!-- Text shown in snackbar when user closes a private tab -->
@@ -992,6 +1031,8 @@
     <string name="snackbar_private_tabs_deleted">Поверителните раздели са затворени</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">ОТМЕНЯНЕ</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">Страницата е премахната</string>
     <!-- Text for action to undo deleting a tab or collection shown in a11y dialog -->
     <string name="a11y_dialog_deleted_undo">Отменяне</string>
     <!-- Text for action to confirm deleting a tab or collection shown in a11y dialog -->
@@ -1080,9 +1121,6 @@
     <!-- Text for onboarding welcome message
     The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="onboarding_header">Здравейте от %s!</string>
-    <!-- text for the Firefox Preview feature section header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_feature_section_header">Запознайте се с %s</string>
     <!-- text for the "What's New" onboarding card header -->
     <string name="onboarding_whats_new_header1">Вижте какво е новото</string>
     <!-- text for the "what's new" onboarding card description
@@ -1090,35 +1128,14 @@
     <string name="onboarding_whats_new_description">Имате въпроси относно новия дизайн на %s? Искате ли да разберете какви са промените?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string name="onboarding_whats_new_description_linktext">Получете отговори тук</string>
-    <!-- text for the Firefox account onboarding sign in card header -->
-    <string name="onboarding_account_sign_in_header">Синхронизирайте отметки, пароли и други чрез вашата сметка във Firefox.</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account -->
-    <string name="onboarding_manual_sign_in_learn_more">Научете повече</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">Вписване…</string>
-    <!-- text for the button to manually sign into Firefox account. The word "Firefox" should not be translated -->
-    <string name="onboarding_firefox_account_sign_in">Вписване във Firefox</string>
-    <!-- text for the tracking protection onboarding card header -->
-    <string name="onboarding_tracking_protection_header_2">Автоматична поверителност</string>
-    <!-- text for the tracking protection card description
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_tracking_protection_description_2">Настройките за поверителност и сигурност спират проследяващ и злонамерен код, както и компании, които ви преследват.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Стандартна (подразбиране)</string>
-    <!-- text for standard blocking option button description -->
-    <string name="onboarding_tracking_protection_standard_button_description_2">Спира малко проследявания. Страниците зареждат нормално.</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_button">Строга (препоръчителна)</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">Строга</string>
-    <!-- text for strict blocking option button description -->
-    <string name="onboarding_tracking_protection_strict_button_description_2">Спира повече проследявания, реклами и изскачащи прозорци. Страниците зареждат по-бързо, но може да не работят.</string>
-    <!-- text for the toolbar position card header
-        In English this is an idiom for "choose a side as in an argument or fight"
-        but it is ok to make this more literally about "choosing a position in a physical space -->
-    <string name="onboarding_toolbar_position_header">Изберете страна</string>
-    <!-- text for the toolbar position card description -->
-    <string name="onboarding_toolbar_position_description">Изпробвайте работа с една ръка, с лента инструменти отдолу, или я преместете отгоре.</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Разглеждайте поверително</string>
     <!-- text for the private browsing onboarding card description
@@ -1142,8 +1159,6 @@
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Изберете тема</string>
 
-    <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description1">Запазете батерия и зрението си с избиране на тъмна тема.</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Автоматичнa</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1183,12 +1198,8 @@
 
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Стандартна (подразбиране)</string>
-    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_description_3">Спира малко проследявания. Страниците зареждат нормално.</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Строга</string>
-    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_description_2">Спира повече проследявания, реклами и изскачащи прозорци. Страниците зареждат по-бързо, но може да не работят.</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom">По избор</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
@@ -1316,10 +1327,6 @@
     <string name="preferences_passwords_autofill">Автоматично попълване</string>
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Синхронизиране на регистрации</string>
-    <!-- Syncing saved logins in Fenix is on -->
-    <string name="preferences_passwords_sync_logins_on">Включено</string>
-    <!-- Syncing saved logins in Fenix is off -->
-    <string name="preferences_passwords_sync_logins_off">Изключено</string>
     <!-- Syncing saved logins in Fenix needs reconnect to sync -->
     <string name="preferences_passwords_sync_logins_reconnect">Повторно свързване</string>
     <!-- Syncing saved logins in Fenix needs login -->
@@ -1482,15 +1489,7 @@
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Премахване</string>
 
-    <!-- Deprecated: text for the firefox account onboarding card header
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_firefox_account_header">Извлечете максимума от %s</string>
-
     <!-- Content description radio buttons with a link to more information -->
     <string name="radio_preference_info_content_description">Натиснете за подробности</string>
 
-    <!-- Deprecated: No Open Tabs Message Header -->
-    <string name="no_collections_header1">Съберете нещата, които са важни за вас</string>
-    <!-- Deprecated: Label to describe what collections are to a new user without any collections -->
-    <string name="no_collections_description1">Групирайте заедно подобни търсения, сайтове и раздели за бърз достъп по-късно.</string>
     </resources>
