@@ -190,6 +190,10 @@
     <!-- Browser menu label for editing a bookmark -->
     <string name="browser_menu_edit">Deasaich</string>
 
+    <!-- Browser Toolbar -->
+    <!-- Content description for the Home screen button on the browser toolbar -->
+    <string name="browser_toolbar_home">Sgrìn dachaigh</string>
+
     <!-- Error message to show when the user tries to access a scheme not
         handled by the app (Ex: blob, tel etc) -->
     <string name="unknown_scheme_error_message">Cha ghabh ceangal a dhèanamh. Chan aithnich sinn sgeama an URL.</string>
@@ -464,6 +468,8 @@
     <string name="preferences_marketing_data">Dàta margaideachd</string>
     <!-- Preference description for marketing data collection, parameter is the app name (e.g. Firefox) -->
     <string name="preferences_marketing_data_description">Co-roinnidh seo dàta mu na gleusan a chleachdas tu ann am %1$s le Leanplum, reiceadair na margaideachd mobile againn.</string>
+    <!-- Preference description for marketing data collection -->
+    <string name="preferences_marketing_data_description2">Co-roinnidh seo dàta bunasach a’ cleachdaidh le Adjust, an reiceadair margaideachd mobile againn</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Rannsachadh</string>
     <!-- Summary for studies preferences -->
@@ -592,6 +598,15 @@
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">An dèidh mìos</string>
 
+    <!-- Start on Home -->
+    <!-- Title of a preference that allows a user to indicate after a specified amount of time when the app should start on the home screen -->
+    <string name="preferences_start_on_home">Tòisich air an sgrìn dachaigh</string>
+    <!-- Option for starting on the home screen after after four hours or inactivity -->
+    <string name="start_on_home_after_four_hours">Às dèidh ceithir uairean a thìde</string>
+    <!-- Option for always starting on the home screen -->
+    <string name="start_on_home_always">An-còmhnaidh</string>
+    <!-- Option for never starting on the home screen -->
+    <string name="start_on_home_never">Chan ann idir</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
     <string name="close_tabs_manually_summary">Dùin de làimh</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
@@ -608,12 +623,16 @@
     <string name="tabs_header_private_title">Seisean prìobhaideach</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">Tabaichean prìobhaideach</string>
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">Tabaichean sioncronaichte</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Cuir taba ris</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_private_tab">Cuir taba prìobhaideach ris</string>
     <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
     <string name="tab_drawer_fab_content">Prìobhaideach</string>
+    <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
+    <string name="tab_drawer_fab_sync">Sioncronaich</string>
     <!-- Text shown as the title of the open tab tray -->
     <string name="tab_tray_title">Tabaichean fosgailte</string>
     <!-- Text shown in the menu for saving tabs to a collection -->
@@ -624,6 +643,8 @@
     <string name="tab_tray_menu_item_share">Co-roinn a h-uile taga</string>
     <!-- Text shown in the menu to view recently closed tabs -->
     <string name="tab_tray_menu_recently_closed">Tabaichean a dhùin thu o chionn ghoirid</string>
+    <!-- Text shown in the menu to view account settings -->
+    <string name="tab_tray_menu_account_settings">Roghainnean a’ chunntais</string>
     <!-- Text shown in the menu to view tab settings -->
     <string name="tab_tray_menu_tab_settings">Roghainnean nan tabaichean</string>
     <!-- Text shown in the menu for closing all tabs -->
@@ -974,6 +995,8 @@
     <string name="share_link_all_apps_subheader">A h-uile gnìomh</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
     <string name="share_link_recent_apps_subheader">Air a chleachdadh o chionn goirid</string>
+    <!-- An option from the three dot menu to into sync -->
+    <string name="sync_menu_sign_in">Clàraich a-steach a shioncronachadh</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Clàraich a-steach a shioncronachadh</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -1174,6 +1197,10 @@
     <string name="onboarding_whats_new_description">A bheil ceist agad mun dealbhadh ur aig %s? Airson fiosrachadh na tha air atharrachadh?</string>
     <!-- text for underlined clickable link that is part of "what's new" onboarding card description that links to an FAQ -->
     <string name="onboarding_whats_new_description_linktext">Faigh freagairtean an-seo</string>
+    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Sioncronaich Firefox eadar uidheaman</string>
+    <!-- Text for the button to learn more about signing in to your Firefox account -->
+    <string name="onboarding_manual_sign_in_description">Thoir a-steach comharran-lìn, an eachdraidh is faclan-faire gu Firefox air an uidheam seo.</string>
     <!-- text for the firefox account onboarding card header when we detect you're already signed in to
         another Firefox browser. (The word `Firefox` should not be translated)
         The first parameter is the email of the detected user's account -->
@@ -1182,19 +1209,33 @@
     <string name="onboarding_firefox_account_auto_signin_confirm">Bu toil, clàraich a-steach mi</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">Gad chlàradh a-steach…</string>
+    <!-- text for the button to manually sign into Firefox account. -->
+    <string name="onboarding_firefox_account_sign_in_1">Clàraich leinn</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">Fan clàraichte a-muigh</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Tha an sioncronachadh air</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">Dh’fhàillig an logadh a-steach</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header_3">Tha prìobhaideachd air an-còmhnaidh</string>
+    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
+    <string name="onboarding_tracking_protection_description_3">Cuiridh Firefox casg gu fèin-obrachail air companaidhean o leantainn ort gu dìomhair air feadh an lìn.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Stannardach (bun-roghainn)</string>
+    <!-- text for standard blocking option button description -->
+    <string name="onboarding_tracking_protection_standard_button_description_3">Cothromaichte do phrìobhaideachd is dèanadas. Thèid duilleagan a luchdadh gu h-àbhaisteach.</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_button">Teann (mholamaid seo)</string>
 
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">Teann</string>
+    <!-- text for strict blocking option button description -->
+    <string name="onboarding_tracking_protection_strict_button_description_3">Bacaidh seo barrachd dhe na tracaichean ach an dèid duilleagan a luchdadh nas luaithe ach dh’fhaoidte gum bris cuid a ghleusan air duilleagan.</string>
+    <!-- text for the toolbar position card header  -->
+    <string name="onboarding_toolbar_placement_header_1">Tagh na thèid a chur an àite a’ bhàr-inneal</string>
+    <!-- text for the toolbar position card description -->
+    <string name="onboarding_toolbar_placement_description_1">Cuir am bàr-inneal ri do làimh. Cùm e aig a’ bhonn no gluais e gun bhàrr.</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">Dèan brabhsadh prìobhaideach</string>
     <!-- text for the private browsing onboarding card description
@@ -1221,6 +1262,8 @@
     <!-- Onboarding theme -->
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Tagh ùrlar dhut</string>
+    <!-- text for the theme picker onboarding card description -->
+    <string name="onboarding_theme_picker_description_2">Caomhain am bataraidh is do shùilean leis a’ mhodh dorcha.</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Gu fèin-obrachail</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -1275,10 +1318,14 @@
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Barrachd fiosrachaidh</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Stannardach (bun-roghainn)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Cothromaichte do phrìobhaideachd is dèanadas. Thèid duilleagan a luchdadh gu h-àbhaisteach.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Na thèid a bhacadh leis an dìon stannardach on tracadh</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Teann</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_description_3">Bacaidh seo barrachd dhe na tracaichean ach an dèid duilleagan a luchdadh nas luaithe ach dh’fhaoidte gum bris cuid a ghleusan air duilleagan.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Na thèid a bhacadh leis an dìon teann on tracadh</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -1419,6 +1466,8 @@
     <string name="preferences_passwords_autofill">Fèin-lìonadh</string>
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Sioncronaich na clàraidhean a-steach</string>
+    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
+    <string name="preferences_passwords_sync_logins_across_devices">Sioncronaich clàraidhean a-steach thar nan uidheaman</string>
     <!-- Syncing saved logins in Fenix needs reconnect to sync -->
     <string name="preferences_passwords_sync_logins_reconnect">Ath-cheangail</string>
     <!-- Syncing saved logins in Fenix needs login -->
@@ -1510,6 +1559,32 @@
     <string name="saved_logins_sort_strategy_last_used">Cleachdadh mu dheireadh</string>
     <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
     <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Seòrsaich clàr-taice nan clàradh a-steach</string>
+
+    <!-- Credit Cards Autofill -->
+    <!-- Preference and title for managing the settings for credit cards -->
+    <string name="preferences_credit_cards">Cairtean-creideis</string>
+    <!-- Preference for saving and autofilling credit cards -->
+    <string name="preferences_credit_cards_save_and_autofill_cards">Sàbhail is fèin-lìon cairtean</string>
+    <!-- Preference summary for saving and autofilling credit card data -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Tha an dàta crioptaichte</string>
+    <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
+    <string name="preferences_credit_cards_sync_cards_across_devices">Sioncronaich cairtean thar nan uidheaman</string>
+    <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
+    <string name="preferences_credit_cards_sync_cards">Sioncronaich cairtean</string>
+    <!-- Preference option for adding a credit card -->
+    <string name="preferences_credit_cards_add_credit_card">Cuir cairt-chreideis ris</string>
+    <!-- Preference option for managing saved credit cards -->
+    <string name="preferences_credit_cards_manage_saved_cards">Stiùirich na cairtean a shabhail thu</string>
+    <!-- Title of the "Add card" screen -->
+    <string name="credit_cards_add_card">Cuir cairt ris</string>
+    <!-- Title of the "Edit card" screen -->
+    <string name="credit_cards_edit_card">Deasaich a’ chairt</string>
+    <!-- The header for the card number of a credit card -->
+    <string name="credit_cards_card_number">Àireamh na cairte</string>
+    <!-- The header for the expiration date of a credit card -->
+    <string name="credit_cards_expiration_date">Falbhaidh an ùine oirre</string>
+    <!-- The label for the expiration date month of a credit card to be used by a11y services-->
+    <string name="credit_cards_expiration_date_month">Am mìos a dh’fhalbhas an ùine oirre</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Cuir einnsean-luirg ris</string>
