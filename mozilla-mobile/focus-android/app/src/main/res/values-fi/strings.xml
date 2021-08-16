@@ -117,6 +117,19 @@
          Clicking this action will launch Focus and perform a search in the default search engine. -->
     <string name="text_selection_search_action">Yksityinen haku</string>
 
+    <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
+         Argument 2 is the url for the learn-more link. -->
+    <string name="about_content"><![CDATA[<p>%1$s asettaa sinut ohjaimiin.</p>
+<p>Käytä sitä yksityiseen selaamiseen:
+  <ul>
+    <li>Hae ja selaa suoraan sovelluksessa</li>
+    <li>Estä seuranta (tai muokkaa asetuksia salliaksesi seuraimet)</li>
+    <li>Poista evästeet ja haku- sekä selaushistoria</li>
+  </ul>
+</p>
+<p>%1$s on Mozillan kehittämä. Tehtävämme on edesauttaa tervettä, avointa Internetiä<br/>
+<a href="%2$s">Lue lisää</a></p>]]></string>
+
     <!-- Header for the Privacy and Security settings menu -->
     <string name="preference_privacy_and_security_header">Tietosuoja ja turvallisuus</string>
 
@@ -176,11 +189,20 @@
     <!-- Title of "switch" preference that enables/disables autocomplete for the default list -->
     <string name="preference_switch_autocomplete_topsites">Ykkössivustoille</string>
 
+    <!-- Summary for the toggle to enable autocomplete for the topsites list -->
+    <string name="preference_autocomplete_topsite_summary">Ota käyttöön täydentääksesi automaattisesti yli 450 suosittua verkko-osoitetta osoitepalkissa.</string>
+
     <!-- Title of "switch" preference that enables/disables autocomplete for the user-defined list -->
     <string name="preference_switch_autocomplete_user_list">Lisäämillesi sivustoille</string>
 
+    <!-- Summary for the toggle to enable autocomplete for the user-defined list -->
+    <string name="preference_autocomplete_user_list_summary">Ota käyttöön täydentääksesi automaattisesti yli 450 suosittua verkko-osoitetta osoitepalkissa.</string>
+
     <!-- Preference category: Manage (user-defined) sites -->
     <string name="preference_category_autocomplete_manage_sites">Hallitse sivustoja</string>
+
+    <!-- Item in autocomplete settings that will open a new preference screen for adding and removing URLs to the user-defined list-->
+    <string name="preference_autocomplete_subitem_manage_sites">Hallitse sivustoja</string>
 
     <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
     <string name="preference_autocomplete_action_add">+ Lisää mukautettu osoite</string>
@@ -190,6 +212,9 @@
 
     <!-- Label for the button to quick add custom autocomplete URLs. -->
     <string name="custom_autocomplete_quick_add">Lisää mukautettu osoite</string>
+
+    <!-- Label for the button to quick add the current URL to the custom autocomplete list -->
+    <string name="add_custom_autocomplete_label">Lisää linkki automaattisesti täydennettäväksi</string>
 
     <!-- Preference category for settings about cookies and site data -->
     <string name="preference_category_cookies">Evästeet ja sivustotiedot</string>
@@ -368,6 +393,10 @@
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Lisää asetuksia</string>
 
+    <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button used
+    on home screen-->
+    <string name="indicator_content_description_menu">Lisää asetuksia -painike</string>
+
     <!-- Content description (not visible, for screen readers etc.): Navigate forward (browsing history) -->
     <string name="content_description_forward">Siirry eteenpäin</string>
 
@@ -505,7 +534,28 @@
 
 
 
-  <!-- Text shown in prompts for GeckoView -->
+  <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
+    <string name="your_rights_content2"><![CDATA[%1$s on käytettävissä <a href="%2$s">Mozilla Public License</a>n ja muiden avoimen lähdekoodin lisenssien ehdoin.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
+    <string name="your_rights_content3"><![CDATA[Sinulle ei anneta minkäänlaisia tavaramerkki- tai lisenssioikeuksia Mozilla-säätiön tai muun tahon tavaramerkkeihin, joihin lukeutuu Mozillan, Firefoxin tai %1$sin nimet tai logot. Voit lukea tarkempia lisätietoja <a href="%2$s">täältä</a>.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[Muita osia %1$sin lähdekoodista on saatavilla erinäisten vapaiden ja avointen lähdekoodin <a href="%2$s">lisenssien</a> ehtojen mukaisesti.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the GPL
+    %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
+    <string name="your_rights_content5"><![CDATA[%1$s käyttää myös Disconnect, Inc.:n toimittamia estolistoja, jotka ovat erillisiä ja itsenäisiä <a href="%2$s">GNU General Public License v3</a> -lisenssin mukaisia töitä, ja ne ovat saatavilla <a href="%3$s">täältä</a>.]]></string>
+
+    <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Käyttäjätunnus</string>
     <string name="gv_prompt_password_hint">Salasana</string>
     <string name="gv_prompt_clear">Tyhjennä</string>
