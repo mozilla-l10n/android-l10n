@@ -99,6 +99,11 @@
     <!-- Text for the banner message to tell users about our auto close feature. -->
     <string name="tab_tray_close_tabs_banner_message">လွန်ခဲ့သော တစ်ရက်၊ အပတ် (သို့) လ တွင် မကြည့်ရသေးသော အလိုအလျောက် ပိတ်ရန် ဖွင့်ထားသည့် တက်ဘ် များကို သတ်မှတ်ပါ။</string>
 
+    <!-- Text for the positive action button to go to Settings for auto close tabs. -->
+    <string name="tab_tray_close_tabs_banner_positive_button_text">ရွေးချယ်စရာများ ကို ကြည့်ရန်</string>
+    <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
+    <string name="tab_tray_close_tabs_banner_negative_button_text">ပယ်ချ</string>
+
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
     <string name="home_screen_shortcut_open_new_tab_2">တပ်ဗ် အသစ်</string>
@@ -108,6 +113,12 @@
 
     <!-- Heading for the Top Sites block -->
     <string name="home_screen_top_sites_heading">ထိပ်တန်း ဆိုက်များ</string>
+
+    <!-- Recent Tabs -->
+    <!-- Header text for jumping back into the recent tab in the home screen -->
+    <string name="recent_tabs_header">ပြန် ဝင်ရန်</string>
+    <!-- Button text for showing all the tabs in the tabs tray -->
+    <string name="recent_tabs_show_all">အားလုံးကို ပြပါ</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -143,6 +154,10 @@
     <string name="browser_menu_add_to_homescreen">ပင်မစာမျက်နှာသို့ ထည့်ပါ</string>
     <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
     <string name="browser_menu_install_on_homescreen">ထည့်သွင်းပါ</string>
+    <!-- Menu option on the toolbar that takes you to synced tabs page-->
+    <string name="synced_tabs">ချိန်သားကိုက်ပြီး တက်ဗ်များ</string>
+    <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
+    <string name="resync_button_content_description">ပြန်ချိန်သားကိုက်ရန်</string>
     <!-- Browser menu button that opens the find in page menu -->
     <string name="browser_menu_find_in_page">စာမျက်နှာထဲတွင် ရှာပါ</string>
     <!-- Browser menu button that creates a private tab -->
@@ -164,17 +179,29 @@
     <string name="browser_menu_powered_by2">%1$s က ထောက်ပံ့ပေးထားတယ်</string>
     <!-- Browser menu button to put the current page in reader mode -->
     <string name="browser_menu_read">စာဖတ်သူမြင်ကွင်း</string>
+    <!-- Browser menu button content description to close reader mode and return the user to the regular browser -->
+    <string name="browser_menu_read_close">စာဖတ်သူ မြင်ကွင်းကို ပိတ်ပါ</string>
     <!-- Browser menu button to open the current page in an external app -->
     <string name="browser_menu_open_app_link">အက်ပ်ထဲတွင်ဖွင့်ပါ</string>
 
     <!-- Browser menu button to configure reader mode appearance e.g. the used font type and size -->
     <string name="browser_menu_read_appearance">အသွင်အပြင်</string>
 
+    <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
+    <string name="browser_menu_customize_reader_view">စာဖတ်သူ မြင်ကွင်းကို စိတ်ကြိုက် ပြင်ဆင်ပါ</string>
     <!-- Browser menu label for adding a bookmark -->
     <string name="browser_menu_add">ထည့်ပါ</string>
 
     <!-- Browser menu label for editing a bookmark -->
     <string name="browser_menu_edit">ပြင်ဆင်</string>
+
+    <!-- Browser Toolbar -->
+    <!-- Content description for the Home screen button on the browser toolbar -->
+    <string name="browser_toolbar_home">ပင်မ စာမျက်နှာ</string>
+
+    <!-- Error message to show when the user tries to access a scheme not
+        handled by the app (Ex: blob, tel etc) -->
+    <string name="unknown_scheme_error_message">ချိတ်ဆက်၍ မရပါ။ မမှတ်မိတော့သော URL စနစ်။</string>
 
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
@@ -189,8 +216,12 @@
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
     <string name="search_scan_button">စစ်ဆေးပါ</string>
+    <!-- Button in the search view that lets a user change their search engine -->
+    <string name="search_engine_button">ရှာဖွေရေး အင်ဂျင်</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">အင်ဂျင်အပြင်အဆင် ရှာဖွေပါ</string>
+    <!-- Header displayed when selecting a shortcut search engine -->
+    <string name="search_engines_search_with">ဤ တစ်ကြိမ်တွင် ရှာဖွေပါ:</string>
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
     <string name="awesomebar_clipboard_title">ကလစ်ဘုတ်မှ လင့်ခ်ကိုဖြည့်စွက်ပါ</string>
     <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
@@ -280,6 +311,8 @@
     <string name="preferences_theme">အခင်းအကျင်းများ</string>
     <!-- Preference for customizing the home screen -->
     <string name="preferences_home">အဖွင့်စာမျက်နှာ</string>
+    <!-- Preference for gestures based actions -->
+    <string name="preferences_gestures">လက်ဟန်အမူအရာများ</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">စိတ်ကြိုက်လုပ်ပါ</string>
     <!-- Preference description for banner about signing in -->
@@ -315,22 +348,34 @@
     <string name="preferences_search_browsing_history">ကြည့်ရှုမှတ်တမ်းကို ရှာပါ</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
     <string name="preferences_search_bookmarks">စာမှတ်များကို ရှာရန်</string>
+    <!-- Preference title for switch preference to suggest synced tabs when searching -->
+    <string name="preferences_search_synced_tabs">ချိန်သားကိုက်ထားသော တပ်ဗ်များကို ရှာပါ</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">အကောင့်ဆက်တင်များ</string>
     <!-- Preference for enabling url autocomplete-->
     <string name="preferences_enable_autocomplete_urls">အလိုအလျောက်ဖြည့်စွက် URLs</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">အက်ပ်များမှလင့်များကိုဖွင့်ပါ</string>
+    <!-- Preference for open download with an external download manager app -->
+    <string name="preferences_external_download_manager">ပြင်ပ ဒေါင်းလုတ် မန်နေဂျာ</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">အတ်အွန်များ</string>
 
     <!-- Preference for notifications -->
     <string name="preferences_notifications">အသိပေးချက်များ</string>
 
+    <!-- Add-on Preferences -->
+    <!-- Preference to customize the configured AMO (addons.mozilla.org) collection -->
+    <string name="preferences_customize_amo_collection">စိတ်ကြိုက် အတ်-အွန် စုဆောင်းခြင်း</string>
     <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">အိုကေ</string>
     <!-- Button caption to abort the add-on collection configuration -->
     <string name="customize_addon_collection_cancel">ပယ်ဖျက်</string>
+
+    <!-- Hint displayed on input field for custom collection name -->
+    <string name="customize_addon_collection_hint">စုဆောင်းမှု အမည်</string>
+    <!-- Hint displayed on input field for custom collection user ID-->
+    <string name="customize_addon_collection_user_hint">စုဆောင်းမှုပိုင်ရှင် (အသုံးပြုသူ အိုင်ဒီ)</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -367,6 +412,11 @@
         The first parameter is the application name, the second is the device manufacturer name
         and the third is the device model. -->
     <string name="default_device_name_2">%1$s သည် %2$s %3$s တွင်</string>
+
+    <!-- Preference for syncing credit cards -->
+    <string name="preferences_sync_credit_cards">အကြွေးဝယ် ကတ်များ</string>
+    <!-- Preference for syncing addresses -->
+    <string name="preferences_sync_address">လိပ်စာများ</string>
 
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
@@ -480,6 +530,10 @@
     <string name="library_desktop_bookmarks_unfiled">အခြား စာမှတ်များ</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">မှတ်တမ်း</string>
+    <!-- Option in Library to open a new tab -->
+    <string name="library_new_tab">တပ်ဗ် အသစ်</string>
+    <!-- Option in Library to find text in page -->
+    <string name="library_find_in_page">စာမျက်နှာထဲတွင် ရှာပါ</string>
     <!-- Option in Library to open Reading List -->
     <string name="library_reading_list">စာဖတ်စာရင်း</string>
     <!-- Menu Item Label for Search in Library -->
@@ -491,6 +545,10 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">ပိတ်ပါ</string>
 
+    <!-- Option in library for Recently Closed Tabs -->
+    <string name="library_recently_closed_tabs">လတ်တလော ပိတ်ခဲ့သော တက်ဗ်များ</string>
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">မှတ်တမ်း အားလုံး ပြရန်</string>
     <!-- Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
     %d is a placeholder for the number of tabs selected. -->
     <string name="recently_closed_tabs">%d တက်ဗ်</string>
@@ -520,6 +578,29 @@
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">တစ်လ ကြာပြီးနောက်</string>
 
+    <!-- Option for starting on the home screen after after four hours or inactivity -->
+    <string name="start_on_home_after_four_hours">လေး နာရီ ကြာပြီးနောက်</string>
+    <!-- Option for always starting on the home screen -->
+    <string name="start_on_home_always">အမြဲတမ်း</string>
+    <!-- Option for never starting on the home screen -->
+    <string name="start_on_home_never">ဘယ်တော့မှ</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
+    <string name="close_tabs_manually_summary">ကိုယ်တိုင် ပိတ်ပါ</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
+    <string name="close_tabs_after_one_day_summary">တစ်ရက် ပြီးနောက် ပိတ်ပါ</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one week-->
+    <string name="close_tabs_after_one_week_summary">တစ်ပတ် ပြီးနောက် ပိတ်ပါ</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
+    <string name="close_tabs_after_one_month_summary">တစ်လ ပြီးနောက် ပိတ်ပါ</string>
+
+    <!-- Studies -->
+    <!-- Title of the remove studies button -->
+    <string name="studies_remove">ဖယ်ရှားပါ</string>
+    <!-- Title of the active section on the studies list -->
+    <string name="studies_active">လုပ်ဆောင်နေသည်</string>
+    <!-- Learn more link for studies, links to an article for more information about studies. -->
+    <string name="studies_learn_more">ပိုမို လေ့လာရန်</string>
+
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">တပ်ဗ်များကို ဖွင့်ပါ</string>
@@ -542,6 +623,8 @@
     <string name="tab_tray_menu_select">ရွေးချယ်ပါ</string>
     <!-- Text shown in the menu for sharing all tabs -->
     <string name="tab_tray_menu_item_share">တက်ဗ်များ အားလုံး မျှဝေရန်</string>
+    <!-- Text shown in the menu to view recently closed tabs -->
+    <string name="tab_tray_menu_recently_closed">လတ်တလော ပိတ်ခဲ့သည့် တက်ဗ်များ</string>
     <!-- Text shown in the menu to view tab settings -->
     <string name="tab_tray_menu_tab_settings">တက်ဗ် အပြင်အဆင်များ</string>
     <!-- Text shown in the menu for closing all tabs -->
@@ -550,8 +633,18 @@
     <string name="tab_tray_menu_open_new_tab">တက်ဗ် အသစ်</string>
     <!-- Shortcut action to open the home screen -->
     <string name="tab_tray_menu_home">မူလ သို့ သွားရန်</string>
+    <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
+    <string name="tab_tray_multiselect_menu_item_bookmark">စာမှတ်</string>
+    <!-- Text shown in the multiselect menu for closing selected tabs. -->
+    <string name="tab_tray_multiselect_menu_item_close">ပိတ်ပါ</string>
+    <!-- Content description for tabs tray multiselect share button -->
+    <string name="tab_tray_multiselect_share_content_description">ရွေးချယ်ထားသော တပ်ဗ် များကို မျှဝေပါ</string>
+    <!-- Content description for tabs tray multiselect menu -->
+    <string name="tab_tray_multiselect_menu_content_description">ရွေးချယ်ထားသော တပ်ဗ် များ မီနူး</string>
     <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
     <string name="remove_tab_from_collection">စုစည်းမှု ထဲမှ တက်ဗ် ကို ဖယ်ရှားရန်</string>
+    <!-- Text for button to enter multiselect mode in tabs tray -->
+    <string name="tabs_tray_select_tabs">တပ်ဗ်များကို ရွေးပါ</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">တပ်ဗ်ကို ပိတ်ရန်</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
@@ -584,13 +677,17 @@
     <string name="collection_rename">စုဆောင်းမှုအမည်ပြောင်းပါ</string>
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">တပ်ဗ်များကို ဖွင့်ပါ</string>
-    <!-- Text for the menu button to rename a top site -->
+    <!-- Hint for adding name of a collection -->
+    <string name="collection_name_hint">စုဆောင်းမှု အမည်</string>
+	<!-- Text for the menu button to rename a top site -->
 	<string name="rename_top_site">အမည်ပြောင်းပါ</string>
 	<!-- Text for the menu button to remove a top site -->
 	<string name="remove_top_site">ဖယ်ရှားပါ</string>
 
     <!-- Text for the menu button to delete a top site from history -->
     <string name="delete_from_history">မှတ်တမ်းမှ ဖျက်ပါ</string>
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (သီးသန့်ကိုယ်ပိုင် ပုံစံ)</string>
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">သိမ်းရန်</string>
 
@@ -611,6 +708,8 @@
     <string name="history_menu_share_button">မျှဝေရန်</string>
     <!-- History overflow menu open in new tab button -->
     <string name="history_menu_open_in_new_tab_button">တက်ဗ် အသစ်တွင် ဖွင့် ရန်</string>
+    <!-- History overflow menu open in private tab button -->
+    <string name="history_menu_open_in_private_tab_button">လင်ခ့်ကို ကိုယ်ပိုင်သီးသန့် သုံး တပ်ဗ် တွင် ဖွင့်ပါ</string>
     <!-- Text for the button to delete a single history item -->
     <string name="history_delete_item">ဖျက်ပါ</string>
     <!-- History multi select title in app bar
@@ -637,6 +736,17 @@
     <string name="history_empty_message">မှတ်တမ်းများ ဒီမှာ မရှိပါ</string>
 
 
+    <!-- Downloads -->
+    <!-- Text for the button to clear all downloads -->
+    <string name="download_delete_all">ဒေါင်းလုတ်ထားသည်များကို ဖျက်ပါ</string>
+    <!-- Text for the dialog to confirm clearing all downloads -->
+    <string name="download_delete_all_dialog">သင့်ရဲ့ ဒေါင်းလုတ်များကို ရှင်းပစ်ချင်တာ သေချာပါသလား။ </string>
+    <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
+    <string name="download_delete_multiple_items_snackbar_1">ဒေါင်းလုတ်များအား ဖယ်ရှားလိုက်သည်</string>
+    <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
+    <string name="download_delete_single_item_snackbar">%1$s ကို ဖယ်ရှားလိုက်သည်</string>
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message_1">ဒေါင်းလုတ် လုပ်ထားသော ဖိုင်များ မရှိပါ</string>
     <!-- History multi select title in app bar
     The first parameter is the number of downloads selected -->
     <string name="download_multi_select_title">%1$d ရွေးထားပြီး</string>
@@ -765,6 +875,8 @@
     <string name="preference_phone_feature_location">တည်နေရာ</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">အသိပေးချက်</string>
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">ဒီအာအမ် ထိန်းချုပ်ထားသော အကြောင်းအရာ</string>
     <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">ခွင့်ပြုရန်တောင်းပါ</string>
     <!-- Label that indicates that a permission must be blocked -->
@@ -795,6 +907,11 @@
     <string name="delete_browsing_data_quit_on">ဖွင့်ပါ</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">ပိတ်ပါ</string>
+
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">ဖွင့်ပါ</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">ပိတ်ပါ</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -910,6 +1027,12 @@
     <string name="snackbar_tab_closed">Tab ပိတ်လိုက်တယ်</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Tabs ပိတ်လိုက်တယ်</string>
+    <!-- Text shown in snackbar when user closes tabs -->
+    <string name="snackbar_message_tabs_closed">တပ်ဗ်များ ပိတ်လိုက်သည်</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">စာမှတ်များ သိမ်းပြီးပါပြီ</string>
+    <!-- Text shown in snackbar action for viewing bookmarks -->
+    <string name="snackbar_message_bookmarks_view">ကြည့်ပါ</string>
     <!-- Text shown in snackbar when user adds a site to top sites -->
     <string name="snackbar_added_to_top_sites">ထိပ်တန်းဆိုက်များထည့်ပြီး</string>
     <!-- Text shown in snackbar when user closes a private tab -->
@@ -1036,6 +1159,8 @@
     <string name="onboarding_firefox_account_auto_signin_confirm">ဟုတ်ကဲ့၊ ဆိုင်းအင်လုပ်ပါ</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string name="onboarding_firefox_account_signing_in">၀င်ပါ …</string>
+    <!-- text for the button to manually sign into Firefox account. -->
+    <string name="onboarding_firefox_account_sign_in_1">စတင်သုံးရန် စာရင်းသွင်းပါ</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string name="onboarding_firefox_account_stay_signed_out">ထွက်လက်မှတ်ရေးထိုးခဲ့ပါ</string>
     <!-- text to display in the snackbar once account is signed-in -->
@@ -1043,8 +1168,12 @@
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string name="onboarding_firefox_account_automatic_signin_failed">ဝင်ရောက်ရန်မအောင်မြင်ပါ</string>
 
+    <!-- text for tracking protection radio button option for standard level of blocking -->
+    <string name="onboarding_tracking_protection_standard_button_2">စံ (ပုံသေ)</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_button">တင်းကြပ်စွာ (အကြံပြုသည်)</string>
+    <!-- text for tracking protection radio button option for strict level of blocking -->
+    <string name="onboarding_tracking_protection_strict_option">တားမြစ်ရန်</string>
     <!-- text for the private browsing onboarding card header -->
     <string name="onboarding_private_browsing_header">သီးသန့်ရှာဖွေပါ</string>
 
@@ -1155,6 +1284,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cryptominers</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_fingerprinters">လက်ဗွေများ</string>
+    <!-- Button label for navigating to the Enhanced Tracking Protection details -->
+    <string name="enhanced_tracking_protection_details">အသေးစိတ်များ</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">ပိတ်ဆို့ထားသည်</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
@@ -1200,6 +1331,8 @@
     <!-- About page link text to open support link -->
     <string name="about_support">အထောက်အပံ့</string>
 
+    <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
+    <string name="about_crashes">ပျက်စီးမှုများ</string>
     <!-- About page link text to open privacy notice link -->
     <string name="about_privacy_notice">ကိုယ်ရေးကာကွယ်မှု အသိပေးချက်</string>
     <!-- About page link text to open know your rights link -->
@@ -1231,6 +1364,8 @@
     <string name="add_to_homescreen_cancel">ပယ်​ဖျက်ပါ</string>
     <!-- Add button text for the Add to Homescreen dialog -->
     <string name="add_to_homescreen_add">ထည့်ရန်</string>
+    <!-- Continue to website button text for the first-time Add to Homescreen dialog -->
+    <string name="add_to_homescreen_continue">ဝက်ဘ်ဆိုက် သို့ ဆက်ရန်</string>
     <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">ဖြတ်လမ်းနာမည်</string>
 
@@ -1533,7 +1668,9 @@
 	<!-- Title text displayed in the rename top site dialog. -->
 	<string name="top_sites_rename_dialog_title">အမည်</string>
 
-    <!-- Button caption to confirm the renaming of the top site. -->
+    <!-- Hint for renaming title of a top site -->
+	<string name="top_site_name_hint">ထိပ်တန်း ဆိုဒ် နာမည်</string>
+	<!-- Button caption to confirm the renaming of the top site. -->
 	<string name="top_sites_rename_dialog_ok">အိုကေ</string>
 	<!-- Dialog button text for canceling the rename top site prompt. -->
 	<string name="top_sites_rename_dialog_cancel">ပယ်​ဖျက်ပါ</string>
