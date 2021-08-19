@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="app_name_private_5">Yksityinen %s</string>
@@ -631,6 +631,14 @@
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Sulje kuukauden kuluttua</string>
 
+    <!-- Studies -->
+    <!-- Title of the remove studies button -->
+    <string name="studies_remove">Poista</string>
+    <!-- Description for studies, it indicates why Firefox use studies -->
+    <string name="studies_description">Firefox saattaa asentaa ja suorittaa tutkimuksia silloin tällöin.</string>
+    <!-- Learn more link for studies, links to an article for more information about studies. -->
+    <string name="studies_learn_more">Lue lisää</string>
+
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Avoimet välilehdet</string>
@@ -955,6 +963,11 @@
     <string name="delete_browsing_data_quit_on">Päällä</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">Pois</string>
+
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">Päällä</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">Pois</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -1287,7 +1300,7 @@
     <string name="onboarding_privacy_notice_read_button">Lue yksityisyyskäytäntömme</string>
 
     <!-- Content description (not visible, for screen readers etc.): Close onboarding screen -->
-    <string name="onboarding_close">Sulje</string>
+    <string name="onboarding_close" tools:ignore="UnusedResources">Sulje</string>
 
     <!-- text for the button to finish onboarding -->
     <string name="onboarding_finish">Aloita selaaminen</string>
@@ -1390,6 +1403,7 @@
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Kryptolouhijat</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Yksilöijät</string>
+    <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Estetty</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_allowed">Sallittu</string>
@@ -1414,7 +1428,7 @@
     <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_description">Estää lataamasta ulkopuolisia mainoksia, videoita ja muuta sisältöä, joka sisältää seurantakoodin. Voi vaikuttaa joidenkin verkkosivustojen toimimiseen.</string>
     <!-- Enhanced Tracking Protection Onboarding Message shown in a dialog above the toolbar. The first parameter is the name of the application (For example: Fenix) -->
-    <string name="etp_onboarding_cfr_message">Aina kun kilven väri on violetti, %s on estänyt seuraimia sivustolla. Napauta saadaksesi lisätietoja.</string>
+    <string name="etp_onboarding_cfr_message" tools:ignore="UnusedResources">Aina kun kilven väri on violetti, %s on estänyt seuraimia sivustolla. Napauta saadaksesi lisätietoja.</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
     <string name="etp_panel_on">Suojaukset ovat PÄÄLLÄ tällä sivustolla</string>
     <!-- Enhanced Tracking Protection message that protection is currently off for this site -->
@@ -1497,7 +1511,8 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Älä tallenna koskaan</string>
     <!-- Preference for autofilling saved logins in Fenix -->
-    <string name="preferences_passwords_autofill">Automaattinen täyttö</string>
+    <string name="preferences_passwords_autofill" tools:ignore="UnusedResources">Automaattinen täyttö</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Synkronoi kirjautumistiedot</string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
@@ -1680,7 +1695,7 @@
     <!-- Placeholder text shown in the Search String TextField before a user enters text -->
     <string name="search_add_custom_engine_search_string_hint">Käytettävä hakujono</string>
     <!-- Description text for the Search String TextField. The %s is part of the string -->
-    <string name="search_add_custom_engine_search_string_example">Korvaa kysely käyttäen ”%s”. Esimerkki:\nhttps://www.google.com/search?q=%s</string>
+    <string formatted="false" name="search_add_custom_engine_search_string_example">Korvaa kysely käyttäen ”%s”. Esimerkki:\nhttps://www.google.com/search?q=%s</string>
     <!-- Text for the button to learn more about adding a custom search engine -->
     <string name="search_add_custom_engine_learn_more_label">Lue lisää</string>
 
@@ -1818,6 +1833,11 @@
 	<string name="top_sites_rename_dialog_ok">OK</string>
 	<!-- Dialog button text for canceling the rename top site prompt. -->
 	<string name="top_sites_rename_dialog_cancel">Peruuta</string>
+
+    <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
+    <string name="inactive_tabs_30_days">30 päivää</string>
+    <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
+    <string name="inactive_tabs_7_days">1 viikko</string>
 
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">Aseta verkkosivustojen, sähköpostien ja viestien linkit avautumaan automaattisesti Firefoxissa.</string>
