@@ -47,6 +47,11 @@
     <!-- Menu item: Add the current page as a shortcut to the device's home screen (launcher). -->
     <string name="menu_add_to_home_screen">Adicionar à tela inicial</string>
 
+    <!-- Menu item: Add the current site as a shortcut on the Home screen -->
+    <string name="menu_add_to_shortcuts">Adicionar aos atalhos</string>
+    <!-- Menu item: Remove the current site as a shortcut from the Home screen -->
+    <string name="menu_remove_from_shortcuts">Remover dos atalhos</string>
+
     <!-- Menu item: Shows information about features and changes that are new to this version -->
     <string name="menu_whats_new">Novidades</string>
     <string name="menu_settings">Configurações</string>
@@ -207,6 +212,12 @@
     <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
     <string name="preference_autocomplete_action_add">+ Adicionar URL personalizada</string>
 
+    <!-- Explanation text above the list of custom autocomplete URLs. -->
+    <string name="preference_autocomplete_explanation_text">Sua lista de preenchimento automático:</string>
+
+    <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
+    <string name="preference_autocomplete_action_add2">Adicionar URL</string>
+
     <!-- Title of the screen for adding custom autocomplete URLs. -->
     <string name="preference_autocomplete_title_add">Adicionar URL personalizada</string>
 
@@ -273,10 +284,11 @@
 
     <!-- Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
     only (Only 3rd-party Cookies Blocked), No (No cookies blocked) -->
-    <string name="preference_privacy_should_block_cookies_no_option">Não</string>
+    <string name="preference_privacy_should_block_cookies_no_option2">Não, obrigado</string>
     <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Bloquear somente cookies rastreadores de terceiros</string>
     <string name="preference_privacy_should_block_cookies_third_party_only_option">Bloquear somente cookies de terceiros</string>
-    <string name="preference_privacy_should_block_cookies_yes_option">Sim</string>
+
+    <string name="preference_privacy_should_block_cookies_yes_option2">Sim, por favor</string>
 
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Use impressão digital para desbloquear seu aplicativo</string>
@@ -329,6 +341,9 @@
     <!-- Header for the list of installed search engines -->
     <string name="preference_search_installed_search_engines">Mecanismos de pesquisa instalados</string>
 
+    <!-- Header for the list of installed search engines -->
+    <string name="preference_choose_search_engine">Escolha o mecanismo de pesquisa</string>
+
     <!-- Action for restoring the default list of search engines -->
     <string name="preference_search_restore">Restaurar os mecanismos de pesquisa padrões</string>
 
@@ -337,6 +352,11 @@
     <string name="preference_search_add2">Adicionar outro mecanismo de pesquisa</string>
     <string name="preference_search_remove_title">Remover mecanismos de pesquisa</string>
     <string name="preference_search_remove">Remover</string>
+
+    <!-- Action for dding an additional search engine to the list -->
+    <string name="preference_search_add3">Adicionar outro mecanismo de pesquisa</string>
+    <!-- Explanation text above the list of search engines-->
+    <string name="preference_select_preferred_engine">Selecione seu mecanismo preferido:</string>
 
     <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
      a user first launches the app. -->
@@ -498,8 +518,14 @@
     <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_add">Adicionar</string>
 
+    <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_yes">SIM</string>
+
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_cancel">Cancelar</string>
+
+    <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_no">NÃO</string>
 
     <!-- When tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
          let the user know that the shortcut will always be opened with tracking protection disabled. -->
@@ -639,17 +665,7 @@
     <string name="biometric_auth_moved_too_quickly">Seu dedo se moveu muito rápido, tente novamente.</string>
 
     <!-- Title for the prompt to enable search suggestions -->
-    <string name="enable_search_suggestion_title">Deseja ativar as sugestões de pesquisa?</string>
-
-    <!-- Description for the prompt to enable search suggestions
-        %1$s will be replaced by the app name (e.g. Firefox Focus)
-        %2$s will be replaced with "Learn more" which will be a tappable link
-        using the string: "enable_search_suggestion_subtitle_learnmore" -->
-    <string name="enable_search_suggestion_subtitle">Para obter sugestões de pesquisa, %1$s precisa enviar o que você escreve na barra de endereços para o mecanismo de pesquisa que você escolheu. %2$s.</string>
-
-    <!-- String to be placed inside the string: enable_search_suggestion_subtitle,
-        which will be a "Learn More" link. -->
-    <string name="enable_search_suggestion_subtitle_learnmore">Saiba mais</string>
+    <string name="enable_search_suggestion_title2">Mostrar sugestões de pesquisa?</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">Não</string>
@@ -686,16 +702,8 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_open_in_new_tab">Abrir um link numa nova aba\n Pressione continuamente qualquer link numa página</string>
 
-    <!-- Tip displayed on home view explaining how to request the desktop version of a website.
-     Argument 1 will be replaced with a line break in the application. -->
-    <string name="tip_request_desktop"><![CDATA[Prefere ver a versão desktop completa do site?%1$s Menu > Solicitar site desktop]]></string>
-
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Desligar as sugestões na tela inicial</string>
-
-    <!-- Tip displayed on the home view explaining how to use the Allowlist feature.
-     "Allowlist" is a replacement for the word whitelist. -->
-    <string name="tip_explain_allowlist">É um site de confiança?\n A lista de permissões desativa a proteção contra rastreamento em sites que você conhece e confia.</string>
 
     <!-- Label for the snackbar when a user opens a new tab -->
     <string name="new_tab_opened_snackbar">Nova aba aberta</string>
@@ -736,4 +744,12 @@
 
   <!-- Label for the checkbox to send the tab crash report to Mozilla -->
     <string name="crash_report_send_crash_label">Enviar relatório de travamento para a Mozilla</string>
-</resources>
+
+    <!-- Tracking protection bottom sheet -->
+
+    <!-- Category of trackers (content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="content">Conteúdo</string>
+    <!-- Category of trackers (advertising) that can be blocked by Enhanced Tracking Protection -->
+    <string name="advertising">Propaganda</string>
+
+    </resources>
