@@ -120,6 +120,11 @@
     <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">Näytä kaikki</string>
 
+    <!-- History Metadata -->
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string name="history_metadata_header">Aiemmat etsinnät</string>
+
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
     <string name="browser_tabs_button">Avoimet välilehdet</string>
@@ -634,6 +639,8 @@
     <!-- Studies -->
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Poista</string>
+    <!-- Title of the active section on the studies list -->
+    <string name="studies_active">Käynnissä</string>
     <!-- Description for studies, it indicates why Firefox use studies -->
     <string name="studies_description">Firefox saattaa asentaa ja suorittaa tutkimuksia silloin tällöin.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
@@ -666,6 +673,8 @@
     <string name="tab_tray_menu_item_share">Jaa kaikki välilehdet</string>
     <!-- Text shown in the menu to view recently closed tabs -->
     <string name="tab_tray_menu_recently_closed">Viimeksi suljetut välilehdet</string>
+    <!-- Text shown in the tabs tray inactive tabs section -->
+    <string name="tab_tray_inactive_recently_closed">Viimeksi suljettu</string>
     <!-- Text shown in the menu to view account settings -->
     <string name="tab_tray_menu_account_settings">Tilin asetukset</string>
     <!-- Text shown in the menu to view tab settings -->
@@ -967,7 +976,7 @@
     <!-- Summary of studies preference if it is set to on -->
     <string name="studies_on">Päällä</string>
     <!-- Summary of studies data on quit preference if it is set to off -->
-    <string name="studies_off">Pois</string>
+    <string name="studies_off">Pois päältä</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -1403,6 +1412,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Kryptolouhijat</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Yksilöijät</string>
+    <!-- Button label for navigating to the Enhanced Tracking Protection details -->
+    <string name="enhanced_tracking_protection_details">Yksityiskohdat</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Estetty</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
@@ -1512,6 +1523,15 @@
     <string name="preferences_passwords_save_logins_never_save">Älä tallenna koskaan</string>
     <!-- Preference for autofilling saved logins in Fenix -->
     <string name="preferences_passwords_autofill" tools:ignore="UnusedResources">Automaattinen täyttö</string>
+
+    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill2">Täytä automaattisesti sovelluksessa %1$s</string>
+    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">Täytä ja tallenna käyttäjätunnukset ja salasanat verkkosivuilla, kun käytät sovellusta %1$s.</string>
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill">Automaattinen täyttö muissa sovelluksissa</string>
+    <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill_description">Täytä käyttäjätunnukset ja salasanat muissa laitteesi sovelluksissa.</string>
 
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Synkronoi kirjautumistiedot</string>
@@ -1834,10 +1854,15 @@
 	<!-- Dialog button text for canceling the rename top site prompt. -->
 	<string name="top_sites_rename_dialog_cancel">Peruuta</string>
 
+    <!-- In-activate tabs in the tabs tray -->
+    <!-- Title text displayed in the tabs tray when a tab has been unused for 4 days. -->
+    <string name="inactive_tabs_title">Passiiviset välilehdet</string>
+    <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
+    <string name="inactive_tabs_description">Välilehdet pysyvät täällä %s. Sen jälkeen välilehdet suljetaan automattisesti.</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_30_days">30 päivää</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
-    <string name="inactive_tabs_7_days">1 viikko</string>
+    <string name="inactive_tabs_7_days">1 viikon</string>
 
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">Aseta verkkosivustojen, sähköpostien ja viestien linkit avautumaan automaattisesti Firefoxissa.</string>
