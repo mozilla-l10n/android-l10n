@@ -46,6 +46,11 @@
     <!-- Menu item: Add the current page as a shortcut to the device's home screen (launcher). -->
     <string name="menu_add_to_home_screen">Προσθήκη στην Αρχική οθόνη</string>
 
+    <!-- Menu item: Add the current site as a shortcut on the Home screen -->
+    <string name="menu_add_to_shortcuts">Προσθήκη στις συντομεύσεις</string>
+    <!-- Menu item: Remove the current site as a shortcut from the Home screen -->
+    <string name="menu_remove_from_shortcuts">Αφαίρεση από συντομεύσεις</string>
+
     <!-- Menu item: Shows information about features and changes that are new to this version -->
     <string name="menu_whats_new">Τι νέο υπάρχει</string>
     <string name="menu_settings">Ρυθμίσεις</string>
@@ -114,7 +119,7 @@
     <string name="preference_privacy_and_security_header">Απόρρητο &amp; Ασφάλεια</string>
 
     <!-- Preference summary for settings related to privacy and security -->
-    <string name="preference_privacy_and_security_summary">Επιλογές παρακολούθησης, cookies, δεδομένων</string>
+    <string name="preference_privacy_and_security_summary">Επιλογές καταγραφής, cookie, δεδομένων</string>
 
     <!-- Preference category description for settings related to search, set default
     and autocomplete are settings a user can find and change inside the "search" settings screen -->
@@ -182,7 +187,7 @@
     <string name="custom_autocomplete_quick_add">Προσθήκη προσαρμοσμένου URL</string>
 
     <!-- Preference category for settings about cookies and site data -->
-    <string name="preference_category_cookies">Cookies και δεδομένα ιστοσελίδων</string>
+    <string name="preference_category_cookies">Cookie και δεδομένα ιστοτόπων</string>
 
     <!-- Preference category for settings about data choices -->
     <string name="preference_category_data_choices">Επιλογές δεδομένων</string>
@@ -234,13 +239,15 @@
     <string name="preference_privacy_block_social_summary">Ενσωματωμένο σε ιστοσελίδες ώστε να καταγράφει τις επισκέψεις σας και να προβάλει λειτουργικότητα, όπως κουμπιά κοινής χρήσης</string>
     <string name="preference_privacy_block_content">Φραγή trackers άλλου περιεχομένου</string>
     <string name="preference_privacy_block_content_summary2">Η ενεργοποίηση ενδέχεται να προκαλέσει απροσδόκητη συμπεριφορά ορισμένων σελίδων</string>
-    <string name="preference_privacy_category_cookies">Αποκλεισμός cookies</string>
+    <string name="preference_privacy_category_cookies">Αποκλεισμός cookie</string>
 
     <!-- Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
     only (Only 3rd-party Cookies Blocked), No (No cookies blocked) -->
-    <string name="preference_privacy_should_block_cookies_no_option">Όχι</string>
-    <string name="preference_privacy_should_block_cookies_third_party_only_option">Φραγή μόνο cookies τρίτων</string>
-    <string name="preference_privacy_should_block_cookies_yes_option">Ναι</string>
+    <string name="preference_privacy_should_block_cookies_no_option2">Όχι, ευχαριστώ</string>
+    <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Φραγή μόνο cookie καταγραφής τρίτων</string>
+    <string name="preference_privacy_should_block_cookies_third_party_only_option">Φραγή μόνο cookie τρίτων</string>
+
+    <string name="preference_privacy_should_block_cookies_yes_option2">Ναι, παρακαλώ</string>
 
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Χρήση αποτυπώματος για ξεκλείδωμα εφαρμογής</string>
@@ -352,7 +359,7 @@
 
     <!-- This text is not visible. Instead it will be read by the accessibility service once we
      finished loading a website -->
-    <string name="accessibility_announcement_loading_finished">Η ιστοσελίδα φορτώθηκε</string>
+    <string name="accessibility_announcement_loading_finished">Ο ιστότοπος φορτώθηκε</string>
 
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">Περισσότερες επιλογές</string>
@@ -361,13 +368,13 @@
     <string name="content_description_forward">Πλοήγηση προς τα εμπρός</string>
 
     <!-- Content description (not visible, for screen readers etc.): Reload current website -->
-    <string name="content_description_reload">Επαναφόρτωση ιστοσελίδας</string>
+    <string name="content_description_reload">Ανανέωση ιστοτόπου</string>
 
     <!-- Content description (not visible, for screen readers etc.): Navigate back (browsing history) -->
     <string name="content_description_back">Πλοήγηση προς τα πίσω</string>
 
     <!-- Content description (not visible, for screen readers etc.): Stop loading the current website. This button will turn into the refresh button once loading has been completed (see content_description_reload) -->
-    <string name="content_description_stop">Διακοπή φόρτωσης ιστοσελίδας</string>
+    <string name="content_description_stop">Διακοπή φόρτωσης ιστοτόπου</string>
 
     <!-- Content description (not visible, for screen readers etc.): Custom Tab exit button - closes the custom tab and returns to the previous app. -->
     <string name="content_description_customtab_exit">Επιστροφή στην προηγούμενη εφαρμογή</string>
@@ -458,8 +465,14 @@
     <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_add">Προσθήκη</string>
 
+    <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_yes">ΝΑΙ</string>
+
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_cancel">Ακύρωση</string>
+
+    <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_no">ΟΧΙ</string>
 
     <!-- When tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
          let the user know that the shortcut will always be opened with tracking protection disabled. -->
@@ -578,17 +591,7 @@
     <string name="biometric_auth_moved_too_quickly">Το δάκτυλο κουνήθηκε πολύ γρήγορα. Δοκιμάστε ξανά.</string>
 
     <!-- Title for the prompt to enable search suggestions -->
-    <string name="enable_search_suggestion_title">Θα θέλατε να ενεργοποιήσετε τις προτάσεις αναζήτησης;</string>
-
-    <!-- Description for the prompt to enable search suggestions
-        %1$s will be replaced by the app name (e.g. Firefox Focus)
-        %2$s will be replaced with "Learn more" which will be a tappable link
-        using the string: "enable_search_suggestion_subtitle_learnmore" -->
-    <string name="enable_search_suggestion_subtitle">Για προτάσεις αναζήτησης, το %1$s πρέπει να στέλνει στην επιλεγμένη σας μηχανή αναζήτησης ό,τι πληκτρολογείτε στη γραμμή διευθύνσεων. %2$s.</string>
-
-    <!-- String to be placed inside the string: enable_search_suggestion_subtitle,
-        which will be a "Learn More" link. -->
-    <string name="enable_search_suggestion_subtitle_learnmore">Μάθετε περισσότερα</string>
+    <string name="enable_search_suggestion_title2">Εμφάνιση προτάσεων αναζήτησης;</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">Όχι</string>
@@ -625,9 +628,8 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_open_in_new_tab">Άνοιγμα συνδέσμου σε νέα καρτέλα\n Πατήστε παρατεταμένα οποιοδήποτε σύνδεσμο σε μια σελίδα</string>
 
-    <!-- Tip displayed on home view explaining how to request the desktop version of a website.
-     Argument 1 will be replaced with a line break in the application. -->
-    <string name="tip_request_desktop"><![CDATA[Προτιμάτε την πλήρη έκδοση για υπολογιστές;%1$s Μενού > Απαίτηση ιστοσελίδας για υπολογιστές]]></string>
+    <!-- Label for the snackbar when a user opens a new tab -->
+    <string name="new_tab_opened_snackbar">Άνοιξε νέα καρτέλα</string>
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Εναλλαγή</string>
@@ -640,11 +642,35 @@
     <!-- Menu item to remove existing exceptions. -->
     <string name="preference_exceptions_menu_remove">Αφαίρεση</string>
     <!-- Button to remove all websites from the exception list -->
-    <string name="preference_exceptions_remove_all_button_label">Αφαίρεση όλων των ιστοσελίδων</string>
+    <string name="preference_exceptions_remove_all_button_label">Αφαίρεση όλων των ιστοτόπων</string>
+
+    <!-- Title for Preference screen for cookie blocking for exceptions tracking protection -->
+    <string name="preference_block_cookies_title">Αποκλεισμός cookie</string>
+
+    <!-- Message for Preference screen for cookie blocking for exceptions tracking protection -->
+    <string name="preference_category_block_cookies">Θέλετε να αποκλείσετε τα cookie;</string>
 
     <!-- Label for button to close the tab-->
     <string name="tab_crash_report_close_tab_button_label">Κλείσιμο καρτέλας</string>
 
     <!-- Label for the checkbox to send the tab crash report to Mozilla -->
     <string name="crash_report_send_crash_label">Αποστολή αναφοράς κατάρρευσης στη Mozilla</string>
+
+    <!-- Tracking protection bottom sheet -->
+
+    <!-- Category of trackers (content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="content">Περιεχόμενο</string>
+    <!-- Category of trackers (advertising) that can be blocked by Enhanced Tracking Protection -->
+    <string name="advertising">Διαφημίσεις</string>
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="secure_connection">Η σύνδεση είναι ασφαλής</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="insecure_connection">Η σύνδεση δεν είναι ασφαλής</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Navigate back button description -->
+    <string name="go_back">Επιστροφή</string>
+
+    <!-- Top Sites -->
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Αφαίρεση</string>
 </resources>
