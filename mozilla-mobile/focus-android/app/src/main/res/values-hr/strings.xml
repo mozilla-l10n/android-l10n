@@ -448,12 +448,12 @@
     <string name="external_app_prompt_title">Otvori poveznicu u drugoj aplikaciji</string>
     <!-- This string is shown when the user has clicked a link that needs to be opened in a different app.
          Argument 2 is the external app name, argument 1 is our name (i.e. Firefox Focus, or Firefox Klar). -->
-    <string name="external_app_prompt">Možete ostaviti %1$s otvoren kako biste otvorili ovu poveznicu u %2$s.</string>
+    <string name="external_app_prompt">Možeš ostaviti %1$s otvoren da bi poveznica bila otvorena u aplikaciji %2$s.</string>
     <!-- This text is the title of a dialog shown if no app could be found for a custom link protocol. -->
     <string name="external_app_prompt_no_app_title">Pronađi aplikaciju koja može otvoriti poveznicu</string>
     <!-- This text is shown in a dialog if no app could be found for a custom link protocol. %1$s is the name of the app (i.e. Firefox Focus) and %2$s is the name of
          the app store installed on the device (usually that's Google Play). -->
-    <string name="external_app_prompt_no_app">Nijedna aplikacija na vašem uređaju ne može otvoriti ovu poveznicu. Možete napustiti %1$s kako biste pretražili %2$s za aplikaciju koja može.</string>
+    <string name="external_app_prompt_no_app">Nijedna aplikacija na tvojem uređaju ne može otvoriti ovu poveznicu. Možeš napustiti %1$s za pronalaženje aplikacije u %2$s.</string>
     <!-- This label is shown above a list of apps that can be used to open a given link -->
     <string name="external_multiple_apps_matched_exit">Izaći iz privatnog pretraživanja?</string>
 
@@ -485,14 +485,26 @@
   <!-- First run tour (Default browser): Title -->
     <string name="firstrun_defaultbrowser_title">Osnaži svoju privatnost</string>
 
+    <!-- First run tour (Default browser): Text. -->
+    <string name="firstrun_defaultbrowser_text2">Podigni privatno pregledavanje na novu razinu. Blokiraj oglase i drugi sadržaj koji te može pratiti među stranicama i usporiti njihovo učitavanje.</string>
+
     <!-- First run tour (Search): Title -->
     <string name="firstrun_search_title">Tvoja pretraga na tvoj način</string>
+
+    <!-- First run tour (Search): Text -->
+    <string name="firstrun_search_text">Tražiš nešto drugačije? Izaberi drugu zadanu tražilicu u postavkama.</string>
 
     <!-- First run tour (Shortcut): Title -->
     <string name="firstrun_shortcut_title">Dodaj prečice na svoj početni zaslon</string>
 
+    <!-- First run tour (Shortcut): Text. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <string name="firstrun_shortcut_text">Brzo se vrati na svoje omiljene stranice u %1$su. Samo odaberi \&quot;Dodaj na početni zaslon\&quot; u %1$sovom izborniku.</string>
+
     <!-- First run tour (Privacy): Title -->
     <string name="firstrun_privacy_title">Učini privatnost navikom</string>
+
+    <!-- First run tour (Privacy): Text. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+    <string name="firstrun_privacy_text">Postavi %1$s kao zadani preglednik i iskoristi prednosti privatnog pretraživanja kada otvaraš web-stranice iz drugih aplikacija.</string>
 
     <string name="firstrun_close_button">U redu, razumijem!</string>
     <string name="firstrun_skip_button">Preskoči</string>
@@ -511,6 +523,10 @@
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_no">NE</string>
 
+    <!-- When tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+         let the user know that the shortcut will always be opened with tracking protection disabled. -->
+    <string name="dialog_addtohomescreen_tracking_protection">Prečac će se otvoriti uz onemogućenu zaštitu od praćenja</string>
+
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
 
@@ -519,12 +535,20 @@
     -->
     <string name="notification_browsing_session_channel_name">Sesija privatnog pretraživanja</string>
 
+    <!-- The user visible description of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
+    The recommended maximum length is 300 characters; the value may be truncated if it is too long. %1$s will be replaced with the name of the app (e.g. Firefox Focus).
+
+    * To understand what notification channels are, see: https://www.androidcentral.com/notification-channels
+    * To see how this string will look like in Android's UI, see: https://github.com/mozilla-mobile/focus-android/issues/863#issuecomment-324105723
+    -->
+    <string name="notification_browsing_session_channel_description">Obavijesti ti omogućuju brisanje sesije u %1$su jednim dodirom. Ne moraš otvoriti aplikaciju ili vidjeti što je otvoreno u tvom pregledniku.</string>
+
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Obriši povijest pretraživanja</string>
 
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Preuzmite Firefox</string>
+    <string name="download_firefox">Preuzmi Firefox</string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Korisničko ime</string>
