@@ -557,7 +557,28 @@
 
 
 
-  <!-- Text shown in prompts for GeckoView -->
+  <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
+    <string name="your_rights_content2"><![CDATA[%1$s आपल्याला <a href="%2$s">Mozilla Public License</a> आणि इतर खुल्या स्त्रोत परवान्यांच्या नियमांतर्गत उपलब्ध करून दिले गेले आहे.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
+    <string name="your_rights_content3"><![CDATA[Mozilla, Firefox किंवा %1$s यांचे नाव किंवा चिन्हांसह Mozilla Foundation किंवा कोणत्याही पक्षाच्या व्यापारचिन्हाचे अधिकार किंवा परवाने आपल्याला दिले गेले नाहीत. अधिक माहिती <a href="%2$s">इथे</a> मिळू शकते.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[%1$s साठी अधिक स्रोत कोड इतर अनेक मुक्त आणि खुल्या स्त्रोताच्या <a href="%2$s">परवान्यांतर्गत</a> उपलब्ध आहे.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the GPL
+    %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
+    <string name="your_rights_content5"><![CDATA[Disconnect, inc. यांनी पुरवलेल्या अडवणूक याद्या सुद्धा <a href="%2$s">GNU General Public License v3</a> अंतर्गत एक विभक्त आणि स्वतंत्र संसाधन म्हणून %1$s वापरते, ज्या <a href="%3$s">इथे</a> उपलब्ध आहेत.]]></string>
+
+    <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">वापरकर्त्याचे नाव</string>
     <string name="gv_prompt_password_hint">पासवर्ड</string>
     <string name="gv_prompt_clear">पुसा</string>
@@ -598,6 +619,9 @@
   <!-- Checkbox menu item text to request desktop site -->
     <string name="preference_performance_request_desktop_site">डेस्कटॉप साइटची विनंती करा</string>
 
+    <!-- Checkbox menu item text to request desktop site -->
+    <string name="preference_performance_request_desktop_site2">डेस्कटॉप साइट</string>
+
     <!-- Displayed after a user long presses on the URL in a custom tab to copy the URL -->
     <string name="custom_tab_copy_url_action">URL ची प्रत बनवली</string>
 
@@ -621,6 +645,10 @@
      When pressed, the user's previous session is cleared, and authentication is not required. -->
     <string name="biometric_auth_new_session">नवीन सत्र</string>
 
+    <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
+    while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
+    <string name="biometric_auth_open_link_new_session">नवीन सत्रात दुवा उघडा</string>
+
     <!-- Description for the fingerprint authentication image. Used for accessibility purposes. -->
     <string name="biometric_auth_image_description">बोटाच्या ठश्याचे चिन्ह</string>
 
@@ -631,6 +659,13 @@
     <!-- Error text displayed when the user's fingerprint moved too quickly upon re-entering the app
     This is displayed during the authentication flow as the app launches.-->
     <string name="biometric_auth_moved_too_quickly">बोट पटकन हलवले. पुन्हा प्रयत्न करा.</string>
+
+    <!-- Title for the prompt to enable search suggestions -->
+    <string name="enable_search_suggestion_title2">शोध सूचना दाखवायच्या?</string>
+
+    <!-- Description for the prompt to enable search suggestions
+        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="enable_search_suggestion_description">सूचना मिळवण्यासाठी, %1$s ला आपण निवडलेल्या शोध इंजिनला आपण पत्ता पट्टीमध्ये काय टाईप करता ते पाठवावे लागेल.</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">नाही</string>
@@ -650,6 +685,11 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_disable_tracking_protection">साइट अनपेक्षितरित्या वागत आहे?\n ट्रॅकिंग संरक्षण बंद करण्याचा प्रयत्न करा</string>
 
+    <!-- Tip displayed on home view explaining how to disable tracking protection
+The new line here must be kept as the second half of the string is clickable for the user. -->
+    <string name="tip_disable_tracking_protection2">साइट अनपेक्षितरित्या वागत आहे?\n
+ ट्रॅकिंग संरक्षण बंद करण्याचा प्रयत्न करा</string>
+
     <!-- Tip displayed on home view explaining how to add sites to homescreen
     Argument 1 will be replaced with a line break in the application.-->
     <string name="tip_add_to_homescreen"><![CDATA[आपण सर्वात जास्त वापरता त्या साईट एका टॅप मध्ये मिळवा%1$sमेनू > मुख्य पृष्ठावर जोडा]]></string>
@@ -666,6 +706,11 @@
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_open_in_new_tab">एका नवीन टॅबमध्ये एक दुवा उघडा\n एका पृष्ठावर कोणताही दुवा दीर्घ-दाबून ठेवा</string>
+
+    <!-- Tip displayed on home view explaining how to request the desktop version of a website.
+      %1$s is a placeholder for the app name. -->
+    <string name="tip_request_desktop2">साइटची पूर्ण आवृत्ती पाहू इच्छिता?\n
+ %1$s मेनूमधून डेस्कटॉप साइट चालू करा</string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">आरंभ पटलावर सूचना बंद करा</string>
