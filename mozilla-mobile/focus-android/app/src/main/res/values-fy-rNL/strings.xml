@@ -122,6 +122,19 @@
          Clicking this action will launch Focus and perform a search in the default search engine. -->
     <string name="text_selection_search_action">Privee sykje</string>
 
+    <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
+         Argument 2 is the url for the learn-more link. -->
+    <string name="about_content"><![CDATA[<p>%1$s jout jo de kontrôle.</p>
+<p>Gebrûk as in priveebrowser:
+  <ul>
+     <li>Streekrjocht fan de app út sykje en navigearje</li>
+    <li>Trackers blokkearje (of ynstellingen bywurkje om se ta te stean)</li>
+    <li>Wiskjen smyt sawol cookies as syk- en navigaasjeskiednis fuort</li>
+  </ul>
+</p>
+<p>%1$s wurdt makke troch Mozilla. Us missy is it fersoargjen fan in sûn en iepen ynternet.<br/>
+<a href="%2$s">Mear ynfo</a></p>]]></string>
+
     <!-- Header for the Privacy and Security settings menu -->
     <string name="preference_privacy_and_security_header">Privacy en befeiliging</string>
 
@@ -136,6 +149,9 @@
     <!-- About the app and help are links that are inside this menu -->
     <!-- %1$s will be replaced by the app name (e.g. Firefox Focus) -->
     <string name="preference_mozilla_summary">Oer %1$s, help</string>
+
+    <!-- Preference category for ad blocking and enhanced tracking protection settings -->
+    <string name="preference_category_tracking_protection3">Ferbettere beskerming tsjin folgjen</string>
 
     <!-- Preference category for settings related to controlling web content -->
     <string name="preference_category_web_content">Webynhâld</string>
@@ -195,6 +211,12 @@
 
     <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
     <string name="preference_autocomplete_action_add">+ Oanpaste URL tafoegje</string>
+
+    <!-- Explanation text above the list of custom autocomplete URLs. -->
+    <string name="preference_autocomplete_explanation_text">Jo list foar automatysk oanfoljen:</string>
+
+    <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
+    <string name="preference_autocomplete_action_add2">URL tafoegje</string>
 
     <!-- Title of the screen for adding custom autocomplete URLs. -->
     <string name="preference_autocomplete_title_add">Oanpaste URL tafoegje</string>
@@ -260,8 +282,13 @@
     <string name="preference_privacy_block_content_summary2">Ynskeakeljen kin feroarsaakje dat guon siden ûnferwachts wurkje</string>
     <string name="preference_privacy_category_cookies">Cookies blokkearje</string>
 
+    <!-- Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
+    only (Only 3rd-party Cookies Blocked), No (No cookies blocked) -->
+    <string name="preference_privacy_should_block_cookies_no_option2">Nee, tankewol</string>
     <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Allinnich tracker-cookies fan tredden blokkearje</string>
     <string name="preference_privacy_should_block_cookies_third_party_only_option">Allinnich cookies fan tredden</string>
+
+    <string name="preference_privacy_should_block_cookies_yes_option2">Ja, graach</string>
 
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Fingerôfdruk foar ûntskoatteljen fan app brûke</string>
@@ -314,6 +341,9 @@
     <!-- Header for the list of installed search engines -->
     <string name="preference_search_installed_search_engines">Ynstallearre sykmasinen</string>
 
+    <!-- Header for the list of installed search engines -->
+    <string name="preference_choose_search_engine">Sykmasine kieze</string>
+
     <!-- Action for restoring the default list of search engines -->
     <string name="preference_search_restore">Standert-sykmasinen opnij ynstelle</string>
 
@@ -322,6 +352,11 @@
     <string name="preference_search_add2">+ In oare sykmasine tafoegje</string>
     <string name="preference_search_remove_title">Sykmasinen fuortsmite</string>
     <string name="preference_search_remove">Fuortsmite</string>
+
+    <!-- Action for dding an additional search engine to the list -->
+    <string name="preference_search_add3">Noch in sykmasine tafoegje</string>
+    <!-- Explanation text above the list of search engines-->
+    <string name="preference_select_preferred_engine">Selektearje jo winske sykmasine:</string>
 
     <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
      a user first launches the app. -->
@@ -483,8 +518,18 @@
     <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_add">Tafoegje</string>
 
+    <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_yes">JA</string>
+
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_cancel">Annulearje</string>
+
+    <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_no">NEE</string>
+
+    <!-- When enhanced tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+         let the user know that the shortcut will always be opened with enhanced tracking protection disabled. -->
+    <string name="dialog_addtohomescreen_tracking_protection2">Fluchkeppeling iepenet mei Ferbettere beskerming tsjin folgjen útskeakele</string>
 
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
@@ -516,7 +561,22 @@
 
 
 
-  <!-- Text shown in prompts for GeckoView -->
+  <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
+    <string name="your_rights_content2"><![CDATA[%1$s wurdt beskikber steld ûnder de betingsten fan de <a href="%2$s">Mozilla Public License</a> en oare opensourcelisinsjes.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
+    <string name="your_rights_content3"><![CDATA[Der wurde jo gjin rjochten of lisinsjes ferliend op de hannelsmerken fan de Mozilla Foundation of iennige oare partij, mei ynbegryp fan de nammen of logo’s fan Mozilla, Firefox of %1$s. Oanfoljende ynformaasje is <a href="%2$s">hjir</a> te finen.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[Oanfoljende boarnekoade foar %1$s is beskikber ûnder ferskate oare frije en opensource-<a href="%2$s">lisinsjes</a>.]]></string>
+
+    <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Brûkersnamme</string>
     <string name="gv_prompt_password_hint">Wachtwurd</string>
     <string name="gv_prompt_clear">Wiskje</string>
