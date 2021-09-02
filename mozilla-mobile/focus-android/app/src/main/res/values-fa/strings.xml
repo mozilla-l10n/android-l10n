@@ -122,6 +122,19 @@
          Clicking this action will launch Focus and perform a search in the default search engine. -->
     <string name="text_selection_search_action">جست‌وجو ناشناس</string>
 
+    <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
+         Argument 2 is the url for the learn-more link. -->
+    <string name="about_content"><![CDATA[<p>%1$s شما را تحت کنترل قرار می‌دهد.</p>
+<p>از این به عنوان یک مرورگر خصوصی استفاده کنید:
+  <ul>
+    <li>مستقیما در برنامه جست‌وجو و مرور کنید</li>
+    <li>ردیاب‌ها را مسدود کنید (یا تنظیمات را برای اجازه دادن به ردیاب‌ها تغییر دهید)</li>
+    <li>کوکی‌ها را مانند جست‌وجو و تاریخچه مرور پاک یا حذف کنید</li>
+  </ul>
+</p>
+<p>%1$s توسط موزیلا ساخته شده است. ماموریت ما تا رواج یک اینترنت سالم و باز است.<br/>
+<a href="%2$s">بیشتر بدانید</a></p>]]></string>
+
     <!-- Header for the Privacy and Security settings menu -->
     <string name="preference_privacy_and_security_header">حریم خصوصی و امنیت</string>
 
@@ -341,6 +354,9 @@
     <!-- Action for dding an additional search engine to the list -->
     <string name="preference_search_add3">افزودن موتور جست‌وجوی دیگر</string>
 
+    <!-- Explanation text above the list of search engines-->
+    <string name="preference_select_preferred_engine">گزینش موتور مورد نظر شما:</string>
+
     <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
      a user first launches the app. -->
     <string name="preference_homescreen_tips">نمایش نکات صفحه اصلی</string>
@@ -508,6 +524,10 @@
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_no">خیر</string>
 
+    <!-- When enhanced tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+         let the user know that the shortcut will always be opened with enhanced tracking protection disabled. -->
+    <string name="dialog_addtohomescreen_tracking_protection2">میان‌بر بدون محافظت پیشرفته در برابر ردیابی گشوده خواهد شد</string>
+
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
 
@@ -538,7 +558,28 @@
 
 
 
-  <!-- Text shown in prompts for GeckoView -->
+  <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
+    <string name="your_rights_content2"><![CDATA[%1$s تحت شرایط <a href="%2$s">پروانه عمومی موزیلا</a> و سایر مجوزهای متن‌ باز در اختیار شما قرار می‌گیرد.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
+    <string name="your_rights_content3"><![CDATA[شما از حقی در خصوص علائم تجاری بنیاد موزیلا و یا هر شخص ثالثی، از جمله نام یا نشان موزیلا،  فایرفاکس یا %1$s برخوردار نیستید. اطلاعات بیشتر در <a href="%2$s"> اینجا</a> قابل دسترسی است.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[کد منبع بیشتری برای %1$sتحت تعداد دیگری از <a href="%2$s">پروانه‌های</a> آزاد و متن‌باز در دسترس است.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the GPL
+    %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
+    <string name="your_rights_content5"><![CDATA[%1$s همچنین از فهرست‌های مسدودی فراهم شده توسط Disconnect استفاده می‌کند. به عنوان کارهای جدا و مستقل تحت <a href="%2$s">نگارش 3 پروانه جامع همگانی گنو</a> و <a href="%3$s">اینجا</a> در دسترس است.]]></string>
+
+    <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">نام کاربری</string>
     <string name="gv_prompt_password_hint">کلمه عبور</string>
     <string name="gv_prompt_clear">پاک کردن</string>
@@ -579,6 +620,9 @@
   <!-- Checkbox menu item text to request desktop site -->
     <string name="preference_performance_request_desktop_site">درخواست نسخه رومیزی پایگاه</string>
 
+    <!-- Checkbox menu item text to request desktop site -->
+    <string name="preference_performance_request_desktop_site2">نسخه‌ی میزکار پایگاه اینترنتی</string>
+
     <!-- Displayed after a user long presses on the URL in a custom tab to copy the URL -->
     <string name="custom_tab_copy_url_action">برداشتURL</string>
 
@@ -602,6 +646,10 @@
      When pressed, the user's previous session is cleared, and authentication is not required. -->
     <string name="biometric_auth_new_session">جلسه جدید</string>
 
+    <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
+    while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
+    <string name="biometric_auth_open_link_new_session">باز کردن پیوند در یک نشست تازه</string>
+
     <!-- Description for the fingerprint authentication image. Used for accessibility purposes. -->
     <string name="biometric_auth_image_description">نشانه اثرانگشت</string>
 
@@ -612,6 +660,9 @@
     <!-- Error text displayed when the user's fingerprint moved too quickly upon re-entering the app
     This is displayed during the authentication flow as the app launches.-->
     <string name="biometric_auth_moved_too_quickly">انگشت خیلی سریع حرکت کرد. مجدد تلاش کنید.</string>
+
+    <!-- Title for the prompt to enable search suggestions -->
+    <string name="enable_search_suggestion_title2">پیشنهادهای جست‌وجو نمایش داده شوند؟</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">خیر</string>
