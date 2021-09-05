@@ -523,6 +523,10 @@
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_no">NO</string>
 
+    <!-- When enhanced tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+         let the user know that the shortcut will always be opened with enhanced tracking protection disabled. -->
+    <string name="dialog_addtohomescreen_tracking_protection2">El acceso directo se abrirá con la protección mejorada contra el rastreo deshabilitada</string>
+
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
 
@@ -553,7 +557,28 @@
 
 
 
-  <!-- Text shown in prompts for GeckoView -->
+  <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
+    <string name="your_rights_content2"><![CDATA[%1$s está disponible para ti bajo los términos de la <a href="%2$s">Licencia Pública de Mozilla</a> y otras licencias de código abierto.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
+    <string name="your_rights_content3"><![CDATA[No se te ha concedido ningún derecho de marca o licencia sobre las marcas comerciales de la fundación Mozilla o de cualquier parte, incluyendo los logos o nombres de Mozilla, Firefox o %1$s. Puedes encontrar información adicional <a href="%2$s">aquí</a>.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[El código fuente adicional para %1$s está disponible bajo otras <a href="%2$s">licencias</a> libres y de código abierto.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the GPL
+    %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
+    <string name="your_rights_content5"><![CDATA[%1$s también utiliza listas de bloqueo provistas por Disconnect, Inc. como trabajos separados e independientes bajo la<a href="%2$s">GNU General Public License v3</a>, y se encuentra disponible <a href="%3$s">aquí</a>.]]></string>
+
+    <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Nombre de usuario</string>
     <string name="gv_prompt_password_hint">Contraseña</string>
     <string name="gv_prompt_clear">Limpiar</string>
@@ -594,6 +619,9 @@
   <!-- Checkbox menu item text to request desktop site -->
     <string name="preference_performance_request_desktop_site">Pedir versión de escritorio</string>
 
+    <!-- Checkbox menu item text to request desktop site -->
+    <string name="preference_performance_request_desktop_site2">Sitio de escritorio</string>
+
     <!-- Displayed after a user long presses on the URL in a custom tab to copy the URL -->
     <string name="custom_tab_copy_url_action">URL copiada</string>
 
@@ -617,6 +645,10 @@
      When pressed, the user's previous session is cleared, and authentication is not required. -->
     <string name="biometric_auth_new_session">Nueva sesión</string>
 
+    <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
+    while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
+    <string name="biometric_auth_open_link_new_session">Abrir el enlace en una nueva sesión</string>
+
     <!-- Description for the fingerprint authentication image. Used for accessibility purposes. -->
     <string name="biometric_auth_image_description">Ícono de huella digital</string>
 
@@ -627,6 +659,13 @@
     <!-- Error text displayed when the user's fingerprint moved too quickly upon re-entering the app
     This is displayed during the authentication flow as the app launches.-->
     <string name="biometric_auth_moved_too_quickly">El dedo se movió muy rápido. Intenta de nuevo.</string>
+
+    <!-- Title for the prompt to enable search suggestions -->
+    <string name="enable_search_suggestion_title2">¿Mostrar sugerencias de búsqueda?</string>
+
+    <!-- Description for the prompt to enable search suggestions
+        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="enable_search_suggestion_description">Para recibir sugerencias, %1$s necesita enviar lo que escribas en la barra de direcciones al buscador.</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">No</string>
@@ -646,6 +685,11 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_disable_tracking_protection">¿El sitio se comporta de manera inesperada?\n Prueba desactivar la Protección de Rastreo</string>
 
+    <!-- Tip displayed on home view explaining how to disable enhanced tracking protection
+The new line here must be kept as the second half of the string is clickable for the user. -->
+    <string name="tip_disable_tracking_protection3">¿Al sitio le falta contenido o se comporta de forma extraña?\n
+    Intenta desactivar la protección mejorada contra el rastreo</string>
+
     <!-- Tip displayed on home view explaining how to add sites to homescreen
     Argument 1 will be replaced with a line break in the application.-->
     <string name="tip_add_to_homescreen"><![CDATA[Obtén acceso con un toque a los sitios que más usas%1$s Menú > Agregar a la pantalla de inicio]]></string>
@@ -663,8 +707,28 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_open_in_new_tab">Abrir enlace en una nueva pestaña\n Mantén presionado cualquier enlace en una página</string>
 
+    <!-- Tip displayed on home view explaining how to request the desktop version of a website.
+      %1$s is a placeholder for the app name. -->
+    <string name="tip_request_desktop2">¿Quieres ver la versión completa de un sitio?\n
+        Cambiar al sitio de escritorio desde el menú de %1$s</string>
+
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Desactivar los consejos en la pantalla de inicio</string>
+
+    <!-- Tip displayed on the home view explaining how to use the Allowlist feature.
+     "Allowlist" is a replacement for the word whitelist. -->
+    <string name="tip_explain_allowlist3">¿Quieres mantener desactivada la Protección mejorada contra el rastreo para un sitio en el que confía?\n
+        Agrégalo a la lista de permitidos en Configuración
+    </string>
+
+    <!-- Tip displayed on the home view about the changes in the new release.
+    %1$s is a placeholder for the app name -->
+    <string name="tip_fresh_look">¡Por qué sí, tenemos apariencia nueva!\n Leer más sobre esta y otras actualizaciones a %1$s.</string>
+
+    <!-- Tip displayed on the home view about shortcuts
+    %1$s is a placeholder for the app name -->
+    <string name="tip_about_shortcuts">Crea accesos directos a los sitios que más visitas:\n
+    Selecciona Añadir a accesos directos desde el menú %1$s</string>
 
     <!-- Label for the snackbar when a user opens a new tab -->
     <string name="new_tab_opened_snackbar">Nueva pestaña abierta</string>
@@ -691,6 +755,12 @@
     <!-- Button to remove all websites from the exception list -->
     <string name="preference_exceptions_remove_all_button_label">Eliminar todos los sitios</string>
 
+    <!-- Title for Preference screen for cookie blocking for exceptions tracking protection -->
+    <string name="preference_block_cookies_title">Bloquear cookies</string>
+
+    <!-- Message for Preference screen for cookie blocking for exceptions tracking protection -->
+    <string name="preference_category_block_cookies">¿Te gustaría bloquear las cookies?</string>
+
     <!-- Title for the tab crash report screen-->
     <string name="tab_crash_report_title">La pestaña ha fallado</string>
     <!-- Headline for the tab crash report screen -->
@@ -708,4 +778,37 @@
 
     <!-- Tracking protection bottom sheet -->
 
-    </resources>
+    <!-- Label for the total number of trackers blocked. %s represents the app install date -->
+    <string name="trackers_count_note">Rastreadores bloqueados desde %s</string>
+    <!-- Category of trackers (content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="content">Contenido</string>
+    <!-- Category of trackers (advertising) that can be blocked by Enhanced Tracking Protection -->
+    <string name="advertising">Publicidad</string>
+    <!-- Category of trackers (social media) that can be blocked by Enhanced Tracking Protection -->
+    <string name="social">Social</string>
+    <!-- Category of trackers (analytics) that can be blocked by Enhanced Tracking Protection -->
+    <string name="analytics">Analítica</string>
+    <!-- Preference title for enhanced tracking protection settings -->
+    <string name="enhanced_tracking_protection">Protección mejorada contra el rastreo</string>
+    <!-- Enhanced tracking protection preference description when the tracking protection is disabled for this site-->
+    <string name="enhanced_tracking_protection_state_off">Las protecciones están desactivadas para este sitio</string>
+    <!-- Enhanced tracking protection preference description when the tracking protection is enabled for this site-->
+    <string name="enhanced_tracking_protection_state_on">Las protecciones están activadas para este sitio</string>
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="secure_connection">La conexión es segura</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="insecure_connection">La conexión no es segura</string>
+    <!-- Title for the list of trackers enhanced tracking ptotection can block-->
+    <string name="trackers_and_scripts">Rastreadores y scripts a bloquear</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Navigate back button description -->
+    <string name="go_back">Retroceder</string>
+
+    <!-- Top Sites -->
+    <!-- Text for the menu button to remove a top site -->
+    <string name="remove_top_site">Eliminar</string>
+
+    <!-- Text for context menu additional note.
+    %1$s is a placeholder for the app name. -->
+    <string name="contextmenu_erased_images_note2">Las imágenes guardadas y compartidas &lt;b&gt;no serán&lt;/b&gt; eliminadas cuando borres el historial de %1$s</string>
+</resources>
