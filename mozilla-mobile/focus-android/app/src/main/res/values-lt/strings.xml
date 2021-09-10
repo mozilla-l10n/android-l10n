@@ -340,6 +340,9 @@
     <!-- Header for the list of installed search engines -->
     <string name="preference_search_installed_search_engines">Įdiegtos ieškyklės</string>
 
+    <!-- Header for the list of installed search engines -->
+    <string name="preference_choose_search_engine">Pasirinkite ieškyklę</string>
+
     <!-- Action for restoring the default list of search engines -->
     <string name="preference_search_restore">Atkurti numatytąsias ieškykles</string>
 
@@ -348,6 +351,11 @@
     <string name="preference_search_add2">+ Pridėti kitą ieškyklę</string>
     <string name="preference_search_remove_title">Pašalinti ieškykles</string>
     <string name="preference_search_remove">Pašalinti</string>
+
+    <!-- Action for dding an additional search engine to the list -->
+    <string name="preference_search_add3">Pridėti kitą ieškyklę</string>
+    <!-- Explanation text above the list of search engines-->
+    <string name="preference_select_preferred_engine">Pasirinkite norimą ieškyklę:</string>
 
     <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
      a user first launches the app. -->
@@ -509,8 +517,18 @@
     <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_add">Pridėti</string>
 
+    <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_yes">TAIP</string>
+
     <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
     <string name="dialog_addtohomescreen_action_cancel">Atsisakyti</string>
+
+    <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_no">NE</string>
+
+    <!-- When enhanced tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+         let the user know that the shortcut will always be opened with enhanced tracking protection disabled. -->
+    <string name="dialog_addtohomescreen_tracking_protection2">Leistukas bus atveriamas su išjungta išplėsta apsauga nuo stebėjimo</string>
 
     <!-- The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
@@ -542,7 +560,28 @@
 
 
 
-  <!-- Text shown in prompts for GeckoView -->
+  <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
+    <string name="your_rights_content2"><![CDATA[Jums leidžiama naudotis „%1$s“ programa, vadovaujantis <a href="%2$s">„Mozillos“ viešąja licencija</a> ir kitomis atviromis licencijomis.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
+    <string name="your_rights_content3"><![CDATA[Jums nesuteikiamos jokios prekės ženklo teisės ar licencijos į „Mozilla Foundation“ ar kitų šalių prekės ženklus, tame tarpe – į „Mozilla“, „Firefox“ ar „%1$s“ vardus ar logotipus. Papildomą informaciją apie prekės ženklus galite rasti <a href="%2$s">čia</a>.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[Papildoma „%1$s“ pirminis kodas yra pateikiamas su įvairiomis kitomis, laisvomis ir atviromis <a href="%2$s">licencijomis</a>.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the GPL
+    %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
+    <string name="your_rights_content5"><![CDATA[„%1$s“ naudoja blokavimo sąrašus, kuriuos teikia „Disconnect, Inc.“, kaip atskirus ir nepriklausomus darbus vadovaujantis <a href="%2$s">„GNU General Public License v3“</a> licencija, ir pasiekiamus <a href="%3$s">čia</a>.]]></string>
+
+    <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Naudotojo vardas</string>
     <string name="gv_prompt_password_hint">Slaptažodis</string>
     <string name="gv_prompt_clear">Išvalyti</string>
@@ -583,6 +622,9 @@
   <!-- Checkbox menu item text to request desktop site -->
     <string name="preference_performance_request_desktop_site">Prašyti ne mob. svetainės</string>
 
+    <!-- Checkbox menu item text to request desktop site -->
+    <string name="preference_performance_request_desktop_site2">Komp. svetainė</string>
+
     <!-- Displayed after a user long presses on the URL in a custom tab to copy the URL -->
     <string name="custom_tab_copy_url_action">Adresas nukopijuotas</string>
 
@@ -606,6 +648,10 @@
      When pressed, the user's previous session is cleared, and authentication is not required. -->
     <string name="biometric_auth_new_session">Naujas seansas</string>
 
+    <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
+    while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
+    <string name="biometric_auth_open_link_new_session">Atverti saitą naujame seanse</string>
+
     <!-- Description for the fingerprint authentication image. Used for accessibility purposes. -->
     <string name="biometric_auth_image_description">Piršto atspaudo piktograma</string>
 
@@ -616,6 +662,13 @@
     <!-- Error text displayed when the user's fingerprint moved too quickly upon re-entering the app
     This is displayed during the authentication flow as the app launches.-->
     <string name="biometric_auth_moved_too_quickly">Pirštas sujudėjo per greitai. Bandykite dar kartą.</string>
+
+    <!-- Title for the prompt to enable search suggestions -->
+    <string name="enable_search_suggestion_title2">Rodyti paieškos žodžių siūlymus?</string>
+
+    <!-- Description for the prompt to enable search suggestions
+        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="enable_search_suggestion_description">Kad gautų siūlymus, „%1$s“ turi persiųsti ieškyklei viską, ką rašote į adreso lauką.</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">Ne</string>
@@ -635,6 +688,11 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_disable_tracking_protection">Svetainė veikia netinkamai?\n Pabandykite išjungti apsaugą nuo stebėjimo</string>
 
+    <!-- Tip displayed on home view explaining how to disable enhanced tracking protection
+The new line here must be kept as the second half of the string is clickable for the user. -->
+    <string name="tip_disable_tracking_protection3">Svetainėje trūksta turinio, arba ji veikia netinkamai?\n
+    Pabandykite išjungti išplėstą apsaugą nuo stebėjimo</string>
+
     <!-- Tip displayed on home view explaining how to add sites to homescreen
     Argument 1 will be replaced with a line break in the application.-->
     <string name="tip_add_to_homescreen"><![CDATA[Pasiekite lankomiausias svetaines vienu spustelėjimu%1$s Meniu > Įtraukti į pradžios ekraną]]></string>
@@ -652,8 +710,19 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_open_in_new_tab">Atverkite saitą naujoje kortelėje\n Spustelėkite ir palaikykite bet kurį saitą tinklalapyje</string>
 
+    <!-- Tip displayed on home view explaining how to request the desktop version of a website.
+      %1$s is a placeholder for the app name. -->
+    <string name="tip_request_desktop2">Norite matysi pilną svetainė versiją?\n
+        Pasirinkite komp. svetainę iš %1$s meniu</string>
+
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Išjungti patarimus pradžios ekrane</string>
+
+    <!-- Tip displayed on the home view explaining how to use the Allowlist feature.
+     "Allowlist" is a replacement for the word whitelist. -->
+    <string name="tip_explain_allowlist3">Norite išjungti išplėstą apsaugą nuo stebėjimo patikimoje svetainėje?\n
+        Pridėkite ją į leidimų sąrašą nustatymuose.
+    </string>
 
     <!-- Label for the snackbar when a user opens a new tab -->
     <string name="new_tab_opened_snackbar">Atverta nauja kortelė</string>
