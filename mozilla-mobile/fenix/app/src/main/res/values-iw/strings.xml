@@ -390,6 +390,11 @@
     <!-- Title for the customize home screen section with recently saved bookmarks. -->
     <string name="customize_toggle_recently_saved_bookmarks">נשמרו לאחרונה</string>
 
+    <!-- Title for the customize home screen section with recently visited. Recently visited is a section where users see a list of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recently_visited">נצפו לאחרונה</string>
+    <!-- Title for the customize home screen section with Pocket. -->
+    <string name="customize_toggle_pocket">Pocket</string>
+
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
     <string name="addon_not_supported_error">התוספת אינה נתמכת</string>
@@ -1461,6 +1466,9 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">מנקה עוגיות המוגדרות על־ידי הפניות לאתרי מעקב ידועים.</string>
 
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">מידע נוסף</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">תמיכה</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1530,6 +1538,9 @@
     <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill_description">מילוי ושמירת שמות משתמשים וססמאות ביישומונים אחרים במכשיר שלך.</string>
 
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">הוספת כניסה</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">סנכרון כניסות</string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
@@ -1592,6 +1603,8 @@
     <string name="saved_login_copy_username">העתקת שם משתמש</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">ניקוי שם משתמש</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">ניקוי שם מארח</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">העתקת אתר</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1763,6 +1776,10 @@
     <string name="phone_feature_blocked_step_feature"><![CDATA[3. לשנות את המצב של <b>%1$s</b> לכדי פעיל]]></string>
 
     <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">החיבור מאובטח</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">החיבור אינו מאובטח</string>
+    <!-- Label that indicates a site is using a secure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_secure_connection" tools:ignore="UnusedResources">חיבור מאובטח</string>
     <!-- Label that indicates a site is using a insecure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_insecure_connection" tools:ignore="UnusedResources">חיבור לא מאובטח</string>
@@ -1805,8 +1822,14 @@
     <string name="discard_changes">ביטול שינויים</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">עריכה</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">הוספת כניסה חדשה</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">נדרשת ססמה</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">דרוש שם משתמש</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">דרוש שם מארח</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">חיפוש קולי</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1814,6 +1837,13 @@
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">כבר קיימת כניסה עם שם משתמש זה</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_1">כתובת האתר חייבת להכיל \“https://\“ או \“http://\“</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">דרוש שם מארח תקין</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -1839,6 +1869,8 @@
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">בסדר, הבנתי</string>
 
+    <!-- Label for the show most visited top sites preference -->
+    <string name="top_sites_toggle_top_frecent_sites_2">הצגת רוב האתרים הנצפים ביותר</string>
     <!-- Label for the show most visited sites preference -->
     <string moz:removedIn="93" name="top_sites_toggle_top_frecent_sites" tools:ignore="UnusedResources">הצגת האתרים הנצפים ביותר</string>
 
