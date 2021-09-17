@@ -1519,6 +1519,9 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">알려진 추적 웹 사이트로 리디렉션하여 설정된 쿠키를 지웁니다.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">아래에 표시된 일부 추적기는 사용자가 *과 상호 작용했기 때문에 이 페이지에서 부분적으로 차단 해제되었습니다.</string>
     <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
     <string name="preference_etp_smartblock_learn_more">더 알아보기</string>
 
@@ -1875,8 +1878,14 @@
     <string name="discard_changes">변경 내용 취소</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">편집</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">새 로그인 추가</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">비밀번호 필요</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">사용자 이름은 필수입니다</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">호스트 이름은 필수입니다</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">음성 검색</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1884,6 +1893,13 @@
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">해당 사용자 이름을 가진 로그인이 이미 존재합니다</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_1">웹 주소에는 \“https://\“ 또는 \“http://\“가 포함되어야 합니다.</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">유효한 호스트 이름은 필수입니다</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -1911,6 +1927,8 @@
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">확인</string>
 
+    <!-- Label for the show most visited top sites preference -->
+    <string name="top_sites_toggle_top_frecent_sites_2">자주 방문한 상위 사이트 표시</string>
     <!-- Label for the show most visited sites preference -->
     <string moz:removedIn="93" name="top_sites_toggle_top_frecent_sites" tools:ignore="UnusedResources">자주 방문한 사이트 표시</string>
 
