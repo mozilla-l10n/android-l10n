@@ -1468,6 +1468,12 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">ასუფთავებს გადამისამართებით მიღებულ ფუნთუშებს, ცნობილი მეთვალყურეებისგან.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">ქვემოთ მონიშნული ზოგი მეთვალყურე ნაწილობრივ დაშვებულია ამ გვერდზე, მათთან თქვენი ურთიერთქმედების გამო *.</string>
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">ვრცლად</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">მხარდაჭერა</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1534,6 +1540,9 @@
     <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill_description">შეავსეთ სახელები და პაროლები თქვენი მოწყობილობის სხვა პროგრამებში.</string>
 
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">ანგარიშის დამატება</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">ანგარიშების დასინქრონება</string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
@@ -1598,6 +1607,8 @@
     <string name="saved_login_copy_username">მომხმარებლის ასლი</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">სახელის გასუფთავება</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">მისამართის გასუფთავება</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">საიტის ასლი</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1767,6 +1778,10 @@
     <string name="phone_feature_blocked_step_feature"><![CDATA[3. გახადეთ <b>%1$s</b> დაშვებული]]></string>
 
     <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">კავშირი დაცულია</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">კავშირი დაუცველია</string>
+    <!-- Label that indicates a site is using a secure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_secure_connection" tools:ignore="UnusedResources">დაცული კავშირი</string>
     <!-- Label that indicates a site is using a insecure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_insecure_connection" tools:ignore="UnusedResources">დაუცველი კავშირი</string>
@@ -1809,8 +1824,14 @@
     <string name="discard_changes">ცვლილებების გაუქმება</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">ჩასწორება</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">ახალი ანგარიში</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">პაროლი აუცილებელია</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">სახელი აუცილებელია</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">მისამართი აუცილებელია</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">ხმოვანი ძიება</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1818,6 +1839,11 @@
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">ანგარიში ამ სახელით უკვე არსებობს</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_1">მისამართის დასაწყისია ხოლმე „https://“ ან „http://“</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
