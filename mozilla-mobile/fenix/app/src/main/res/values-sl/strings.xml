@@ -200,6 +200,8 @@
     <!-- Browser menu label for editing a bookmark -->
     <string name="browser_menu_edit">Uredi</string>
 
+    <!-- Browser menu button that opens the Customize menu -->
+    <string name="browser_menu_customize_home">Prilagodi začetno stran</string>
     <!-- Browser Toolbar -->
     <!-- Content description for the Home screen button on the browser toolbar -->
     <string name="browser_toolbar_home">Domači zaslon</string>
@@ -1624,6 +1626,8 @@
     <string name="saved_login_copy_username">Kopiraj uporabniško ime</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">Počisti uporabniško ime</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Počisti domeno</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">Kopiraj spletno mesto</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1798,6 +1802,10 @@
     <string name="phone_feature_blocked_step_feature"><![CDATA[3. Preklopite <b>%1$s</b> na VKLOPLJENO]]></string>
 
     <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">Povezava je varna</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">Povezava ni varna</string>
+    <!-- Label that indicates a site is using a secure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_secure_connection" tools:ignore="UnusedResources">Varna povezava</string>
     <!-- Label that indicates a site is using a insecure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_insecure_connection" tools:ignore="UnusedResources">Nevarna povezava</string>
@@ -1840,8 +1848,14 @@
     <string name="discard_changes">Zavrzi spremembe</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">Urejanje</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">Dodaj novo prijavo</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">Zahtevano je geslo</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">Zahtevano je uporabniško ime</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Zahtevano je ime domene</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Glasovno iskanje</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1849,6 +1863,13 @@
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">Prijava s tem uporabniškim imenom že obstaja</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_1">Spletni naslov mora vsebovati \“https://\“ ali \“http://\“</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">Zahtevano je veljavno ime domene</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -1876,6 +1897,8 @@
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">V redu, razumem</string>
 
+    <!-- Label for the show most visited top sites preference -->
+    <string name="top_sites_toggle_top_frecent_sites_2">Prikaži najbolj obiskana spletna mesta</string>
     <!-- Label for the show most visited sites preference -->
     <string moz:removedIn="93" name="top_sites_toggle_top_frecent_sites" tools:ignore="UnusedResources">Prikaži najbolj obiskana spletna mesta</string>
 
