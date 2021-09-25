@@ -406,6 +406,18 @@
     <!-- Toast shown after confirming the custom add-on collection configuration -->
     <string name="toast_customize_addon_collection_done">Collection de modules complémentaires modifiée. Fermeture de l’application pour appliquer les modifications…</string>
 
+    <!-- Customize Home -->
+    <!-- Header text for jumping back into the recent tab in customize the home screen -->
+    <string name="customize_toggle_jump_back_in">Revenir dans cet onglet</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string moz:removedIn="94" name="customize_toggle_recently_saved_bookmarks" tools:ignore="UnusedResources">Enregistrés récemment</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recently_bookmarked">Marqués récemment</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is a section where users see a list of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recently_visited">Visités récemment</string>
+    <!-- Title for the customize home screen section with Pocket. -->
+    <string name="customize_toggle_pocket">Pocket</string>
+
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
     <string name="addon_not_supported_error">Ce module complémentaire n’est pas pris en charge</string>
@@ -596,6 +608,13 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Fermer</string>
 
+    <!-- Text to show users they have one site in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_site">%d site</string>
+    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_sites">%d sites</string>
+
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">Onglets récemment fermés</string>
     <!-- Option in library to open Recently Closed Tabs page -->
@@ -768,6 +787,9 @@
 
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">Enregistrer</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title">Autres</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -1504,6 +1526,9 @@ Cependant, il peut être moins stable. Téléchargez la version bêta de notre n
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Efface les cookies définis par redirection vers des sites web connus pour le pistage.</string>
 
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">En savoir plus</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Assistance</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1572,6 +1597,9 @@ Cependant, il peut être moins stable. Téléchargez la version bêta de notre n
     <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill_description">Remplit les noms d’utilisateur et les mots de passe dans d’autres applications sur votre appareil.</string>
 
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">Ajouter un identifiant</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Synchroniser les identifiants</string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
@@ -1634,6 +1662,8 @@ Cependant, il peut être moins stable. Téléchargez la version bêta de notre n
     <string name="saved_login_copy_username">Copier le nom d’utilisateur</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">Effacer le nom d’utilisateur</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Effacer le nom d’hôte</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">Copier le site</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1801,6 +1831,10 @@ Cependant, il peut être moins stable. Téléchargez la version bêta de notre n
     <string name="phone_feature_blocked_step_feature"><![CDATA[3. Activez <b>%1$s</b>]]></string>
 
     <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">Connexion sécurisée</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">Connexion non sécurisée</string>
+    <!-- Label that indicates a site is using a secure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_secure_connection" tools:ignore="UnusedResources">Connexion sécurisée</string>
     <!-- Label that indicates a site is using a insecure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_insecure_connection" tools:ignore="UnusedResources">Connexion non sécurisée</string>
@@ -1843,8 +1877,14 @@ Cependant, il peut être moins stable. Téléchargez la version bêta de notre n
     <string name="discard_changes">Annuler les modifications</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">Modifier</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">Ajouter un nouvel identifiant</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">Mot de passe requis</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">Le nom d’utilisateur doit être renseigné.</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Le nom d’hôte est requis</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Recherche vocale</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1852,6 +1892,15 @@ Cependant, il peut être moins stable. Téléchargez la version bêta de notre n
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">Un identifiant avec ce nom d’utilisateur existe déjà</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string moz:removedIn="94" name="add_login_hostname_invalid_text_1" tools:ignore="UnusedResources">L’adresse web doit contenir « https:// » ou « http:// ».</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">L’adresse web doit contenir « https:// » ou « http:// ».</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">Un nom d’hôte valide est requis</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -1878,6 +1927,8 @@ Cependant, il peut être moins stable. Téléchargez la version bêta de notre n
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">J’ai compris</string>
 
+    <!-- Label for the show most visited top sites preference -->
+    <string name="top_sites_toggle_top_frecent_sites_2">Afficher les sites les plus visités</string>
     <!-- Label for the show most visited sites preference -->
     <string moz:removedIn="93" name="top_sites_toggle_top_frecent_sites" tools:ignore="UnusedResources">Afficher les sites les plus visités</string>
 
