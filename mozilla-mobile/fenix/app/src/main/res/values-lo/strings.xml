@@ -624,6 +624,8 @@
     <string name="preferences_tab_view">ເບິງແທັບ</string>
     <!-- Option for a list tab view -->
     <string name="tab_view_list">ລາຍການ</string>
+    <!-- Option for a grid tab view -->
+    <string name="tab_view_grid">ເສັ້ນຕາຕະລາງ</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">ປິດແທັບ</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -658,6 +660,8 @@
     <string name="studies_remove">ລຶບ</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">​ເປີດໃຊ້ງານ</string>
+    <!-- Description for studies, it indicates why Firefox use studies -->
+    <string name="studies_description">Firefox ອາດຈະຕິດຕັ້ງ ແລະ ເອີ້ນນຳໃຊ້ການສຶກສາເປັນບາງຄັ້ງ.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">ຮຽນຮູ້ເພີ່ມເຕີມ</string>
     <!-- Dialog message shown after removing a study -->
@@ -666,6 +670,9 @@
     <string name="studies_restart_dialog_ok">ໂອເຄ</string>
     <!-- Dialog button text for canceling removing a study. -->
     <string name="studies_restart_dialog_cancel">ຍົກເລີກ</string>
+
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">ກຳລັງອອກຈາກແອັບພລິເຄຊັນເພື່ອນຳໃຊ້ການປ່ຽນແປງ…</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
@@ -767,6 +774,9 @@
 
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">ບັນທຶກ</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title">ອື່ນໆ</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -1738,23 +1748,49 @@
     <string name="discard_changes">ຍົກເລີກການປ່ຽນແປງ</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">ແກ້ໄຂ</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">ເພີ່ມການລັອກອິນໃຫມ່</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">ຕ້ອງມີລະຫັດຜ່ານ</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">ຕ້ອງການຊື່ຜູ້ໃຊ້</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">ຕ້ອງການຊື່ໂຮສທ</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">ຄົ້ນຫາດ້ວຍສຽງ</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
     <string name="voice_search_explainer">ເວົ້າຕອນນີ້</string>
+
+    <!--  The error message in edit login view when a duplicate username exists. -->
+    <string name="saved_login_duplicate">ການລັອກອິນດ້ວຍຊື່ຜູ້ໃຊ້ນັ້ນມີຢູ່ແລ້ວ</string>
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string moz:removedIn="94" name="add_login_hostname_invalid_text_1" tools:ignore="UnusedResources">ທີ່ຢູ່ເວັບຈະຕ້ອງປະກອບມີ &quot;https://&quot; ຫລື &quot;http://&quot;</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">ທີ່ຢູ່ເວັບຈະຕ້ອງປະກອບມີ &quot;https://&quot; ຫລື &quot;http://&quot;</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">ຕ້ອງການຊື່ໂຮສທທີ່ຖືກຕ້ອງ</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
     <string name="synced_tabs_connect_another_device">ເຊື່ອມຕໍ່ອຸປະກອນອື່ນ.</string>
     <!-- Text displayed asking user to re-authenticate -->
     <string name="synced_tabs_reauth">ກະລຸນາຮັບຮອງຄວາມຖືກຕ້ອງອີກຄັ້ງຫນຶ່ງ.</string>
+    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <string name="synced_tabs_enable_tab_syncing">ກະລຸນາເປີດນຳໃຊ້ການ sync ແທັບ</string>
+    <!-- Text displayed when user has no tabs that have been synced -->
+    <string name="synced_tabs_no_tabs">ທ່ານບໍ່ໄດ້ເປີດຈັກແທັບຢູ່ Firefox ໃນອຸປະກອນອື່ນໆຂອງທ່ານ.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_sign_in_message">ເບິງລາຍຊື່ແທັບຈາກອຸປະກອນອື່ນໆຂອງທ່ານ</string>
     <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
     <string name="synced_tabs_sign_in_button">ເຂົ້າສູ່ລະບົບເພື່ອ Sync</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">ບໍ່ມີແທັບທີ່ເປີດຢູ່</string>
 
+    <!-- Top Sites -->
+    <!-- Title text displayed in the dialog when top sites limit is reached. -->
+    <string name="top_sites_max_limit_title">ຮອດຂີດຈຳກັດເວັບໄຊທຍອດນິຍົມແລ້ວ</string>
     <!-- Label for the show most visited sites preference -->
     <string moz:removedIn="93" name="top_sites_toggle_top_frecent_sites" tools:ignore="UnusedResources">ສະແດງເວັບໄຊທທີ່ໄດ້ເຂົ້າໄປຫຼາຍທີ່ສຸດ</string>
 	<!-- Title text displayed in the rename top site dialog. -->
