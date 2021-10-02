@@ -108,6 +108,11 @@
     <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
     <string name="tab_tray_close_tabs_banner_negative_button_text">סגירה</string>
 
+    <!-- Text for the banner message to tell users about our inactive tabs feature. -->
+    <string name="tab_tray_inactive_onboarding_message" tools:ignore="UnusedResources">לשוניות שלא צפית בהם במשך שבועיים עוברות לכאן.</string>
+    <!-- Text for the action link to go to Settings for inactive tabs. -->
+    <string name="tab_tray_inactive_onboarding_button_text" tools:ignore="UnusedResources">כיבוי בהגדרות</string>
+
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
     <string name="home_screen_shortcut_open_new_tab_2">לשונית חדשה</string>
@@ -119,6 +124,15 @@
 
     <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">הצגת הכול</string>
+
+    <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
+    <string name="recent_tabs_show_all_content_description">כפתור להצגת כל הלשוניות האחרונות</string>
+    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
+        The first parameter is the search term that the user used. (for example: your search for "cat")-->
+    <string name="recent_tabs_search_term">החיפוש שלך עבור ״%1$s״</string>
+    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
+        The first parameter is the count for number of sites in the group.  This number will always be more than one. -->
+    <string name="recent_tabs_search_term_count">אתרים: %1$s</string>
 
     <!-- Header text for a section on the home screen that displays grouped highlights from the
          user's browsing history, such as topics they have researched or explored on the web -->
@@ -247,6 +261,18 @@
     <string name="search_engine_suggestions_title">חיפוש ב־%s</string>
     <!-- Search engine suggestion description text -->
     <string name="search_engine_suggestions_description">חיפוש ישירות משורת הכתובת</string>
+
+    <!-- Home onboarding -->
+    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_title_2">מה חדש ב־Firefox</string>
+    <!-- Onboarding home screen dialog description text. -->
+    <string name="onboarding_home_screen_description_2">עכשיו קל יותר לחזור למקום שבו הפסקת.</string>
+    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">מסך בית מותאם אישית של Firefox</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">לשוניות נקיות ומאורגנות</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_title_2">חיפושים אחרונים</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
@@ -649,6 +675,9 @@
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">סגירה לאחר חודש אחד</string>
 
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">לשוניות שלא צפית בהם במשך שבועיים עוברות למקטע הלא פעיל.</string>
+
     <!-- Studies -->
     <!-- Title of the remove studies button -->
     <string name="studies_remove">הסרה</string>
@@ -772,7 +801,10 @@
     <string name="tab_tray_save_to_collection">שמירה</string>
 
     <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
-    <string name="tab_tray_header_title">אחר</string>
+    <string moz:removedIn="94" name="tab_tray_header_title" tools:ignore="UnusedResources">אחר</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">לשוניות אחרות</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -1906,15 +1938,21 @@
 	<!-- Dialog button text for canceling the rename top site prompt. -->
 	<string name="top_sites_rename_dialog_cancel">ביטול</string>
 
-    <!-- In-activate tabs in the tabs tray -->
-    <!-- Title text displayed in the tabs tray when a tab has been unused for 4 days. -->
+    <!-- Inactive tabs in the tabs tray -->
+    <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">לשוניות לא פעילות</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">סגירת כל הלשוניות שאינן פעילות</string>
     <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
     <string name="inactive_tabs_description">לשוניות זמינות כאן למשך %s. לאחר משך זמן זה, לשוניות ייסגרו באופן אוטומטי.</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_30_days">30 ימים</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_7_days">שבוע אחד</string>
+
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">לסגור באופן אוטומטי לאחר חודש אחד?</string>
 
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">הגדרת קישורים מאתרים, מהודעות דוא״ל ומהודעות לפתיחה אוטומטית ב־Firefox.</string>
@@ -1931,4 +1969,4 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">סגירה</string>
 
-</resources>
+    </resources>
