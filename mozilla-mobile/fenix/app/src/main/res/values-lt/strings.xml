@@ -1549,7 +1549,7 @@
          as we use it on the UI to indicate which trackers have been partially unblocked.  -->
     <string name="preference_etp_smartblock_description">Kai kurie žemiau pažymėti stebėjimo elementai yra dalinai neblokuojami šiame tinklalapyje, nes su jais atlikote veiksmų *.</string>
     <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
-    <string name="preference_etp_smartblock_learn_more">Sužinokite daugiau</string>
+    <string name="preference_etp_smartblock_learn_more">Sužinoti daugiau</string>
 
     <!-- About page link text to open support link -->
     <string name="about_support">Žinynas</string>
@@ -1909,6 +1909,10 @@
     <string name="add_login">Pridėti naują prisijungimą</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">Reikalingas slaptažodis</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">Naudotojo vardas privalomas</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Serverio vardas privalomas</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Paieška balsu</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1916,6 +1920,15 @@
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">Prisijungimas su tokiu naudotojo vardu jau yra</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string moz:removedIn="94" name="add_login_hostname_invalid_text_1" tools:ignore="UnusedResources">Svetainės adresas privalo turėti „https://“ arba „http://“</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">Svetainės adresas privalo turėti „https://“ arba „http://“</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">Privalomas tinkamas serverio vardas</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -1943,6 +1956,8 @@
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">Gerai, supratau</string>
 
+    <!-- Label for the show most visited top sites preference -->
+    <string name="top_sites_toggle_top_frecent_sites_2">Rodyti lankomiausias svetaines</string>
     <!-- Label for the show most visited sites preference -->
     <string moz:removedIn="93" name="top_sites_toggle_top_frecent_sites" tools:ignore="UnusedResources">Rodyti lankomiausias svetaines</string>
 
@@ -1958,12 +1973,38 @@
     <!-- Inactive tabs in the tabs tray -->
     <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">Neaktyvios kortelės</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">Užverti visas neaktyvias korteles</string>
     <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
     <string name="inactive_tabs_description">Kortelės čia bus laikomos %s. Po šio laiko jos bus automatiškai užvertos.</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_30_days">30 dienų</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_7_days">1 savaitę</string>
+
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Užverti automatiškai po mėnesio?</string>
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">„Firefox“ gali užverti korteles, kuriomis paskutinį mėnesį nesinaudojote.</string>
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ĮJUNGTI AUTOMATINĮ UŽVĖRIMĄ</string>
+
+    <!-- Inactive tabs survey -->
+    <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
+    <string name="inactive_tabs_survey_header" tools:ignore="UnusedResources">Padėkite mums tobulėti</string>
+    <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
+    <string name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Kodėl išjungėte neaktyvias korteles?</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_not_interested_option" tools:ignore="UnusedResources">Ši funkcija nereikalinga</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_long_option" tools:ignore="UnusedResources">Per ilgas laikas iki perkėlimo prie neaktyvių</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_short_option" tools:ignore="UnusedResources">Per trumpas laikas iki perkėlimo prie neaktyvių</string>
+    <!-- Confirmation button text to submit the feedback for the inactive tabs survey. -->
+    <string name="inactive_tabs_survey_send_button" tools:ignore="UnusedResources">Siųsti</string>
+    <!-- Content description for inactive tabs survey close button -->
+    <string name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Užverti</string>
 
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">Leiskite saitams iš svetainių, el. laiškų, ir žinučių būti automatiškai atvertiems per „Firefox“.</string>
@@ -1980,4 +2021,17 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Užverti</string>
 
-    </resources>
+    <!-- Pocket recommended stories -->
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_header">Susimąstyti verčiančios istorijos</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_categories_header">Straipsniai pagal temas</string>
+    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+    <string name="pocket_stories_placeholder_text">Atrasti daugiau</string>
+    <!-- Title of an app feature. Smaller than a heading.-->
+    <string name="pocket_stories_feature_title">Veikia su „Pocket“</string>
+    <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
+    <string name="pocket_stories_feature_caption">„Firefox“ šeimos dalis. %s</string>
+    <!-- Clickable text for opening an external link for more information about Pocket. -->
+    <string name="pocket_stories_feature_learn_more">Sužinoti daugiau</string>
+</resources>
