@@ -110,6 +110,11 @@
     <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
     <string name="tab_tray_close_tabs_banner_negative_button_text">i-Dismiss</string>
 
+    <!-- Text for the banner message to tell users about our inactive tabs feature. -->
+    <string name="tab_tray_inactive_onboarding_message" tools:ignore="UnusedResources">Ang mga tab nga wala nimo malantaw sulod sa duha ka-semana mabutang dinhi. </string>
+    <!-- Text for the action link to go to Settings for inactive tabs. -->
+    <string name="tab_tray_inactive_onboarding_button_text" tools:ignore="UnusedResources">i-Off sulod sa settings</string>
+
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
     <string name="home_screen_shortcut_open_new_tab_2">Bag-o nga tab</string>
@@ -124,6 +129,15 @@
     <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">Ipakita tanan</string>
 
+    <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
+    <string name="recent_tabs_show_all_content_description">Ipakita tanan bag-ong mga tab nga button</string>
+    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
+        The first parameter is the search term that the user used. (for example: your search for "cat")-->
+    <string name="recent_tabs_search_term">Imong gipangita alang sa \&quot;%1$s\&quot;</string>
+    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
+        The first parameter is the count for number of sites in the group.  This number will always be more than one. -->
+    <string name="recent_tabs_search_term_count">Mga Site: %1$s</string>
+
     <!-- History Metadata -->
     <!-- Header text for a section on the home screen that displays grouped highlights from the
          user's browsing history, such as topics they have researched or explored on the web -->
@@ -134,6 +148,9 @@
     <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
          in the Recently visited section -->
     <string name="recently_visited_menu_item_remove">i-Remove</string>
+
+    <!-- Content description for the button which navigates the user to show all of their history. -->
+    <string name="past_explorations_show_all_content_description">Ipakita tanan kanhi mga eksplorasyon nga button</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -255,6 +272,24 @@
     <!-- Search engine suggestion description text -->
     <string name="search_engine_suggestions_description">Pangitaa pinaagi sa address bar</string>
 
+    <!-- Home onboarding -->
+    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_title_2">Mga kabag-ohan sa Firefox</string>
+    <!-- Onboarding home screen dialog description text. -->
+    <string name="onboarding_home_screen_description_2">Gipasayon na karon ang pag-balik kung asa ka mibiya.</string>
+    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Personal nga Firefox homepage</string>
+    <!-- Onboarding home screen dialog description text for the home section. -->
+    <string name="onboarding_home_screen_section_home_description_2">Adto sa imong mga abri nga tab, mga bookmark, ug browsing history.</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Limpyo, han-ay nga mga tab</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">i-Plastar ang katag nga mga tab gamit ang mas maayong layout ug mga auto-closing tab.</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_title_2">Bag-ohay nga mga search</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_description_2">Bisitaha imong bag-ong mga search gikan sa imong homepage ug mga tab.</string>
+
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
     <string name="search_widget_content_description">Abri ug bag-ong Firefox tab</string>
@@ -317,6 +352,48 @@
     <string name="preferences_open_links_in_a_private_tab">i-Open ang mga link sa pribadong tab</string>
     <!-- Preference for allowing screenshots to be taken while in a private tab-->
     <string name="preferences_allow_screenshots_in_private_mode">Tugoti ang mga screenshot sa private browsing</string>
+
+
+    <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+    <string name="preferences_screenshots_in_private_mode_disclaimer">Kung naay pagtugot, makit-an ang mga private tab kung daghan apps ang giabrihan.</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Dugang ug shortcut sa private browsing</string>
+    <!-- Preference for accessibility -->
+    <string name="preferences_accessibility"></string>
+    <!-- Preference to override the Firefox Account server -->
+    <string name="preferences_override_fxa_server">Custom nga server sa Firefox Account</string>
+    <!-- Preference to override the Sync token server -->
+    <string name="preferences_override_sync_tokenserver">Custom nga Sync server</string>
+    <!-- Toast shown after updating the FxA/Sync server override preferences -->
+    <string name="toast_override_fxa_sync_server_done">Nausab ang Firefox Account/Sync server. Kamulong gina-quit ang application para maapply ang nausab …</string>
+    <!-- Preference category for account information -->
+    <string name="preferences_category_account"></string>
+    <!-- Preference shown on banner to sign into account -->
+    <string name="preferences_sign_in"></string>
+    <!-- Preference for changing where the toolbar is positioned -->
+    <string name="preferences_toolbar"></string>
+    <!-- Preference for changing default theme to dark or light mode -->
+    <string name="preferences_theme"></string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home"></string>
+    <!-- Preference for gestures based actions -->
+    <string name="preferences_gestures"></string>
+    <!-- Preference for settings related to visual options -->
+    <string name="preferences_customize"></string>
+    <!-- Preference description for banner about signing in -->
+    <string name="preferences_sign_in_description">i-Sync ang mga bookmark, history, ug uban pa sa imong Firefox Account</string>
+    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
+    <string name="preferences_account_default_name"></string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">i-Reconnect para mapadayon ang pag-sync</string>
+    <!-- Preference for language -->
+    <string name="preferences_language"></string>
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices"></string>
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection"></string>
+    <!-- Preference linking to the privacy notice -->
+    <string name="preferences_privacy_link"></string>
 
 
     </resources>
