@@ -128,10 +128,26 @@
     <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
     <string name="recent_tabs_show_all_content_description">Mygtukas visų paskiausių kortelių rodymui</string>
 
+    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
+        The first parameter is the search term that the user used. (for example: your search for "cat")-->
+    <string name="recent_tabs_search_term">Jūsų paieška „%1$s“</string>
+    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
+        The first parameter is the count for number of sites in the group.  This number will always be more than one. -->
+    <string name="recent_tabs_search_term_count">Svetainės: %1$s</string>
+
     <!-- History Metadata -->
     <!-- Header text for a section on the home screen that displays grouped highlights from the
          user's browsing history, such as topics they have researched or explored on the web -->
     <string moz:removedIn="94" name="history_metadata_header" tools:ignore="UnusedResources">Ankstesni tyrinėjimai</string>
+
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string name="history_metadata_header_2">Paskiausiai lankyta</string>
+    <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
+         in the Recently visited section -->
+    <string name="recently_visited_menu_item_remove">Pašalinti</string>
+    <!-- Content description for the button which navigates the user to show all of their history. -->
+    <string name="past_explorations_show_all_content_description">Rodyti visų ankstesnių tyrinėjimų mygtuką</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -208,6 +224,8 @@
     <!-- Browser menu label for editing a bookmark -->
     <string name="browser_menu_edit">Keisti</string>
 
+    <!-- Browser menu button that opens the Customize menu -->
+    <string name="browser_menu_customize_home">Tvarkyti pradžią</string>
     <!-- Browser Toolbar -->
     <!-- Content description for the Home screen button on the browser toolbar -->
     <string name="browser_toolbar_home">Pradžios ekranas</string>
@@ -252,6 +270,27 @@
     <string name="search_engine_suggestions_title">Ieškoti „%s“</string>
     <!-- Search engine suggestion description text -->
     <string name="search_engine_suggestions_description">Ieškokite tiesiai iš adreso lauko</string>
+
+    <!-- Home onboarding -->
+    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_title_2">Kas naujo „Firefox“</string>
+    <!-- Onboarding home screen dialog description text. -->
+    <string name="onboarding_home_screen_description_2">Dabar lengviau tęsti nuo ten, kur baigėte.</string>
+    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Suasmenintas „Firefox“ pradžios tinklalapis</string>
+    <!-- Onboarding home screen dialog description text for the home section. -->
+    <string name="onboarding_home_screen_section_home_description_2">Pereikite prie atvertų kortelių, adresyno, ir naršymo istorijos.</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Švarios, tvarkingos kortelės</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Išvalykite kortelių netvarką su pagerintu išdėstymu ir automatiniu kortelių užvėrimu.</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_title_2">Paskiausios paieškos</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_description_2">Peržiūrėkite savo paskiausias paieškas iš pradžios tinklalapio ir kortelių.</string>
+
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Suasmenintame „Firefox“ pradžios tinklalapyje dabar lengviau tęsti nuo ten, kur baigėte. Raskite paskiausias korteles, adresyno įrašus, ir paieškos rezultatus.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
@@ -398,6 +437,18 @@
     <string name="customize_addon_collection_user_hint">Rinkinio savininkas (naudotojo ID)</string>
     <!-- Toast shown after confirming the custom add-on collection configuration -->
     <string name="toast_customize_addon_collection_done">Pakeistas priedų rinkinys. Išeinama iš programos, kad būtų pritaikyti pakeitimai…</string>
+
+    <!-- Customize Home -->
+    <!-- Header text for jumping back into the recent tab in customize the home screen -->
+    <string name="customize_toggle_jump_back_in">Sugrįžkite</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string moz:removedIn="94" name="customize_toggle_recently_saved_bookmarks" tools:ignore="UnusedResources">Paskiausiai įtraukta</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recently_bookmarked">Paskiausi adresyno įrašai</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is a section where users see a list of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recently_visited">Paskiausiai lankyta</string>
+    <!-- Title for the customize home screen section with Pocket. -->
+    <string name="customize_toggle_pocket">Pocket</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -587,6 +638,13 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Užverti</string>
 
+    <!-- Text to show users they have one site in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_site">%d svetainė</string>
+    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_sites">%d svetainės</string>
+
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">Paskiausiai užvertos kortelės</string>
     <!-- Option in library to open Recently Closed Tabs page -->
@@ -637,6 +695,12 @@
     <string name="close_tabs_after_one_week_summary">Užverti po savaitės</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Užverti po mėnesio</string>
+
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Perkelti senas korteles prie neaktyvių</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">Kortelės, kurių paskutines dvi savaites nenaudojote, bus perkeltos į neaktyvių skiltį.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -756,6 +820,11 @@
 
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">Įrašyti</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string moz:removedIn="94" name="tab_tray_header_title" tools:ignore="UnusedResources">Kita</string>
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Kitos kortelės</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -1476,6 +1545,12 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Išvalo slapukus, įrašomus nukreipiant į žinomas stebėjimo svetaines.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">Kai kurie žemiau pažymėti stebėjimo elementai yra dalinai neblokuojami šiame tinklalapyje, nes su jais atlikote veiksmų *.</string>
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">Sužinokite daugiau</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Žinynas</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1543,6 +1618,9 @@
     <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill_description">Užpildyti prisijungimus kitose programose jūsų įrenginyje.</string>
 
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">Pridėti prisijungimą</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Sinchronizuoti prisijungimus</string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
@@ -1606,6 +1684,8 @@
     <string name="saved_login_copy_username">Kopijuoti naudotojo vardą</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">Išvalyti naudotojo vardą</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Išvalyti serverio vardą</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">Kopijuoti svetainę</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1779,6 +1859,10 @@
     <string name="phone_feature_blocked_step_feature"><![CDATA[3. Įjunkite <b>%1$s</b>]]></string>
 
     <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">Ryšys yra saugus</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">Ryšys nėra saugus</string>
+    <!-- Label that indicates a site is using a secure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_secure_connection" tools:ignore="UnusedResources">Saugus ryšys</string>
     <!-- Label that indicates a site is using a insecure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_insecure_connection" tools:ignore="UnusedResources">Nesaugus ryšys</string>
@@ -1821,6 +1905,8 @@
     <string name="discard_changes">Atsisakyti pakeitimų</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">Keisti</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">Pridėti naują prisijungimą</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">Reikalingas slaptažodis</string>
     <!-- Voice search button content description  -->
