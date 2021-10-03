@@ -110,6 +110,9 @@
     <!-- Text for the banner message to tell users about our inactive tabs feature. -->
     <string name="tab_tray_inactive_onboarding_message" tools:ignore="UnusedResources">Aquí s’hi mouen les pestanyes que no heu vist des de fa dues setmanes.</string>
 
+    <!-- Text for the action link to go to Settings for inactive tabs. -->
+    <string name="tab_tray_inactive_onboarding_button_text" tools:ignore="UnusedResources">Desactiva-ho als paràmetres</string>
+
     <!-- Home screen icons - Long press shortcuts -->
     <!-- Shortcut action to open new tab -->
     <string name="home_screen_shortcut_open_new_tab_2">Pestanya nova</string>
@@ -124,6 +127,28 @@
     <string name="recent_tabs_header">Torneu a la pestanya</string>
     <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">Mostra-ho tot</string>
+
+    <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
+    <string name="recent_tabs_show_all_content_description">Mostra el botó de totes les pestanyes recents</string>
+    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
+        The first parameter is the count for number of sites in the group.  This number will always be more than one. -->
+    <string name="recent_tabs_search_term_count">Llocs: %1$s</string>
+
+    <!-- History Metadata -->
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string moz:removedIn="94" name="history_metadata_header" tools:ignore="UnusedResources">Exploracions passades</string>
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string moz:removedIn="94" name="history_metadata_header_2" tools:ignore="UnusedResources">Visitat recentment</string>
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string name="history_metadata_header_3">Cerques recents</string>
+    <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
+         in the Recently visited section -->
+    <string name="recently_visited_menu_item_remove">Elimina</string>
+    <!-- Content description for the button which navigates the user to show all of their history. -->
+    <string name="past_explorations_show_all_content_description">Mostra el botó de totes les exploracions anteriors</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -200,6 +225,10 @@
     <!-- Browser menu label for editing a bookmark -->
     <string name="browser_menu_edit">Edita</string>
 
+    <!-- Browser menu button that opens the Customize menu -->
+    <string name="browser_menu_customize_home">Personalitza l’inici</string>
+    <!-- Button shown on the home page that opens the Customize home settings -->
+    <string name="browser_menu_customize_home_1">Personalitza la pàgina d’inici</string>
     <!-- Browser Toolbar -->
     <!-- Content description for the Home screen button on the browser toolbar -->
     <string name="browser_toolbar_home">Pantalla d’inici</string>
@@ -246,6 +275,12 @@
     <string name="search_engine_suggestions_title">Cerca amb %s</string>
     <!-- Search engine suggestion description text -->
     <string name="search_engine_suggestions_description">Cerca directament des de la barra d’adreces</string>
+
+    <!-- Home onboarding -->
+    <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_title_2">Novetats del Firefox</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_title_2">Cerques recents</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
@@ -394,6 +429,21 @@
     <string name="customize_addon_collection_user_hint">Propietari de la col·lecció (identificador d’usuari)</string>
     <!-- Toast shown after confirming the custom add-on collection configuration -->
     <string name="toast_customize_addon_collection_done">S’ha modificat la col·lecció de complements. L’aplicació es tancarà per aplicar els canvis…</string>
+
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string moz:removedIn="94" name="customize_toggle_recently_saved_bookmarks" tools:ignore="UnusedResources">Desades recentment</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string moz:removedIn="94" name="customize_toggle_recently_bookmarked" tools:ignore="UnusedResources">Afegides recentment</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">Adreces d’interès recents</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is
+    a section where users see a list of tabs that they have visited in the past few days -->
+    <string moz:removedIn="94" name="customize_toggle_recently_visited" tools:ignore="UnusedResources">Visitat recentment</string>
+    <!-- Title for the customize home screen settings section for recent searches. Recent searches
+     is a section where users see a list of groups of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recent_searches">Cerques recents</string>
+    <!-- Title for the customize home screen section with Pocket. -->
+    <string name="customize_toggle_pocket">Pocket</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -580,6 +630,13 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Tanca</string>
 
+    <!-- Text to show users they have one site in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_site">%d lloc</string>
+    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_sites">%d llocs</string>
+
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">Pestanyes tancades recentment</string>
     <!-- Option in library to open Recently Closed Tabs page -->
@@ -602,6 +659,10 @@
     <string name="tab_view_list">Llista</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Graella</string>
+    <!-- Option for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups">Cerca en grups</string>
+    <!-- Summary text for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups_summary">Agrupa els llocs relacionats</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Tanca les pestanyes</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -612,6 +673,9 @@
     <string name="close_tabs_after_one_week">Al cap d’una setmana</string>
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">Al cap d’un mes</string>
+
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Tanca automàticament les pestanyes obertes</string>
 
     <!-- Start on Home -->
     <!-- Title of a preference that allows a user to indicate after a specified amount of time when the app should start on the home screen -->
@@ -631,6 +695,12 @@
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Tanca-les al cap d’un mes</string>
 
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Mou les pestanyes antigues a inactives</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">Les pestanyes que no hàgiu vist des de fa dues setmanes es mouran a la secció d’inactives.</string>
+
     <!-- Studies -->
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Elimina</string>
@@ -640,6 +710,8 @@
     <string name="studies_description">El Firefox pot instal·lar i executar estudis de tant en tant.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Més informació</string>
+    <!-- Dialog message shown after removing a study -->
+    <string name="studies_restart_app">L’aplicació es tancarà per aplicar els canvis</string>
     <!-- Dialog button to confirm the removing a study. -->
     <string name="studies_restart_dialog_ok">D’acord</string>
     <!-- Dialog button text for canceling removing a study. -->
@@ -747,6 +819,11 @@
 
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">Desa</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string moz:removedIn="94" name="tab_tray_header_title" tools:ignore="UnusedResources">Altres</string>
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Altres pestanyes</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
