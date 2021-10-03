@@ -1539,6 +1539,12 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Esborra les galetes definides per redireccions a llocs web que se sap que fan seguiment.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">Alguns elements de seguiment marcats a continuació s’han desblocat parcialment en aquesta pàgina perquè hi heu interactuat.</string>
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">Més informació</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Assistència</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1605,6 +1611,9 @@
     <string name="preferences_android_autofill">Emplena automàticament en altres aplicacions</string>
     <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill_description">Emplena noms d’usuari i contrasenyes en altres aplicacions del vostre dispositiu.</string>
+
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">Afegeix un inici de sessió</string>
 
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Sincronitza els inicis de sessió</string>
@@ -1834,6 +1843,10 @@
     <string name="phone_feature_blocked_step_feature"><![CDATA[3. Activeu <b>%1$s</b>]]></string>
 
     <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">La connexió és segura</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">La connexió no és segura</string>
+    <!-- Label that indicates a site is using a secure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_secure_connection" tools:ignore="UnusedResources">Connexió segura</string>
     <!-- Label that indicates a site is using a insecure connection -->
     <string moz:removedIn="94" name="quick_settings_sheet_insecure_connection" tools:ignore="UnusedResources">Connexió insegura</string>
@@ -1876,8 +1889,12 @@
     <string name="discard_changes">Descarta els canvis</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">Edita</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">Afegeix un inici de sessió nou</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">Cal una contrasenya</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">Cal el nom d’usuari</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Cerca per veu</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1885,6 +1902,13 @@
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">Ja existeix un inici de sessió amb aquest nom d’usuari</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string moz:removedIn="94" name="add_login_hostname_invalid_text_1" tools:ignore="UnusedResources">L’adreça web ha de contenir «https://» o «http://»</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">L’adreça web ha de contenir «https://» o «http://»</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -1912,6 +1936,8 @@
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">Entesos</string>
 
+    <!-- Label for the show most visited top sites preference -->
+    <string name="top_sites_toggle_top_frecent_sites_2">Mostra els llocs principals més visitats</string>
     <!-- Label for the show most visited sites preference -->
     <string moz:removedIn="93" name="top_sites_toggle_top_frecent_sites" tools:ignore="UnusedResources">Mostra els llocs més visitats</string>
 
@@ -1927,12 +1953,38 @@
     <!-- Inactive tabs in the tabs tray -->
     <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">Pestanyes inactives</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">Tanca totes les pestanyes inactives</string>
     <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
     <string name="inactive_tabs_description">Les pestanyes estaran disponibles aquí durant %s. Passat aquest temps, es tancaran automàticament.</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_30_days">30 dies</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_7_days">1 setmana</string>
+
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Voleu tancar-les automàticament al cap d’un mes?</string>
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">El Firefox pot tancar les pestanyes que no hàgiu vist durant el darrer mes.</string>
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ACTIVA EL TANCAMENT AUTOMÀTIC</string>
+
+    <!-- Inactive tabs survey -->
+    <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
+    <string name="inactive_tabs_survey_header" tools:ignore="UnusedResources">Ajudeu-nos a millorar</string>
+    <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
+    <string name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Per què heu desactivat les pestanyes inactives?</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_not_interested_option" tools:ignore="UnusedResources">No m’interessa la funció</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_long_option" tools:ignore="UnusedResources">El temps que cal per passar-les a inactives és massa llarg</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_short_option" tools:ignore="UnusedResources">El temps que cal per passar-les a inactives és massa curt</string>
+    <!-- Confirmation button text to submit the feedback for the inactive tabs survey. -->
+    <string name="inactive_tabs_survey_send_button" tools:ignore="UnusedResources">Envia</string>
+    <!-- Content description for inactive tabs survey close button -->
+    <string name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Tanca</string>
 
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">Feu que els enllaços dels llocs web, del correu electrònic i dels missatges s’obrin automàticament en el Firefox.</string>
@@ -1949,4 +2001,8 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Tanca</string>
 
+    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+    <string name="pocket_stories_placeholder_text">Descobriu-ne més</string>
+    <!-- Title of an app feature. Smaller than a heading.-->
+    <string name="pocket_stories_feature_title">Amb tecnologia del Pocket.</string>
     </resources>
