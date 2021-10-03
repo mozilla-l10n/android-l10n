@@ -128,6 +128,11 @@
     <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">Visualizza tutte</string>
 
+    <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
+    <string name="recent_tabs_show_all_content_description">Pulsante per mostrare tutte le schede recenti</string>
+    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
+        The first parameter is the search term that the user used. (for example: your search for "cat")-->
+    <string name="recent_tabs_search_term">La tua ricerca per “%1$s”</string>
     <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
         The first parameter is the count for number of sites in the group.  This number will always be more than one. -->
     <string name="recent_tabs_search_term_count">Siti: %1$s</string>
@@ -146,6 +151,9 @@
     <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
          in the Recently visited section -->
     <string name="recently_visited_menu_item_remove">Rimuovi</string>
+
+    <!-- Content description for the button which navigates the user to show all of their history. -->
+    <string name="past_explorations_show_all_content_description">Pulsante per mostrare tutti gli argomenti già esplorati</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -279,11 +287,23 @@
     <string name="onboarding_home_screen_title_2">Novità di Firefox</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Ora è più facile riprendere da dove avevi interrotto.</string>
+    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Pagina iniziale di Firefox personalizzata</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
     <string name="onboarding_home_screen_section_home_description_2">Passa alle schede aperte, ai segnalibri e alla cronologia di navigazione.</string>
 
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Schede chiare e organizzate</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Riduci il caos generato da troppe schede aperte con un layout migliorato e chiusura automatica.</string>
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_title_2">Ricerche recenti</string>
+
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_description_2">Rivedi le tue ultime ricerche dalla pagina iniziale e dalle schede.</string>
+
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">La pagina iniziale personalizzata di Firefox rende più semplice riprendere da dove avevi interrotto. Puoi trovare le schede recenti, i segnalibri e i risultati delle ricerche.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
@@ -702,6 +722,12 @@
     <string name="close_tabs_after_one_week_summary">Chiudi dopo una settimana</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Chiudi dopo un mese</string>
+
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Sposta le vecchie schede nella sezione Inattive</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">La schede che non visualizzi da due settimane vengono spostate nella sezione Inattive.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -1992,6 +2018,8 @@
     <!-- Inactive tabs in the tabs tray -->
     <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">Schede inattive</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">Chiudi tutte le schede inattive</string>
     <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
     <string name="inactive_tabs_description">Le schede saranno disponibili qui per %s. Trascorso questo tempo, verranno chiuse automaticamente.</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
@@ -1999,12 +2027,20 @@
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_7_days">1 settimana</string>
 
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Chiudi automaticamente dopo un mese?</string>
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
     <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox può chiudere le schede che non hai visualizzato nell’ultimo mese.</string>
+
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">ATTIVA CHIUSURA AUTOMATICA</string>
 
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
     <string name="inactive_tabs_survey_header" tools:ignore="UnusedResources">Aiutaci a migliorare</string>
+    <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
+    <string name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Perché hai disattivato le schede inattive?</string>
     <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
     <string name="inactive_tabs_survey_not_interested_option" tools:ignore="UnusedResources">Non sono interessato alla funzione</string>
     <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
@@ -2036,6 +2072,8 @@
     <string moz:removedIn="94" name="pocket_stories_header" tools:ignore="UnusedResources">Storie che fanno riflettere</string>
     <!-- Header text for a section on the home screen. -->
     <string name="pocket_stories_categories_header">Storie per argomento</string>
+    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+    <string name="pocket_stories_placeholder_text">Scopri altre storie</string>
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Sviluppato con tecnologia Pocket</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
