@@ -130,6 +130,9 @@
 
     <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
     <string name="recent_tabs_show_all_content_description">Mostra el botó de totes les pestanyes recents</string>
+    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
+        The first parameter is the search term that the user used. (for example: your search for "cat")-->
+    <string name="recent_tabs_search_term">La vostra cerca de «%1$s»</string>
     <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
         The first parameter is the count for number of sites in the group.  This number will always be more than one. -->
     <string name="recent_tabs_search_term_count">Llocs: %1$s</string>
@@ -279,6 +282,14 @@
     <!-- Home onboarding -->
     <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
     <string name="onboarding_home_screen_title_2">Novetats del Firefox</string>
+    <!-- Onboarding home screen dialog description text. -->
+    <string name="onboarding_home_screen_description_2">Ara és més fàcil continuar des d’on ho havíeu deixat.</string>
+    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Pàgina d’inici personalitzada del Firefox</string>
+    <!-- Onboarding home screen dialog description text for the home section. -->
+    <string name="onboarding_home_screen_section_home_description_2">Aneu a les pestanyes obertes, a les adreces d’interès i a l’historial de navegació.</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Pestanyes clares i organitzades</string>
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_title_2">Cerques recents</string>
 
@@ -1677,6 +1688,8 @@
     <string name="saved_login_copy_username">Copia el nom d’usuari</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">Esborra el nom d’usuari</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Esborra el nom del servidor</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string name="saved_login_copy_site">Copia el lloc</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1895,6 +1908,8 @@
     <string name="saved_login_password_required">Cal una contrasenya</string>
     <!--  The error message in add login view when username field is blank. -->
     <string name="saved_login_username_required">Cal el nom d’usuari</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Cal el nom del servidor</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Cerca per veu</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1909,6 +1924,9 @@
     <string moz:removedIn="94" name="add_login_hostname_invalid_text_1" tools:ignore="UnusedResources">L’adreça web ha de contenir «https://» o «http://»</string>
     <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
     <string name="add_login_hostname_invalid_text_3">L’adreça web ha de contenir «https://» o «http://»</string>
+
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">Cal un nom de servidor vàlid</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -2001,8 +2019,19 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Tanca</string>
 
+    <!-- Pocket recommended stories -->
+    <!-- Header text for a section on the home screen. -->
+    <string moz:removedIn="94" name="pocket_stories_header" tools:ignore="UnusedResources">Articles suggerents</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_header_1">Articles suggerents</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_categories_header">Articles per tema</string>
     <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
     <string name="pocket_stories_placeholder_text">Descobriu-ne més</string>
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">Amb tecnologia del Pocket.</string>
-    </resources>
+    <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
+    <string name="pocket_stories_feature_caption">Part de la família Firefox. %s</string>
+    <!-- Clickable text for opening an external link for more information about Pocket. -->
+    <string name="pocket_stories_feature_learn_more">Més informació</string>
+</resources>
