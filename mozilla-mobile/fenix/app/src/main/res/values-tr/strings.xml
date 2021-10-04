@@ -152,6 +152,9 @@
          in the Recently visited section -->
     <string name="recently_visited_menu_item_remove">Kaldır</string>
 
+    <!-- Content description for the button which navigates the user to show all of their history. -->
+    <string name="past_explorations_show_all_content_description">Geçmiş keşifleri göster düğmesi</string>
+
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
     <string name="browser_tabs_button">Açık sekmeler</string>
@@ -282,8 +285,22 @@
     <string name="onboarding_home_screen_title_2">Firefox’taki yenilikler</string>
     <!-- Onboarding home screen dialog description text. -->
     <string name="onboarding_home_screen_description_2">Kaldığınız yerden devam etmek artık daha kolay.</string>
+    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Size özel Firefox giriş sayfası</string>
+    <!-- Onboarding home screen dialog description text for the home section. -->
+    <string name="onboarding_home_screen_section_home_description_2">Açık sekmelerinizi, yer imlerinizi ve gezinti geçmişinizi görün.</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Düzenli sekmeler</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Yeni sekme düzeni ve kendiliğinden kapanan sekmelerle karmaşayı ortadan kaldırın.</string>
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_title_2">Son aramalar</string>
+
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_description_2">Son aramalarınıza giriş sayfasından ve sekmelerden tekrar ulaşın.</string>
+
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Kişisel Firefox giriş sayfanız, kaldığınız yerden devam etmeyi kolaylaştırıyor. Son sekmeleriniz, yer imleriniz ve arama sonuçlarınız artık giriş sayfanızda.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
@@ -439,9 +456,14 @@
     <string moz:removedIn="94" name="customize_toggle_recently_saved_bookmarks" tools:ignore="UnusedResources">Son kaydedilenler</string>
     <!-- Title for the customize home screen section with recently saved bookmarks. -->
     <string moz:removedIn="94" name="customize_toggle_recently_bookmarked" tools:ignore="UnusedResources">Son yer imleri</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">Son yer imleri</string>
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string moz:removedIn="94" name="customize_toggle_recently_visited" tools:ignore="UnusedResources">Son bakılanlar</string>
+    <!-- Title for the customize home screen settings section for recent searches. Recent searches
+     is a section where users see a list of groups of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recent_searches">Son aramalar</string>
     <!-- Title for the customize home screen section with Pocket. -->
     <string name="customize_toggle_pocket">Pocket</string>
 
@@ -694,6 +716,12 @@
     <string name="close_tabs_after_one_week_summary">Bir hafta sonra kapat</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Bir ay sonra kapat</string>
+
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Eski sekmeleri pasife taşı</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">İki haftadır bakmadığınız sekmeler pasif bölümüne taşınır.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -1954,6 +1982,8 @@
     <!-- Inactive tabs in the tabs tray -->
     <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">Pasif sekmeler</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">Tüm pasif sekmeleri kapat</string>
     <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
     <string name="inactive_tabs_description">Sekmeler burada %s kalacaktır. Bu sürenin sonunda sekmeler otomatik olarak kapatılacaktır.</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
@@ -1961,9 +1991,25 @@
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_7_days">1 hafta</string>
 
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Bir ay sonra kendiliğinden kapatılsın mı?</string>
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox, bir aydır bakmadığınız sekmeleri kapatabilir.</string>
     <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">OTOMATİK KAPATMAYI AÇ</string>
 
+    <!-- Inactive tabs survey -->
+    <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
+    <string name="inactive_tabs_survey_header" tools:ignore="UnusedResources">Fikirlerinizi paylaşır mısınız?</string>
+    <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
+    <string name="inactive_tabs_survey_content" tools:ignore="UnusedResources">Pasif sekmeleri neden devre dışı bıraktınız?</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_not_interested_option" tools:ignore="UnusedResources">Bu özellik ilgimi çekmiyor</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_long_option" tools:ignore="UnusedResources">Pasife alma süresi çok uzun</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_short_option" tools:ignore="UnusedResources">Pasife alma süresi çok kısa</string>
     <!-- Confirmation button text to submit the feedback for the inactive tabs survey. -->
     <string name="inactive_tabs_survey_send_button" tools:ignore="UnusedResources">Gönder</string>
     <!-- Content description for inactive tabs survey close button -->
@@ -1984,6 +2030,19 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Kapat</string>
 
+    <!-- Pocket recommended stories -->
+    <!-- Header text for a section on the home screen. -->
+    <string moz:removedIn="94" name="pocket_stories_header" tools:ignore="UnusedResources">Merak uyandıran makaleler</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_header_1">Merak uyandıran makaleler</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_categories_header">Konuya göre makaleler</string>
+    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+    <string name="pocket_stories_placeholder_text">Daha fazlasını keşfedin</string>
+    <!-- Title of an app feature. Smaller than a heading.-->
+    <string name="pocket_stories_feature_title">Pocket desteğiyle.</string>
+    <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
+    <string name="pocket_stories_feature_caption">Firefox ailesinden. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Daha fazla bilgi al</string>
 </resources>
