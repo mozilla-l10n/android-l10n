@@ -453,9 +453,14 @@
     <string moz:removedIn="94" name="customize_toggle_recently_saved_bookmarks" tools:ignore="UnusedResources">Anyar diteundeun</string>
     <!-- Title for the customize home screen section with recently saved bookmarks. -->
     <string moz:removedIn="94" name="customize_toggle_recently_bookmarked" tools:ignore="UnusedResources">Anyar dimarkahan</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">Markah anyar</string>
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string moz:removedIn="94" name="customize_toggle_recently_visited" tools:ignore="UnusedResources">Anyar dianjangan</string>
+    <!-- Title for the customize home screen settings section for recent searches. Recent searches
+     is a section where users see a list of groups of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recent_searches">Anyar nyungsi</string>
     <!-- Title for the customize home screen section with Pocket. -->
     <string name="customize_toggle_pocket">Saku</string>
 
@@ -678,6 +683,10 @@
     <string name="tab_view_list">Béréndélan</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Grid</string>
+    <!-- Option for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups">Sungsi grup</string>
+    <!-- Summary text for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups_summary">Gorombolkeun loka anu patali</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Tutup tab</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -688,6 +697,9 @@
     <string name="close_tabs_after_one_week">Sanggeus saminggu</string>
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">Sanggeus sabulan</string>
+
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Oto-nutup tab anu muka</string>
 
     <!-- Start on Home -->
     <!-- Title of a preference that allows a user to indicate after a specified amount of time when the app should start on the home screen -->
@@ -706,6 +718,12 @@
     <string name="close_tabs_after_one_week_summary">Tutup sanggeus saminggu</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Tutup sanggeus sabulan</string>
+
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Pindahkeun tab heubeul ka nganggur</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">Tab anu teu dibuka salila dua minggu dipindahkeun ka bagian nganggur.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -826,6 +844,9 @@
 
     <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
     <string moz:removedIn="94" name="tab_tray_header_title" tools:ignore="UnusedResources">Lianna</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Tab lianna</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -1972,12 +1993,36 @@
     <!-- Inactive tabs in the tabs tray -->
     <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">Tab teu aktip</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">Tutup sakabéh tab nganggur</string>
     <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
     <string name="inactive_tabs_description">Tab sayaga di dieu salila %s. Sanggeusna, tab bakal otomatis ditutup.</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_30_days">30 poé</string>
     <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
     <string name="inactive_tabs_7_days">1 minggu</string>
+
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Oto-tutup sanggeus sabulan?</string>
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox bisa nutup tab anu ku anjeun teu dibuka leuwih ti sabulan.</string>
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">HURUNGKEUN OTO-TUTUP</string>
+
+    <!-- Inactive tabs survey -->
+    <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
+    <string name="inactive_tabs_survey_header" tools:ignore="UnusedResources">Bantuan ronjatkeun</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_not_interested_option" tools:ignore="UnusedResources">Henteu kabita ku piturna</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_long_option" tools:ignore="UnusedResources">Mangsa jadi nganggurna lila teuing</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_short_option" tools:ignore="UnusedResources">Mangsa jadi nganggurna téréh teuing</string>
+    <!-- Confirmation button text to submit the feedback for the inactive tabs survey. -->
+    <string name="inactive_tabs_survey_send_button" tools:ignore="UnusedResources">Kirim</string>
+    <!-- Content description for inactive tabs survey close button -->
+    <string name="inactive_tabs_survey_close_button_content_description" tools:ignore="UnusedResources">Tutup</string>
 
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">Setél tutumbu ti raramatloka, surélék, jeung surat pikeun muka otomatis dina Firefox.</string>
@@ -1994,4 +2039,6 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Tutup</string>
 
-    </resources>
+    <!-- Clickable text for opening an external link for more information about Pocket. -->
+    <string name="pocket_stories_feature_learn_more">Lenyepan</string>
+</resources>
