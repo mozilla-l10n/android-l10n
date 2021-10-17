@@ -310,6 +310,16 @@
     <!-- Onboarding home screen dialog description text for the tab tray section. -->
     <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Лучшая организация вкладок</string>
 
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Вкладки стали более организованы с использованием улучшенного размещения и автоматического закрытия.</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_title_2">Недавние поиски</string>
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_description_2">Вернитесь к последним поисковым запросам с домашней страницы и вкладок.</string>
+
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">На настроенной вами домашней странице Firefox теперь легче продолжить с того места, где вы остановились. Найдите свои недавние вкладки, закладки и результаты поиска.</string>
+
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
     <string name="search_widget_content_description">Открыть новую вкладку Firefox</string>
@@ -390,6 +400,8 @@
     <string name="preferences_theme">Тема</string>
     <!-- Preference for customizing the home screen -->
     <string moz:removedIn="94" name="preferences_home" tools:ignore="UnusedResources">Домой</string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home_2">Домашняя страница</string>
     <!-- Preference for gestures based actions -->
     <string name="preferences_gestures">Жесты</string>
     <!-- Preference for settings related to visual options -->
@@ -465,9 +477,14 @@
     <string moz:removedIn="94" name="customize_toggle_recently_saved_bookmarks" tools:ignore="UnusedResources">Недавно добавленные</string>
     <!-- Title for the customize home screen section with recently saved bookmarks. -->
     <string moz:removedIn="94" name="customize_toggle_recently_bookmarked" tools:ignore="UnusedResources">Недавно добавленные</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">Недавние закладки</string>
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string moz:removedIn="94" name="customize_toggle_recently_visited" tools:ignore="UnusedResources">Недавно посещённые</string>
+    <!-- Title for the customize home screen settings section for recent searches. Recent searches
+     is a section where users see a list of groups of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recent_searches">Недавние поиски</string>
     <!-- Title for the customize home screen section with Pocket. -->
     <string name="customize_toggle_pocket">Pocket</string>
 
@@ -687,6 +704,10 @@
     <string name="tab_view_list">Списком</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Сеткой</string>
+    <!-- Option for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups">Поисковые группы</string>
+    <!-- Summary text for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups_summary">Группируйте связанные сайты</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Закрывать вкладки</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -698,15 +719,26 @@
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">Через месяц</string>
 
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Автозакрывать открытые вкладки</string>
+
     <!-- Opening screen -->
     <!-- Title of a preference that allows a user to indicate after a specified amount of time when the app should start on the home screen -->
     <string moz:removedIn="94" name="preferences_start_on_home" tools:ignore="UnusedResources">Запускать на домашнем экране </string>
+    <!-- Title of a preference that allows a user to choose what screen to show after opening the app -->
+    <string name="preferences_opening_screen">Начальный экран</string>
     <!-- Option for starting on the home screen after after four hours or inactivity -->
     <string moz:removedIn="94" name="start_on_home_after_four_hours" tools:ignore="UnusedResources">Через четыре часа</string>
+    <!-- Option for always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage">Домашняя страница</string>
     <!-- Option for always starting on the home screen -->
     <string moz:removedIn="94" name="start_on_home_always" tools:ignore="UnusedResources">Всегда</string>
+    <!-- Option for always opening the user's last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab">Последняя вкладка</string>
     <!-- Option for never starting on the home screen -->
     <string moz:removedIn="94" name="start_on_home_never" tools:ignore="UnusedResources">Никогда</string>
+    <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity">Домашняя страница после четырех часов бездействия</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
     <string name="close_tabs_manually_summary">Закрывать вручную</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
@@ -715,6 +747,12 @@
     <string name="close_tabs_after_one_week_summary">Закрывать через неделю</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Закрывать через месяц</string>
+
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Перемещать старые вкладки в неактивные</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">Вкладки, к которым вы не обращались в течение двух недель, перемещаются в неактивные.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -838,6 +876,9 @@
 
     <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
     <string moz:removedIn="94" name="tab_tray_header_title" tools:ignore="UnusedResources">Другие</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Другие вкладки</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
