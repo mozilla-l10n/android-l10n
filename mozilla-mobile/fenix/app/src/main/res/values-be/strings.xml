@@ -306,6 +306,9 @@
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_description_2">Вяртайцеся да сваіх апошнія пошукавых запытаў з хатняй старонкі і картак.</string>
 
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Ваша персаналізаваная галоўная старонка Firefox цяпер палягчае працяг адтуль, дзе вы спыніліся. Знайдзіце свае апошнія карткі, закладкі і вынікі пошуку.</string>
+
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
     <string name="search_widget_content_description">Адкрыць новую картку Firefox</string>
@@ -384,6 +387,8 @@
     <string name="preferences_theme">Тэма</string>
     <!-- Preference for customizing the home screen -->
     <string moz:removedIn="94" name="preferences_home" tools:ignore="UnusedResources">Хатняя старонка</string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home_2">Хатняя старонка</string>
     <!-- Preference for gestures based actions -->
     <string name="preferences_gestures">Жэсты</string>
     <!-- Preference for settings related to visual options -->
@@ -452,6 +457,21 @@
     <!-- Toast shown after confirming the custom add-on collection configuration -->
     <string name="toast_customize_addon_collection_done">Калекцыя дадаткаў зменена. Выхад з праграмы, каб прымяніць змены…</string>
 
+    <!-- Customize Home -->
+    <!-- Header text for jumping back into the recent tab in customize the home screen -->
+    <string name="customize_toggle_jump_back_in">Перайсці назад да</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string moz:removedIn="94" name="customize_toggle_recently_saved_bookmarks" tools:ignore="UnusedResources">Нядаўна захаваныя</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string moz:removedIn="94" name="customize_toggle_recently_bookmarked" tools:ignore="UnusedResources">Нядаўна дададзеныя закладкі</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">Нядаўнія закладкі</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is
+    a section where users see a list of tabs that they have visited in the past few days -->
+    <string moz:removedIn="94" name="customize_toggle_recently_visited" tools:ignore="UnusedResources">Нядаўна наведаныя</string>
+    <!-- Title for the customize home screen settings section for recent searches. Recent searches
+     is a section where users see a list of groups of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recent_searches">Нядаўнія пошукі</string>
     <!-- Title for the customize home screen section with Pocket. -->
     <string name="customize_toggle_pocket">Pocket</string>
 
@@ -645,6 +665,13 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Закрыць</string>
 
+    <!-- Text to show users they have one site in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_site">%d сайт</string>
+    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_sites">Сайты: %d</string>
+
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">Нядаўна закрытыя карткі</string>
     <!-- Option in library to open Recently Closed Tabs page -->
@@ -667,6 +694,10 @@
     <string name="tab_view_list">Спіс</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Сетка</string>
+    <!-- Option for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups">Пошукавыя групы</string>
+    <!-- Summary text for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups_summary">Групуйце звязаныя сайты разам</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Закрываць карткі</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -678,15 +709,26 @@
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">Праз месяц</string>
 
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Аўтаматычна закрываць адкрытыя карткі</string>
+
     <!-- Opening screen -->
     <!-- Title of a preference that allows a user to indicate after a specified amount of time when the app should start on the home screen -->
     <string moz:removedIn="94" name="preferences_start_on_home" tools:ignore="UnusedResources">Запускаць на хатнім экране</string>
+    <!-- Title of a preference that allows a user to choose what screen to show after opening the app -->
+    <string name="preferences_opening_screen">Пачатковы экран</string>
     <!-- Option for starting on the home screen after after four hours or inactivity -->
     <string moz:removedIn="94" name="start_on_home_after_four_hours" tools:ignore="UnusedResources">Праз чатыры гадзіны</string>
+    <!-- Option for always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage">Хатняя старонка</string>
     <!-- Option for always starting on the home screen -->
     <string moz:removedIn="94" name="start_on_home_always" tools:ignore="UnusedResources">Заўжды</string>
+    <!-- Option for always opening the user's last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab">Апошняя картка</string>
     <!-- Option for never starting on the home screen -->
     <string moz:removedIn="94" name="start_on_home_never" tools:ignore="UnusedResources">Ніколі</string>
+    <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity">Хатняя старонка пасля чатырох гадзін бяздзейнасці</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
     <string name="close_tabs_manually_summary">Закрываць уручную</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
@@ -695,6 +737,12 @@
     <string name="close_tabs_after_one_week_summary">Закрываць праз тыдзень</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Закрываць праз месяц</string>
+
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Перамяшчаць старыя карткі ў неактыўныя</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">Карткі, якія вы не праглядалі на працягу двух тыдняў, будуць перанесеныя ў раздзел неактыўных.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -711,6 +759,9 @@
     <string name="studies_restart_dialog_ok">Добра</string>
     <!-- Dialog button text for canceling removing a study. -->
     <string name="studies_restart_dialog_cancel">Адмяніць</string>
+
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">Выхад з праграмы, каб прымяніць змены...</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
@@ -812,6 +863,11 @@
 
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string name="tab_tray_save_to_collection">Захаваць</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string moz:removedIn="94" name="tab_tray_header_title" tools:ignore="UnusedResources">Іншыя</string>
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Іншыя карткі</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -1533,6 +1589,12 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Ачышчае кукі, усталяваныя шляхам перанакіравання на вядомыя асочвальныя вэб-сайты.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">Некаторыя пазначаныя ніжэй трэкеры былі часткова разблакаваны на гэтай старонцы, таму што вы ўзаемадзейнічалі з імі *.</string>
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">Даведацца больш</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Падтрымка</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1595,6 +1657,12 @@
     <!-- Preference for autofilling saved logins in Fenix -->
     <string moz:removedIn="93" name="preferences_passwords_autofill" tools:ignore="UnusedResources">Аўтазапаўненне</string>
 
+    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill2">Аўтазапаўненне ў %1$s</string>
+    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">Аўтаматычна запаўняць і захоўваць імёны карыстальнікаў і паролі на сайтах падчас выкарыстання %1$s.</string>
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill">Аўтазапаўненне ў іншых праграмах</string>
     <!-- Preference option for adding a login -->
     <string name="preferences_logins_add_login">Дадаць лагін</string>
 
