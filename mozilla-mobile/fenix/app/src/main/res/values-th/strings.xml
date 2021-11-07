@@ -742,7 +742,10 @@
 
     <!-- Inactive tabs -->
     <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
-    <string name="preferences_inactive_tabs">ย้ายแท็บเก่าไปยังแท็บที่ไม่ได้ใช้งาน</string>
+    <string name="preferences_inactive_tabs">ย้ายแท็บเก่าไปยังส่วนที่ไม่ได้ใช้งาน</string>
+
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">แท็บที่คุณไม่ได้ดูเป็นเวลา 2 สัปดาห์จะถูกย้ายไปยังส่วนที่ไม่ได้ใช้งาน</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -1244,6 +1247,10 @@
     <string name="qr_scanner_dialog_positive">อนุญาต</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">ปฏิเสธ</string>
+    <!-- QR code scanner prompt dialog error message shown when a hostname does not contain http or https. -->
+    <string name="qr_scanner_dialog_invalid">ที่อยู่เว็บไม่ถูกต้อง</string>
+    <!-- QR code scanner prompt dialog positive option when there is an error -->
+    <string name="qr_scanner_dialog_invalid_ok">ตกลง</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">คุณแน่ใจหรือไม่ว่าต้องการลบ %1$s?</string>
     <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
@@ -2012,12 +2019,33 @@
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">ปิดอัตโนมัติหลังจากหนึ่งเดือน?</string>
 
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox สามารถปิดแท็บที่คุณไม่ได้ดูในช่วงเดือนที่ผ่านมาได้</string>
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">เปิดการปิดอัตโนมัติ</string>
+    <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
+    <string name="inactive_tabs_auto_close_message_snackbar">เปิดใช้งานการปิดอัตโนมัติแล้ว</string>
+
     <!-- Inactive tabs survey -->
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
     <string moz:removedIn="95" name="inactive_tabs_survey_header" tools:ignore="UnusedResources">ช่วยปรับปรุง Firefox</string>
     <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
     <string name="inactive_tabs_survey_header_1">ช่วยปรับปรุง Firefox</string>
 
+    <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
+    <string name="inactive_tabs_survey_content">เหตุใดคุณจึงปิดใช้งานแท็บที่ไม่ได้ใช้งาน</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_do_not_understand">ฉันไม่เข้าใจว่ามันทำงานอย่างไร</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_do_it_myself">ฉันชอบล้างแท็บเก่าด้วยตัวเอง</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string moz:removedIn="95" name="inactive_tabs_survey_time_too_long_option" tools:ignore="UnusedResources">ระยะเวลา 2 สัปดาห์ยาวเกินไป</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_long_option_1">ระยะเวลา 2 สัปดาห์ยาวเกินไป</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string moz:removedIn="95" name="inactive_tabs_survey_time_too_short_option" tools:ignore="UnusedResources">ระยะเวลา 2 สัปดาห์สั้นเกินไป</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_time_too_short_option_1">ระยะเวลา 2 สัปดาห์สั้นเกินไป</string>
     <!-- Confirmation button text to submit the feedback for the inactive tabs survey. -->
     <string name="inactive_tabs_survey_send_button">ส่ง</string>
     <!-- Content description for inactive tabs survey close button -->
@@ -2038,12 +2066,19 @@
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">ปิด</string>
 
+    <!-- Pocket recommended stories -->
+    <!-- Header text for a section on the home screen. -->
+    <string moz:removedIn="94" name="pocket_stories_header" tools:ignore="UnusedResources">เรื่องราวที่จุดประกายความคิด</string>
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_header_1">เรื่องราวที่จุดประกายความคิด</string>
     <!-- Header text for a section on the home screen. -->
     <string name="pocket_stories_categories_header">เรื่องตามหัวข้อ</string>
     <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
     <string name="pocket_stories_placeholder_text">ค้นพบสิ่งอื่น</string>
     <!-- Title of an app feature. Smaller than a heading.-->
     <string name="pocket_stories_feature_title">ขับเคลื่อนโดย Pocket</string>
+    <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
+    <string name="pocket_stories_feature_caption">ส่วนหนึ่งของตระกูล Firefox %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">เรียนรู้เพิ่มเติม</string>
 </resources>
