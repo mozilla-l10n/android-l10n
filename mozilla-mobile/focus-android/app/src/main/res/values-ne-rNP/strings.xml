@@ -296,6 +296,12 @@
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">एप अनलक गर्न फिङ्गरप्रिन्टको प्रयोग गर्नुहोस्</string>
 
+    <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
+        open when the app was last run to ensure that only the phone's owner can view a previous session.
+        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="preference_security_biometric_summary">यदि एपमा पहिला नै URL खोलिएको छ भने तपाईंको फिङ्गगरप्रिण्टले %1$s अनलक गर्न सक्छ।
+    स्टेल्थ सक्रिय हुनेछ।</string>
+
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
     <string name="preference_privacy_secure_mode">चुपचाप</string>
@@ -342,7 +348,7 @@
     <string name="preference_search_installed_search_engines">स्थापित खोज इन्जिनहरू</string>
 
     <!-- Header for the list of installed search engines -->
-    <string name="preference_choose_search_engine">खोज इन्जिन थप्नुहोस्</string>
+    <string name="preference_choose_search_engine">खोज इन्जिन छान्नुहोस्</string>
 
     <!-- Action for restoring the default list of search engines -->
     <string name="preference_search_restore">पूर्वानिर्धारीत खोज इन्जिन पुनर्स्थापना गर्नुहोस्</string>
@@ -352,6 +358,15 @@
     <string name="preference_search_add2">+ अ‌र्को खोजी इन्जिन थप्नुहोस्</string>
     <string name="preference_search_remove_title">खोजी इन्जिनहरू हटाउनुहोस्</string>
     <string name="preference_search_remove">हटाउनुहोस्</string>
+
+    <!-- Action for dding an additional search engine to the list -->
+    <string name="preference_search_add3">अर्को खोज इन्जिन थप्नुहोस्</string>
+    <!-- Explanation text above the list of search engines-->
+    <string name="preference_select_preferred_engine">आफ्नो मनपर्ने इन्जिन छनौट गर्नुहोस्:</string>
+
+    <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
+     a user first launches the app. -->
+    <string name="preference_homescreen_tips">गृह स्क्रिन सुझावहरु देखाउनुहोस्</string>
 
     <!-- Clickable action text that shows when user long-presses on a search engine search field (this is similar to paste or copy when long-pressing a text field) -->
     <string name="action_option_add_search_engine">खोज इन्जिन थप्नुहोस्</string>
@@ -369,6 +384,8 @@
     <string name="search_add_error_duplicate_name">एक स्थापित खोजि इन्जिनले पहिले नै त्यो नाम प्रयोग गरिरहेको छ ।</string>
 
     <string name="search_add_error_empty_search">खोजी स्ट्रिङ प्रविष्ट गर्नुहोस्</string>
+
+    <string name="search_add_error_format">जाँच गर्नुहोस् कि, खोज अक्षर उदाहरणको ढाँचा सङ्ग मेल खान्छ</string>
 
     <!-- Content description (not visible, for screen readers etc.): Clear text in URL bar -->
     <string name="content_description_clear_input">आगत खाली गर्नुहोस्</string>
@@ -402,6 +419,10 @@
     <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
     <string name="content_description_menu">थप विकल्पहरू</string>
 
+    <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button used
+    on home screen-->
+    <string name="indicator_content_description_menu">थप बिकल्पहरु बटन</string>
+
     <!-- Content description (not visible, for screen readers etc.): Navigate forward (browsing history) -->
     <string name="content_description_forward">अगाडि जानुहोस्</string>
 
@@ -417,6 +438,10 @@
     <!-- Content description (not visible, for screen readers etc.): Custom Tab exit button - closes the custom tab and returns to the previous app. -->
     <string name="content_description_customtab_exit">पहिलेको एपमा फर्कनुहोस्</string>
 
+    <!-- Content description (not visible, for screen readers etc.): This is the description for the ImageView in the menu that displays
+         the number of trackers blocked for the current session -->
+    <string name="content_description_trackers_blocked">अवरुद्ध गरिएका ट्रयाकरहरुको सङ्ख्या </string>
+
     <!-- Content description (not visible, for screen readers etc.): This is the description for the switch in the menu that temporarily disables/enables
          content blocking for the current session -->
     <string name="content_description_blocking_switch">ट्रयाकरहरू अवरुद्द गर्नुहोस्</string>
@@ -424,8 +449,14 @@
     <string name="your_rights">तपाईँका अधिकारहरु</string>
 
     <string name="external_app_prompt_title">लिङ्कलाई अर्को अनुप्रयोगमा खोल्नुहोस्</string>
+    <!-- This string is shown when the user has clicked a link that needs to be opened in a different app.
+         Argument 2 is the external app name, argument 1 is our name (i.e. Firefox Focus, or Firefox Klar). -->
+    <string name="external_app_prompt">तपाईं %2$s मा यो लिङ्क खोल्नका लागि %1$s छोड्न सक्नुहुन्छ।</string>
     <!-- This text is the title of a dialog shown if no app could be found for a custom link protocol. -->
     <string name="external_app_prompt_no_app_title">लिङ्क खोल्न सक्ने अनुप्रयोग खोज्नुहोस्</string>
+    <!-- This text is shown in a dialog if no app could be found for a custom link protocol. %1$s is the name of the app (i.e. Firefox Focus) and %2$s is the name of
+         the app store installed on the device (usually that's Google Play). -->
+    <string name="external_app_prompt_no_app">तपाईँको उपकरणमा कुनै पनि एपले यो लिङ्क खोल्न सक्षम छैन। %2$s खोल्न सक्ने एउटा एपको खोज्नका लागि, तपाईंले %1$s छोड्न सक्नुहुन्छ।</string>
     <!-- This label is shown above a list of apps that can be used to open a given link -->
     <string name="external_multiple_apps_matched_exit">निजी ब्राउजिङ्ग बन्द गर्न चाहनुहुन्छ ?</string>
 
