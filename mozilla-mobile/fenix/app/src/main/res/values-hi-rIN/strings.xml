@@ -654,6 +654,8 @@
     <string name="tab_view_search_term_tab_groups">खोज समूह</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">टैब बंद करें</string>
+    <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
+    <string name="close_tabs_manually">कभी नहीं</string>
     <!-- Option for auto closing tabs that will auto close tabs after one day -->
     <string name="close_tabs_after_one_day">एक दिन बाद</string>
     <!-- Option for auto closing tabs that will auto close tabs after one week -->
@@ -664,6 +666,17 @@
     <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
     <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">खुले टैब को स्वतः बंद करें</string>
 
+    <!-- Opening screen -->
+    <!-- Title of a preference that allows a user to choose what screen to show after opening the app -->
+    <string name="preferences_opening_screen">स्क्रीन खुलने पर</string>
+    <!-- Option for always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage">मुखपृष्ठ</string>
+    <!-- Option for always opening the user's last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab">अंतिम टैब</string>
+    <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity">चार घंटे की निष्क्रियता के बाद मुखपृष्ठ</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
+    <string name="close_tabs_manually_summary">मैन्युअल रूप से बंद करें</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
     <string name="close_tabs_after_one_day_summary">एक दिन के बाद बंद करें</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one week-->
@@ -671,6 +684,15 @@
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">एक महीने के बाद बंद करें</string>
 
+    <!-- Studies -->
+    <!-- Title of the remove studies button -->
+    <string name="studies_remove">हटाएँ</string>
+    <!-- Title of the active section on the studies list -->
+    <string name="studies_active">सक्रिय</string>
+    <!-- Learn more link for studies, links to an article for more information about studies. -->
+    <string name="studies_learn_more">अधिक जानें</string>
+    <!-- Dialog button to confirm the removing a study. -->
+    <string name="studies_restart_dialog_ok">ठीक</string>
     <!-- Dialog button text for canceling removing a study. -->
     <string name="studies_restart_dialog_cancel">रद्द करें</string>
 
@@ -681,6 +703,8 @@
     <string moz:removedIn="96" name="tabs_header_private_title" tools:ignore="UnusedResources">निजी सत्र</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">निजी टैब</string>
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">समकालीन टैब</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">टैब जोड़ें</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -691,10 +715,14 @@
     <string moz:removedIn="96" name="tab_tray_title" tools:ignore="UnusedResources">टैब खोलें</string>
     <!-- Text shown in the menu for saving tabs to a collection -->
     <string moz:removedIn="96" name="tab_tray_menu_item_save" tools:ignore="UnusedResources">संग्रहण में सहेजें</string>
+    <!-- Text shown in the menu for the collection selector -->
+    <string moz:removedIn="95" name="tab_tray_menu_select" tools:ignore="UnusedResources">चुनें</string>
     <!-- Text shown in the menu for sharing all tabs -->
     <string name="tab_tray_menu_item_share">सभी टैब साझा करें</string>
     <!-- Text shown in the menu to view recently closed tabs -->
     <string name="tab_tray_menu_recently_closed">हाल ही में बंद किए गए टैब</string>
+    <!-- Text shown in the tabs tray inactive tabs section -->
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">हाल ही में बंद हुआ</string>
     <!-- Text shown in the menu to view account settings -->
     <string name="tab_tray_menu_account_settings">खाता सेटिंग</string>
     <!-- Text shown in the menu to view tab settings -->
@@ -713,6 +741,8 @@
     <string name="tab_tray_multiselect_menu_item_close">बंद करें</string>
     <!-- Content description for tabs tray multiselect share button -->
     <string name="tab_tray_multiselect_share_content_description">चयनित टैब साझा करें</string>
+    <!-- Content description for tabs tray multiselect menu -->
+    <string name="tab_tray_multiselect_menu_content_description">चयनित टैब मेन्यू</string>
     <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
     <string name="remove_tab_from_collection">संग्रहण से टैब हटायें</string>
     <!-- Text for button to enter multiselect mode in tabs tray -->
@@ -750,7 +780,11 @@
     <string name="collection_rename">संग्रहण का नाम बदलें</string>
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">खुले टैब</string>
-    <!-- Text for the menu button to remove a top site -->
+    <!-- Hint for adding name of a collection -->
+    <string name="collection_name_hint">संग्रह का नाम</string>
+	<!-- Text for the menu button to rename a top site -->
+	<string name="rename_top_site">नाम बदलें</string>
+	<!-- Text for the menu button to remove a top site -->
 	<string name="remove_top_site">हटाएं</string>
 
     <!-- Text for the menu button to delete a top site from history -->
@@ -785,6 +819,8 @@
     <string moz:removedIn="96" name="history_delete_some" tools:ignore="UnusedResources">%1$d चीज़ों को मिटाएं</string>
     <!-- Text for the header that groups the history for today -->
     <string name="history_today">आज</string>
+    <!-- Text for the header that groups the history for yesterday -->
+    <string name="history_yesterday">कल</string>
     <!-- Text for the header that groups the history for last 24 hours -->
     <string moz:removedIn="96" name="history_24_hours" tools:ignore="UnusedResources">पिछले 24 घंटे</string>
     <!-- Text for the header that groups the history the past 7 days -->
@@ -797,8 +833,22 @@
     <string name="history_empty_message">यहां कोई इतिहास नहीं</string>
 
 
+    <!-- Downloads -->
+    <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
+    <string name="download_delete_multiple_items_snackbar_1">डाउनलोड हटा दिए गए</string>
+    <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
+    <string name="download_delete_single_item_snackbar">%1$s हटाया गया</string>
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message_1">कोई डाउनलोड की गई फ़ाइलें नहीं</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">%1$d चयनित</string>
     <!-- History overflow menu open in new tab button -->
     <string moz:removedIn="96" name="download_menu_open" tools:ignore="UnusedResources">खोलें</string>
+
+
+    <!-- Text for the button to remove a single download item -->
+    <string name="download_delete_item_1">हटाएँ</string>
 
 
     <!-- Crashes -->
@@ -920,6 +970,8 @@
     <string name="preference_phone_feature_location">स्थान</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">अधिसूचना</string>
+    <!-- Preference for altering the persistent storage access for all websites -->
+    <string name="preference_phone_feature_persistent_storage">लगातार भंडारण</string>
     <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">अनुमति देने के लिए पूछें</string>
     <!-- Label that indicates that a permission must be blocked -->
