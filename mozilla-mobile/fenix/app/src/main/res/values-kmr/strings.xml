@@ -57,7 +57,7 @@
     <string name="recently_saved_show_all">Gişî nîşan bide</string>
 
     <!-- Content description for the button which navigates the user to show all of their saved bookmarks. -->
-    <string name="recently_saved_show_all_content_description">Bişkoka bijareyên tomarbûyî nîşan bide</string>
+    <string moz:removedIn="97" name="recently_saved_show_all_content_description" tools:ignore="UnusedResources">Bişkoka bijareyên tomarbûyî nîşan bide</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">%1$s berhemeke Mozillayê ye.</string>
@@ -139,8 +139,6 @@
     <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">Gişî nîşan bide</string>
 
-    <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
-    <string name="recent_tabs_show_all_content_description">Bişkoka hemû hilpekînên dawiyê nîşan bide</string>
     <!-- Title for showing a group item in the 'Jump back in' section of the new tab
         The first parameter is the search term that the user used. (for example: your search for "cat")-->
     <string name="recent_tabs_search_term">Lêgerîna te ya ji bo \&quot;%1$s\&quot;</string>
@@ -163,7 +161,7 @@
     <string name="recently_visited_menu_item_remove">Rake</string>
 
     <!-- Content description for the button which navigates the user to show all of their history. -->
-    <string name="past_explorations_show_all_content_description">Bişkonên hemû hilpekînên keşfê yên berê nîşan bide</string>
+    <string moz:removedIn="97" name="past_explorations_show_all_content_description" tools:ignore="UnusedResources">Bişkonên hemû hilpekînên keşfê yên berê nîşan bide</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate to open tabs -->
@@ -386,6 +384,8 @@
     <string name="preferences_toolbar">Darikê amûran</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Rûkar</string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home_2">Serûpel</string>
     <!-- Preference for gestures based actions -->
     <string name="preferences_gestures">Hereketên tiliyan</string>
     <!-- Preference for settings related to visual options -->
@@ -455,9 +455,14 @@
     <!-- Customize Home -->
     <!-- Header text for jumping back into the recent tab in customize the home screen -->
     <string name="customize_toggle_jump_back_in">vegere</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">Bijareyên dawiyê</string>
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Seredanên dawî</string>
+    <!-- Title for the customize home screen settings section for recent searches. Recent searches
+     is a section where users see a list of groups of tabs that they have visited in the past few days -->
+    <string moz:removedIn="96" name="customize_toggle_recent_searches" tools:ignore="UnusedResources">Lêgerînên dawiyê</string>
     <!-- Title for the customize home screen section with Pocket. -->
     <string name="customize_toggle_pocket">Pocket</string>
 
@@ -682,6 +687,10 @@
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Grîd</string>
 
+    <!-- Option for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups">Komên lêgerînê</string>
+    <!-- Summary text for search term tab groups -->
+    <string name="tab_view_search_term_tab_groups_summary">Malperên têkildar bi hev re kom bikin</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Hilpekînan bigire</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -693,6 +702,18 @@
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">Piştî mehekê</string>
 
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Hilpekînên vekirî bixweber bigire</string>
+
+    <!-- Opening screen -->
+    <!-- Title of a preference that allows a user to choose what screen to show after opening the app -->
+    <string name="preferences_opening_screen">Ekrana destpêkê</string>
+    <!-- Option for always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage">Serûpel</string>
+    <!-- Option for always opening the user's last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab">Hilpekîna dawiyê</string>
+    <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity">Serûpelê piştî çar saetan neçalak</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
     <string name="close_tabs_manually_summary">Manûelê bigire</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
@@ -701,6 +722,12 @@
     <string name="close_tabs_after_one_week_summary">Piştî hefteyekê bigire</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Piştî mehekê bigire</string>
+
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Hilpekînên kevn veguheze neçalakê</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">Hilpekînên ku te du hefte venekirine dikevin beşa hilpekînên neçalak.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
@@ -818,6 +845,9 @@
     <string name="pwa_site_controls_title_private">%1$s (Moda Veşartî)</string>
     <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
     <string moz:removedIn="96" name="tab_tray_save_to_collection" tools:ignore="UnusedResources">Tomar bike</string>
+
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Hilpekînên din</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -993,6 +1023,8 @@
     <string name="preference_phone_feature_notification">Danezan</string>
     <!-- Preference for altering the persistent storage access for all websites -->
     <string name="preference_phone_feature_persistent_storage">Bîrgeha mayinde</string>
+    <!-- Preference for altering the storage access setting for all websites -->
+    <string name="preference_phone_feature_cross_origin_storage_access">Çerezên navmalperî</string>
     <!-- Preference for altering the EME access for all websites -->
     <string name="preference_phone_feature_media_key_system_access">Naveroka DRM kontrolkirî</string>
     <!-- Label that indicates that a permission must be asked always -->
@@ -1188,6 +1220,10 @@
     <string name="qr_scanner_dialog_positive">BIHÊLE</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">NEHÊLE</string>
+    <!-- QR code scanner prompt dialog error message shown when a hostname does not contain http or https. -->
+    <string name="qr_scanner_dialog_invalid">Navnîşana webê nederbasdar e.</string>
+    <!-- QR code scanner prompt dialog positive option when there is an error -->
+    <string name="qr_scanner_dialog_invalid_ok">BAŞ E</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Tu bi rastî jî dixwazî koleksiyana %1$s’ê were jêbirin?</string>
     <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
@@ -1498,6 +1534,9 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Kûkiyên ji aliyê beralîkirinên malperên tên naskirin ve hatine bicîkirin paqij dike.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">Astengiya hin şopgerên li jêrê hatine nîşankirin, ji ber peywendiya te ya bi wan re, qismî hatiye rakirin *.</string>
     <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
     <string name="preference_etp_smartblock_learn_more">Zêdetir bizane</string>
 
@@ -1560,6 +1599,8 @@
 
     <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
     <string name="preferences_passwords_autofill2">Di %1$s de bixweber dagire</string>
+    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">Navên bikarhêneriyê û şîfreyên malperan di dema bikaranîna %1$s`ê de tomar bike.</string>
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Di sepanên din de bixweber dagire</string>
     <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
@@ -1800,6 +1841,10 @@
     <string name="quick_settings_sheet_secure_connection_2">Girêdan ewle ye</string>
     <!-- Label that indicates a site is using a insecure connection -->
     <string name="quick_settings_sheet_insecure_connection_2">Girêdan ne ewle ye</string>
+    <!-- Label to clear site data -->
+    <string name="clear_site_data">Çerezan û daneyên malperan paqij bike</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site -->
+    <string name="confirm_clear_site_data"><![CDATA[Tu ji dil dixwazî hemû çerez û daneyên malpera <b>%s</b>ê jê bibî?]]></string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for all sites-->
     <string name="confirm_clear_permissions_on_all_sites">Tu ji dil dixwazî hemû destûrên li ser hemû malperan jê bibî?</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for a site-->
