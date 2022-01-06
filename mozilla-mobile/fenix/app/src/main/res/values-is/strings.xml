@@ -673,6 +673,8 @@
     <!-- Studies -->
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Fjarlægja</string>
+    <!-- Title of the active section on the studies list -->
+    <string name="studies_active">Virkt</string>
     <!-- Description for studies, it indicates why Firefox use studies -->
     <string name="studies_description">Firefox kann að setja upp og keyra rannsóknir af og til.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
@@ -731,8 +733,12 @@
     <string name="tab_tray_multiselect_menu_item_bookmark">Bókamerki</string>
     <!-- Text shown in the multiselect menu for closing selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_close">Loka</string>
+    <!-- Content description for tabs tray multiselect share button -->
+    <string name="tab_tray_multiselect_share_content_description">Deila völdum flipum</string>
     <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
     <string name="remove_tab_from_collection">Fjarlæga flipann úr safni</string>
+    <!-- Text for button to enter multiselect mode in tabs tray -->
+    <string name="tabs_tray_select_tabs">Veldu flipa</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Loka flipa</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
@@ -766,11 +772,22 @@
     <string name="collection_rename">Endurnefna safn</string>
     <!-- Text for the button to open tabs of the selected collection -->
     <string name="collection_open_tabs">Opna flipa</string>
-    <!-- Text for the menu button to remove a top site -->
+    <!-- Hint for adding name of a collection -->
+    <string name="collection_name_hint">Heiti safns</string>
+	<!-- Text for the menu button to rename a top site -->
+	<string name="rename_top_site">Endurnefna</string>
+	<!-- Text for the menu button to remove a top site -->
 	<string name="remove_top_site">Fjarlægja</string>
 
+    <!-- Text for the menu button to delete a top site from history -->
+    <string name="delete_from_history">Eyða úr vafurferli</string>
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (huliðshamur)</string>
+
+    <!-- Button in the current tab tray header in multiselect mode. Saved the selected tabs to a collection when pressed. -->
+    <string moz:removedIn="96" name="tab_tray_save_to_collection" tools:ignore="UnusedResources">Vista</string>
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Aðrir flipar</string>
 
     <!-- History -->
     <!-- Text for the button to clear all history -->
@@ -791,6 +808,10 @@
     <!-- Text for the button to clear selected history items. The first parameter
         is a digit showing the number of items you have selected -->
     <string moz:removedIn="96" name="history_delete_some" tools:ignore="UnusedResources">Eyða %1$d atriðum</string>
+    <!-- Text for the header that groups the history for today -->
+    <string name="history_today">Í dag</string>
+    <!-- Text for the header that groups the history for yesterday -->
+    <string name="history_yesterday">Í gær</string>
     <!-- Text for the header that groups the history for last 24 hours -->
     <string moz:removedIn="96" name="history_24_hours" tools:ignore="UnusedResources">Síðasta sólarhringinn</string>
     <!-- Text for the header that groups the history the past 7 days -->
@@ -801,6 +822,19 @@
     <string name="history_older">Eldri</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Ekkert ferli hér</string>
+
+
+    <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
+    <string name="download_delete_single_item_snackbar">Fjarlægði %1$s</string>
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message_1">Engar sóttar skrár</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">%1$d valið</string>
+    <!-- History overflow menu open in new tab button -->
+    <string moz:removedIn="96" name="download_menu_open" tools:ignore="UnusedResources">Opna</string>
+    <!-- Text for the button to remove a single download item -->
+    <string name="download_delete_item_1">Fjarlægja</string>
 
 
     <!-- Crashes -->
@@ -830,6 +864,8 @@
     <string moz:removedIn="96" name="bookmark_select_folder" tools:ignore="UnusedResources">Veldu möppu</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">Ertu viss um að þú viljir eyða þessari möppu?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s mun eyða völdu atriðunum.</string>
     <!-- Snackbar title shown after a folder has been deleted. This first parameter is the name of the deleted folder -->
     <string moz:removedIn="96" name="bookmark_delete_folder_snackbar" tools:ignore="UnusedResources">Eyddi %1$s</string>
     <!-- Screen title for adding a bookmarks folder -->
@@ -884,6 +920,8 @@
     <string name="bookmark_deletion_snackbar_message">Eyddi %1$s</string>
     <!-- Bookmark snackbar message on deleting multiple bookmarks not including folders-->
     <string name="bookmark_deletion_multiple_snackbar_message_2">Bókamerki fjarlægð</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_3">Eyði völdum möppum</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">AFTURKALLA</string>
 
@@ -917,6 +955,12 @@
     <string name="preference_phone_feature_location">Staðsetning</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">Tilkynning</string>
+    <!-- Preference for altering the persistent storage access for all websites -->
+    <string name="preference_phone_feature_persistent_storage">Viðvarandi geymsla</string>
+    <!-- Preference for altering the storage access setting for all websites -->
+    <string name="preference_phone_feature_cross_origin_storage_access">Vefkökur á milli vefsvæða</string>
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">DRM-stýrt efni</string>
     <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">Ætíð biðja um leyfi</string>
     <!-- Label that indicates that a permission must be blocked -->
@@ -933,18 +977,29 @@
     <string name="tracking_protection_off">Óvirkt</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Leyfa hljóð og myndskeið</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
+    <string name="quick_setting_option_autoplay_allowed">Leyfa hljóð og myndskeið</string>
     <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
     <string name="preference_option_autoplay_allowed_wifi_only2">Loka á hljóð og myndskeið eingöngu á farsímanetstengingum</string>
     <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
     <string name="preference_option_autoplay_allowed_wifi_subtext">Hljóð og myndbönd munu spila á þráðlausum netum</string>
     <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">Lokaðu eingöngu fyrir hljóð</string>
+    <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_block_audio">Lokaðu eingöngu fyrir hljóð</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
     <string name="preference_option_autoplay_blocked3">Loka á hljóð og myndskeið</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_blocked">Loka á hljóð og myndskeið</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">Virkt</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">Óvirkt</string>
+
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">Virkt</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">Óvirkt</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -1002,6 +1057,8 @@
     <string name="share_link_all_apps_subheader">Allar aðgerðir</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
     <string name="share_link_recent_apps_subheader">Nýlega notað</string>
+    <!-- An option from the three dot menu to into sync -->
+    <string name="sync_menu_sign_in">Skráðu þig inn til að samstilla</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Skráðu þig inn til að samstilla</string>
     <!-- An option from the share dialog to send link to all other sync devices -->
@@ -1041,6 +1098,15 @@
     <!-- Name of the "Powered by Fenix" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string moz:removedIn="96" name="notification_powered_by_channel_name" tools:ignore="UnusedResources">Knúið af</string>
 
+    <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="notification_marketing_channel_name">Markaðssetning</string>
+    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
+    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
+    <string name="notification_default_browser_title">%1$s er hraðvirkur og verndar gögnin þín</string>
+    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
+    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
+    <string name="notification_default_browser_text">Gerðu %1$s að sjálfgefnum vafra</string>
+
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Safni eytt</string>
@@ -1054,6 +1120,12 @@
     <string name="snackbar_tab_closed">Flipa lokað</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Flipum lokað</string>
+    <!-- Text shown in snackbar when user closes tabs -->
+    <string moz:removedIn="96" name="snackbar_message_tabs_closed" tools:ignore="UnusedResources">Flipum lokað!</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">Bókamerki vistuð!</string>
+    <!-- Text shown in snackbar action for viewing bookmarks -->
+    <string moz:removedIn="96" name="snackbar_message_bookmarks_view" tools:ignore="UnusedResources">Skoða</string>
     <!-- Text shown in snackbar when user adds a site to top sites -->
     <string name="snackbar_added_to_top_sites">Bætt við toppsíðurnar!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
@@ -1078,8 +1150,14 @@
     <string name="qr_scanner_dialog_positive">LEYFA</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">HAFNA</string>
+    <!-- QR code scanner prompt dialog error message shown when a hostname does not contain http or https. -->
+    <string name="qr_scanner_dialog_invalid">Veffang ekki gilt.</string>
+    <!-- QR code scanner prompt dialog positive option when there is an error -->
+    <string name="qr_scanner_dialog_invalid_ok">Í lagi</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Ertu viss um að þú viljir eyða %1$s?</string>
+    <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_title">Eyða %1$s?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">Eyða</string>
     <!-- Text displayed in a notification when the user enters full screen mode -->
@@ -1124,6 +1202,8 @@
     <string name="preferences_delete_browsing_data_cached_files_subtitle">Losar um rými</string>
     <!-- Title for the site permissions item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_site_permissions">Heimildir vefsvæðis</string>
+    <!-- Title for the downloads item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_downloads">Sóttar skrár</string>
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Eyða vafragögnum</string>
     <!-- Title for the Delete browsing data on quit preference -->
@@ -1184,10 +1264,14 @@
     <!-- text for the Firefox Accounts section header -->
     <string moz:removedIn="96" name="onboarding_fxa_section_header" tools:ignore="UnusedResources">Ertu þegar með reikning?</string>
 
+    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
+    <string name="onboarding_account_sign_in_header_1">Samstilla Firefox á milli tækja</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string moz:removedIn="96" name="onboarding_firefox_account_auto_signin_confirm" tools:ignore="UnusedResources">Já, skráðu mig inn</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
     <string moz:removedIn="96" name="onboarding_firefox_account_signing_in" tools:ignore="UnusedResources">Skrái inn…</string>
+    <!-- text for the button to manually sign into Firefox account. -->
+    <string name="onboarding_firefox_account_sign_in_1">Skráðu þig</string>
     <!-- text for the button to stay signed out when presented with an option to automatically sign-in. -->
     <string moz:removedIn="96" name="onboarding_firefox_account_stay_signed_out" tools:ignore="UnusedResources">Vera útskráður</string>
     <!-- text to display in the snackbar once account is signed-in -->
@@ -1299,6 +1383,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Dulritunaraðilar</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Fingraför</string>
+    <!-- Button label for navigating to the Enhanced Tracking Protection details -->
+    <string name="enhanced_tracking_protection_details">Nánar</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Lokað á</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
