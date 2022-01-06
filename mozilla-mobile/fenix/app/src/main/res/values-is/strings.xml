@@ -262,6 +262,12 @@
     <!-- Home onboarding -->
     <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
     <string name="onboarding_home_screen_title_2">Hvað er nýtt í Firefox</string>
+    <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_section_home_title_2">Persónuleg Firefox upphafssíða</string>
+    <!-- Onboarding home screen dialog description text for the home section. -->
+    <string name="onboarding_home_screen_section_home_description_2">Hoppaðu í opna flipa, bókamerki og vafraferil.</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Hreinlegir, skipulagðir flipar</string>
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_title_2">Nýlegar leitir</string>
 
@@ -1028,6 +1034,8 @@
     <string name="create_collection_save_to_collection_tab_selected">%d flipi valinn</string>
     <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
     <string name="create_collection_tabs_saved">Flipar vistaðir!</string>
+    <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+    <string name="create_collection_tabs_saved_new_collection">Safn vistað!</string>
     <!-- Text shown in snackbar when one tab has been saved in a collection -->
     <string name="create_collection_tab_saved">Flipi vistaður!</string>
     <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
@@ -1285,6 +1293,8 @@
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">Strangt</string>
 
+    <!-- text for the toolbar position card header  -->
+    <string name="onboarding_toolbar_placement_header_1">Veldu staðsetningu verkfærastikunnar</string>
     <!-- text for the privacy notice onboarding card header -->
     <string name="onboarding_privacy_notice_header">Persónuvernd þín</string>
     <!-- Text for the button to read the privacy notice -->
@@ -1429,6 +1439,9 @@
     The first parameter is the app name -->
     <string name="open_source_licenses_title">%s | OSS söfn</string>
 
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">Frekari upplýsingar</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Aðstoð</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1474,6 +1487,9 @@
     <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">Heiti á flýtivísun</string>
 
+    <!-- Describes the add to homescreen functionality -->
+    <string name="add_to_homescreen_description_2">Þú getur á auðveldan hátt bætt þessu vefsvæði á upphafsskjáinn þinn fyrir auðveldara aðgengi og hraðara vafur.</string>
+
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords">Innskráning og lykilorð</string>
     <!-- Preference for managing the saving of logins and passwords in Fenix -->
@@ -1483,8 +1499,21 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Aldrei vista</string>
 
+    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill2">Sjálfvirk útfylling í %1$s</string>
+    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">Fylltu út og vistaðu notendanöfn og lykilorð á vefsvæðum meðan þú notar %1$s.</string>
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill">Sjálfvirk útfylling í öðrum forritum</string>
+    <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill_description">Fylltu út notendanöfn og lykilorð í öðrum forritum á tækinu þínu.</string>
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">Bæta við innskráningu</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Samstilla innskráningar</string>
+    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
+    <string name="preferences_passwords_sync_logins_across_devices">Samstilla innskráningar milli tækja</string>
     <!-- Syncing saved logins in Fenix needs reconnect to sync -->
     <string moz:removedIn="96" name="preferences_passwords_sync_logins_reconnect" tools:ignore="UnusedResources">Endurtengja</string>
     <!-- Syncing saved logins in Fenix needs login -->
@@ -1502,6 +1531,8 @@
     <string name="preferences_passwords_exceptions_description_empty">Innskráningar og lykilorð sem ekki eru vistuð sjást hér.</string>
     <!-- Description of list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions_description">Innskráningar og lykilorð verða ekki vistuð fyrir þessi vefsvæði.</string>
+    <!-- Text on button to remove all saved login exceptions -->
+    <string name="preferences_passwords_exceptions_remove_all">Eyða öllum undantekningum</string>
     <!-- Hint for search box in logins list -->
     <string name="preferences_passwords_saved_logins_search">Leita að innskráningu</string>
     <!-- Option to sort logins list A-Z, alphabetically -->
@@ -1536,10 +1567,18 @@
     <string moz:removedIn="96" name="logins_site_copied" tools:ignore="UnusedResources">Vefsvæði afritað á klippispjald</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a password in logins-->
     <string name="saved_logins_copy_password">Afrita lykilorð</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a password while editing a login-->
+    <string name="saved_logins_clear_password">Hreinsa lykilorð</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a username in logins -->
     <string name="saved_login_copy_username">Afrita notendanafn</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
+    <string name="saved_login_clear_username">Hreinsa notandanafn</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Hreinsa vélarheiti</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string moz:removedIn="96" name="saved_login_copy_site" tools:ignore="UnusedResources">Afrita vistfang</string>
+    <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
+    <string name="saved_login_open_site">Opna vefsvæði í vafra</string>
     <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
     <string name="saved_login_reveal_password">Sýna lykilorð</string>
     <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
@@ -1568,6 +1607,30 @@
     <string name="saved_logins_sort_strategy_last_used">Síðast notað</string>
     <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
     <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Raða innskráningarvalmyndinni</string>
+
+    <!-- Credit Cards Autofill -->
+    <!-- Preference and title for managing the settings for credit cards -->
+    <string name="preferences_credit_cards">Greiðslukort</string>
+    <!-- Preference for saving and autofilling credit cards -->
+    <string name="preferences_credit_cards_save_and_autofill_cards">Vista og fylla sjálfkrafa út í greiðslukort</string>
+    <!-- Preference summary for saving and autofilling credit card data -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Gögn eru dulrituð</string>
+    <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
+    <string name="preferences_credit_cards_sync_cards_across_devices">Samstilla greiðslukort milli tækja</string>
+    <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
+    <string name="preferences_credit_cards_sync_cards">Samstilla kort</string>
+    <!-- Preference option for adding a credit card -->
+    <string name="preferences_credit_cards_add_credit_card">Bæta við greiðslukorti</string>
+    <!-- Preference option for managing saved credit cards -->
+    <string name="preferences_credit_cards_manage_saved_cards">Sýsla með vistuð greiðslukort</string>
+    <!-- Title of the "Add card" screen -->
+    <string name="credit_cards_add_card">Bæta við korti</string>
+    <!-- Title of the "Edit card" screen -->
+    <string name="credit_cards_edit_card">Breyta greiðslukorti</string>
+    <!-- The header for the card number of a credit card -->
+    <string name="credit_cards_card_number">Kortanúmer</string>
+    <!-- The header for the expiration date of a credit card -->
+    <string name="credit_cards_expiration_date">Gildistími</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Bæta við leitarvél</string>
