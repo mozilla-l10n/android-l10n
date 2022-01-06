@@ -1632,6 +1632,45 @@
     <!-- The header for the expiration date of a credit card -->
     <string name="credit_cards_expiration_date">Gildistími</string>
 
+    <!-- The label for the expiration date month of a credit card to be used by a11y services-->
+    <string name="credit_cards_expiration_date_month">Mánuður gildistíma</string>
+    <!-- The label for the expiration date year of a credit card to be used by a11y services-->
+    <string name="credit_cards_expiration_date_year">Ár gildistíma</string>
+    <!-- The header for the name on the credit card -->
+    <string name="credit_cards_name_on_card">Nafn á greiðslukorti</string>
+    <!-- The header for the nickname for a credit card -->
+    <string moz:removedIn="96" name="credit_cards_card_nickname" tools:ignore="UnusedResources">Gælunafn korts</string>
+    <!-- The text for the "Delete card" menu item for deleting a credit card -->
+    <string name="credit_cards_menu_delete_card">Eyða korti</string>
+    <!-- The text for the "Delete card" button for deleting a credit card -->
+    <string name="credit_cards_delete_card_button">Eyða korti</string>
+    <!-- The title for the "Save" menu item for saving a credit card -->
+    <string name="credit_cards_menu_save">Vista</string>
+    <!-- The text for the "Save" button for saving a credit card -->
+    <string name="credit_cards_save_button">Vista</string>
+    <!-- The text for the "Cancel" button for cancelling adding or updating a credit card -->
+    <string name="credit_cards_cancel_button">Hætta við</string>
+    <!-- Title of the "Saved cards" screen -->
+    <string name="credit_cards_saved_cards">Vistuð greiðslukort</string>
+    <!-- Error message for credit card number validation -->
+    <string name="credit_cards_number_validation_error_message">Settu inn gilt kortanúmer</string>
+    <!-- Error message for credit card name on card validation -->
+    <string name="credit_cards_name_on_card_validation_error_message">Fylltu út í þennan reit</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
+    <string name="credit_cards_biometric_prompt_message">Aflæsa til að skoða vistuð greiðslukort</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_title">Haltu kreditkortunum þínum öruggum</string>
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_message">Settu upp læsimynstur, PIN-númer eða lykilorð til að vernda vistuðu greiðslukortin þín ef ske kynni að einhver annar komist yfir tækið þitt.</string>
+    <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_set_up_now">Setja upp núna</string>
+    <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_later">Síðar</string>
+    <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their credit cards -->
+    <string name="credit_cards_biometric_prompt_message_pin">Aflæstu tækinu þínu</string>
+    <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored credit card information -->
+    <string name="credit_cards_biometric_prompt_unlock_message">Aflæstu til að nota geymdar kreditkortaupplýsingar</string>
+
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Bæta við leitarvél</string>
     <!-- Title of the Edit search engine screen -->
@@ -1700,6 +1739,14 @@
     <!-- Third step for the allowing a permission (Fore example: Camera) -->
     <string name="phone_feature_blocked_step_feature"><![CDATA[3. Breyttu <b>%1$s</b> yfir í VIRKT]]></string>
 
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="quick_settings_sheet_secure_connection_2">Tenging er örugg</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="quick_settings_sheet_insecure_connection_2">Tenging er ekki örugg</string>
+    <!-- Label to clear site data -->
+    <string name="clear_site_data">Hreinsa vefkökur og gögn vefsvæðis</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site -->
+    <string name="confirm_clear_site_data"><![CDATA[Ertu viss um að þú viljir hreinsa allar vefkökur og gögn fyrir vefsvæðið <b>%s</b>?]]></string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for all sites-->
     <string name="confirm_clear_permissions_on_all_sites">Ertu viss um að þú viljir hreinsa allar heimildir á öllum vefsvæðum?</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for a site-->
@@ -1739,8 +1786,14 @@
     <string moz:removedIn="96" name="discard_changes" tools:ignore="UnusedResources">Hætta við breytingar</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">Breyta</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">Bæta við nýrri innskráningu</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">Lykilorðs krafist</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">Notandanafn er nauðsynlegt</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Hýsingarheiti er nauðsynlegt</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Raddleit</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1748,6 +1801,11 @@
 
     <!--  The error message in edit login view when a duplicate username exists. -->
     <string name="saved_login_duplicate">Innskráning með þessu notandanafni er þegar til</string>
+
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">Veffang verður að innihalda &quot;https://&quot; or &quot;http://&quot;</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -1763,10 +1821,61 @@
     <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
     <string name="synced_tabs_sign_in_button">Skráðu þig inn til að samstilla</string>
 
+    <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
+    <string name="synced_tabs_no_open_tabs">Engir opnir flipar</string>
+
     <!-- Top Sites -->
     <!-- Title text displayed in the dialog when top sites limit is reached. -->
     <string name="top_sites_max_limit_title">Ekki hægt að bæta fleiri vefjum við helstu vefsvæði</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">Í lagi, ég skil</string>
+
+    <!-- Label for the preference to show the most visited top sites on the homepage -->
+    <string name="top_sites_toggle_top_recent_sites_3">Mest heimsóttu vinsælustu síðurnar</string>
+	<!-- Title text displayed in the rename top site dialog. -->
+	<string name="top_sites_rename_dialog_title">Heiti</string>
+	<!-- Hint for renaming title of a top site -->
+	<string name="top_site_name_hint">Nafn helsta vefsvæðis</string>
+	<!-- Button caption to confirm the renaming of the top site. -->
+	<string name="top_sites_rename_dialog_ok">Í lagi</string>
+	<!-- Dialog button text for canceling the rename top site prompt. -->
+	<string name="top_sites_rename_dialog_cancel">Hætta við</string>
+
+    <!-- Inactive tabs in the tabs tray -->
+    <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
+    <string name="inactive_tabs_title">Óvirkir flipar</string>
+    <!-- Content description for closing all inactive tabs -->
+    <string name="inactive_tabs_delete_all">Lokaðu öllum óvirkum flipum</string>
+    <!-- A description below the section of "inactive" tabs to notify the user when those tabs will be closed, if appropriate. See strings inactive_tabs_30_days and inactive_tabs_7_days for placeholders options. -->
+    <string moz:removedIn="95" name="inactive_tabs_description" tools:ignore="UnusedResources">Flipar eru tiltækir hér í %s. Eftir þann tíma verður flipum sjálfkrafa lokað.</string>
+    <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
+    <string moz:removedIn="95" name="inactive_tabs_30_days" tools:ignore="UnusedResources">30 daga</string>
+    <!-- The amount of time until a tab in the "inactive" section of the tabs tray will be closed. See string inactive_tabs_description as well -->
+    <string moz:removedIn="95" name="inactive_tabs_7_days" tools:ignore="UnusedResources">1 viku</string>
+
+    <!-- Inactive tabs auto-close message in the tabs tray -->
+    <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Loka sjálfvirkt eftir einn mánuð?</string>
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox getur lokað flipum sem þú hefur ekki skoðað síðastliðinn mánuð.</string>
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">KVEIKJA Á SJÁLFVIRKRI LOKUN</string>
+    <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
+    <string name="inactive_tabs_auto_close_message_snackbar">Sjálfvirk lokun virkjuð</string>
+
+    <!-- Inactive tabs survey -->
+    <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
+    <string moz:removedIn="95" name="inactive_tabs_survey_header" tools:ignore="UnusedResources">Hjálpaðu til við að bæta Firefox</string>
+    <!-- Header text for the inactive tabs survey asking for feedback to improve the inactive tabs feature. -->
+    <string name="inactive_tabs_survey_header_1">Hjálpaðu til við að bæta Firefox</string>
+
+    <!-- Content text for the inactive tabs survey asking the primary survey feedback question. -->
+    <string name="inactive_tabs_survey_content">Af hverju slökktirðu á óvirkum flipum?</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_do_not_understand">Ég skil ekki hvernig þetta virkar</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string name="inactive_tabs_survey_do_it_myself">Mér finnst best að hreinsa sjálf/ur út gamla flipa</string>
+    <!-- One of the feedback option that can be selected as a responses to the inactive tabs survey question. -->
+    <string moz:removedIn="95" name="inactive_tabs_survey_time_too_long_option" tools:ignore="UnusedResources">Tveggja vikna tímamörkin er of langt</string>
 
     </resources>
