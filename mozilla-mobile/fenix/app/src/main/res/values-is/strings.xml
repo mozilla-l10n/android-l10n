@@ -33,11 +33,19 @@
     <string name="tab_tray_add_new_collection_name">Heiti</string>
     <!-- Label of button in save to collection dialog for selecting a current collection  -->
     <string name="tab_tray_select_collection">Velja safn</string>
+    <!-- Content description for close button while in multiselect mode in tab tray -->
+    <string name="tab_tray_close_multiselect_content_description">Hætta í fjölvalsham</string>
+    <!-- Content description for save to collection button while in multiselect mode in tab tray -->
+    <string name="tab_tray_collection_button_multiselect_content_description">Vista valda flipa í safn</string>
     <!-- Content description for checkmark while tab is selected while in multiselect mode in tab tray. The first parameter is the title of the tab selected -->
     <string moz:removedIn="96" name="tab_tray_item_selected_multiselect_content_description" tools:ignore="UnusedResources">Valið %1$s</string>
     <!-- Content description when tab is unselected while in multiselect mode in tab tray. The first parameter is the title of the tab unselected -->
     <string moz:removedIn="96" name="tab_tray_item_unselected_multiselect_content_description" tools:ignore="UnusedResources">Ekki valið %1$s</string>
 
+    <!-- Content description announcement when exiting multiselect mode in tab tray -->
+    <string moz:removedIn="96" name="tab_tray_exit_multiselect_content_description" tools:ignore="UnusedResources">Hætti í fjölvalsham</string>
+    <!-- Content description announcement when entering multiselect mode in tab tray -->
+    <string moz:removedIn="96" name="tab_tray_enter_multiselect_content_description" tools:ignore="UnusedResources">Farinn í fjölvalsham, veldu flipa til að vista í safn</string>
     <!-- Content description on checkmark while tab is selected in multiselect mode in tab tray -->
     <string name="tab_tray_multiselect_selected_content_description">Valið</string>
 
@@ -76,16 +84,23 @@
     <!-- Text for the negative button -->
     <string name="cfr_neg_button_text">Nei takk</string>
 
+    <!-- Open in App "contextual feature recommendation" (CFR) -->
+    <!-- Text for the info message. 'Firefox' intentionally hardcoded here.-->
+    <string name="open_in_app_cfr_info_message">Þú getur stillt Firefox til að opna tengla sjálfvirkt í forritum.</string>
     <!-- Text for the positive action button -->
     <string name="open_in_app_cfr_positive_button_text">Fara í stillingar</string>
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">Hafna</string>
 
+    <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
+    <string name="camera_permissions_needed_message">Aðgangur að myndavél er nauðsynlegur. Farðu í stillingar Android, farðu í Heimildir og gefðu leyfi.</string>
     <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
     <string name="camera_permissions_needed_positive_button_text">Fara í stillingar</string>
     <!-- Text for the negative action button to dismiss the dialog. -->
     <string name="camera_permissions_needed_negative_button_text">Hafna</string>
 
+    <!-- Text for the banner message to tell users about our auto close feature. -->
+    <string name="tab_tray_close_tabs_banner_message">Stilltu opna flipa til að loka sjálfkrafa ef þeir hafa ekki verið skoðaðir síðasta daginn, viku eða mánuð.</string>
     <!-- Text for the positive action button to go to Settings for auto close tabs. -->
     <string name="tab_tray_close_tabs_banner_positive_button_text">Skoða valkosti</string>
     <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
@@ -118,6 +133,9 @@
     <!-- Heading for the Top Sites block -->
     <string moz:removedIn="95" name="home_screen_top_sites_heading" tools:ignore="UnusedResources">Vinsælustu svæðin</string>
 
+    <!-- Recent Tabs -->
+    <!-- Header text for jumping back into the recent tab in the home screen -->
+    <string name="recent_tabs_header">Hoppa aftur inn</string>
     <!-- Button text for showing all the tabs in the tabs tray -->
     <string name="recent_tabs_show_all">Birta allt</string>
     <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
@@ -273,14 +291,24 @@
     <!-- Home onboarding -->
     <!-- Onboarding home screen dialog title text. Firefox is intentionally hardcoded. -->
     <string name="onboarding_home_screen_title_2">Hvað er nýtt í Firefox</string>
+    <!-- Onboarding home screen dialog description text. -->
+    <string name="onboarding_home_screen_description_2">Nú er auðveldara að halda áfram þar sem frá var horfið.</string>
     <!-- Onboarding home screen dialog title text for the home section. Firefox is intentionally hardcoded. -->
     <string name="onboarding_home_screen_section_home_title_2">Persónuleg Firefox upphafssíða</string>
     <!-- Onboarding home screen dialog description text for the home section. -->
     <string name="onboarding_home_screen_section_home_description_2">Hoppaðu í opna flipa, bókamerki og vafraferil.</string>
     <!-- Onboarding home screen dialog description text for the tab tray section. -->
     <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Hreinlegir, skipulagðir flipar</string>
+    <!-- Onboarding home screen dialog description text for the tab tray section. -->
+    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Hreinsaðu flipaóreiðuna með bættu skipulagi og sjálfvirkri lokun flipa.</string>
     <!-- Onboarding home screen dialog description text for the history section. -->
     <string name="onboarding_home_screen_section_useful_history_title_2">Nýlegar leitir</string>
+
+    <!-- Onboarding home screen dialog description text for the history section. -->
+    <string name="onboarding_home_screen_section_useful_history_description_2">Skoðaðu nýjustu leitirnar þínar af upphafssíðunni þinni og flipum.</string>
+
+    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
+    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Sérsniðin Firefox-upphafssíða þín gerir það nú auðveldara að halda áfram þar sem frá var horfið. Finndu nýlega flipa, bókamerki og leitarniðurstöður.</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. Firefox is intentionally hardcoded.-->
@@ -426,6 +454,12 @@
     <!-- Hint displayed on input field for custom collection user ID-->
     <string name="customize_addon_collection_user_hint">Eigandi safns (notandaauðkenni)</string>
 
+    <!-- Toast shown after confirming the custom add-on collection configuration -->
+    <string name="toast_customize_addon_collection_done">Viðbótasafni þínu hefur verið breytt. Slekk á forritinu til að innleiða breytingar…</string>
+
+    <!-- Customize Home -->
+    <!-- Header text for jumping back into the recent tab in customize the home screen -->
+    <string name="customize_toggle_jump_back_in">Hoppa aftur inn</string>
     <!-- Title for the customize home screen section with recently saved bookmarks. -->
     <string name="customize_toggle_recent_bookmarks">Nýleg bókamerki</string>
     <!-- Title for the customize home screen section with recently visited. Recently visited is
@@ -759,6 +793,8 @@
     <string name="tab_tray_multiselect_menu_item_close">Loka</string>
     <!-- Content description for tabs tray multiselect share button -->
     <string name="tab_tray_multiselect_share_content_description">Deila völdum flipum</string>
+    <!-- Content description for tabs tray multiselect menu -->
+    <string name="tab_tray_multiselect_menu_content_description">Valmynd valinna flipa</string>
     <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
     <string name="remove_tab_from_collection">Fjarlæga flipann úr safni</string>
     <!-- Text for button to enter multiselect mode in tabs tray -->
@@ -1033,6 +1069,8 @@
     <string name="collections_header">Söfn</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">Valmynd safns</string>
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description2">Safnaðu því sem skiptir þig máli.\nFlokkaðu saman svipaðar leitir, síður og flipa til að fá skjótan aðgang að því síðar.</string>
     <!-- Title for the "select tabs" step of the collection creator -->
     <string name="create_collection_select_tabs">Veldu flipa</string>
     <!-- Title for the "select collection" step of the collection creator -->
@@ -1185,6 +1223,8 @@
     <string name="qr_scanner_dialog_invalid_ok">Í lagi</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Ertu viss um að þú viljir eyða %1$s?</string>
+    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_message">Ef þessum flipa er eytt verður öllu safninu eytt. Þú getur búið til ný söfn hvenær sem er.</string>
     <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
     <string name="delete_tab_and_collection_dialog_title">Eyða %1$s?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
@@ -1295,6 +1335,12 @@
 
     <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
     <string name="onboarding_account_sign_in_header_1">Samstilla Firefox á milli tækja</string>
+    <!-- Text for the button to learn more about signing in to your Firefox account -->
+    <string name="onboarding_manual_sign_in_description">Komdu með bókamerki, feril og lykilorð yfir í Firefox á þessu tæki.</string>
+    <!-- text for the firefox account onboarding card header when we detect you're already signed in to
+        another Firefox browser. (The word `Firefox` should not be translated)
+        The first parameter is the email of the detected user's account -->
+    <string moz:removedIn="96" name="onboarding_firefox_account_auto_signin_header_3" tools:ignore="UnusedResources">Þú ert skráð/ur inn sem %s í öðrum Firefox vafra á þessu tæki. Viltu skrá þig inn með þessum reikningi?</string>
     <!-- text for the button to confirm automatic sign-in -->
     <string moz:removedIn="96" name="onboarding_firefox_account_auto_signin_confirm" tools:ignore="UnusedResources">Já, skráðu mig inn</string>
     <!-- text for the automatic sign-in button while signing in is in process -->
@@ -1307,6 +1353,10 @@
     <string name="onboarding_firefox_account_sync_is_on">Kveikt er á samstillingu</string>
     <!-- text to display in the snackbar if automatic sign-in fails. user may try again -->
     <string moz:removedIn="96" name="onboarding_firefox_account_automatic_signin_failed" tools:ignore="UnusedResources">Innskráning mistókst</string>
+    <!-- text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header_3">Sívökul friðhelgi</string>
+    <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
+    <string name="onboarding_tracking_protection_description_3">Firefox kemur sjálfkrafa í veg fyrir að fyrirtæki fylgi þér í laumi um vefinn.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Staðlað (sjálfgefið)</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
