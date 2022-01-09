@@ -1383,6 +1383,10 @@
     <string name="sign_in_with_email">Моның урынына эл. почта кулланыгыз</string>
     <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
     <string name="sign_in_create_account_text"><![CDATA[Аккаунтыгыз юкмы? Firefox-ны җиһазлар арасында синхронлау өчен, бер <u>хисап булдырыгыз</u>.]]></string>
+    <!-- Text shown in confirmation dialog to sign out of account -->
+    <string moz:removedIn="96" name="sign_out_confirmation_message" tools:ignore="UnusedResources">Firefox хисабыгыз белән синхронлауны туктатачак, ләкин бу җиһаздагы гизү мәгълүматларының берсен дә бетермәячәк.</string>
+    <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
+    <string name="sign_out_confirmation_message_2">%s хисабыгыз белән синхронлауны туктатачак, ләкин бу җиһаздагы гизү мәгълүматларының берсен дә бетермәячәк.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
     <string name="sign_out_disconnect">Өзү</string>
     <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
@@ -1396,10 +1400,16 @@
     <string name="etp_settings">Саклау көйләүләре</string>
     <!-- Preference title for enhanced tracking protection settings -->
     <string name="preference_enhanced_tracking_protection">Күзәтелүдән Көчәйтелгән Саклау</string>
+    <!-- Title for the description of enhanced tracking protection -->
+    <string name="preference_enhanced_tracking_protection_explanation_title">Күзәтелмичә гизү</string>
+    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
+    <string name="preference_enhanced_tracking_protection_explanation">Мәгълүматыгыз үзегездә генә булсын. %s онлайнда нәрсә эшләгәнегезне ачыкларга омтылган күпчелек күзәтүчеләрдән Сезне саклый.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Күбрәк белү</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Стандарт (килешенгәнчә)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_4">Хосусыйлык һәм җитештерүчәнлек балансланган. Битләр гадәттәгечә йөкләнә.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Стандарт күзәтелүдән саклау чаралары нәрсәләрне блоклый</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
@@ -1432,6 +1442,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Криптомайнерләр</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Бармак эзләрен җыючылар (идентификаторлар)</string>
+    <!-- Button label for navigating to the Enhanced Tracking Protection details -->
+    <string name="enhanced_tracking_protection_details">Нечкәлекләр</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Тыелган</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
@@ -1467,6 +1479,11 @@
 
     <!-- Category of trackers (redirect trackers) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_title">Юнәлтүләрне күзәтеп торучылар</string>
+
+    <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_redirect_trackers_description">Билгеле күзәтүче вебсайтларга булган юнәлтүләр урнаштырган кукиларны чистарта.</string>
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">Күбрәк белү</string>
 
     <!-- About page link text to open support link -->
     <string name="about_support">Техник ярдәм</string>
@@ -1523,6 +1540,17 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Беркайчан да cакламау</string>
 
+    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill2">%1$s эчендә автотутыру</string>
+    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">%1$s кулланганда вебсайтларда кулланучы исемнәре һәм серсүзләр саклансын һәм аннан автоматик рәвештә тутырылсын.</string>
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill">Башка кушымталарда автотутыру</string>
+    <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill_description">Җиһазыгыздагы башка кушымталарда кулланучы исемнәре һәм серсүзләр тутырылсын.</string>
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">Логинны өстәү</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Логиннарны синхронлау </string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
@@ -1533,6 +1561,8 @@
     <string moz:removedIn="96" name="preferences_passwords_sync_logins_sign_in" tools:ignore="UnusedResources">Синхронлауга керү</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">Сакланган логиннар</string>
+    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
+    <string name="preferences_passwords_saved_logins_description_empty_text">Сез саклаган яки %s белән синхронланган логиннар монда күрсәтеләчәк.</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Синхронлау турында күбрәк беләсез. </string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
@@ -1584,6 +1614,8 @@
 
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">Кулланучы исемен чистарту</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Сервер исемен чистарту</string>
     <!-- Content Description (for screenreaders etc) read for the button to copy a site in logins -->
     <string moz:removedIn="96" name="saved_login_copy_site" tools:ignore="UnusedResources">Сайтны күчереп алу</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -1660,8 +1692,12 @@
     <!-- Error message for credit card number validation -->
     <string name="credit_cards_number_validation_error_message">Зинһар, дөрес бер карта номерын кертегез</string>
 
+    <!-- Error message for credit card name on card validation -->
+    <string name="credit_cards_name_on_card_validation_error_message">Зинһар, бу кырны тутырыгыз</string>
     <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
     <string name="credit_cards_biometric_prompt_message">Сакланган карталарыгызны карау өчен йозакны ачыгыз</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_title">Кредит карталарыгызны саклагыз</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
     <string name="credit_cards_warning_dialog_set_up_now">Хәзер урнаштыру</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
