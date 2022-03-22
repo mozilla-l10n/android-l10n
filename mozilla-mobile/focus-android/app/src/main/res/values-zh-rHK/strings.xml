@@ -105,6 +105,10 @@
     <string name="shortcut_erase_long_label">刪除瀏覽記錄</string>
 
 
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+         Clicking this action will launch Focus and perform a search in the default search engine. -->
+    <string name="text_selection_search_action">私隱搜尋</string>
+
     <!-- Header for the Privacy and Security settings menu -->
     <string name="preference_privacy_and_security_header">私隱同安全</string>
 
@@ -251,6 +255,12 @@
 
     <string name="preference_performance_block_javascript">阻擋 JavaScript</string>
 
+    <!-- This preference does not set Focus as the default browser but instead links to Android's
+     "default apps" settings screen or if not supported by this Android version to a SUMO page describing
+     how to set Focus as a default browser.
+      %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="preference_default_browser2">將 %1$s 設定為預設瀏覽器</string>
+
     <string name="preference_category_mozilla">Mozilla</string>
     <string name="preference_mozilla_telemetry2">傳送使用狀況數據</string>
 
@@ -263,6 +273,15 @@
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">關於 %1$s</string>
 
+    <!-- Header for the list of installed search engines -->
+    <string name="preference_search_installed_search_engines">已安裝嘅搜尋引擎</string>
+
+    <!-- Header for the list of installed search engines -->
+    <string name="preference_choose_search_engine">揀選搜尋引擎</string>
+
+    <!-- Action for restoring the default list of search engines -->
+    <string name="preference_search_restore">還原預設嘅搜尋引擎</string>
+
     <!-- Action for adding an additional search engine to the list.
     The "+" is used to emphasize that this is an "add" action -->
     <string name="preference_search_add2">+ 加入另一個搜尋引擎</string>
@@ -270,6 +289,9 @@
     <string name="preference_search_remove">移除</string>
     <!-- Action for dding an additional search engine to the list -->
     <string name="preference_search_add3">加入另一個搜尋引擎</string>
+
+    <!-- Explanation text above the list of search engines-->
+    <string name="preference_select_preferred_engine">揀選你鍾意嘅引擎：</string>
 
     <!-- Clickable action text that shows when user long-presses on a search engine search field (this is similar to paste or copy when long-pressing a text field) -->
     <string name="action_option_add_search_engine">加入搜尋引擎</string>
@@ -290,6 +312,11 @@
 
     <!-- Content description (not visible, for screen readers etc.): Clear text in URL bar -->
     <string name="content_description_clear_input">清除輸入</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Clicking on the website overlay
+     while in typing mode will dismiss and go back to the browser. This text will be read when the
+     overlay if focused. See https://github.com/mozilla-mobile/focus-android/issues/50 -->
+    <string name="content_description_dismiss_input">收到</string>
 
     <!-- Content description (not visible, for screen readers etc.): Lock icon showed in the URL bar for
      https pages.. -->
@@ -376,7 +403,34 @@
     <string name="gv_prompt_password_hint">密碼</string>
     <string name="gv_prompt_clear">清除</string>
 
+    <!-- Text shown in Security Information Popup -->
+    <!-- Text to denote secure or insecure connection -->
+    <string name="security_popup_secure_connection">安全連線</string>
+    <string name="security_popup_insecure_connection">不安全連線</string>
+    <!-- %1$s will be replaced with organization that granted the SSL certificate -->
+    <string name="security_popup_security_verified">經 %1$s 驗證</string>
+
+    <!-- Content Description of Security Icon in toolbar -->
+    <string name="site_security_icon_content_description">網站安全性</string>
     <string name="preference_autocomplete_duplicate_url_error">已經有呢個網址</string>
+
+    <!-- Label for the Find in page button -->
+    <string name="find_in_page">喺呢頁搵嘢</string>
+
+    <!-- Watermark/Hint for the find in page input field -->
+    <string name="find_in_page_input">喺呢頁搵嘢</string>
+
+    <!-- String to show the number of results found in the page and the
+        position the user is at. The first argument is the position, the second argument is the total -->
+    <string name="find_in_page_result">%1$d/%2$d</string>
+    <!-- String to be read by the accessibility service presenting the number of results found in the page
+        and the position the user is at. The first argument is the position, the second argument is the total -->
+    <string name="accessibility_find_in_page_result">第 %1$d 個，共 %2$d 個</string>
+
+    <!-- String to be read by the accessibility service when focusing the next result button -->
+    <string name="accessibility_next_result">搵下一個結果</string>
+    <!-- String to be read by the accessibility service when focusing the previous result button -->
+    <string name="accessibility_previous_result">搵上一個結果</string>
 
     <!-- Checkbox menu item text to request desktop site -->
     <string name="preference_performance_request_desktop_site">請求桌面版網頁</string>
@@ -389,6 +443,9 @@
 
     <!-- Title of Advanced Setting category -->
     <string name="preference_category_advanced">進階</string>
+
+    <!-- Preference for studies -->
+    <string name="preference_studies">使用者研究</string>
 
     <!-- Preference for studies summary-->
     <string name="preference_studies_summary">Firefox 可能周不時會安裝同展開研究。</string>
