@@ -1205,6 +1205,8 @@
     <string name="onboarding_account_sign_in_header_1">Njëkohësoni Firefox-in mes pajisjesh</string>
     <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
     <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">Njëkohësoni %1$s nëpër pajisje</string>
+    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <string name="onboarding_manual_sign_in_description_2">Sillni faqerojtës, historik dhe fjalëkalime te %1$s në këtë pajisje.</string>
     <!-- text for the button to manually sign into Firefox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Regjistrohuni</string>
     <!-- text to display in the snackbar once account is signed-in -->
@@ -1213,6 +1215,8 @@
     <string name="onboarding_tracking_protection_header_3">Privatësi gjithnjë në punë</string>
     <!-- text for the tracking protection card description. 'Firefox' intentionally hardcoded here -->
     <string moz:RemovedIn="99" name="onboarding_tracking_protection_description_3" tools:ignore="UnusedResources">Firefox-i ndal automatikisht shoqëri t’ju ndjekin fshehtazi nëpër internet.</string>
+    <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
+    <string name="onboarding_tracking_protection_description_4">%1$s i pengon vetvetiu shoqëritë t’ju ndjekin ju fshehtas nëpër internet.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Standarde (parazgjedhje)</string>
     <!-- text for standard blocking option button description -->
@@ -1552,6 +1556,8 @@
     <string name="credit_cards_menu_delete_card">Fshije kartën</string>
     <!-- The text for the "Delete card" button for deleting a credit card -->
     <string name="credit_cards_delete_card_button">Fshije kartën</string>
+    <!-- The text for the confirmation message of "Delete card" dialog -->
+    <string name="credit_cards_delete_dialog_confirmation">Jeni i sigurt se doni të fshihet kjo kartë krediti?</string>
     <!-- The text for the positive button on "Delete card" dialog -->
     <string name="credit_cards_delete_dialog_button">Fshije</string>
     <!-- The title for the "Save" menu item for saving a credit card -->
@@ -1668,6 +1674,10 @@
     <string moz:RemovedIn="101" name="browser_menu_add_to_top_sites" tools:ignore="UnusedResources">Shtoje te sajtet kryesuese</string>
     <!-- Browser menu button that removes a top site from the home fragment -->
     <string moz:RemovedIn="101" name="browser_menu_remove_from_top_sites" tools:ignore="UnusedResources">Hiqe nga sajtet kryesuese</string>
+    <!-- Browser menu button that adds a shortcut to the home fragment -->
+    <string name="browser_menu_add_to_shortcuts">Shtoje te shkurtore</string>
+    <!-- Browser menu button that removes a shortcut from the home fragment -->
+    <string name="browser_menu_remove_from_shortcuts">Hiqe prej shkurtoresh</string>
     <!-- text shown before the issuer name to indicate who its verified by, parameter is the name of
      the certificate authority that verified the ticket-->
     <string name="certificate_info_verified_by">Verifikuar Nga: %1$s</string>
@@ -1727,6 +1737,8 @@
     <string name="synced_tabs_enable_tab_syncing">Ju lutemi, aktivizoni njëkohësim skedash.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
     <string name="synced_tabs_no_tabs">S’keni ndonjë skedë të hapur te Firefox-i në pajisje tuajat të tjera.</string>
+    <!-- Text displayed when user has no tabs that have been synced. The first parameter is the name of the application.-->
+    <string moz:RemovedIn="100" name="synced_tabs_no_tabs_2" tools:ignore="UnusedResources">S’keni ndonjë skedë të hapur në %1$s në pajisjet tuaja të tjera.</string>
     <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Shihni një listë skedash nga pajisje tuajat të tjera.</string>
     <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
@@ -1735,11 +1747,20 @@
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">S’ka skeda të hapura</string>
 
+    <!-- Content description for expanding a group of synced tabs. -->
+    <string name="synced_tabs_expand_group">Zgjeroje grupin e skedave të njëkohësuara</string>
+    <!-- Content description for collapsing a group of synced tabs. -->
+    <string name="synced_tabs_collapse_group">Tkurre grupin e skedave të njëkohësuara</string>
+
     <!-- Top Sites -->
     <!-- Title text displayed in the dialog when top sites limit is reached. -->
     <string moz:RemovedIn="101" name="top_sites_max_limit_title" tools:ignore="UnusedResources">U mbërrit te kufi sajtesh</string>
+    <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
+    <string name="shortcut_max_limit_title">U mbërrit në kufi shkurtoresh</string>
     <!-- Content description text displayed in the dialog when top sites limit is reached. -->
     <string moz:RemovedIn="101" name="top_sites_max_limit_content_2" tools:ignore="UnusedResources">Që të shtoni një sajt të ri kryesues, hiqni një të tillë. Prekeni dhe mbajeni të shtypur sajtin dhe përzgjidhni Hiqe.</string>
+    <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
+    <string name="shortcut_max_limit_content">Që të shtoni një shkurtore të re, hiqni një të tillë. Prekeni dhe mbajeni të shtypur sajtin dhe përzgjidhni Hiqe.</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">OK, e mora vesh</string>
 
@@ -1749,7 +1770,9 @@
 	<string name="top_sites_rename_dialog_title">Emër</string>
 	<!-- Hint for renaming title of a top site -->
 	<string moz:RemovedIn="101" name="top_site_name_hint" tools:ignore="UnusedResources">Emër sajti kryesor</string>
-    <!-- Button caption to confirm the renaming of the top site. -->
+    <!-- Hint for renaming title of a shortcut -->
+    <string name="shortcut_name_hint">Emër shkurtoreje</string>
+	<!-- Button caption to confirm the renaming of the top site. -->
 	<string name="top_sites_rename_dialog_ok">OK</string>
 	<!-- Dialog button text for canceling the rename top site prompt. -->
 	<string name="top_sites_rename_dialog_cancel">Anuloje</string>
@@ -1825,6 +1848,8 @@
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Mësoni më tepër</string>
 
+    <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off.-->
+    <string name="experiments_snackbar">Që të dërgohen të dhëna, aktivizoni telemetrinë.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Kalo te rregullimet</string>
 </resources>
