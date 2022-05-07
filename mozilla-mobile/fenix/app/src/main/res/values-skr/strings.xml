@@ -2,12 +2,27 @@
 <resources xmlns:tools="http://schemas.android.com/tools" xmlns:moz="http://mozac.org/tools">
 
 
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_5">نجی %s</string>
+    <!-- App name for private browsing mode. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="app_name_private_4">%s (نجی)</string>
+
+    <!-- Home Fragment -->
+    <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
+    <string name="content_description_menu">ٻیاں آپشناں</string>
     <!-- Label of editable text in create collection dialog for naming a new collection  -->
     <string name="tab_tray_add_new_collection_name">ناں</string>
 
     <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
     <string name="recently_saved_menu_item_remove">ہٹاؤ</string>
 
+    <!-- Text for the positive action button -->
+    <string name="open_in_app_cfr_positive_button_text">ترتیباں تے ون٘ڄو</string>
+    <!-- Text for the negative action button -->
+    <string name="open_in_app_cfr_negative_button_text">فارغ کرو</string>
+
+    <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
+    <string name="camera_permissions_needed_positive_button_text">ترتیباں تے ون٘ڄو</string>
     <!-- Text for the negative action button to dismiss the dialog. -->
     <string name="camera_permissions_needed_negative_button_text">فارغ کرو</string>
 
@@ -17,6 +32,15 @@
     <string name="tab_tray_inactive_auto_close_button_content_description">بند کرو</string>
 
 
+    <!-- Home screen icons - Long press shortcuts -->
+    <!-- Shortcut action to open new tab -->
+    <string name="home_screen_shortcut_open_new_tab_2">نواں ٹیب</string>
+
+    <!-- Button text for showing all the tabs in the tabs tray -->
+    <string name="recent_tabs_show_all">سارے ݙکھاؤ</string>
+    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
+        %d is a placeholder for the number of sites in the group. This number will always be more than one. -->
+    <string name="recent_tabs_search_term_count_2">%d سائٹاں</string>
     <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
          in the Recently visited section -->
     <string name="recent_tab_menu_item_remove">ہٹاؤ</string>
@@ -51,6 +75,35 @@
     <!-- Browser menu toggle that requests a desktop site -->
     <string name="browser_menu_desktop_site">ڈیسک ٹاپ سائٹ</string>
 
+    <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
+    <string name="browser_menu_install_on_homescreen">انسٹال کرو</string>
+    <!-- Browser menu button that opens the find in page menu -->
+    <string name="browser_menu_find_in_page">ورقے وچ لبھو</string>
+    <!-- Browser menu button that saves the current tab to a collection -->
+    <string name="browser_menu_save_to_collection_2">مجموعے وچ محفوظ کرو</string>
+    <!-- Browser menu button that open a share menu to share the current site -->
+    <string name="browser_menu_share">شیئر</string>
+    <!-- Browser menu label for adding a bookmark -->
+    <string name="browser_menu_add">شامل کرو</string>
+    <!-- Browser menu label for editing a bookmark -->
+    <string name="browser_menu_edit">تبدیلی کرو</string>
+
+    <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_allow_button">اجازت ݙیوو</string>
+    <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
+    <string name="search_suggestions_onboarding_do_not_allow_button">اجازت نہ ݙیوو</string>
+    <!-- Search suggestion onboarding hint Learn more link text -->
+    <string moz:RemovedIn="100" name="search_suggestions_onboarding_learn_more_link" tools:ignore="UnusedResources">ٻیا سِکھو</string>
+    <!-- Search engine suggestion title text. The first parameter is the name of teh suggested engine-->
+    <string name="search_engine_suggestions_title">%s ڳولو</string>
+    <!-- Menu option in the search selector menu to open the search settings -->
+    <string name="search_settings_menu_item">ڳولݨ ترتیباں</string>
+
+    <!-- Text preview for smaller sized widgets -->
+    <string name="search_widget_text_short">ڳولو</string>
+    <!-- Text preview for larger sized widgets -->
+    <string name="search_widget_text_long">ویب ڳولو</string>
+
     <!-- Preferences -->
     <!-- Title for the settings page-->
     <string name="settings">ترتیباں</string>
@@ -58,6 +111,8 @@
     <string name="preferences_category_general">عمومی</string>
     <!-- Preference category for all links about Fenix -->
     <string name="preferences_category_about">تعارف</string>
+    <!-- Preference for settings related to Search -->
+    <string name="preferences_search">ڳولو</string>
     <!-- Summary of tracking protection preference if tracking protection is set to on -->
     <string name="preferences_https_only_on">چالو</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
@@ -81,6 +136,8 @@
     <!-- Preference for language -->
     <string name="preferences_language">زبان</string>
 
+    <!-- Preference for account settings -->
+    <string name="preferences_account_settings">کھاتہ ترتیباں</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">ایڈ ــ آن</string>
 
@@ -111,8 +168,13 @@
     <string name="preferences_sign_out">سائن آؤٹ</string>
     <!-- Preference displays and allows changing current FxA device name -->
     <string name="preferences_sync_device_name">ڈیوائس ناں</string>
+    <!-- Preference for syncing credit cards -->
+    <string name="preferences_sync_credit_cards">کریڈٹ کارڈز</string>
     <!-- Preference for syncing addresses -->
     <string name="preferences_sync_address">پتے</string>
+
+    <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
+    <string name="exceptions_empty_message_learn_more_link">ٻیا سِکھو</string>
 
     <!-- Toolbar Preferences -->
     <!-- Preference for using top toolbar -->
@@ -147,6 +209,9 @@
     %d is a placeholder for the number of sites in the group. -->
     <string name="history_search_group_sites">%d سائٹاں</string>
 
+    <!-- Tab Management -->
+    <!-- Title of preference for tabs management -->
+    <string name="preferences_tabs">ٹیباں</string>
     <!-- Option for a list tab view -->
     <string name="tab_view_list">تندیر</string>
     <!-- Option for a grid tab view -->
