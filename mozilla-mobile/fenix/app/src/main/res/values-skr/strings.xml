@@ -597,13 +597,33 @@
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
     <string name="download_delete_multiple_items_snackbar_1">ڈاؤن لوڈ ہٹا ݙتے ڳئے</string>
+    <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
+    <string name="download_delete_single_item_snackbar">%1$s ہٹ ڳیا</string>
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message_1">ڈاؤن لوڈ تھیاں فائلاں کوئی کائنی</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of downloads selected -->
+    <string name="download_multi_select_title">%1$d چُݨیج ڳئے</string>
     <!-- Text for the button to remove a single download item -->
     <string name="download_delete_item_1">ہٹاؤ</string>
 
 
+    <!-- Crashes -->
+    <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="tab_crash_title_2">افسوس۔ ایں ورقے کوں %1$s لوڈ کائنی کر سڳدا۔</string>
+    <!-- Send crash report checkbox text on the tab crash page -->
+    <string name="tab_crash_send_report">موزلّا کوں کریش رپوٹ بھیڄو</string>
     <!-- Close tab button text on the tab crash page -->
     <string name="tab_crash_close">ٹیب بند کرو</string>
 
+    <!-- Restore tab button text on the tab crash page -->
+    <string name="tab_crash_restore">ٹیب بحال کرو</string>
+
+    <!-- Bookmarks -->
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">بھلا تہاکوں پک ہے جو تساں ایہ فولڈر مٹاوݨ چاہندے ہو؟</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s چݨے ہوئے آئٹماں کوں مٹیسی۔</string>
     <!-- Text for the cancel button on delete bookmark dialog -->
     <string name="bookmark_delete_negative">منسوخ</string>
     <!-- Screen title for adding a bookmarks folder -->
@@ -654,6 +674,8 @@
     <string name="bookmark_deletion_snackbar_message">%1$s مٹ ڳیا</string>
     <!-- Bookmark snackbar message on deleting multiple bookmarks not including folders-->
     <string name="bookmark_deletion_multiple_snackbar_message_2">نشانیاں مٹ ڳیاں</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_3">چُݨے ہوئے فولڈر مٹیندا پئے</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">اݨ کیتا کرو</string>
     <!-- Text for the button to search all bookmarks -->
@@ -700,6 +722,10 @@
     <string name="tracking_protection_on">چالو</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">بند</string>
+    <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
+    <string name="preference_option_autoplay_allowed2">آڈیو تے وڈیو دی اجازت ݙیوو</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
+    <string name="quick_setting_option_autoplay_allowed">آڈیو تے وڈیو دی اجازت ݙیوو</string>
     <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">صرف آڈیو بلاک کرو</string>
     <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
@@ -734,6 +760,20 @@
     <string name="create_collection_select_all">سارے چݨو</string>
     <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
     <string name="create_collection_deselect_all">سارے اݨ چݨے کرو</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">محفوظ کرݨ کیتے ٹیباں چُݨو</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">%d ٹیباں چُݨیج ڳیاں</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">%d ٹیب چُݨیج ڳئی</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">ٹیباں محفوظ تھی ڳیاں!</string>
+    <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+    <string name="create_collection_tabs_saved_new_collection">مجموعہ محفوظ تھی ڳیا!</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">ٹیب محفوظ تھی ڳئی!</string>
     <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
     <string name="create_collection_close">بند کرو</string>
     <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
@@ -755,15 +795,26 @@
         "Share" button. Opens the share menu when pressed. -->
     <string name="share_button_content_description">شیئر</string>
 
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">ڈیوائس تے بھیڄو</string>
     <!-- Sub-header in the dialog to share a link to an app from the full list -->
     <string name="share_link_all_apps_subheader">سارے عمل</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
     <string name="share_link_recent_apps_subheader">حالیہ ورتیل</string>
+    <!-- Text for the copy link action in the share screen. -->
+    <string name="share_copy_link_to_clipboard">کلپ بورڈ تے نقل کرو</string>
+    <!-- Toast shown after copying link to clipboard -->
+    <string name="toast_copy_link_to_clipboard">کلپ بورڈ تے نقل تھی ڳیا</string>
     <!-- Text displayed when sync is offline and cannot be accessed -->
     <string name="sync_offline">آف لائن</string>
 
+    <!-- An option to connect additional devices -->
+    <string name="sync_connect_device">ٻئی ڈیوائس نال کنکٹ کرو</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">سمنجھ گھدے</string>
+
+    <!-- Share error message -->
+    <string name="share_error_snackbar">ایہ ایپ تے شیئر کائنی کر سڳدا</string>
 
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">مارکیٹنگ</string>
