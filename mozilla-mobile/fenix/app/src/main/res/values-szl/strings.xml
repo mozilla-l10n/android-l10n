@@ -676,6 +676,15 @@
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Przewiydz sie wiyncyj</string>
 
+    <!-- Dialog message shown after removing a study -->
+    <string name="studies_restart_app">Aplikacyjo sie zawrzi, coby przidać zmiany</string>
+    <!-- Dialog button to confirm the removing a study. -->
+    <string name="studies_restart_dialog_ok">OK</string>
+    <!-- Dialog button text for canceling removing a study. -->
+    <string name="studies_restart_dialog_cancel">Pociep</string>
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">Zawiyranie aplikacyje, coby przidać zmiany…</string>
+
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Ôtwarte karty</string>
@@ -697,6 +706,8 @@
     <string name="tab_tray_menu_item_share">Udostympnij wszyskie karty</string>
     <!-- Text shown in the menu to view recently closed tabs -->
     <string name="tab_tray_menu_recently_closed">Niydowno zawarte karty</string>
+    <!-- Text shown in the tabs tray inactive tabs section -->
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Niydowno zawarte</string>
     <!-- Text shown in the menu to view account settings -->
     <string name="tab_tray_menu_account_settings">Sztalōnki kōnta</string>
     <!-- Text shown in the menu to view tab settings -->
@@ -744,6 +755,12 @@
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (prywatny tryb)</string>
 
+    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
+    <string name="tab_tray_header_title_1">Inksze karty</string>
+
+    <!-- History -->
+    <!-- Text for the button to search all history -->
+    <string name="history_search_1">Wkludź szukane wyrazy</string>
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Skasuj historyjo</string>
     <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
@@ -767,6 +784,11 @@
     <string name="history_older">Starsze</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Niy ma sam żodnyj historyje</string>
+
+    <!-- Text for the button inside History screen that opens Synced History screen. History that is coming from other devices -->
+    <string name="history_synced_from_other_devices">Synchrōnizowane z inkszych maszin</string>
+    <!-- The page title for browsing history coming from other devices. -->
+    <string name="history_from_other_devices">Z inkszych maszin</string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -798,6 +820,8 @@
     <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
     <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s skasuje ôbrane elymynty.</string>
 
+    <!-- Text for the cancel button on delete bookmark dialog -->
+    <string name="bookmark_delete_negative">Pociep</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Przidej katalog</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
@@ -853,6 +877,9 @@
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">COFNIJ AKCYJO</string>
 
+    <!-- Text for the button to search all bookmarks -->
+    <string name="bookmark_search">Wkludź szukane wyrazy</string>
+
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">Idź do sztalōnkōw</string>
@@ -865,8 +892,16 @@
     <!-- Button label for clearing all the information of site permissions-->
     <string name="clear_permissions">Wypucuj dozwolyństwa</string>
 
+    <!-- Text for the OK button on Clear permissions dialog -->
+    <string name="clear_permissions_positive">OK</string>
+    <!-- Text for the cancel button on Clear permissions dialog -->
+    <string name="clear_permissions_negative">Pociep</string>
     <!-- Button label for clearing a site permission-->
     <string name="clear_permission">Wypucuj dozwolyństwo</string>
+    <!-- Text for the OK button on Clear permission dialog -->
+    <string name="clear_permission_positive">OK</string>
+    <!-- Text for the cancel button on Clear permission dialog -->
+    <string name="clear_permission_negative">Pociep</string>
     <!-- Button label for clearing all the information on all sites-->
     <string name="clear_permissions_on_all_sites">Wypucuj dozwolyństwa wszyskich serwerōw</string>
     <!-- Preference for altering video and audio autoplay for all websites -->
@@ -879,6 +914,12 @@
     <string name="preference_phone_feature_location">Plac</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">Powiadōmiynie</string>
+    <!-- Preference for altering the persistent storage access for all websites -->
+    <string name="preference_phone_feature_persistent_storage">Ôbstōno pamiyńć</string>
+    <!-- Preference for altering the storage access setting for all websites -->
+    <string name="preference_phone_feature_cross_origin_storage_access">Cookies, co śledzōm miyndzy strōnami</string>
+    <!-- Preference for altering the EME access for all websites -->
+    <string name="preference_phone_feature_media_key_system_access">Zawartości brōniōno ôd DRM</string>
     <!-- Label that indicates that a permission must be asked always -->
     <string name="preference_option_phone_feature_ask_to_allow">Pytej ô zgoda</string>
     <!-- Label that indicates that a permission must be blocked -->
@@ -914,10 +955,90 @@
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">Wyłōnczōne</string>
 
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">Załōnczōne</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">Wyłōnczōne</string>
+
     <!-- Collections -->
     <!-- Collections header on home fragment -->
     <string name="collections_header">Kolekcyje</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the collection menu when pressed -->
     <string name="collection_menu_button_content_description">Myni kolekcyjōw</string>
+
+    <!-- Label to describe what collections are to a new user without any collections -->
+    <string name="no_collections_description2">Zbiyrej rzeczy, ô kere stoisz.\nTrzimej społym podobne szukania, strōny a karty, coby niyskorzij mieć do nich snadniyjszy dostymp.</string>
+    <!-- Title for the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_tabs">Ôbier karty</string>
+    <!-- Title for the "select collection" step of the collection creator -->
+    <string name="create_collection_select_collection">Ôbier kolekcyjo</string>
+    <!-- Title for the "name collection" step of the collection creator -->
+    <string name="create_collection_name_collection">Dej miano kolekcyji</string>
+    <!-- Button to add new collection for the "select collection" step of the collection creator -->
+    <string name="create_collection_add_new_collection">Przidej nowo kolekcyjo</string>
+    <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_select_all">Ôbier wszysko</string>
+    <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
+    <string name="create_collection_deselect_all">Pociep ôbranie</string>
+    <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
+    <string name="create_collection_save_to_collection_empty">Ôbier karty do spamiyntanio</string>
+    <!-- Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+     %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tabs_selected">Ôbrane karty: %d</string>
+    <!-- Text to show users they have one tab selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="create_collection_save_to_collection_tab_selected">Ôbrane karty: %d</string>
+    <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
+    <string name="create_collection_tabs_saved">Karty sōm spamiyntane!</string>
+    <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+    <string name="create_collection_tabs_saved_new_collection">Kolekcyjo je spamiyntano!</string>
+    <!-- Text shown in snackbar when one tab has been saved in a collection -->
+    <string name="create_collection_tab_saved">Karta je spamiyntano!</string>
+    <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
+    <string name="create_collection_close">Zawrzij</string>
+    <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator-->
+    <string name="create_collection_save">Spamiyntej</string>
+    <!-- Snackbar action to view the collection the user just created or updated -->
+    <string name="create_collection_view">Pokoż</string>
+    <!-- Text for the OK button from collection dialogs -->
+    <string name="create_collection_positive">OK</string>
+    <!-- Text for the cancel button from collection dialogs -->
+    <string name="create_collection_negative">Pociep</string>
+
+    <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
+    <string name="create_collection_default_name">Kolekcyjo %d</string>
+
+    <!-- Share -->
+    <!-- Share screen header -->
+    <string name="share_header_2">Udostympnij</string>
+    <!-- Content description (not visible, for screen readers etc.):
+        "Share" button. Opens the share menu when pressed. -->
+    <string name="share_button_content_description">Udostympnij</string>
+    <!-- Sub-header in the dialog to share a link to another sync device -->
+    <string name="share_device_subheader">Poślij na maszina</string>
+    <!-- Sub-header in the dialog to share a link to an app from the full list -->
+    <string name="share_link_all_apps_subheader">Wszyske akcyje</string>
+    <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
+    <string name="share_link_recent_apps_subheader">Niydowno używane</string>
+    <!-- Text for the copy link action in the share screen. -->
+    <string name="share_copy_link_to_clipboard">Kopiuj do kamerlika</string>
+    <!-- Toast shown after copying link to clipboard -->
+    <string name="toast_copy_link_to_clipboard">Skopiowane do kamerlika</string>
+    <!-- An option from the three dot menu to into sync -->
+    <string name="sync_menu_sign_in">Wloguj sie do synchrōnizacyje</string>
+    <!-- An option from the share dialog to sign into sync -->
+    <string name="sync_sign_in">Wloguj sie do synchrōnizacyje</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">Poślij na wszyskie masziny</string>
+    <!-- An option from the share dialog to reconnect to sync -->
+    <string name="sync_reconnect">Połōncz zaś ze synchrōnizacyjōm</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
+    <string name="sync_offline">Offline</string>
+    <!-- An option to connect additional devices -->
+    <string name="sync_connect_device">Połōncz inkszo maszina</string>
+    <!-- The dialog text shown when additional devices are not available -->
+    <string name="sync_connect_device_dialog">Coby posłać karta, zaloguj sie do Firefoxa aby na jednyj inkszyj maszinie.</string>
+    <!-- Confirmation dialog button -->
+    <string name="sync_confirmation_button">Rozumia</string>
 
     </resources>
