@@ -1209,12 +1209,18 @@
     <string name="onboarding_header">Bonvenon al %s!</string>
     <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
     <string name="onboarding_account_sign_in_header_1">Speguli Firefox inter aparatoj</string>
+    <!-- text for the Firefox account onboarding sign in card header. The first parameter is the name of the application.-->
+    <string moz:RemovedIn="100" name="onboarding_account_sign_in_header_2" tools:ignore="UnusedResources">Speguli %1$s inter aparatoj</string>
+    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
+    <string name="onboarding_manual_sign_in_description_2">Porti legosignojn, historion kaj pasvortojn al %1$s en tiu ĉi aparato.</string>
     <!-- text for the button to manually sign into Firefox account. -->
     <string name="onboarding_firefox_account_sign_in_1">Registriĝi</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Spegulado estas ŝaltita</string>
     <!-- text for the tracking protection onboarding card header -->
     <string name="onboarding_tracking_protection_header_3">Privateco ĉiam aktiva</string>
+    <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
+    <string name="onboarding_tracking_protection_description_4">%1$s aŭtomate evitas ke entreprenoj sekrete sekvu vin tra la teksaĵo.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Norma</string>
     <!-- text for standard blocking option button description -->
@@ -1381,6 +1387,12 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Tio ĉi forigas kuketojn kreitaj de konataj spuradaj retejoj.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">La sube markitaj spuriloj estis parte malblokitaj en tiu ĉi paĝo ĉar vi interagis kun ili *.</string>
+    <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
+    <string name="preference_etp_smartblock_learn_more">Pli da informo</string>
+
     <!-- About page link text to open support link -->
     <string name="about_support">Helpo</string>
     <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1433,6 +1445,17 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Neniam konservi</string>
 
+    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill2">Aŭtomata plenigo de %1$s</string>
+    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">Plenigi kaj konservi nomojn de uzanto kaj pasvortojn en retejoj dum vi uzas %1$s.</string>
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill">Aŭtomata plenigo en aliaj programoj</string>
+    <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill_description">Plenigi nomojn de uzanto kaj pasvortojn en aliaj programoj en via aparato.</string>
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">Aldoni legitimilon</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Speguli legitimilojn</string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
@@ -1472,6 +1495,8 @@
     <string name="saved_login_copy_username">Kopii nomon de uzanto</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">Viŝi nomon de uzanto</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Viŝi nomon de servilo</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
     <string name="saved_login_open_site">Malfermi retejon en retumilo</string>
     <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -1503,6 +1528,11 @@
     <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
     <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Ordigi menuon de legitimiloj</string>
 
+    <!-- Autofill -->
+    <!-- Preference and title for managing the autofill settings -->
+    <string name="preferences_autofill">Aŭtomata plenigo</string>
+    <!-- Preference and title for managing the settings for addresses -->
+    <string name="preferences_addresses">Adresoj</string>
     <!-- Preference and title for managing the settings for credit cards -->
     <string name="preferences_credit_cards">Kreditkartoj</string>
     <!-- Preference for saving and autofilling credit cards -->
@@ -1517,6 +1547,10 @@
     <string name="preferences_credit_cards_add_credit_card">Aldoni kreditkarton</string>
     <!-- Preference option for managing saved credit cards -->
     <string name="preferences_credit_cards_manage_saved_cards">Administri konservitajn kreditkartojn</string>
+    <!-- Preference option for adding an address -->
+    <string name="preferences_addresses_add_address">Aldoni adreson</string>
+    <!-- Preference option for managing saved addresses -->
+    <string name="preferences_addresses_manage_addresses">Administri adresojn</string>
     <!-- Title of the "Add card" screen -->
     <string name="credit_cards_add_card">Aldoni kreditkarton</string>
     <!-- Title of the "Edit card" screen -->
@@ -1536,6 +1570,10 @@
     <string name="credit_cards_menu_delete_card">Forigi kreditkarton</string>
     <!-- The text for the "Delete card" button for deleting a credit card -->
     <string name="credit_cards_delete_card_button">Forigi kreditkarton</string>
+    <!-- The text for the confirmation message of "Delete card" dialog -->
+    <string name="credit_cards_delete_dialog_confirmation">Ĉu vi certe volas forigi tiun ĉi kreditkarton?</string>
+    <!-- The text for the positive button on "Delete card" dialog -->
+    <string name="credit_cards_delete_dialog_button">Forigi</string>
     <!-- The title for the "Save" menu item for saving a credit card -->
     <string name="credit_cards_menu_save">Konservi</string>
     <!-- The text for the "Save" button for saving a credit card -->
@@ -1564,6 +1602,27 @@
     <string name="credit_cards_biometric_prompt_message_pin">Malbloki vian aparaton</string>
     <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored credit card information -->
     <string name="credit_cards_biometric_prompt_unlock_message">Malŝlosu por uzi la konservitan informon pri kreditkartojn</string>
+
+    <!-- Title of the "Add address" screen -->
+    <string name="addresses_add_address">Aldoni adreson</string>
+    <!-- Title of the "Edit address" screen -->
+    <string name="addresses_edit_address">Modifi adreson</string>
+    <!-- Title of the "Manage addresses" screen -->
+    <string name="addresses_manage_addresses">Administri adresojn</string>
+    <!-- The header for the full name of an address -->
+    <string moz:removedIn="102" name="addresses_full_name" tools:ignore="UnusedResources">Kompleta nomo</string>
+    <!-- The header for the first name of an address -->
+    <string name="addresses_first_name">Persona nomo</string>
+    <!-- The header for the middle name of an address -->
+    <string name="addresses_middle_name">Dua nomo</string>
+    <!-- The header for the last name of an address -->
+    <string name="addresses_last_name">Familia nomo</string>
+    <!-- The header for the street address of an address -->
+    <string name="addresses_street_address">Strata adreso</string>
+    <!-- The header for the city of an address -->
+    <string name="addresses_city">Urbo</string>
+    <!-- The header for the state of an address -->
+    <string name="addresses_state">Ŝtato</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Aldoni serĉilon</string>
