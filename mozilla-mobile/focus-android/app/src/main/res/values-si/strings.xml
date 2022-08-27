@@ -286,6 +286,7 @@
     <string name="preference_privacy_block_social">සමාජ ලුහුබැඳීම් අවහිරය</string>
     <string name="preference_privacy_block_social_summary">ඔබගේ ගොඩවැදීම් ලුහුබැඳීමට හා බෙදාගැනීමේ බොත්තම් වැනි දෑ පෙන්වීමට අඩවි වෙත කාවද්දා තිබේ</string>
     <string name="preference_privacy_block_content">අන් අන්තර්ගත ලුහුබැඳීම් අවහිරය</string>
+    <string name="preference_privacy_block_content_summary2">සබල කිරීමෙන් ඇතැම් පිටු අනපේක්‍ෂිත ලෙස හැසිරීමට හේතු වනු ඇත</string>
     <string name="preference_privacy_category_cookies">දත්තකඩ අවහිරය</string>
 
     <!-- Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
@@ -300,12 +301,33 @@
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">යෙදුම අගුළු ඇරීමට ඇඟිලි සටහන</string>
 
+    <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
+        open when the app was last run to ensure that only the phone's owner can view a previous session.
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string name="preference_security_biometric_summary2">ඔබ කෙටිමං එක් කර ඇත්නම් හෝ අඩවියක් දැනටමත් %s තුළ විවෘතව තිබෙන විට ඇඟිලි සටහන භාවිතයෙන් අගුලු හරින්න.</string>
+
+    <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
+         and prevents the user from taking screenshots or casting the app to other displays. -->
+    <string name="preference_privacy_secure_mode">රහසිගත</string>
+    <!-- Preference Summary: Stealth mode (previously "Secure mode") is a setting that prevents the
+     app's content (in our case especially the content of webpages) to show up in the "recent apps"
+     screen. Additionally Android will prevent the user from taking screenshots or casting the app
+     to other displays. -->
+    <string name="preference_privacy_stealth_summary">යෙදුම් මාරු කිරීමේදී පිටු සඟවන්න සහ තිරසේයා ගැනීම අවහිර කරන්න.</string>
+
     <string name="preference_category_security">ආරක්‍ෂාව</string>
 
     <string name="preference_category_performance">කාර්ය සාධනය</string>
     <string name="preference_performance_block_webfonts">වියමන අකුරු අවහිරය</string>
 
+    <!-- This text is shown below the setting for disabling web fonts. Some websites use icons/images from a font and those do not show up if fonts are blocked.-->
+    <string name="preference_performance_block_webfonts_summary">නිරූපක හෝ රූප මඟහැරීමට හේතු විය හැකිය</string>
+
     <string name="preference_performance_block_javascript">ජාවාස්ක්‍රිප්ට් අවහිරය</string>
+
+    <!-- This text is shown below setting for disabling JavaScript. Some websites may not work correctly when JavaScript is disabled -->
+    <string name="preference_performance_block_javascript_summary">පිටු වේගයෙන් පූරණය වන නමුත් අනපේක්‍ෂිත ලෙස හැසිරිය හැකිය</string>
 
     <!-- This preference does not set Focus as the default browser but instead links to Android's
      "default apps" settings screen or if not supported by this Android version to a SUMO page describing
@@ -365,6 +387,11 @@
 
     <string name="search_add_error_empty_search">සෙවුම් පදය යොදන්න</string>
 
+    <string name="search_add_error_format">සෙවුම් තන්තු උදාහරණ ආකෘතියට ගැළපෙන බව පරීක්‍ෂා කරන්න</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Clear text in URL bar -->
+    <string name="content_description_clear_input">ආදානය මකන්න</string>
+
     <!-- Content description (not visible, for screen readers etc.): Clicking on the website overlay
      while in typing mode will dismiss and go back to the browser. This text will be read when the
      overlay if focused. See https://github.com/mozilla-mobile/focus-android/issues/50 -->
@@ -410,6 +437,9 @@
     <!-- Content description (not visible, for screen readers etc.): Stop loading the current website. This button will turn into the refresh button once loading has been completed (see content_description_reload) -->
     <string name="content_description_stop">අඩවිය පූරණය වීම නවතන්න</string>
 
+    <!-- Content description (not visible, for screen readers etc.): Custom Tab exit button - closes the custom tab and returns to the previous app. -->
+    <string name="content_description_customtab_exit">කලින් යෙදුමට ආපසු</string>
+
     <!-- Content description (not visible, for screen readers etc.): This is the description for the ImageView in the menu that displays
          the number of trackers blocked for the current session -->
     <string name="content_description_trackers_blocked">අවහිර කළ ලුහුබැඳීම් ගණන</string>
@@ -420,6 +450,12 @@
 
     <string name="your_rights">ඔබගේ අයිතීන්</string>
 
+    <string name="external_app_prompt_title">අන් යෙදුමක සබැඳිය අරින්න</string>
+    <!-- This string is shown when the user has clicked a link that needs to be opened in a different app.
+         Argument 2 is the external app name, argument 1 is our name (i.e. Firefox Focus, or Firefox Klar). -->
+    <string name="external_app_prompt">මෙම සබැඳිය %2$s හි විවෘත කිරීමට %1$s හැර යාමට හැකිය.</string>
+    <!-- This text is the title of a dialog shown if no app could be found for a custom link protocol. -->
+    <string name="external_app_prompt_no_app_title">සබැඳිය විවෘත කළ හැකි යෙදුමක් සොයන්න</string>
     <!-- This label is shown above a list of apps that can be used to open a given link -->
     <string name="external_multiple_apps_matched_exit">පෞද්. පිරික්සුමෙන් පිටවන්නද?</string>
 
