@@ -34,6 +34,9 @@
     <!-- Menu item: Add the current site as a shortcut on the Home screen -->
     <string name="menu_add_to_shortcuts">කෙටිමං වෙත යොදන්න</string>
 
+    <!-- Menu item: Remove the current site as a shortcut from the Home screen -->
+    <string name="menu_remove_from_shortcuts">කෙටිමං වෙතින් ඉවත් කරන්න</string>
+
     <!-- Menu item: Shows information about features and changes that are new to this version -->
     <string name="menu_whats_new">අළුත් දෑ</string>
     <string name="menu_settings">සැකසුම්</string>
@@ -259,6 +262,11 @@
 
     <string name="search_add_error_empty_search">සෙවුම් පදය යොදන්න</string>
 
+    <!-- Content description (not visible, for screen readers etc.): Clicking on the website overlay
+     while in typing mode will dismiss and go back to the browser. This text will be read when the
+     overlay if focused. See https://github.com/mozilla-mobile/focus-android/issues/50 -->
+    <string name="content_description_dismiss_input">ඉවතලන්න</string>
+
     <!-- Content description (not visible, for screen readers etc.): Erase button: Erase the browsing
      history and go back to the home screen. -->
     <string name="content_description_erase">පිරික්සුම් ඉතිහාසය මකන්න</string>
@@ -308,6 +316,14 @@
     <string name="content_description_blocking_switch">ලුහුබැඳීම් අවහිරය</string>
 
     <string name="your_rights">ඔබගේ අයිතීන්</string>
+
+    <!-- Snackbar action to immediately open the successfully downloaded file. -->
+    <string name="download_snackbar_open">අරින්න</string>
+
+    <string name="error_hostLookup_title">සේවාදායකය හමු නොවුණි</string>
+
+    <!-- Onboarding: Start browsing -->
+    <string name="onboarding_start_browsing">පිරික්සුම අරඹන්න</string>
 
     <string name="firstrun_close_button">හරි, තේරුණා!</string>
     <string name="firstrun_skip_button">මඟහරින්න</string>
@@ -393,11 +409,23 @@
     <!-- Preference for altering the EME access for all websites -->
     <string name="preference_phone_feature_media_key_system_access">DRM-පාලිත අන්තර්ගතය</string>
 
+    <!-- Preference for block autoplay audio only-->
+    <string name="preference_block_autoplay_audio_only">හඬ පමණක් අවහිරය</string>
+
     <!-- Preference summary for block autoplay audio only-->
     <string name="preference_block_autoplay_audio_only_summary">නිර්දේශිත</string>
 
+    <!-- Preference for block autoplay audio and video-->
+    <string name="preference_block_autoplay_audio_video">ශ්‍රව්‍ය සහ දෘශ්‍ය අවහිරය</string>
+
+    <!-- Preference for studies -->
+    <string name="preference_studies">අධ්‍යන</string>
+
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">තව දැනගන්න</string>
+
+    <!-- Dialog message shown when some changes are made on studies -->
+    <string name="studies_restart_app">වෙනස්කම් යෙදීම සඳහා යෙදුම ඉවත් වනු ඇත</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">ඉවත් කරන්න</string>
@@ -408,9 +436,22 @@
     <!-- Title of the completed section on the studies list -->
     <string name="studies_completed">සම්පූර්ණයි</string>
 
+    <!-- Preference to enable remote debugging of the app via USB or Wi-Fi -->
+    <string name="preference_remote_debugging">USB/වයි-ෆයි හරහා දුරස්ථ නිදොස්කරණය</string>
+
+    <!-- Title text for biometric prompt pop-up -->
+    <string name="biometric_prompt_title">ඇඟිලි සටහන භාවිතයෙන් තහවුරු කරන්න</string>
+
     <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
      When pressed, the user's previous session is cleared, and authentication is not required. -->
     <string moz:removedIn="103" name="biometric_auth_new_session">නව වාරය</string>
+
+    <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
+    while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
+    <string name="biometric_auth_open_link_new_session">නව පටිත්තකින් වාරය අරින්න</string>
+
+    <!-- Title for the prompt to enable search suggestions -->
+    <string name="enable_search_suggestion_title2">සෙවුම් යෝජනා පෙන්වන්නද?</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">නැහැ</string>
@@ -418,9 +459,66 @@
     <!-- Label used for the "YES button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_yes">ඔව්</string>
 
+    <!-- Button to dismiss the message displayed  when using a search engine that doesn't provide suggestions-->
+    <string name="dismiss_no_suggestions_prompt_button">ඉවතලන්න</string>
+
     <!-- Tips displayed on the home view -->
 
+    <!-- Label for the snackbar when a user opens a new tab -->
+    <string name="new_tab_opened_snackbar">නව පටිත්තක් විවෘතයි</string>
+
+    <!-- Label for the button in the snackbar that switches to the newly opened tab -->
+    <string name="open_new_tab_snackbar">මාරු වන්න</string>
+
+    <!-- Title of the preference to enable "HTTPS-Only" mode -->
+    <string name="preference_https_only_title">HTTPS-පමණි ප්‍රකාරය</string>
+
+    <!-- Preference for exceptions tracking protection -->
+    <string name="preference_exceptions">හැරදැමීම්</string>
+    <!-- Description for the exceptions preference screen-->
+    <string name="preference_exceptions_description">ඔබ මෙම අඩවි සඳහා අන්තර්ගත අවහිර කිරීම අබල කර ඇත.</string>
+    <!-- Menu item to remove existing exceptions. -->
+    <string name="preference_exceptions_menu_remove">ඉවත් කරන්න</string>
+    <!-- Button to remove all websites from the exception list -->
+    <string name="preference_exceptions_remove_all_button_label">සියළු අඩවි ඉවත් කරන්න</string>
+
+    <!-- Title for Preference screen for cookie blocking for exceptions tracking protection -->
+    <string name="preference_block_cookies_title">දත්තකඩ අවහිරය</string>
+
+    <!-- Message for Preference screen for cookie blocking for exceptions tracking protection -->
+    <string name="preference_category_block_cookies">ඔබ දත්තකඩ අවහිර කිරීමට කැමතිද?</string>
+
+    <!-- Title for the tab crash report screen-->
+    <string name="tab_crash_report_title">පටිත්ත බිඳ වැටුණි</string>
+    <!-- Headline for the tab crash report screen -->
+    <string name="tab_crash_report_headline">සමාවන්න. මෙම පටිත්ත සමඟ ගැටලුවක් තිබේ.</string>
+    <!-- Label for button to close the tab-->
+    <string name="tab_crash_report_close_tab_button_label">පටිත්ත වසන්න</string>
+
     <!-- Tracking protection bottom sheet -->
+
+    <!-- Label for the total number of trackers blocked. %s represents the app install date -->
+    <string name="trackers_count_note">%s සිට අවහිර කළ ලුහුබැඳීම්</string>
+    <!-- Category of trackers (content) that can be blocked by Enhanced Tracking Protection -->
+    <string name="content">අන්තර්ගතය</string>
+    <!-- Category of trackers (advertising) that can be blocked by Enhanced Tracking Protection -->
+    <string name="advertising">දැන්වීම්</string>
+    <!-- Category of trackers (social media) that can be blocked by Enhanced Tracking Protection -->
+    <string name="social">සමාජ</string>
+    <!-- Category of trackers (analytics) that can be blocked by Enhanced Tracking Protection -->
+    <string name="analytics">විශ්ලේෂ</string>
+    <!-- Preference title for enhanced tracking protection settings -->
+    <string name="enhanced_tracking_protection">දියුණු කළ ලුහුබැඳීමේ රැකවරණය</string>
+    <!-- Enhanced tracking protection preference description when the tracking protection is disabled for this site-->
+    <string name="enhanced_tracking_protection_state_off">අඩවියට දියුණු කළ ලුහුබැඳීමේ රැකවරණය අක්‍රියයි</string>
+    <!-- Enhanced tracking protection preference description when the tracking protection is enabled for this site-->
+    <string name="enhanced_tracking_protection_state_on">අඩවියට දියුණු කළ ලුහුබැඳීමේ රැකවරණය සක්‍රියයි</string>
+    <!-- Label that indicates a site is using a secure connection -->
+    <string name="secure_connection">සම්බන්ධතාවය ආරක්‍ෂිතයි</string>
+    <!-- Label that indicates a site is using a insecure connection -->
+    <string name="insecure_connection">සම්බන්ධතාවය අනාරක්‍ෂිතයි</string>
+    <!-- Title for the list of trackers enhanced tracking ptotection can block-->
+    <string name="trackers_and_scripts">අවහිර කිරීමට ලුහුබැඳීම් හා අත්පත්</string>
 
     <!-- Content description (not visible, for screen readers etc.): Navigate back button description -->
     <string name="go_back">ආපසු යන්න</string>
