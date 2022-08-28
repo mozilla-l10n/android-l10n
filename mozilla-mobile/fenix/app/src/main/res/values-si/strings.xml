@@ -343,6 +343,14 @@
     <string name="empty_device_name_error">උපාංගයේ නම හිස් විය නොහැකිය.</string>
     <!-- Label indicating that sync is in progress -->
     <string name="sync_syncing_in_progress">සමමුහූර්ත වෙමින්…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">සමමුහූර්තයට අසමත්! අවසන සඵලත්‍වය: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">සමමුහූර්තයට අසමත්! අවසන සඵලත්‍වය: කවදාවත්</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">අවසාන සමමුහූර්තය: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">අවසාන සමමුහූර්තය: කවදාවත්</string>
     <!-- Preference for syncing credit cards -->
     <string name="preferences_sync_credit_cards">ණය පත්</string>
     <!-- Preference for syncing addresses -->
@@ -364,9 +372,20 @@
     <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
     <string name="exceptions_empty_message_learn_more_link">තව දැනගන්න</string>
 
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data">භාවිතය සහ තාක්‍ෂණික දත්ත</string>
+    <!-- Preference switch for marketing data collection -->
+    <string name="preferences_marketing_data">අලෙවිකරණ දත්ත</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">අධ්‍යන</string>
 
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Turn on Sync preference view -->
+    <string moz:RemovedIn="104" name="preferences_sync" tools:ignore="UnusedResources">සමමුහූර්තය සක්‍රිය කරන්න</string>
+    <!-- Header of the Sync and save your data preference view -->
+    <string name="preferences_sync_2">සමමුහූර්ත කර සුරකින්න</string>
+    <!-- Preference for reconnecting to FxA sync -->
+    <string name="preferences_sync_sign_in_to_reconnect">යළි සබැඳීමට පිවිසෙන්න</string>
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">ගිණුම ඉවත් කරන්න</string>
 
@@ -393,6 +412,9 @@
     <!-- Gestures Preferences-->
     <!-- Preferences for using pull to refresh in a webpage -->
     <string name="preference_gestures_website_pull_to_refresh">නැවුම් කිරීමට අදින්න</string>
+
+    <!-- Preference for using the dynamic toolbar -->
+    <string name="preference_gestures_dynamic_toolbar">මෙවලම් තීරුව සැඟවීමට අනුචලනය</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -441,6 +463,8 @@
     <string name="preferences_tabs">පටිති</string>
 
 
+    <!-- Option for a list tab view -->
+    <string name="tab_view_list">ලේඛනය</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">ජාලකය</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
@@ -448,16 +472,44 @@
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
     <string name="close_tabs_manually">කවදාවත්</string>
 
+    <!-- Option for auto closing tabs that will auto close tabs after one day -->
+    <string name="close_tabs_after_one_day">දවසකට පසු</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one week -->
+    <string name="close_tabs_after_one_week">සතියකට පසු</string>
+    <!-- Option for auto closing tabs that will auto close tabs after one month -->
+    <string name="close_tabs_after_one_month">මාසයකට පසු</string>
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">විවෘත පටිති ස්වයං වැසීම</string>
+
+    <!-- Opening screen -->
+    <!-- Title of a preference that allows a user to choose what screen to show after opening the app -->
+    <string name="preferences_opening_screen">විවෘත වන තිරය</string>
     <!-- Option for always opening the homepage when re-opening the app -->
     <string name="opening_screen_homepage">මුල් පිටුව</string>
     <!-- Option for always opening the user's last-open tab when re-opening the app -->
     <string name="opening_screen_last_tab">අවසාන පටිත්ත</string>
+
+    <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity">පැය හතරක නිෂ්ක්‍රියාවෙන් පසු මුල් පිටුව</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
+    <string name="close_tabs_manually_summary">අතින් වසන්න</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
+    <string name="close_tabs_after_one_day_summary">දවසකට පසු වසන්න</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one week-->
+    <string name="close_tabs_after_one_week_summary">සතියකට පසු වසන්න</string>
+    <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
+    <string name="close_tabs_after_one_month_summary">මාසයකට පසු වසන්න</string>
+
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">ඔබ සති දෙකක් තුළ නොබැලූ පටිති අක්‍රිය කොටස වෙත ගෙන යනු ලැබේ.</string>
 
     <!-- Studies -->
     <!-- Title of the remove studies button -->
     <string name="studies_remove">ඉවත් කරන්න</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">සක්‍රිය</string>
+    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <string name="studies_description_2">%1$s කලින් කලට අධ්‍යන ස්ථාපනය කර ධාවනය කරයි.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">තව දැනගන්න</string>
     <!-- Dialog message shown after removing a study -->
@@ -467,6 +519,16 @@
     <!-- Dialog button text for canceling removing a study. -->
     <string name="studies_restart_dialog_cancel">අවලංගු</string>
 
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">වෙනස්කම් යෙදීමට යෙදුමෙන් ඉවත් වෙමින්…</string>
+
+    <!-- Sessions -->
+    <!-- Title for the list of tabs -->
+    <string name="tab_header_label">පටිති අරින්න</string>
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">සමමුහූර්ත පටිති</string>
+    <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+    <string name="add_tab">පටිත්තක් යොදන්න</string>
     <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
     <string name="tab_drawer_fab_sync">සමමුහූර්ත</string>
     <!-- Text shown in the menu for sharing all tabs -->
