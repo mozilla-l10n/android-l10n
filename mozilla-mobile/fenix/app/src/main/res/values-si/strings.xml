@@ -602,6 +602,8 @@
     <string name="close_tab_title">%s පටිත්ත වසන්න</string>
     <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
     <string name="open_tabs_menu">පටිති වට්ටෝරුව අරින්න</string>
+    <!-- Open tabs menu item to save tabs to collection -->
+    <string name="tabs_menu_save_to_collection1">එකතුව වෙත පටිති සුරකින්න</string>
     <!-- Text for the menu button to delete a collection -->
     <string name="collection_delete">එකතුව මකන්න</string>
     <!-- Text for the menu button to rename a collection -->
@@ -616,6 +618,8 @@
 	<string name="remove_top_site">ඉවත් කරන්න</string>
     <!-- Text for the menu button to delete a top site from history -->
     <string name="delete_from_history">ඉතිහාසයෙන් මකන්න</string>
+    <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
+    <string name="pwa_site_controls_title_private">%1$s (පෞද්ගලික ප්‍රකාරය)</string>
     <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
     <string moz:removedIn="104" name="tab_tray_header_title_1" tools:ignore="UnusedResources">වෙනත් පටිති</string>
 
@@ -624,8 +628,15 @@
     <string name="history_search_1">සෙවුම් පද යොදන්න</string>
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">ඉතිහාසය මකන්න</string>
+    <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
+    <string name="history_delete_multiple_items_snackbar">ඉතිහාසය මකා ඇත</string>
+    <!-- Text for the snackbar to confirm that a single browsing history item has been deleted. The first parameter is the shortened URL of the deleted history item. -->
+    <string name="history_delete_single_item_snackbar">%1$s මැකිණි</string>
     <!-- Context description text for the button to delete a single history item -->
     <string name="history_delete_item">මකන්න</string>
+    <!-- History multi select title in app bar
+    The first parameter is the number of bookmarks selected -->
+    <string name="history_multi_select_title">%1$d ක් තෝරා ඇත</string>
     <!-- Text for the header that groups the history for today -->
     <string name="history_today">අද</string>
     <!-- Text for the header that groups the history for yesterday -->
@@ -642,6 +653,8 @@
     <string moz:removedIn="105" name="history_synced_from_other_devices" tools:ignore="UnusedResources">වෙනත් උපාංග වලින් සමමුහූර්තයි</string>
     <!-- The page title for browsing history coming from other devices. -->
     <string moz:removedIn="105" name="history_from_other_devices" tools:ignore="UnusedResources">වෙනත් උපාංග වෙතින්</string>
+    <!-- The synced history sign in dialog message -->
+    <string moz:removedIn="105" name="history_sign_in_message" tools:ignore="UnusedResources">අන් උපාංග වලින් සමමුහූර්ත වූ ඉතිහාසය බැලීමට පිවිසෙන්න.</string>
     <!-- The synced history sign in dialog button text -->
     <string moz:removedIn="105" name="history_sign_in_button" tools:ignore="UnusedResources">පිවිසෙන්න</string>
 
@@ -664,6 +677,11 @@
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">පටිත්ත ප්‍රත්‍යර්පණය</string>
 
+    <!-- Bookmarks -->
+    <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
+    <string name="bookmark_delete_folder_confirmation_dialog">ඔබට මෙම බහාලුම ඉවත් කිරීමට වුවමනා ද?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s තෝරාගත් අථක මකා දමනු ඇත.</string>
     <!-- Text for the cancel button on delete bookmark dialog -->
     <string name="bookmark_delete_negative">අවලංගු</string>
     <!-- Screen title for adding a bookmarks folder -->
@@ -780,6 +798,8 @@
     <string name="quick_setting_option_autoplay_allowed">ශ්‍රව්‍ය හා දෘශ්‍ය සඳහා ඉඩදෙන්න</string>
     <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
     <string name="preference_option_autoplay_allowed_wifi_only2">ජංගම දත්ත සඳහා ශ්‍රව්‍ය හා දෘශ්‍ය අවහිරය</string>
+    <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
+    <string name="preference_option_autoplay_allowed_wifi_subtext">වයි-ෆයි හරහා ශ්‍රව්‍ය හා දෘශ්‍ය වාදනය වේ</string>
     <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">හඬ පමණක් අවහිරය</string>
     <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
@@ -893,8 +913,27 @@
     %1$s is a placeholder that will be replaced by the app name (Fenix). -->
     <string name="notification_default_browser_text">%1$s පෙරනිමි අතිරික්සුව කරන්න</string>
 
+    <!-- Snackbar -->
+    <!-- Text shown in snackbar when user deletes a collection -->
+    <string name="snackbar_collection_deleted">එකතුව මැකිණි</string>
+    <!-- Text shown in snackbar when user renames a collection -->
+    <string name="snackbar_collection_renamed">එකතුව නම් කෙරිණි</string>
+    <!-- Text shown in snackbar when user closes a tab -->
+    <string name="snackbar_tab_closed">පටිත්ත වැසිණි</string>
+    <!-- Text shown in snackbar when user closes all tabs -->
+    <string name="snackbar_tabs_closed">පටිති වැසිණි</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">පොත්යොමුව සුරැකිණි!</string>
+    <!-- Text shown in snackbar when user adds a site to shortcuts -->
+    <string name="snackbar_added_to_shortcuts">කෙටිමං වෙත එක් කෙරිණි!</string>
+    <!-- Text shown in snackbar when user closes a private tab -->
+    <string name="snackbar_private_tab_closed">පෞද්. පටිත්ත වැසිණි</string>
+    <!-- Text shown in snackbar when user closes all private tabs -->
+    <string name="snackbar_private_tabs_closed">පෞද්. පටිති වැසිණි</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">පෙරසේ</string>
+    <!-- Text shown in snackbar when user removes a top site -->
+    <string name="snackbar_top_site_removed">අඩවිය ඉවත් කෙරිණි</string>
     <!-- QR code scanner prompt dialog positive option to allow navigation to scanned link -->
     <string name="qr_scanner_dialog_positive">ඉඩ දෙන්න</string>
     <!-- QR code scanner prompt dialog positive option when there is an error -->
