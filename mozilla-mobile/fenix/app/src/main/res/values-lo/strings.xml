@@ -1177,6 +1177,11 @@
     <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
     <string name="delete_history_prompt_button_last_hour">ຊົ່ວໂມງທີ່ຜ່ານມາ</string>
 
+    <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
+    <string name="delete_history_prompt_button_today_and_yesterday">ມື້ນີ້ ແລະ ມື້ວານນີ້</string>
+    <!-- Radio button in the delete browsing data dialog to delete all history. -->
+    <string name="delete_history_prompt_button_everything">ທັງຫມົດ</string>
+
     <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
     <string name="delete_browsing_data_prompt_message_3">%s ຈະລຶບຂໍ້ມູນການທ່ອງເວັບທີ່ທ່ານເລືອກ.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
@@ -1188,10 +1193,15 @@
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">ກຳລັງລຶບຂໍ້ມູນການທ່ອງເວັບ…</string>
 
+    <!-- Dialog message to the user asking to delete all history items inside the opened group. Parameter will be replaced by a history group name. -->
+    <string name="delete_all_history_group_prompt_message">ລຶບທຸກເວັບໄຊໃນ “%s”</string>
     <!-- Text for the cancel button for the history group deletion dialog -->
     <string name="delete_history_group_prompt_cancel">ຍົກເລີກ</string>
     <!-- Text for the allow button for the history group dialog -->
     <string name="delete_history_group_prompt_allow">ລຶບ</string>
+
+    <!-- Text for the snackbar confirmation that the history group was deleted -->
+    <string name="delete_history_group_snackbar">ລຶບກຸ່ມແລ້ວ</string>
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome message
@@ -1337,6 +1347,8 @@
     The first parameter is the app name -->
     <string name="open_source_licenses_title">%s | ໄລບຣາລີ OSS</string>
 
+    <!-- Category of trackers (redirect trackers) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_redirect_trackers_title">ປ່ຽນເສັ້ນທາງຕິດຕາມ</string>
     <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
     <string name="preference_etp_smartblock_learn_more">ຮຽນຮູ້ເພີ່ມເຕີມ</string>
 
@@ -1457,6 +1469,9 @@
     <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
     <string name="saved_logins_menu_dropdown_chevron_icon_content_description">ລຽງລຳດັບເມນູການລັອກອິນ</string>
 
+    <!-- Autofill -->
+    <!-- Preference and title for managing the autofill settings -->
+    <string name="preferences_autofill">ຕື່ມຂໍ້ມູນອັດຕະໂນມັດ</string>
     <!-- Preference and title for managing the settings for addresses -->
     <string name="preferences_addresses">ທີ່ຢູ່</string>
     <!-- Preference and title for managing the settings for credit cards -->
@@ -1473,6 +1488,13 @@
     <string name="preferences_credit_cards_add_credit_card">ເພີ່ມບັດເຄດິດ</string>
     <!-- Preference option for managing saved credit cards -->
     <string name="preferences_credit_cards_manage_saved_cards">ຈັດການບັດທີ່ໄດ້ບັນທຶກໄວ້</string>
+
+    <!-- Preference option for adding an address -->
+    <string name="preferences_addresses_add_address">ເພີ່ມທີ່ຢູ່</string>
+    <!-- Preference option for managing saved addresses -->
+    <string name="preferences_addresses_manage_addresses">ຈັດການທີ່ຢູ່</string>
+    <!-- Preference for saving and autofilling addresses -->
+    <string name="preferences_addresses_save_and_autofill_addresses">ບັນທຶກ ແລະຕື່ມທີ່ຢູ່ອັດຕະໂນມັດ</string>
 
     <!-- Title of the "Add card" screen -->
     <string name="credit_cards_add_card">ເພີ່ມບັດ</string>
@@ -1520,10 +1542,41 @@
     <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored credit card information -->
     <string name="credit_cards_biometric_prompt_unlock_message">ປົດລັອກເພື່ອໃຊ້ຂໍ້ມູນບັດເຄຣດິດທີ່ໄດ້ເກັບໄວ້</string>
 
+    <!-- Title of the "Add address" screen -->
+    <string name="addresses_add_address">ເພີ່ມທີ່ຢູ່</string>
+    <!-- Title of the "Edit address" screen -->
+    <string name="addresses_edit_address">ແກ້ໄຂທີ່ຢູ່</string>
+    <!-- Title of the "Manage addresses" screen -->
+    <string name="addresses_manage_addresses">ຈັດການທີ່ຢູ່</string>
+    <!-- The header for the first name of an address -->
+    <string name="addresses_first_name">ຊື່ແທ້</string>
+    <!-- The header for the middle name of an address -->
+    <string name="addresses_middle_name">ຊື່ກາງ</string>
+    <!-- The header for the last name of an address -->
+    <string name="addresses_last_name">ນາມສະກຸນ</string>
+    <!-- The header for the street address of an address -->
+    <string name="addresses_street_address">ທີ່​ຢູ່​ຖະ​ຫນົນ</string>
     <!-- The header for the city of an address -->
     <string name="addresses_city">ເມືອງ</string>
+    <!-- The header for the subregion of an address when "state" should be used -->
+    <string name="addresses_state">ລັດ</string>
+    <!-- The header for the subregion of an address when "province" should be used -->
+    <string name="addresses_province">ແຂວງ</string>
+    <!-- The header for the zip code of an address -->
+    <string name="addresses_zip">ລະຫັດໄປສະນີ</string>
+    <!-- The header for the country or region of an address -->
+    <string name="addresses_country">ປະເທດ ຫຼືພາກພື້ນ</string>
+    <!-- The header for the phone number of an address -->
+    <string name="addresses_phone">ໂທລະສັບ</string>
     <!-- The header for the email of an address -->
     <string name="addresses_email">ອີເມລ</string>
+
+    <!-- The text for the "Save" button for saving an address -->
+    <string name="addresses_save_button">ບັນທຶກ</string>
+    <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
+    <string name="addresses_cancel_button">ຍົກເລີກ</string>
+    <!-- The text for the "Delete address" button for deleting an address -->
+    <string name="addressess_delete_address_button">ລຶບທີ່ຢູ່</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">ເພີ່ມເຄື່ອງມືການຄົ້ນຫາ</string>
