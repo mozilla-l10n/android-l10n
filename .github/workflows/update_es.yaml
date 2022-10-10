@@ -1,9 +1,8 @@
 name: Update Spanish (es)
 on:
   schedule:
-    - cron: '0 17 * * 1,4' # Run Monday, Thursday at 17 UTC
+    - cron: '0 5 * * *'
   workflow_dispatch:
-
 jobs:
   copy:
     name: Copy translations
@@ -19,10 +18,8 @@ jobs:
         run: |
           python .github/scripts/copy_locale.py --source es-ES --dest es --path mozilla-mobile/android-components
           python .github/scripts/copy_locale.py --source es-ES --dest es --path mozilla-mobile/fenix
-      - run : git config --global user.email 'flodolo@users.noreply.github.com'
-      - uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: "Update Spanish (es) localizations"
-          branch: l10n_spanish
-          delete-branch: true
-          title: "Update Spanish (es) localizations"
+      - run : |
+          git config --global user.email 'flodolo@users.noreply.github.com'
+          git add .
+          git commit -m "Update Spanish (es) localizations"
+          git push
