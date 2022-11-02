@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:moz="http://mozac.org/tools">
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
     <!-- ####################################################################################### -->
     <!-- ## Put only strings into this file that should be translated. Move all other strings ## -->
     <!-- ## into a separate file like strings_references.xml                                  ## -->
@@ -296,11 +296,6 @@
 
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Koristi otisak prsta za otključavanje aplikacije</string>
-    <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
-        open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Tvoj otisak prsta može otključati %1$s, ako je neki URL već otvoren u aplikaciji.
-    Tajni način bit će uključen.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -363,10 +358,6 @@
     <string name="preference_search_add3">Dodaj drugu tražilicu</string>
     <!-- Explanation text above the list of search engines-->
     <string name="preference_select_preferred_engine">Odaberi omiljenu tražilicu:</string>
-
-    <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
-     a user first launches the app. -->
-    <string name="preference_homescreen_tips">Prikaži savjete na početnom zaslonu</string>
 
     <!-- Clickable action text that shows when user long-presses on a search engine search field (this is similar to paste or copy when long-pressing a text field) -->
     <string name="action_option_add_search_engine">Dodaj pretraživač</string>
@@ -485,7 +476,29 @@
 
 
 
-  <!-- First run tour (Default browser): Title -->
+  <!-- Onboarding: Title -->
+    <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
+    <string moz:removedIn="106" name="onboarding_title">Dobro došao, dobro došla u %1$s!</string>
+
+    <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
+    <string name="onboarding_close_button_content_description">Zatvori</string>
+
+    <!-- New Onboarding flow first screen title -->
+    <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
+    <string name="onboarding_first_screen_title">Dobro došao, dobro došla u %1$s</string>
+
+    <!-- New Onboarding flow first screen subtitle the one that appears under title -->
+    <string name="onboarding_first_screen_subtitle">Brzo. Privatno. Bez ometanja.</string>
+
+    <!-- New Onboarding flow first screen button label-->
+    <string name="onboarding_first_screen_button_text">Započni</string>
+
+    <!-- Onboarding second screen: Title -->
+    <!-- %1$s will be replaced by the app short name(Focus) -->
+    <string name="onboarding_second_screen_title">%1$s nije poput drugih preglednika</string>
+
+
+    <!-- First run tour (Default browser): Title -->
     <string name="firstrun_defaultbrowser_title">Osnaži svoju privatnost</string>
 
     <!-- First run tour (Default browser): Text. -->
@@ -658,17 +671,6 @@
     <!-- Preference to enable remote debugging of the app via USB or Wi-Fi -->
     <string name="preference_remote_debugging">Udaljeno otklanjanje grešaka putem USB-a/WiFi-ja</string>
 
-    <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
-     %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">Otključaj %1$s</string>
-
-    <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Dotakni senzor otiska prsta za nastavak.</string>
-
-    <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
-     When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Nova sesija</string>
-
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
     <string name="biometric_auth_open_link_new_session">Otvori poveznicu u novoj sesiji</string>
@@ -710,11 +712,6 @@
     <string name="tip_disable_tracking_protection">Stranica se ponaša neočekivano?\n
     Pokušaj isključiti zaštitu od praćenja</string>
 
-    <!-- Tip displayed on home view explaining how to disable enhanced tracking protection
-The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_disable_tracking_protection3">Stranici nedostaje sadržaj ili se čudno ponaša?\n
-    Pokušaj isključiti poboljšanu zaštitu od praćenja</string>
-
     <!-- Tip displayed on home view explaining how to add sites to homescreen
     Argument 1 will be replaced with a line break in the application.-->
     <string name="tip_add_to_homescreen"><![CDATA[Omogući pristup često korištenim stranicama jednim dodirom%1$s Izbornik > Dodaj na početni zaslon]]></string>
@@ -738,28 +735,8 @@ The new line here must be kept as the second half of the string is clickable for
         Dugo pritisni bilo koju poveznicu na stranici
     </string>
 
-    <!-- Tip displayed on home view explaining how to request the desktop version of a website.
-      %1$s is a placeholder for the app name. -->
-    <string name="tip_request_desktop2">Želiš vidjeti punu verziju stranice?\n
-        Prebaci se na klasičnu stranicu iz %1$sovog izbornika</string>
-
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Isključi savjete na početnom zaslonu</string>
-
-    <!-- Tip displayed on the home view explaining how to use the Allowlist feature.
-     "Allowlist" is a replacement for the word whitelist. -->
-    <string name="tip_explain_allowlist3">Želiš isključiti poboljšanu zaštitu od praćenja na stranici kojoj vjeruješ?\n
-        Dodaj ju na popis dopuštenih stranica u postavkama
-    </string>
-
-    <!-- Tip displayed on the home view about the changes in the new release.
-    %1$s is a placeholder for the app name -->
-    <string name="tip_fresh_look">Da, imamo novi izgled!\n Pročitaj više o ovome i drugim ažuriranjima %1$sa.</string>
-
-    <!-- Tip displayed on the home view about shortcuts
-    %1$s is a placeholder for the app name -->
-    <string name="tip_about_shortcuts">Stvori prečace na web-stranice koje najčešće posjećuješ:\n
-    Odaberi Dodaj u prečace u %1$sovom izborniku</string>
 
     <!-- Label for the snackbar when a user opens a new tab -->
     <string name="new_tab_opened_snackbar">Otvorena nova kartica</string>
@@ -770,8 +747,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Odmah prebaci na poveznicu u novoj kartici</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Sigurno pretraživanje</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Blokiraj potencijalno opasne i zavaravajuće stranice</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -779,9 +754,6 @@ The new line here must be kept as the second half of the string is clickable for
 
     <!-- Title of the preference to enable "HTTPS-Only" mode -->
     <string name="preference_https_only_title">Način rada &quot;Samo HTTPS&quot;</string>
-
-    <!-- Description of the preference to enable "HTTPS-Only" mode. %1$s will get replaced with the name of the app. -->
-    <string name="preference_https_only_summary">HTTPS pruža sigurnu, šifriranu vezu između preglednika %1$s i web-stranica koje posjećuješ. Većina web-stranica podržava HTTPS, a ako je je aktiviran način rada &quot;Samo HTTPS&quot;, tada će %1$s nadograditi sve veze na HTTPS.</string>
 
     <!-- Preference for exceptions tracking protection -->
     <string name="preference_exceptions">Iznimke</string>
@@ -865,4 +837,9 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">Zatvori karticu</string>
-</resources>
+
+    <!-- Promote SearchWidget Dialog -->
+
+    !-- Content description (not visible, for screen readers etc.): This is the description for
+    picture of search widget from promote search widget dialog. --&gt;
+    </resources>
