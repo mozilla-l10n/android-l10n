@@ -14,6 +14,12 @@
     <string name="content_description_disable_private_browsing_button">Priveenavigaasje útskeakelje</string>
     <!-- Placeholder text shown in the search bar before a user enters text -->
     <string name="search_hint">Fier sykterm of adres yn</string>
+    <!-- Placeholder text shown in search bar when using history search -->
+    <string name="history_search_hint">Skiednis trochsykje</string>
+    <!-- Placeholder text shown in search bar when using bookmarks search -->
+    <string name="bookmark_search_hint">Blêdwizers trochsykje</string>
+    <!-- Placeholder text shown in search bar when using tabs search -->
+    <string name="tab_search_hint">Ljepblêden trochsykje</string>
     <!-- Placeholder text shown in the search bar when using application search engines -->
     <string name="application_search_hint">Fier syktermen yn</string>
     <!-- No Open Tabs Message Description -->
@@ -131,13 +137,6 @@
 
     <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
     <string name="recent_tabs_show_all_content_description_2">Knop Alle resinte ljepblêden toane</string>
-    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
-        The first parameter is the search term that the user used. (for example: your search for "cat")-->
-    <string moz:RemovedIn="105" name="recent_tabs_search_term" tools:ignore="UnusedResources">Jo sykopdracht nei ‘%1$s’</string>
-
-    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
-        %d is a placeholder for the number of sites in the group. This number will always be more than one. -->
-    <string moz:RemovedIn="105" name="recent_tabs_search_term_count_2" tools:ignore="UnusedResources">%d websites</string>
 
     <!-- Text for button in synced tab card that opens synced tabs tray -->
     <string name="recent_tabs_see_all_synced_tabs_button_text">Alle syngronisearre ljepblêden besjen</string>
@@ -464,7 +463,7 @@
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Koartlyn besocht</string>
     <!-- Title for the customize home screen section with Pocket. -->
-    <string name="customize_toggle_pocket">Pocket</string>
+    <string moz:RemovedIn="108" name="customize_toggle_pocket" tools:ignore="UnusedResources">Pocket</string>
 
     <!-- Title for the customize home screen section with sponsored Pocket stories. -->
     <string name="customize_toggle_pocket_sponsored">Sponsore ferhalen</string>
@@ -488,12 +487,6 @@
     <string name="wallpaper_select_error_snackbar_message">Kin eftergrûn net wizigje</string>
     <!-- Text displayed that links to website containing documentation about the "Limited Edition" wallpapers. -->
     <string name="wallpaper_learn_more">Mear ynfo</string>
-    <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string moz:removedIn="105" name="wallpaper_tap_to_change_switch_label_1" tools:ignore="UnusedResources">Wizigje jo eftergrûn troch op it Firefox-startsidelogo te tikken</string>
-
-    <!-- This is the accessibility content description for the wallpapers functionality. Users are
-    able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string moz:removedIn="105" name="wallpaper_logo_content_description" tools:ignore="UnusedResources">Firefox-logo – de eftergrûn, de knop wizigje</string>
 
     <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
     <string name="wallpaper_classic_title">Klassike %s</string>
@@ -678,10 +671,6 @@
     <string name="tab_view_list">List</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Roaster</string>
-    <!-- Option for search term tab groups -->
-    <string moz:RemovedIn="105" name="tab_view_search_term_tab_groups" tools:ignore="UnusedResources">Groepen sykje</string>
-    <!-- Summary text for search term tab groups -->
-    <string moz:RemovedIn="105" name="tab_view_search_term_tab_groups_summary" tools:ignore="UnusedResources">Relatearre websites groepearje</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Ljepblêden slute</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -830,18 +819,6 @@
     <string name="history_older">Alder</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Gjin skiednis hjir</string>
-
-    <!-- Text for the button inside History screen that opens Synced History screen. History that is coming from other devices -->
-    <string moz:removedIn="105" name="history_synced_from_other_devices" tools:ignore="UnusedResources">Syngronisearre fan oare apparaten ôf</string>
-    <!-- The page title for browsing history coming from other devices. -->
-    <string moz:removedIn="105" name="history_from_other_devices" tools:ignore="UnusedResources">Fan oare apparaten ôf</string>
-
-    <!-- The synced history sign in dialog message -->
-    <string moz:removedIn="105" name="history_sign_in_message" tools:ignore="UnusedResources">Meld jo oan om fan jo oare apparaten syngronisearre skiednis te besjen.</string>
-    <!-- The synced history sign in dialog button text -->
-    <string moz:removedIn="105" name="history_sign_in_button" tools:ignore="UnusedResources">Oanmelde</string>
-    <!-- The synced history sign in dialog create a new account link -->
-    <string moz:removedIn="105" name="history_sign_in_create_account" tools:ignore="UnusedResources"><![CDATA[<u>Of meitsje in Firefox-account om te begjinnen mei syngronisaasje</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -1935,7 +1912,7 @@
     <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
     <string name="pocket_stories_placeholder_text">Mear ûntdekke</string>
     <!-- Title of an app feature. Smaller than a heading.-->
-    <string name="pocket_stories_feature_title">Mooglik makke troch Pocket.</string>
+    <string moz:removedIn="108" name="pocket_stories_feature_title" tools:ignore="UnusedResources">Mooglik makke troch Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
     <string name="pocket_stories_feature_caption">Underdiel fan de Firefox-famylje. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
