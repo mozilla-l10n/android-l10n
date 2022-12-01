@@ -117,10 +117,22 @@
          %1$s will be replaced by the app name (e.g. Firefox Focus) -->
     <string name="shortcut_erase_and_open_long_label">Erase and open %1$s</string>
 
-
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
-         Clicking this action will launch Focus and perform a search in the default search engine. -->
-    <string name="text_selection_search_action">Search Privately</string>
+         Focus is hard coded since we can't use variables in this context.
+         Do not translate or transliterate Focus.-->
+    <string name="text_selection_search_action_focus">Search in Focus</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+             Klar is hard coded since we can't use variables in this context.
+             Do not translate or transliterate Klar.-->
+    <string name="text_selection_search_action_klar">Search in Klar</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+            Focus Beta is hard coded since we can't use variables in this context.
+            Do not translate or transliterate Focus Beta.-->
+    <string name="text_selection_search_action_focus_beta">Search in Focus Beta</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+          Focus Nightly is hard coded since we can't use variables in this context.
+          Do not translate or transliterate Focus Nightly.-->
+    <string name="text_selection_search_action_focus_nightly">Search in Focus Nightly</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
@@ -460,10 +472,6 @@
 
     <string name="error_hostLookup_title">Server not found</string>
 
-    <!-- Onboarding: Title -->
-    <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
-    <string moz:removedIn="106" name="onboarding_title">Welcome to %1$s!</string>
-
     <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
     <string name="onboarding_close_button_content_description">Close</string>
 
@@ -493,32 +501,6 @@
 
     <!-- New Onboarding flow second screen skip onboarding button label-->
     <string name="onboarding_second_screen_skip_button_text">Skip</string>
-
-
-    <!-- Onboarding: Description -->
-    <string moz:removedIn="106" name="onboarding_description">Next-level private browsing when you want it</string>
-
-    <!-- Onboarding: Incognito Title -->
-    <string moz:removedIn="106" name="onboarding_incognito_title">Where incognito meets invisible</string>
-
-    <!-- Onboarding: Incognito Description -->
-    <!-- Text %s will be replaced with the name of the app (e.g. Focus, Klar) -->
-    <string moz:removedIn="106" name="onboarding_incognito_description">%s is a privacy-first browser with extra-strong tracking and cookie protection built in.</string>
-
-    <!-- Onboarding: History Title -->
-    <string moz:removedIn="106" name="onboarding_history_title">Browse like it never happened</string>
-
-    <!-- Onboarding: History Description -->
-    <string moz:removedIn="106" name="onboarding_history_description2">One tap erases your browsing history and cookies — and stops ads from following you around.</string>
-
-    <!-- Onboarding: Protection Title -->
-    <string moz:removedIn="106" name="onboarding_protection_title">Privacy that fits any situation</string>
-
-    <!-- Onboarding: Protection Description -->
-    <string moz:removedIn="106" name="onboarding_protection_description">If your browsing needs change, it’s easy to scale your privacy settings up or down.</string>
-
-    <!-- Onboarding: Start browsing -->
-    <string moz:removedIn="106" name="onboarding_start_browsing">Start browsing</string>
 
     <!-- First run tour (Default browser): Title -->
     <string name="firstrun_defaultbrowser_title">Power up your privacy</string>
@@ -665,6 +647,27 @@
 
     <!-- Preference for site permissions -->
     <string name="preference_site_permissions">Site permissions</string>
+
+    <!--  Preference for cookie banner. The name of the item from settings screen and the title of the cookie banner screen. -->
+    <string name="preferences_cookie_banner">Cookie Banner Reduction</string>
+
+    <!--  Preference summary for the cookie banner. If the cookie banner option is not disabled. -->
+    <string name="preferences_cookie_banner_summary_on">On</string>
+
+    <!--  Preference summary for the cookie banner. If the cookie banner option is disabled. -->
+    <string name="preferences_cookie_banner_summary_off">Off</string>
+
+    <!--  Title preference inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+    <string name="cookie_banner_reject_all_option_title">Cookie Banner Reduction</string>
+
+    <!--  Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+    <string name="cookie_banner_reject_all_option_summary">See fewer banners by automatically rejecting cookie requests, when possible.</string>
+
+    <!--  Checkbox Preference title inside Cookie banner reduction screen. Here you can set the cookie banner option to reject_or_accept_all or reject_all. -->
+    <string name="cookie_banner_further_reduce_option_title">Further reduce cookie banners</string>
+
+    <!--  Checkbox Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to reject_or_accept_all or reject_all. -->
+    <string name="cookie_banner_further_reduce_option_summary">Cookie banner requests will be accepted to dismiss more banners.</string>
 
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Autoplay</string>
@@ -961,6 +964,9 @@
 
     !-- This is the title of promote search widget dialog. --&gt;
     <string name="promote_search_widget_dialog_title">Browsing history cleared! 🎉</string>
+
+    <!-- Banner Info Message than will appear when user first enters in the app. The location is at the toolbar. -->
+    <string name="cfr_for_start_browsing">Start your private browsing session, and we’ll block trackers and other bad stuff as you go.</string>
 
     !-- This is the subtitle of promote search widget dialog. %1$s will get replaced with the name
     of the app (e.g. &quot;Focus&quot;) --&gt;
