@@ -170,6 +170,12 @@
     <!-- Browser menu button shown in custom tabs that opens the current tab in Fenix
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_open_in_fenix">Aberi in %1$s</string>
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="browser_menu_powered_by">FUNTZIONAT GRÀTZIAS A %1$s</string>
+    <!-- Browser menu text shown in custom tabs to indicate this is a Fenix tab
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="browser_menu_powered_by2">Funtzionat gràtzias a %1$s</string>
     <!-- Browser menu button to put the current page in reader mode -->
     <string name="browser_menu_read">Modalidade de letura</string>
     <!-- Browser menu button content description to close reader mode and return the user to the regular browser -->
@@ -205,6 +211,8 @@
     <string name="search_engine_button">Motore de chirca</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">Cunfiguratzione de su motore de chirca</string>
+    <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
+    <string name="awesomebar_clipboard_title">Imprea su ligòngiu in punta de billete</string>
     <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
     <string name="search_suggestions_onboarding_allow_button">Permite</string>
     <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
@@ -222,6 +230,8 @@
     <!-- Header text for the search selector menu -->
     <string name="search_header_menu_item_2">Custa borta, chirca cun:</string>
 
+    <!-- Home onboarding dialog welcome screen title text. -->
+    <string name="onboarding_home_welcome_title_2">Ti donamus su benebènnidu a un’internet mègius</string>
     <!-- Text for the button to continue the onboarding on the home onboarding dialog. -->
     <string name="onboarding_home_get_started_button">Cumintza</string>
     <!-- Text for the button to navigate to the sync sign in screen on the home onboarding dialog. -->
@@ -271,6 +281,8 @@
     <string name="preferences_open_links_in_a_private_tab">Aberi ligòngios in un’ischeda privada noa</string>
     <!-- Preference for allowing screenshots to be taken while in a private tab-->
     <string name="preferences_allow_screenshots_in_private_mode">Permite is caturas de ischermu in sa navigatzione privada</string>
+    <!-- Preference for adding private browsing shortcut -->
+    <string name="preferences_add_private_browsing_shortcut">Agiunghe unu curtzadòrgiu de navigatzione privada</string>
     <!-- Preference for enabling "HTTPS-Only" mode -->
     <string name="preferences_https_only_title">Modalidade «isceti HTTPS»</string>
 
@@ -295,6 +307,10 @@
     <string name="errorpage_httpsonly_message_title">Est probàbile chi su situ web non siat cumpatìbile cun HTTPS.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Atzessibilidade</string>
+    <!-- Preference to override the Firefox Account server -->
+    <string name="preferences_override_fxa_server">Serbidore de contos de Firefox personalizadu</string>
+    <!-- Preference to override the Sync token server -->
+    <string name="preferences_override_sync_tokenserver">Serbidore de Sync personalizadu</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Contu</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -309,8 +325,16 @@
     <string name="preferences_sign_in_description_2">Intra pro sincronizare ischedas, sinnalibros, craes e àteru.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name">Contu de Firefox</string>
+    <!-- Preference text for account title when there was an error syncing FxA -->
+    <string name="preferences_account_sync_error">Torra a connètere pro sighire cun sa sincronizatzione</string>
     <!-- Preference for language -->
     <string name="preferences_language">Lìngua</string>
+    <!-- Preference for data choices -->
+    <string name="preferences_data_choices">Sèberu de is datos</string>
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">Còllida de datos</string>
+    <!-- Preference for developers -->
+    <string name="preferences_remote_debugging">Curretzione de faddinas pro mèdiu de USB</string>
     <!-- Preference title for switch preference to show search engines -->
     <string name="preferences_show_search_engines">Ammustra is motores de chirca</string>
     <!-- Preference title for switch preference to show search suggestions -->
@@ -340,10 +364,16 @@
     <!-- Preference for notifications -->
     <string name="preferences_notifications">Notìficas</string>
 
+    <!-- Add-on Preferences -->
+    <!-- Preference to customize the configured AMO (addons.mozilla.org) collection -->
+    <string name="preferences_customize_amo_collection">Colletzione de cumplementos personalizada</string>
     <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">AB</string>
     <!-- Button caption to abort the add-on collection configuration -->
     <string name="customize_addon_collection_cancel">Annulla</string>
+
+    <!-- Hint displayed on input field for custom collection name -->
+    <string name="customize_addon_collection_hint">Nòmine de sa colletzione</string>
 
     <!-- Title for the customize home screen section with recently saved bookmarks. -->
     <string name="customize_toggle_recent_bookmarks">Sinnalibros reghentes</string>
@@ -352,23 +382,43 @@
     <string name="customize_toggle_recently_visited">Bisitadas de reghente</string>
     <!-- Title for the customize home screen section with Pocket. -->
     <string moz:RemovedIn="108" name="customize_toggle_pocket" tools:ignore="UnusedResources">Pocket</string>
+    <!-- Summary for the customize home screen section with Pocket. The first parameter is product name Pocket -->
+    <string name="customize_toggle_pocket_summary">Artìculos seletzionados dae %s</string>
     <!-- Title for the customize home screen section with sponsored Pocket stories. -->
     <string name="customize_toggle_pocket_sponsored">Istòrias patrotzinadas</string>
+    <!-- Title for the opening wallpaper settings screen -->
+    <string name="customize_wallpapers">Isfundos de ischermu</string>
     <!-- Title for the customize home screen section with sponsored shortcuts. -->
     <string name="customize_toggle_contile">Curtzadòrgios patrotzinados</string>
 
+    <!-- Wallpapers -->
+    <!-- Content description for various wallpapers. The first parameter is the name of the wallpaper -->
+    <string name="wallpapers_item_name_content_description">Elementu de isfundu de ischermu: %1$s</string>
+    <!-- Snackbar message for when wallpaper is selected -->
+    <string name="wallpaper_updated_snackbar_message">Isfundu de ischermu atualizadu.</string>
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Visualiza</string>
+    <!-- Snackbar message for when wallpaper couldn't be downloaded -->
+    <string name="wallpaper_download_error_snackbar_message">Impossìbile iscarrigare s’isfundu de ischermu</string>
     <!-- Snackbar label for action to retry downloading the wallpaper -->
     <string name="wallpaper_download_error_snackbar_action">Torra a proare</string>
+    <!-- Snackbar message for when wallpaper couldn't be selected because of the disk error -->
+    <string name="wallpaper_select_error_snackbar_message">Impossìbile modificare s’isfundu de ischermu</string>
     <!-- Text displayed that links to website containing documentation about the "Limited Edition" wallpapers. -->
     <string name="wallpaper_learn_more">Àteras informatziones</string>
     <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
     <string name="wallpaper_classic_title">%s clàssicu</string>
     <!-- Text for limited edition wallpapers title. -->
     <string name="wallpaper_limited_edition_title">Editzione limitada</string>
+    <!-- Description text for the limited edition wallpapers with learn more link. The first parameter is the learn more string defined in wallpaper_learn_more-->
+    <string name="wallpaper_limited_edition_description_with_learn_more">Sa colletzione noa de boghes indipendentes. %s</string>
+    <!-- Description text for the limited edition wallpapers. -->
+    <string name="wallpaper_limited_edition_description">Sa colletzione noa de boghes indipendentes.</string>
     <!-- Wallpaper onboarding dialog header text. -->
     <string name="wallpapers_onboarding_dialog_title_text">Proa un’istrichiddu de colore</string>
+
+    <!-- Wallpaper onboarding dialog body text. -->
+    <string name="wallpapers_onboarding_dialog_body_text">Sèbera un’isfundu de ischermu chi ti rapresentat.</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
