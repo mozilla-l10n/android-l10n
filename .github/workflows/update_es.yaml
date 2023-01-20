@@ -1,7 +1,7 @@
 name: Update Spanish (es)
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: "0 5 * * *"
   workflow_dispatch:
 jobs:
   copy:
@@ -13,15 +13,15 @@ jobs:
       - name: Set up Python 3
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: "3.10"
       - name: Copy translations from es-ES to es
         run: |
           python .github/scripts/copy_locale.py --source es-ES --dest es --path mozilla-mobile/android-components
           python .github/scripts/copy_locale.py --source es-ES --dest es --path mozilla-mobile/fenix
       - name: Set up git and commit
         run : |
-          git config user.name 'flodolo'
-          git config user.email 'flodolo@users.noreply.github.com'
+          git config user.name "l10n-bot"
+          git config user.email "actions@users.noreply.github.com"
           git add .
           git diff-index --quiet HEAD || git commit -m "Update Spanish (es) localizations"
           git push
