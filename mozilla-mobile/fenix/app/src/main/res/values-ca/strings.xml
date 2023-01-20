@@ -378,8 +378,15 @@
     <string name="reduce_cookie_banner_details_panel_description_on_for_site_1">El %1$s pot intentar rebutjar automàticament les sol·licituds de galetes.</string>
     <!-- Title text for the dialog use on the control branch of the experiment to determine which context users engaged the most -->
     <string name="reduce_cookie_banner_control_experiment_dialog_title" tools:ignore="UnusedResources">Adéu als bàners de galetes!</string>
+    <!-- Body text for the dialog use on the control branch of the experiment to determine which context users engaged the most -->
+    <string moz:RemovedIn="110" name="reduce_cookie_banner_control_experiment_dialog_body" tools:ignore="UnusedResources">Rebutja automàticament les sol·licituds de galetes, quan sigui possible. Si no es pot, accepta totes les galetes per tancar els bàners de galetes.</string>
+    <!-- Body text for the dialog use on the control branch of the experiment to determine which context users engaged the most -->
+    <string name="reduce_cookie_banner_control_experiment_dialog_body_1">Rebutja automàticament les sol·licituds de galetes, quan sigui possible.</string>
     <!-- Remind me later text button for the onboarding dialog -->
     <string name="reduce_cookie_banner_dialog_not_now_button">Ara no</string>
+
+    <!-- Change setting text button, for the dialog use on the control branch of the experiment to determine which context users engaged the most -->
+    <string name="reduce_cookie_banner_control_experiment_dialog_change_setting_button">Tanca els bàners</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Intenta connectar-se als llocs mitjançant el protocol de xifratge HTTPS automàticament per millorar la seguretat.</string>
@@ -485,6 +492,12 @@
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Visitat recentment</string>
 
+    <!-- Title for the customize home screen section with Pocket. -->
+    <string name="customize_toggle_pocket_2">Articles suggerents</string>
+    <!-- Summary for the customize home screen section with Pocket. The first parameter is product name Pocket -->
+    <string name="customize_toggle_pocket_summary">Articles recomanats pel %s</string>
+    <!-- Title for the customize home screen section with sponsored Pocket stories. -->
+    <string name="customize_toggle_pocket_sponsored">Articles patrocinats</string>
     <!-- Title for the opening wallpaper settings screen -->
     <string name="customize_wallpapers">Fons de pantalla</string>
     <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -497,6 +510,29 @@
     <string name="wallpaper_updated_snackbar_message">S’ha actualitzat el fons de pantalla!</string>
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Mostra</string>
+
+    <!-- Snackbar message for when wallpaper couldn't be downloaded -->
+    <string name="wallpaper_download_error_snackbar_message">No s’ha pogut baixar el fons de pantalla</string>
+    <!-- Snackbar label for action to retry downloading the wallpaper -->
+    <string name="wallpaper_download_error_snackbar_action">Torna-ho a provar</string>
+    <!-- Snackbar message for when wallpaper couldn't be selected because of the disk error -->
+    <string name="wallpaper_select_error_snackbar_message">No s’ha pogut canviar el fons de pantalla</string>
+    <!-- Text displayed that links to website containing documentation about the "Limited Edition" wallpapers. -->
+    <string name="wallpaper_learn_more">Més informació</string>
+    <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
+    <string name="wallpaper_classic_title">%s clàssic</string>
+    <!-- Text for limited edition wallpapers title. -->
+    <string name="wallpaper_limited_edition_title">Edició limitada</string>
+    <!-- Description text for the limited edition wallpapers with learn more link. The first parameter is the learn more string defined in wallpaper_learn_more-->
+    <string name="wallpaper_limited_edition_description_with_learn_more">La nova col·lecció Veus independents. %s</string>
+    <!-- Description text for the limited edition wallpapers. -->
+    <string name="wallpaper_limited_edition_description">La nova col·lecció Veus independents.</string>
+    <!-- Wallpaper onboarding dialog header text. -->
+    <string name="wallpapers_onboarding_dialog_title_text">Afegiu-hi un toc de color</string>
+    <!-- Wallpaper onboarding dialog body text. -->
+    <string name="wallpapers_onboarding_dialog_body_text">Trieu un fons de pantalla que us representi.</string>
+    <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
+    <string name="wallpapers_onboarding_dialog_explore_more_button_text">Descobriu més fons de pantalla</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -577,6 +613,9 @@
     <!-- Summary for studies preferences -->
     <string name="preference_experiments_summary_2">Permet a Mozilla instal·lar i executar estudis</string>
 
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Sync and save your data preference view -->
+    <string name="preferences_sync_2">Sincronitza i desa les dades</string>
     <!-- Preference for reconnecting to FxA sync -->
     <string name="preferences_sync_sign_in_to_reconnect">Inicieu la sessió per tornar a connectar</string>
     <!-- Preference for removing FxA account -->
@@ -634,6 +673,17 @@
     <string name="settings_title">Paràmetres</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Tanca</string>
+
+    <!-- Title to show in alert when a lot of tabs are to be opened
+    %d is a placeholder for the number of tabs that will be opened -->
+    <string name="open_all_warning_title">Voleu obrir %d pestanyes?</string>
+    <!-- Message to warn users that a large number of tabs will be opened
+    %s will be replaced by app name. -->
+    <string name="open_all_warning_message">Obrir tantes pestanyes pot fer que el %s vagi més lent mentre es carreguen les pàgines. Esteu segur que voleu continuar?</string>
+    <!-- Dialog button text for confirming open all tabs -->
+    <string name="open_all_warning_confirm">Obre les pestanyes</string>
+    <!-- Dialog button text for canceling open all tabs -->
+    <string name="open_all_warning_cancel">Cancel·la</string>
 
     <!-- Text to show users they have one site in the history group section of the History fragment.
     %d is a placeholder for the number of sites in the group. -->
@@ -695,6 +745,13 @@
     <string name="close_tabs_after_one_week_summary">Tanca-les al cap d’una setmana</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Tanca-les al cap d’un mes</string>
+
+    <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage_summary">Obre en la pàgina d’inici</string>
+    <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab_summary">Obre en la darrera pestanya</string>
+    <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity_summary">Obre en la pàgina d’inici després de quatre hores</string>
 
     <!-- Inactive tabs -->
     <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
@@ -863,6 +920,10 @@
     <string name="bookmark_menu_open_in_new_tab_button">Obre en una pestanya nova</string>
     <!-- Bookmark overflow menu open in private tab button -->
     <string name="bookmark_menu_open_in_private_tab_button">Obre en una pestanya privada</string>
+    <!-- Bookmark overflow menu open all in tabs button -->
+    <string name="bookmark_menu_open_all_in_tabs_button">Obre-ho tot en pestanyes noves</string>
+    <!-- Bookmark overflow menu open all in private tabs button -->
+    <string name="bookmark_menu_open_all_in_private_tabs_button">Obre-ho tot en pestanyes privades</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Suprimeix</string>
     <!--Bookmark overflow menu save button -->
@@ -959,6 +1020,12 @@
     <string moz:removedIn="111" name="tracking_protection_on" tools:ignore="UnusedResources">Activada</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Desactivada</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to standard -->
+    <string name="tracking_protection_standard">Estàndard</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to strict -->
+    <string name="tracking_protection_strict">Estricta</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to custom -->
+    <string name="tracking_protection_custom">Personalitzada</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Permet àudio i vídeo</string>
     <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
@@ -1040,6 +1107,10 @@
     <!-- Content description (not visible, for screen readers etc.):
         "Share" button. Opens the share menu when pressed. -->
     <string name="share_button_content_description">Comparteix</string>
+    <!-- Text for the Save to PDF feature in the share menu -->
+    <string name="share_save_to_pdf">Desa com a PDF</string>
+    <!-- Text for error message when generating a PDF file Text for error message when generating a PDF file. -->
+    <string name="unable_to_save_to_pdf_error">No s’ha pogut generar el PDF</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Envia a un dispositiu</string>
 
@@ -1053,7 +1124,9 @@
     <string name="toast_copy_link_to_clipboard">S\'ha copiat al porta-retalls</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Inicia la sessió al Sync</string>
-     <!-- An option from the share dialog to send link to all other sync devices -->
+     <!-- An option from the three dot menu to sync and save data -->
+    <string name="sync_menu_sync_and_save_data">Sincronitza i desa les dades</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
     <string name="sync_send_to_all">Envia a tots els dispositius</string>
     <!-- An option from the share dialog to reconnect to sync -->
     <string name="sync_reconnect">Torna a connectar al Sync</string>
@@ -1087,6 +1160,12 @@
     <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
     %1$s is a placeholder that will be replaced by the app name (Fenix). -->
     <string name="notification_default_browser_text">Fes que el %1$s sigui el navegador per defecte</string>
+
+    <!-- Title shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_title">Proveu la navegació privada</string>
+    <!-- Text shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_text">Navegueu sense desar cap galeta ni historial en el %1$s</string>
 
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
@@ -1178,6 +1257,9 @@
     <string name="preference_summary_delete_browsing_data_on_quit_2">Suprimeix automàticament les dades de navegació en seleccionar «Surt» en el menú principal</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Surt</string>
+
+    <!-- Title text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_title">Interval de temps per suprimir</string>
 
     <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
     <string name="delete_browsing_data_prompt_message_3">El %s suprimirà les dades de navegació seleccionades.</string>
