@@ -33,9 +33,11 @@
 
     <!-- Private mode shortcut "contextual feature recommendation" (CFR) -->
     <!-- Text for the main message -->
-    <string moz:removedIn="109" name="cfr_message" tools:ignore="UnusedResources">Ɓeydu sodorde ngam udditde tabbe e Jaɓɓorgo maa.</string>
+    <string name="cfr_message" moz:removedIn="109" tools:ignore="UnusedResources">Ɓeydu sodorde ngam udditde tabbe e Jaɓɓorgo maa.</string>
+    <!-- Text for the Private mode shortcut CFR message for adding a private mode shortcut to open private tabs from the Home screen -->
+    <string name="private_mode_cfr_message">Hurminir tabre aroore fiyannde wootere.</string>
     <!-- Text for the positive button -->
-    <string moz:removedIn="109" name="cfr_pos_button_text" tools:ignore="UnusedResources">Ɓeydu sodorde</string>
+    <string name="cfr_pos_button_text" moz:removedIn="109" tools:ignore="UnusedResources">Ɓeydu sodorde</string>
     <!-- Text for the negative button to decline adding a Private Browsing shortcut to the Home screen -->
     <string name="cfr_neg_button_text">Alaa, mi yaafiima</string>
 
@@ -160,9 +162,13 @@
     <string name="preferences_open_links_in_a_private_tab">Uddit jokke e tabbere suuriinde</string>
     <!-- Preference for allowing screenshots to be taken while in a private tab-->
     <string name="preferences_allow_screenshots_in_private_mode">Yamir nokitte yaynirde e banngogol suturo</string>
+    <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+    <string name="preferences_screenshots_in_private_mode_disclaimer">So yamiraama, tabbe cuuriiɗe ne maa njiyo so tabbe keewɗe ena udditii</string>
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">Ɓeydu sodorde banngogol suturo</string>
 
+    <!-- Summary of https only preference if https only is set to off -->
+    <string name="preferences_https_only_off">Ñifol</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Keɓogol</string>
     <!-- Preference to override the Firefox Account server -->
@@ -207,6 +213,11 @@
     <string name="preferences_open_links_in_apps">Uddit jokke e nder jaaɓnirɗe</string>
     <!-- Preference for add_ons -->
     <string name="preferences_addons">Ɓeyditte</string>
+
+    <!-- Summary for notification preference indicating notifications are allowed -->
+    <string name="notifications_allowed_summary">Yamiraama</string>
+    <!-- Summary for notification preference indicating notifications are not allowed -->
+    <string name="notifications_not_allowed_summary">Yamiraaka</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -314,6 +325,15 @@
     <string name="opening_screen_homepage">Hello jaɓɓorgo</string>
     <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
     <string name="opening_screen_after_four_hours_of_inactivity">Jaɓɓorgo ɓaawo waktuuji nayi ɗe ndilaaka</string>
+
+    <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
+    <string name="close_tabs_manually_summary">Uddir junngol</string>
+    <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage_summary">Uddit e hello jaɓɓorgo</string>
+    <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab_summary">Uddit e hello sakkitiingo</string>
+    <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity_summary">Uddit e hello jaɓɓorgo caggal waktuuji nayi</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
@@ -466,17 +486,21 @@
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Paltooje</string>
     <!-- Summary of tracking protection preference if tracking protection is set to on -->
-    <string name="tracking_protection_on">Kuɓɓol</string>
+    <string name="tracking_protection_on" moz:removedIn="111" tools:ignore="UnusedResources">Kuɓɓol</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Ñifol</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Yamir ojoo e widewoo</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
+    <string name="quick_setting_option_autoplay_allowed">Yamir ojoo e widewoo</string>
     <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
     <string name="preference_option_autoplay_allowed_wifi_only2">Daaƴ ojoo e widewoo e keɓe cinndel tan</string>
     <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
     <string name="preference_option_autoplay_allowed_wifi_subtext">Ojoo e widewoo maa taroy e WI-FI</string>
     <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">Daaƴ ojoo tan</string>
+    <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_block_audio">Daaƴ ojoo tan</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
     <string name="preference_option_autoplay_blocked3">Daaƴ ojoo e widewoo</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
