@@ -14,6 +14,14 @@
     <string name="content_description_disable_private_browsing_button">Ñif banngagol suturo</string>
     <!-- Placeholder text shown in the search bar before a user enters text -->
     <string name="search_hint">Yiilo walla naatnu ñiiɓirde</string>
+    <!-- Placeholder text shown in search bar when using history search -->
+    <string name="history_search_hint">Aslol njiilaw</string>
+    <!-- Placeholder text shown in search bar when using bookmarks search -->
+    <string name="bookmark_search_hint">Yiylo maantore</string>
+    <!-- Placeholder text shown in search bar when using tabs search -->
+    <string name="tab_search_hint">Tabbe njiilaw</string>
+    <!-- Placeholder text shown in the search bar when using application search engines -->
+    <string name="application_search_hint">Naatnu kelme jiyleteeɗe</string>
     <!-- No Open Tabs Message Description -->
     <string name="no_open_tabs_description">Tabbe maa udditiiɗe maa kollire ɗoo.</string>
 
@@ -59,6 +67,15 @@
     <!-- Recent Tabs -->
     <!-- Header text for jumping back into the recent tab in the home screen -->
     <string name="recent_tabs_header">Artu ɗo ngonno-ɗaa</string>
+
+    <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
+         in the Recently visited section -->
+    <string name="recent_tab_menu_item_remove">Ittu</string>
+
+    <!-- History Metadata -->
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string name="history_metadata_header_2">Jillaaɗi sakket</string>
 
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate backward (browsing history) -->
@@ -217,11 +234,17 @@
 
     <!-- Preference for developers -->
     <string name="preferences_remote_debugging">Buggitagol goɗɗungol rewde e USB</string>
+    <!-- Preference title for switch preference to show search engines -->
+    <string name="preferences_show_search_engines">Hollu jiylorɗe</string>
     <!-- Preference title for switch preference to show search suggestions -->
     <string name="preferences_show_search_suggestions">Hollu wasiyaaji njiilaw</string>
 
+    <!-- Preference title for switch preference to show voice search button -->
+    <string name="preferences_show_voice_search">Hollu jiilaw sawto</string>
     <!-- Preference title for switch preference to show search suggestions also in private mode -->
     <string name="preferences_show_search_suggestions_in_private">Hoolu e doge keeriiɗe</string>
+    <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
+    <string name="preferences_show_clipboard_suggestions">Hollu wasiyaaji ɗakkitorde</string>
     <!-- Preference title for switch preference to suggest browsing history when searching -->
     <string name="preferences_search_browsing_history">Yiylo aslol banngogol</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
@@ -245,10 +268,23 @@
     <string name="customize_toggle_jump_back_in">Artu ɗo ngonno-ɗaa</string>
     <!-- Title for the customize home screen section with recently saved bookmarks. -->
     <string name="customize_toggle_recent_bookmarks">Maantore sakket</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is
+    a section where users see a list of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recently_visited">Jillaaɗi sakket</string>
     <!-- Title for the customize home screen section with sponsored Pocket stories. -->
     <string name="customize_toggle_pocket_sponsored">Daarti barjinaaɗe</string>
+    <!-- Title for the opening wallpaper settings screen -->
+    <string name="customize_wallpapers">Ɗeeri ɓalal</string>
     <!-- Title for the customize home screen section with sponsored shortcuts. -->
     <string name="customize_toggle_contile">Codorɗe barjinaaɗi</string>
+
+    <!-- Wallpapers -->
+    <!-- Content description for various wallpapers. The first parameter is the name of the wallpaper -->
+    <string name="wallpapers_item_name_content_description">Temre ɗeerol ɓalal: %1$s</string>
+    <!-- Text displayed that links to website containing documentation about the "Limited Edition" wallpapers. -->
+    <string name="wallpaper_learn_more">Ɓeydu humpito</string>
+    <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
+    <string name="wallpaper_classic_title">Gaadanteejo %s</string>
 
     <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
@@ -352,8 +388,27 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Uddu</string>
 
+    <!-- Text to show users they have one site in the history group section of the History fragment.
+    %d is a placeholder for the number of sites in the group. -->
+    <string name="history_search_group_site">lowre %d</string>
+
+    <!-- Option in library for Recently Closed Tabs -->
+    <string name="library_recently_closed_tabs">Tabbe uddaaɗe sakket</string>
+    <!-- Option in library to open Recently Closed Tabs page -->
+    <string name="recently_closed_show_full_history">Hollu aslol fof</string>
+    <!-- Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tabs">%d tabbe</string>
+    <!-- Text to show users they have one tab saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected. -->
+    <string name="recently_closed_tab">%d tabbere</string>
+    <!-- Recently closed tabs screen message when there are no recently closed tabs -->
+    <string name="recently_closed_empty_message">Alaa tabbe uddaaɗe sakket njiytaa</string>
+
     <!-- Option for always opening the homepage when re-opening the app -->
     <string name="opening_screen_homepage">Hello jaɓɓorgo</string>
+    <!-- Option for always opening the user's last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab">Tabbere sakkitiinde</string>
     <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
     <string name="opening_screen_after_four_hours_of_inactivity">Jaɓɓorgo ɓaawo waktuuji nayi ɗe ndilaaka</string>
 
@@ -380,6 +435,10 @@
     <string name="tab_drawer_fab_content">Cuuriɗum</string>
     <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
     <string name="tab_drawer_fab_sync">Sanngoɗin</string>
+    <!-- Text shown in the menu to view recently closed tabs -->
+    <string name="tab_tray_menu_recently_closed">Tabbe uddaaɗe sakket</string>
+    <!-- Text shown in the tabs tray inactive tabs section -->
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Uddaaɗe sakket</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
     <string name="close_tab">Uddu tabbere</string>
     <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. First parameter is tab title  -->
@@ -624,6 +683,10 @@
     <string name="qr_scanner_dialog_negative">HAƊ</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Aɗa yenanaa yiɗde momtude %1$s?</string>
+    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_message">Momtude ndee tabbere maa momtor leemannde ndee fof. Aɗa waawi sosde leemanɗe kese nde katonjinɗaa kala.</string>
+    <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
+    <string name="delete_tab_and_collection_dialog_title">Momtu %1$s?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">Momtu</string>
 
