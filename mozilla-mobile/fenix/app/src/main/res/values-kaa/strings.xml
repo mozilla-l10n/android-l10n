@@ -105,6 +105,10 @@
     <string name="recent_tabs_show_all">Hámmesin kórsetiw</string>
     <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
     <string name="recent_tabs_show_all_content_description_2">Barlıq jaqındaǵı betlerdiń túymesin kórsetiw</string>
+    <!-- Text for button in synced tab card that opens synced tabs tray -->
+    <string name="recent_tabs_see_all_synced_tabs_button_text">Barlıq sáykeslestirilgen betlerdi kóriw</string>
+    <!-- Accessibility description for device icon used for recent synced tab -->
+    <string name="recent_tabs_synced_device_icon_content_description">Sáykeslestirilgen qurılma</string>
     <!-- Text for the dropdown menu to remove a recent synced tab from the homescreen -->
     <string name="recent_synced_tab_menu_item_remove">Alıp taslaw</string>
     <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
@@ -319,6 +323,8 @@
     <string name="preferences_search_browsing_history">Brauzer tariyxınan izlew</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
     <string name="preferences_search_bookmarks">Saylandılardı izlew</string>
+    <!-- Preference title for switch preference to suggest synced tabs when searching -->
+    <string name="preferences_search_synced_tabs">Sáykeslestirilgen betlerdi izlew</string>
     <!-- Preference for account settings -->
     <string name="preferences_account_settings">Akkaunt sazlawları</string>
     <!-- Preference for open links in third party apps -->
@@ -372,6 +378,9 @@
     <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
     <string name="wallpaper_classic_title">Klassik %s</string>
 
+    <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
+    <string name="wallpapers_onboarding_dialog_explore_more_button_text">Kóbirek fon súwretlerin kóriw</string>
+
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
     <string name="addon_not_supported_error">Qosımshanı qollap-quwatlamaydı</string>
@@ -402,6 +411,14 @@
     <string name="empty_device_name_error">Qurılma atı bos bolıwı múmkin emes.</string>
     <!-- Label indicating that sync is in progress -->
     <string name="sync_syncing_in_progress">Sinxronlaw…</string>
+    <!-- Label summary indicating that sync failed. The first parameter is the date stamp showing last time it succeeded -->
+    <string name="sync_failed_summary">Sáykeslestiriw ámelge aspadı. Aqırǵı sáykeslik: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_failed_never_synced_summary">Sáykeslestiriw ámelge aspadı. Aqırǵı sáykeslik: heshqashan</string>
+    <!-- Label summary the date we last synced. The first parameter is date stamp showing last time synced -->
+    <string name="sync_last_synced_summary">Aqırǵı sáykeslik: %s</string>
+    <!-- Label summary showing never synced -->
+    <string name="sync_never_synced_summary">Aqırǵı sáykeslik: heshqashan</string>
     <!-- Preference for syncing credit cards -->
     <string name="preferences_sync_credit_cards">Bank kartaları</string>
     <!-- Preference for syncing addresses -->
@@ -425,6 +442,9 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data">Paydalanıw hám texnikalıq maǵlıwmatlar</string>
 
+    <!-- Turn On Sync Preferences -->
+    <!-- Header of the Sync and save your data preference view -->
+    <string name="preferences_sync_2">Maǵlıwmatlardı sáykeslestiriw hám saqlaw</string>
     <!-- Preference for removing FxA account -->
     <string name="preferences_sync_remove_account">Akkaunttı óshiriw</string>
 
@@ -549,12 +569,16 @@
     <string name="tab_header_label">Betlerdi ashıw</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">Jeke betler</string>
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">Sáykeslestirilgen betler</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Bet qosıw</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_private_tab">Jeke bet qosıw</string>
     <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
     <string name="tab_drawer_fab_content">Jeke</string>
+    <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
+    <string name="tab_drawer_fab_sync">Sáykeslestiriw</string>
     <!-- Text shown in the menu for sharing all tabs -->
     <string name="tab_tray_menu_item_share">Barlıq betlerdi bólisiw</string>
     <!-- Text shown in the menu to view recently closed tabs -->
@@ -825,7 +849,11 @@
     <string name="share_copy_link_to_clipboard">Almasıw buferine kóshirip alıw</string>
     <!-- Toast shown after copying link to clipboard -->
     <string name="toast_copy_link_to_clipboard">Almasıw buferine kóshirip alındı</string>
-     <!-- Text displayed when sync is offline and cannot be accessed -->
+     <!-- An option from the three dot menu to sync and save data -->
+    <string name="sync_menu_sync_and_save_data">Maǵlıwmatlardı sáykeslestiriw hám saqlaw</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
+    <string name="sync_send_to_all">Barlıq qurılmalarǵa jiberiw</string>
+    <!-- Text displayed when sync is offline and cannot be accessed -->
     <string name="sync_offline">Oflayn</string>
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Basqa qurılmaǵa jalǵaw</string>
@@ -833,6 +861,11 @@
     <string name="sync_confirmation_button">Túsindim</string>
     <!-- Add new device screen title -->
     <string name="sync_add_new_device_title">Qurılmaǵa jiberiw</string>
+
+    <!-- Text for the warning message on the Add new device screen -->
+    <string name="sync_add_new_device_message">Heshqanday qurılma jalǵanbaǵan</string>
+    <!-- Text for the button to learn about sending tabs -->
+    <string name="sync_add_new_device_learn_button">Betlerdi Jiberiw haqqında úyreniw…</string>
 
     <!-- Notifications -->
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
@@ -991,8 +1024,12 @@
     <!-- Preference option for adding a login -->
     <string name="preferences_logins_add_login">Login qosıw</string>
 
+    <!-- Preference for syncing saved logins in Fenix -->
+    <string name="preferences_passwords_sync_logins">Loginlardı sáykeslestiriw</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">Saqlanǵan loginler</string>
+    <!-- Preference to access list of saved logins -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Sáykeslestiriw haqqında kóbirek úyreniń.</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Esaptan tısqarılar</string>
     <!-- Description of list of login exceptions that we never save logins for -->
@@ -1037,6 +1074,8 @@
     <string name="preferences_addresses">Mánziller</string>
     <!-- Preference and title for managing the settings for credit cards -->
     <string name="preferences_credit_cards">Bank kartaları</string>
+    <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
+    <string name="preferences_credit_cards_sync_cards">Kartalardı sáykeslestiriw</string>
     <!-- Preference option for adding a credit card -->
     <string name="preferences_credit_cards_add_credit_card">Bank kartasın qosıw</string>
     <!-- Preference option for managing saved credit cards -->
