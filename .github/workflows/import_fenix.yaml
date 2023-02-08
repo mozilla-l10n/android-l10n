@@ -15,7 +15,7 @@ jobs:
       - name: Clone main code repository
         uses: actions/checkout@v3
         with:
-          repository: "mozilla-mobile/fenix"
+          repository: "mozilla-mobile/firefox-android"
           path: "source"
       - name: Set up Python 3
         uses: actions/setup-python@v4
@@ -27,7 +27,7 @@ jobs:
       - name: Copy source files
         run: >
           python l10n/.github/scripts/import_strings.py source
-          --toml source/l10n.toml
+          --toml source/fenix/l10n.toml
           --dest l10n/mozilla-mobile/fenix
       - name: Commit changes and open pull request
         run: |
