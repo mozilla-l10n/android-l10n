@@ -4,10 +4,11 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+from reference_linter import StringExtraction
+import argparse
+import json
 import os
 import sys
-import argparse
-from reference_linter import StringExtraction
 
 
 def main():
@@ -30,7 +31,10 @@ def main():
         dest="toml_path",
         help="Path to l10n.toml file, relative to the root of the project folder",
     )
-    parser.add_argument("--dest", dest="dest_file", help="Append output to file")
+    parser.add_argument("--dest", dest="dest_file", help="Saver error messages to file")
+    parser.add_argument(
+        "--json", dest="json_file", help="Save error info as JSON to file"
+    )
     args = parser.parse_args()
 
     base = StringExtraction(os.path.join(args.base_path, args.toml_path))
@@ -47,6 +51,14 @@ def main():
         for key in base_strings.keys()
         if key in head_strings and base_strings[key] != head_strings[key]
     }
+
+    error_json = {}
+    for string_id in errors.keys():
+        filename, id = string_id.split(":")
+        if filename in error_json:
+            error_json[filename].append(id)
+        else:
+            error_json[filename] = [id]
 
     if errors:
         output = []
@@ -72,6 +84,23 @@ def main():
                 f.writelines(previous_content)
                 f.write("\n")
                 f.write("\n".join(output))
+
+        # Check if there's a JSON output specified
+        json_file = args.json_file
+        if json_file:
+            print(f"Saving output to {json_file}")
+            if os.path.exists(json_file):
+                try:
+                    with open(json_file, "r") as f:
+                        previous_content = json.load(f)
+                except:
+                    previous_content = {}
+            else:
+                previous_content = {}
+
+            previous_content.update(checks.error_json)
+            with open(json_file, "w") as f:
+                json.dump(previous_content, f, indent=2, sort_keys=True)
 
         # Print errors anyway on screen
         print("\n".join(output))

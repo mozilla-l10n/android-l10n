@@ -61,11 +61,20 @@ class QualityCheck:
         self.ref_strings = ref_strings
         self.config_path = config_path
         self.error_messages = []
+        self.error_json = {}
 
         self.runChecks()
 
     def runChecks(self):
         """Check translations for issues"""
+
+        def storeError(string_id, error_msg):
+            filename, id = string_id.split(":")
+            if filename in self.error_json:
+                self.error_json[filename].append(id)
+            else:
+                self.error_json[filename] = [id]
+            self.error_messages.append(error_msg)
 
         def ignoreString(exceptions, errorcode, string_id):
             """Check if a string should be ignored"""
@@ -98,13 +107,13 @@ class QualityCheck:
 
             # Check for empty strings
             if ref_string == "":
-                error_msg = f"{ref_string} is empty"
-                self.error_messages.append(error_msg)
+                error_msg = f"{ref_id} is empty"
+                storeError(ref_id, error_msg)
 
             # Check for 3 dots instead of ellipsis
             if "..." in ref_string:
-                error_msg = f"'...' in {ref_id}\n" f"  Text: {ref_string}"
-                self.error_messages.append(error_msg)
+                error_msg = f"'...' in {ref_id}\n  Text: {ref_string}"
+                storeError(ref_id, error_msg)
 
             # Check for hard-coded brand names:
             if not ignoreString(exceptions, "brand", ref_id):
@@ -114,7 +123,7 @@ class QualityCheck:
                             f"Brand '{brand}' hard-coded in {ref_id}\n"
                             f"  Text: {ref_string}"
                         )
-                        self.error_messages.append(error_msg)
+                        storeError(ref_id, error_msg)
 
     def printErrors(self, toml_name):
         """Print error messages"""
@@ -122,8 +131,7 @@ class QualityCheck:
         output = []
         if self.error_messages:
             output.append(
-                f"\n\nTOML file: {toml_name}"
-                f"\nErrors: {len(self.error_messages)}"
+                f"\n\nTOML file: {toml_name}\nErrors: {len(self.error_messages)}"
             )
             for e in self.error_messages:
                 output.append(f"\n  {e}")
@@ -138,7 +146,10 @@ def main():
         "--toml", required=True, dest="toml_path", help="Path to l10n.toml file"
     )
     parser.add_argument("--ref", dest="reference_code", help="Reference language code")
-    parser.add_argument("--dest", dest="dest_file", help="Save output to file")
+    parser.add_argument("--dest", dest="dest_file", help="Save error messages to file")
+    parser.add_argument(
+        "--json", dest="json_file", help="Save error info as JSON to file"
+    )
     parser.add_argument(
         "--config",
         nargs="?",
@@ -167,6 +178,24 @@ def main():
                 f.writelines(previous_content)
                 f.write("\n")
                 f.write("\n".join(output))
+
+        # Check if there's a JSON output specified
+        json_file = args.json_file
+        if json_file:
+            print(f"Saving output to {json_file}")
+            if os.path.exists(json_file):
+                try:
+                    with open(json_file, "r") as f:
+                        previous_content = json.load(f)
+                except:
+                    previous_content = {}
+            else:
+                previous_content = {}
+
+            previous_content.update(checks.error_json)
+            with open(json_file, "w") as f:
+                json.dump(previous_content, f, indent=2, sort_keys=True)
+
         # Print errors anyway on screen
         print("\n".join(output))
         sys.exit(1)
