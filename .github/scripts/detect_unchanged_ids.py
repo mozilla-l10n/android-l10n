@@ -31,7 +31,7 @@ def main():
         dest="toml_path",
         help="Path to l10n.toml file, relative to the root of the project folder",
     )
-    parser.add_argument("--dest", dest="dest_file", help="Saver error messages to file")
+    parser.add_argument("--dest", dest="dest_file", help="Save error messages to file")
     parser.add_argument(
         "--json", dest="json_file", help="Save error info as JSON to file"
     )
