@@ -4,6 +4,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+from html.parser import HTMLParser
 import argparse
 import json
 import os
@@ -16,6 +17,25 @@ except ImportError as e:
     print("FATAL: make sure that dependencies are installed")
     print(e)
     sys.exit(1)
+
+
+class HTMLStripper(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.reset()
+        self.strict = False
+        self.convert_charrefs = True
+        self.fed = []
+
+    def clear(self):
+        self.reset()
+        self.fed = []
+
+    def handle_data(self, d):
+        self.fed.append(d)
+
+    def get_data(self):
+        return " ".join(self.fed)
 
 
 class StringExtraction:
@@ -100,6 +120,7 @@ class QualityCheck:
             except Exception as e:
                 sys.exit(e)
 
+        html_stripper = HTMLStripper()
         for ref_id, ref_string in self.ref_strings.items():
             # Ignore strings excluded from all checks
             if ignoreString(exceptions, "general", ref_id):
@@ -114,6 +135,25 @@ class QualityCheck:
             if "..." in ref_string:
                 error_msg = f"'...' in {ref_id}\n  Text: {ref_string}"
                 storeError(ref_id, error_msg)
+
+            # Check for straight single quotes
+            if "'" in ref_string and not ignoreString(
+                exceptions, "single_quotes", ref_id
+            ):
+                error_msg = f"' in {ref_id}\n  Text: {ref_string}"
+                storeError(ref_id, error_msg)
+
+            # Check for straight double quotes
+            if '"' in ref_string and not ignoreString(
+                exceptions, "double_quotes", ref_id
+            ):
+                # Check if the version without HTML is clean
+                html_stripper.clear()
+                html_stripper.feed(ref_string)
+                cleaned_str = html_stripper.get_data()
+                if '"' in cleaned_str:
+                    error_msg = f'" in {ref_id}\n  Text: {ref_string}'
+                    storeError(ref_id, error_msg)
 
             # Check for hard-coded brand names:
             if not ignoreString(exceptions, "brand", ref_id):
