@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 from collections import defaultdict
-from reference_linter import StringExtraction
+from reference_linter import StringExtraction, merge_errors
 import argparse
 import json
 import os
@@ -64,14 +64,21 @@ def main():
 
     if errors:
         output = []
-        total = len(list(errors.keys()))
-        for id, values in errors.items():
-            output.append(
-                f"\nID: {id}"
-                f"\nPrevious: {values['previous']}"
-                f"\nNew: {values['new']}"
-            )
-        output.append(f"\nTotal number of changed IDs: {total}")
+        total = 0
+        for filename, ids in error_json.items():
+            output.append(f"\n### File: {filename}")
+            for id, error_messages in ids.items():
+                full_id = f"{filename}:{id}"
+                output.append(
+                    f"\n**ID**: `{id}`"
+                    f"\n**Previous:** `{errors[full_id]['previous']}`"
+                    f"\n**New**: `{errors[full_id]['new']}`"
+                )
+                output.append("**Error:**")
+                for e in error_messages:
+                    output.append(f"- {e}")
+                    total += 1
+        output.append(f"\n**Total number of changed IDs:** {total}\n")
 
         out_file = args.dest_file
         if out_file:
@@ -100,9 +107,9 @@ def main():
             else:
                 previous_content = {}
 
-            previous_content.update(checks.error_json)
+            merged_content = merge_errors(error_json, previous_content)
             with open(json_file, "w") as f:
-                json.dump(previous_content, f, indent=2, sort_keys=True)
+                json.dump(merged_content, f, indent=2, sort_keys=True)
 
         # Print errors anyway on screen
         print("\n".join(output))

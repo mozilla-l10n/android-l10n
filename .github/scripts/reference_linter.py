@@ -7,6 +7,7 @@
 from collections import defaultdict
 from html.parser import HTMLParser
 import argparse
+import copy
 import json
 import os
 import sys
@@ -174,18 +175,35 @@ class QualityCheck:
             output.append(f"TOML file: {toml_name}\n")
             total = 0
             for filename, ids in self.errors.items():
-                output.append(f"\nFile: {filename}")
+                output.append(f"\n### File: {filename}")
                 for id, errors in ids.items():
                     full_id = f"{filename}:{id}"
-                    output.append(f"\n  ID: {id}")
-                    output.append(f"  Text: {self.ref_strings[full_id]}")
-                    output.append("  Errors:")
+                    output.append(f"\n**ID**: `{id}`")
+                    output.append(f"**Text**: `{self.ref_strings[full_id]}`")
+                    output.append("**Errors:**")
                     for e in errors:
-                        output.append(f"    - {e}")
+                        output.append(f"- {e}")
                         total += 1
-            output.append(f"\nTotal errors in reference: {total}")
+            output.append(f"\n**Total errors in reference:** {total}\n")
 
         return "\n".join(output)
+
+
+def merge_errors(new_content, old_content):
+
+    merged_content = copy.deepcopy(new_content)
+    for filename, ids in old_content.items():
+        if filename not in merged_content:
+            merged_content[filename] = {}
+        for id, errors in ids.items():
+            if id in merged_content[filename]:
+                # Add errors to existing and remove duplicates
+                errors += merged_content[filename][id]
+                errors = list(set(errors))
+
+            merged_content[filename][id] = errors
+
+    return merged_content
 
 
 def main():
@@ -194,7 +212,6 @@ def main():
     parser.add_argument(
         "--toml", required=True, dest="toml_path", help="Path to l10n.toml file"
     )
-    parser.add_argument("--ref", dest="reference_code", help="Reference language code")
     parser.add_argument("--dest", dest="dest_file", help="Save error messages to file")
     parser.add_argument(
         "--json", dest="json_file", help="Save error info as JSON to file"
@@ -241,9 +258,9 @@ def main():
             else:
                 previous_content = {}
 
-            previous_content.update(checks.errors)
+            merged_content = merge_errors(checks.errors, previous_content)
             with open(json_file, "w") as f:
-                json.dump(previous_content, f, indent=2, sort_keys=True)
+                json.dump(merged_content, f, indent=2, sort_keys=True)
 
         # Print errors anyway on screen
         print(output)
