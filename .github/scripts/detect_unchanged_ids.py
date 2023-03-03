@@ -4,6 +4,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+from collections import defaultdict
 from reference_linter import StringExtraction
 import argparse
 import json
@@ -52,24 +53,25 @@ def main():
         if key in head_strings and base_strings[key] != head_strings[key]
     }
 
-    error_json = {}
+    error_json = defaultdict(dict)
     for string_id in errors.keys():
         filename, id = string_id.split(":")
-        if filename in error_json:
-            error_json[filename].append(id)
+        error_msg = "String was changed without a new ID"
+        if id in error_json.get(filename, {}):
+            error_json[filename][id].append(error_msg)
         else:
-            error_json[filename] = [id]
+            error_json[filename][id] = [error_msg]
 
     if errors:
         output = []
         total = len(list(errors.keys()))
-        output.append(f"\nTotal changed IDs: {total}")
         for id, values in errors.items():
             output.append(
                 f"\nID: {id}"
                 f"\nPrevious: {values['previous']}"
                 f"\nNew: {values['new']}"
             )
+        output.append(f"\nTotal number of changed IDs: {total}")
 
         out_file = args.dest_file
         if out_file:
