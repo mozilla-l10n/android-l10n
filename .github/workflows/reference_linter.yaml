@@ -30,23 +30,64 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install -r src/.github/requirements.txt
-      - name: Lint projects
+      - name: Lint reference (Firefox)
         continue-on-error: true
-        run: |
-          python src/.github/scripts/reference_linter.py --toml src/firefox.toml --config src/.github/scripts/linter_config.json --dest errors.txt --json errors.json
-          python src/.github/scripts/reference_linter.py --toml src/focus.toml --config src/.github/scripts/linter_config.json --dest errors.txt --json errors.json
-      - name: Check for unchanged IDs
+        run: >
+          python src/.github/scripts/reference_linter.py
+          --toml src/firefox.toml
+          --config src/.github/scripts/linter_config.json
+          --dest errors.txt
+          --json errors.json
+      - name: Lint reference (Focus)
+        continue-on-error: true
+        run: >
+          python src/.github/scripts/reference_linter.py
+          --toml src/focus.toml
+          --config src/.github/scripts/linter_config.json
+          --dest errors.txt
+          --json errors.json
+      - name: Check for unchanged IDs (Firefox)
         if: github.event_name == 'pull_request'
         continue-on-error: true
-        run: |
-            python src/.github/scripts/detect_unchanged_ids.py --base base --head src --toml firefox.toml --dest errors.txt --json errors.json
-            python src/.github/scripts/detect_unchanged_ids.py --base base --head src --toml focus.toml --dest errors.txt --json errors.json
+        run: >
+            python src/.github/scripts/detect_unchanged_ids.py
+            --base base --head src
+            --toml firefox.toml
+            --dest errors.txt --json errors.json
+      - name: Check for unchanged IDs (Focus)
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: >
+            python src/.github/scripts/detect_unchanged_ids.py
+            --base base --head src
+            --toml focus.toml
+            --dest errors.txt --json errors.json
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: errors-list
           path: errors.txt
           if-no-files-found: ignore
+      - name: Create comment for pull request
+        if: github.event_name == 'pull_request'
+        # Do not fail if anything goes wrong, e.g. API requests time out
+        continue-on-error: true
+        run: >
+            python src/.github/scripts/comment_errors.py
+            --token ${{ secrets.ANDROID_GITHUB_TOKEN }}
+            --repo ${{ github.event.repository.name }}
+            --owner ${{ github.repository_owner }}
+            --pr ${{ github.event.number }}
+            --json errors.json
+            --txt errors.txt
+            --dest comment.txt
+      - name: Comment in the PR
+        run: |
+          if [ -f "comment.txt" ]; then
+            gh pr comment ${{ github.event.number }} --repo ${{ github.repository }} --body-file comment.txt
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.ANDROID_GITHUB_TOKEN }}
       - name: Fail on errors
         run: |
           if [ -f "errors.txt" ]; then
