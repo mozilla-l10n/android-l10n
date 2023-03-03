@@ -33,14 +33,14 @@ jobs:
       - name: Lint projects
         continue-on-error: true
         run: |
-          python src/.github/scripts/reference_linter.py --toml src/firefox.toml --config src/.github/scripts/linter_config.json --dest errors.txt
-          python src/.github/scripts/reference_linter.py --toml src/focus.toml --config src/.github/scripts/linter_config.json --dest errors.txt
+          python src/.github/scripts/reference_linter.py --toml src/firefox.toml --config src/.github/scripts/linter_config.json --dest errors.txt --json errors.json
+          python src/.github/scripts/reference_linter.py --toml src/focus.toml --config src/.github/scripts/linter_config.json --dest errors.txt --json errors.json
       - name: Check for unchanged IDs
         if: github.event_name == 'pull_request'
         continue-on-error: true
         run: |
-            python src/.github/scripts/detect_unchanged_ids.py --base base --head src --toml firefox.toml --dest errors.txt
-            python src/.github/scripts/detect_unchanged_ids.py --base base --head src --toml focus.toml --dest errors.txt
+            python src/.github/scripts/detect_unchanged_ids.py --base base --head src --toml firefox.toml --dest errors.txt --json errors.json
+            python src/.github/scripts/detect_unchanged_ids.py --base base --head src --toml focus.toml --dest errors.txt --json errors.json
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:

@@ -4,6 +4,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+from collections import defaultdict
+from html.parser import HTMLParser
 import argparse
 import json
 import os
@@ -16,6 +18,25 @@ except ImportError as e:
     print("FATAL: make sure that dependencies are installed")
     print(e)
     sys.exit(1)
+
+
+class HTMLStripper(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.reset()
+        self.strict = False
+        self.convert_charrefs = True
+        self.fed = []
+
+    def clear(self):
+        self.reset()
+        self.fed = []
+
+    def handle_data(self, d):
+        self.fed.append(d)
+
+    def get_data(self):
+        return " ".join(self.fed)
 
 
 class StringExtraction:
@@ -60,12 +81,19 @@ class QualityCheck:
 
         self.ref_strings = ref_strings
         self.config_path = config_path
-        self.error_messages = []
+        self.errors = defaultdict(dict)
 
         self.runChecks()
 
     def runChecks(self):
         """Check translations for issues"""
+
+        def storeError(string_id, error_msg):
+            filename, id = string_id.split(":")
+            if id in self.errors.get(filename, {}):
+                self.errors[filename][id].append(error_msg)
+            else:
+                self.errors[filename][id] = [error_msg]
 
         def ignoreString(exceptions, errorcode, string_id):
             """Check if a string should be ignored"""
@@ -91,6 +119,7 @@ class QualityCheck:
             except Exception as e:
                 sys.exit(e)
 
+        html_stripper = HTMLStripper()
         for ref_id, ref_string in self.ref_strings.items():
             # Ignore strings excluded from all checks
             if ignoreString(exceptions, "general", ref_id):
@@ -98,37 +127,65 @@ class QualityCheck:
 
             # Check for empty strings
             if ref_string == "":
-                error_msg = f"{ref_string} is empty"
-                self.error_messages.append(error_msg)
+                storeError(ref_id, f"{ref_id} is empty")
 
             # Check for 3 dots instead of ellipsis
             if "..." in ref_string:
-                error_msg = f"'...' in {ref_id}\n" f"  Text: {ref_string}"
-                self.error_messages.append(error_msg)
+                storeError(
+                    ref_id, "Incorrect ellipsis character `...`. Use `…` instead."
+                )
+
+            # Check for straight single quotes
+            if "'" in ref_string and not ignoreString(
+                exceptions, "single_quotes", ref_id
+            ):
+                storeError(
+                    ref_id, "Incorrect straight quote character `'`. use `’` instead."
+                )
+
+            # Check for straight double quotes
+            if '"' in ref_string and not ignoreString(
+                exceptions, "double_quotes", ref_id
+            ):
+                # Check if the version without HTML is clean
+                html_stripper.clear()
+                html_stripper.feed(ref_string)
+                cleaned_str = html_stripper.get_data()
+                if '"' in cleaned_str:
+                    storeError(
+                        ref_id,
+                        'Incorrect straight double quote character `"`. use `“”` instead.',
+                    )
 
             # Check for hard-coded brand names:
             if not ignoreString(exceptions, "brand", ref_id):
                 for brand in brands:
                     if brand in ref_string:
-                        error_msg = (
-                            f"Brand '{brand}' hard-coded in {ref_id}\n"
-                            f"  Text: {ref_string}"
+                        storeError(
+                            ref_id,
+                            f"Hard-coded brand `{brand}`. Use a variable instead.",
                         )
-                        self.error_messages.append(error_msg)
 
     def printErrors(self, toml_name):
         """Print error messages"""
 
         output = []
-        if self.error_messages:
-            output.append(
-                f"\n\nTOML file: {toml_name}"
-                f"\nErrors: {len(self.error_messages)}"
-            )
-            for e in self.error_messages:
-                output.append(f"\n  {e}")
+        if self.errors:
+            output.append(f"TOML file: {toml_name}\n")
+            total = 0
+            for filename, ids in self.errors.items():
+                output.append(f"\nFile: {filename}")
+                for id, errors in ids.items():
+                    full_id = f"{filename}:{id}"
+                    output.append(f"\n  ID: {id}")
+                    output.append(f"  Text: {self.ref_strings[full_id]}")
+                    output.append("  Errors:")
+                    for e in errors:
+                        output.append(f"    - {e}")
+                        total += 1
+            output.append(f"\nTotal errors in reference: {total}")
 
-        return output
+        return "\n".join(output)
 
 
 def main():
@@ -138,7 +195,10 @@ def main():
         "--toml", required=True, dest="toml_path", help="Path to l10n.toml file"
     )
     parser.add_argument("--ref", dest="reference_code", help="Reference language code")
-    parser.add_argument("--dest", dest="dest_file", help="Save output to file")
+    parser.add_argument("--dest", dest="dest_file", help="Save error messages to file")
+    parser.add_argument(
+        "--json", dest="json_file", help="Save error info as JSON to file"
+    )
     parser.add_argument(
         "--config",
         nargs="?",
@@ -166,9 +226,27 @@ def main():
             with open(out_file, "w") as f:
                 f.writelines(previous_content)
                 f.write("\n")
-                f.write("\n".join(output))
+                f.write(output)
+
+        # Check if there's a JSON output specified
+        json_file = args.json_file
+        if json_file:
+            print(f"Saving output to {json_file}")
+            if os.path.exists(json_file):
+                try:
+                    with open(json_file, "r") as f:
+                        previous_content = json.load(f)
+                except:
+                    previous_content = {}
+            else:
+                previous_content = {}
+
+            previous_content.update(checks.errors)
+            with open(json_file, "w") as f:
+                json.dump(previous_content, f, indent=2, sort_keys=True)
+
         # Print errors anyway on screen
-        print("\n".join(output))
+        print(output)
         sys.exit(1)
     else:
         print("No issues found.")
