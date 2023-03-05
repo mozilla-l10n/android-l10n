@@ -4,6 +4,13 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+# This script analyzes the reference files for errors.
+#
+# If a --json parameter is provided, the script will exit with status 0 and save
+# error data into a JSON file (content will be appended if the file already
+# exists). Otherwise, errors will be printed on screen and the script will exit
+# with return value 1.
+
 from collections import defaultdict
 from html.parser import HTMLParser
 import argparse
@@ -78,11 +85,12 @@ class StringExtraction:
 
 
 class QualityCheck:
-    def __init__(self, ref_strings, config_path):
+    def __init__(self, ref_strings, config_path, toml_path):
 
         self.ref_strings = ref_strings
         self.config_path = config_path
-        self.errors = defaultdict(dict)
+        self.toml_path = toml_path
+        self.errors = {toml_path: defaultdict(dict)}
 
         self.runChecks()
 
@@ -91,10 +99,13 @@ class QualityCheck:
 
         def storeError(string_id, error_msg):
             filename, id = string_id.split(":")
-            if id in self.errors.get(filename, {}):
-                self.errors[filename][id].append(error_msg)
+            if id in self.errors[self.toml_path].get(filename, {}):
+                self.errors[self.toml_path][filename][id]["errors"].append(error_msg)
             else:
-                self.errors[filename][id] = [error_msg]
+                self.errors[self.toml_path][filename][id] = {
+                    "text": self.ref_strings[string_id],
+                    "errors": [error_msg],
+                }
 
         def ignoreString(exceptions, errorcode, string_id):
             """Check if a string should be ignored"""
@@ -167,41 +178,51 @@ class QualityCheck:
                             f"Hard-coded brand `{brand}`. Use a variable instead.",
                         )
 
-    def printErrors(self, toml_name):
-        """Print error messages"""
 
-        output = []
-        if self.errors:
-            output.append(f"TOML file: {toml_name}\n")
-            total = 0
-            for filename, ids in self.errors.items():
-                output.append(f"\n### File: {filename}")
-                for id, errors in ids.items():
-                    full_id = f"{filename}:{id}"
-                    output.append(f"\n**ID**: `{id}`")
-                    output.append(f"**Text**: `{self.ref_strings[full_id]}`")
-                    output.append("**Errors:**")
-                    for e in errors:
-                        output.append(f"- {e}")
-                        total += 1
-            output.append(f"\n**Total errors in reference:** {total}\n")
+def outputErrors(errors):
+    """Print error messages"""
 
-        return "\n".join(output)
+    output = []
+    for config_name, config_errors in errors.items():
+        output.append(f"\n## TOML file: {config_name}")
+        total = 0
+        for filename, ids in config_errors.items():
+            output.append(f"\n### File: {filename}")
+            for id, file_data in ids.items():
+                output.append(f"\n**ID**: `{id}`")
+                output.append(f"**Text**: `{file_data['text']}`")
+                output.append("**Errors:**")
+                for e in file_data["errors"]:
+                    output.append(f"- {e}")
+                    total += 1
+        output.append(f"\n**Total errors:** {total}\n")
+
+    return "\n".join(output)
 
 
-def merge_errors(new_content, old_content):
+def mergeErrors(new_content, old_content):
 
     merged_content = copy.deepcopy(new_content)
-    for filename, ids in old_content.items():
-        if filename not in merged_content:
-            merged_content[filename] = {}
-        for id, errors in ids.items():
-            if id in merged_content[filename]:
-                # Add errors to existing and remove duplicates
-                errors += merged_content[filename][id]
-                errors = list(set(errors))
-
-            merged_content[filename][id] = errors
+    for config_name, config_errors in old_content.items():
+        if config_name not in merged_content:
+            merged_content[config_name] = {}
+        for filename, string_ids in config_errors.items():
+            if filename not in merged_content[config_name]:
+                merged_content[config_name][filename] = {}
+            for string_id, file_data in string_ids.items():
+                if string_id in merged_content[config_name][filename]:
+                    # Assume the text in the same, only add the errors (removing duplicates).
+                    merged_errors = list(
+                        set(
+                            file_data["errors"]
+                            + merged_content[config_name][filename][string_id]["errors"]
+                        )
+                    )
+                    merged_content[config_name][filename][string_id][
+                        "errors"
+                    ] = merged_errors
+                else:
+                    merged_content[config_name][filename][string_id] = file_data
 
     return merged_content
 
@@ -212,7 +233,6 @@ def main():
     parser.add_argument(
         "--toml", required=True, dest="toml_path", help="Path to l10n.toml file"
     )
-    parser.add_argument("--dest", dest="dest_file", help="Save error messages to file")
     parser.add_argument(
         "--json", dest="json_file", help="Save error info as JSON to file"
     )
@@ -228,22 +248,10 @@ def main():
     extracted_strings.extractStrings()
     ref_strings = extracted_strings.getTranslations()
 
-    checks = QualityCheck(ref_strings, args.config_file)
-    output = checks.printErrors(os.path.basename(args.toml_path))
-    if output:
-        out_file = args.dest_file
-        if out_file:
-            print(f"Saving output to {out_file}")
-            if os.path.exists(out_file):
-                with open(out_file, "r") as f:
-                    previous_content = f.readlines()
-            else:
-                previous_content = []
-
-            with open(out_file, "w") as f:
-                f.writelines(previous_content)
-                f.write("\n")
-                f.write(output)
+    checks = QualityCheck(ref_strings, args.config_file, args.toml_path)
+    if checks.errors:
+        output = outputErrors(checks.errors)
+        print(output)
 
         # Check if there's a JSON output specified
         json_file = args.json_file
@@ -258,13 +266,12 @@ def main():
             else:
                 previous_content = {}
 
-            merged_content = merge_errors(checks.errors, previous_content)
+            merged_content = mergeErrors(checks.errors, previous_content)
             with open(json_file, "w") as f:
                 json.dump(merged_content, f, indent=2, sort_keys=True)
-
-        # Print errors anyway on screen
-        print(output)
-        sys.exit(1)
+        else:
+            # Exit with status 1
+            sys.exit(1)
     else:
         print("No issues found.")
 

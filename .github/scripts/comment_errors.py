@@ -1,5 +1,18 @@
 #! /usr/bin/env python3
 
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# This script searches for string IDs in the code repository, then uses GitHub
+# APIs to blame the file and identify the author of the last change. Authors are
+# then CCed to the pull request by adding a comment.
+#
+# Limitations: the script currently has mozilla-mobile/firefox-android
+# hard-coded as code repository, and assumes that removing `mozilla-mobile/` at
+# the start of a string ID is enough to find the file in that repository.
+
+from reference_linter import outputErrors
 import argparse
 import json
 import os
@@ -32,15 +45,16 @@ class QueryAuthors:
     def get_authors(self, errors):
         # Get the full list of authors based on the errors
         self.authors = []
-        for filepath, ids in errors.items():
-            self.lines = []
-            # Need to manually remove part of the path
-            filepath = filepath.lstrip("mozilla-mobile")
-            for id in ids:
-                n = self.find_string_line(filepath, id)
-                self.lines.append(n)
-            self.lines.sort()
-            self.find_lines_author(filepath)
+        for config_name, config_errors in errors.items():
+            for filepath, string_ids in config_errors.items():
+                self.lines = []
+                # Need to manually remove part of the path
+                filepath = filepath.lstrip("mozilla-mobile")
+                for string_id in string_ids:
+                    n = self.find_string_line(filepath, string_id)
+                    self.lines.append(n)
+                self.lines.sort()
+                self.find_lines_author(filepath)
         self.authors.sort()
 
         print(f"Authors: {', '.join(self.authors)}")
@@ -177,12 +191,6 @@ def main():
         required=True,
     )
     parser.add_argument(
-        "--txt",
-        dest="txt_file",
-        help="Path to TXT file with error messages",
-        required=True,
-    )
-    parser.add_argument(
         "--dest",
         dest="dest_file",
         help="Path to dest file with comment content",
@@ -195,13 +203,6 @@ def main():
     else:
         with open(args.json_file, "r") as f:
             errors = json.load(f)
-
-    if not os.path.isfile(args.txt_file):
-        errors_txt = ""
-    else:
-        with open(args.txt_file, "r") as f:
-            errors_txt = f.readlines()
-
     if not errors:
         print("No errors found.")
         sys.exit(0)
@@ -211,14 +212,11 @@ def main():
     authors = query_authors.get_authors(errors)
 
     if authors:
-        output = []
         line = "Authors: "
         for author in authors:
             line = f"{line} @{author}"
-        output.append(f"{line}\n")
-
-        # Add the other errors and save as a file
-        output += errors_txt
+        output = [f"{line}\n"]
+        output += outputErrors(errors)
         with open(args.dest_file, "w") as f:
             f.writelines(output)
 
