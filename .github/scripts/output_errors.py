@@ -17,15 +17,15 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--json",
+        default="errors.json",
         dest="json_file",
         help="Path to JSON file with errors info",
-        required=True,
     )
     parser.add_argument(
         "--dest",
+        default="errors.txt",
         dest="dest_file",
         help="Path to dest TXT file",
-        required=True,
     )
     args = parser.parse_args()
 

@@ -184,7 +184,8 @@ def outputErrors(errors):
 
     output = []
     for config_name, config_errors in errors.items():
-        output.append(f"\n## TOML file: {config_name}")
+        if config_errors:
+            output.append(f"\n## TOML file: {config_name}")
         total = 0
         for filename, ids in config_errors.items():
             output.append(f"\n### File: {filename}")
@@ -195,7 +196,8 @@ def outputErrors(errors):
                 for e in file_data["errors"]:
                     output.append(f"- {e}")
                     total += 1
-        output.append(f"\n**Total errors:** {total}\n")
+        if total > 0:
+            output.append(f"\n**Total errors:** {total}\n")
 
     return "\n".join(output)
 
@@ -234,7 +236,10 @@ def main():
         "--toml", required=True, dest="toml_path", help="Path to l10n.toml file"
     )
     parser.add_argument(
-        "--json", dest="json_file", help="Save error info as JSON to file"
+        "--json",
+        default="errors.json",
+        dest="json_file",
+        help="Save error info as JSON to file",
     )
     parser.add_argument(
         "--config",
@@ -249,7 +254,12 @@ def main():
     ref_strings = extracted_strings.getTranslations()
 
     checks = QualityCheck(ref_strings, args.config_file, args.toml_path)
-    if checks.errors:
+
+    has_errors = False
+    for config_name, config_errors in checks.errors.items():
+        if config_errors:
+            has_errors = True
+    if has_errors:
         output = outputErrors(checks.errors)
         print(output)
 
