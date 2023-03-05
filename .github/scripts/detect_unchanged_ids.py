@@ -4,8 +4,15 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+# This script detects string change between two folders.
+#
+# If a --json parameter is provided, the script will exit with status 0 and save
+# error data into a JSON file (content will be appended if the file already
+# exists). Otherwise, errors will be printed on screen and the script will exit
+# with return value 1.
+
 from collections import defaultdict
-from reference_linter import StringExtraction, merge_errors
+from reference_linter import StringExtraction, mergeErrors, outputErrors
 import argparse
 import json
 import os
@@ -32,17 +39,20 @@ def main():
         dest="toml_path",
         help="Path to l10n.toml file, relative to the root of the project folder",
     )
-    parser.add_argument("--dest", dest="dest_file", help="Save error messages to file")
     parser.add_argument(
-        "--json", dest="json_file", help="Save error info as JSON to file"
+        "--json",
+        default="errors.json",
+        dest="json_file",
+        help="Save error info as JSON to file",
     )
     args = parser.parse_args()
 
-    base = StringExtraction(os.path.join(args.base_path, args.toml_path))
+    toml_path = args.toml_path
+    base = StringExtraction(os.path.join(args.base_path, toml_path))
     base.extractStrings()
     base_strings = base.getTranslations()
 
-    head = StringExtraction(os.path.join(args.head_path, args.toml_path))
+    head = StringExtraction(os.path.join(args.head_path, toml_path))
     head.extractStrings()
     head_strings = head.getTranslations()
 
@@ -53,46 +63,25 @@ def main():
         if key in head_strings and base_strings[key] != head_strings[key]
     }
 
-    error_json = defaultdict(dict)
+    errors_json = {toml_path: defaultdict(dict)}
     for string_id in errors.keys():
         filename, id = string_id.split(":")
-        error_msg = "String was changed without a new ID"
-        if id in error_json.get(filename, {}):
-            error_json[filename][id].append(error_msg)
+        error_msg = f"String was changed without a new ID. Previous value: `{errors[string_id]['previous']}`"
+        if id in errors_json[toml_path].get(filename, {}):
+            errors_json[toml_path][filename]["errors"][id].append(error_msg)
         else:
-            error_json[filename][id] = [error_msg]
+            errors_json[toml_path][filename][id] = {
+                "errors": [error_msg],
+                "text": errors[string_id]["new"],
+            }
 
-    if errors:
-        output = []
-        total = 0
-        for filename, ids in error_json.items():
-            output.append(f"\n### File: {filename}")
-            for id, error_messages in ids.items():
-                full_id = f"{filename}:{id}"
-                output.append(
-                    f"\n**ID**: `{id}`"
-                    f"\n**Previous:** `{errors[full_id]['previous']}`"
-                    f"\n**New**: `{errors[full_id]['new']}`"
-                )
-                output.append("**Error:**")
-                for e in error_messages:
-                    output.append(f"- {e}")
-                    total += 1
-        output.append(f"\n**Total number of changed IDs:** {total}\n")
-
-        out_file = args.dest_file
-        if out_file:
-            print(f"Saving output to {out_file}")
-            if os.path.exists(out_file):
-                with open(out_file, "r") as f:
-                    previous_content = f.readlines()
-            else:
-                previous_content = []
-
-            with open(out_file, "w") as f:
-                f.writelines(previous_content)
-                f.write("\n")
-                f.write("\n".join(output))
+    has_errors = False
+    for config_name, config_errors in errors_json.items():
+        if config_errors:
+            has_errors = True
+    if has_errors:
+        output = outputErrors(errors_json)
+        print(output)
 
         # Check if there's a JSON output specified
         json_file = args.json_file
@@ -107,13 +96,12 @@ def main():
             else:
                 previous_content = {}
 
-            merged_content = merge_errors(error_json, previous_content)
+            merged_content = mergeErrors(errors_json, previous_content)
             with open(json_file, "w") as f:
                 json.dump(merged_content, f, indent=2, sort_keys=True)
-
-        # Print errors anyway on screen
-        print("\n".join(output))
-        sys.exit(1)
+        else:
+            # Exit with status 1
+            sys.exit(1)
     else:
         print("No unchanged IDs found.")
 

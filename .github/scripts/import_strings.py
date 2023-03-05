@@ -130,10 +130,10 @@ def main():
     )
     cl_parser.add_argument(
         "--ref",
+        default="en-US",
         dest="reference_locale",
         help="Code for reference locale",
         nargs="?",
-        default="en-US",
     )
     args = cl_parser.parse_args()
 
