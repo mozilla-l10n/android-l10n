@@ -1,12 +1,11 @@
 name: Linter for reference content
 on:
   push:
-    branches:
-      - main
     paths:
       - ".github/workflows/reference_linter.yaml"
       - ".github/scripts/reference_linter.py"
       - ".github/scripts/linter_config.json"
+      - "**/values/strings.xml"
   pull_request:
   workflow_dispatch:
 jobs:
