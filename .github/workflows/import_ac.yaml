@@ -29,34 +29,13 @@ jobs:
           python l10n/.github/scripts/import_strings.py source
           --toml source/android-components/l10n.toml
           --dest l10n/mozilla-mobile/android-components
-      - name: Commit changes and open pull request
-        run: |
-          # Only try to commit if there are pending changes
-          cd l10n
-          if [[ $(git diff --exit-code) || $(git ls-files --other --exclude-standard) ]]
-          then
-            branch="ac_l10n_updates"
-            git config user.name "l10n-bot"
-            git config user.email "actions@users.noreply.github.com"
-
-            git checkout -B "$branch"
-            git add .
-            git commit -m "Import android-components quarantine"
-            git push -f origin "$branch"
-
-            # Create pull request if there isn't one open yet, use the last
-            # commit message as title.
-            open_prs=$(gh pr list --repo "$GITHUB_REPOSITORY" --json headRefName | jq --arg BRANCH "$branch" 'map(select(.headRefName==$BRANCH)) | length')
-            if (( $open_prs > 0 )); then
-                echo "Existing pull request updated."
-                pr_link=$(gh pr list --repo "$GITHUB_REPOSITORY" --json headRefName,url | jq -r --arg BRANCH "$branch" 'map(select(.headRefName==$BRANCH)) | .[].url')
-                echo "Link: $pr_link"
-            else
-                echo "Opening new pull request."
-                gh pr create --fill --label l10n-bot
-            fi
-          else
-            echo "No changes found."
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.ANDROID_GITHUB_TOKEN }}
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
+          branch: ac_l10n_updates
+          author: l10n-bot <actions@users.noreply.github.com>
+          commit-message: "Import android-components quarantine"
+          title: "Import android-components quarantine"
+          body: "Import android-components quarantine"
+          labels: l10n-bot

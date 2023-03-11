@@ -216,9 +216,13 @@ def main():
         for author in authors:
             line = f"{line} @{author}"
         output = [f"{line}\n"]
-        output += outputErrors(errors)
-        with open(args.dest_file, "w") as f:
-            f.writelines(output)
+    else:
+        output = []
+
+    output += outputErrors(errors)
+
+    with open(args.dest_file, "w") as f:
+        f.writelines(output)
 
 
 if __name__ == "__main__":
