@@ -197,7 +197,7 @@ def outputErrors(errors):
                     output.append(f"- {e}")
                     total += 1
         if total > 0:
-            output.append(f"\n**Total errors:** {total}\n")
+            output.append(f"\n**Total errors not yet reported:** {total}\n")
 
     return "\n".join(output)
 

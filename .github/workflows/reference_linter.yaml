@@ -32,8 +32,8 @@ jobs:
           pip install -r src/.github/requirements.txt
       - name: Lint reference files
         run: |
-          python src/.github/scripts/reference_linter.py --toml src/firefox.toml --config src/.github/scripts/linter_config.json
-          python src/.github/scripts/reference_linter.py --toml src/focus.toml --config src/.github/scripts/linter_config.json
+          (cd src && python .github/scripts/reference_linter.py --toml firefox.toml --config .github/scripts/linter_config.json --json ../errors.json)
+          (cd src && python .github/scripts/reference_linter.py --toml focus.toml --config .github/scripts/linter_config.json --json ../errors.json)
       - name: Check for unchanged IDs
         run: |
           python src/.github/scripts/detect_unchanged_ids.py --base base --head src --toml firefox.toml
@@ -59,7 +59,7 @@ jobs:
           fi
 
           if [[ $pr != "none" ]]; then
-            python src/.github/scripts/comment_errors.py --token ${{ secrets.ANDROID_GITHUB_TOKEN }} --repo ${{ github.event.repository.name }} --owner ${{ github.repository_owner }} --pr $pr
+            python src/.github/scripts/comment_errors.py --token ${{ secrets.ANDROID_GITHUB_TOKEN }} --repo ${{ github.event.repository.name }} --owner ${{ github.repository_owner }} --pr $pr --run ${{ github.run_id }}
             if [ -f "comment.txt" ]; then
               gh pr comment ${{ github.event.number }} --repo ${{ github.repository }} --body-file comment.txt
             fi
@@ -75,7 +75,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: errors-list
-          path: errors.txt
+          path: errors.*
           if-no-files-found: ignore
       - name: Fail on errors
         run: |
