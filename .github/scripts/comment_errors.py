@@ -217,7 +217,9 @@ def main():
             line = f"{line} @{author}"
         output = [f"{line}\n"]
     else:
-        output = outputErrors(errors)
+        output = []
+
+    output += outputErrors(errors)
 
     with open(args.dest_file, "w") as f:
         f.writelines(output)
