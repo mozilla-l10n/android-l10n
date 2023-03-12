@@ -397,6 +397,8 @@
     <string name="reduce_cookie_banner_control_experiment_dialog_body_1" moz:RemovedIn="111" tools:ignore="UnusedResources">Аутоматски одбија захтеве за колачиће, ако је могуће.</string>
     <!-- Body text for the dialog use on the control branch of the experiment to determine which context users engaged the most.The first parameter is the application name -->
     <string name="reduce_cookie_banner_control_experiment_dialog_body_2" moz:RemovedIn="112" tools:ignore="UnusedResources">Дозволити да %1$s аутоматски одбије захтеве за колачиће, ако је могуће?</string>
+    <!-- Body text for the cookie banner re-engagement dialog use. The first parameter is the application name. -->
+    <string name="reduce_cookie_banner_dialog_body">%1$s може аутоматски да одбаци више захтева за банере колачића.</string>
     <!-- Remind me later text button for the onboarding dialog -->
     <string name="reduce_cookie_banner_dialog_not_now_button">Не сада</string>
     <!-- Change setting text button, for the dialog use on the control branch of the experiment to determine which context users engaged the most -->
@@ -419,6 +421,9 @@
     <string name="reduce_cookie_banner_variant_2_experiment_dialog_body_1" moz:RemovedIn="112" tools:ignore="UnusedResources">Дозволити %1$s да одбије захтев за колачиће, ако је то могуће?</string>
     <!-- Change setting text button, for the dialog use on the variant 2 branch of the experiment to determine which context users engaged the most -->
     <string name="reduce_cookie_banner_variant_2_experiment_dialog_change_setting_button" moz:RemovedIn="112" tools:ignore="UnusedResources">Дозволи</string>
+
+    <!-- Change setting text button, for the cookie banner re-engagement dialog -->
+    <string name="reduce_cookie_banner_dialog_change_setting_button">Дозволи</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Самостално се повезујемо на странице користећи HTTPS протокол за шифровање података у преносу зарад боље безбедности.</string>
@@ -498,6 +503,12 @@
     <string name="preferences_enable_autocomplete_urls">Аутоматско завршавање адреса</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Отвори везе у апликацијама</string>
+    <!-- Preference for open links in third party apps always open in apps option -->
+    <string name="preferences_open_links_in_apps_always">Увек</string>
+    <!-- Preference for open links in third party apps ask before opening option -->
+    <string name="preferences_open_links_in_apps_ask">Питај пре отварања</string>
+    <!-- Preference for open links in third party apps never open in apps option -->
+    <string name="preferences_open_links_in_apps_never">Никад</string>
     <!-- Preference for open download with an external download manager app -->
     <string name="preferences_external_download_manager">Спољни управник преузимања</string>
     <!-- Preference for add_ons -->
@@ -1221,6 +1232,16 @@
     %1$s is a placeholder that will be replaced by the app name. -->
     <string name="notification_re_engagement_text">Прегледајте без чувања колачића и историје уз %1$s</string>
 
+    <!-- Title A shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_A_title">Сурфујте без трага</string>
+    <!-- Text A shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_A_text">Приватно прегледање у %1$s-у не чува ваше податке.</string>
+    <!-- Title B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_title">Започните прву претрагу</string>
+    <!-- Text B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_text">Пронађите нешто у близини или откријте нешто забавно.</string>
+
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Збирка обрисана</string>
@@ -1437,8 +1458,12 @@
 
     <!-- Title for the description of enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_title">Прегледајте без праћења</string>
+    <!-- Preference summary for enhanced tracking protection settings on/off switch -->
+    <string name="preference_enhanced_tracking_protection_summary" tools:ignore="UnusedResources">Сада садржи потпуну заштиту од колачића, наш најјачи штит против елемената за праћење трећих страна.</string>
     <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
-    <string name="preference_enhanced_tracking_protection_explanation">Задржите ваше податке приватним. %s вас штити од већине честих пратилаца који надзиру вашу радње на мрежи.</string>
+    <string name="preference_enhanced_tracking_protection_explanation">Задржите ваше податке приватним. %s вас штити од већине честих елемената за праћење који надзиру шта радите на мрежи.</string>
+    <!-- Description of enhanced tracking protection. The parameter is the name of the application (For example: Firefox Fenix) -->
+    <string name="preference_enhanced_tracking_protection_explanation_2" tools:ignore="UnusedResources">%s вас штити од многих честих елемената за праћење који надзиру шта радите на мрежи.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Сазнајте више</string>
 
@@ -1446,12 +1471,16 @@
     <string name="preference_enhanced_tracking_protection_standard_default_1">Стандардно (подразумевано)</string>
     <!-- Preference description for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_description_4">Уравнотежена приватност и перформансе. Странице се учитавају уобичајено.</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_5" tools:ignore="UnusedResources">Странице ће се учитавати уобичајено, али је мање пратилаца блокирано.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Шта се блокира стандардном заштитом од праћења</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Строго</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict_description_3">Блокира више пратилаца те се странице учитавају брже али неке могућности на страници можда неће радити.</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_description_4" tools:ignore="UnusedResources">Јача заштита од праћења и брже перформансе, али неке странице можда неће радити исправно.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Шта се блокира строгом заштитом од праћења</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
