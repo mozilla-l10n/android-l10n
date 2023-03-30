@@ -96,6 +96,8 @@ def copyReferenceFiles(reference_files, dest_path):
         p.readFile(ref_file["abs_path"])
         entities = p.walk()
         dest_file = os.path.join(dest_path, ref_relative)
+        # Create folder if missing
+        os.makedirs(os.path.dirname(dest_file), exist_ok=True)
         with open(dest_file, "w") as f:
             f.write("".join(entity.all for entity in entities))
 
