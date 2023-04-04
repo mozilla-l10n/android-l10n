@@ -15,10 +15,19 @@
     <!-- This text is shown in the URL bar when it's empty -->
     <string name="urlbar_hint">Нишониеро ҷустуҷӯ кунед ё ворид намоед</string>
 
+    <!-- This label is shown below the URL bar as soon as the user enters text. Clicking the label will perform a search -->
+    <string name="search_hint">Ҷустуҷӯи «%1$s»</string>
+
+    <!-- Menu item: Share the currently visible page -->
+    <string name="menu_share">Мубодила…</string>
+
+    <!-- Menu item: Report an issue on the current site -->
+    <string name="menu_report_site_issue">Гузориш дар бораи мушкилии сомона</string>
+
     <!-- Menu item: Switch to another browser to open the currently visible page. %1$s will be
       replaced with the name of the browser like: "Open in Firefox" or "Open in Chrome". Some
       links can be opened by native apps that aren't a browser, e.g. "Open in YouTube" -->
-    <string name="menu_open_with_default_browser2">Кушодан дар %1$s</string>
+    <string name="menu_open_with_default_browser2">Кушодан дар «%1$s»</string>
 
     <!-- Menu item: Switch to another browser to open the currently visible page. This menu item
       will be shown if there are multiple browsers and we do not know which one is the default
@@ -28,6 +37,11 @@
 
     <!-- Menu item: Add the current page as a shortcut to the device's home screen (launcher). -->
     <string name="menu_add_to_home_screen">Илова кардан ба экрани асосӣ</string>
+
+    <!-- Menu item: Add the current site as a shortcut on the Home screen -->
+    <string name="menu_add_to_shortcuts">Илова кардан ба миёнбурҳо</string>
+    <!-- Menu item: Remove the current site as a shortcut from the Home screen -->
+    <string name="menu_remove_from_shortcuts">Тоза кардан аз миёнбурҳо</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
     <string name="menu_whats_new">Чӣ нав аст</string>
@@ -52,9 +66,85 @@
          sharing an URL. -->
     <string name="share_dialog_title">Мубодила тавассути</string>
 
+    <!-- While a browsing session is active (in the foreground or background) we will show a notification
+         so that the user doesn't forget about the website still being open. This text is shown in
+         the notification. Clicking the notification will have the same effect as clicking the "erase"
+         button in the application. -->
+    <string name="notification_erase_text">Пок кардани таърихи тамошо</string>
+
     <!-- Notification action to open Focus and resume the current browsing session. -->
     <string name="notification_action_open">Кушодан</string>
 
+
+    <!-- Notification action to erase the current browsing session AND switch to Focus (bring it
+         to the foreground) -->
+    <string name="notification_action_erase_and_open">Пок кардан ва кушодан</string>
+
+    <!-- On Android 7+ users can add a shortcut for erasing the browsing history to the home screen.
+         This is the label for this shortcut. Android recommends a maximum length of 10 characters. -->
+    <string name="shortcut_erase_short_label">Пок кардан</string>
+
+    <!-- The same as 'shortcut_erase_short_label' but more descriptive. The launcher shows this
+         instead of the short title when it has enough space. Android recommends a maximum length
+         of 25 characters. -->
+    <string name="shortcut_erase_long_label">Пок кардани таърихи тамошо</string>
+
+
+    <!-- On Android 7+ users can add a shortcut for erasing the browsing history to the home screen.
+         This is the label for this shortcut. Android recommends a maximum length of 10 characters. -->
+    <string name="shortcut_erase_and_open_short_label">Пок кардан ва кушодан</string>
+
+    <!-- The same as 'shortcut_erase_short_label' but more descriptive. The launcher shows this
+         instead of the short title when it has enough space. Android recommends a maximum length
+         of 25 characters.
+         %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="shortcut_erase_and_open_long_label">Пок кардан ва кушодани «%1$s»</string>
+
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+         Focus is hard coded since we can't use variables in this context.
+         Do not translate or transliterate Focus.-->
+    <string name="text_selection_search_action_focus">Ҷустуҷӯ дар «Focus»</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+             Klar is hard coded since we can't use variables in this context.
+             Do not translate or transliterate Klar.-->
+    <string name="text_selection_search_action_klar">Ҷустуҷӯ дар «Klar»</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+            Focus Beta is hard coded since we can't use variables in this context.
+            Do not translate or transliterate Focus Beta.-->
+    <string name="text_selection_search_action_focus_beta">Ҷустуҷӯ дар «Focus Beta»</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+          Focus Nightly is hard coded since we can't use variables in this context.
+          Do not translate or transliterate Focus Nightly.-->
+    <string name="text_selection_search_action_focus_nightly">Ҷустуҷӯ дар «Focus Nightly»</string>
+
+    <!-- Header for the Privacy and Security settings menu -->
+    <string name="preference_privacy_and_security_header">Махфият ва амният</string>
+
+    <!-- Preference category for ad blocking and enhanced tracking protection settings -->
+    <string name="preference_category_tracking_protection3">Муҳофизати такмилёфта аз пайгирӣ</string>
+
+    <!-- Preference category for settings related to controlling web content -->
+    <string name="preference_category_web_content">Муҳтавои сомона</string>
+
+    <!-- Preference category for General Settings -->
+    <string name="preference_category_general">Умумӣ</string>
+
+    <string name="preference_category_search">Ҷустуҷӯ</string>
+
+    <!-- Title of "switch" preference that enables/disables search suggestions -->
+    <string name="preference_show_search_suggestions">Гирифтани пешниҳоди ҷустуҷӯ</string>
+
+    <!-- This label is shown below the name of the default search engine in settings -->
+    <string name="preference_search_engine_default">Пешфарз</string>
+
+    <!-- This label is shown above the currently selected search engine in settings -->
+    <string name="preference_search_engine_label">Низоми ҷустуҷӯӣ</string>
+
+    <!-- Text that is shown below a "switch" preference that is enabled. -->
+    <string name="preference_state_on">Фаъол</string>
+
+    <!-- Text that is shown below a "switch" preference that is disabled. -->
+    <string name="preference_state_off">Ғайрифаъол</string>
 
     <!-- Menu item to remove existing autocomplete URLs. -->
     <string name="preference_autocomplete_menu_remove">Тоза кардан</string>
@@ -66,7 +156,90 @@
 
     <string name="preference_category_privacy">Махфият</string>
 
+    <string name="preference_category_security">Амният</string>
+
+    <string name="preference_category_performance">Самаранокӣ</string>
+
+    <!-- This preference does not set Focus as the default browser but instead links to Android's
+     "default apps" settings screen or if not supported by this Android version to a SUMO page describing
+     how to set Focus as a default browser.
+      %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="preference_default_browser2">Гузоштани «%1$s» ҳамчун браузери пешфарз</string>
+
+    <string name="preference_category_mozilla">Mozilla</string>
+    <string name="preference_mozilla_telemetry2">Фиристодани маълумоти истифодабарӣ</string>
+
+    <!-- A link to SUMO at the end of the summary (preference_mozilla_telemetry_summary2) of the "Send anonymous usage data" setting. -->
+    <string name="preference_mozilla_telemetry_summary">Маълумоти бештар</string>
+
+    <!-- In-app link (in settings) to Focus privacy notice. -->
+    <string name="preference_privacy_notice">Огоҳномаи махфият</string>
+
+    <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
+    <string name="preference_about">Дар бораи «%1$s»</string>
+
+    <!-- Header for the list of installed search engines -->
+    <string name="preference_choose_search_engine">Интихоби низоми ҷустуҷӯӣ</string>
+
+    <!-- Action for restoring the default list of search engines -->
+    <string name="preference_search_restore">Барқарор кардани низоми ҷустуҷӯии пешфарз</string>
+
+    <!-- Action for adding an additional search engine to the list.
+    The "+" is used to emphasize that this is an "add" action -->
+    <string name="preference_search_add2">+ Илова кардани низоми ҷустуҷӯии дигар</string>
+    <string name="preference_search_remove_title">Тоза кардани низомҳои ҷустуҷӯӣ</string>
     <string name="preference_search_remove">Тоза кардан</string>
+
+    <!-- Action for dding an additional search engine to the list -->
+    <string name="preference_search_add3">Илова кардани низоми ҷустуҷӯии дигар</string>
+    <!-- Explanation text above the list of search engines-->
+    <string name="preference_select_preferred_engine">Низоми ҷустуҷӯии дилхоҳи худро интихоб намоед:</string>
+
+    <!-- Clickable action text that shows when user long-presses on a search engine search field (this is similar to paste or copy when long-pressing a text field) -->
+    <string name="action_option_add_search_engine">Илова кардани низоми ҷустуҷӯӣ</string>
+
+    <string name="search_add_manually_name_hint">Номи низоми ҷустуҷӯӣ</string>
+    <string name="search_add_manually_string">Сатри ҷустуҷӯ барои истифода</string>
+    <string name="search_add_manually_save">Нигоҳ доштан</string>
+
+    <!-- Example of search engine url -->
+    <string name="search_add_manually_example">Мисол: example.com/search/?q=%s</string>
+
+    <string name="search_add_confirmation">Низоми ҷустуҷӯии нав илова шуд.</string>
+
+    <string name="search_add_error_empty_name">Номи низоми ҷустуҷӯиро ворид намоед</string>
+
+    <string name="search_add_error_format">Тафтиш кунед, ки сатри ҷустуҷӯ ба шакли намунавӣ мувофиқат мекунад</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Clicking on the website overlay
+     while in typing mode will dismiss and go back to the browser. This text will be read when the
+     overlay if focused. See https://github.com/mozilla-mobile/focus-android/issues/50 -->
+    <string name="content_description_dismiss_input">Нодида гузарондан</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Erase button: Erase the browsing
+     history and go back to the home screen. -->
+    <string name="content_description_erase">Пок кардани таърихи тамошо</string>
+
+    <!-- This text is not visible. Instead it will be read by the accessibility service once we start
+     loading a website -->
+    <string name="accessibility_announcement_loading">Бор шуда истодааст</string>
+
+    <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button. -->
+    <string name="content_description_menu">Имконоти бештар</string>
+
+    <!-- Content description (not visible, for screen readers etc.): "Three dot" menu button used
+    on home screen-->
+    <string name="indicator_content_description_menu">Тугмаи имконоти бештар</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Navigate back (browsing history) -->
+    <string name="content_description_back">Ба қафо гузаштан</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Custom Tab exit button - closes the custom tab and returns to the previous app. -->
+    <string name="content_description_customtab_exit">Бозгашт ба барномаи қаблӣ</string>
+
+    <string name="your_rights">Ҳуқуқҳои шумо</string>
+
+    <string name="external_app_prompt_title">Кушодани пайванд дар барномаи дигар</string>
 
     <!-- Snackbar action to immediately open the successfully downloaded file. -->
     <string name="download_snackbar_open">Кушодан</string>
@@ -88,6 +261,65 @@
 
     <!-- New Onboarding flow second screen skip onboarding button label-->
     <string name="onboarding_second_screen_skip_button_text">Нодида гузарондан</string>
+
+    <string name="firstrun_skip_button">Нодида гузарондан</string>
+    <string name="firstrun_next_button">Навбатӣ</string>
+
+    <!-- Indicator that no trackers are being blocked because content blocking is disabled; normally shows the number of blocked trackers -->
+    <string name="content_blocking_disabled">-</string>
+
+    <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_add">Илова кардан</string>
+    <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_yes">ҲА</string>
+
+    <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_cancel">Бекор кардан</string>
+    <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
+    <string name="dialog_addtohomescreen_action_no">НЕ</string>
+
+    <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
+    <string name="tabs_tray_action_erase">Пок кардани таърихи тамошо</string>
+
+    <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
+      item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
+    <string name="download_firefox">Боргирӣ кардани «Firefox»</string>
+
+    <!-- Text shown in prompts for GeckoView -->
+    <string name="gv_prompt_username_hint">Номи корбар</string>
+    <string name="gv_prompt_password_hint">Ниҳонвожа</string>
+    <string name="gv_prompt_clear">Пок кардан</string>
+
+    <!-- Text shown in Security Information Popup -->
+    <!-- Text to denote secure or insecure connection -->
+    <string name="security_popup_secure_connection">Пайвасти боэътимод</string>
+    <string name="security_popup_insecure_connection">Пайвасти беэътимод</string>
+    <!-- %1$s will be replaced with organization that granted the SSL certificate -->
+    <string name="security_popup_security_verified">Тасдиқ аз ҷониби: %1$s</string>
+
+    <!-- Content Description of Security Icon in toolbar -->
+    <string name="site_security_icon_content_description">Амнияти сомона</string>
+    <string name="preference_autocomplete_duplicate_url_error">Нишонии URL аллакай вуҷуд дорад</string>
+
+    <!-- Label for the Find in page button -->
+    <string name="find_in_page">Ҷустуҷӯ дар саҳифа</string>
+
+    <!-- Watermark/Hint for the find in page input field -->
+    <string name="find_in_page_input">Ҷустуҷӯ дар саҳифа</string>
+
+    <!-- String to show the number of results found in the page and the
+        position the user is at. The first argument is the position, the second argument is the total -->
+    <string name="find_in_page_result">%1$d/%2$d</string>
+    <!-- String to be read by the accessibility service presenting the number of results found in the page
+        and the position the user is at. The first argument is the position, the second argument is the total -->
+    <string name="accessibility_find_in_page_result">%1$d аз %2$d</string>
+
+    <!-- String to be read by the accessibility service when focusing the next result button -->
+    <string name="accessibility_next_result">Ҷустуҷӯи натиҷаи навбатӣ</string>
+    <!-- String to be read by the accessibility service when focusing the previous result button -->
+    <string name="accessibility_previous_result">Ҷустуҷӯи натиҷаи қаблӣ</string>
+    <!-- String to be read by the accessibility service when focusing the dismiss button in the "find in page" UI -->
+    <string name="accessibility_dismiss_find_in_page">Қатъ кардани ҷустуҷӯ дар саҳифа</string>
 
     <!-- Tips displayed on the home view -->
 
