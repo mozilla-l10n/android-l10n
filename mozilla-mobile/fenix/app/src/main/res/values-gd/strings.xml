@@ -12,8 +12,16 @@
     <string name="content_description_private_browsing_button">Cuir am brabhsadh prìobhaideach an comas</string>
     <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
     <string name="content_description_disable_private_browsing_button">Cuir am brabhsadh prìobhaideach à comas</string>
-    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
     <string name="search_hint">Lorg no cuir seòladh ann</string>
+    <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
+    <string name="search_hint_general_engine">Lorg air an lìon</string>
+    <!-- Placeholder text shown in search bar when using history search -->
+    <string name="history_search_hint">Eachdraidh nan lorg</string>
+    <!-- Placeholder text shown in search bar when using bookmarks search -->
+    <string name="bookmark_search_hint">Lorg sna comharran-lìn</string>
+    <!-- Placeholder text shown in search bar when using tabs search -->
+    <string name="tab_search_hint">Lorg sna tabaichean</string>
     <!-- Placeholder text shown in the search bar when using application search engines -->
     <string name="application_search_hint">Cuir a-steach briathran-luirg</string>
     <!-- No Open Tabs Message Description -->
@@ -38,8 +46,7 @@
 
     <!-- Home - Recently saved bookmarks -->
     <!-- Title for the home screen section with recently saved bookmarks. -->
-    <string name="recent_bookmarks_title">Comharran-lìn ùra</string>
-
+    <string name="recently_saved_title">Air a shàbhaladh o chionn goirid</string>
     <!-- Content description for the button which navigates the user to show all of their saved bookmarks. -->
     <string name="recently_saved_show_all_content_description_2">Seall a h-uile comharra-lìn a chaidh a shàbhaladh</string>
     <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
@@ -56,12 +63,11 @@
     <string name="private_browsing_common_myths">Faoin-sgeulan cumanta mun bhrabhsadh phrìobhaideach</string>
 
     <!-- Private mode shortcut "contextual feature recommendation" (CFR) -->
-    <!-- Text for the main message -->
-    <string name="cfr_message">Cuir ath-ghoirid ris airson tabaichean prìobhaideach fhosgladh on sgrìn mhòr agad.</string>
-    <!-- Text for the positive button -->
-    <string name="cfr_pos_button_text">Cuir ath-ghoirid ris</string>
-
-    <!-- Text for the negative button -->
+    <!-- Text for the Private mode shortcut CFR message for adding a private mode shortcut to open private tabs from the Home screen -->
+    <string name="private_mode_cfr_message_2">Cuir an ath-thaba prìobhaideach gu dol le aon ghnogag.</string>
+    <!-- Text for the positive button to accept adding a Private Browsing shortcut to the Home screen -->
+    <string name="private_mode_cfr_pos_button_text">Cuir ris an sgrìn mhòr</string>
+    <!-- Text for the negative button to decline adding a Private Browsing shortcut to the Home screen -->
     <string name="cfr_neg_button_text">Cha chuir, mòran taing</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
@@ -72,8 +78,9 @@
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">Leig seachad</string>
 
-    <!-- Content description for close button used in "contextual feature recommendation" (CFR) popups -->
-    <string name="cfr_dismiss_button_default_content_description">Leig seachad</string>
+    <!-- Total cookie protection "contextual feature recommendation" (CFR) -->
+    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the total cookie protection feature. -->
+    <string name="tcp_cfr_message">Tha an gleus prìobhaideachd as cumhachdaiche againn a-riamh a’ cur balla mun cuairt air gleusan a thracaicheas tu air feadh làraichean.</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Tha feum air inntrigeadh dhan chamara. Tadhail air roghainnean Android, thoir gnogag air na ceadan is an uairsin air “Ceadaich”.</string>
@@ -120,13 +127,6 @@
 
     <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
     <string name="recent_tabs_show_all_content_description_2">Am putan airson gach taba a bha fosgailte o chionn goirid a shealltainn</string>
-    <!-- Title for showing a group item in the 'Jump back in' section of the new tab
-        The first parameter is the search term that the user used. (for example: your search for "cat")-->
-    <string moz:RemovedIn="105" name="recent_tabs_search_term" tools:ignore="UnusedResources">Rinn thu lorg airson “%1$s”</string>
-
-    <!-- Text for the number of tabs in a group in the 'Jump back in' section of the new tab
-        %d is a placeholder for the number of sites in the group. This number will always be more than one. -->
-    <string moz:RemovedIn="105" name="recent_tabs_search_term_count_2" tools:ignore="UnusedResources">%d làrach</string>
 
     <!-- Text for button in synced tab card that opens synced tabs tray -->
     <string name="recent_tabs_see_all_synced_tabs_button_text">Seall gach taba sioncronaichte</string>
@@ -245,28 +245,6 @@
     <!-- Menu option in the search selector menu to open the search settings -->
     <string name="search_settings_menu_item">Roghainnean luirg</string>
 
-    <!-- Home onboarding -->
-    <!-- Onboarding home screen dialog title text. The first parameter is the name of the application.-->
-    <string name="onboarding_home_screen_title_3">Na tha ùr ann an %1$s</string>
-    <!-- Onboarding home screen dialog description text. -->
-    <string name="onboarding_home_screen_description_2">Tha e nas fhasa a-nis leantainn ort far an robh thu roimhe.</string>
-
-    <!-- Onboarding home screen dialog title text for the home section. The first parameter is the name of the application.-->
-    <string name="onboarding_home_screen_section_home_title_3">Duilleag-dhachaigh %1$s ghnàthaichte</string>
-    <!-- Onboarding home screen dialog description text for the home section. -->
-    <string name="onboarding_home_screen_section_home_description_2">Leum gu na tabaichean fosgailte, comharran-lìn is eachdraidh a’ bhrabhsaidh agad.</string>
-    <!-- Onboarding home screen dialog description text for the tab tray section. -->
-    <string name="onboarding_home_screen_section_cleaner_tab_tray_title_2">Tabaichean glan sgiobalta</string>
-    <!-- Onboarding home screen dialog description text for the tab tray section. -->
-    <string name="onboarding_home_screen_section_cleaner_tab_tray_description_2">Nas lugha de bhrolamas le co-dhealbhachd nas fheàrr is tabaichean a nì dùnadh gu fèin-obrachail.</string>
-    <!-- Onboarding home screen dialog description text for the history section. -->
-    <string name="onboarding_home_screen_section_useful_history_title_2">Luirg o chionn goirid</string>
-    <!-- Onboarding home screen dialog description text for the history section. -->
-    <string name="onboarding_home_screen_section_useful_history_description_2">Ath-thadhail air na luirg a rinn thu o chionn goirid air an duilleag-dhachaigh agad.</string>
-
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. Firefox is intentionally hardcoded. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint" tools:ignore="UnusedResources">Leis gu bheil duilleag-dhachaigh phearsantaichte agad ann am Firefox a-nis, tha e nas fhasa cumail a’ dol far an do stad thu roimhe. Faigh greim air na tabaichean, comharran-lìn is toraidhean-luirg a bh’ agad o chionn goirid.</string>
-
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Fosgail taba %1$s ùr</string>
@@ -317,11 +295,10 @@
     <string name="preferences_add_private_browsing_shortcut">Cuir ath-ghoirid brabhsaidh prìobhaideach ris</string>
     <!-- Preference for enabling "HTTPS-Only" mode -->
     <string name="preferences_https_only_title">Modh HTTPS a-mhàin</string>
+
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Nì seo oidhirp leis fhèin ceangal a dhèanamh ri làraichean le pròtacal crioptachadh HTTPS airson tèarainteachd a bharrachd.</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to on -->
-    <string name="preferences_https_only_on">Air</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <!-- Summary of https only preference if https only is set to off -->
     <string name="preferences_https_only_off">Dheth</string>
     <!-- Text displayed that links to website containing documentation about "HTTPS-Only" mode -->
     <string name="preferences_http_only_learn_more">Barrachd fiosrachaidh</string>
@@ -355,8 +332,6 @@
     <string name="preferences_gestures">Gluasadan</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Gnàthaich</string>
-    <!-- Preference description for banner about signing in -->
-    <string moz:RemovedIn="104" name="preferences_sign_in_description" tools:ignore="UnusedResources">Sioncronaich na comharran-lìn, faclan-faire is mòran a bharrachd leis a’ chunntas Firefox agad</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Clàraich a-steach gus na tabaichean, comharran-lìn, faclan-faire is mòran a bharrachd a shioncronachadh.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
@@ -424,8 +399,6 @@
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Air tadhal orra o chionn goirid</string>
-    <!-- Title for the customize home screen section with Pocket. -->
-    <string name="customize_toggle_pocket">Pocket</string>
 
     <!-- Title for the customize home screen section with sponsored Pocket stories. -->
     <string name="customize_toggle_pocket_sponsored">Sgeulachdan sponsairichte</string>
@@ -441,11 +414,6 @@
     <string name="wallpaper_updated_snackbar_message">Chaidh am pàipear-balla ùrachadh!</string>
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Seall</string>
-    <!-- Label for switch which toggles the "tap-to-switch" behavior on home screen logo -->
-    <string name="wallpaper_tap_to_change_switch_label_1">Atharraich am pàipear-balla le bhith a’ toirt gnogag air suaicheantas duilleag-dhachaigh Firefox</string>
-    <!-- This is the accessibility content description for the wallpapers functionality. Users are
-    able to tap on the app logo in the home screen and can switch to different wallpapers by tapping. -->
-    <string name="wallpaper_logo_content_description">Suaicheantas Firefox – putan airson am pàipear-balla atharrachadh</string>
 
     <!-- Add-on Installation from AMO-->
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is not supported -->
@@ -527,8 +495,6 @@
     <string name="preference_experiments_summary_2">Leig le Mozilla rannsachadh a stàladh is a ruith an-còmhnaidh</string>
 
     <!-- Turn On Sync Preferences -->
-    <!-- Header of the Turn on Sync preference view -->
-    <string moz:RemovedIn="104" name="preferences_sync" tools:ignore="UnusedResources">Cuir an sioncronachadh air</string>
     <!-- Header of the Sync and save your data preference view -->
     <string name="preferences_sync_2">Sioncronaich is sàbhail an dàta agad</string>
     <!-- Preference for reconnecting to FxA sync -->
@@ -588,13 +554,6 @@
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Dùin</string>
 
-    <!-- Text to show users they have one site in the history group section of the History fragment.
-    %d is a placeholder for the number of sites in the group. -->
-    <string name="history_search_group_site">%d làrach</string>
-    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
-    %d is a placeholder for the number of sites in the group. -->
-    <string name="history_search_group_sites">%d làraichean</string>
-
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">Tabaichean a dhùin thu o chionn goirid</string>
     <!-- Option in library to open Recently Closed Tabs page -->
@@ -617,10 +576,6 @@
     <string name="tab_view_list">Liosta</string>
     <!-- Option for a grid tab view -->
     <string name="tab_view_grid">Griod</string>
-    <!-- Option for search term tab groups -->
-    <string moz:RemovedIn="105" name="tab_view_search_term_tab_groups" tools:ignore="UnusedResources">Buidhnean luirg</string>
-    <!-- Summary text for search term tab groups -->
-    <string moz:RemovedIn="105" name="tab_view_search_term_tab_groups_summary" tools:ignore="UnusedResources">Buidhnich làraichean co-cheangailte còmhla</string>
     <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
     <string name="preferences_close_tabs">Dùin na tabaichean</string>
     <!-- Option for auto closing tabs that will never auto close tabs, always allows user to manually close tabs -->
@@ -727,8 +682,6 @@
 
     <!-- Open tabs menu item to save tabs to collection -->
     <string name="tabs_menu_save_to_collection1">Sàbhail na tabaichean ann an cruinneachadh</string>
-    <!-- Content description (not visible, for screen readers etc.): Opens the tab menu when pressed -->
-    <string moz:RemovedIn="103" name="tab_menu" tools:ignore="UnusedResources">Clàr-taice an taba</string>
     <!-- Text for the menu button to delete a collection -->
     <string name="collection_delete">Sguab an cruinneachadh às</string>
     <!-- Text for the menu button to rename a collection -->
@@ -746,9 +699,6 @@
     <string name="delete_from_history">Sguab às an eachdraidh</string>
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (Am modh prìobhaideach)</string>
-
-    <!-- Title text for the normal tabs header in the tabs tray which are not part of any tab grouping. -->
-    <string moz:removedIn="104" name="tab_tray_header_title_1" tools:ignore="UnusedResources">Tabaichean eile</string>
 
     <!-- History -->
     <!-- Text for the button to search all history -->
@@ -776,17 +726,6 @@
     <string name="history_older">Nas sine</string>
     <!-- Text shown when no history exists -->
     <string name="history_empty_message">Chan eil eachdraidh an-seo</string>
-
-    <!-- Text for the button inside History screen that opens Synced History screen. History that is coming from other devices -->
-    <string name="history_synced_from_other_devices">Sioncronaichte o uidheaman eile</string>
-    <!-- The page title for browsing history coming from other devices. -->
-    <string name="history_from_other_devices">O uidheaman eile</string>
-    <!-- The synced history sign in dialog message -->
-    <string name="history_sign_in_message">Clàraich a-steach a dh’fhaicinn na h-eachdraidh a chaidh a shioncronachadh o uidheaman eile.</string>
-    <!-- The synced history sign in dialog button text -->
-    <string name="history_sign_in_button">Clàraich a-steach</string>
-    <!-- The synced history sign in dialog create a new account link -->
-    <string name="history_sign_in_create_account"><![CDATA[<u>No cruthaich cunntas Firefox a thòiseachadh air sioncronachadh</u>]]></string>
 
     <!-- Downloads -->
     <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
@@ -928,8 +867,6 @@
     <string name="phone_feature_blocked_by_android">Bacte le Android</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Eisgeachdan</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to on -->
-    <string name="tracking_protection_on">Air</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Dheth</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
@@ -1023,11 +960,9 @@
     <string name="share_copy_link_to_clipboard">Cuir lethbhreac air an stòr-bhòrd</string>
     <!-- Toast shown after copying link to clipboard -->
     <string name="toast_copy_link_to_clipboard">Air lethbhreac a chur air an stòr-bhòrd</string>
-    <!-- An option from the three dot menu to into sync -->
-    <string name="sync_menu_sign_in">Clàraich a-steach a shioncronachadh</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Clàraich a-steach a shioncronachadh</string>
-    <!-- An option from the share dialog to send link to all other sync devices -->
+     <!-- An option from the share dialog to send link to all other sync devices -->
     <string name="sync_send_to_all">Cuir gun a h-uile uidheam</string>
     <!-- An option from the share dialog to reconnect to sync -->
     <string name="sync_reconnect">Ceangail ris an t-sioncronachadh às ùr</string>
@@ -1055,12 +990,6 @@
     <string name="notification_pbm_delete_text_2">Dùin na tabaichean prìobhaideach</string>
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Margaideachd</string>
-    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
-    <string name="notification_default_browser_title">Tha %1$s luath ’s prìobhaideach</string>
-    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
-    <string name="notification_default_browser_text">Cleachd %1$s mar am brabhsair bunaiteach agad</string>
 
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
@@ -1151,9 +1080,6 @@
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Fàg an-seo</string>
 
-    <!-- Dialog message to the user asking to delete browsing data. -->
-    <string moz:removedIn="104" name="delete_browsing_data_prompt_message" tools:ignore="UnusedResources">Sguabaidh seo às an dàta brabhsaidh air fad agad.</string>
-
     <!-- Title text of a delete browsing data dialog. -->
     <string name="delete_history_prompt_title">An rainse-ama a tha ri sguabadh às </string>
     <!-- Body text of a delete browsing data dialog. -->
@@ -1185,22 +1111,8 @@
     <!-- Text for the snackbar confirmation that the history group was deleted -->
     <string name="delete_history_group_snackbar">Chaidh am buidheann a sguabadh às</string>
 
-    <!-- Onboarding -->
-    <!-- Text for onboarding welcome message
-    The first parameter is the name of the app (e.g. Firefox Preview) -->
-    <string name="onboarding_header">Fàilte gu %s!</string>
-    <!-- text for the Firefox account onboarding sign in card header. The word "Firefox" should not be translated -->
-    <string name="onboarding_account_sign_in_header_1">Sioncronaich Firefox eadar uidheaman</string>
-    <!-- Text for the button to learn more about signing in to your Firefox account. The first parameter is the name of the application.-->
-    <string name="onboarding_manual_sign_in_description_2">Thoir a-steach comharran-lìn, an eachdraidh is faclan-faire gu %1$s air an uidheam seo.</string>
-    <!-- text for the button to manually sign into Firefox account. -->
-    <string name="onboarding_firefox_account_sign_in_1">Clàraich leinn</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Tha an sioncronachadh air</string>
-    <!-- text for the tracking protection onboarding card header -->
-    <string name="onboarding_tracking_protection_header_3">Tha prìobhaideachd air an-còmhnaidh</string>
-    <!-- text for the tracking protection card description. The first parameter is the name of the application.-->
-    <string name="onboarding_tracking_protection_description_4">Cuiridh %1$s casg gu fèin-obrachail air companaidhean o leantainn ort gu dìomhair air feadh an lìn.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Stannardach (bun-roghainn)</string>
     <!-- text for standard blocking option button description -->
@@ -1212,13 +1124,6 @@
     <string name="onboarding_tracking_protection_strict_button_description_3">Bacaidh seo barrachd dhe na tracaichean ach an dèid duilleagan a luchdadh nas luaithe ach dh’fhaoidte gum bris cuid a ghleusan air duilleagan.</string>
     <!-- text for the toolbar position card header  -->
     <string name="onboarding_toolbar_placement_header_1">Tagh na thèid a chur an àite a’ bhàr-inneal</string>
-    <!-- text for the toolbar position card description -->
-    <string name="onboarding_toolbar_placement_description_1">Cuir am bàr-inneal ri do làimh. Cùm e aig a’ bhonn no gluais e gun bhàrr.</string>
-    <!-- text for the privacy notice onboarding card header -->
-    <string name="onboarding_privacy_notice_header">Do phrìobhaideachd</string>
-    <!-- text for the privacy notice onboarding card description
-    The first parameter is the name of the app (e.g. Firefox Preview) Substitute %s for long browser name. -->
-    <string name="onboarding_privacy_notice_description2">Dhealbh sinn %s airson ’s gum bi smachd agad-sa air na cho-roinneas tu air loidhne agus na cho-roinneas tu leinn.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Leugh sanas na prìobhaideachd againn</string>
 
@@ -1275,21 +1180,21 @@
     <!-- Preference title for enhanced tracking protection settings -->
     <string name="preference_enhanced_tracking_protection">Dìon adhartach o thracadh</string>
     <!-- Title for the description of enhanced tracking protection -->
-    <string name="preference_enhanced_tracking_protection_explanation_title">Dèan brabhsadh gun daoine a’ cumail sùil ort</string>
+    <string name="preference_enhanced_tracking_protection_explanation_title" moz:removedIn="114" tools:ignore="UnusedResources">Dèan brabhsadh gun daoine a’ cumail sùil ort</string>
     <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
-    <string name="preference_enhanced_tracking_protection_explanation">Cùm an dàta agad agad fhèin. Dìonaidh %s thu o mhòran dhe na tracaichean as cumanta a leanas mun cuairt thu air an lìon.</string>
+    <string name="preference_enhanced_tracking_protection_explanation" moz:removedIn="114" tools:ignore="UnusedResources">Cùm an dàta agad agad fhèin. Dìonaidh %s thu o mhòran dhe na tracaichean as cumanta a leanas mun cuairt thu air an lìon.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Barrachd fiosrachaidh</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Stannardach (bun-roghainn)</string>
     <!-- Preference description for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_description_4">Cothromaichte do phrìobhaideachd is dèanadas. Thèid duilleagan a luchdadh gu h-àbhaisteach.</string>
+    <string name="preference_enhanced_tracking_protection_standard_description_4" moz:removedIn="114" tools:ignore="UnusedResources">Cothromaichte do phrìobhaideachd is dèanadas. Thèid duilleagan a luchdadh gu h-àbhaisteach.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Na thèid a bhacadh leis an dìon stannardach on tracadh</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Teann</string>
     <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_description_3">Bacaidh seo barrachd dhe na tracaichean ach an dèid duilleagan a luchdadh nas luaithe ach dh’fhaoidte gum bris cuid a ghleusan air duilleagan.</string>
+    <string name="preference_enhanced_tracking_protection_strict_description_3" moz:removedIn="114" tools:ignore="UnusedResources">Bacaidh seo barrachd dhe na tracaichean ach an dèid duilleagan a luchdadh nas luaithe ach dh’fhaoidte gum bris cuid a ghleusan air duilleagan.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Na thèid a bhacadh leis an dìon teann on tracadh</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -1651,7 +1556,7 @@
     <!-- Placeholder text shown in the Search String TextField before a user enters text -->
     <string name="search_add_custom_engine_search_string_hint">An t-sreang luirg a thèid a chleachdadh</string>
     <!-- Description text for the Search String TextField. The %s is part of the string -->
-    <string formatted="false" name="search_add_custom_engine_search_string_example">Cuir “%s” an àite na ceist. Ball-eisimpleir:\nhttps://www.google.com/search?q=%s</string>
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Cuir “%s” an àite na ceist. Ball-eisimpleir:\nhttps://www.google.com/search?q=%s</string>
     <!-- Accessibility description for the form in which details about the custom search engine are entered -->
     <string name="search_add_custom_engine_form_description">Mion-fhiosrachadh an einnsein-luirg ghnàthaichte</string>
 
@@ -1819,6 +1724,10 @@
     <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
     <string name="inactive_tabs_auto_close_message_snackbar">Tha an dùnadh fèin-obrachail an comas</string>
 
+    <!-- Awesome bar suggestion's headers -->
+    <!-- Search suggestions title for Firefox Suggest. -->
+    <string name="firefox_suggest_header">Firefox Suggest</string>
+
     <!-- Default browser experiment -->
     <string name="default_browser_experiment_card_text">Suidhich ceanglaichean o làraichean-lìn, puist-d agus teachdaireachdan airson ’s gun tèid am fosgladh gu fèin-obrachail ann am Firefox.</string>
 
@@ -1841,8 +1750,6 @@
     <string name="pocket_stories_categories_header">Sgeulachdan a-rèir cuspair</string>
     <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
     <string name="pocket_stories_placeholder_text">Fidir barrachd</string>
-    <!-- Title of an app feature. Smaller than a heading.-->
-    <string name="pocket_stories_feature_title">Le cumhachd Pocket.</string>
 
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
     <string name="pocket_stories_feature_caption">Na phàirt de theaghladh Firefox. %s</string>
@@ -1855,5 +1762,5 @@
     <string name="experiments_snackbar">Cuir an telemeatraidh an comas airson an dàta a chur.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Tadhail air na roghainnean</string>
-    <string name="firefox_suggest_header">Firefox Suggest</string>
-</resources>
+
+    </resources>
