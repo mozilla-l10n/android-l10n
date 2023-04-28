@@ -817,6 +817,13 @@
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Dùin an dèidh mìos</string>
 
+    <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage_summary">Fosgail air an duilleag-dhachaigh</string>
+    <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab_summary">Fosgail san taba mu dheireadh</string>
+    <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity_summary">Fosgail air an duilleag-dhachaigh an dèidh ceithir uairean a thìde</string>
+
     <!-- Inactive tabs -->
     <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
     <string name="preferences_inactive_tabs">Gluais seann-tabaichean gun earrann neo-ghnìomhach</string>
@@ -985,6 +992,10 @@
     <string name="bookmark_menu_open_in_new_tab_button">Fosgail ann an taba ùr</string>
     <!-- Bookmark overflow menu open in private tab button -->
     <string name="bookmark_menu_open_in_private_tab_button">Fosgail ann an taba prìobhaideach</string>
+    <!-- Bookmark overflow menu open all in tabs button -->
+    <string name="bookmark_menu_open_all_in_tabs_button">Fosgail anns gach taba ùr</string>
+    <!-- Bookmark overflow menu open all in private tabs button -->
+    <string name="bookmark_menu_open_all_in_private_tabs_button">Fosgail anns gach taba prìobhaideach</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Sguab às</string>
     <!--Bookmark overflow menu save button -->
@@ -1078,6 +1089,12 @@
     <string name="preference_exceptions">Eisgeachdan</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Dheth</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to standard -->
+    <string name="tracking_protection_standard">Stannardach</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to strict -->
+    <string name="tracking_protection_strict">Teann</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to custom -->
+    <string name="tracking_protection_custom">Gnàthaichte</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Ceadaich fuaim is video</string>
     <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
@@ -1159,6 +1176,10 @@
     <!-- Content description (not visible, for screen readers etc.):
         "Share" button. Opens the share menu when pressed. -->
     <string name="share_button_content_description">Co-roinn</string>
+    <!-- Text for the Save to PDF feature in the share menu -->
+    <string name="share_save_to_pdf">Sàbhail mar PDF</string>
+    <!-- Text for error message when generating a PDF file Text for error message when generating a PDF file. -->
+    <string name="unable_to_save_to_pdf_error">Chan urrainn dhuinn am PDF a ghintinn</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Cuir gu uidheam</string>
     <!-- Sub-header in the dialog to share a link to an app from the full list -->
@@ -1171,7 +1192,9 @@
     <string name="toast_copy_link_to_clipboard">Air lethbhreac a chur air an stòr-bhòrd</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Clàraich a-steach a shioncronachadh</string>
-     <!-- An option from the share dialog to send link to all other sync devices -->
+     <!-- An option from the three dot menu to sync and save data -->
+    <string name="sync_menu_sync_and_save_data">Sioncronaich is sàbhail an dàta</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
     <string name="sync_send_to_all">Cuir gun a h-uile uidheam</string>
     <!-- An option from the share dialog to reconnect to sync -->
     <string name="sync_reconnect">Ceangail ris an t-sioncronachadh às ùr</string>
@@ -1199,6 +1222,36 @@
     <string name="notification_pbm_delete_text_2">Dùin na tabaichean prìobhaideach</string>
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Margaideachd</string>
+
+    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_notification_default_browser_title" tools:ignore="UnusedResources">Tha Firefox luath ’s prìobhaideach</string>
+    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_notification_default_browser_text" tools:ignore="UnusedResources">Cleachd Firefox mar am brabhsair bunaiteach agad</string>
+    <!-- Title shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_title">Feuch am brabhsadh prìobhaideach</string>
+    <!-- Text shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_text">Dèan brabhsadh gun bhriosgaid no eachdraidh sam bith a shàbhaladh ann am %1$s</string>
+    <!-- Title A shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_A_title">Dèan brabhsadh gun lorg fhàgail</string>
+    <!-- Text A shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_A_text">Ma nì thu brabhsadh prìobhaideach, cha sàbhail %1$s am fiosrachadh agad.</string>
+    <!-- Title B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_title">Tòisich air rudan a lorg</string>
+    <!-- Text B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_text">Lorg rud-eigin am fagas. No faigh lorg air rud-eigin spòrsail. </string>
+
+    <!-- Survey -->
+    <!-- Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_survey_message_text">Nach coilean thu suirbhidh ghoirid airson Firefox a dhèanamh nas fheàrr?</string>
+    <!-- Preference for taking the short survey. -->
+    <string name="preferences_take_survey">Gabh an t-suirbhidh</string>
+    <!-- Preference for not taking the short survey. -->
+    <string name="preferences_not_take_survey">Chan eil, mòran taing</string>
 
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
