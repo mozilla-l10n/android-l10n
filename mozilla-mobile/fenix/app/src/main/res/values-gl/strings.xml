@@ -91,6 +91,24 @@
     <!-- Shortcut action to open new private tab -->
     <string name="home_screen_shortcut_open_new_private_tab_2">Nova lapela privada</string>
 
+    <!-- Recent Tabs -->
+    <!-- Header text for jumping back into the recent tab in the home screen -->
+    <string name="recent_tabs_header">Volver</string>
+    <!-- Button text for showing all the tabs in the tabs tray -->
+    <string name="recent_tabs_show_all">Mostrar todo</string>
+    <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
+    <string name="recent_tabs_show_all_content_description_2">Botón para mostrar todos os separadores recentes</string>
+
+    <!-- History Metadata -->
+    <!-- Header text for a section on the home screen that displays grouped highlights from the
+         user's browsing history, such as topics they have researched or explored on the web -->
+    <string name="history_metadata_header_2">Visitado recentemente</string>
+    <!-- Text for the menu button to remove a grouped highlight from the user's browsing history
+         in the Recently visited section -->
+    <string name="recently_visited_menu_item_remove">Retirar</string>
+    <!-- Content description for the button which navigates the user to show all of their history. -->
+    <string name="past_explorations_show_all_content_description_2">Mostrar todas as exploracións anteriores</string>
+
     <!-- Browser Fragment -->
     <!-- Content description (not visible, for screen readers etc.): Navigate backward (browsing history) -->
     <string name="browser_menu_back">Atrás</string>
@@ -143,6 +161,16 @@
     <string name="browser_menu_open_app_link">Abrir cunha aplicación</string>
     <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
     <string name="browser_menu_customize_reader_view">Personalizar da vista de lectura</string>
+
+    <!-- Browser menu label for adding a bookmark -->
+    <string name="browser_menu_add">Engadir</string>
+    <!-- Browser menu label for editing a bookmark -->
+    <string name="browser_menu_edit">Editar</string>
+    <!-- Button shown on the home page that opens the Customize home settings -->
+    <string name="browser_menu_customize_home_1">Personalizar a páxina de inicio</string>
+    <!-- Browser Toolbar -->
+    <!-- Content description for the Home screen button on the browser toolbar -->
+    <string name="browser_toolbar_home">Páxina de inicio</string>
 
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
@@ -239,6 +267,8 @@
     <string name="preferences_toolbar">Barra de ferramentas</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Tema</string>
+    <!-- Preference for customizing the home screen -->
+    <string name="preferences_home_2">Páxina de inicio</string>
     <!-- Preference for gestures based actions -->
     <string name="preferences_gestures">Xestos</string>
     <!-- Preference for settings related to visual options -->
@@ -298,6 +328,15 @@
     <!-- Toast shown after confirming the custom add-on collection configuration -->
     <string name="toast_customize_addon_collection_done">Modificouse a colección de complementos. Vaise saír da aplicación para aplicar os cambios…</string>
 
+    <!-- Customize Home -->
+    <!-- Header text for jumping back into the recent tab in customize the home screen -->
+    <string name="customize_toggle_jump_back_in">Volver</string>
+    <!-- Title for the customize home screen section with recently saved bookmarks. -->
+    <string name="customize_toggle_recent_bookmarks">Marcadores recentes</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is
+    a section where users see a list of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recently_visited">Visitado recentemente</string>
+
     <!-- Text displayed that links to website containing documentation about the "Limited Edition" wallpapers. -->
     <string name="wallpaper_learn_more">Máis información</string>
     <!-- Description text for the limited edition wallpapers with learn more link. The first parameter is the learn more string defined in wallpaper_learn_more-->
@@ -343,6 +382,11 @@
         and the third is the device model. -->
     <string name="default_device_name_2">%1$s en %2$s %3$s</string>
 
+    <!-- Preference for syncing credit cards -->
+    <string name="preferences_sync_credit_cards">Tarxetas de crédito</string>
+    <!-- Preference for syncing addresses -->
+    <string name="preferences_sync_address">Enderezos</string>
+
     <!-- Send Tab -->
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Lapelas recibidas</string>
@@ -370,6 +414,8 @@
     <string name="preferences_usage_data_description">Comparte datos de rendemento, uso, hardware e personalizacións sobre o seu navegador con Mozilla para axudarnos a mellorar %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Datos de mercadotecnia</string>
+    <!-- Preference description for marketing data collection -->
+    <string name="preferences_marketing_data_description2">Comparte datos básicos de uso con Adjust, o noso fornecedor de mercadotecnia móbil</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Estudos</string>
     <!-- Summary for studies preferences -->
@@ -469,6 +515,18 @@
     <!-- Option for auto closing tabs that will auto close tabs after one month -->
     <string name="close_tabs_after_one_month">Despois dun mes</string>
 
+    <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+    <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Pechar automaticamente os separadores abertos</string>
+
+    <!-- Opening screen -->
+    <!-- Title of a preference that allows a user to choose what screen to show after opening the app -->
+    <string name="preferences_opening_screen">Pantalla de inicio</string>
+    <!-- Option for always opening the homepage when re-opening the app -->
+    <string name="opening_screen_homepage">Páxina de inicio</string>
+    <!-- Option for always opening the user's last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab">Último separador</string>
+    <!-- Option for always opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity">Páxina de inicio despois de catro horas de inactividade</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to manual close-->
     <string name="close_tabs_manually_summary">Pechar manualmente</string>
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day-->
@@ -478,26 +536,52 @@
     <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one month-->
     <string name="close_tabs_after_one_month_summary">Pechar despois de un mes</string>
 
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">Mover os separadores vellos aos inactivos</string>
+    <!-- Title of inactive tabs preference -->
+    <string name="preferences_inactive_tabs_title">Os separadores que non vise en dúas semanas móvense á sección de inactivos.</string>
+
+    <!-- Studies -->
+    <!-- Title of the remove studies button -->
+    <string name="studies_remove">Retirar</string>
+    <!-- Title of the active section on the studies list -->
+    <string name="studies_active">Activos</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Máis información</string>
+    <!-- Dialog message shown after removing a study -->
+    <string name="studies_restart_app">A aplicación pecharase para aplicar os cambios</string>
+    <!-- Dialog button to confirm the removing a study. -->
+    <string name="studies_restart_dialog_ok">Aceptar</string>
     <!-- Dialog button text for canceling removing a study. -->
     <string name="studies_restart_dialog_cancel">Cancelar</string>
+
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">Saíndo da aplicación para aplicar os cambios…</string>
 
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">Lapelas abertas</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">Lapelas privadas</string>
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">Separadores sincronizados</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">Engadir lapela</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_private_tab">Engadir lapela privada</string>
     <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
     <string name="tab_drawer_fab_content">Privada</string>
+    <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
+    <string name="tab_drawer_fab_sync">Sincronizar</string>
     <!-- Text shown in the menu for sharing all tabs -->
     <string name="tab_tray_menu_item_share">Compartir todas as lapelas</string>
     <!-- Text shown in the menu to view recently closed tabs -->
     <string name="tab_tray_menu_recently_closed">Lapelas pechadas recentemente</string>
+    <!-- Text shown in the tabs tray inactive tabs section -->
+    <string name="tab_tray_inactive_recently_closed" tools:ignore="UnusedResources">Pechados recentemente</string>
+    <!-- Text shown in the menu to view account settings -->
+    <string name="tab_tray_menu_account_settings">Configuración da conta</string>
     <!-- Text shown in the menu to view tab settings -->
     <string name="tab_tray_menu_tab_settings">Configuración das lapelas</string>
     <!-- Text shown in the menu for closing all tabs -->
@@ -683,6 +767,8 @@
     <string name="preference_phone_feature_notification">Notificación</string>
     <!-- Preference for altering the persistent storage access for all websites -->
     <string name="preference_phone_feature_persistent_storage">Almacenamento persistente</string>
+    <!-- Preference for altering the storage access setting for all websites -->
+    <string name="preference_phone_feature_cross_origin_storage_access">Rastros entre sitios</string>
     <!-- Preference for altering the EME access for all websites -->
     <string name="preference_phone_feature_media_key_system_access">Contido controlado por DRM</string>
     <!-- Label that indicates that a permission must be asked always -->
@@ -718,6 +804,11 @@
     <string name="delete_browsing_data_quit_on">Activado</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">Desactivado</string>
+
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">Activado</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">Desactivado</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -806,6 +897,9 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Pechar lapelas privadas</string>
 
+    <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
+    <string name="notification_marketing_channel_name">Mercadotecnia</string>
+
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Colección eliminada</string>
@@ -832,6 +926,10 @@
     <string name="qr_scanner_dialog_positive">PERMITIR</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">DENEGAR</string>
+    <!-- QR code scanner prompt dialog error message shown when a hostname does not contain http or https. -->
+    <string name="qr_scanner_dialog_invalid">O enderezo web é incorrecto.</string>
+    <!-- QR code scanner prompt dialog positive option when there is an error -->
+    <string name="qr_scanner_dialog_invalid_ok">Aceptar</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Confirma que quere eliminar %1$s?</string>
     <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
@@ -912,9 +1010,15 @@
 
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Estándar (predeterminado)</string>
+    <!-- text for standard blocking option button description -->
+    <string name="onboarding_tracking_protection_standard_button_description_3">Equilibrado para privacidade e rendemento. As páxinas cargan con normalidade.</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
     <string name="onboarding_tracking_protection_strict_option">Estrito</string>
 
+    <!-- text for strict blocking option button description -->
+    <string name="onboarding_tracking_protection_strict_button_description_3">Bloquea máis rastreadores para que as páxinas carguen máis rápido, pero pode romper algunhas funcionalidades de páxinas.</string>
+    <!-- text for the toolbar position card header  -->
+    <string name="onboarding_toolbar_placement_header_1">Decida onte colocar a barra de ferramentas</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Lea a nosa política de privacidade</string>
 
@@ -924,6 +1028,8 @@
     <!-- Onboarding theme -->
     <!-- text for the theme picker onboarding card header -->
     <string name="onboarding_theme_picker_header">Escolla o seu tema</string>
+    <!-- text for the theme picker onboarding card description -->
+    <string name="onboarding_theme_picker_description_2">Aforre a batería e a vista co modo escuro.</string>
     <!-- Automatic theme setting (will follow device setting) -->
     <string name="onboarding_theme_automatic_title">Automático</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
@@ -975,10 +1081,14 @@
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Máis información</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Estándar (predeterminado)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_4" moz:removedIn="114" tools:ignore="UnusedResources">Equilibrado para privacidade e rendemento. As páxinas cargan con normalidade.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">O que resulta bloqueado pola protección de seguimento estándar</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Estrito</string>
+    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+    <string name="preference_enhanced_tracking_protection_strict_description_3" moz:removedIn="114" tools:ignore="UnusedResources">Bloquea máis rastreadores para que as páxinas carguen máis rápido, pero pode romper algunhas funcionalidades de páxinas.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">O que resulta bloqueado pola protección de seguimento estrita</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -1008,6 +1118,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Criptomineiros</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Identificadores de pegadas dixitais</string>
+    <!-- Button label for navigating to the Enhanced Tracking Protection details -->
+    <string name="enhanced_tracking_protection_details">Detalles</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">Bloqueado</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
@@ -1051,6 +1163,9 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Limpa as cookies establecidas por redireccións a sitios web de seguimento coñecidos.</string>
 
+    <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+         as we use it on the UI to indicate which trackers have been partially unblocked.  -->
+    <string name="preference_etp_smartblock_description">Algúns rastrexadores marcados a continuación desbloqueáronse parcialmente nesta páxina porque vostede ten interactuado con eles *.</string>
     <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
     <string name="preference_etp_smartblock_learn_more">Máis información</string>
 
@@ -1104,8 +1219,21 @@
     <!-- Preference option for never saving passwords in Fenix -->
     <string name="preferences_passwords_save_logins_never_save">Non gardar nunca</string>
 
+    <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill2">Completar automaticamente en %1$s</string>
+    <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+    <string name="preferences_passwords_autofill_description">Encher e gardar os nomes de usuario e contrasinais nos sitios web ao empregar %1$s.</string>
+    <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill">Encher automaticamente noutras aplicacións</string>
+    <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+    <string name="preferences_android_autofill_description">Encher os nomes de usuario e os contrasinais noutras aplicacións do dispositivo.</string>
+    <!-- Preference option for adding a login -->
+    <string name="preferences_logins_add_login">Engadir credenciais</string>
+
     <!-- Preference for syncing saved logins in Fenix -->
     <string name="preferences_passwords_sync_logins">Sincronizar os inicios de sesión</string>
+    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
+    <string name="preferences_passwords_sync_logins_across_devices">Sincronizar as credenciais entre dispositivos</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins">Identificacións gardadas</string>
     <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
@@ -1140,6 +1268,8 @@
     <string name="saved_login_copy_username">Copiar nome de usuario</string>
     <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
     <string name="saved_login_clear_username">Limpar nome de usuario</string>
+    <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+    <string name="saved_login_clear_hostname">Borrar o servidor</string>
     <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
     <string name="saved_login_open_site">Abrir sitio no navegador</string>
     <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -1168,6 +1298,13 @@
     <string name="saved_logins_sort_strategy_last_used">Usado por última vez</string>
     <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
     <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Ordenar o menú de inicio de sesión</string>
+
+    <!-- Preference and title for managing the settings for credit cards -->
+    <string name="preferences_credit_cards">Tarxetas de crédito</string>
+    <!-- Preference for saving and autofilling credit cards -->
+    <string name="preferences_credit_cards_save_and_autofill_cards">Gardar e encher automaticamente as tarxetas</string>
+    <!-- Preference summary for saving and autofilling credit card data -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Os datos están cifrados</string>
 
     <!-- The text for the positive button on "Delete card" dialog -->
     <string name="credit_cards_delete_dialog_button">Eliminar</string>
