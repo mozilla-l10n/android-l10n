@@ -378,7 +378,7 @@
     <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button">Pedir soporte</string>
     <!-- Text for title indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
-    <string name="cookie_banner_handling_details_site_is_not_supported_title">Redución do aviso de rastros</string>
+    <string name="cookie_banner_handling_details_site_is_not_supported_title">Redución do aviso de cookies</string>
     <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
     <string name="cookie_banner_handling_report_site_snack_bar_text">A solicitude de soporte enviouse.</string>
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle -->
@@ -692,6 +692,9 @@
     <!-- Title to show in alert when a lot of tabs are to be opened
     %d is a placeholder for the number of tabs that will be opened -->
     <string name="open_all_warning_title">Abrir %d lapelas?</string>
+    <!-- Message to warn users that a large number of tabs will be opened
+    %s will be replaced by app name. -->
+    <string name="open_all_warning_message">Ao abrir tantas lapelas pode que %s se desacelere mentres cargan as páxinas. Está seguro de que quere continuar?</string>
     <!-- Dialog button text for confirming open all tabs -->
     <string name="open_all_warning_confirm">Lapelas abertas</string>
     <!-- Dialog button text for canceling open all tabs -->
@@ -761,6 +764,11 @@
     <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
     <string name="opening_screen_homepage_summary">Abrir na páxina de inicio</string>
 
+    <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
+    <string name="opening_screen_last_tab_summary">Abrir na última lapela</string>
+    <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity_summary">Ábrese na páxina de inicio despois de catro horas</string>
+
     <!-- Inactive tabs -->
     <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
     <string name="preferences_inactive_tabs">Mover os separadores vellos aos inactivos</string>
@@ -772,6 +780,8 @@
     <string name="studies_remove">Retirar</string>
     <!-- Title of the active section on the studies list -->
     <string name="studies_active">Activos</string>
+    <!-- Description for studies, it indicates why Firefox use studies. The first parameter is the name of the application. -->
+    <string name="studies_description_2">%1$s pode instalar e executar estudos de cando en vez.</string>
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Máis información</string>
     <!-- Dialog message shown after removing a study -->
@@ -848,6 +858,9 @@
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (modo privado)</string>
 
+    <!-- History -->
+    <!-- Text for the button to search all history -->
+    <string name="history_search_1">Introduza os termos de busca</string>
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Eliminar historial</string>
     <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
@@ -920,6 +933,10 @@
     <string name="bookmark_menu_open_in_new_tab_button">Abrir nunha lapela nova</string>
     <!-- Bookmark overflow menu open in private tab button -->
     <string name="bookmark_menu_open_in_private_tab_button">Abrir unha nova lapela privada</string>
+    <!-- Bookmark overflow menu open all in tabs button -->
+    <string name="bookmark_menu_open_all_in_tabs_button">Abre todo en novas lapelas</string>
+    <!-- Bookmark overflow menu open all in private tabs button -->
+    <string name="bookmark_menu_open_all_in_private_tabs_button">Abrir todo en lapelas privadas</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Eliminar</string>
     <!--Bookmark overflow menu save button -->
@@ -958,6 +975,9 @@
     <string name="bookmark_deletion_multiple_snackbar_message_3">A eliminar os cartafoles seleccionados</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">DESFACER</string>
+
+    <!-- Text for the button to search all bookmarks -->
+    <string name="bookmark_search">Introduza os termos de busca</string>
 
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
@@ -1099,15 +1119,23 @@
     <string name="share_button_content_description">Compartir</string>
     <!-- Text for the Save to PDF feature in the share menu -->
     <string name="share_save_to_pdf">Gardar como PDF</string>
+    <!-- Text for error message when generating a PDF file Text for error message when generating a PDF file. -->
+    <string name="unable_to_save_to_pdf_error">Non se puido xerar o PDF</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Enviar a un dispositivo</string>
     <!-- Sub-header in the dialog to share a link to an app from the full list -->
     <string name="share_link_all_apps_subheader">Todas as accións</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
     <string name="share_link_recent_apps_subheader">Usado recentemente</string>
+    <!-- Text for the copy link action in the share screen. -->
+    <string name="share_copy_link_to_clipboard">Copiar ao portapapeis</string>
+    <!-- Toast shown after copying link to clipboard -->
+    <string name="toast_copy_link_to_clipboard">Copiouse no portapapeis</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">Inicie sesión para sincronizar</string>
-     <!-- An option from the share dialog to send link to all other sync devices -->
+     <!-- An option from the three dot menu to sync and save data -->
+    <string name="sync_menu_sync_and_save_data">Sincronizar e gardar datos</string>
+    <!-- An option from the share dialog to send link to all other sync devices -->
     <string name="sync_send_to_all">Enviar a todos os dispositivos</string>
     <!-- An option from the share dialog to reconnect to sync -->
     <string name="sync_reconnect">Conecte de novo para sincronizar</string>
@@ -1136,6 +1164,20 @@
 
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Mercadotecnia</string>
+
+    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_notification_default_browser_title" tools:ignore="UnusedResources">Firefox é rápido e privado</string>
+    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_notification_default_browser_text" tools:ignore="UnusedResources">Faga de Firefox o seu navegador predeterminado</string>
+    <!-- Title shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_title">Probe a navegación privada</string>
+    <!-- Text shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_text">Navegar sen rastros nin historial gardados en %1$s</string>
+    <!-- Title A shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_A_title">Navegar sen deixar rastro</string>
 
     <!-- Preference for not taking the short survey. -->
     <string name="preferences_not_take_survey">Non, grazas</string>
@@ -1358,6 +1400,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cookies_3">Todas as cookies de terceiros (pode causar erros nos sitios web)</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies_4">Todas as cookies (pode causar erros nos sitios web)</string>
+    <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
+    <string name="preference_enhanced_tracking_protection_custom_cookies_5">Illar as cookies entre sitios</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content">Contido de rastrexo</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
@@ -1722,9 +1766,9 @@
     <!-- Label that indicates a site is using a insecure connection -->
     <string name="quick_settings_sheet_insecure_connection_2">A conexión non é segura</string>
     <!-- Label to clear site data -->
-    <string name="clear_site_data">Borrar os rastros e os datos do sitio</string>
+    <string name="clear_site_data">Borrar as cookies e os datos do sitio</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site -->
-    <string name="confirm_clear_site_data"><![CDATA[Seguro que quere borrar todos os rastros e datos do sitio <b>%s</b>?]]></string>
+    <string name="confirm_clear_site_data"><![CDATA[Seguro que quere borrar todas as cookies e os datos do sitio <b>%s</b>?]]></string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for all sites-->
     <string name="confirm_clear_permissions_on_all_sites">Confirma que desexa limpar todos os permisos de todos os sitios?</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for a site-->
