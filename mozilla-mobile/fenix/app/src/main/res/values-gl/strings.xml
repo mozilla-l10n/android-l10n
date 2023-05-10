@@ -85,7 +85,7 @@
     <!-- Text for the message displayed in the contextual feature recommendation popup promoting the total cookie protection feature. -->
     <string name="tcp_cfr_message">A nosa función de privacidade máis poderosa aínda illa os rastrexadores entre sitios.</string>
     <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
-    <string name="tcp_cfr_learn_more">Aprenda sobre a protección total de rastros</string>
+    <string name="tcp_cfr_learn_more">Aprenda sobre a protección total de cookies</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Necesítase acceso á cámara. Vai á configuración de Android, toque nos permisos e toque en permitir.</string>
@@ -363,9 +363,9 @@
     <string name="preferences_https_only_title">Modo só HTTPS</string>
 
     <!-- Preference for removing cookie/consent banners from sites automatically. See reduce_cookie_banner_summary for additional context. -->
-    <string name="preferences_cookie_banner_reduction">Redución do aviso de rastros</string>
+    <string name="preferences_cookie_banner_reduction">Redución do aviso de cookies</string>
     <!-- Preference for rejecting or removing as many cookie/consent banners as possible on sites. See reduce_cookie_banner_summary for additional context. -->
-    <string name="reduce_cookie_banner_option">Reducir os avisos de rastros</string>
+    <string name="reduce_cookie_banner_option">Reducir os avisos de cookies</string>
     <!-- Summary of cookie banner handling preference if the setting disabled is set to off -->
     <string name="reduce_cookie_banner_option_off">Desactivado</string>
     <!-- Summary of cookie banner handling preference if the setting enabled is set to on -->
@@ -390,11 +390,11 @@
     <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
     <string name="reduce_cookie_banner_details_panel_title_on_for_site">Quere activar a redución do aviso de cookies para %1$s?</string>
     <!-- Title text for the cookie banner re-engagement dialog. The first parameter is the application name. -->
-    <string name="reduce_cookie_banner_dialog_title">Quere permitir que %1$s rexeite os carteis de rastrexos?</string>
+    <string name="reduce_cookie_banner_dialog_title">Quere permitir que %1$s rexeite os avisos de cookies?</string>
     <!-- Remind me later text button for the onboarding dialog -->
     <string name="reduce_cookie_banner_dialog_not_now_button">Agora non</string>
     <!-- Snack text for the cookie banner dialog, after user hit the dismiss banner button -->
-    <string name="reduce_cookie_banner_dialog_snackbar_text">Verá menos solicitudes de rastrexos</string>
+    <string name="reduce_cookie_banner_dialog_snackbar_text">Verá menos solicitudes de cookies</string>
     <!-- Change setting text button, for the cookie banner re-engagement dialog -->
     <string name="reduce_cookie_banner_dialog_change_setting_button">Permitir</string>
 
@@ -1015,7 +1015,7 @@
     <!-- Preference for altering the persistent storage access for all websites -->
     <string name="preference_phone_feature_persistent_storage">Almacenamento persistente</string>
     <!-- Preference for altering the storage access setting for all websites -->
-    <string name="preference_phone_feature_cross_origin_storage_access">Rastros entre sitios</string>
+    <string name="preference_phone_feature_cross_origin_storage_access">Cookies entre sitios</string>
     <!-- Preference for altering the EME access for all websites -->
     <string name="preference_phone_feature_media_key_system_access">Contido controlado por DRM</string>
     <!-- Label that indicates that a permission must be asked always -->
@@ -1179,6 +1179,20 @@
     <!-- Title A shown in the notification that pops up to re-engage the user -->
     <string name="notification_re_engagement_A_title">Navegar sen deixar rastro</string>
 
+    <!-- Text A shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_A_text">A navegación privada en %1$s non garda a súa información.</string>
+    <!-- Title B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_title">Comece a súa primeira busca</string>
+    <!-- Text B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_text">Busque algo preto. Ou descubra algo divertido.</string>
+
+    <!-- Survey -->
+    <!-- Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_survey_message_text">Por favor, axude a mellorar Firefox facendo unha pequena enquisa.</string>
+    <!-- Preference for taking the short survey. -->
+    <string name="preferences_take_survey">Responder unha enquisa</string>
     <!-- Preference for not taking the short survey. -->
     <string name="preferences_not_take_survey">Non, grazas</string>
 
@@ -1193,6 +1207,8 @@
     <string name="snackbar_tabs_closed">Lapelas pechadas</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs -->
     <string name="snackbar_message_bookmarks_saved">Marcadores gardados!</string>
+    <!-- Text shown in snackbar when user adds a site to shortcuts -->
+    <string name="snackbar_added_to_shortcuts">Engadido aos atallos!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">Lapela privada pechada</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
@@ -1270,6 +1286,10 @@
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Saír</string>
 
+    <!-- Title text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_title">Intervalo de tempo a eliminar</string>
+    <!-- Body text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_body">Elimina o historial (incluído o historial sincronizado doutros dispositivos), as cookies e outros datos de navegación.</string>
     <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
     <string name="delete_history_prompt_button_last_hour">Última hora</string>
     <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
@@ -1289,17 +1309,37 @@
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">A eliminar datos de navegación…</string>
 
+    <!-- Dialog message to the user asking to delete all history items inside the opened group. Parameter will be replaced by a history group name. -->
+    <string name="delete_all_history_group_prompt_message">Eliminar todos os sitios en «%s»</string>
     <!-- Text for the cancel button for the history group deletion dialog -->
     <string name="delete_history_group_prompt_cancel">Cancelar</string>
 
     <!-- Text for the allow button for the history group dialog -->
     <string name="delete_history_group_prompt_allow">Eliminar</string>
 
+    <!-- Text for the snackbar confirmation that the history group was deleted -->
+    <string name="delete_history_group_snackbar">Grupo eliminado</string>
+
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome header. -->
+    <string name="onboarding_header_2">Benvido a unha internet mellor</string>
+    <!-- Text for the onboarding welcome message. -->
+    <string name="onboarding_message">Un navegador creado para as persoas, non para os beneficios.</string>
+    <!-- Text for the Firefox account onboarding sign in card header. -->
+    <string name="onboarding_account_sign_in_header">Continúe onde o deixou</string>
+    <!-- Text for the button to learn more about signing in to your Firefox account. -->
+    <string name="onboarding_manual_sign_in_description">Sincronice lapelas e contrasinais entre os dispositivos para cambiar de pantalla sen problemas.</string>
     <!-- Text for the button to manually sign into Firefox account. -->
     <string name="onboarding_firefox_account_sign_in">Acceder</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">A sincronización está activada</string>
 
+    <!-- Text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header">Protección de privacidade por defecto</string>
+    <!-- Text for the tracking protection card description. The first parameter is the name of the application.-->
+    <string name="onboarding_tracking_protection_description_old">%1$s impide automaticamente que as empresas sigan a súa presenza en segredo pola rede.</string>
+    <!-- Text for the tracking protection card description. -->
+    <string name="onboarding_tracking_protection_description">Protección Total de Cookies impide que os rastrexadores empreguen cookies para asexalo polos sitios.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Estándar (predeterminado)</string>
     <!-- text for standard blocking option button description -->
@@ -1311,6 +1351,10 @@
     <string name="onboarding_tracking_protection_strict_button_description_3">Bloquea máis rastreadores para que as páxinas carguen máis rápido, pero pode romper algunhas funcionalidades de páxinas.</string>
     <!-- text for the toolbar position card header  -->
     <string name="onboarding_toolbar_placement_header_1">Decida onte colocar a barra de ferramentas</string>
+    <!-- Text for the toolbar position card description -->
+    <string name="onboarding_toolbar_placement_description">Mantéñao na parte inferior ou móvao cara arriba.</string>
+    <!-- Text for the privacy notice onboarding card header -->
+    <string name="onboarding_privacy_notice_header_1">Vostede controla os seus datos</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Lea a nosa política de privacidade</string>
 
@@ -1367,6 +1411,8 @@
     <string name="preference_enhanced_tracking_protection">Protección mellorada contra o rastrexo</string>
     <!-- Title for the description of enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_title" moz:removedIn="114" tools:ignore="UnusedResources">Navegue sen que lle fagan seguimento</string>
+    <!-- Preference summary for enhanced tracking protection settings on/off switch -->
+    <string name="preference_enhanced_tracking_protection_summary">Agora con Total Cookie Protection, a nosa barreira máis poderosa ata agora contra os rastrexadores entre sitios.</string>
     <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
     <string name="preference_enhanced_tracking_protection_explanation" moz:removedIn="114" tools:ignore="UnusedResources">Manteña os seus datos para si mesmo. %s protexe de moitos dos rastreadores máis comúns que seguen o que vostede fai na Rede.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
