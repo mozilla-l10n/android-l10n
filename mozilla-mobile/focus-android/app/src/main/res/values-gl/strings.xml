@@ -623,6 +623,17 @@
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
     <string name="your_rights_content3"><![CDATA[Non se lle concede ningún dereito ou licenza sobre as marcas comerciais da Fundación Mozilla ou de ningunha parte, incluídos os nomes ou logotipos de Mozilla, Firefox ou %1$s. Pódese atopar información adicional <a href="%2$s">aquí</a>.]]></string>
 
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
+    <string name="your_rights_content4"><![CDATA[O código fonte adicional para %1$s está dispoñible baixo outras <a href="%2$s">licenzas</a> gratuítas e de código aberto.]]></string>
+
+    <!-- Text shown in the "Your rights" screen.
+    %1$s will be replaced with the name of the app (e.g. Firefox Focus)
+    %2$s will be replaced with a URL linking to the GPL
+    %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
+    <string name="your_rights_content5"><![CDATA[%1$s tamén usa as listas de bloqueo proporcionadas por Disconnect, Inc. como traballos separados e independentes baixo a <a href="%2$s">GNU General Public License v3</a>, e dispoñible <a href="%3$s">aquí</a>.]]></string>
+
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Nome de usuario</string>
     <string name="gv_prompt_password_hint">Contrasinal</string>
@@ -694,6 +705,9 @@
     <!--  Title preference inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
     <string name="cookie_banner_reject_all_option_title">Redución do aviso de cookies</string>
 
+    <!--  Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+    <string name="cookie_banner_reject_all_option_summary">Vexa menos avisos ao rexeitar automaticamente as solicitudes de cookies, cando sexa posible.</string>
+
     <!-- Preference for removing cookie/consent banners from sites automatically, this is shown as part of the protections panel with the tracking protection toggle. -->--&gt;
     <string name="cookie_banner_exception_item_title">Redución do aviso de cookies</string>
 
@@ -718,6 +732,18 @@
     <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site. -->
     <string name="cookie_banner_exception_panel_title_state_on_for_site">Quere activar a redución do aviso de cookies para %1$s?</string>
 
+    <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site. -->
+    <string name="cookie_banner_exception_panel_title_state_off_for_site">Quere desactivar a redución do aviso de cookies para %1$s?</string>
+
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
+    <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s borrará as cookies deste sitio e actualizará a páxina. Ao borrar todas as cookies, é posible que peche a sesión ou baleire os carriños da compra.</string>
+
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
+    <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s pode tentar rexeitar automaticamente as solicitudes de cookies.</string>
+
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Este sitio actualmente non é compatible coa redución de avisos de cookies. Quere solicitar ao noso equipo que revise este sitio web e que engada asistencia no futuro?</string>
+
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
     <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Cancelar</string>
 
@@ -730,6 +756,9 @@
     <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
     <string name="cookie_banner_the_site_was_reported">A solicitude de soporte enviouse.</string>
 
+    <!-- Contextual Feature Recommendation Popups -->
+    <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
+    <string name="cfr_cookie_banner">%1$s tenta rexeitar as solicitudes de cookies para rexeitar os molestos avisos de cookies.\n\nXestions as preferencias dos avisos de cookies en %2$s.</string>
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">configuración</string>
 
@@ -841,6 +870,10 @@
     <!-- Title for the prompt to enable search suggestions -->
     <string name="enable_search_suggestion_title2">Amosar suxestións de busca?</string>
 
+    <!-- Description for the prompt to enable search suggestions
+        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="enable_search_suggestion_description"> Para obter suxestións, %1$s debe enviar o que escribe na barra de enderezos ao motor de busca.</string>
+
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">Non</string>
 
@@ -888,13 +921,23 @@
     <!-- Text displayed in a notification when the user enters full screen mode -->
     <string name="full_screen_notification">Entrado no modo de pantalla completa</string>
 
+    <!-- Preference for switching to a new tab immediately after opening -->
+    <string name="preference_open_new_tab">Cambiar a unha ligazón nunha nova lapela inmediatamente</string>
+
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Bloquear sitios potencialmente perigosos e enganosos</string>
+    <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
+    <string name="preference_safe_browsing_summary">Bloquear sitios notificados como enganosos e de ataque, sitios de software malicioso e sitios de software non desexado.</string>
     <!-- Title of the preference to enable "HTTPS-Only" mode -->
     <string name="preference_https_only_title">Modo só HTTPS</string>
 
+    <!-- Description of the preference to enable "HTTPS-Only" mode. -->
+    <string name="preference_https_only_summary3">Tenta conectarse automaticamente a sitios mediante o protocolo de cifrado HTTPS para aumentar a seguridade.</string>
+
     <!-- Preference for exceptions tracking protection -->
     <string name="preference_exceptions">Excepcións</string>
+    <!-- Description for the exceptions preference screen-->
+    <string name="preference_exceptions_description">Desactivou o bloqueo de contido para estes sitios web.</string>
     <!-- Menu item to remove existing exceptions. -->
     <string name="preference_exceptions_menu_remove">Retirar</string>
     <!-- Button to remove all websites from the exception list -->
@@ -902,6 +945,9 @@
 
     <!-- Title for Preference screen for cookie blocking for exceptions tracking protection -->
     <string name="preference_block_cookies_title">Bloquear as cookies</string>
+
+    <!-- Message for Preference screen for cookie blocking for exceptions tracking protection -->
+    <string name="preference_category_block_cookies">Quere bloquear as cookies?</string>
 
     <!-- Title for the tab crash report screen-->
     <string name="tab_crash_report_title">A lapela quebrou</string>
@@ -953,6 +999,10 @@
     <string name="rename_top_site">Renomear</string>
     <!-- Placeholder text for the input field of rename top site-->
     <string name="placeholder_rename_top_site">Nome do atallo</string>
+
+    <!-- Text for context menu additional note.
+    %1$s is a placeholder for the app name. -->
+    <string name="contextmenu_erased_images_note2">As imaxes gardadas e compartidas &lt;b&gt;non se&lt;/b&gt; eliminarán cando borre o historial de %1$s</string>
 
     <!-- Theme Preferences -->
     <!-- Preference category for changing default theme to dark or light mode -->
