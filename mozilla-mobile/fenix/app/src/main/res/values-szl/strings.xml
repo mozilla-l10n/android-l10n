@@ -12,10 +12,12 @@
     <string name="content_description_private_browsing_button">Załōncz prywatne przeglōndanie</string>
     <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
     <string name="content_description_disable_private_browsing_button">Wyłōncz prywatne przeglōndanie</string>
-    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
     <string name="search_hint">Szukej abo wkludź adresa</string>
 
 
+    <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
+    <string name="search_hint_general_engine">Szukej w internecie</string>
     <!-- Placeholder text shown in the search bar when using application search engines -->
     <string name="application_search_hint">Wkludź szukane słowa</string>
     <!-- No Open Tabs Message Description -->
@@ -59,12 +61,6 @@
        Czynste mity ô prywatnym przeglōndaniu
     </string>
 
-    <!-- Private mode shortcut "contextual feature recommendation" (CFR) -->
-    <!-- Text for the main message -->
-    <string moz:removedIn="109" name="cfr_message" tools:ignore="UnusedResources">Przidej skrōt do ôtwiyranio prywatnych kart z dōmowego ekranu.</string>
-    <!-- Text for the positive button -->
-    <string moz:removedIn="109" name="cfr_pos_button_text" tools:ignore="UnusedResources">Przidej skrōt</string>
-
 
     <!-- Text for the negative button to decline adding a Private Browsing shortcut to the Home screen -->
     <string name="cfr_neg_button_text">Niy, dziynkuja</string>
@@ -76,9 +72,6 @@
     <string name="open_in_app_cfr_positive_button_text">Idź do sztalōnkōw</string>
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">Ôdkoż</string>
-
-    <!-- Content description for close button used in "contextual feature recommendation" (CFR) popups -->
-    <string name="cfr_dismiss_button_default_content_description">Zawrzij</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Trza dostympu do kamery. Idź doo sztalōnkōw Androidaa, tyknij &quot;dozwolyństwa&quot; i tyknij &quot;zgoda&quot;.</string>
@@ -233,7 +226,7 @@
     <string name="search_suggestions_onboarding_title">Pokazować dorady szukanio we prywatnych ôknach?</string>
     <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="search_suggestions_onboarding_text">%s bydzie przekazowoł bazowyj wyszukowarce wszysko, co wkludzosz we posku z adresōm.</string>
-    <!-- Search engine suggestion title text. The first parameter is the name of teh suggested engine-->
+    <!-- Search engine suggestion title text. The first parameter is the name of the suggested engine-->
     <string name="search_engine_suggestions_title">Szukej na %s</string>
     <!-- Search engine suggestion description text -->
     <string name="search_engine_suggestions_description">Szukej zaroz na posku z adresōm</string>
@@ -294,9 +287,7 @@
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Autōmatycznie prōbuje łōnczyć sie ze strōnami z protokołym kodowanio HTTPS, coby zwiynkszyć bezpieczyństwo.</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to on -->
-    <string name="preferences_https_only_on">Załōnczōne</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <!-- Summary of https only preference if https only is set to off -->
     <string name="preferences_https_only_off">Wyłōnczōne</string>
     <!-- Text displayed that links to website containing documentation about "HTTPS-Only" mode -->
     <string name="preferences_http_only_learn_more">Przewiydz sie wiyncyj</string>
@@ -374,6 +365,7 @@
 
     <!-- Preference for open download with an external download manager app -->
     <string name="preferences_external_download_manager">Zewnyntrzny menedżer pobiyranio</string>
+
     <!-- Preference for add_ons -->
     <string name="preferences_addons">Rozszyrzynia</string>
     <!-- Preference for notifications -->
@@ -403,8 +395,6 @@
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Niydowno nawiedzōne</string>
-    <!-- Title for the customize home screen section with Pocket. -->
-    <string moz:RemovedIn="108" name="customize_toggle_pocket" tools:ignore="UnusedResources">Pocket</string>
     <!-- Title for the opening wallpaper settings screen -->
     <string name="customize_wallpapers">Tapety</string>
     <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -424,7 +414,6 @@
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
     <string name="addon_already_installed">Rozszyrzynie je już zainstalowane</string>
 
-    <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Synchrōnizuj teroz</string>
     <!-- Preference category for sync -->
@@ -556,13 +545,6 @@
     <string name="settings_title">Sztalōnki</string>
     <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
     <string name="content_description_close_button">Zawrzij</string>
-
-    <!-- Text to show users they have one site in the history group section of the History fragment.
-    %d is a placeholder for the number of sites in the group. -->
-    <string name="history_search_group_site">Strōny: %d</string>
-    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
-    %d is a placeholder for the number of sites in the group. -->
-    <string name="history_search_group_sites">Strōny: %d</string>
 
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">Niydowno zawarte karty</string>
@@ -878,8 +860,6 @@
     <string name="phone_feature_blocked_by_android">Zaszperowane ôd Androida</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Wyjōntki</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to on -->
-    <string name="tracking_protection_on">Załōnczōne</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Wyłōnczōne</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
@@ -1003,12 +983,6 @@
     <string name="notification_pbm_delete_text_2">Zawrzij prywatne karty</string>
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Marketing</string>
-    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
-    <string name="notification_default_browser_title">%1$s je gibki i prywatny</string>
-    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
-    <string name="notification_default_browser_text">Nastow %1$s za bazowo przeglōndarka</string>
 
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
@@ -1186,22 +1160,14 @@
     <string name="etp_settings">Sztalōnki ôchrōny</string>
     <!-- Preference title for enhanced tracking protection settings -->
     <string name="preference_enhanced_tracking_protection">Polepszōno ôchrōna ôd śledzynio</string>
-    <!-- Title for the description of enhanced tracking protection -->
-    <string name="preference_enhanced_tracking_protection_explanation_title">Przeglōndej tak, coby żodyn na ciebie niy filowoł</string>
-    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
-    <string name="preference_enhanced_tracking_protection_explanation">Trzimej swoje dane ino do sia. %s brōni cie ôd mocki śledzōncych elemyntōw, co filujōm na ciebie, jak żeś je w internecie.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Przewiydz sie wiyncyj</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Standardowo (bazowe)</string>
-    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_description_4">Zbalansowane podug prywatności i sprowności. Strōny bydōm sie normalnie ladować.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Co je szperowane przi standardowyj ôchrōnie ôd śledzynio</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Surowo</string>
-    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_description_3">Szperuje wiyncyj śledzōncych elymyntōw, tōż strōny gibcyj sie ladujō, ale niykere jejich fōnkcyje mogōm niy fungować. </string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Co je szperowane przi surowyj ôchrōnie ôd śledzynio</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
