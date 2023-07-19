@@ -13,8 +13,16 @@
     <string name="content_description_private_browsing_button">Aktiviraj privatno pregledavanje</string>
     <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
     <string name="content_description_disable_private_browsing_button">Deaktiviraj privatno pregledavanje</string>
-    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
     <string name="search_hint">Traži ili upiši adresu</string>
+    <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
+    <string name="search_hint_general_engine">Pretraži web</string>
+    <!-- Placeholder text shown in search bar when using history search -->
+    <string name="history_search_hint">Povijest pretraživanja</string>
+    <!-- Placeholder text shown in search bar when using bookmarks search -->
+    <string name="bookmark_search_hint">Pretraži zabilješke</string>
+    <!-- Placeholder text shown in search bar when using tabs search -->
+    <string name="tab_search_hint">Pretraži kartice</string>
     <!-- Placeholder text shown in the search bar when using application search engines -->
     <string name="application_search_hint">Upiši tražene pojmove</string>
     <!-- No Open Tabs Message Description -->
@@ -58,10 +66,10 @@
     <string name="private_browsing_common_myths">Česti mitovi o privatnom pregledavanju</string>
 
     <!-- Private mode shortcut "contextual feature recommendation" (CFR) -->
-    <!-- Text for the main message -->
-    <string moz:removedIn="109" name="cfr_message" tools:ignore="UnusedResources">Dodaj prečac za otvaranje privatnih kartica s početnog ekrana.</string>
-    <!-- Text for the positive button -->
-    <string moz:removedIn="109" name="cfr_pos_button_text" tools:ignore="UnusedResources">Dodaj prečac</string>
+    <!-- Text for the Private mode shortcut CFR message for adding a private mode shortcut to open private tabs from the Home screen -->
+    <string name="private_mode_cfr_message_2">Pokrenite svoju sljedeću privatnu karticu jednim dodirom.</string>
+    <!-- Text for the positive button to accept adding a Private Browsing shortcut to the Home screen -->
+    <string name="private_mode_cfr_pos_button_text">Dodaj na početni zaslon</string>
     <!-- Text for the negative button to decline adding a Private Browsing shortcut to the Home screen -->
     <string name="cfr_neg_button_text">Ne, hvala</string>
 
@@ -73,8 +81,11 @@
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">Odbaci</string>
 
-    <!-- Content description for close button used in "contextual feature recommendation" (CFR) popups -->
-    <string name="cfr_dismiss_button_default_content_description">Odbaci</string>
+    <!-- Total cookie protection "contextual feature recommendation" (CFR) -->
+    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the total cookie protection feature. -->
+    <string name="tcp_cfr_message">Naša najmoćnija značajka privatnosti izolira međustranične programe za praćenje.</string>
+    <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
+    <string name="tcp_cfr_learn_more">Saznajte više o totalnoj zaštiti kolačića</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Potreban je pristup kameri. Otvori postavke Androida, odaberi dozvole i dopusti pristup kameri.</string>
@@ -112,6 +123,9 @@
     <string name="home_screen_shortcut_open_new_tab_2">Nova kartica</string>
     <!-- Shortcut action to open new private tab -->
     <string name="home_screen_shortcut_open_new_private_tab_2">Nova privatna kartica</string>
+
+    <!-- Shortcut action to open Passwords screens -->
+    <string name="home_screen_shortcut_open_password_screen">Prečac za lozinke</string>
 
     <!-- Recent Tabs -->
     <!-- Header text for jumping back into the recent tab in the home screen -->
@@ -154,6 +168,8 @@
     <string name="browser_menu_stop">Zaustavi</string>
     <!-- Browser menu button that opens the addon manager -->
     <string name="browser_menu_add_ons">Dodaci</string>
+    <!-- Browser menu button that opens account settings -->
+    <string name="browser_menu_account_settings">Informacije računa</string>
     <!-- Text displayed when there are no add-ons to be shown -->
     <string name="no_add_ons">Ovdje nema dodataka</string>
     <!-- Browser menu button that sends a user to help articles -->
@@ -234,13 +250,18 @@
     <!-- Search suggestion onboarding hint description text, first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="search_suggestions_onboarding_text">%s će podijeliti sve što upišeš u adresnu traku s tvojom standardnom tražilicom.</string>
 
-    <!-- Search engine suggestion title text. The first parameter is the name of teh suggested engine-->
+    <!-- Search engine suggestion title text. The first parameter is the name of the suggested engine-->
     <string name="search_engine_suggestions_title">Pretraži %s</string>
     <!-- Search engine suggestion description text -->
     <string name="search_engine_suggestions_description">Pretraži izravno iz adresne trake</string>
 
     <!-- Menu option in the search selector menu to open the search settings -->
     <string name="search_settings_menu_item">Postavke pretraživanja</string>
+
+    <!-- Header text for the search selector menu -->
+    <string name="search_header_menu_item_2">Ovaj put traži u:</string>
+    <!-- Content description (not visible, for screen readers etc.): Search engine icon. The first parameter is the search engine name (for example: DuckDuckGo). -->
+    <string name="search_engine_icon_content_description" tools:ignore="UnusedResources">%s tražilica</string>
 
     <!-- Text for the button to navigate to the sync sign in screen on the home onboarding dialog. -->
     <string name="onboarding_home_sign_in_button">Prijavi se</string>
@@ -301,9 +322,7 @@
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Automatski se pokušava povezati s web stranicama pomoću HTTPS protokola za šifriranje radi povećane sigurnosti.</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to on -->
-    <string name="preferences_https_only_on">Uključeno</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to off -->
+    <!-- Summary of https only preference if https only is set to off -->
     <string name="preferences_https_only_off">Isključeno</string>
     <!-- Text displayed that links to website containing documentation about "HTTPS-Only" mode -->
     <string name="preferences_http_only_learn_more">Saznaj više</string>
@@ -373,6 +392,7 @@
 
     <!-- Preference for open download with an external download manager app -->
     <string name="preferences_external_download_manager">Vanjski upravitelj preuzimanja</string>
+
     <!-- Preference for add_ons -->
     <string name="preferences_addons">Dodaci</string>
 
@@ -401,8 +421,6 @@
     <!-- Title for the customize home screen section with recently visited. Recently visited is
     a section where users see a list of tabs that they have visited in the past few days -->
     <string name="customize_toggle_recently_visited">Nedavno posjećeno</string>
-    <!-- Title for the customize home screen section with Pocket. -->
-    <string moz:RemovedIn="108" name="customize_toggle_pocket" tools:ignore="UnusedResources">Pocket</string>
 
     <!-- Title for the customize home screen section with sponsored Pocket stories. -->
     <string name="customize_toggle_pocket_sponsored">Sponzorirane priče</string>
@@ -430,7 +448,6 @@
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
     <string name="addon_already_installed">Dodatak je već instaliran</string>
 
-    <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Sinkroniziraj sada</string>
     <!-- Preference category for sync -->
@@ -570,14 +587,6 @@
     <string name="open_all_warning_confirm">Otvori kartice</string>
     <!-- Dialog button text for canceling open all tabs -->
     <string name="open_all_warning_cancel">Odustani</string>
-
-    <!-- Text to show users they have one site in the history group section of the History fragment.
-    %d is a placeholder for the number of sites in the group. -->
-    <string name="history_search_group_site">%d stranica</string>
-
-    <!-- Text to show users they have multiple sites in the history group section of the History fragment.
-    %d is a placeholder for the number of sites in the group. -->
-    <string name="history_search_group_sites">%d stranica</string>
 
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">Nedavno zatvorene kartice</string>
@@ -898,8 +907,6 @@
     <string name="phone_feature_blocked_by_android">Blokirao Android</string>
     <!-- Preference for showing a list of websites that the default configurations won't apply to them -->
     <string name="preference_exceptions">Iznimke</string>
-    <!-- Summary of tracking protection preference if tracking protection is set to on -->
-    <string name="tracking_protection_on">Uključeno</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Isključeno</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
@@ -1029,12 +1036,6 @@
 
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Marketing</string>
-    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
-    <string name="notification_default_browser_title">%1$s je brz i privatan</string>
-    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
-    %1$s is a placeholder that will be replaced by the app name (Fenix). -->
-    <string name="notification_default_browser_text">Postavi %1$s kao standardni preglednik</string>
 
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
@@ -1127,7 +1128,7 @@
     <!-- Title text of a delete browsing data dialog. -->
     <string name="delete_history_prompt_title">Vremenski opseg za brisanje</string>
     <!-- Body text of a delete browsing data dialog. -->
-    <string name="delete_history_prompt_body">Uklanja povijest (uključujući povijest sinkroniziranu s drugih uređaja), kolačiće i druge podatke o pregledavanju.</string>
+    <string name="delete_history_prompt_body" moz:RemovedIn="130" tools:ignore="UnusedResources">Uklanja povijest (uključujući povijest sinkroniziranu s drugih uređaja), kolačiće i druge podatke o pregledavanju.</string>
     <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
     <string name="delete_history_prompt_button_last_hour">Zadnji sat</string>
     <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
@@ -1226,22 +1227,14 @@
     <string name="etp_settings">Postavke za zaštitu</string>
     <!-- Preference title for enhanced tracking protection settings -->
     <string name="preference_enhanced_tracking_protection">Poboljšana zaštita od praćenja</string>
-    <!-- Title for the description of enhanced tracking protection -->
-    <string name="preference_enhanced_tracking_protection_explanation_title">Pregledaj web bez da te se prati</string>
-    <!-- Description of enhanced tracking protection. The first parameter is the name of the application (For example: Fenix) -->
-    <string name="preference_enhanced_tracking_protection_explanation">Zadrži svoje podatke privatnima. %s štiti od mnogih uobičajenih programa za praćenje, koji prate tvoje radnje na mreži.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Saznaj više</string>
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Standardno (zadano)</string>
-    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
-    <string name="preference_enhanced_tracking_protection_standard_description_4">Uravnotežena privatnost i performanse. Stranice se normalno učitavaju.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Što se blokira standardnom zaštitom od praćenja</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
     <string name="preference_enhanced_tracking_protection_strict">Strogo</string>
-    <!-- Preference description for enhanced tracking protection for the strict protection settings -->
-    <string name="preference_enhanced_tracking_protection_strict_description_3">Blokira više programa za praćenje pa se stranice učitavaju brže, ali neke funkcionalnosti stranica možda će se slomiti.</string>
     <!--  Accessibility text for the Strict protection information icon  -->
     <string name="preference_enhanced_tracking_protection_strict_info_button">Što se blokira strogom zaštitom od praćenja</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -1605,7 +1598,7 @@
     <!-- Placeholder text shown in the Search String TextField before a user enters text -->
     <string name="search_add_custom_engine_search_string_hint">Traženi niz</string>
     <!-- Description text for the Search String TextField. The %s is part of the string -->
-    <string formatted="false" name="search_add_custom_engine_search_string_example">Zamijeni upit s „%s”. Primjer:\nhttps://www.google.com/search?q=%s</string>
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Zamijeni upit s „%s”. Primjer:\nhttps://www.google.com/search?q=%s</string>
 
     <!-- Accessibility description for the form in which details about the custom search engine are entered -->
     <string name="search_add_custom_engine_form_description">Detalji prilagođene tražilice</string>
@@ -1797,8 +1790,6 @@
     <string name="pocket_stories_categories_header">Priče po temama</string>
     <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
     <string name="pocket_stories_placeholder_text">Otkrij više</string>
-    <!-- Title of an app feature. Smaller than a heading.-->
-    <string moz:removedIn="108" name="pocket_stories_feature_title" tools:ignore="UnusedResources">Pokreće Pocket.</string>
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
     <string name="pocket_stories_feature_caption">Dio Firefoxove obitelji. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
@@ -1817,4 +1808,4 @@
     <string name="a11y_action_label_expand">rasklopi</string>
     <!-- Action label for links that point to an article. Talkback will append this to say "Double tap to read the article". -->
     <string name="a11y_action_label_read_article">pročitaj članak</string>
-</resources>
+    </resources>
