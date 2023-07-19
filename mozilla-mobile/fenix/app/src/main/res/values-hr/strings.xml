@@ -842,6 +842,9 @@
     <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
     <string name="opening_screen_last_tab_summary">Otvori u zadnjoj kartici</string>
 
+    <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
+    <string name="opening_screen_after_four_hours_of_inactivity_summary">Otvori na početnoj stranici nakon četiri sata</string>
+
     <!-- Inactive tabs -->
     <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
     <string name="preferences_inactive_tabs">Premjesti stare kartice u neaktivne</string>
@@ -1014,6 +1017,10 @@
     <string name="bookmark_menu_open_in_new_tab_button">Otvori u novoj kartici</string>
     <!-- Bookmark overflow menu open in private tab button -->
     <string name="bookmark_menu_open_in_private_tab_button">Otvori u privatnoj kartici</string>
+    <!-- Bookmark overflow menu open all in tabs button -->
+    <string name="bookmark_menu_open_all_in_tabs_button">Otvori sve u novim karticama</string>
+    <!-- Bookmark overflow menu open all in private tabs button -->
+    <string name="bookmark_menu_open_all_in_private_tabs_button">Otvori sve u privatnim karticama</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">Izbriši</string>
     <!--Bookmark overflow menu save button -->
@@ -1109,6 +1116,12 @@
     <string name="preference_exceptions">Iznimke</string>
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">Isključeno</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to standard -->
+    <string name="tracking_protection_standard">Standardno</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to strict -->
+    <string name="tracking_protection_strict">Strogo</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to custom -->
+    <string name="tracking_protection_custom">Prilagođeno</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">Dopusti zvuk i video</string>
     <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
@@ -1193,6 +1206,14 @@
     <string name="share_button_content_description">Dijeli</string>
     <!-- Text for the Save to PDF feature in the share menu -->
     <string name="share_save_to_pdf">Spremi kao PDF</string>
+    <!-- Text for error message when generating a PDF file Text. -->
+    <string name="unable_to_save_to_pdf_error">Nije moguće generirati PDF</string>
+    <!-- Text for standard error snackbar dismiss button. -->
+    <string name="standard_snackbar_error_dismiss">Odbaci</string>
+    <!-- Text for error message when printing a page and it fails. -->
+    <string name="unable_to_print_error">Ispis nije moguć</string>
+    <!-- Text for the print feature in the share and browser menu -->
+    <string name="menu_print">Ispis</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Pošalji na uređaj</string>
     <!-- Sub-header in the dialog to share a link to an app from the full list -->
@@ -1236,6 +1257,36 @@
 
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Marketing</string>
+
+    <!-- Title shown in the notification that pops up to remind the user to set fenix as default browser.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_notification_default_browser_title" tools:ignore="UnusedResources">Firefox je brz i privatan</string>
+    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_notification_default_browser_text" tools:ignore="UnusedResources">Postavi Firefox kao zadani preglednik</string>
+    <!-- Title shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_title">Probajte privatno pretraživanje</string>
+    <!-- Text shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_text">Pregledavajte bez spremljenih kolačića ili povijesti pretraživanja u %1$s</string>
+    <!-- Title A shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_A_title">Pretražuj bez ostavljanja traga</string>
+    <!-- Text A shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_A_text">Pivatno pretraživanje u %1$s ne sprema vaše podatke.</string>
+    <!-- Title B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_title">Započnite svoju prvu pretragu</string>
+    <!-- Text B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_text">Pronađite nešto u blizini. Ili otkrijte nešto zabavno.</string>
+
+    <!-- Survey -->
+    <!-- Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_survey_message_text">Pomozite nam učiniti Firefox boljim ispunjavanjem kratke ankete.</string>
+    <!-- Preference for taking the short survey. -->
+    <string name="preferences_take_survey">Ispunite anketu</string>
+    <!-- Preference for not taking the short survey. -->
+    <string name="preferences_not_take_survey">Ne hvala</string>
 
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
@@ -1329,6 +1380,8 @@
     <string name="delete_history_prompt_title">Vremenski opseg za brisanje</string>
     <!-- Body text of a delete browsing data dialog. -->
     <string name="delete_history_prompt_body" moz:RemovedIn="130" tools:ignore="UnusedResources">Uklanja povijest (uključujući povijest sinkroniziranu s drugih uređaja), kolačiće i druge podatke o pregledavanju.</string>
+    <!-- Body text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_body_2">Uklanja povijest (uključujući povijest sinkroniziranu s drugih uređaja)</string>
     <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
     <string name="delete_history_prompt_button_last_hour">Zadnji sat</string>
     <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
@@ -1356,11 +1409,26 @@
     <!-- Text for the snackbar confirmation that the history group was deleted -->
     <string name="delete_history_group_snackbar">Grupa obrisana</string>
 
+    <!-- Onboarding -->
+    <!-- Text for onboarding welcome header. -->
+    <string name="onboarding_header_2">Dobrodošli na bolji Internet</string>
+    <!-- Text for the onboarding welcome message. -->
+    <string name="onboarding_message">Preglednik napravljen za ljude, ne za profit.</string>
+    <!-- Text for the Firefox account onboarding sign in card header. -->
+    <string name="onboarding_account_sign_in_header">Nastavite tamo gdje ste stali</string>
+    <!-- Text for the button to learn more about signing in to your Firefox account. -->
+    <string name="onboarding_manual_sign_in_description">Sinkronizirajte kartice i lozinke na svim uređajima za besprijekorno prebacivanje između uređaja.</string>
     <!-- Text for the button to manually sign into Firefox account. -->
     <string name="onboarding_firefox_account_sign_in">Prijavi se</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">Sinkronizacija je uključena</string>
 
+    <!-- Text for the tracking protection onboarding card header -->
+    <string name="onboarding_tracking_protection_header">Zaštita privatnosti kao standard</string>
+    <!-- Text for the tracking protection card description. The first parameter is the name of the application.-->
+    <string name="onboarding_tracking_protection_description_old">%1$s automatski sprječava tvrtke da te potajno prate širom weba.</string>
+    <!-- Text for the tracking protection card description. -->
+    <string name="onboarding_tracking_protection_description">Sadrži potpunu zaštitu od kolačića kako bi spriječio programe za praćenje u korištenju kolačića da vas prate između web stranica.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
     <string name="onboarding_tracking_protection_standard_button_2">Standardno (zadano)</string>
     <!-- text for standard blocking option button description -->
@@ -1372,6 +1440,12 @@
     <!-- text for the toolbar position card header  -->
     <string name="onboarding_toolbar_placement_header_1">Odaberi položaj alatne trake</string>
 
+    <!-- Text for the toolbar position card description -->
+    <string name="onboarding_toolbar_placement_description">Držite ga na dnu ili ga premjestite na vrh.</string>
+    <!-- Text for the privacy notice onboarding card header -->
+    <string name="onboarding_privacy_notice_header_1">Vi kontrolirate svoje podatke</string>
+    <!-- Text for the privacy notice onboarding card description. -->
+    <string name="onboarding_privacy_notice_description">Firefox vam daje kontrolu nad onim što dijelite na mreži i nad onim što dijelite s nama.</string>
     <!-- Text for the button to read the privacy notice -->
     <string name="onboarding_privacy_notice_read_button">Pročitaj naša pravila privatnosti</string>
 
