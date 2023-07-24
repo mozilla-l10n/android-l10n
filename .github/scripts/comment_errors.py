@@ -98,7 +98,7 @@ class QueryPR:
             for filepath, string_ids in config_errors.items():
                 self.lines = []
                 # Need to manually remove part of the path
-                filepath = filepath.lstrip("mozilla-mobile")
+                filepath = filepath.removeprefix("mozilla-mobile/")
                 for string_id in string_ids:
                     n = self.find_string_line(filepath, string_id)
                     self.lines.append(n)

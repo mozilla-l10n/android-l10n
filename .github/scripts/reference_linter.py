@@ -86,7 +86,6 @@ class StringExtraction:
 
 class QualityCheck:
     def __init__(self, ref_strings, config_path, toml_path):
-
         self.ref_strings = ref_strings
         self.config_path = config_path
         self.toml_path = toml_path
@@ -203,7 +202,6 @@ def outputErrors(errors):
 
 
 def mergeErrors(new_content, old_content):
-
     merged_content = copy.deepcopy(new_content)
     for config_name, config_errors in old_content.items():
         if config_name not in merged_content:
