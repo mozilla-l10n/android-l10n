@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: "l10n"
-      - name: Clone main code repository
+      - name: Clone gecko-dev repository
         uses: actions/checkout@v4
         with:
-          repository: "mozilla-mobile/firefox-android"
+          repository: "mozilla/gecko-dev"
           path: "source"
       - name: Set up Python 3
         uses: actions/setup-python@v5
@@ -27,7 +27,7 @@ jobs:
       - name: Copy source files
         run: >
           python l10n/.github/scripts/import_strings.py source
-          --toml source/focus-android/l10n.toml
+          --toml source/mobile/android/focus-android/l10n.toml
           --dest l10n/mozilla-mobile/focus-android
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
