@@ -2213,6 +2213,8 @@
     <string name="review_quality_check_highlights_title">To najlepšie z nedávnych recenzií</string>
     <!-- Title for section explaining how we analyze the reliability of a product's reviews. -->
     <string name="review_quality_check_explanation_title">Ako určujeme kvalitu recenzie</string>
+    <!-- Paragraph explaining how we analyze the reliability of a product's reviews. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_explanation_body_reliability">Na kontrolu spoľahlivosti recenzií produktov používame AI technológiu %s od Mozilly. Analýza vám pomôže posúdiť kvalitu recenzie, nie kvalitu produktu.</string>
     <!-- Paragraph explaining the grading system we use to classify the reliability of a product's reviews. -->
     <string name="review_quality_check_info_review_grade_header" tools:ignore="UnusedResources"><![CDATA[Každej recenzii produktu prideľujeme <b>známku</b> od A po F.]]></string>
     <!-- Description explaining grades A and B for review quality check adjusted grading. -->
@@ -2221,10 +2223,20 @@
     <string name="review_quality_check_info_grade_info_C">Myslíme si, že je tu mix spoľahlivých a nespoľahlivých recenzií.</string>
     <!-- Description explaining grades D and F for review quality check adjusted grading. -->
     <string name="review_quality_check_info_grade_info_DF">Nespoľahlivé recenzie. Sme presvedčení, že recenzie sú pravdepodobne falošné alebo od zaujatých recenzentov.</string>
+    <!-- Paragraph explaining how a product's adjusted grading is calculated. -->
+    <string name="review_quality_check_explanation_body_adjusted_grading"><![CDATA[<b>Upravené hodnotenie</b> je založené iba na recenziách, ktoré považujeme za spoľahlivé.]]></string>
+    <!-- Paragraph explaining product review highlights. First parameter is the name of the retailer (e.g. Amazon). -->
+    <string name="review_quality_check_explanation_body_highlights" tools:ignore="UnusedResources"><![CDATA[<b>Najdôležitejšie informácie</b> pochádzajú z recenzií v obchode %s uverejnených za posledných 80 dní, ktoré považujeme za spoľahlivé.]]></string>
+    <!-- Text for learn more caption presenting a link with information about review quality. First parameter is for clickable text defined in review_quality_check_info_learn_more_link. -->
+    <string name="review_quality_check_info_learn_more">Ďalšie informácie o tom, %s.</string>
+    <!-- Clickable text that links to review quality check SuMo page. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_info_learn_more_link">ako %s od Mozilly určuje kvalitu recenzie</string>
     <!-- Text for title of settings section. -->
     <string name="review_quality_check_settings_title">Nastavenia</string>
     <!-- Text for label for switch preference to show recommended products from review quality check settings section. -->
     <string name="review_quality_check_settings_recommended_products">Zobrazovať reklamy v nástroji Kontrola recenzií</string>
+    <!-- Description for switch preference to show recommended products from review quality check settings section. First parameter is for clickable text defined in review_quality_check_settings_recommended_products_learn_more.-->
+    <string name="review_quality_check_settings_recommended_products_description" tools:ignore="UnusedResources">Príležitostne sa vám budú zobrazovať reklamy na relevantné produkty. Všetky reklamy musia spĺňať naše štandardy kvality recenzií. %s</string>
     <!-- Clickable text that links to review quality check recommended products support article. -->
     <string name="review_quality_check_settings_recommended_products_learn_more" tools:ignore="UnusedResources">Ďalšie informácie</string>
     <!-- Text for turning sidebar off button from review quality check settings section. -->
@@ -2233,8 +2245,18 @@
     <string name="review_quality_check_ad_title" tools:ignore="UnusedResources">Ďalšie na zváženie</string>
     <!-- Caption for recommended product section indicating this is an ad by Fakespot. First parameter is the Fakespot product name. -->
     <string name="review_quality_check_ad_caption" tools:ignore="UnusedResources">Reklama od %s</string>
+    <!-- Caption for review quality check panel. First parameter is for clickable text defined in review_quality_check_powered_by_link. -->
+    <string name="review_quality_check_powered_by" tools:ignore="UnusedResources">Kontrola recenzií používa technológiu %s.</string>
     <!-- Clickable text that links to Fakespot.com. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
     <string name="review_quality_check_powered_by_link" tools:ignore="UnusedResources">%s od Mozilly</string>
+    <!-- Text for title of warning card informing the user that the current analysis is outdated. -->
+    <string name="review_quality_check_outdated_analysis_warning_title" tools:ignore="UnusedResources">Nové informácie na skontrolovanie</string>
+    <!-- Text for button from warning card informing the user that the current analysis is outdated. Clicking this should trigger the product's re-analysis. -->
+    <string name="review_quality_check_outdated_analysis_warning_action" tools:ignore="UnusedResources">Skontrolovať teraz</string>
+    <!-- Title for warning card informing the user that the current product does not have enough reviews for a review analysis. -->
+    <string name="review_quality_check_no_reviews_warning_title" tools:ignore="UnusedResources">Zatiaľ nie je dostatok recenzií</string>
+    <!-- Text for body of warning card informing the user that the current product does not have enough reviews for a review analysis. -->
+    <string name="review_quality_check_no_reviews_warning_body" tools:ignore="UnusedResources">Keď bude mať tento produkt viac recenzií, budeme môcť skontrolovať ich kvalitu.</string>
     <!-- Title for warning card informing the user that the current product is currently not available. -->
     <string name="review_quality_check_product_availability_warning_title" tools:ignore="UnusedResources">Produkt nie je dostupný</string>
     <!-- Text for the body of warning card informing the user that the current product is currently not available. -->
@@ -2280,6 +2302,10 @@
     <string name="review_quality_check_no_analysis_link" tools:ignore="UnusedResources">Skontrolovať kvalitu recenzií</string>
     <!-- Headline for review quality check contextual onboarding card. -->
     <string name="review_quality_check_contextual_onboarding_title">Vyskúšajte nášho dôveryhodného sprievodcu recenziami produktov</string>
+    <!-- Description for review quality check contextual onboarding card. The first and last two parameters are for retailer names (e.g. Amazon, Walmart). The second parameter is for the name of the application (e.g. Firefox). -->
+    <string name="review_quality_check_contextual_onboarding_description">Pred nákupom sa presvedčte, aké spoľahlivé sú recenzie produktov predajcu %1$s. Kontrola recenzií, experimentálna funkcia prehliadača %2$s, je zabudovaná priamo do prehliadača. Podporuje aj %3$s a %4$s.</string>
+    <!-- Paragraph presenting review quality check feature. First parameter is the Fakespot product name. Second parameter is for clickable text defined in review_quality_check_contextual_onboarding_learn_more_link. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_contextual_onboarding_learn_more">Pomocou nástroju %1$s od Mozilly vám pomôžeme vyhnúť sa neobjektívnym a neautentickým recenziám. Náš AI model sa neustále zlepšuje, aby vás chránil pri nakupovaní. %2$s</string>
     <!-- Clickable text from the contextual onboarding card that links to review quality check support article. -->
     <string name="review_quality_check_contextual_onboarding_learn_more_link">Ďalšie informácie</string>
     <!-- Caption text to be displayed in review quality check contextual onboarding card above the opt-in button. First parameter is the Fakespot product name. Following parameters are for clickable texts defined in review_quality_check_contextual_onboarding_privacy_policy and review_quality_check_contextual_onboarding_terms_use. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
