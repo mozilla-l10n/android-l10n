@@ -102,6 +102,11 @@
     <string name="tcp_cfr_learn_more">Zgóńśo wěcej wó dopołnem šćiśe pśed cookiejami</string>
 
 
+    <!-- Private browsing erase action "contextual feature recommendation" (CFR) -->
+    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the erase private browsing feature. -->
+    <string name="erase_action_cfr_message">Pótusniśo how, aby nowe priwatne pósejźenje startował. Lašujśo swóju historiju, swóje cookieje – wšykno.</string>
+
+
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Pśistup ku kamerje trjebny. Wócyńśo nastajenja Android, pótusniśo zapisk Pšawa a pótusniśo zapisk Dowóliś.</string>
     <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
@@ -363,6 +368,12 @@
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_enable_notifications_negative_button" tools:ignore="UnusedResources">Nic něnto</string>
 
+    <!-- Title for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_title" tools:ignore="UnusedResources">Wopytajśo pytański asistent Firefox</string>
+    <!-- Description for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_description" tools:ignore="UnusedResources">Z Firefox na swójej startowej wobrazowce maśo lažki pśistup k wobglědowakoju, za kótaryž priwatnosć jo na prědnem městnje, kótaryž sedła pśesegajuce pśeslědowaki blokěrujo.</string>
     <!-- Text for the button to add search widget on the device used by Nimbus experiments. Nimbus experiments do not support string placeholders.
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_add_search_widget_positive_button" tools:ignore="UnusedResources">Asistent Firefox pśidaś</string>
@@ -2179,6 +2190,8 @@
     <string name="review_quality_check_feature_name">Kontrola pógódnośenjow</string>
     <!-- Summary for grades A and B for review quality check adjusted grading. -->
     <string name="review_quality_check_grade_a_b_description">Spušćobne pógódnośenja</string>
+    <!-- Summary for grade C for review quality check adjusted grading. -->
+    <string name="review_quality_check_grade_c_description">Měšańca ze spušćobnych a njespušćobnych pógódnośenjow</string>
     <!-- Summary for grades D and F for review quality check adjusted grading. -->
     <string name="review_quality_check_grade_d_f_description">Njespušćobne pógódnośenja</string>
     <!-- Text for title presenting the reliability of a product's reviews. -->
@@ -2187,10 +2200,29 @@
     <string name="review_quality_check_adjusted_rating_title">Pśměrjone pógódnośowanje</string>
     <!-- Description for a product's adjusted star rating. The text presents that the product's reviews which were evaluated as unreliable were removed from the adjusted rating. -->
     <string name="review_quality_check_adjusted_rating_description">Njespušćobne pógódnośenja wótwónoźone</string>
+    <!-- Title for list of highlights from a product's review emphasizing a product's important traits. -->
+    <string name="review_quality_check_highlights_title">Wjerški z nejnowšych pógódnośenjow</string>
     <!-- Title for section explaining how we analyze the reliability of a product's reviews. -->
     <string name="review_quality_check_explanation_title">Kak kwalitu pógódnośenja póstajamy</string>
+    <!-- Paragraph explaining how we analyze the reliability of a product's reviews. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_explanation_body_reliability">Wužywamy technologiju KI z %s wót Mozilla, aby my spušćobnosć produktowych pógódnośenjow kontrolěrowali.
+To buźo jano pomagaś, kwalitu pógódnośenjow pósuźiś, nic kwalitu produktow.</string>
+    <!-- Paragraph explaining the grading system we use to classify the reliability of a product's reviews. -->
+    <string name="review_quality_check_info_review_grade_header" tools:ignore="UnusedResources"><![CDATA[Pśirědujomy pógódnośenjam kuždego produkta <b>pismikowu cenzuru</b> wót A do F.]]></string>
+    <!-- Description explaining grades A and B for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_AB">Spušćobne pógódnośenja. Myslimy se, až pógódnośenja su nejskerjej wót wopšawdnych kupcow, kótarež su zawóstajili spšawne, bźezpśedsudkowe pógódnośenja.</string>
+    <!-- Description explaining grade C for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_C">Wěrimy, až dajo měšańcu spušćobnych a njespušćobnych pógódnośenjow.</string>
+    <!-- Description explaining grades D and F for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_DF">Njespušćobne pógódnośenja. Myslimy se, až pógódnośenja su nejskerjej sfalšowane abo wót pógódnośujucych z pśedsudkami.</string>
+    <!-- Paragraph explaining how a product's adjusted grading is calculated. -->
+    <string name="review_quality_check_explanation_body_adjusted_grading"><![CDATA[<b>Pśiměrjone pógódnośowanje</b> jano na pógódnośenjach bazěrujo, kótarež mamy za spušćobne.]]></string>
+    <!-- Paragraph explaining product review highlights. First parameter is the name of the retailer (e.g. Amazon). -->
+    <string name="review_quality_check_explanation_body_highlights" tools:ignore="UnusedResources"><![CDATA[<b>Wjerški</b> su z pógódnośenjow %s w běgu slědnych 80 dnjow, kótarež mamy za spušćobne.]]></string>
     <!-- Text for learn more caption presenting a link with information about review quality. First parameter is for clickable text defined in review_quality_check_info_learn_more_link. -->
     <string name="review_quality_check_info_learn_more">Zgóńśo wěcej wó %s.</string>
+    <!-- Clickable text that links to review quality check SuMo page. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_info_learn_more_link">kak %s wót Mozilla kwalitu pógódnośenja póstaja</string>
     <!-- Text for title of settings section. -->
     <string name="review_quality_check_settings_title">Nastajenja</string>
     <!-- Text for label for switch preference to show recommended products from review quality check settings section. -->
