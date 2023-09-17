@@ -371,6 +371,9 @@
     <!-- Title for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_add_search_widget_title" tools:ignore="UnusedResources">Паспрабуйце віджэт пошуку Firefox</string>
+    <!-- Description for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_description" tools:ignore="UnusedResources">З Firefox на вашым галоўным экране, вы атрымаеце лёгкі доступ да браўзера, які дбае аб прыватнасці і блакуе міжсайтавыя трэкеры.</string>
     <!-- Text for the button to add search widget on the device used by Nimbus experiments. Nimbus experiments do not support string placeholders.
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_add_search_widget_positive_button" tools:ignore="UnusedResources">Дадаць віджэт Firefox</string>
@@ -1363,6 +1366,8 @@
     <string name="snackbar_private_tab_closed">Прыватная картка закрыта</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">Прыватныя карткі закрыты</string>
+    <!-- Text shown in snackbar when user erases their private browsing data -->
+    <string name="snackbar_private_data_deleted">Дадзеныя прыватнага аглядання выдалены</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">АДМЯНІЦЬ</string>
     <!-- Text shown in snackbar when user removes a top site -->
@@ -2230,6 +2235,10 @@
     <string name="review_quality_check_highlights_title">Асноўныя моманты з апошніх водгукаў</string>
     <!-- Title for section explaining how we analyze the reliability of a product's reviews. -->
     <string name="review_quality_check_explanation_title">Як мы вызначаем якасць водгукаў</string>
+    <!-- Paragraph explaining how we analyze the reliability of a product's reviews. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_explanation_body_reliability">Мы выкарыстоўваем тэхналогію штучнага інтэлекту ад %s ад Mozilla для праверкі надзейнасці водгукаў на прадукцыю. Гэты аналіз дапаможа вам ацаніць толькі якасць водгуку, а не якасць прадукту.</string>
+    <!-- Paragraph explaining the grading system we use to classify the reliability of a product's reviews. -->
+    <string name="review_quality_check_info_review_grade_header" tools:ignore="UnusedResources"><![CDATA[Кожнаму водгуку на прадукт мы прысвойваем <b>літарную адзнаку</b> ад A да F.]]></string>
     <!-- Description explaining grades A and B for review quality check adjusted grading. -->
     <string name="review_quality_check_info_grade_info_AB">Надзейныя водгукі. Мы лічым, што водгукі, хутчэй за ўсё, ад сапраўдных кліентаў, якія пакінулі сумленныя, непрадузятыя водгукі.</string>
     <!-- Description explaining grade C for review quality check adjusted grading. -->
@@ -2242,10 +2251,14 @@
     <string name="review_quality_check_explanation_body_highlights" tools:ignore="UnusedResources"><![CDATA[<b>Асноўныя моманты</b> з водгукаў пра %s за апошнія 80 дзён, якія мы лічым надзейнымі.]]></string>
     <!-- Text for learn more caption presenting a link with information about review quality. First parameter is for clickable text defined in review_quality_check_info_learn_more_link. -->
     <string name="review_quality_check_info_learn_more">Даведайцеся больш пра %s.</string>
+    <!-- Clickable text that links to review quality check SuMo page. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_info_learn_more_link">як %s ад Mozilla вызначае якасць водгукаў</string>
     <!-- Text for title of settings section. -->
     <string name="review_quality_check_settings_title">Налады</string>
     <!-- Text for label for switch preference to show recommended products from review quality check settings section. -->
     <string name="review_quality_check_settings_recommended_products">Паказваць рэкламу ў сродку праверкі водгукаў</string>
+    <!-- Description for switch preference to show recommended products from review quality check settings section. First parameter is for clickable text defined in review_quality_check_settings_recommended_products_learn_more.-->
+    <string name="review_quality_check_settings_recommended_products_description" tools:ignore="UnusedResources">Вы будзеце час ад часу бачыць рэкламу адпаведных тавараў. Усе аб’явы павінны адпавядаць нашым стандартам якасці водгукаў. %s</string>
     <!-- Clickable text that links to review quality check recommended products support article. -->
     <string name="review_quality_check_settings_recommended_products_learn_more" tools:ignore="UnusedResources">Падрабязней</string>
     <!-- Text for turning sidebar off button from review quality check settings section. -->
@@ -2260,10 +2273,14 @@
     <string name="review_quality_check_powered_by_2">Сродак праверкі водгукаў працуе на %s</string>
     <!-- Clickable text that links to Fakespot.com. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
     <string name="review_quality_check_powered_by_link" tools:ignore="UnusedResources">%s ад Mozilla</string>
+    <!-- Text for title of warning card informing the user that the current analysis is outdated. -->
+    <string name="review_quality_check_outdated_analysis_warning_title" tools:ignore="UnusedResources">Новая інфармацыя для праверкі</string>
     <!-- Text for button from warning card informing the user that the current analysis is outdated. Clicking this should trigger the product's re-analysis. -->
     <string name="review_quality_check_outdated_analysis_warning_action" tools:ignore="UnusedResources">Праверыць зараз</string>
     <!-- Title for warning card informing the user that the current product does not have enough reviews for a review analysis. -->
     <string name="review_quality_check_no_reviews_warning_title" tools:ignore="UnusedResources">Пакуль недастаткова водгукаў</string>
+    <!-- Text for body of warning card informing the user that the current product does not have enough reviews for a review analysis. -->
+    <string name="review_quality_check_no_reviews_warning_body" tools:ignore="UnusedResources">Калі на гэты прадукт будзе больш водгукаў, мы зможам праверыць іх якасць.</string>
     <!-- Title for warning card informing the user that the current product is currently not available. -->
     <string name="review_quality_check_product_availability_warning_title" tools:ignore="UnusedResources">Прадукт недаступны</string>
     <!-- Clickable text for warning card informing the user that the current product is currently not available. Clicking this should inform the server that the product is available. -->
