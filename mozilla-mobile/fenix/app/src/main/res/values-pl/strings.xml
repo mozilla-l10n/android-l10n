@@ -677,6 +677,13 @@
     <!-- Title of a dialog shown to the user when enough errors have occurred with addons and they need to be temporarily disabled -->
     <string name="addon_process_crash_dialog_title" tools:ignore="UnusedResources">Dodatki zostały tymczasowo wyłączone</string>
 
+    <!-- The first parameter is the application name. This is a message shown to the user when too many errors have occurred with the addons process and they have been disabled. The user can decide if they would like to continue trying to start add-ons or if they'd rather continue without them. -->
+    <string name="addon_process_crash_dialog_message" tools:ignore="UnusedResources">Co najmniej jeden dodatek przestał działać, przez co system stał się niestabilny. %1$s bezskutecznie próbował ponownie włączyć dodatki.\n\nDodatki nie zostaną ponownie włączone w czasie tej sesji.\n\nUsunięcie lub wyłączenie dodatków może naprawić ten problem.</string>
+    <!-- This will cause the add-ons to try restarting but the dialog will reappear if it is unsuccessful again -->
+    <string name="addon_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Spróbuj ponownie włączyć dodatki</string>
+    <!-- The user will continue with all add-ons disabled -->
+    <string name="addon_process_crash_dialog_disable_addons_button_text" tools:ignore="UnusedResources">Kontynuuj z wyłączonymi dodatkami</string>
+
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">Zarządzaj kontem</string>
@@ -1355,6 +1362,8 @@
     <string name="snackbar_private_tab_closed">Zamknięto prywatną kartę</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">Zamknięto prywatne karty</string>
+    <!-- Text shown in snackbar when user erases their private browsing data -->
+    <string name="snackbar_private_data_deleted">Usunięto dane trybu prywatnego</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">Cofnij</string>
     <!-- Text shown in snackbar when user removes a top site -->
@@ -1403,11 +1412,15 @@
     <string name="preferences_delete_browsing_data_tabs_subtitle">Karty: %d</string>
     <!-- Title for the data and history items in Delete browsing data -->
     <string name="preferences_delete_browsing_data_browsing_data_title" moz:removedIn="118" tools:ignore="UnusedResources">Historia przeglądania i dane witryn</string>
+    <!-- Title for the history item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_history_title">Historia przeglądania</string>
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">Adresy: %d</string>
     <!-- Title for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies" moz:removedIn="118" tools:ignore="UnusedResources">Ciasteczka</string>
+    <!-- Title for the cookies and site data items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_and_site_data">Ciasteczka i dane witryn</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies_subtitle">Spowoduje wylogowanie z większości stron</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
@@ -1964,6 +1977,8 @@
     <string name="search_add_custom_engine_suggest_string_hint">Adres API podpowiedzi wyszukiwania</string>
     <!-- Description text for the Search Suggestion String TextField. The %s is part of the string -->
     <string name="search_add_custom_engine_suggest_string_example" formatted="false" moz:RemovedIn="118" tools:ignore="UnusedResources">Wyszukiwany tekst zastąp „%s”. Przykład:\nhttp://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s</string>
+    <!-- Description text for the Search Suggestion String TextField. The %s is part of the string -->
+    <string name="search_add_custom_engine_suggest_string_example_2" formatted="false">Wyszukiwany tekst zastąp „%s”. Przykład:\nhttps://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s</string>
     <!-- The text for the "Save" button for saving a custom search engine -->
     <string name="search_custom_engine_save_button">Zachowaj</string>
 
