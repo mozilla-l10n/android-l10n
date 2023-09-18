@@ -65,6 +65,19 @@
        Mitos frecuentes sobre a navegación privada
     </string>
 
+    <!-- True Private Browsing Mode -->
+    <!-- Title for info card on private homescreen in True Private Browsing Mode. -->
+    <string name="felt_privacy_desc_card_title">Non deixe rastro neste dispositivo</string>
+    <!-- Explanation for private browsing displayed to users on home view when they first enable
+        private mode in our new Total Private Browsing mode.
+        The first parameter is the name of the app defined in app_name (for example: Firefox Nightly)
+        The second parameter is the clickable link text in felt_privacy_info_card_subtitle_link_text -->
+    <string name="felt_privacy_info_card_subtitle">%1$s elimina as súas cookies, o historial e os datos do sitio cando peche todas as súas fiestras privadas. %2$s</string>
+    <!-- Clickable portion of the explanation for private browsing that links the user to our
+        about privacy page.
+        This string is used in felt_privacy_info_card_subtitle as the second parameter.-->
+    <string name="felt_privacy_info_card_subtitle_link_text">Quen podería ver a miña actividade?</string>
+
     <!-- Private mode shortcut "contextual feature recommendation" (CFR) -->
     <!-- Text for the Private mode shortcut CFR message for adding a private mode shortcut to open private tabs from the Home screen -->
     <string name="private_mode_cfr_message_2">Inicie a súa próxima lapela privada cun só toque.</string>
@@ -86,6 +99,11 @@
     <string name="tcp_cfr_message">A nosa función de privacidade máis poderosa aínda illa os rastrexadores entre sitios.</string>
     <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
     <string name="tcp_cfr_learn_more">Aprenda sobre a protección total de cookies</string>
+
+    <!-- Private browsing erase action "contextual feature recommendation" (CFR) -->
+    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the erase private browsing feature. -->
+    <string name="erase_action_cfr_message">Toque aquí para comezar unha nova sesión privada. Elimine o seu historial, cookies — todo.</string>
+
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Necesítase acceso á cámara. Vai á configuración de Android, toque nos permisos e toque en permitir.</string>
@@ -220,6 +238,9 @@
     <!-- Content description for the Home screen button on the browser toolbar -->
     <string name="browser_toolbar_home">Páxina de inicio</string>
 
+    <!-- Content description (not visible, for screen readers etc.): Erase button: Erase the browsing
+         history and go back to the home screen. -->
+    <string name="browser_toolbar_erase">Borrar o historial de navegación</string>
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
     <string name="a11y_selected_locale_content_description">Idioma seleccionado</string>
@@ -343,6 +364,13 @@
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_enable_notifications_negative_button" tools:ignore="UnusedResources">Agora non</string>
 
+    <!-- Title for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_title" tools:ignore="UnusedResources">Probar o widget de busca de Firefox</string>
+    <!-- Description for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_description" tools:ignore="UnusedResources">Con Firefox na súa pantalla de inicio, terá fácil acceso ao navegador que prioriza a privacidade e bloquea os rastrexadores entre sitios.</string>
+
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Abrir unha nova lapela en %1$s</string>
@@ -416,8 +444,6 @@
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_cancel_button">Cancelar</string>
 
-    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
-    <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button" moz:RemovedIn="115" tools:ignore="UnusedResources">Pedir soporte</string>
     <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button_2">Enviar solicitude</string>
     <!-- Text for title indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
@@ -602,12 +628,12 @@
     <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
     <string name="wallpaper_classic_title">%s clásico</string>
     <!-- Text for limited edition wallpapers title. -->
-    <string name="wallpaper_limited_edition_title">Edición limitada</string>
+    <string name="wallpaper_limited_edition_title" moz:RemovedIn="118" tools:ignore="UnusedResources">Edición limitada</string>
     <!-- Description text for the limited edition wallpapers with learn more link. The first parameter is the learn more string defined in wallpaper_learn_more-->
-    <string name="wallpaper_limited_edition_description_with_learn_more">A nova colección Voces Independentes. %s</string>
+    <string name="wallpaper_limited_edition_description_with_learn_more" moz:RemovedIn="118" tools:ignore="UnusedResources">A nova colección Voces Independentes. %s</string>
 
     <!-- Description text for the limited edition wallpapers. -->
-    <string name="wallpaper_limited_edition_description">A nova colección Voces Independentes.</string>
+    <string name="wallpaper_limited_edition_description" moz:RemovedIn="118" tools:ignore="UnusedResources">A nova colección Voces Independentes.</string>
     <!-- Wallpaper onboarding dialog header text. -->
     <string name="wallpapers_onboarding_dialog_title_text">Probar un toque de cor</string>
     <!-- Wallpaper onboarding dialog body text. -->
@@ -1187,10 +1213,10 @@
     <string name="share_button_content_description">Compartir</string>
     <!-- Text for the Save to PDF feature in the share menu -->
     <string name="share_save_to_pdf">Gardar como PDF</string>
-    <!-- Text for error message when generating a PDF file Text for error message when generating a PDF file. -->
+    <!-- Text for error message when generating a PDF file Text. -->
     <string name="unable_to_save_to_pdf_error">Non se puido xerar o PDF</string>
     <!-- Text for error message when printing a page and it fails. -->
-    <string name="unable_to_print_error">Non se puido imprimir</string>
+    <string name="unable_to_print_error" moz:removedIn="121" tools:ignore="UnusedResources">Non se puido imprimir</string>
     <!-- Text for the print feature in the share and browser menu -->
     <string name="menu_print">Imprimir</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
@@ -1333,12 +1359,12 @@
     <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
     <string name="preferences_delete_browsing_data_tabs_subtitle">%d lapelas</string>
     <!-- Title for the data and history items in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_browsing_data_title">Historial de navegación e datos dos sitios</string>
+    <string name="preferences_delete_browsing_data_browsing_data_title" moz:removedIn="118" tools:ignore="UnusedResources">Historial de navegación e datos dos sitios</string>
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d enderezos</string>
     <!-- Title for the cookies item in Delete browsing data -->
-    <string name="preferences_delete_browsing_data_cookies">Cookies</string>
+    <string name="preferences_delete_browsing_data_cookies" moz:removedIn="118" tools:ignore="UnusedResources">Cookies</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies_subtitle">Pechará a sesión na maioría dos sitios</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
@@ -1396,62 +1422,62 @@
 
     <!-- Onboarding -->
     <!-- Text for onboarding welcome header. -->
-    <string name="onboarding_header_2">Benvido a unha internet mellor</string>
+    <string name="onboarding_header_2" moz:RemovedIn="118" tools:ignore="UnusedResources">Benvido a unha internet mellor</string>
     <!-- Text for the onboarding welcome message. -->
-    <string name="onboarding_message">Un navegador creado para as persoas, non para os beneficios.</string>
+    <string name="onboarding_message" moz:RemovedIn="118" tools:ignore="UnusedResources">Un navegador creado para as persoas, non para os beneficios.</string>
     <!-- Text for the Firefox account onboarding sign in card header. -->
-    <string name="onboarding_account_sign_in_header">Continúe onde o deixou</string>
+    <string name="onboarding_account_sign_in_header" moz:RemovedIn="118" tools:ignore="UnusedResources">Continúe onde o deixou</string>
     <!-- Text for the button to learn more about signing in to your Firefox account. -->
-    <string name="onboarding_manual_sign_in_description">Sincronice lapelas e contrasinais entre os dispositivos para cambiar de pantalla sen problemas.</string>
+    <string name="onboarding_manual_sign_in_description" moz:RemovedIn="118" tools:ignore="UnusedResources">Sincronice lapelas e contrasinais entre os dispositivos para cambiar de pantalla sen problemas.</string>
     <!-- Text for the button to manually sign into Firefox account. -->
-    <string name="onboarding_firefox_account_sign_in">Acceder</string>
+    <string name="onboarding_firefox_account_sign_in" moz:RemovedIn="118" tools:ignore="UnusedResources">Acceder</string>
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">A sincronización está activada</string>
 
     <!-- Text for the tracking protection onboarding card header -->
-    <string name="onboarding_tracking_protection_header">Protección de privacidade por defecto</string>
+    <string name="onboarding_tracking_protection_header" moz:RemovedIn="118" tools:ignore="UnusedResources">Protección de privacidade por defecto</string>
     <!-- Text for the tracking protection card description. The first parameter is the name of the application.-->
-    <string name="onboarding_tracking_protection_description_old">%1$s impide automaticamente que as empresas sigan a súa presenza en segredo pola rede.</string>
+    <string name="onboarding_tracking_protection_description_old" moz:RemovedIn="118" tools:ignore="UnusedResources">%1$s impide automaticamente que as empresas sigan a súa presenza en segredo pola rede.</string>
     <!-- Text for the tracking protection card description. -->
-    <string name="onboarding_tracking_protection_description">Protección Total de Cookies impide que os rastrexadores empreguen cookies para asexalo polos sitios.</string>
+    <string name="onboarding_tracking_protection_description" moz:RemovedIn="118" tools:ignore="UnusedResources">Protección Total de Cookies impide que os rastrexadores empreguen cookies para asexalo polos sitios.</string>
     <!-- text for tracking protection radio button option for standard level of blocking -->
-    <string name="onboarding_tracking_protection_standard_button_2">Estándar (predeterminado)</string>
+    <string name="onboarding_tracking_protection_standard_button_2" moz:RemovedIn="118" tools:ignore="UnusedResources">Estándar (predeterminado)</string>
     <!-- text for standard blocking option button description -->
-    <string name="onboarding_tracking_protection_standard_button_description_3">Equilibrado para privacidade e rendemento. As páxinas cargan con normalidade.</string>
+    <string name="onboarding_tracking_protection_standard_button_description_3" moz:RemovedIn="118" tools:ignore="UnusedResources">Equilibrado para privacidade e rendemento. As páxinas cargan con normalidade.</string>
     <!-- text for tracking protection radio button option for strict level of blocking -->
-    <string name="onboarding_tracking_protection_strict_option">Estrito</string>
+    <string name="onboarding_tracking_protection_strict_option" moz:RemovedIn="118" tools:ignore="UnusedResources">Estrito</string>
 
     <!-- text for strict blocking option button description -->
-    <string name="onboarding_tracking_protection_strict_button_description_3">Bloquea máis rastreadores para que as páxinas carguen máis rápido, pero pode romper algunhas funcionalidades de páxinas.</string>
+    <string name="onboarding_tracking_protection_strict_button_description_3" moz:RemovedIn="118" tools:ignore="UnusedResources">Bloquea máis rastreadores para que as páxinas carguen máis rápido, pero pode romper algunhas funcionalidades de páxinas.</string>
     <!-- text for the toolbar position card header  -->
-    <string name="onboarding_toolbar_placement_header_1">Decida onte colocar a barra de ferramentas</string>
+    <string name="onboarding_toolbar_placement_header_1" moz:RemovedIn="118" tools:ignore="UnusedResources">Decida onte colocar a barra de ferramentas</string>
     <!-- Text for the toolbar position card description -->
-    <string name="onboarding_toolbar_placement_description">Mantéñao na parte inferior ou móvao cara arriba.</string>
+    <string name="onboarding_toolbar_placement_description" moz:RemovedIn="118" tools:ignore="UnusedResources">Mantéñao na parte inferior ou móvao cara arriba.</string>
     <!-- Text for the privacy notice onboarding card header -->
-    <string name="onboarding_privacy_notice_header_1">Vostede controla os seus datos</string>
+    <string name="onboarding_privacy_notice_header_1" moz:RemovedIn="118" tools:ignore="UnusedResources">Vostede controla os seus datos</string>
     <!-- Text for the privacy notice onboarding card description. -->
-    <string name="onboarding_privacy_notice_description">Firefox dálle o control sobre o que comparte en liña e o que comparte con nós.</string>
+    <string name="onboarding_privacy_notice_description" moz:RemovedIn="118" tools:ignore="UnusedResources">Firefox dálle o control sobre o que comparte en liña e o que comparte con nós.</string>
     <!-- Text for the button to read the privacy notice -->
-    <string name="onboarding_privacy_notice_read_button">Lea a nosa política de privacidade</string>
+    <string name="onboarding_privacy_notice_read_button" moz:RemovedIn="118" tools:ignore="UnusedResources">Lea a nosa política de privacidade</string>
 
     <!-- Text for the conclusion onboarding message -->
-    <string name="onboarding_conclusion_header">Listo para abrir unha Internet incrible?</string>
+    <string name="onboarding_conclusion_header" moz:RemovedIn="118" tools:ignore="UnusedResources">Listo para abrir unha Internet incrible?</string>
     <!-- text for the button to finish onboarding -->
-    <string name="onboarding_finish">Iniciar a navegación</string>
+    <string name="onboarding_finish" moz:RemovedIn="118" tools:ignore="UnusedResources">Iniciar a navegación</string>
 
     <!-- Onboarding theme -->
     <!-- text for the theme picker onboarding card header -->
-    <string name="onboarding_theme_picker_header">Escolla o seu tema</string>
+    <string name="onboarding_theme_picker_header" moz:RemovedIn="118" tools:ignore="UnusedResources">Escolla o seu tema</string>
     <!-- text for the theme picker onboarding card description -->
-    <string name="onboarding_theme_picker_description_2">Aforre a batería e a vista co modo escuro.</string>
+    <string name="onboarding_theme_picker_description_2" moz:RemovedIn="118" tools:ignore="UnusedResources">Aforre a batería e a vista co modo escuro.</string>
     <!-- Automatic theme setting (will follow device setting) -->
-    <string name="onboarding_theme_automatic_title">Automático</string>
+    <string name="onboarding_theme_automatic_title" moz:RemovedIn="118" tools:ignore="UnusedResources">Automático</string>
     <!-- Summary of automatic theme setting (will follow device setting) -->
-    <string name="onboarding_theme_automatic_summary">Adáptase á configuración do dispositivo</string>
+    <string name="onboarding_theme_automatic_summary" moz:RemovedIn="118" tools:ignore="UnusedResources">Adáptase á configuración do dispositivo</string>
     <!-- Theme setting for dark mode -->
-    <string name="onboarding_theme_dark_title">Tema escuro</string>
+    <string name="onboarding_theme_dark_title" moz:RemovedIn="118" tools:ignore="UnusedResources">Tema escuro</string>
     <!-- Theme setting for light mode -->
-    <string name="onboarding_theme_light_title">Tema claro</string>
+    <string name="onboarding_theme_light_title" moz:RemovedIn="118" tools:ignore="UnusedResources">Tema claro</string>
 
     <!-- Text shown in snackbar when multiple tabs have been sent to device -->
     <string name="sync_sent_tabs_snackbar">Lapelas enviadas!</string>
