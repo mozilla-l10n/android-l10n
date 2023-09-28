@@ -231,6 +231,9 @@
     <!-- Content description for the Home screen button on the browser toolbar -->
     <string name="browser_toolbar_home">Αρχική οθόνη</string>
 
+    <!-- Content description (not visible, for screen readers etc.): Erase button: Erase the browsing
+         history and go back to the home screen. -->
+    <string name="browser_toolbar_erase">Διαγραφή ιστορικού περιήγησης</string>
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
     <string name="a11y_selected_locale_content_description">Επιλεγμένη γλώσσα</string>
@@ -309,16 +312,9 @@
     <string name="onboarding_home_enable_notifications_negative_button">Όχι τώρα</string>
 
     <!-- Juno first user onboarding flow experiment, strings are marked unused as they are only referenced by Nimbus experiments. -->
-    <!-- Title for set firefox as default browser screen.
-        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="juno_onboarding_default_browser_title" moz:RemovedIn="117" tools:ignore="UnusedResources">Ορίστε το %s ως το προεπιλεγμένο πρόγραμμα περιήγησής σας</string>
     <!-- Title for set firefox as default browser screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_default_browser_title_nimbus" tools:ignore="UnusedResources">Ορίστε το FIrefox ως το προεπιλεγμένο πρόγραμμα περιήγησής σας</string>
-    <!-- Description for set firefox as default browser screen.
-        The first parameter is the Firefox brand name.
-        The second parameter is the string with key "juno_onboarding_default_browser_description_link_text". -->
-    <string name="juno_onboarding_default_browser_description" moz:RemovedIn="117" tools:ignore="UnusedResources">Το %1$s θέτει σε προτεραιότητα τους ανθρώπους και όχι τα κέρδη, προστατεύοντας το απόρρητό σας με αποκλεισμό των ιχνηλατών μεταξύ ιστοτόπων.\n\nΜάθετε περισσότερα στη %2$s μας.</string>
     <!-- Description for set firefox as default browser screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_default_browser_description_nimbus" tools:ignore="UnusedResources">Το Firefox θέτει σε προτεραιότητα τους ανθρώπους και όχι τα κέρδη, προστατεύοντας το απόρρητό σας με αποκλεισμό των ιχνηλατών μεταξύ ιστοτόπων.\n\nΜάθετε περισσότερα στη σημείωση απορρήτου μας.</string>
@@ -337,15 +333,9 @@
     <string name="juno_onboarding_sign_in_positive_button" tools:ignore="UnusedResources">Σύνδεση</string>
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_sign_in_negative_button" tools:ignore="UnusedResources">Όχι τώρα</string>
-    <!-- Title for enable notification permission screen.
-        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="juno_onboarding_enable_notifications_title" moz:RemovedIn="117" tools:ignore="UnusedResources">Οι ειδοποιήσεις σάς βοηθούν να κάνετε περισσότερα με το %s</string>
     <!-- Title for enable notification permission screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_enable_notifications_title_nimbus" tools:ignore="UnusedResources">Οι ειδοποιήσεις σάς βοηθούν να κάνετε περισσότερα με το Firefox</string>
-    <!-- Description for enable notification permission screen.
-        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="juno_onboarding_enable_notifications_description" moz:RemovedIn="117" tools:ignore="UnusedResources">Αποστολή καρτελών μεταξύ συσκευών, διαχείριση λήψεων και λήψη συμβουλών για την αξιοποίηση του %s στο έπακρο.</string>
     <!-- Description for enable notification permission screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
        Note: The word "Firefox" should NOT be translated   -->
     <string name="juno_onboarding_enable_notifications_description_nimbus" tools:ignore="UnusedResources">Αποστολή καρτελών μεταξύ συσκευών, διαχείριση λήψεων και λήψη συμβουλών για την αξιοποίηση του Firefox στο έπακρο.</string>
@@ -544,6 +534,11 @@
     <string name="preferences_account_settings">Ρυθμίσεις λογαριασμού</string>
     <!-- Preference for enabling url autocomplete-->
     <string name="preferences_enable_autocomplete_urls">Αυτόματη συμπλήρωση URL</string>
+    <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
+    <string name="preferences_show_sponsored_suggestions">Προτάσεις από χορηγούς</string>
+    <!-- Preference title for switch preference to show Firefox Suggest search suggestions for web content.
+         The first parameter is the name of the application. -->
+    <string name="preferences_show_nonsponsored_suggestions">Προτάσεις από %1$s</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Άνοιγμα συνδέσμων σε εφαρμογές</string>
     <!-- Preference for open links in third party apps always open in apps option -->
@@ -2238,7 +2233,7 @@
     <!-- Text displayed in the first CFR presenting the review quality check feature that opens the review checker when clicked. -->
     <string name="review_quality_check_first_cfr_action" tools:ignore="UnusedResources">Δοκιμή ελέγχου κριτικών</string>
     <!-- Flag showing that the review quality check feature is work in progress. -->
-    <string name="review_quality_check_beta_flag" tools:ignore="UnusedResources">Beta</string>
+    <string name="review_quality_check_beta_flag">Beta</string>
     <!-- Content description (not visible, for screen readers etc.) for review quality check star rating. First parameter is the number of stars (1-5) representing the rating. -->
     <string name="review_quality_check_star_rating_content_description">%1$s από 5 αστέρια</string>
     <!-- Text for minimize button from highlights card. When clicked the highlights card should reduce its size. -->
