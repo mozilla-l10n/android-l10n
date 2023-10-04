@@ -364,6 +364,9 @@
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_add_search_widget_title" tools:ignore="UnusedResources">Essayez le widget de recherche de Firefox</string>
 
+    <!-- Description for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_description" tools:ignore="UnusedResources">Mettez Firefox sur votre écran d’accueil pour un accès facile au navigateur axé sur le respect de la vie privée qui bloque les traqueurs intersites.</string>
     <!-- Text for the button to add search widget on the device used by Nimbus experiments. Nimbus experiments do not support string placeholders.
         Note: The word "Firefox" should NOT be translated -->
     <string name="juno_onboarding_add_search_widget_positive_button" tools:ignore="UnusedResources">Ajouter le widget Firefox</string>
@@ -570,6 +573,8 @@
     <!-- Preference title for switch preference to show Firefox Suggest search suggestions for web content.
          The first parameter is the name of the application. -->
     <string name="preferences_show_nonsponsored_suggestions">Suggestions de %1$s</string>
+    <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+    <string name="preferences_show_nonsponsored_suggestions_summary">Obtenir des suggestions du Web en rapport avec votre recherche</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Ouvrir les liens dans des applications</string>
 
@@ -2257,6 +2262,8 @@
     <string name="review_quality_check_settings_recommended_products_learn_more" tools:ignore="UnusedResources">En savoir plus</string>
     <!-- Text for turning sidebar off button from review quality check settings section. -->
     <string name="review_quality_check_settings_turn_off">Désactiver le vérificateur d’avis</string>
+    <!-- Text for title of recommended product section. This is displayed above a product image, suggested as an alternative to the product reviewed. -->
+    <string name="review_quality_check_ad_title" tools:ignore="UnusedResources">Produits alternatifs</string>
     <!-- Caption for recommended product section indicating this is an ad by Fakespot. First parameter is the Fakespot product name. -->
     <string name="review_quality_check_ad_caption" tools:ignore="UnusedResources">Publicité de %s</string>
     <!-- Caption for review quality check panel. First parameter is for clickable text defined in review_quality_check_powered_by_link. -->
@@ -2265,6 +2272,8 @@
     <string name="review_quality_check_powered_by_2">Le vérificateur d’avis fonctionne grâce à %s</string>
     <!-- Clickable text that links to Fakespot.com. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
     <string name="review_quality_check_powered_by_link" tools:ignore="UnusedResources">%s par Mozilla</string>
+    <!-- Text for title of warning card informing the user that the current analysis is outdated. -->
+    <string name="review_quality_check_outdated_analysis_warning_title" tools:ignore="UnusedResources">Nouvelles informations à évaluer</string>
     <!-- Text for button from warning card informing the user that the current analysis is outdated. Clicking this should trigger the product's re-analysis. -->
     <string name="review_quality_check_outdated_analysis_warning_action" tools:ignore="UnusedResources">Vérifier maintenant</string>
     <!-- Title for warning card informing the user that the current product does not have enough reviews for a review analysis. -->
@@ -2276,18 +2285,36 @@
 
     <!-- Clickable text for warning card informing the user that the current product is currently not available. Clicking this should inform the server that the product is available. -->
     <string name="review_quality_check_product_availability_warning_action" tools:ignore="UnusedResources">Signaler que ce produit est de retour en stock</string>
+    <!-- Title for warning card informing the user that the current product's re-analysis is still processing. -->
+    <string name="review_quality_check_reanalysis_in_progress_warning_title">Évaluation de la qualité des avis</string>
+    <!-- Title for warning card informing the user that the current product's analysis is still processing. -->
+    <string name="review_quality_check_analysis_in_progress_warning_title">Évaluation de la qualité des avis</string>
+    <!-- Text for body of warning card informing the user that the current product's analysis is still processing. -->
+    <string name="review_quality_check_analysis_in_progress_warning_body">L’opération peut prendre environ 60 secondes.</string>
     <!-- Title for info card displayed after the user reports a product is back in stock. -->
     <string name="review_quality_check_analysis_requested_info_title" tools:ignore="UnusedResources">Merci de nous l’avoir signalé !</string>
+    <!-- Text for body of info card displayed after the user reports a product is back in stock. -->
+    <string name="review_quality_check_analysis_requested_info_body" tools:ignore="UnusedResources">Nous devrions avoir des informations au sujet des avis sur ce produit d’ici 24 heures. Revenez plus tard.</string>
     <!-- Title for info card displayed when the user review checker while on a product that Fakespot does not analyze (e.g. gift cards, music). -->
     <string name="review_quality_check_not_analyzable_info_title">Nous ne pouvons pas vérifier ces avis</string>
     <!-- Title for info card displayed when another user reported the displayed product is back in stock. -->
     <string name="review_quality_check_analysis_requested_other_user_info_title" tools:ignore="UnusedResources">Plus d’informations prochainement</string>
+    <!-- Text for body of info card displayed when another user reported the displayed product is back in stock. -->
+    <string name="review_quality_check_analysis_requested_other_user_info_body" tools:ignore="UnusedResources">Nous devrions avoir des informations au sujet des avis sur ce produit d’ici 24 heures. Revenez plus tard.</string>
+    <!-- Title for info card displayed to the user when analysis finished updating. -->
+    <string name="review_quality_check_analysis_updated_confirmation_title" tools:ignore="UnusedResources">L’analyse est à jour</string>
     <!-- Text for the action button from info card displayed to the user when analysis finished updating. -->
     <string name="review_quality_check_analysis_updated_confirmation_action" tools:ignore="UnusedResources">J’ai compris</string>
+    <!-- Title for error card displayed to the user when an error occurred. -->
+    <string name="review_quality_check_generic_error_title">Aucune information disponible actuellement</string>
     <!-- Text for body of error card displayed to the user when an error occurred. -->
     <string name="review_quality_check_generic_error_body">Nous travaillons à résoudre ce problème. Veuillez réessayer ultérieurement.</string>
     <!-- Title for error card displayed to the user when the device is disconnected from the network. -->
     <string name="review_quality_check_no_connection_title">Aucune connexion réseau</string>
+    <!-- Title for card displayed to the user for products whose reviews were not analyzed yet. -->
+    <string name="review_quality_check_no_analysis_title">Aucune information sur ces avis pour le moment</string>
+    <!-- Text for button from body of card displayed to the user for products whose reviews were not analyzed yet. Clicking this should trigger a product analysis. -->
+    <string name="review_quality_check_no_analysis_link">Évaluer la qualité des avis</string>
     <!-- Clickable text from the contextual onboarding card that links to review quality check support article. -->
     <string name="review_quality_check_contextual_onboarding_learn_more_link">En savoir plus</string>
     <!-- Clickable text from the review quality check contextual onboarding card that links to Fakespot privacy policy. -->
@@ -2296,8 +2323,16 @@
     <string name="review_quality_check_contextual_onboarding_terms_use">conditions d’utilisation</string>
     <!-- Text for opt-out button from the review quality check contextual onboarding card. -->
     <string name="review_quality_check_contextual_onboarding_secondary_button_text">Pas maintenant</string>
+    <!-- Text displayed in the second CFR presenting the review quality check feature that opens the review checker when clicked. -->
+    <string name="review_quality_check_second_cfr_action" tools:ignore="UnusedResources">Ouvrir le vérificateur d’avis</string>
     <!-- Flag showing that the review quality check feature is work in progress. -->
     <string name="review_quality_check_beta_flag">Bêta</string>
+    <!-- Content description (not visible, for screen readers etc.) for opening browser menu button to open review quality check bottom sheet. -->
+    <string name="review_quality_check_open_handle_content_description">Ouvrir le vérificateur d’avis</string>
+    <!-- Content description (not visible, for screen readers etc.) for closing browser menu button to open review quality check bottom sheet. -->
+    <string name="review_quality_check_close_handle_content_description">Fermer le vérificateur d’avis</string>
+    <!-- Content description (not visible, for screen readers etc.) for review quality check star rating. First parameter is the number of stars (1-5) representing the rating. -->
+    <string name="review_quality_check_star_rating_content_description">%1$s étoiles sur 5</string>
     <!-- Text for minimize button from highlights card. When clicked the highlights card should reduce its size. -->
     <string name="review_quality_check_highlights_show_less">Moins de détails</string>
     <!-- Text for maximize button from highlights card. When clicked the highlights card should expand to its full size. -->
