@@ -350,6 +350,18 @@
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_enable_notifications_negative_button" tools:ignore="UnusedResources">Ne nun</string>
 
+    <!-- Title for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_title" tools:ignore="UnusedResources">Provu la komponanton serĉan de Firefox</string>
+    <!-- Description for add search widget screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_description" tools:ignore="UnusedResources">Kun Firefox en via hejmkerano vi havos facilan aliron al retumilo kiu zorgas unue pri via privateco kaj kiu blokas interretejajn spurilojn.</string>
+    <!-- Text for the button to add search widget on the device used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_add_search_widget_positive_button" tools:ignore="UnusedResources">Aldoni komponanton de Firefox</string>
+    <!-- Text for the button to dismiss the screen and move on with the flow -->
+    <string name="juno_onboarding_add_search_widget_negative_button" tools:ignore="UnusedResources">Ne nun</string>
+
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
     <string name="search_widget_content_description_2">Malfermi novan langeton de %1$s</string>
@@ -487,10 +499,14 @@
     <string name="preferences_accessibility">Alirebleco</string>
     <!-- Preference to override the Firefox Account server -->
     <string name="preferences_override_fxa_server" moz:RemovedIn="120" tools:ignore="UnusedResources">Personecigita servilo de konto de Firefox</string>
+    <!-- Preference to override the Mozilla account server -->
+    <string name="preferences_override_account_server">Personecigita servilo de konto de Mozilla</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Personecigita servilo de spegulado</string>
     <!-- Toast shown after updating the FxA/Sync server override preferences -->
     <string name="toast_override_fxa_sync_server_done" moz:RemovedIn="120" tools:ignore="UnusedResources">La serviloj de Konto de Firefox Account/Spegulado estis ŝanĝitaj. La programo nun finiĝos por apliki la ŝanĝojn…</string>
+    <!-- Toast shown after updating the Mozilla account/Sync server override preferences -->
+    <string name="toast_override_account_sync_server_done">La agordoj de konto de Mozilla aŭ de spegulado ŝanĝiĝis. Apo finiĝas por apliki la ŝanĝojn…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Konto</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -507,6 +523,8 @@
     <string name="preferences_sign_in_description_2">Komencu seancon por speguli langetojn, legosignojn, pasvortojn kaj pli.</string>
     <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
     <string name="preferences_account_default_name" moz:RemovedIn="120" tools:ignore="UnusedResources">Konto de Firefox</string>
+    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
+    <string name="preferences_account_default_name_2">Konto de Mozilla</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Rekonektiĝu por daŭrigi la speguladon</string>
     <!-- Preference for language -->
@@ -537,6 +555,16 @@
     <string name="preferences_account_settings">Agordoj de konto</string>
     <!-- Preference for enabling url autocomplete-->
     <string name="preferences_enable_autocomplete_urls">Aŭtomate kompletigi retadresojn</string>
+    <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
+    <string name="preferences_show_sponsored_suggestions">Sugestoj el patronoj</string>
+    <!-- Summary for preference to show sponsored Firefox Suggest search suggestions.
+         The first parameter is the name of the application. -->
+    <string name="preferences_show_sponsored_suggestions_summary">Subtenu %1$s per patronitaj sugestoj, de tempo al tempo</string>
+    <!-- Preference title for switch preference to show Firefox Suggest search suggestions for web content.
+         The first parameter is the name of the application. -->
+    <string name="preferences_show_nonsponsored_suggestions">Sugestoj el %1$s</string>
+    <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+    <string name="preferences_show_nonsponsored_suggestions_summary">Ricevu sugestojn el la reto, kiu rilatas vian serĉon</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Malfermi ligilojn per programoj</string>
 
@@ -642,9 +670,19 @@
     <!-- Error displayed when user attempts to install an add-on from AMO (addons.mozilla.org) that is already installed -->
     <string name="addon_already_installed" moz:removedIn="120" tools:ignore="UnusedResources">La aldonaĵo jam estas instalita</string>
 
+    <!-- Add-on process crash dialog to user -->
+    <!-- Title of a dialog shown to the user when enough errors have occurred with addons and they need to be temporarily disabled -->
+    <string name="addon_process_crash_dialog_title" tools:ignore="UnusedResources">La aldonaĵoj estas provizore malaktivigitaj</string>
+    <!-- This will cause the add-ons to try restarting but the dialog will reappear if it is unsuccessful again -->
+    <string name="addon_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Provi restartigi aldonaĵojn</string>
+    <!-- The user will continue with all add-ons disabled -->
+    <string name="addon_process_crash_dialog_disable_addons_button_text" tools:ignore="UnusedResources">Daŭrigi kun aldonaĵoj malaktivigitaj</string>
+
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">Administri konton</string>
+    <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
+    <string name="preferences_manage_account_summary">Ŝanĝu vian pasvroton, administru datumkolekton aŭ forigu vian konton</string>
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Speguli nun</string>
     <!-- Preference category for sync -->
@@ -1324,6 +1362,8 @@
     <string name="snackbar_private_tab_closed">Privata langeto fermita</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">Privataj langetoj fermitaj</string>
+    <!-- Text shown in snackbar when user erases their private browsing data -->
+    <string name="snackbar_private_data_deleted">Datumojn de privata retumo forigitaj</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">MALFARI</string>
     <!-- Text shown in snackbar when user removes a top site -->
@@ -2158,6 +2198,28 @@
     <string name="experiments_snackbar">Aktivigi telemezuradon por sendi datumojn.</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Iri al agordoj</string>
+
+    <!-- Review quality check feature-->
+    <!-- Name for the review quality check feature used as title for the panel. -->
+    <string name="review_quality_check_feature_name" moz:RemovedIn="120" tools:ignore="UnusedResources">Kontrolilo de recenzoj</string>
+    <!-- Name for the review quality check feature used as title for the panel. -->
+    <string name="review_quality_check_feature_name_2">Kontrolilo de recenzoj</string>
+    <!-- Summary for grades A and B for review quality check adjusted grading. -->
+    <string name="review_quality_check_grade_a_b_description">Fidindaj recenzoj</string>
+    <!-- Summary for grade C for review quality check adjusted grading. -->
+    <string name="review_quality_check_grade_c_description">Miksaĵo de fidindaj kaj nefindindaj recenzoj</string>
+    <!-- Summary for grades D and F for review quality check adjusted grading. -->
+    <string name="review_quality_check_grade_d_f_description">Nefindindaj recenzoj</string>
+    <!-- Text for title presenting the reliability of a product's reviews. -->
+    <string name="review_quality_check_grade_title">Kiel fidindaj estas tiuj recenzoj?</string>
+    <!-- Title for when the rating has been updated by the review checker -->
+    <string name="review_quality_check_adjusted_rating_title">Alĝustigita taksado</string>
+    <!-- Description for a product's adjusted star rating. The text presents that the product's reviews which were evaluated as unreliable were removed from the adjusted rating. -->
+    <string name="review_quality_check_adjusted_rating_description">Nefidindaj recenzoj forigitaj</string>
+    <!-- Title for list of highlights from a product's review emphasizing a product's important traits. -->
+    <string name="review_quality_check_highlights_title">Elstaraĵoj el ĵusaj recenzoj</string>
+    <!-- Title for section explaining how we analyze the reliability of a product's reviews. -->
+    <string name="review_quality_check_explanation_title">Nia maniero difini la kvaliton de recenzoj</string>
 
     <!-- Accessibility services actions labels. These will be appended to accessibility actions like "Double tap to.." but not by or applications but by services like Talkback. -->
     <!-- Action label for elements that can be collapsed if interacting with them. Talkback will append this to say "Double tap to collapse". -->
