@@ -566,6 +566,14 @@
     <string name="preferences_enable_autocomplete_urls">เติม URL อัตโนมัติ</string>
     <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
     <string name="preferences_show_sponsored_suggestions">คำแนะนำจากผู้สนับสนุน</string>
+    <!-- Summary for preference to show sponsored Firefox Suggest search suggestions.
+         The first parameter is the name of the application. -->
+    <string name="preferences_show_sponsored_suggestions_summary">สนับสนุน %1$s ด้วยคำแนะนำจากผู้สนับสนุนซึ่งแสดงเป็นครั้งคราว</string>
+    <!-- Preference title for switch preference to show Firefox Suggest search suggestions for web content.
+         The first parameter is the name of the application. -->
+    <string name="preferences_show_nonsponsored_suggestions">คำแนะนำจาก %1$s</string>
+    <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+    <string name="preferences_show_nonsponsored_suggestions_summary">รับคำแนะนำจากเว็บที่เกี่ยวข้องกับการค้นหาของคุณ</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">เปิดลิงก์ในแอป</string>
 
@@ -686,6 +694,8 @@
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">จัดการบัญชี</string>
+    <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
+    <string name="preferences_manage_account_summary">เปลี่ยนรหัสผ่านของคุณ จัดการการเก็บรวบรวมข้อมูล หรือลบบัญชีของคุณ</string>
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">ซิงค์ตอนนี้</string>
     <!-- Preference category for sync -->
@@ -2189,6 +2199,8 @@
     <!-- Review quality check feature-->
     <!-- Name for the review quality check feature used as title for the panel. -->
     <string name="review_quality_check_feature_name" moz:RemovedIn="120" tools:ignore="UnusedResources">ตัวตรวจสอบบทวิจารณ์</string>
+    <!-- Name for the review quality check feature used as title for the panel. -->
+    <string name="review_quality_check_feature_name_2">ตัวตรวจสอบบทวิจารณ์</string>
     <!-- Summary for grades A and B for review quality check adjusted grading. -->
     <string name="review_quality_check_grade_a_b_description">บทวิจารณ์ที่น่าเชื่อถือ</string>
     <!-- Summary for grade C for review quality check adjusted grading. -->
@@ -2201,10 +2213,32 @@
     <string name="review_quality_check_adjusted_rating_title">คะแนนที่ปรับแล้ว</string>
     <!-- Description for a product's adjusted star rating. The text presents that the product's reviews which were evaluated as unreliable were removed from the adjusted rating. -->
     <string name="review_quality_check_adjusted_rating_description">เอาบทวิจารณ์ที่ไม่น่าเชื่อถือออกแล้ว</string>
+    <!-- Title for list of highlights from a product's review emphasizing a product's important traits. -->
+    <string name="review_quality_check_highlights_title">ไฮไลต์จากบทวิจารณ์ล่าสุด</string>
     <!-- Title for section explaining how we analyze the reliability of a product's reviews. -->
     <string name="review_quality_check_explanation_title">วิธีที่เราพิจารณาคุณภาพบทวิจารณ์</string>
+    <!-- Paragraph explaining how we analyze the reliability of a product's reviews. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_explanation_body_reliability">เราใช้เทคโนโลยี AI จาก %s โดย Mozilla เพื่อตรวจสอบความน่าเชื่อถือของบทวิจารณ์ผลิตภัณฑ์ สิ่งนี้จะช่วยคุณประเมินคุณภาพของบทวิจารณ์เพียงอย่างเดียว ไม่ได้ประเมินคุณภาพของผลิตภัณฑ์</string>
+    <!-- Paragraph explaining the grading system we use to classify the reliability of a product's reviews. -->
+    <string name="review_quality_check_info_review_grade_header"><![CDATA[เรากำหนด<b>เกรดที่เป็นตัวอักษร</b>ให้กับบทวิจารณ์ของผลิตภัณฑ์แต่ละรายการตั้งแต่ A ถึง F]]></string>
+    <!-- Description explaining grades A and B for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_AB">บทวิจารณ์ที่น่าเชื่อถือ เราเชื่อว่าบทวิจารณ์นั้นน่าจะมาจากลูกค้าจริงซึ่งให้คำวิจารณ์อย่างตรงไปตรงมาและไม่มีอคติ</string>
+    <!-- Description explaining grades A and B for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_AB_2" moz:RemovedIn="120" tools:ignore="UnusedResources">เราเชื่อว่าบทวิจารณ์เหล่านั้นน่าเชื่อถือ</string>
+    <!-- Description explaining grade C for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_C">เราเชื่อว่ามีทั้งบทวิจารณ์ที่น่าเชื่อถือและไม่น่าเชื่อถือปะปนกัน</string>
+    <!-- Description explaining grades D and F for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_DF">บทวิจารณ์ที่ไม่น่าเชื่อถือ เราเชื่อว่าบทวิจารณ์นั้นน่าจะเป็นของปลอมหรือมาจากผู้วิจารณ์ที่มีอคติ</string>
+    <!-- Description explaining grades D and F for review quality check adjusted grading. -->
+    <string name="review_quality_check_info_grade_info_DF_2" moz:RemovedIn="120" tools:ignore="UnusedResources">เราเชื่อว่าบทวิจารณ์เหล่านั้นไม่น่าเชื่อถือ</string>
+    <!-- Paragraph explaining how a product's adjusted grading is calculated. -->
+    <string name="review_quality_check_explanation_body_adjusted_grading"><![CDATA[<b>คะแนนที่ปรับปรุงแล้ว</b>จะขึ้นอยู่กับบทวิจารณ์ที่เราเชื่อว่าน่าเชื่อถือเท่านั้น]]></string>
+    <!-- Paragraph explaining product review highlights. First parameter is the name of the retailer (e.g. Amazon). -->
+    <string name="review_quality_check_explanation_body_highlights"><![CDATA[<b>ไฮไลต์</b>มาจาก %s บทวิจารณ์ภายใน 80 วันที่ผ่านมา ซึ่งเราเชื่อว่าน่าเชื่อถือ]]></string>
     <!-- Text for learn more caption presenting a link with information about review quality. First parameter is for clickable text defined in review_quality_check_info_learn_more_link. -->
     <string name="review_quality_check_info_learn_more">เรียนรู้เพิ่มเติมเกี่ยวกับ %s</string>
+    <!-- Clickable text that links to review quality check SuMo page. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
+    <string name="review_quality_check_info_learn_more_link">วิธีที่ %s โดย Mozilla พิจารณาคุณภาพบทวิจารณ์</string>
     <!-- Text for title of settings section. -->
     <string name="review_quality_check_settings_title">การตั้งค่า</string>
     <!-- Text for label for switch preference to show recommended products from review quality check settings section. -->
@@ -2213,6 +2247,8 @@
     <string name="review_quality_check_settings_recommended_products_learn_more" tools:ignore="UnusedResources">เรียนรู้เพิ่ม</string>
     <!-- Text for turning sidebar off button from review quality check settings section. -->
     <string name="review_quality_check_settings_turn_off">ปิดตัวตรวจสอบบทวิจารณ์</string>
+    <!-- Text for title of recommended product section. This is displayed above a product image, suggested as an alternative to the product reviewed. -->
+    <string name="review_quality_check_ad_title" tools:ignore="UnusedResources">ลองดูเพิ่ม</string>
     <!-- Caption for recommended product section indicating this is an ad by Fakespot. First parameter is the Fakespot product name. -->
     <string name="review_quality_check_ad_caption" tools:ignore="UnusedResources">โฆษณาโดย %s</string>
     <!-- Clickable text that links to Fakespot.com. First parameter is the Fakespot product name. In the phrase "Fakespot by Mozilla", "by" can be localized. Does not need to stay by. -->
