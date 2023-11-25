@@ -1918,6 +1918,9 @@ Achi\'el: \nhttps://www.google.com/search?q=%s</string>
     <!-- Accessibility description for the form in which details about the custom search engine are entered -->
     <string name="search_add_custom_engine_form_description">Rub\'anikil ichinan kanob\'äl</string>
 
+    <!-- The text for the "Save" button for saving a custom search engine -->
+    <string name="search_custom_engine_save_button">Tiyak</string>
+
     <!-- Text shown when a user leaves the name field empty -->
     <string name="search_add_custom_engine_error_empty_name">Titz\'ib\'äx rub\'i\' kanob\'äl</string>
     <!-- Text shown when a user leaves the search string field empty -->
@@ -1959,6 +1962,10 @@ Achi\'el: \nhttps://www.google.com/search?q=%s</string>
     <string name="no_site_exceptions">Majun man relik ta richin re ruxaq</string>
     <!-- Bookmark deletion confirmation -->
     <string name="bookmark_deletion_confirmation">¿La kan nawajo\' chi niyuj el re yaketal re\'?</string>
+    <!-- Browser menu button that adds a shortcut to the home fragment -->
+    <string name="browser_menu_add_to_shortcuts">Titz\'aqatisäx ruq\'a\'</string>
+    <!-- Browser menu button that removes a shortcut from the home fragment -->
+    <string name="browser_menu_remove_from_shortcuts">Tiyu pa ruq\'a\'</string>
     <!-- text shown before the issuer name to indicate who its verified by, parameter is the name of
      the certificate authority that verified the ticket-->
     <string name="certificate_info_verified_by">Jikib\'an Ruma: %1$s</string>
@@ -1984,8 +1991,14 @@ Achi\'el: \nhttps://www.google.com/search?q=%s</string>
     <string name="save_changes_to_login">Keyaj taq jaloj richin ri rutikirib\'al molojri\'ïl.</string>
     <!--  The page title for editing a saved login. -->
     <string name="edit">Tinuk\'</string>
+    <!--  The page title for adding new login. -->
+    <string name="add_login">Titz\'aqatisäx k\'ak\'a\' rub\'i\' taqoya\'l</string>
     <!--  The error message in add/edit login view when password field is blank. -->
     <string name="saved_login_password_required">Najowäx ewan tzij</string>
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required">Najowäx rub\'i\' okisanel</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Najowäx rub\'i\' ruk\'u\'x k\'amb\'ey</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Tikanöx chi ch\'ab\'äl</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1996,6 +2009,11 @@ Achi\'el: \nhttps://www.google.com/search?q=%s</string>
 
     <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
     <string name="add_login_hostname_hint_text">https://www.example.com</string>
+
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">Ri web ochochib\'äl k\'o chi ruk\'wan &quot;https://&quot; or &quot;http://&quot;</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">Najowäx okel rub\'i\' ruk\'u\'x k\'amab\'ey</string>
 
     <!-- Synced Tabs -->
     <!-- Text displayed to ask user to connect another device as no devices found with account -->
@@ -2015,6 +2033,8 @@ Achi\'el: \nhttps://www.google.com/search?q=%s</string>
     <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
     <string name="synced_tabs_no_open_tabs">Majun ruwi\' ejaqon</string>
 
+    <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
+    <string name="shortcut_max_limit_content">Richin natz\'aqatisaj jun k\'ak\'a\' ruq\'a\', tayuju\' jun. Tapitz\'a\' ri ruxaq chuqa\' tacha\' tiyuj.</string>
     <!-- Confirmation dialog button text when top sites limit is reached. -->
     <string name="top_sites_max_limit_confirmation_button">ÜTZ, Wetaman Chik</string>
 
@@ -2036,9 +2056,21 @@ Achi\'el: \nhttps://www.google.com/search?q=%s</string>
     <!-- Label text displayed for a sponsored top site. -->
     <string name="top_sites_sponsored_label">To\'on</string>
 
+    <!-- Content description for expanding the inactive tabs section. -->
+    <string name="inactive_tabs_expand_content_description">Kerik\' chupun taq ruwi\'</string>
+    <!-- Content description for collapsing the inactive tabs section. -->
+    <string name="inactive_tabs_collapse_content_description">Kek\'ol chupun taq ruwi\'</string>
+
     <!-- Inactive tabs auto-close message in the tabs tray -->
     <!-- The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs. -->
     <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">¿La ruyonil nitz\'apïx chi rij jun ik\'?</string>
+
+    <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox nitikïr yerutz\'apij taq ruxaq man e\'atz\'eton ta pa ri ruk\'isib\'äl ik\'.</string>
+    <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+    <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">TITZIJ RUYON NICHUPUTÄJ</string>
+    <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
+    <string name="inactive_tabs_auto_close_message_snackbar">Tzijïl ruyon nitz\'apitäj</string>
 
     <!-- Awesome bar suggestion's headers -->
     <!-- Search suggestions title for Firefox Suggest. -->
@@ -2063,13 +2095,28 @@ Achi\'el: \nhttps://www.google.com/search?q=%s</string>
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Titz\'apïx</string>
 
+    <!-- Pocket recommended stories -->
+    <!-- Header text for a section on the home screen. -->
+    <string name="pocket_stories_header_1">B\'anob\'äl richin yach\'ob\'on</string>
+    <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+    <string name="pocket_stories_placeholder_text">Tilitäj ch\'aqa\' chik</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Tetamäx ch\'aqa\' chik</string>
     <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
     <string name="pocket_stories_sponsor_indication">To\'on</string>
 
+    <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off.-->
+    <string name="experiments_snackbar">Titzij telemetry richin yetaq taq tzij</string>
     <!-- Snackbar button text to navigate to telemetry settings.-->
     <string name="experiments_snackbar_button">Tib\'e pa taq nuk\'ulem</string>
+
+    <!-- Review quality check feature-->
+    <!-- Name for the review quality check feature used as title for the panel. -->
+    <string name="review_quality_check_feature_name" moz:RemovedIn="120" tools:ignore="UnusedResources">Jikib\'anel taq nik\'oj</string>
+    <!-- Name for the review quality check feature used as title for the panel. -->
+    <string name="review_quality_check_feature_name_2">Jikib\'anel taq Nik\'oj</string>
+    <!-- Text for learn more caption presenting a link with information about review quality. First parameter is for clickable text defined in review_quality_check_info_learn_more_link. -->
+    <string name="review_quality_check_info_learn_more">Tawetamaj ch\'aqa\' chik pa ruwi\' %s.</string>
 
     <!-- Accessibility services actions labels. These will be appended to accessibility actions like "Double tap to.." but not by or applications but by services like Talkback. -->
     <!-- Action label for elements that can be collapsed if interacting with them. Talkback will append this to say "Double tap to collapse". -->
