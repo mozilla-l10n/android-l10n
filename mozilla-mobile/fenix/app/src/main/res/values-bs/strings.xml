@@ -989,7 +989,7 @@
     <!-- Text shown in the menu for closing all tabs -->
     <string name="tab_tray_menu_item_close">Zatvori sve tabove</string>
     <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
-    <string name="tab_tray_multiselect_menu_item_bookmark">Zabilješka</string>
+    <string name="tab_tray_multiselect_menu_item_bookmark">Oznaka</string>
     <!-- Text shown in the multiselect menu for closing selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_close">Zatvori</string>
     <!-- Content description for tabs tray multiselect share button -->
@@ -1344,6 +1344,33 @@
     The app name is in the text, due to limitations with localizing Nimbus experiments -->
     <string name="nimbus_notification_default_browser_title" tools:ignore="UnusedResources">Firefox je brz i privatan</string>
 
+    <!-- Text shown in the notification that pops up to remind the user to set fenix as default browser.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_notification_default_browser_text" tools:ignore="UnusedResources">Postavi Firefox kao zadani pretraživač</string>
+    <!-- Title shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_title">Isprobaj privatno pretraživanje</string>
+    <!-- Text shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_text">Pretražujte bez sačuvanih kolačića ili historije u %1$s</string>
+    <!-- Title A shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_A_title">Pretražujte bez praćenja</string>
+    <!-- Text A shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_A_text">Privatno pretraživanje u %1$su ne čuva vaše podatke.</string>
+    <!-- Title B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_title">Započnite svoju prvu pretragu</string>
+    <!-- Text B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_text">Pronađite nešto u blizini. Ili otkrijte nešto zabavno.</string>
+
+    <!-- Survey -->
+    <!-- Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_survey_message_text">Pomozite da poboljšamo Firefox tako što ćete ispuniti kratku anketu.</string>
+    <!-- Preference for taking the short survey. -->
+    <string name="preferences_take_survey">Ispunite anketu</string>
+    <!-- Preference for not taking the short survey. -->
+    <string name="preferences_not_take_survey">Ne, hvala</string>
+
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Kolekcija obrisana</string>
@@ -1353,10 +1380,16 @@
     <string name="snackbar_tab_closed">Tab zatvoren</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Tabovi zatvoreni</string>
+    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
+    <string name="snackbar_message_bookmarks_saved">Oznake sačuvane!</string>
+    <!-- Text shown in snackbar when user adds a site to shortcuts -->
+    <string name="snackbar_added_to_shortcuts">Dodato u prečice!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">Privatni tab zatvoren</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">Privatni tabovi zatvoreni</string>
+    <!-- Text shown in snackbar when user erases their private browsing data -->
+    <string name="snackbar_private_data_deleted">Podaci privatnog pretraživanja su izbrisani</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">VRATI</string>
     <!-- Text shown in snackbar when user removes a top site -->
@@ -1368,6 +1401,10 @@
     <string name="qr_scanner_dialog_positive">DOZVOLI</string>
     <!-- QR code scanner prompt dialog positive option to deny navigation to scanned link -->
     <string name="qr_scanner_dialog_negative">ODBIJ</string>
+    <!-- QR code scanner prompt dialog error message shown when a hostname does not contain http or https. -->
+    <string name="qr_scanner_dialog_invalid">Web adresa nije važeća.</string>
+    <!-- QR code scanner prompt dialog positive option when there is an error -->
+    <string name="qr_scanner_dialog_invalid_ok">OK</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">Da li ste sigurni da želite obrisati %1$s?</string>
     <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
@@ -1405,6 +1442,8 @@
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d adresa</string>
+    <!-- Title for the cookies and site data items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_and_site_data">Kolačići i podaci stranica</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies_subtitle">Bit ćete odjavljeni na većini stranica</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
@@ -1413,6 +1452,8 @@
     <string name="preferences_delete_browsing_data_cached_files_subtitle">Oslobađa prostor za pohranu</string>
     <!-- Title for the site permissions item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_site_permissions">Dozvole stranica</string>
+    <!-- Title for the downloads item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_downloads">Preuzimanja</string>
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">Obriši podatke surfanja</string>
     <!-- Title for the Delete browsing data on quit preference -->
@@ -1422,6 +1463,19 @@
     <string name="preference_summary_delete_browsing_data_on_quit_2">Automatski briše podatke o surfanju kada izaberete \&quot;Ugasi\&quot; iz menija</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Ugasi</string>
+
+    <!-- Title text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_title">Vremenski raspon za brisanje</string>
+    <!-- Body text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_body" moz:RemovedIn="130" tools:ignore="UnusedResources">Uklanja historiju (uključujući historiju sinhronizovanu s drugih uređaja), kolačiće i druge podatke o pretraživanju.</string>
+    <!-- Body text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_body_2">Uklanja historiju (uključujući historiju sinhroniziranu s drugih uređaja)</string>
+    <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
+    <string name="delete_history_prompt_button_last_hour">Zadnji sat</string>
+    <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
+    <string name="delete_history_prompt_button_today_and_yesterday">Danas i juče</string>
+    <!-- Radio button in the delete browsing data dialog to delete all history. -->
+    <string name="delete_history_prompt_button_everything">Sve</string>
 
     <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
     <string name="delete_browsing_data_prompt_message_3">%s će obrisati izabrane podatke surfanja.</string>
@@ -1434,6 +1488,15 @@
     <string name="preferences_delete_browsing_data_snackbar">Podaci surfanja izbrisani</string>
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">Brišem podatke surfanja…</string>
+
+    <!-- Dialog message to the user asking to delete all history items inside the opened group. Parameter will be replaced by a history group name. -->
+    <string name="delete_all_history_group_prompt_message">Izbriši sve stranice u “%s”</string>
+    <!-- Text for the cancel button for the history group deletion dialog -->
+    <string name="delete_history_group_prompt_cancel">Otkaži</string>
+    <!-- Text for the allow button for the history group dialog -->
+    <string name="delete_history_group_prompt_allow">Izbriši</string>
+    <!-- Text for the snackbar confirmation that the history group was deleted -->
+    <string name="delete_history_group_snackbar">Grupa je izbrisana</string>
 
     <!-- Onboarding -->
     <!-- text to display in the snackbar once account is signed-in -->
@@ -1459,6 +1522,8 @@
     <string name="sign_in_with_camera">Prijavite se pomoću kamere</string>
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Radije koristi email</string>
+    <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
+    <string name="sign_in_create_account_text"><![CDATA[Nemate račun? <u>Kreirajte ga</u> da sinhronizujete Firefox između uređaja.]]></string>
     <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="sign_out_confirmation_message_2">%s će zaustaviti sinhronizaciju s vašim računom, ali neće obrisati ništa od vaših podataka surfanja na ovom uređaju.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
@@ -1474,11 +1539,17 @@
     <string name="etp_settings">Postavke zaštite</string>
     <!-- Preference title for enhanced tracking protection settings -->
     <string name="preference_enhanced_tracking_protection">Napredna zaštita od praćenja</string>
+    <!-- Preference summary for enhanced tracking protection settings on/off switch -->
+    <string name="preference_enhanced_tracking_protection_summary">Sada sadrži potpunu zaštitu od kolačića, našu najmoćniju barijeru do sada protiv elemenata za praćenje trećih strana.</string>
+    <!-- Description of enhanced tracking protection. The parameter is the name of the application (For example: Firefox Fenix) -->
+    <string name="preference_enhanced_tracking_protection_explanation_2">%s vas štiti od većine najčešćih pratilaca koji prate ono što radite online.</string>
     <!-- Text displayed that links to website about enhanced tracking protection -->
     <string name="preference_enhanced_tracking_protection_explanation_learn_more">Saznajte više</string>
 
     <!-- Preference for enhanced tracking protection for the standard protection settings -->
     <string name="preference_enhanced_tracking_protection_standard_default_1">Standardno (izvorno)</string>
+    <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+    <string name="preference_enhanced_tracking_protection_standard_description_5">Stranice će se normalno učitavati, ali će blokirati manje pratilaca.</string>
     <!--  Accessibility text for the Standard protection information icon  -->
     <string name="preference_enhanced_tracking_protection_standard_info_button">Šta je blokirano od strane standardne tracking zaštite</string>
     <!-- Preference for enhanced tracking protection for the strict protection settings -->
