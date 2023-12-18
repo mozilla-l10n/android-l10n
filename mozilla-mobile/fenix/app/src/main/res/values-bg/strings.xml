@@ -1173,6 +1173,21 @@
     <!-- Title A shown in the notification that pops up to re-engage the user -->
     <string name="notification_re_engagement_A_title">Преглеждайте без следа</string>
 
+    <!-- Text A shown in the notification that pops up to re-engage the user.
+    %1$s is a placeholder that will be replaced by the app name. -->
+    <string name="notification_re_engagement_A_text">Поверителното разглеждане в %1$s не пази информация.</string>
+    <!-- Title B shown in the notification that pops up to re-engage the user -->
+    <string name="notification_re_engagement_B_title">Направете първото си търсене</string>
+
+    <!-- Survey -->
+    <!-- Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_survey_message_text">Помогнете да подобрим Firefox, участвайки в кратко допитване.</string>
+    <!-- Preference for taking the short survey. -->
+    <string name="preferences_take_survey">Участвайте в допитване</string>
+    <!-- Preference for not taking the short survey. -->
+    <string name="preferences_not_take_survey">Не, благодаря</string>
+
     <!-- Snackbar -->
     <!-- Text shown in snackbar when user deletes a collection -->
     <string name="snackbar_collection_deleted">Списъкът е изтрит</string>
@@ -1184,6 +1199,8 @@
     <string name="snackbar_tabs_closed">Разделите са затворени</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs -->
     <string name="snackbar_message_bookmarks_saved">Отметките са запазени!</string>
+    <!-- Text shown in snackbar when user adds a site to shortcuts -->
+    <string name="snackbar_added_to_shortcuts">Добавено към преки пътища!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">Поверителният раздел е затворен</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
@@ -1236,9 +1253,14 @@
     <string name="preferences_delete_browsing_data_tabs_title_2">Отворени раздели</string>
     <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
     <string name="preferences_delete_browsing_data_tabs_subtitle">%d раздела</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <!-- Title for the history item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_history_title">История на разглеждане</string>
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d адреса</string>
+    <!-- Title for the cookies and site data items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_and_site_data">Бисквитки и данни на страници</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies_subtitle">Ще бъдете отписани от повечето страници</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
@@ -1258,6 +1280,15 @@
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">Изход</string>
 
+    <!-- Title text of a delete browsing data dialog. -->
+    <string name="delete_history_prompt_title">Времеви обхват за изчистване</string>
+    <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
+    <string name="delete_history_prompt_button_last_hour">Последения час</string>
+    <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
+    <string name="delete_history_prompt_button_today_and_yesterday">Днес и вчера</string>
+    <!-- Radio button in the delete browsing data dialog to delete all history. -->
+    <string name="delete_history_prompt_button_everything">Всичко</string>
+
     <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
     <string name="delete_browsing_data_prompt_message_3">%s ще изтрие избраните данни от историята на разглеждане.</string>
     <!-- Text for the cancel button for the data deletion dialog -->
@@ -1270,6 +1301,15 @@
 
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">Изтриване на данни от разглеждане…</string>
+
+    <!-- Dialog message to the user asking to delete all history items inside the opened group. Parameter will be replaced by a history group name. -->
+    <string name="delete_all_history_group_prompt_message">Премахване на страниците от „%s“</string>
+    <!-- Text for the cancel button for the history group deletion dialog -->
+    <string name="delete_history_group_prompt_cancel">Отказ</string>
+    <!-- Text for the allow button for the history group dialog -->
+    <string name="delete_history_group_prompt_allow">Премахване</string>
+    <!-- Text for the snackbar confirmation that the history group was deleted -->
+    <string name="delete_history_group_snackbar">Групата е премахната</string>
 
     <!-- Onboarding -->
     <!-- text to display in the snackbar once account is signed-in -->
@@ -1537,6 +1577,9 @@
     <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
     <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Меню за сортиране на регистрации</string>
 
+    <!-- Autofill -->
+    <!-- Preference and title for managing the autofill settings -->
+    <string name="preferences_autofill">Автоматично попълване</string>
     <!-- Preference and title for managing the settings for addresses -->
     <string name="preferences_addresses">Адреси</string>
     <!-- Preference and title for managing the settings for credit cards -->
@@ -1559,6 +1602,11 @@
     <!-- Preference option for managing saved addresses -->
     <string name="preferences_addresses_manage_addresses">Управление на адреси</string>
 
+    <!-- Preference for saving and autofilling addresses -->
+    <string name="preferences_addresses_save_and_autofill_addresses">Запазване и попълване на адреси</string>
+    <!-- Preference summary for saving and autofilling address data -->
+    <string name="preferences_addresses_save_and_autofill_addresses_summary">Включително номера, електронни адреси и адреси за доставка</string>
+
     <!-- Title of the "Add card" screen -->
     <string name="credit_cards_add_card">Добавяне на карта</string>
     <!-- Title of the "Edit card" screen -->
@@ -1577,6 +1625,10 @@
     <string name="credit_cards_menu_delete_card">Изтриване на картата</string>
     <!-- The text for the "Delete card" button for deleting a credit card -->
     <string name="credit_cards_delete_card_button">Изтриване на картата</string>
+    <!-- The text for the confirmation message of "Delete card" dialog -->
+    <string name="credit_cards_delete_dialog_confirmation">Сигурни ли сте, че искате да премахнете тази банкова карта?</string>
+    <!-- The text for the positive button on "Delete card" dialog -->
+    <string name="credit_cards_delete_dialog_button">Премахване</string>
     <!-- The title for the "Save" menu item for saving a credit card -->
     <string name="credit_cards_menu_save">Запазване</string>
     <!-- The text for the "Save" button for saving a credit card -->
@@ -1605,8 +1657,33 @@
     <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored credit card information -->
     <string name="credit_cards_biometric_prompt_unlock_message">Отключете, за да използвате запазената банкова карта</string>
 
+    <!-- Title of the "Add address" screen -->
+    <string name="addresses_add_address">Добавяне на адрес</string>
+    <!-- Title of the "Edit address" screen -->
+    <string name="addresses_edit_address">Промяна на адрес</string>
+    <!-- Title of the "Manage addresses" screen -->
+    <string name="addresses_manage_addresses">Управление на адреси</string>
     <!-- The header for the first name of an address -->
     <string name="addresses_first_name">Първо име</string>
+
+    <!-- The header for the middle name of an address -->
+    <string name="addresses_middle_name">Презиме</string>
+    <!-- The header for the last name of an address -->
+    <string name="addresses_last_name">Фамилия</string>
+    <!-- The header for the street address of an address -->
+    <string name="addresses_street_address">Адрес</string>
+    <!-- The header for the city of an address -->
+    <string name="addresses_city">Град</string>
+    <!-- The header for the subregion of an address when "state" should be used -->
+    <string name="addresses_state">Състояние</string>
+    <!-- The header for the subregion of an address when "province" should be used -->
+    <string name="addresses_province">Провинция</string>
+    <!-- The header for the zip code of an address -->
+    <string name="addresses_zip">Пощенски код</string>
+    <!-- The header for the country or region of an address -->
+    <string name="addresses_country">Държава или район</string>
+    <!-- The header for the phone number of an address -->
+    <string name="addresses_phone">Телефон</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Добавяне на търсеща машина</string>
