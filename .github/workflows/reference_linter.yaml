@@ -15,16 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: src
       - name: Clone repository (default branch)
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: base
           ref: "${{github.event.pull_request.base.sha}}"
       - name: Set up Python 3
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
       - name: Install Python dependencies
@@ -72,7 +72,7 @@ jobs:
             python src/.github/scripts/output_errors.py
           fi
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: errors-list
           path: errors.*
