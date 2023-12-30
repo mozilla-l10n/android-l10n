@@ -2391,6 +2391,9 @@
     <!-- Button text for the button that will take the user to the translation settings dialog. -->
     <string name="translation_option_bottom_sheet_translation_settings">Configuración de traducción</string>
 
+    <!-- Button text for the button that will take the user to a website to learn more about how translations works in the given app. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="translation_option_bottom_sheet_about_translations">Acerca de las traducciones en %1$s</string>
+
     <!-- Translation settings dialog -->
     <!-- Title of the translation settings dialog that allows a user to set their preferred translation settings. -->
     <string name="translation_settings_toolbar_title">Traducciones</string>
@@ -2455,6 +2458,10 @@
     <string name="download_languages_available_languages_preference">Idiomas disponibles</string>
     <!-- Text that will appear beside a core or pivot language package name to show that the language is necessary for the translation feature to function. -->
     <string name="download_languages_default_system_language_require_preference">requerido</string>
+    <!-- A text for download language preference item.
+    The first parameter is the language name, for example, "Spanish".
+    The second parameter is the language file size, for example, "(3.91 KB)" or, if the language package name is a pivot language, "(required)". -->
+    <string name="download_languages_language_item_preference">%1$s (%2$s)</string>
     <!-- The subhead of the download language preference screen will appear above the items that were not downloaded. -->
     <string name="download_language_header_preference">Descargar idiomas</string>
     <!-- All languages list item. When the user presses this item, they can download or delete all languages. -->
@@ -2468,11 +2475,28 @@
     <!-- Content description (not visible, for screen readers etc.): For a language list item that is selected. -->
     <string name="download_languages_item_content_description_selected_state">Seleccionado</string>
 
+    <!-- Title for the dialog used by the translations feature to confirm deleting a language.
+    The dialog will be presented when the user requests deletion of a language.
+    The first parameter is the name of the language, for example, "Spanish" and the second parameter is the size in kilobytes or megabytes of the language file. -->
+    <string name="delete_language_file_dialog_title">¿Borrar %1$s (%2$s)?</string>
+    <!-- Additional information for the dialog used by the translations feature to confirm deleting a language. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="delete_language_file_dialog_message">Si borrás este idioma, %1$s descargará idiomas parcialmente al caché mientras se traduce.</string>
+    <!-- Title for the dialog used by the translations feature to confirm deleting all languages file.
+    The dialog will be presented when the user requests deletion of all languages file.
+    The first parameter is the size in kilobytes or megabytes of the language file. -->
+    <string name="delete_language_all_languages_file_dialog_title">¿Borrar todos los idiomas (%1$s)?</string>
+    <!-- Additional information for the dialog used by the translations feature to confirm deleting all languages file. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="delete_language_all_languages_file_dialog_message">Si borrás todos los idiomas, %1$s descargará idiomas parcialmente al caché mientras se traduce.</string>
     <!-- Button text on the dialog used by the translations feature to confirm deleting a language. -->
     <string name="delete_language_file_dialog_positive_button_text">Borrar</string>
     <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
     <string name="delete_language_file_dialog_negative_button_text">Cancelar</string>
 
+    <!-- Title for the data saving mode warning dialog used by the translations feature.
+    This dialog will be presented when the user attempts to download a language or perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    The first parameter is the size in kilobytes or megabytes of the language file.-->
+    <string name="download_language_file_dialog_title">¿Descargar en modo de ahorro de datos (%1$s)?</string>
     <!-- Additional information for the data saving mode warning dialog used by the translations feature. This text explains the reason a download is required for a translation. -->
     <string name="download_language_file_dialog_message_all_languages">Descargamos algunos idiomas a tu caché para mantener las traducciones privadas.</string>
     <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
