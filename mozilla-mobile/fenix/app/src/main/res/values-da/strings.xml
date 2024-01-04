@@ -2382,12 +2382,17 @@
     <!-- Automatic translation options preference screen -->
     <!-- Preference option for offering to translate. Radio button title text.-->
     <string name="automatic_translation_option_offer_to_translate_title_preference">Tilbyd at oversætte (standard)</string>
+    <!-- Preference option for offering to translate. Radio button summary text. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="automatic_translation_option_offer_to_translate_summary_preference">%1$s vil tilbyde at oversætte websteder på dette sprog.</string>
     <!-- Preference option for always translate. Radio button title text. -->
     <string name="automatic_translation_option_always_translate_title_preference">Oversæt altid</string>
     <!-- Preference option for always translate. Radio button summary text. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
     <string name="automatic_translation_option_always_translate_summary_preference">%1$s vil automatisk oversætte dette sprog, når siden indlæses.</string>
     <!-- Preference option for never translate. Radio button title text.-->
     <string name="automatic_translation_option_never_translate_title_preference">Oversæt aldrig</string>
+
+    <!-- Preference option for never translate. Radio button summary text. The first parameter is the name of the app defined in app_name (for example: Fenix)-->
+    <string name="automatic_translation_option_never_translate_summary_preference">%1$s vil aldrig tilbyde at oversætte websteder på dette sprog.</string>
 
     <!-- Never translate site preference screen -->
     <!-- Title of the never translate site preference screen that will appear on the toolbar.-->
@@ -2438,9 +2443,47 @@
     The dialog will be presented when the user requests deletion of a language.
     The first parameter is the name of the language, for example, "Spanish" and the second parameter is the size in kilobytes or megabytes of the language file. -->
     <string name="delete_language_file_dialog_title">Slet %1$s (%2$s)?</string>
+    <!-- Additional information for the dialog used by the translations feature to confirm deleting a language. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="delete_language_file_dialog_message">Hvis du sletter dette sprog, vil %1$s delvist hente sprog til din cache, mens du oversætter.</string>
     <!-- Title for the dialog used by the translations feature to confirm deleting all languages file.
     The dialog will be presented when the user requests deletion of all languages file.
     The first parameter is the size in kilobytes or megabytes of the language file. -->
     <string name="delete_language_all_languages_file_dialog_title">Slet alle sprog (%1$s)?</string>
 
-    </resources>
+    <!-- Additional information for the dialog used by the translations feature to confirm deleting all languages file. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="delete_language_all_languages_file_dialog_message">Hvis du sletter alle sprog, vil %1$s delvist hente sprog til din cache, mens du oversætter.</string>
+    <!-- Button text on the dialog used by the translations feature to confirm deleting a language. -->
+    <string name="delete_language_file_dialog_positive_button_text">Slet</string>
+    <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
+    <string name="delete_language_file_dialog_negative_button_text">Annuller</string>
+
+    <!-- Title for the data saving mode warning dialog used by the translations feature.
+    This dialog will be presented when the user attempts to download a language or perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    The first parameter is the size in kilobytes or megabytes of the language file.-->
+    <string name="download_language_file_dialog_title">Hent i datasparer-tilstand (%1$s)?</string>
+    <!-- Additional information for the data saving mode warning dialog used by the translations feature. This text explains the reason a download is required for a translation. -->
+    <string name="download_language_file_dialog_message_all_languages">Vi henter sprog delvist til din cache for at holde oversættelser private.</string>
+    <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
+    <string name="download_language_file_dialog_checkbox_text">Hent altid i datasparer-tilstand</string>
+    <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
+    <string name="download_language_file_dialog_positive_button_text">Hent</string>
+    <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
+    <string name="download_language_file_dialog_positive_button_text_all_languages">Hent og oversæt</string>
+    <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
+    <string name="download_language_file_dialog_negative_button_text">Annuller</string>
+
+    <!-- Debug drawer -->
+    <!-- The title of the Tab Tools feature in the Debug Drawer. -->
+    <string name="debug_drawer_tab_tools_title" tools:ignore="UnusedResources">Fanebladsværktøjer</string>
+    <!-- The title of the tab count section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_count_title">Antal faneblade</string>
+    <!-- The active tab count category in the tab count section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_count_normal">Aktive</string>
+    <!-- The inactive tab count category in the tab count section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_count_inactive">Inaktive</string>
+    <!-- The private tab count category in the tab count section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_count_private">Private</string>
+    <!-- The total tab count category in the tab count section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_count_total">I alt</string>
+</resources>
