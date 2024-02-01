@@ -1303,6 +1303,9 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Tanca les pestanyes privades</string>
 
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
+    <string name="notification_erase_title_android_14">Voleu tancar les pestanyes privades?</string>
+
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Màrqueting</string>
 
@@ -1700,6 +1703,8 @@
     <string name="preferences_passwords_saved_logins_description_empty_text">Aquí es mostren els inicis de sessió que deseu o sincronitzeu en el %s.</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Més informació sobre el Sync.</string>
+    <!-- Clickable text for opening an external link for more information about Sync. -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2" tools:ignore="UnusedResources">Més informació sobre la sincronització</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Excepcions</string>
     <!-- Empty description of list of login exceptions that we never save logins for -->
@@ -1769,6 +1774,8 @@
     <!-- Preference and title for managing the settings for credit cards -->
     <string name="preferences_credit_cards">Targetes de crèdit</string>
 
+    <!-- Preference and title for managing the settings for payment methods -->
+    <string name="preferences_credit_cards_2" tools:ignore="UnusedResources">Formes de pagament</string>
     <!-- Preference for saving and autofilling credit cards -->
     <string name="preferences_credit_cards_save_and_autofill_cards">Desa i emplena automàticament les targetes</string>
     <!-- Preference summary for saving and autofilling credit card data -->
@@ -1820,6 +1827,8 @@
     <string name="credit_cards_delete_card_button">Suprimeix la targeta</string>
     <!-- The text for the confirmation message of "Delete card" dialog -->
     <string name="credit_cards_delete_dialog_confirmation">Segur que voleu suprimir aquesta targeta de crèdit?</string>
+    <!-- The text for the confirmation message of "Delete card" dialog -->
+    <string name="credit_cards_delete_dialog_confirmation_2" tools:ignore="UnusedResources">Voleu suprimir la targeta?</string>
     <!-- The text for the positive button on "Delete card" dialog -->
     <string name="credit_cards_delete_dialog_button">Suprimeix</string>
     <!-- The title for the "Save" menu item for saving a credit card -->
@@ -2368,10 +2377,21 @@
     <!-- Button text on the warning card when a language is not supported. The link will take the user to a page to a support page about translations. -->
     <string name="translation_error_language_not_supported_learn_more">Més informació</string>
 
+    <!-- Toggle switch label that allows a user to set if they would like to never be offered a translation of the given language. The first parameter is the language name, for example, "Spanish". -->
+    <string name="translation_option_bottom_sheet_never_translate_in_language">No tradueixis mai %1$s</string>
+    <!-- Toggle switch label that allows a user to set the setting if they would like the browser to never translate the site the user is currently visiting. -->
+    <string name="translation_option_bottom_sheet_never_translate_site">No tradueixis mai aquest lloc</string>
+    <!-- Button text for the button that will take the user to the translation settings dialog. -->
+    <string name="translation_option_bottom_sheet_translation_settings">Paràmetres de les traduccions</string>
+    <!-- Button text for the button that will take the user to a website to learn more about how translations works in the given app. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="translation_option_bottom_sheet_about_translations">Quant a les traduccions al %1$s</string>
+
     <!-- Translation settings dialog -->
     <!-- Title of the translation settings dialog that allows a user to set their preferred translation settings. -->
     <string name="translation_settings_toolbar_title">Traduccions</string>
 
+    <!-- Section header text that begins the section of a list of different options the user may select to adjust their translation preferences. -->
+    <string name="translation_settings_translation_preference">Preferències de traducció</string>
     <!-- Button text for the button that will take the user to the never translate these sites dialog. On the never translate these sites dialog, the user can set if translations should never occur on certain websites. -->
     <string name="translation_settings_automatic_never_translate_sites">No tradueixis mai aquests llocs</string>
 
@@ -2396,6 +2416,8 @@
     <string name="download_languages_available_languages_preference">Llengües disponibles</string>
     <!-- Text that will appear beside a core or pivot language package name to show that the language is necessary for the translation feature to function. -->
     <string name="download_languages_default_system_language_require_preference">necessari</string>
+    <!-- The subhead of the download language preference screen will appear above the items that were not downloaded. -->
+    <string name="download_language_header_preference">Baixa llengües</string>
     <!-- All languages list item. When the user presses this item, they can download or delete all languages. -->
     <string name="download_language_all_languages_item_preference">Totes les llengües</string>
     <!-- Content description (not visible, for screen readers etc.): For a language list item that was downloaded, the user can now delete it. -->
@@ -2421,6 +2443,12 @@
     <!-- Debug drawer -->
     <!-- The user-facing title of the Debug Drawer feature. -->
     <string name="debug_drawer_title">Eines de depuració</string>
+    <!-- Content description (not visible, for screen readers etc.): Navigate back within the debug drawer. -->
+    <string name="debug_drawer_back_button_content_description">Vés enrere</string>
+    <!-- The title of the Tab Tools feature in the Debug Drawer. -->
+    <string name="debug_drawer_tab_tools_title">Eines de pestanyes</string>
+    <!-- The title of the tab count section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_count_title">Recompte de pestanyes</string>
     <!-- The active tab count category in the tab count section in Tab Tools. -->
     <string name="debug_drawer_tab_tools_tab_count_normal">Actives</string>
     <!-- The inactive tab count category in the tab count section in Tab Tools. -->
@@ -2431,6 +2459,8 @@
     <string name="debug_drawer_tab_tools_tab_count_total">Total</string>
     <!-- The title of the tab creation tool section in Tab Tools. -->
     <string name="debug_drawer_tab_tools_tab_creation_tool_title">Eina de creació de pestanyes</string>
+    <!-- The label of the text field in the tab creation tool. -->
+    <string name="debug_drawer_tab_tools_tab_creation_tool_text_field_label">Nombre de pestanyes a crear</string>
     <!-- The button text to add tabs to the active tab group in the tab creation tool. -->
     <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_active">Afegeix a les pestanyes actives</string>
     <!-- The button text to add tabs to the inactive tab group in the tab creation tool. -->
