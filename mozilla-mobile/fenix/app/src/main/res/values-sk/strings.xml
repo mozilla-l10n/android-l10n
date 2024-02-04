@@ -256,6 +256,9 @@
          history and go back to the home screen. -->
     <string name="browser_toolbar_erase">Vymazať históriu prehliadania</string>
 
+    <!-- Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred. -->
+    <string name="browser_toolbar_translate">Preložiť stránku</string>
+
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
     <string name="a11y_selected_locale_content_description">Vybraný jazyk</string>
@@ -1888,6 +1891,8 @@
     <string name="credit_cards_warning_dialog_title_2" tools:ignore="UnusedResources">Zabezpečte svoje uložené spôsoby platby</string>
     <!-- Message of warning dialog if users have no device authentication set up -->
     <string name="credit_cards_warning_dialog_message">Nastavte si vzor, kód alebo heslo, ktorým ochránite svoje uložené kreditné karty v prípade, že vaše zariadenie bude používať niekto iný.</string>
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_message_3" tools:ignore="UnusedResources">Nastavte si vzor, kód alebo heslo, ktorým ochránite svoje uložené spôsoby platby v prípade, že vaše zariadenie bude používať niekto iný.</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
     <string name="credit_cards_warning_dialog_set_up_now">Nastaviť teraz</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
@@ -2048,8 +2053,12 @@
     <string name="login_options_menu_2" tools:ignore="UnusedResources">Možnosti hesiel</string>
     <!--  The editable text field for a login's web address. -->
     <string name="saved_login_hostname_description">Upraviteľné textové pole pre webovú adresu.</string>
+    <!--  The editable text field for a website address. -->
+    <string name="saved_login_hostname_description_3" tools:ignore="UnusedResources">Upraviteľné textové pole pre webovú adresu.</string>
     <!--  The editable text field for a login's username. -->
     <string name="saved_login_username_description">Upraviteľné textové pole pre používateľské meno.</string>
+    <!--  The editable text field for a username. -->
+    <string name="saved_login_username_description_3" tools:ignore="UnusedResources">Upraviteľné textové pole pre používateľské meno.</string>
     <!--  The editable text field for a login's password. -->
     <string name="saved_login_password_description">Upraviteľné textové pole pre heslo.</string>
     <!--  The editable text field for a login's password. -->
@@ -2431,6 +2440,8 @@
     <!-- Button content description (not visible, for screen readers etc.) for the translations dialog translate button that indicates a translation is currently in progress. -->
     <string name="translations_bottom_sheet_translating_in_progress_content_description">Práve prebieha preklad</string>
 
+    <!-- Default dropdown option when initially selecting a language from the translations dialog language selection dropdown. -->
+    <string name="translations_bottom_sheet_default_dropdown_selection">Zvoľte jazyk</string>
     <!-- The title of the warning card informs the user that a translation could not be completed. -->
     <string name="translation_error_could_not_translate_warning_text">Pri preklade sa vyskytol problém. Prosím skúste to znova.</string>
     <!-- The title of the warning card informs the user that the list of languages cannot be loaded. -->
@@ -2452,9 +2463,9 @@
     <!-- Toggle switch label that allows a user to set the setting if they would like the browser to never translate the site the user is currently visiting. -->
     <string name="translation_option_bottom_sheet_never_translate_site">Nikdy neprekladať túto stránku</string>
     <!-- Toggle switch description that will appear under the "Never translate these sites" settings toggle switch to provide more information on how this setting interacts with other settings. -->
-    <string name="translation_option_bottom_sheet_switch_never_translate_site_description">Prepíše všetky ostatné nastavenia</string>
+    <string name="translation_option_bottom_sheet_switch_never_translate_site_description">Má prednosť pred ostatnými nastaveniami</string>
     <!-- Toggle switch description that will appear under the "Never translate" and "Always translate" toggle switch settings to provide more information on how these  settings interacts with other settings. -->
-    <string name="translation_option_bottom_sheet_switch_description">Prepíše ponuky na preklad</string>
+    <string name="translation_option_bottom_sheet_switch_description">Nebude ponúkať preklad</string>
     <!-- Button text for the button that will take the user to the translation settings dialog. -->
     <string name="translation_option_bottom_sheet_translation_settings">Nastavenia prekladov</string>
     <!-- Button text for the button that will take the user to a website to learn more about how translations works in the given app. The first parameter is the name of the application, for example, "Fenix". -->
@@ -2466,13 +2477,13 @@
     <!-- Toggle switch label that indicates that the browser should signal or indicate when a translation is possible for any page. -->
     <string name="translation_settings_offer_to_translate">Ak je to možné, ponúknuť preklad</string>
     <!-- Toggle switch label that indicates that downloading files required for translating is permitted when using data saver mode in Android. -->
-    <string name="translation_settings_always_download">Vždy sťahovať jazyky v režime šetrenia dát</string>
+    <string name="translation_settings_always_download">Sťahovať jazyky aj v režime šetrenia dát</string>
     <!-- Section header text that begins the section of a list of different options the user may select to adjust their translation preferences. -->
     <string name="translation_settings_translation_preference">Nastavenia prekladania obsahu</string>
     <!-- Button text for the button that will take the user to the automatic translations settings dialog. On the automatic translations settings dialog, the user can set if translations should occur automatically for a given language. -->
     <string name="translation_settings_automatic_translation">Automatický preklad</string>
     <!-- Button text for the button that will take the user to the never translate these sites dialog. On the never translate these sites dialog, the user can set if translations should never occur on certain websites. -->
-    <string name="translation_settings_automatic_never_translate_sites">Nikdy neprekladať tieto stránky</string>
+    <string name="translation_settings_automatic_never_translate_sites">Neprekladať tieto stránky</string>
     <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
     <string name="translation_settings_download_language">Stiahnuť jazyky</string>
 
@@ -2481,7 +2492,7 @@
     <string name="automatic_translation_toolbar_title_preference">Automatický preklad</string>
 
     <!-- Screen header presenting the automatic translation preference feature. It will appear under the toolbar. -->
-    <string name="automatic_translation_header_preference">Vyberte jazyk, pre ktorý chcete spravovať predvoľby „vždy prekladať“ a „nikdy neprekladať“.</string>
+    <string name="automatic_translation_header_preference">Vyberte jazyk, pre ktorý chcete spravovať predvoľby „Vždy prekladať“ a „Nikdy neprekladať“.</string>
 
     <!-- Automatic translation options preference screen -->
     <!-- Preference option for offering to translate. Radio button title text.-->
@@ -2518,7 +2529,7 @@
     <!-- Title of the download languages preference screen toolbar.-->
     <string name="download_languages_toolbar_title_preference">Stiahnite si jazyky</string>
     <!-- Screen header presenting the download language preference feature. It will appear under the toolbar.The first parameter is "Learn More," a clickable text with a link. Talkback will append this to say "Double tap to open link to learn more". -->
-    <string name="download_languages_header_preference">Stiahnite si kompletné jazyky pre rýchlejšie preklady a preklady offline. %1$s</string>
+    <string name="download_languages_header_preference">Ak chcete rýchlejšie preklady alebo preklady offline, musíte si stiahnuť kompletné jazykové balíky. %1$s</string>
     <!-- Clickable text from the screen header that links to a website. -->
     <string name="download_languages_header_learn_more_preference">Ďalšie informácie</string>
     <!-- The subhead of the download language preference screen will appear above the pivot language. -->
