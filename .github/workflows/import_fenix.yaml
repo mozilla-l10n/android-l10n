@@ -11,16 +11,18 @@ jobs:
       - name: Clone android-l10n repository
         uses: actions/checkout@v4
         with:
-          path: "l10n"
+          path: l10n
       - name: Clone gecko-dev repository
         uses: actions/checkout@v4
         with:
-          repository: "mozilla/gecko-dev"
-          path: "source"
+          repository: mozilla/gecko-dev
+          path: source
+          sparse-checkout: |
+            mobile/android
       - name: Set up Python 3
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.12"
       - name: Install Python dependencies
         run: |
           pip install -r l10n/.github/requirements.txt
