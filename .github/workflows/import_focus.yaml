@@ -30,7 +30,7 @@ jobs:
           --toml source/focus-android/l10n.toml
           --dest l10n/mozilla-mobile/focus-android
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
           path: l10n
