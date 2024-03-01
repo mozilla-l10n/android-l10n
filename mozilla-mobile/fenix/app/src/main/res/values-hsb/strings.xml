@@ -254,6 +254,11 @@
     <!-- Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred. -->
     <string name="browser_toolbar_translate">Stronu přełožić</string>
 
+    <!-- Content description (not visible, for screen readers etc.) for the translate page toolbar button that opens the translations dialog when the page is translated successfully.
+         The first parameter is the name of the language that is displayed in the original page. (For example: English)
+         The second parameter is the name of the language which the page was translated to. (For example: French) -->
+    <string name="browser_toolbar_translated_successfully">Strona je so z rěče %1$s do rěče %2$s přełožiła.</string>
+
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
     <string name="a11y_selected_locale_content_description">Wubrana rěč</string>
@@ -334,8 +339,15 @@
     <string name="juno_onboarding_privacy_notice_text_2" tools:ignore="UnusedResources">Zhońće wjace w našej zdźělence priwatnosće</string>
     <!-- Title for set firefox as default browser screen used by Nimbus experiments. -->
     <string name="juno_onboarding_default_browser_title_nimbus_2">Škitamy was rady</string>
+    <!-- Title for set firefox as default browser screen used by Nimbus experiments.
+        Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_default_browser_title_nimbus_3" tools:ignore="UnusedResources">Wuslědźće, čehodla miliony ludźi Firefox lubuja</string>
+    <!-- Title for set firefox as default browser screen used by Nimbus experiments. -->
+    <string name="juno_onboarding_default_browser_title_nimbus_4" tools:ignore="UnusedResources">Wěste přehladowanje z wjace wuběrami</string>
     <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
     <string name="juno_onboarding_default_browser_description_nimbus_3">Naš powšitkownosći wužitny wobhladowak zadźěwa tomu, zo předewzaća wam skradźu po interneće slěduja.</string>
+    <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
+    <string name="juno_onboarding_default_browser_description_nimbus_5" tools:ignore="UnusedResources">Znate přesćěhowaki? Blokuja so awtomatisce. Rozšěrjenja? Wupruwujće wšě 700. PDF? Naš zatwarjeny čitak wosnadnja je rjadować.</string>
     <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
     <string name="juno_onboarding_default_browser_description_nimbus_2" moz:RemovedIn="124" tools:ignore="UnusedResources">Naš powšitkownosći wužitny wobhladowak tomu zadźěwa, zo předewzaća wam skradźu po interneće slěduja.\n\nDalše informacije w našej zdźělence priwatnosće.</string>
     <!-- Text for the link to the privacy notice webpage for set as firefox default browser screen.
@@ -2339,10 +2351,16 @@ To budźe jenož pomhać, kwalitu pohódnoćenjow posudźić, nic kwalitu produk
     <string name="review_quality_check_contextual_onboarding_caption" moz:RemovedIn="123" tools:ignore="UnusedResources">Hdyž „Haj, wupruwować“ wuběraće, zwoliće do %2$s a %3$s Mozilla za %1$s. </string>
     <!-- Caption text to be displayed in review quality check contextual onboarding card above the opt-in button. Parameter is the Fakespot product name. After the colon, what appears are two links, each on their own line. The first link is to a Privacy policy (review_quality_check_contextual_onboarding_privacy_policy_2). The second link is to Terms of use (review_quality_check_contextual_onboarding_terms_use_2). -->
     <string name="review_quality_check_contextual_onboarding_caption_2" moz:RemovedIn="123" tools:ignore="UnusedResources">Hdyž „Haj, wupruwować“ wuběraće, zwoliće do slědowaceho wot %1$s:</string>
+    <!-- Caption text to be displayed in review quality check contextual onboarding card above the opt-in button. First parameter is Firefox app name, third parameter is the Fakespot product name. Second & fourth are for clickable texts defined in review_quality_check_contextual_onboarding_privacy_policy_3 and review_quality_check_contextual_onboarding_terms_use. -->
+    <string name="review_quality_check_contextual_onboarding_caption_3" moz:RemovedIn="124" tools:ignore="UnusedResources">Hdyž „Haj, wupruwować“ wuběraće, zwoliće do %2$s %1$s a %4$s %3$s </string>
+    <!-- Caption text to be displayed in review quality check contextual onboarding card above the opt-in button. First parameter is Firefox app name, third parameter is the Fakespot product name. Second & fourth are for clickable texts defined in review_quality_check_contextual_onboarding_privacy_policy_3 and review_quality_check_contextual_onboarding_terms_use. -->
+    <string name="review_quality_check_contextual_onboarding_caption_4">Hdyž „Haj, wupruwować“ wuběraće, zwoliće do %2$s %1$s a %4$s %3$s </string>
     <!-- Clickable text from the review quality check contextual onboarding card that links to Fakespot privacy policy. -->
     <string name="review_quality_check_contextual_onboarding_privacy_policy" moz:RemovedIn="123" tools:ignore="UnusedResources">prawidła priwatnosće</string>
     <!-- Clickable text from the review quality check contextual onboarding card that links to Fakespot privacy policy. -->
     <string name="review_quality_check_contextual_onboarding_privacy_policy_2" moz:RemovedIn="123" tools:ignore="UnusedResources">Prawidła priwatnosće</string>
+    <!-- Clickable text from the review quality check contextual onboarding card that links to Fakespot privacy notice. -->
+    <string name="review_quality_check_contextual_onboarding_privacy_policy_3">zdźělenka priwatnosće</string>
     <!-- Clickable text from the review quality check contextual onboarding card that links to Fakespot terms of use. -->
     <string name="review_quality_check_contextual_onboarding_terms_use">wužiwanske wuměnjenja</string>
     <!-- Clickable text from the review quality check contextual onboarding card that links to Fakespot terms of use. -->
@@ -2414,6 +2432,10 @@ To budźe jenož pomhać, kwalitu pohódnoćenjow posudźić, nic kwalitu produk
     <!-- Translation request dialog -->
     <!-- Title for the translation dialog that allows a user to translate the webpage. -->
     <string name="translations_bottom_sheet_title">Tutu stronu přełožować?</string>
+    <!-- Title for the translation dialog after a translation was completed successfully.
+    The first parameter is the name of the language that the page was translated from, for example, "French".
+    The second parameter is the name of the language that the page was translated to, for example, "English". -->
+    <string name="translations_bottom_sheet_title_translation_completed">Strona je so z rěče %1$s do rěče %2$s přełožiła</string>
     <!-- Title for the translation dialog that allows a user to translate the webpage when a user uses the translation feature the first time. The first parameter is the name of the application, for example, "Fenix". -->
     <string name="translations_bottom_sheet_title_first_time">Priwatne přełožki w %1$s testować</string>
     <!-- Additional information on the translation dialog that appears when a user uses the translation feature the first time. The first parameter is clickable text with a link, for example, "Learn more". -->
@@ -2426,6 +2448,8 @@ To budźe jenož pomhać, kwalitu pohódnoćenjow posudźić, nic kwalitu produk
     <string name="translations_bottom_sheet_translate_to">Cilowa rěč</string>
     <!-- Button text on the translations dialog to dismiss the dialog and return to the browser. -->
     <string name="translations_bottom_sheet_negative_button">Nic nětko</string>
+    <!-- Button text on the translations dialog to restore the translated website back to the original untranslated version. -->
+    <string name="translations_bottom_sheet_negative_button_restore">Original pokazać</string>
     <!-- Button text on the translations dialog when a translation error appears, used to dismiss the dialog and return to the browser. -->
     <string name="translations_bottom_sheet_negative_button_error">Dokónčene</string>
     <!-- Button text on the translations dialog to begin a translation of the website. -->
@@ -2447,6 +2471,9 @@ To budźe jenož pomhać, kwalitu pohódnoćenjow posudźić, nic kwalitu produk
     <string name="translation_error_language_not_supported_warning_text">%1$s bohužel hišće njepodpěrujemy.</string>
     <!-- Button text on the warning card when a language is not supported. The link will take the user to a page to a support page about translations. -->
     <string name="translation_error_language_not_supported_learn_more">Dalše informacije</string>
+
+    <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
+    <string name="translation_in_progress_snackbar">Přełožuje so…</string>
 
     <!-- Translations options dialog -->
     <!-- Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on. -->
