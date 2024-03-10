@@ -347,6 +347,8 @@
     <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
     <string name="juno_onboarding_default_browser_description_nimbus_4" tools:ignore="UnusedResources">Больш за 100 мільёнаў чалавек абараняюць сваю прыватнасць, выбіраючы браўзер, які падтрымліваецца некамерцыйнай арганізацыяй.</string>
     <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
+    <string name="juno_onboarding_default_browser_description_nimbus_5" tools:ignore="UnusedResources">Вядомыя трэкеры? Блакуюцца аўтаматычна. Пашырэнні? Паспрабуйце ўсе 700. PDF? Наш убудаваны чытальнік дазваляе лёгка імі кіраваць.</string>
+    <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
     <string name="juno_onboarding_default_browser_description_nimbus_2" moz:RemovedIn="124" tools:ignore="UnusedResources">Наш браўзер, падтрыманы некамерцыйнай арганізацыяй, дапамагае абмяжоўваць кампаніі ад сачэння за вамі ў Інтэрнэце.\n\nДаведайцеся больш у нашым паведамленні аб прыватнасці.</string>
     <!-- Text for the link to the privacy notice webpage for set as firefox default browser screen.
     This is part of the string with the key "juno_onboarding_default_browser_description". -->
@@ -1731,6 +1733,8 @@
     <string name="preferences_passwords_saved_logins_description_empty_text" moz:RemovedIn="125" tools:ignore="UnusedResources">Лагіны, якія вы захаваеце альбо сінхранізуеце праз %s, з’явяцца тут.</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins_description_empty_learn_more_link" moz:RemovedIn="125" tools:ignore="UnusedResources">Даведацца больш пра сінхранізацыю.</string>
+    <!-- Clickable text for opening an external link for more information about Sync. -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">Даведайцеся больш пра сінхранізацыю</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Выключэнні</string>
 
@@ -2470,6 +2474,13 @@
     <string name="translation_in_progress_snackbar">Пераклад…</string>
 
 
+    <!-- Title for the data saving mode warning dialog used in the translation request dialog.
+    This dialog will be presented when the user attempts to perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    The first parameter is the size in kilobytes or megabytes of the language file. -->
+    <string name="translations_download_language_file_dialog_title">Сцягнуць мову ў рэжыме эканоміі трафіку (%1$s)?</string>
+
+
     <!-- Translations options dialog -->
     <!-- Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on. -->
     <string name="translation_option_bottom_sheet_title">Параметры перакладу</string>
@@ -2481,6 +2492,10 @@
     <string name="translation_option_bottom_sheet_never_translate_in_language">Ніколі не перакладаць %1$s</string>
     <!-- Toggle switch label that allows a user to set the setting if they would like the browser to never translate the site the user is currently visiting. -->
     <string name="translation_option_bottom_sheet_never_translate_site">Ніколі не перакладаць гэты сайт</string>
+    <!-- Toggle switch description that will appear under the "Never translate these sites" settings toggle switch to provide more information on how this setting interacts with other settings. -->
+    <string name="translation_option_bottom_sheet_switch_never_translate_site_description">Перавызначае ўсе іншыя налады</string>
+    <!-- Toggle switch description that will appear under the "Never translate" and "Always translate" toggle switch settings to provide more information on how these  settings interacts with other settings. -->
+    <string name="translation_option_bottom_sheet_switch_description">Перавызначае прапановы перакладу</string>
     <!-- Button text for the button that will take the user to the translation settings dialog. -->
     <string name="translation_option_bottom_sheet_translation_settings">Налады перакладу</string>
     <!-- Button text for the button that will take the user to a website to learn more about how translations works in the given app. The first parameter is the name of the application, for example, "Fenix". -->
@@ -2491,6 +2506,8 @@
     <string name="translation_settings_toolbar_title">Пераклады</string>
     <!-- Toggle switch label that indicates that the browser should signal or indicate when a translation is possible for any page. -->
     <string name="translation_settings_offer_to_translate">Прапаноўваць пераклад, калі гэта магчыма</string>
+    <!-- Toggle switch label that indicates that downloading files required for translating is permitted when using data saver mode in Android. -->
+    <string name="translation_settings_always_download">Заўсёды сцягваць мовы ў рэжыме эканоміі трафіку</string>
     <!-- Section header text that begins the section of a list of different options the user may select to adjust their translation preferences. -->
     <string name="translation_settings_translation_preference">Налады перакладу</string>
     <!-- Button text for the button that will take the user to the automatic translations settings dialog. On the automatic translations settings dialog, the user can set if translations should occur automatically for a given language. -->
@@ -2565,6 +2582,8 @@
     <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
     <string name="delete_language_file_dialog_negative_button_text">Скасаваць</string>
 
+    <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
+    <string name="download_language_file_dialog_checkbox_text">Заўсёды сцягваць у рэжыме эканоміі трафіку</string>
     <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
     <string name="download_language_file_dialog_positive_button_text">Сцягнуць</string>
     <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
@@ -2589,6 +2608,10 @@
     <string name="debug_drawer_tab_tools_tab_count_private">Прыватныя</string>
     <!-- The total tab count category in the tab count section in Tab Tools. -->
     <string name="debug_drawer_tab_tools_tab_count_total">Усяго</string>
+    <!-- The title of the tab creation tool section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_creation_tool_title">Інструмент стварэння картак</string>
+    <!-- The label of the text field in the tab creation tool. -->
+    <string name="debug_drawer_tab_tools_tab_creation_tool_text_field_label">Колькасць картак для стварэння</string>
     <!-- The button text to add tabs to the active tab group in the tab creation tool. -->
     <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_active">Дадаць да актыўных картак</string>
     <!-- The button text to add tabs to the inactive tab group in the tab creation tool. -->
