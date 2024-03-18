@@ -30,8 +30,8 @@ class QueryPR:
         """Initialize object."""
 
         self.api_token = api_token
-        self.owner = "mozilla-mobile"
-        self.repository = "firefox-android"
+        self.owner = "mozilla"
+        self.repository = "gecko-dev"
 
     def set_pr_data(self, owner, repository, pr_number):
         self.pr_owner = owner
@@ -97,8 +97,9 @@ class QueryPR:
         for config_name, config_errors in errors.items():
             for filepath, string_ids in config_errors.items():
                 self.lines = []
-                # Need to manually remove part of the path
+                # Need to manually change the path to match gecko-dev
                 filepath = filepath.removeprefix("mozilla-mobile/")
+                filepath = f"mobile/android/{filepath}"
                 for string_id in string_ids:
                     n = self.find_string_line(filepath, string_id)
                     self.lines.append(n)

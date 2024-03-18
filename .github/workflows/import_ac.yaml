@@ -11,23 +11,25 @@ jobs:
       - name: Clone android-l10n repository
         uses: actions/checkout@v4
         with:
-          path: "l10n"
-      - name: Clone main code repository
+          path: l10n
+      - name: Clone gecko-dev repository
         uses: actions/checkout@v4
         with:
-          repository: "mozilla-mobile/firefox-android"
-          path: "source"
+          repository: mozilla/gecko-dev
+          path: source
+          sparse-checkout: |
+            mobile/android/android-components
       - name: Set up Python 3
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.12"
       - name: Install Python dependencies
         run: |
           pip install -r l10n/.github/requirements.txt
       - name: Copy source files
         run: >
           python l10n/.github/scripts/import_strings.py source
-          --toml source/android-components/l10n.toml
+          --toml source/mobile/android/android-components/l10n.toml
           --dest l10n/mozilla-mobile/android-components
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
