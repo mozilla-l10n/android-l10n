@@ -8,14 +8,26 @@
     <string name="mozac_feature_addons_permissions_one_site_description">Kivu nuu datos noo´o saa %1$s</string>
     <!-- Description for giving an add-on access to users's data in multiple sites in the domain %1$s. %1$s will be replaced by the DNS domain for which a web extension is requesting access (e.g., mozilla.org). -->
     <string name="mozac_feature_addons_permissions_sites_in_domain_description">Kivu nuu datos noo´o nuu daa inka sitios dominio %1$s</string>
+    <!-- When an add-on requires access to more than 4 sites, for example the add-on requires access for 5 sites. We will show the first 4 sites in individual entries, as in mozac_feature_addons_permissions_one_site_description,
+     then we will show another collapsed entry saying "Access your data on 1 other site". This entry it's for the singular case, when the add-on is only accessing one extra site. -->
+    <string name="mozac_feature_addons_permissions_one_extra_site_description" tools:ignore="PluralsCandidate">Kivu nuu datos noo´o nuu 1 kuaiyo daa nuu</string>
     <!-- When an add-on requires access to more than 4 sites, for example the add-on requires access for 6 sites. We will show the first 4 sites in individual entries, as in mozac_feature_addons_permissions_one_site_description,
      then we will show another collapsed entry saying "Access your data on 2 other sites". This entry it's for the plural case, when the add-on is accessing more than one extra site.
      %1$d will be replaced by an integer indicating the number of additional hosts for which this web extension is requesting permission. -->
     <string name="mozac_feature_addons_permissions_extra_sites_description" tools:ignore="PluralsCandidate">Kivu nuu datos noo´o nuu %1$d kuaiyo daa nuu</string>
+    <!-- When an add-on requires access to more than 4 domains, for example the add-on requires access for 5 domains. We will show the first 4 domains in individual entries, as in mozac_feature_addons_permissions_sites_in_domain_description,
+      then we will show another collapsed entry saying "Access your data on 1 other domain". This entry it's for the singular case, when the add-on is only accessing one extra domain. -->
+    <string name="mozac_feature_addons_permissions_one_extra_domain_description" tools:ignore="PluralsCandidate">Kivu nuu datos noo´o nuu 1 kuaiyo daa dominios</string>
+    <!-- When an add-on requires access to more than 4 domains, for example the add-on requires access for 6 domains. We will show the first 4 domains in individual entries, as in mozac_feature_addons_permissions_sites_in_domain_description,
+     then we will show another collapsed entry saying "Access your data on 2 other domains". This entry it's for the plural case, when the add-on is accessing more than one extra domain.
+     %1$d will be replaced by an integer indicating the number of additional domains for which this web extension is requesting permission. -->
+    <string name="mozac_feature_addons_permissions_extra_domains_description_plural" tools:ignore="PluralsCandidate">Kivu nuu datos noo´o nuu %1$d kuaiyo daa dominios</string>
     <!-- Content description for a permission item, for an installed add-on details page. %1$s will be replaced with the permission text name, %2$d will be replaced with the permission position in the list and %3$d will be replaced with the total number of permissions in the list.Taking as an example "Read and modify privacy settings" the whole text will read Read and modify privacy settings, 2 of 6. -->
     <string name="mozac_feature_addons_permissions_content_description_item">%1$s, %2$d de %3$d</string>
     <!-- Description for tabs add-on permission. -->
     <string name="mozac_feature_addons_permissions_tabs_description">Kivu nuu pestañas ka̱a̱ nánuku</string>
+    <!-- Description for unlimited_storage permission. -->
+    <string name="mozac_feature_addons_permissions_unlimited_storage_description">Chuva´a yaku datos del lado del cliente</string>
     <!-- Description for navigation permission. -->
     <string name="mozac_feature_addons_permissions_web_navigation_description">Kivu nuu satiñu ka̱a̱ nánuku saa nánukunu</string>
     <!-- Description for bookmarks permission. -->
@@ -28,6 +40,8 @@
     <string name="mozac_feature_addons_permissions_clipboard_read_description">Nake´e tutu datos nuu portapapeles</string>
     <!-- Description for clipboard_write permission. -->
     <string name="mozac_feature_addons_permissions_clipboard_write_description">Chu´un datos nuu portapapeles</string>
+    <!-- Description for declarativeNetRequest permission. -->
+    <string name="mozac_feature_addons_permissions_declarative_net_request_description">Chiyu\'u contenido ntaka nuu</string>
     <!-- Description for declarativeNetRequestFeedback permission. -->
     <string name="mozac_feature_addons_permissions_declarative_net_request_feedback_description">Ka\'vi daa tu\'un nnánukunu</string>
     <!-- Description for downloads permission. -->
@@ -40,10 +54,14 @@
     <string name="mozac_feature_addons_permissions_geolocation_description">Kutuvi nu iñɨ noo´o</string>
     <!-- Description for history permission. -->
     <string name="mozac_feature_addons_permissions_history_description">Kivu nuu tu\'un nnanukunu</string>
+    <!-- Description for management permission. -->
+    <string name="mozac_feature_addons_permissions_management_description">Kumi naja ni´i extensión jee tetiñu daa temas</string>
     <!-- Description for native_messaging permission. -->
     <string name="mozac_feature_addons_permissions_native_messaging_description">Sama tu´un jíí daa inka ka̱a̱ ntu iyo inu</string>
     <!-- Description for notifications permission. -->
     <string name="mozac_feature_addons_permissions_notifications_description">Xine´e notificaciones</string>
+    <!-- Description for sessions permission. -->
+    <string name="mozac_feature_addons_permissions_sessions_description">Kivu nuu pestañas skuata nnakasɨ</string>
     <!-- Description for top_sites permission. -->
     <string name="mozac_feature_addons_permissions_top_sites_description">Kivu nuu tu\'un nnanukunu</string>
     <!-- Description for devtools permission. -->
@@ -60,12 +78,18 @@
     <string name="mozac_feature_addons_learn_more">Ka´vi kue´eka jie´e permisos</string>
     <!-- The rating of the add-on. -->
     <string name="mozac_feature_addons_rating">Clasificación</string>
+    <!-- A link that points to the detail page of the add-on. -->
+    <string name="mozac_feature_addons_more_info_link">Kue\'eka jííe ka̱a̱ nánuku</string>
     <!-- The settings of the add-on. -->
     <string name="mozac_feature_addons_settings">Ke´i</string>
     <!-- Indicates the add-on is enabled. -->
     <string name="mozac_feature_addons_settings_on">Tɨɨn</string>
     <!-- Indicates the add-on is disabled. -->
     <string name="mozac_feature_addons_settings_off" moz:removedIn="125" tools:ignore="UnusedResources">Xina´va</string>
+    <!-- Indicates the add-on is allowed in private browsing mode. -->
+    <string name="mozac_feature_addons_settings_allow_in_private_browsing">Jia\'a kaka yu\'unu</string>
+    <!-- Indicates the add-on is allowed in private browsing mode. -->
+    <string name="mozac_feature_addons_settings_run_in_private_browsing">Kua\'a sá´á kaka yu\'unu</string>
     <!-- Indicates the add-on is enabled. -->
     <string name="mozac_feature_addons_enabled">Tee</string>
     <!-- Indicates the add-on is disabled. -->
@@ -124,8 +148,16 @@
     <string name="mozac_feature_addons_updater_notification_allow_button">Kuvi</string>
     <!-- The label of the deny button on a notification, this will be shown to the user when an add-on needs new permissions. Indicates the user denies the new permissions and prevents the add-on from be updated-->
     <string name="mozac_feature_addons_updater_notification_deny_button">Nkuvi jia´a</string>
+    <!-- The tile of the notification, this will be shown to the user when an add-on needs new permissions, to be updated. %1$s is the name of the add-ons-->
+    <string name="mozac_feature_addons_updater_notification_title">%1$s íyo iin actualización jía</string>
+    <!-- The content of the notification, this will be shown when an add-on needs new permissions, to be updated. %1$d is the amount of new permissions-->
+    <string name="mozac_feature_addons_updater_notification_content" tools:ignore="PluralsCandidate">Jiniñu\'u %1$d permisos jía </string>
+    <!-- The content of the notification displayed when an add-on needs a new permission-->
+    <string name="mozac_feature_addons_updater_notification_content_singular">Jiniñu\'u iin permiso jía </string>
     <!-- Name of the "notification channel" used for displaying a notification for updating an add-on. See https://developer.android.com/training/notify-user/channels -->
     <string name="mozac_feature_addons_updater_notification_channel">A jíía ka̱a̱ chunta´an</string>
+    <!-- The tile of the notification, this will be shown to the user when one newly supported add-on is available.-->
+    <string name="mozac_feature_addons_supported_checker_notification_title">Iyo ka̱a̱ chunta\'an jía</string>
     <!-- The content of the notification, this will be shown to the user when one newly supported add-on is available. %1$s is the add-on name and %2$s is the app name (in most cases Firefox). -->
     <string name="mozac_feature_addons_supported_checker_notification_content_one">Tee %1$s a %2$s</string>
     <!-- The content of the notification, this will be shown to the user when two newly supported add-ons are available. %1$s is the first add-on name. %2$s is the second add-on name. %3$s is the app name (in most cases Firefox). -->
