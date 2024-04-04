@@ -367,6 +367,9 @@
     <string name="juno_onboarding_sign_in_positive_button" tools:ignore="UnusedResources">Sign in</string>
     <!-- Text for the button dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_sign_in_negative_button" tools:ignore="UnusedResources">Not now</string>
+    <!-- Description for enable notification permission screen used by Nimbus experiments. Nimbus experiments do not support string placeholders.
+       Note: The word "Firefox" should NOT be translated -->
+    <string name="juno_onboarding_enable_notifications_description_nimbus_2">Securely send tabs between your devices and discover other privacy features in Firefox.</string>
     <!-- Text for the button to request notification permission on the device -->
     <string name="juno_onboarding_enable_notifications_positive_button" tools:ignore="UnusedResources">Turn on notifications</string>
     <!-- Text for the button dismiss the screen and move on with the flow -->
@@ -404,6 +407,8 @@
     <string name="preferences_category_about">About</string>
     <!-- Preference category for settings related to changing the default search engine -->
     <string name="preferences_category_select_default_search_engine">Select one</string>
+    <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
+    <string name="preferences_manage_search_shortcuts_2">Manage alternative search engines</string>
     <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
     <string name="preferences_manage_search_shortcuts_summary">Edit engines visible in the search menu</string>
     <!-- Preference category for settings related to managing search shortcuts for the quick search menu -->
@@ -414,6 +419,14 @@
     <string name="preferences_search">Search</string>
     <!-- Preference for settings related to Search engines -->
     <string name="preferences_search_engines">Search engines</string>
+    <!-- Preference for settings related to Search engines suggestions-->
+    <string name="preferences_search_engines_suggestions">Suggestions from search engines</string>
+    <!-- Preference Category for settings related to Search address bar -->
+    <string name="preferences_settings_address_bar">Address bar preferences</string>
+    <!-- Preference Category for settings to Firefox Suggest -->
+    <string name="preference_search_address_bar_fx_suggest">Address bar - Firefox Suggest</string>
+    <!-- Preference link to Learn more about Firefox Suggest -->
+    <string name="preference_search_learn_about_fx_suggest">Learn more about Firefox Suggest</string>
     <!-- Preference link to rating Fenix on the Play Store -->
     <string name="preferences_rate">Rate on Google Play</string>
     <!-- Preference linking to about page for Fenix
@@ -440,6 +453,10 @@
     <!-- Preference for enabling "HTTPS-Only" mode -->
     <string name="preferences_https_only_title">HTTPS-Only Mode</string>
 
+    <!-- Label for cookie banner section in quick settings panel. -->
+    <string name="cookie_banner_blocker">Cookie Banner Blocker</string>
+    <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
+    <string name="preferences_cookie_banner_reduction_private_mode">Cookie Banner Blocker in private browsing</string>
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_off_for_site">Off for this site</string>
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
@@ -457,8 +474,21 @@
     <string name="reduce_cookie_banner_unsupported_site_request_submitted_2">Support request sent</string>
     <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_unsupported_site">Site currently not supported</string>
+    <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
+    <string name="reduce_cookie_banner_details_panel_title_on_for_site_1">Turn on Cookie Banner Blocker for %1$s?</string>
+    <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
+    <string name="reduce_cookie_banner_details_panel_title_off_for_site_1">Turn off Cookie Banner Blocker for %1$s?</string>
     <!-- Title text for a detail explanation indicating cookie banner reducer didn't work for the current site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name-->
     <string name="reduce_cookie_banner_details_panel_title_unsupported_site_request_2">%1$s can’t automatically reject cookie requests on this site. You can send a request to support this site in the future.</string>
+
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name -->
+    <string name="reduce_cookie_banner_details_panel_description_off_for_site_1">Turn off and %1$s will clear cookies and reload this site. This may sign you out or empty shopping carts.</string>
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name -->
+    <string name="reduce_cookie_banner_details_panel_description_on_for_site_3">Turn on and %1$s will try to automatically refuse all cookie banners on this site.</string>
+    <!--Title for the cookie banner re-engagement CFR, the placeholder is replaced with app name -->
+    <string name="cookie_banner_cfr_title">%1$s just refused cookies for you</string>
+    <!--Message for the cookie banner re-engagement CFR -->
+    <string name="cookie_banner_cfr_message">Less distractions, less cookies tracking you on this site.</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Automatically attempts to connect to sites using HTTPS encryption protocol for increased security.</string>
@@ -482,8 +512,12 @@
     <string name="errorpage_httpsonly_message_summary">However, it’s also possible that an attacker is involved. If you continue to the website, you should not enter any sensitive info. If you continue, HTTPS-Only mode will be turned off temporarily for the site.</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">Accessibility</string>
+    <!-- Preference to override the Mozilla account server -->
+    <string name="preferences_override_account_server">Custom Mozilla account server</string>
     <!-- Preference to override the Sync token server -->
     <string name="preferences_override_sync_tokenserver">Custom Sync server</string>
+    <!-- Toast shown after updating the Mozilla account/Sync server override preferences -->
+    <string name="toast_override_account_sync_server_done">Mozilla account/Sync server modified. Quitting the application to apply changes…</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Account</string>
     <!-- Preference for changing where the toolbar is positioned -->
@@ -498,6 +532,8 @@
     <string name="preferences_customize">Customize</string>
     <!-- Preference description for banner about signing in -->
     <string name="preferences_sign_in_description_2">Sign in to sync tabs, bookmarks, passwords, and more.</string>
+    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
+    <string name="preferences_account_default_name_2">Mozilla account</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Reconnect to resume syncing</string>
     <!-- Preference for language -->
@@ -526,6 +562,16 @@
     <string name="preferences_account_settings">Account settings</string>
     <!-- Preference for enabling url autocomplete-->
     <string name="preferences_enable_autocomplete_urls">Autocomplete URLs</string>
+    <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
+    <string name="preferences_show_sponsored_suggestions">Suggestions from sponsors</string>
+    <!-- Summary for preference to show sponsored Firefox Suggest search suggestions.
+         The first parameter is the name of the application. -->
+    <string name="preferences_show_sponsored_suggestions_summary">Support %1$s with occasional sponsored suggestions</string>
+    <!-- Preference title for switch preference to show Firefox Suggest search suggestions for web content.
+         The first parameter is the name of the application. -->
+    <string name="preferences_show_nonsponsored_suggestions">Suggestions from %1$s</string>
+    <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+    <string name="preferences_show_nonsponsored_suggestions_summary">Get suggestions from the web related to your search</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Open links in apps</string>
 
@@ -545,6 +591,8 @@
     <!-- Preference for add_ons -->
     <string name="preferences_addons">Add-ons</string>
 
+    <!-- Preference for installing a local add-on -->
+    <string name="preferences_install_local_addon">Install add-on from file</string>
     <!-- Preference for notifications -->
     <string name="preferences_notifications">Notifications</string>
 
@@ -619,6 +667,14 @@
     <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
     <string name="wallpapers_onboarding_dialog_explore_more_button_text">Explore more wallpapers</string>
 
+    <!-- Add-ons general availability nimbus message-->
+    <!-- Title of the Nimbus message for add-ons general availability-->
+    <string name="addon_ga_message_title" tools:ignore="UnusedResources">New add-ons now available</string>
+    <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here-->
+    <string name="addon_ga_message_body" tools:ignore="UnusedResources">Check out 100+ new extensions that let you make Firefox your own.</string>
+    <!-- Button text of the Nimbus message for add-ons general availability. -->
+    <string name="addon_ga_message_button" tools:ignore="UnusedResources">Explore add-ons</string>
+
     <!-- Add-on process crash dialog to user -->
     <!-- Title of a dialog shown to the user when enough errors have occurred with addons and they need to be temporarily disabled -->
     <string name="addon_process_crash_dialog_title" tools:ignore="UnusedResources">Add-ons are temporarily disabled</string>
@@ -632,6 +688,8 @@
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">Manage account</string>
+    <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
+    <string name="preferences_manage_account_summary">Change your password, manage data collection, or delete your account</string>
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Sync now</string>
     <!-- Preference category for sync -->
@@ -642,6 +700,8 @@
     <string name="preferences_sync_bookmarks">Bookmarks</string>
     <!-- Preference for syncing logins -->
     <string name="preferences_sync_logins" moz:RemovedIn="125" tools:ignore="UnusedResources">Logins</string>
+    <!-- Preference for syncing passwords -->
+    <string name="preferences_sync_logins_2">Passwords</string>
     <!-- Preference for syncing tabs -->
     <string name="preferences_sync_tabs_2">Open tabs</string>
     <!-- Preference for signing out -->
@@ -668,6 +728,8 @@
 
     <!-- Preference for syncing credit cards -->
     <string name="preferences_sync_credit_cards" moz:RemovedIn="125" tools:ignore="UnusedResources">Credit cards</string>
+    <!-- Preference for syncing payment methods -->
+    <string name="preferences_sync_credit_cards_2">Payment methods</string>
     <!-- Preference for syncing addresses -->
     <string name="preferences_sync_address">Addresses</string>
 
@@ -1246,6 +1308,10 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Close private tabs</string>
 
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
+    <string name="notification_erase_title_android_14">Close private tabs?</string>
+    <string name="notification_erase_text_android_14">Tap or swipe this notification to close private tabs.</string>
+
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Marketing</string>
 
@@ -1481,6 +1547,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cookies_4">All cookies (will cause websites to break)</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies_5">Isolate cross-site cookies</string>
+    <!-- Preference for Global Privacy Control for the custom privacy settings for Global Privacy Control. '&amp;' is replaced with the ampersand symbol: &-->
+    <string name="preference_enhanced_tracking_protection_custom_global_privacy_control">Tell websites not to share &amp; sell data</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content">Tracking content</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
@@ -1595,8 +1663,12 @@
 
     <!-- Preference for managing the settings for logins and passwords in Fenix -->
     <string name="preferences_passwords_logins_and_passwords" moz:RemovedIn="125" tools:ignore="UnusedResources">Logins and passwords</string>
+    <!-- Preference for managing the settings for logins and passwords in Fenix -->
+    <string name="preferences_passwords_logins_and_passwords_2">Passwords</string>
     <!-- Preference for managing the saving of logins and passwords in Fenix -->
     <string name="preferences_passwords_save_logins" moz:RemovedIn="125" tools:ignore="UnusedResources">Save logins and passwords</string>
+    <!-- Preference for managing the saving of logins and passwords in Fenix -->
+    <string name="preferences_passwords_save_logins_2">Save passwords</string>
     <!-- Preference option for asking to save passwords in Fenix -->
     <string name="preferences_passwords_save_logins_ask_to_save">Ask to save</string>
     <!-- Preference option for never saving passwords in Fenix -->
@@ -1613,26 +1685,45 @@
     <!-- Preference option for adding a login -->
     <string name="preferences_logins_add_login" moz:RemovedIn="125" tools:ignore="UnusedResources">Add login</string>
 
+    <!-- Preference option for adding a password -->
+    <string name="preferences_logins_add_login_2">Add password</string>
+
     <!-- Preference for syncing saved passwords in Fenix -->
     <string name="preferences_passwords_sync_logins" moz:RemovedIn="125" tools:ignore="UnusedResources">Sync logins</string>
+    <!-- Preference for syncing saved passwords in Fenix -->
+    <string name="preferences_passwords_sync_logins_2">Sync passwords</string>
     <!-- Preference for syncing saved logins in Fenix, when not signed in-->
     <string name="preferences_passwords_sync_logins_across_devices" moz:RemovedIn="125" tools:ignore="UnusedResources">Sync logins across devices</string>
+    <!-- Preference for syncing saved passwords in Fenix, when not signed in-->
+    <string name="preferences_passwords_sync_logins_across_devices_2">Sync passwords across devices</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins" moz:RemovedIn="125" tools:ignore="UnusedResources">Saved logins</string>
+    <!-- Preference to access list of saved passwords -->
+    <string name="preferences_passwords_saved_logins_2">Saved passwords</string>
     <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
     <string name="preferences_passwords_saved_logins_description_empty_text" moz:RemovedIn="125" tools:ignore="UnusedResources">The logins you save or sync to %s will show up here.</string>
+    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
+    <string name="preferences_passwords_saved_logins_description_empty_text_2">The passwords you save or sync to %s will be listed here. All passwords you save are encrypted.</string>
     <!-- Preference to access list of saved logins -->
     <string name="preferences_passwords_saved_logins_description_empty_learn_more_link" moz:RemovedIn="125" tools:ignore="UnusedResources">Learn more about Sync.</string>
+    <!-- Clickable text for opening an external link for more information about Sync. -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">Learn more about sync</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Exceptions</string>
     <!-- Empty description of list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions_description_empty" moz:RemovedIn="125" tools:ignore="UnusedResources">Logins and passwords that are not saved will be shown here.</string>
+    <!-- Empty description of list of login exceptions that we never save passwords for. Parameter will be replaced by app name. -->
+    <string name="preferences_passwords_exceptions_description_empty_2">%s won’t save passwords for sites listed here.</string>
     <!-- Description of list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions_description" moz:RemovedIn="125" tools:ignore="UnusedResources">Logins and passwords will not be saved for these sites.</string>
+    <!-- Description of list of login exceptions that we never save passwords for. Parameter will be replaced by app name. -->
+    <string name="preferences_passwords_exceptions_description_2">%s won’t save passwords for these sites.</string>
     <!-- Text on button to remove all saved login exceptions -->
     <string name="preferences_passwords_exceptions_remove_all">Delete all exceptions</string>
     <!-- Hint for search box in logins list -->
     <string name="preferences_passwords_saved_logins_search" moz:RemovedIn="125" tools:ignore="UnusedResources">Search logins</string>
+    <!-- Hint for search box in passwords list -->
+    <string name="preferences_passwords_saved_logins_search_2">Search passwords</string>
     <!-- The header for the site that a login is for -->
     <string name="preferences_passwords_saved_logins_site">Site</string>
     <!-- The header for the username for a login -->
@@ -1661,10 +1752,16 @@
     <string name="saved_login_hide_password">Hide password</string>
     <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their logins -->
     <string name="logins_biometric_prompt_message" moz:RemovedIn="125" tools:ignore="UnusedResources">Unlock to view your saved logins</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their passwords -->
+    <string name="logins_biometric_prompt_message_2">Unlock to view your saved passwords</string>
     <!-- Title of warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_title" moz:RemovedIn="125" tools:ignore="UnusedResources">Secure your logins and passwords</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_title_2">Secure your saved passwords</string>
     <!-- Message of warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_message" moz:RemovedIn="125" tools:ignore="UnusedResources">Set up a device lock pattern, PIN, or password to protect your saved logins and passwords from being accessed if someone else has your device.</string>
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_message_2">Set up a device lock pattern, PIN, or password to protect your saved passwords from being accessed if someone else has your device.</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">Later</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -1683,6 +1780,9 @@
     <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
     <string name="saved_logins_menu_dropdown_chevron_icon_content_description" moz:RemovedIn="125" tools:ignore="UnusedResources">Sort logins menu</string>
 
+    <!-- Content description (not visible, for screen readers etc.) -->
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Sort passwords menu</string>
+
     <!-- Autofill -->
     <!-- Preference and title for managing the autofill settings -->
     <string name="preferences_autofill">Autofill</string>
@@ -1690,10 +1790,16 @@
     <string name="preferences_addresses">Addresses</string>
     <!-- Preference and title for managing the settings for credit cards -->
     <string name="preferences_credit_cards" moz:RemovedIn="125" tools:ignore="UnusedResources">Credit cards</string>
+    <!-- Preference and title for managing the settings for payment methods -->
+    <string name="preferences_credit_cards_2">Payment methods</string>
     <!-- Preference for saving and autofilling credit cards -->
     <string name="preferences_credit_cards_save_and_autofill_cards" moz:RemovedIn="125" tools:ignore="UnusedResources">Save and autofill cards</string>
+    <!-- Preference for saving and autofilling credit cards -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_2">Save and fill payment methods</string>
     <!-- Preference summary for saving and autofilling credit card data -->
     <string name="preferences_credit_cards_save_and_autofill_cards_summary" moz:RemovedIn="125" tools:ignore="UnusedResources">Data is encrypted</string>
+    <!-- Preference summary for saving and autofilling payment method data. Parameter will be replaced by app name. -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary_2">%s encrypts all payment methods you save</string>
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
     <string name="preferences_credit_cards_sync_cards_across_devices">Sync cards across devices</string>
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
@@ -1701,6 +1807,8 @@
     <!-- Preference option for adding a credit card -->
     <string name="preferences_credit_cards_add_credit_card" moz:RemovedIn="125" tools:ignore="UnusedResources">Add credit card</string>
 
+    <!-- Preference option for adding a card -->
+    <string name="preferences_credit_cards_add_credit_card_2">Add card</string>
     <!-- Preference option for managing saved credit cards -->
     <string name="preferences_credit_cards_manage_saved_cards" moz:RemovedIn="125" tools:ignore="UnusedResources">Manage saved cards</string>
     <!-- Preference option for adding an address -->
