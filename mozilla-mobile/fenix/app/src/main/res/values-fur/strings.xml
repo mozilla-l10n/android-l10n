@@ -615,6 +615,8 @@
     <string name="preferences_extensions">Estensions</string>
     <!-- Preference for installing a local add-on -->
     <string name="preferences_install_local_addon" moz:removedIn="126" tools:ignore="UnusedResources">Instale component adizionâl di un file</string>
+    <!-- Preference for installing a local extension -->
+    <string name="preferences_install_local_extension">Instale estension indicant un file</string>
     <!-- Preference for notifications -->
     <string name="preferences_notifications">Notifichis</string>
 
@@ -626,6 +628,8 @@
     <!-- Add-on Preferences -->
     <!-- Preference to customize the configured AMO (addons.mozilla.org) collection -->
     <string name="preferences_customize_amo_collection" moz:removedIn="126" tools:ignore="UnusedResources">Racuelte personalizade di components adizionai</string>
+    <!-- Preference to customize the configured AMO (addons.mozilla.org) collection -->
+    <string name="preferences_customize_extension_collection">Racuelte di estensions personalizade</string>
     <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">Va ben</string>
     <!-- Button caption to abort the add-on collection configuration -->
@@ -638,6 +642,9 @@
 
     <!-- Toast shown after confirming the custom add-on collection configuration -->
     <string name="toast_customize_addon_collection_done" moz:removedIn="126" tools:ignore="UnusedResources">Racuelte di components adizionâi modificade. La aplicazion e vignarà sierade par aplicâ lis modifichis…</string>
+
+    <!-- Toast shown after confirming the custom extension collection configuration -->
+    <string name="toast_customize_extension_collection_done">Racuelte di estensions modificade. La aplicazion e vignarà sierade par aplicâ lis modifichis…</string>
 
     <!-- Customize Home -->
     <!-- Header text for jumping back into the recent tab in customize the home screen -->
@@ -694,21 +701,37 @@
     <!-- Add-ons general availability nimbus message-->
     <!-- Title of the Nimbus message for add-ons general availability-->
     <string name="addon_ga_message_title" moz:removedIn="126" tools:ignore="UnusedResources">A son disponibii gnûfs components adizionâi</string>
+    <!-- Title of the Nimbus message for extension general availability-->
+    <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">A son disponibilis gnovis estensions</string>
     <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here-->
     <string name="addon_ga_message_body" tools:ignore="UnusedResources">Scuvierç plui di 100 gnovis estensions che ti permetin di personalizâ Firefox.</string>
     <!-- Button text of the Nimbus message for add-ons general availability. -->
     <string name="addon_ga_message_button" moz:removedIn="126" tools:ignore="UnusedResources">Esplore i components adizionâi</string>
 
+    <!-- Button text of the Nimbus message for extensions general availability. -->
+    <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Esplore lis estensions</string>
+
     <!-- Extension process crash dialog to user -->
     <!-- Title of a dialog shown to the user when enough errors have occurred with addons and they need to be temporarily disabled -->
     <string name="addon_process_crash_dialog_title" moz:removedIn="126" tools:ignore="UnusedResources">I components adizionâi a son disativâts in mût temporani</string>
 
+    <!-- Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled -->
+    <string name="extension_process_crash_dialog_title">Lis estensions a son disativadis in mût temporani</string>
     <!-- The first parameter is the application name. This is a message shown to the user when too many errors have occurred with the addons process and they have been disabled. The user can decide if they would like to continue trying to start add-ons or if they'd rather continue without them. -->
     <string name="addon_process_crash_dialog_message" moz:removedIn="126" tools:ignore="UnusedResources">Un o plui components adizionâi a àn fermât di funzionâ, rindint instabil il sisteme. %1$s al à cirût di tornâ a inviâ i components adizionâi cence sucès.\n\nDilunc cheste session no si tornarà a inviâ i components adizionâi.\n\nLa rimozion o la disativazion dai components adizionâi e podarès risolvi chest probleme.</string>
+    <!-- This is a message shown to the user when too many errors have occurred with the extensions process and they have been disabled.
+    The user can decide if they would like to continue trying to start extensions or if they'd rather continue without them.
+    The first parameter is the application name. -->
+    <string name="extension_process_crash_dialog_message">Une o plui estensions si son fermadis e no funzionin, rindint instabil il sisteme. %1$s al à cirût di tornâ a inviâ lis estensions cence furtune.\n\nIn cheste session lis estensions no vignaran plui inviadis di gnûf.\n\nLa rimozion o la disativazion des estensions e podarès comedâ il probleme.</string>
     <!-- This will cause the add-ons to try restarting but the dialog will reappear if it is unsuccessful again -->
     <string name="addon_process_crash_dialog_retry_button_text" moz:removedIn="126" tools:ignore="UnusedResources">Prove a tornâ a inviâ i components adizionâi</string>
+    <!-- Button text on the extension crash dialog to prompt the user to try restarting the extensions but the dialog will reappear if it is unsuccessful again -->
+    <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Prove a inviâ di gnûf lis estensions</string>
     <!-- The user will continue with all add-ons disabled -->
     <string name="addon_process_crash_dialog_disable_addons_button_text" moz:removedIn="126" tools:ignore="UnusedResources">Continue cui components adizionâi disativâts</string>
+
+    <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
+    <string name="extension_process_crash_dialog_disable_extensions_button_text">Continue cu lis estensions disativadis</string>
 
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
@@ -2608,6 +2631,8 @@
     <string name="download_language_file_dialog_title">Discjariâ se in modalitât sparagn dâts (%1$s)?</string>
     <!-- Additional information for the data saving mode warning dialog used by the translations feature. This text explains the reason a download is required for a translation. -->
     <string name="download_language_file_dialog_message_all_languages">O discjamìn lenghis parziâls te tô memorie cache par tignî privadis lis traduzions.</string>
+    <!-- Additional information for the data saving mode warning dialog used by the translations feature. This text explains the reason a download is required for a translation without mentioning the cache. -->
+    <string name="download_language_file_dialog_message_all_languages_no_cache">O discjariìn lenghis parziâls par mantignî privadis lis traduzions.</string>
     <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
     <string name="download_language_file_dialog_checkbox_text">Discjame simpri in modalitât sparagn dâts</string>
     <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
