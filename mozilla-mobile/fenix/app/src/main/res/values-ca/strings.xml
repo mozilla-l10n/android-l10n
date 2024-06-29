@@ -768,6 +768,15 @@
     <!-- Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled -->
     <string name="extension_process_crash_dialog_title">Les extensions s’han desactivat temporalment</string>
 
+    <!-- This is a message shown to the user when too many errors have occurred with the extensions process and they have been disabled.
+    The user can decide if they would like to continue trying to start extensions or if they'd rather continue without them.
+    The first parameter is the application name. -->
+    <string name="extension_process_crash_dialog_message">Una o més extensions han deixat de funcionar, i això fa que el vostre sistema sigui inestable. El %1$s ha intentat reiniciar les extensions sense èxit.\n\nLes extensions no es reiniciaran durant la sessió actual.\n\nPodeu eliminar o desactivar extensions per intentar solucionar el problema.</string>
+    <!-- Button text on the extension crash dialog to prompt the user to try restarting the extensions but the dialog will reappear if it is unsuccessful again -->
+    <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Prova de reiniciar les extensions</string>
+    <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
+    <string name="extension_process_crash_dialog_disable_extensions_button_text">Continua amb les extensions desactivades</string>
+
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">Gestiona el compte</string>
@@ -821,6 +830,14 @@
     <string name="fxa_tab_received_notification_name">S’ha rebut una pestanya</string>
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Pestanya de %s</string>
+
+    <!-- Close Synced Tabs -->
+    <!-- The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.  -->
+    <string name="fxa_tabs_closed_notification_title">Pestanyes del %1$s tancades: %2$d</string>
+    <!-- The body for a "closed synced tabs" notification. -->
+    <string name="fxa_tabs_closed_text">Mostra les pestanyes tancades recentment</string>
 
     <!-- Advanced Preferences -->
     <!-- Preference for tracking protection exceptions -->
@@ -883,6 +900,11 @@
     <string name="preference_gestures_swipe_toolbar_switch_tabs" moz:removedIn="129" tools:ignore="UnusedResources">Canvia de pestanya en fer lliscar la barra d’eines cap als costats</string>
     <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
     <string name="preference_gestures_swipe_toolbar_show_tabs">Mostra les pestanyes obertes en fer lliscar la barra d’eines cap amunt</string>
+
+    <!-- Preference for using the dynamic toolbars -->
+    <string name="preference_gestures_dynamic_toolbar_2">Desplaceu-vos per amagar la barra d’adreces i la barra d’eines</string>
+    <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Canvia de pestanya en fer lliscar la barra d’adreces cap als costats</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -1390,8 +1412,26 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Tanca les pestanyes privades</string>
 
+    <!-- Microsuverys -->
+    <!-- Text shown in prompt for printing microsurvey. "sec" It's an abrevation for "second". -->
+    <string name="microsurvey_prompt_printing_title" tools:ignore="UnusedResources">Ajudeu-nos a millorar la impressió en el Firefox. Només és un minut.</string>
+    <!-- Text shown in prompt for printing microsurvey. 'Firefox' intentionally hardcoded here--> --&gt;
+    <string name="microsurvey_survey_printing_title" tools:ignore="UnusedResources">Esteu satisfet/a de la impressió en el Firefox?</string>
+    <!-- Text for option one, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_0" tools:ignore="UnusedResources">Neutre/a</string>
+    <!-- Text for option two, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_1" tools:ignore="UnusedResources">Molt insatisfet/a</string>
+    <!-- Text for option three, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_2" tools:ignore="UnusedResources">Insatisfet/a</string>
+    <!-- Text for option four, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_3" tools:ignore="UnusedResources">Satisfet/a</string>
+    <!-- Text for option five, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_4" tools:ignore="UnusedResources">Molt satisfet/a</string>
+
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
     <string name="notification_erase_title_android_14">Voleu tancar les pestanyes privades?</string>
+
+    <string name="notification_erase_text_android_14">Toqueu o feu lliscar aquesta notificació per a tancar les pestanyes privades.</string>
 
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Màrqueting</string>
@@ -1778,8 +1818,14 @@
     <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">Més informació sobre la sincronització</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Excepcions</string>
+    <!-- Empty description of list of login exceptions that we never save passwords for. Parameter will be replaced by app name. -->
+    <string name="preferences_passwords_exceptions_description_empty_2">El %s no desarà les contrasenyes dels llocs llistats aquí.</string>
+    <!-- Description of list of login exceptions that we never save passwords for. Parameter will be replaced by app name. -->
+    <string name="preferences_passwords_exceptions_description_2">El %s no desarà les contrasenyes d’aquests llocs.</string>
     <!-- Text on button to remove all saved login exceptions -->
     <string name="preferences_passwords_exceptions_remove_all">Suprimeix totes les excepcions</string>
+    <!-- Hint for search box in passwords list -->
+    <string name="preferences_passwords_saved_logins_search_2">Cerca contrasenyes</string>
     <!-- The header for the site that a login is for -->
     <string name="preferences_passwords_saved_logins_site">Lloc</string>
     <!-- The header for the username for a login -->
@@ -1806,6 +1852,12 @@
     <string name="saved_login_reveal_password">Mostra la contrasenya</string>
     <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
     <string name="saved_login_hide_password">Amaga la contrasenya</string>
+    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their passwords -->
+    <string name="logins_biometric_prompt_message_2">Desbloqueu per veure les contrasenyes desades</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_title_2">Protegiu les contrasenyes desades</string>
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="logins_warning_dialog_message_2">Configureu un patró de bloqueig del dispositiu, un PIN o una contrasenya perquè cap persona que accedeixi al vostre dispositiu pugui veure les contrasenyes que deseu.</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">Més tard</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -1822,6 +1874,9 @@
     <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
     <string name="saved_logins_sort_strategy_last_used">Darrer ús</string>
 
+    <!-- Content description (not visible, for screen readers etc.) -->
+    <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Menú d’ordenar les contrasenyes</string>
+
     <!-- Autofill -->
     <!-- Preference and title for managing the autofill settings -->
     <string name="preferences_autofill">Emplenament automàtic</string>
@@ -1830,6 +1885,10 @@
 
     <!-- Preference and title for managing the settings for payment methods -->
     <string name="preferences_credit_cards_2">Formes de pagament</string>
+    <!-- Preference for saving and autofilling credit cards -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_2">Desa i emplena les formes de pagament</string>
+    <!-- Preference summary for saving and autofilling payment method data. Parameter will be replaced by app name. -->
+    <string name="preferences_credit_cards_save_and_autofill_cards_summary_2">El %s xifra totes les formes de pagament que deseu</string>
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
     <string name="preferences_credit_cards_sync_cards_across_devices">Sincronitza les targetes entre dispositius</string>
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
@@ -1885,6 +1944,10 @@
     <string name="credit_cards_name_on_card_validation_error_message_2">Afegiu un nom</string>
     <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
     <string name="credit_cards_biometric_prompt_message">Desbloqueu per veure les targetes desades</string>
+    <!-- Title of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_title_2">Protegiu les formes de pagament desades</string>
+    <!-- Message of warning dialog if users have no device authentication set up -->
+    <string name="credit_cards_warning_dialog_message_3">Configureu un patró de bloqueig del dispositiu, un PIN o una contrasenya perquè cap persona que accedeixi al vostre dispositiu pugui veure les formes de pagament que deseu.</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
     <string name="credit_cards_warning_dialog_set_up_now">Configura-ho ara</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
@@ -1892,12 +1955,16 @@
     <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their credit cards -->
     <string name="credit_cards_biometric_prompt_message_pin">Desbloqueu el dispositiu</string>
 
+    <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored payment method information -->
+    <string name="credit_cards_biometric_prompt_unlock_message_2">Desbloqueu per utilitzar les formes de pagament desades</string>
     <!-- Title of the "Add address" screen -->
     <string name="addresses_add_address">Afegeix una adreça</string>
     <!-- Title of the "Edit address" screen -->
     <string name="addresses_edit_address">Edita l’adreça</string>
     <!-- Title of the "Manage addresses" screen -->
     <string name="addresses_manage_addresses">Gestiona les adreces</string>
+    <!-- The header for the name of an address. Name represents a person's full name, typically made up of a first, middle and last name, e.g. John Joe Doe. -->
+    <string name="addresses_name">Nom</string>
     <!-- The header for the street address of an address -->
     <string name="addresses_street_address">Adreça postal</string>
     <!-- The header for the city of an address -->
@@ -2020,6 +2087,8 @@
     <string name="login_menu_delete_button">Suprimeix</string>
     <!-- Login overflow menu edit button -->
     <string name="login_menu_edit_button">Edita</string>
+    <!-- Message in delete confirmation dialog for password -->
+    <string name="login_deletion_confirmation_2">Segur que voleu suprimir aquesta contrasenya?</string>
     <!-- Positive action of a dialog asking to delete  -->
     <string name="dialog_delete_positive">Suprimeix</string>
     <!-- Negative action of a dialog asking to delete login -->
