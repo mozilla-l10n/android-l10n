@@ -146,6 +146,12 @@
     <string name="mozac_feature_addons_addons_manager">Administrador de complementos</string>
     <!-- The title of the "crash" notification in the extensions manager -->
     <string name="mozac_feature_extensions_manager_notification_title_text">Las extensiones están temporalmente deshabilitadas</string>
+    <!-- The content of the "crash" notification in the extensions manager -->
+    <string name="mozac_feature_extensions_manager_notification_content_text">Una o más extensiones dejaron de funcionar, lo que hizo que su sistema fuera inestable.</string>
+    <!-- Button to re-enable the extensions in the "crash" notification -->
+    <string name="mozac_feature_extensions_manager_notification_restart_button">Reiniciar extensiones</string>
+    <!-- Button in the extensions manager that opens AMO in a tab -->
+    <string name="mozac_feature_addons_find_more_extensions_button_text">Encuentra más extensiones</string>
     <!-- The label of the allow button, this will be shown to the user when an add-on needs new permissions, with the button the user will indicate that they want to accept the new permissions and update the add-on-->
     <string name="mozac_feature_addons_updater_notification_allow_button">Permitir</string>
     <!-- The label of the deny button on a notification, this will be shown to the user when an add-on needs new permissions. Indicates the user denies the new permissions and prevents the add-on from be updated-->
@@ -156,6 +162,8 @@
     <string name="mozac_feature_addons_updater_notification_content" tools:ignore="PluralsCandidate">Se requieren %1$d permisos nuevos</string>
     <!-- The content of the notification displayed when an add-on needs a new permission-->
     <string name="mozac_feature_addons_updater_notification_content_singular">Se requiere un permiso nuevo</string>
+    <!-- Name of the "notification channel" used for displaying a notification for updating an extension. See https://developer.android.com/training/notify-user/channels -->
+    <string name="mozac_feature_addons_updater_notification_channel_2">Actualizaciones de extensiones</string>
     <!-- Name of the "notification channel" used for displaying a notification for new supported add-ons. See https://developer.android.com/training/notify-user/channels -->
     <string name="mozac_feature_addons_supported_checker_notification_channel" tools:ignore="UnusedResources">Inspector de complementos compatibles</string>
     <!-- The tile of the notification, this will be shown to the user when one newly supported add-on is available.-->
@@ -170,12 +178,24 @@
     <string name="mozac_feature_addons_supported_checker_notification_content_more_than_two">Agregarlos a %1$s</string>
     <!-- This is the caption for not yet supported screen caption -->
     <string name="mozac_feature_addons_not_yet_supported_caption2">Ahora estamos creando soporte para una selección inicial de extensiones recomendadas.</string>
+    <!-- This is the caption for the extension installation progress overlay -->
+    <string name="mozac_extension_install_progress_caption">Descargando y verificando la extensión…</string>
+    <!-- Error shown when something unexpected happened while trying to get the extension list from the server -->
+    <string name="mozac_feature_addons_failed_to_query_extensions">¡Error al consultar las extensiones!</string>
     <!-- Error shown when unable to find a translation for an add-on field. %1$s is the locale of the user and %2$s is the default language of the add-on -->
     <string name="mozac_feature_addons_failed_to_translate">No se encontró la traducción para la localización %1$s ni en el idioma predeterminado %2$s</string>
     <!-- Text shown after successfully installed an add-on. %1$s is the add-on name. -->
     <string name="mozac_feature_addons_successfully_installed">%1$s instalado correctamente</string>
     <!-- Text shown after failed to install an add-on. %1$s is the add-on name. -->
     <string name="mozac_feature_addons_failed_to_install">Fallo al instalar %1$s</string>
+    <!-- Text shown after failing to install an extension for which we don't have its name. -->
+    <string name="mozac_feature_addons_extension_failed_to_install">No se pudo instalar esta extensión.</string>
+    <!-- Text shown when attempting to install an extension and a network error happened. -->
+    <string name="mozac_feature_addons_extension_failed_to_install_network_error">Esta extensión no se pudo descargar debido a un error de conexión.</string>
+    <!-- Text shown when attempting to install an extension and the downloaded file is corrupted. -->
+    <string name="mozac_feature_addons_extension_failed_to_install_corrupt_error">Esta extensión no se pudo instalar porque parece estar dañada.</string>
+    <!-- Text shown when attempting to install an add-on and an error occurred because the extension was not signed. -->
+    <string name="mozac_feature_addons_extension_failed_to_install_not_signed_error">Esta extensión no se pudo instalar porque no ha sido verificada.</string>
     <!-- Text shown when attempting to install an add-on and an error occurred because the extension was incompatible. %1$s is the add-on name, %2$s is the app name and %3$s is the app version. -->
     <string name="mozac_feature_addons_failed_to_install_incompatible_error">%1$s no pudo ser instalado porque no es compatible con %2$s %3$s.</string>
     <!-- Text shown when attempting to install a blocklisted add-on. %1$s is the add-on name. -->
@@ -214,6 +234,8 @@
     <string name="mozac_feature_addons_updater_dialog_status">Estado:</string>
     <!-- Text shown in the dialog when add-on installation is completed. %1$s is the add-on name. %2$s is the app name. -->
     <string name="mozac_feature_addons_installed_dialog_title">%1$s ha sido agregado a %2$s</string>
+    <!-- Confirmation button text for the dialog when add-on installation is completed. -->
+    <string name="mozac_feature_addons_installed_dialog_okay_button_2">Aceptar</string>
     <!-- "Learn more" link displayed below an add-on status message. -->
     <string name="mozac_feature_addons_status_learn_more">Saber más</string>
     <!-- Status message below an add-on in the add-ons manager when this add-on has been blocklisted. %1$s is the add-on name. -->
