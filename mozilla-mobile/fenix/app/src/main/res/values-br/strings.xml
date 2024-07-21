@@ -756,8 +756,15 @@
     <!-- Extension process crash dialog to user -->
     <!-- Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled -->
     <string name="extension_process_crash_dialog_title">Diweredekaet eo an askouezhioù evit ar mare</string>
+    <!-- This is a message shown to the user when too many errors have occurred with the extensions process and they have been disabled.
+    The user can decide if they would like to continue trying to start extensions or if they'd rather continue without them.
+    The first parameter is the application name. -->
+    <string name="extension_process_crash_dialog_message">Ur askouezh pe meur a hini a zo sac’het, ar pezh a lak ho reizhiad da vezañ distabil. %1$s en deus klasket da adloc’hañ an askouezh(ioù) hep dont a-benn.\n\nNe vo ket adloc’het an askouezhioù e-kerzh an estez-mañ.\n\nDilemel pe diweredekaat askouezhioù a c’hallfe diskoulmañ ar gudenn-mañ.</string>
     <!-- Button text on the extension crash dialog to prompt the user to try restarting the extensions but the dialog will reappear if it is unsuccessful again -->
     <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Klaskit adloc’hañ an askouezhioù</string>
+
+    <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
+    <string name="extension_process_crash_dialog_disable_extensions_button_text">Kenderc’hel gant an askouezhioù diweredekaet</string>
 
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
@@ -882,6 +889,11 @@
     <string name="preference_gestures_swipe_toolbar_switch_tabs" moz:removedIn="129" tools:ignore="UnusedResources">Riklit ar varrenn-ostilhoù war ar c’hostez evit cheñch ivinell</string>
     <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
     <string name="preference_gestures_swipe_toolbar_show_tabs">Rikli ar ar varrenn-ostilhoù war-zu an nec’h evit digeriñ ivinelloù</string>
+
+    <!-- Preference for using the dynamic toolbars -->
+    <string name="preference_gestures_dynamic_toolbar_2">Dibunit da guzhat ar varrenn-chomlec’h hag ar varrenn ostilhoù</string>
+    <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Riklit ar varrenn chomlec’h war ar c’hostez evit cheñch ivinell</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -1385,8 +1397,21 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Serriñ an ivinelloù prevez</string>
 
+    <!-- Text for option one, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_0" tools:ignore="UnusedResources" moz:removedIn="130">Ali ebet</string>
+    <!-- Text for option two, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_1" tools:ignore="UnusedResources" moz:removedIn="130">Displijet-tre</string>
+    <!-- Text for option three, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_2" tools:ignore="UnusedResources" moz:removedIn="130">Displijet</string>
+    <!-- Text for option four, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_3" tools:ignore="UnusedResources" moz:removedIn="130">Plijet</string>
+    <!-- Text for option five, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_4" tools:ignore="UnusedResources" moz:removedIn="130">Plijet-tre</string>
+
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
     <string name="notification_erase_title_android_14">Serriñ an ivinelloù prevez?</string>
+
+    <string name="notification_erase_text_android_14">Stokit pe riklit ar rebuzadur-mañ evit serriñ an ivinelloù prevez.</string>
 
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Marketing</string>
@@ -1430,6 +1455,8 @@
     <string name="snackbar_tab_closed">Ivinell serret</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Ivinelloù serret</string>
+    <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
+    <string name="snackbar_num_tabs_closed">Ivinelloù serret: %1$s</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs -->
     <string name="snackbar_message_bookmarks_saved">Sined enrollet!</string>
     <!-- Text shown in snackbar when user adds a site to shortcuts -->
@@ -1620,6 +1647,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cookies_4">An holl doupinoù (gallout a ra terriñ lec’hiennoù)</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for cookies-->
     <string name="preference_enhanced_tracking_protection_custom_cookies_5">Digenvezañ an toupinoù etre-lec’hiennoù.</string>
+    <!-- Preference for Global Privacy Control for the custom privacy settings for Global Privacy Control. '&amp;' is replaced with the ampersand symbol: &-->
+    <string name="preference_enhanced_tracking_protection_custom_global_privacy_control">Goulenn ouzh al lec’hiennoù ne vefe ket rannet pe gwerzhet ma roadennoù</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
     <string name="preference_enhanced_tracking_protection_custom_tracking_content">Endalc’had heuliañ</string>
     <!-- Option for enhanced tracking protection for the custom protection settings for tracking content-->
@@ -1630,6 +1659,8 @@
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Kriptogleuzerien</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_fingerprinters" moz:RemovedIn="130" tools:ignore="UnusedResources">Dinoerien roudoù niverel</string>
+    <!-- Preference for enhanced tracking protection for the custom protection settings -->
+    <string name="preference_enhanced_tracking_protection_custom_known_fingerprinters">Roudoù niverel anavezet</string>
     <!-- Button label for navigating to the Enhanced Tracking Protection details -->
     <string name="enhanced_tracking_protection_details">Munudoù</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
@@ -1656,6 +1687,8 @@
     <string name="etp_fingerprinters_title" moz:RemovedIn="130" tools:ignore="UnusedResources">Dinoerien roudoù niverel</string>
     <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_fingerprinters_description" moz:RemovedIn="130" tools:ignore="UnusedResources">Harzañ a ra roadennoù a c’hell servijout da anavezout ac’hanoc’h da vezañ implijet gant heulierien.</string>
+    <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_known_fingerprinters_description">Harzañ a ra roadennoù a c’hell servijout da anavezout ac’hanoc’h da vezañ implijet gant heulierien.</string>
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">Endalc’had heuliañ</string>
 
@@ -1681,6 +1714,12 @@
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">Skarzhañ an toupinoù lakaet gant adheñchadurioù etrezek lec’hiennoù heuliañ anavezet</string>
 
+    <!-- Preference for fingerprinting protection for the custom protection settings -->
+    <string name="etp_suspected_fingerprinters_title">Dastumerien roudoù suspedet</string>
+    <!-- Description of fingerprinters that can be blocked by fingerprinting protection -->
+    <string name="etp_suspected_fingerprinters_description">Gweredekaat ar gwarez a-enep an dastumerien roudoù niverel.</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_known_fingerprinters_title">Dastumerien roudoù niverel anavezet</string>
     <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
          as we use it on the UI to indicate which trackers have been partially unblocked.  -->
     <string name="preference_etp_smartblock_description">Un nebeud heulierien merket a-zindan a zo bet damzistanket war ar bajenn-mañ peogwir ho peus etrewezhiet gante *.</string>
@@ -1756,8 +1795,14 @@
 
     <!-- Preference for syncing saved passwords in Fenix -->
     <string name="preferences_passwords_sync_logins_2">Goubredañ ar gerioù-tremen</string>
+    <!-- Preference for syncing saved passwords in Fenix, when not signed in-->
+    <string name="preferences_passwords_sync_logins_across_devices_2">Goubredañ ar gerioù-tremen etre ho trevnadoù</string>
     <!-- Preference to access list of saved passwords -->
     <string name="preferences_passwords_saved_logins_2">Gerioù-tremen enrollet</string>
+    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
+    <string name="preferences_passwords_saved_logins_description_empty_text_2">Ar gerioù-tremen a enrollit pe a c\'houbredit betek %s a vo er roll amañ. An holl c\'herioù-tremen a enrollit a vo enrineget.</string>
+    <!-- Clickable text for opening an external link for more information about Sync. -->
+    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">Gouzout hiroc’h diwar-benn ar goubredañ</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Nemedennoù</string>
     <!-- Text on button to remove all saved login exceptions -->
