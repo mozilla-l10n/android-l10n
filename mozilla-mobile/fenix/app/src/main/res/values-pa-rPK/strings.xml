@@ -50,6 +50,11 @@
     <!-- Title for the home screen section with bookmarks. -->
     <string name="home_bookmarks_title">اتے پتے</string>
 
+    <!-- Content description for the button which navigates the user to show all of their bookmarks. -->
+    <string name="home_bookmarks_show_all_content_description">سبھناں اتیاں پتیاں نوں ویکھو</string>
+    <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
+    <string name="home_bookmarks_menu_item_remove">ہٹاؤ</string>
+
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">%1$s ایپ موزلے ولوں تیار کیتی اے۔</string>
 
@@ -103,6 +108,10 @@
     <!-- Text for the message displayed in the contextual feature recommendation popup promoting the erase private browsing feature. -->
     <string name="erase_action_cfr_message">تازہ نجی سیشن شروع کرن لئی اتھے چھوہو۔ آپݨے تاریخ، کوکیاں — ہر چیز ہٹا دیو۔</string>
 
+
+    <!-- Toolbar "contextual feature recommendation" (CFR) -->
+    <!-- Text for the title displayed in the contextual feature recommendation popup promoting the navigation bar. -->
+    <string name="navbar_cfr_title">نویں نیویگیشن نال ودھ تیزی نال براؤز کرو</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">کیمرے لئی پہنچ چاہیدی اے۔ فون دیاں سیٹنگاں تے جاؤ، اجازتاں نوں چھوہو تے اجازت دیݨ دی چوݨ نوں چھوہو۔</string>
@@ -180,6 +189,10 @@
     <string name="browser_menu_refresh">تازہ کرو</string>
     <!-- Content description (not visible, for screen readers etc.): Stop loading current website -->
     <string name="browser_menu_stop">روکو</string>
+    <!-- Browser menu button that opens the extensions manager -->
+    <string name="browser_menu_extensions">پھیلاؤ</string>
+    <!-- Browser menu banner link text for learning more about extensions -->
+    <string name="browser_menu_extensions_banner_learn_more">ہور جاݨو</string>
     <!-- Browser menu button that opens account settings -->
     <string name="browser_menu_account_settings">کھاتے دی جاݨکاری</string>
     <!-- Browser menu button that sends a user to help articles -->
@@ -206,6 +219,8 @@
     <string name="browser_menu_save_to_collection_2">بھنڈار چ سنبھالو</string>
     <!-- Browser menu button that open a share menu to share the current site -->
     <string name="browser_menu_share">سانجھا کرو</string>
+    <!-- Browser menu button that open a share menu to share the current site -->
+    <string name="browser_menu_share_2">سانجھا کرو…</string>
     <!-- Browser menu button shown in custom tabs that opens the current tab in Fenix
         The first parameter is the name of the app defined in app_name (for example: Fenix) -->
     <string name="browser_menu_open_in_fenix">%1$s نال کھولھو</string>
@@ -232,8 +247,17 @@
     <!-- Button shown on the home page that opens the Customize home settings -->
     <string name="browser_menu_customize_home_1">مکھ صفحے دیاں ترجیحاں</string>
 
+    <!-- Browser menu label to sign in to sync on the device using Mozilla accounts -->
+    <string name="browser_menu_sign_in">لوگ این کرو</string>
+    <!-- Browser menu label that creates a private tab -->
+    <string name="browser_menu_new_private_tab">نجی ٹیب کھولھو</string>
     <!-- Browser menu label that navigates to the Password screen -->
     <string name="browser_menu_passwords">پاس‌ورڈ</string>
+
+    <!-- Browser menu label that navigates to the save sub-menu, which contains various save related menu items such as
+         bookmarking a page, saving to collection, shortcut or as a PDF, and adding to home screen -->
+    <string name="browser_menu_save">سنبھالو
+</string>
 
     <!-- Browser Toolbar -->
     <!-- Content description for the Home screen button on the browser toolbar -->
@@ -242,6 +266,9 @@
     <!-- Content description (not visible, for screen readers etc.): Erase button: Erase the browsing
          history and go back to the home screen. -->
     <string name="browser_toolbar_erase">براؤز کرن دی تاریخ مٹاؤ</string>
+
+    <!-- Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred. -->
+    <string name="browser_toolbar_translate">صفحے دا اُلتھا کرو</string>
 
     <!-- Locale Settings Fragment -->
     <!-- Content description for tick mark on selected language -->
@@ -507,9 +534,13 @@
     <string name="preferences_sign_in_description_2">جدوں لوگ‌این کیتا ٹیباں، اتے پتے، پاس‌ورڈ تے ہور ملا جا سکدے ہن۔</string>
     <!-- Preference for language -->
     <string name="preferences_language">بولی</string>
+    <!-- Preference for translations -->
+    <string name="preferences_translations">ترجمے</string>
     <!-- Preference for data choices -->
     <string name="preferences_data_choices">ڈیٹا چوݨاں</string>
 
+    <!-- Preference for data collection -->
+    <string name="preferences_data_collection">ڈیٹا بھنڈار</string>
     <!-- Preference title for switch preference to suggest bookmarks when searching -->
     <string name="preferences_search_bookmarks">اتے پتے دی کھوج</string>
     <!-- Preference for open links in third party apps always open in apps option -->
@@ -517,6 +548,8 @@
     <!-- Preference for open links in third party apps never open in apps option -->
     <string name="preferences_open_links_in_apps_never">کدے نہیں</string>
 
+    <!-- Preference for extensions -->
+    <string name="preferences_extensions">پھیلاؤ</string>
     <!-- Preference for notifications -->
     <string name="preferences_notifications">اطلاع نامے</string>
 
@@ -525,11 +558,28 @@
     <!-- Summary for notification preference indicating notifications are not allowed -->
     <string name="notifications_not_allowed_summary">اجازت نہیں دتے</string>
 
+    <!-- Add-on Permissions -->
+    <!-- The title of the required permissions section from addon's permissions screen -->
+    <string name="addons_permissions_heading_required" tools:ignore="UnusedResources">لوڑیندا</string>
+    <!-- The title of the optional permissions section from addon's permissions screen -->
+    <string name="addons_permissions_heading_optional" tools:ignore="UnusedResources">چوݨواں</string>
+
     <!-- Button caption to confirm the add-on collection configuration -->
     <string name="customize_addon_collection_ok">ٹھیک اے</string>
     <!-- Button caption to abort the add-on collection configuration -->
     <string name="customize_addon_collection_cancel">رد کرو</string>
 
+    <!-- Hint displayed on input field for custom collection name -->
+    <string name="customize_addon_collection_hint">بھنڈار دا ناں</string>
+
+    <!-- Customize Home -->
+    <!-- Header text for jumping back into the recent tab in customize the home screen -->
+    <string name="customize_toggle_jump_back_in">واپس جاؤ</string>
+    <!-- Title for the customize home screen section with bookmarks. -->
+    <string name="customize_toggle_bookmarks">اتے پتے</string>
+    <!-- Title for the customize home screen section with recently visited. Recently visited is
+    a section where users see a list of tabs that they have visited in the past few days -->
+    <string name="customize_toggle_recently_visited">حال دے کھولھیاں گئیاں</string>
     <!-- Title for the opening wallpaper settings screen -->
     <string name="customize_wallpapers">والپیپر</string>
 
@@ -578,6 +628,8 @@
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
     <string name="library_downloads">ڈاؤن‌لوڈ</string>
+    <!-- Option in library to open Bookmarks page -->
+    <string name="library_bookmarks">اتے پتے</string>
     <!-- Option in Library to open History page -->
     <string name="library_history">تریخ</string>
     <!-- Option in Library to open a new tab -->
@@ -633,12 +685,22 @@
     <!-- Dialog button text for canceling removing a study. -->
     <string name="studies_restart_dialog_cancel">رد کرو</string>
 
+    <!-- Sessions -->
+    <!-- Title for the list of tabs -->
+    <string name="tab_header_label">کھولھیاں ٹیباں
+</string>
+    <!-- Title for the list of tabs in the current private session -->
+    <string name="tabs_header_private_tabs_title">نجی ٹیباں</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">نویں ٹیب کھولھو</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_private_tab">نجی ٹیب کھولھو</string>
     <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
     <string name="tab_drawer_fab_content">نجی</string>
+    <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
+    <string name="tab_drawer_fab_sync">ہم وقت کرو</string>
+    <!-- Text shown in the menu for sharing all tabs -->
+    <string name="tab_tray_menu_item_share">سریاں ٹیباں سانجھیاں کرو</string>
     <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
     <string name="tab_tray_multiselect_menu_item_bookmark">اتا پتہ</string>
     <!-- Text shown in the multiselect menu for closing selected tabs. -->
