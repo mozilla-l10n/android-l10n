@@ -2484,6 +2484,8 @@
     <string name="translations_bottom_sheet_negative_button">አሁን አይሆንም</string>
     <!-- Button text on the translations dialog to restore the translated website back to the original untranslated version. -->
     <string name="translations_bottom_sheet_negative_button_restore">ዋናውን አሳይ</string>
+    <!-- Accessibility announcement (not visible, for screen readers etc.) for the translations dialog after restore button was pressed that indicates the original untranslated page was loaded. -->
+    <string name="translations_bottom_sheet_restore_accessibility_announcement">ዋናው ያልተተረጎመ ገጽ ተጭኗል</string>
     <!-- Button text on the translations dialog when a translation error appears, used to dismiss the dialog and return to the browser. -->
     <string name="translations_bottom_sheet_negative_button_error">ተከናውኗል</string>
     <!-- Button text on the translations dialog to begin a translation of the website. -->
@@ -2538,6 +2540,9 @@
     <!-- Content description (not visible, for screen readers etc.) for closing the translations bottom sheet. -->
     <string name="translation_option_bottom_sheet_close_content_description">የትርጉም ገፅ ዝጋ</string>
 
+    <!-- The title of the warning card informs the user that an error has occurred at page settings. -->
+    <string name="translation_option_bottom_sheet_error_warning_text">አንዳንድ ቅንብሮች ለጊዜው አይገኙም።</string>
+
     <!-- Translation settings dialog -->
     <!-- Title of the translation settings dialog that allows a user to set their preferred translation settings. -->
     <string name="translation_settings_toolbar_title">ትርጉሞች</string>
@@ -2560,6 +2565,9 @@
     <string name="automatic_translation_toolbar_title_preference">ራስ-ሰር ትርጉም</string>
     <!-- Screen header presenting the automatic translation preference feature. It will appear under the toolbar. -->
     <string name="automatic_translation_header_preference">”ሁልጊዜ መተርጎም“ እና ”ፍፁም አትተረጎም“ ምርጫዎችን ለማስተዳደር ቋንቋ ምረጥ።</string>
+
+    <!-- The title of the warning card informs the user that the system could not load languages for translation settings. -->
+    <string name="automatic_translation_error_warning_text">ቋንቋዎችን መጫን አልተቻለም። እባክዎ ቆይተው ይመልከቱ።</string>
 
     <!-- Automatic translation options preference screen -->
     <!-- Preference option for offering to translate. Radio button title text.-->
@@ -2594,6 +2602,8 @@
     <!-- Download languages preference screen -->
     <!-- Title of the download languages preference screen toolbar.-->
     <string name="download_languages_toolbar_title_preference" moz:removedIn="130" tools:ignore="UnusedResources">ቋንቋዎችን አውርድ</string>
+    <!-- Title of the toolbar for the translation feature screen where users may download different languages for translation. -->
+    <string name="download_languages_translations_toolbar_title_preference">ቋንቋዎችን አውርድ</string>
     <!-- Screen header presenting the download language preference feature. It will appear under the toolbar.The first parameter is "Learn More," a clickable text with a link. Talkback will append this to say "Double tap to open link to learn more". -->
     <string name="download_languages_header_preference">ለፈጣን ትርጉሞች እና ከመስመር ውጭ ለመተርጎም የተሟላ ቋንቋዎችን ያውርዱ። %1$s</string>
     <!-- Clickable text from the screen header that links to a website. -->
@@ -2610,12 +2620,29 @@
     <string name="download_language_header_preference">ቋንቋዎችን አውርድ</string>
     <!-- All languages list item. When the user presses this item, they can download all languages. -->
     <string name="download_language_all_languages_item_preference">ሁሉም ቋንቋዎች</string>
+    <!-- All languages list item. When the user presses this item, they can delete all languages that were downloaded. -->
+    <string name="download_language_all_languages_item_preference_to_delete">ሁሉንም ቋንቋዎች ሰርዝ</string>
     <!-- Content description (not visible, for screen readers etc.): For a language list item that was downloaded, the user can now delete it. -->
     <string name="download_languages_item_content_description_downloaded_state">አጥፋ</string>
     <!-- Content description (not visible, for screen readers etc.): For a language list item, downloading is in progress. -->
     <string name="download_languages_item_content_description_in_progress_state" moz:removedIn="129" tools:ignore="UnusedResources">በሂደት ላይ</string>
+    <!-- Content description (not visible, for screen readers etc.): For a language list item, deleting is in progress. -->
+    <string name="download_languages_item_content_description_delete_in_progress_state">በሂደት ላይ</string>
+    <!-- Content description (not visible, for screen readers etc.): For a language list item, downloading is in progress.
+    The first parameter is the language name, for example, "Spanish".
+    The second parameter is the language file size, for example, "(3.91 KB)". -->
+    <string name="download_languages_item_content_description_download_in_progress_state">%1$s (%2$s) ማውረድ አቁም</string>
     <!-- Content description (not visible, for screen readers etc.): For a language list item that was not downloaded. -->
     <string name="download_languages_item_content_description_not_downloaded_state">አውርድ</string>
+
+    <!-- The title of the warning card informs the user that an error has occurred when fetching the list of languages. -->
+    <string name="download_languages_fetch_error_warning_text">ቋንቋዎችን መጫን አልተቻለም። እባክዎ ቆይተው ይመልከቱ።</string>
+    <!-- The title of the warning card informs the user that an error has occurred at downloading a language.
+      The first parameter is the language name, for example, "Spanish". -->
+    <string name="download_languages_error_warning_text"><![CDATA[<b>%1$s</b>ን ማውረድ አልተቻለም። እባክዎ እንደገና ይሞክሩ።]]></string>
+    <!-- The title of the warning card informs the user that an error has occurred at deleting a language.
+          The first parameter is the language name, for example, "Spanish". -->
+    <string name="download_languages_delete_error_warning_text"><![CDATA[<b>%1$s</b>ን መሰረዝ አልተቻለም። እባክዎ እንደገና ይሞክሩ።]]></string>
 
     <!-- Title for the dialog used by the translations feature to confirm deleting a language.
     The dialog will be presented when the user requests deletion of a language.
@@ -2633,6 +2660,14 @@
     <string name="delete_language_file_dialog_positive_button_text">ሰርዝ</string>
     <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
     <string name="delete_language_file_dialog_negative_button_text">ተወው</string>
+
+    <!-- Title for the dialog used by the translations feature to confirm canceling a download in progress for a language file.
+    The first parameter is the name of the language, for example, "Spanish". -->
+    <string name="cancel_download_language_file_dialog_title" moz:removedIn="130" tools:ignore="UnusedResources">%1$s ማውረድ ይቅር?</string>
+    <!-- Button text on the dialog used by the translations feature confirms canceling a download in progress for a language file. -->
+    <string name="cancel_download_language_file_dialog_positive_button_text" moz:removedIn="130" tools:ignore="UnusedResources">አዎ</string>
+    <!-- Button text on the dialog used by the translations feature to dismiss the dialog. -->
+    <string name="cancel_download_language_file_negative_button_text" moz:removedIn="130" tools:ignore="UnusedResources">አይደለም</string>
 
     <!-- Title for the data saving mode warning dialog used by the translations feature.
     This dialog will be presented when the user attempts to download a language or perform
@@ -2658,11 +2693,16 @@
     <!-- Content description (not visible, for screen readers etc.): Navigate back within the debug drawer. -->
     <string name="debug_drawer_back_button_content_description">ወደ ኋላ ዳስስ</string>
 
+    <!-- Content description (not visible, for screen readers etc.): Open debug drawer. -->
+    <string name="debug_drawer_fab_content_description">የማረም መሳቢያን ይክፈቱ</string>
+
     <!-- Debug drawer tabs tools -->
     <!-- The title of the Tab Tools feature in the Debug Drawer. -->
     <string name="debug_drawer_tab_tools_title">የትር መሳሪያዎች</string>
     <!-- The title of the tab count section in Tab Tools. -->
     <string name="debug_drawer_tab_tools_tab_count_title">የትር ብዛት</string>
+    <!-- The active tab count category in the tab count section in Tab Tools. -->
+    <string name="debug_drawer_tab_tools_tab_count_active">ንቁ</string>
     <!-- The inactive tab count category in the tab count section in Tab Tools. -->
     <string name="debug_drawer_tab_tools_tab_count_inactive">እንቅስቃሴ-አልባ</string>
     <!-- The private tab count category in the tab count section in Tab Tools. -->
@@ -2673,12 +2713,54 @@
     <string name="debug_drawer_tab_tools_tab_creation_tool_title">ትር መፍጠሪያ መሣሪያ</string>
     <!-- The label of the text field in the tab creation tool. -->
     <string name="debug_drawer_tab_tools_tab_creation_tool_text_field_label">የሚፈጠረው የትር ብዛት</string>
+    <!-- The error message of the text field in the tab creation tool when the text field is empty -->
+    <string name="debug_drawer_tab_tools_tab_quantity_empty_error">የጽሑፍ መስክ ባዶ ነው</string>
+    <!-- The error message of the text field in the tab creation tool when the text field has characters other than digits -->
+    <string name="debug_drawer_tab_tools_tab_quantity_non_digits_error">እባክዎ አዎንታዊ አሃዝ ብቻ ያስገቡ</string>
+    <!-- The error message of the text field in the tab creation tool when the text field is a zero -->
+    <string name="debug_drawer_tab_tools_tab_quantity_non_zero_error">እባክዎ ከዜሮ በላይ የሆነ ቁጥር ያስገቡ</string>
+    <!-- The error message of the text field in the tab creation tool when the text field is a
+        quantity greater than the max tabs. The first parameter is the maximum number of tabs
+        that can be generated in one operation.-->
+    <string name="debug_drawer_tab_tools_tab_quantity_exceed_max_error">በአንድ ክወና ውስጥ ሊፈጠሩ ከሚችሉት ከፍተኛው የትሮች ብዛት (%1$s) አልፏል</string>
     <!-- The button text to add tabs to the active tab group in the tab creation tool. -->
     <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_active">ወደ ንቁ ትሮች ያክሉ</string>
     <!-- The button text to add tabs to the inactive tab group in the tab creation tool. -->
     <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">ወደ ቦዘኑ ትሮች ያክሉ</string>
     <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
     <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">ወደ የግል ትሮች ያክሉ</string>
+
+    <!-- Microsurvey -->
+    <!-- Prompt view -->
+    <!-- The microsurvey prompt title. Note: The word "Firefox" should NOT be translated -->
+    <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Firefoxን የተሻለ እንድናደርግ ይርዱን። አንድ ደቂቃ ብቻ ነው የሚወስደው።</string>
+    <!-- The continue button label -->
+    <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">ቀጥል</string>
+    <!-- Survey view -->
+    <!-- The survey header -->
+    <string name="micro_survey_survey_header" moz:removedIn="129" tools:ignore="UnusedResources">ይህን የዳሰሳ ጥናት ያጠናቅቁ</string>
+    <!-- The survey header -->
+    <string name="micro_survey_survey_header_2">እባክዎ የዳሰሳ ጥናት ያጠናቅቁ</string>
+    <!-- The privacy notice link -->
+    <string name="micro_survey_privacy_notice" moz:removedIn="129" tools:ignore="UnusedResources">የግላዊነት ማስታወቂያ</string>
+    <!-- The privacy notice link -->
+    <string name="micro_survey_privacy_notice_2">የግላዊነት ማስታወቂያ</string>
+    <!-- The submit button label text -->
+    <string name="micro_survey_submit_button_label">አስገባ</string>
+    <!-- The survey completion header -->
+    <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">የዳሰሳ ጥናት ተጠናቅቋል</string>
+    <!-- The survey completion confirmation text -->
+    <string name="micro_survey_feedback_confirmation">ለአስተያየትዎ እናመሰግናለን!</string>
+    <!-- Option for likert scale -->
+    <string name="likert_scale_option_1" tools:ignore="UnusedResources">በጣም ረክቻለሁ</string>
+    <!-- Option for likert scale -->
+    <string name="likert_scale_option_2" tools:ignore="UnusedResources">ረክቻለሁ</string>
+    <!-- Option for likert scale -->
+    <string name="likert_scale_option_3" tools:ignore="UnusedResources">ገለልተኛ</string>
+    <!-- Option for likert scale -->
+    <string name="likert_scale_option_4" tools:ignore="UnusedResources">አልረካም</string>
+    <!-- Option for likert scale -->
+    <string name="likert_scale_option_5" tools:ignore="UnusedResources">በጣም አልረካም</string>
 
     <!-- Debug drawer logins -->
     <!-- The title of the Logins feature in the Debug Drawer. -->
