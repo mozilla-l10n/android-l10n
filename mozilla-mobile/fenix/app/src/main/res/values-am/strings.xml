@@ -1179,6 +1179,8 @@
     <string name="bookmark_add_folder">አቃፊ አክል</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_saved_snackbar">እልባት ተቀምጧል!</string>
+    <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
+    <string name="bookmark_saved_in_folder_snackbar">በ“%s” ውስጥ ተቀምጧል</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">አርትዕ</string>
     <!-- Bookmark overflow menu edit button -->
@@ -1236,6 +1238,17 @@
     <string name="bookmark_undo_deletion">ቀልብስ</string>
     <!-- Text for the button to search all bookmarks -->
     <string name="bookmark_search">የፍለጋ ህብረ ቁምፊ ያስገቡ</string>
+
+    <!-- Content description for the bookmark navigation bar back button -->
+    <string name="bookmark_navigate_back_button_content_description">ወደ ኋላ ዳስስ</string>
+    <!-- Content description for the bookmark list new folder navigation bar button -->
+    <string name="bookmark_add_new_folder_button_content_description">አዲስ አቃፊ ያክሉ</string>
+    <!-- Content description for the bookmark navigation bar close button -->
+    <string name="bookmark_close_button_content_description">ዕልባቶችን ዝጋ</string>
+    <!-- Content description for bookmark search floating action button -->
+    <string name="bookmark_search_button_content_description">እልባቶችን ፈልግ</string>
+    <!-- Content description for the overflow menu for a bookmark item. Paramter will a folder name or bookmark title. -->
+    <string name="bookmark_item_menu_button_content_description">የንጥል ምናሌ ለ%s</string>
 
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
@@ -1425,6 +1438,17 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">የግል ትሮችን ዝጋ</string>
 
+    <!-- Text for option one, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_0" tools:ignore="UnusedResources" moz:removedIn="130">ገለልተኛ</string>
+    <!-- Text for option two, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_1" tools:ignore="UnusedResources" moz:removedIn="130">በጣም አልረካም</string>
+    <!-- Text for option three, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_2" tools:ignore="UnusedResources" moz:removedIn="130">አልረካም</string>
+    <!-- Text for option four, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_3" tools:ignore="UnusedResources" moz:removedIn="130">ረክቻለሁ</string>
+    <!-- Text for option five, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_4" tools:ignore="UnusedResources" moz:removedIn="130">በጣም ረክቻለሁ</string>
+
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
     <string name="notification_erase_title_android_14">የግል ትሮች ይዘጉ?</string>
     <string name="notification_erase_text_android_14">የግል ትሮችን ለመዝጋት ይህን ማሳወቂያ ነካ ያድርጉ ወይም ያንሸራትቱ።</string>
@@ -1471,6 +1495,8 @@
     <string name="snackbar_tab_closed">ትር ተዘግቷል</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">ትሮች ተዘግተዋል</string>
+    <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
+    <string name="snackbar_num_tabs_closed">ትሮች ተዘግተዋል፡- %1$s</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs -->
     <string name="snackbar_message_bookmarks_saved">እልባቶች ተቀምጠዋል!</string>
     <!-- Text shown in snackbar when user adds a site to shortcuts -->
@@ -1721,6 +1747,12 @@
     <string name="etp_redirect_trackers_title">የዝውውር መከታተያዎች</string>
     <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_redirect_trackers_description">ወደታወቁ የመከታተያ ድረ-ገጾች በማዘዋወር የተዘጋጁ ኩኪዎችን ያጸዳል።</string>
+    <!-- Preference for fingerprinting protection for the custom protection settings -->
+    <string name="etp_suspected_fingerprinters_title">የተጠረጠሩ ጣት-አሻራ ሰብሳቢዎች</string>
+    <!-- Description of fingerprinters that can be blocked by fingerprinting protection -->
+    <string name="etp_suspected_fingerprinters_description">ጣት አሻራ ጥበቃን የተጠረጠሩ የጣት አሻራ ሰብሳቢዎችን ለማስቆም ያስችላል።</string>
+    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+    <string name="etp_known_fingerprinters_title">የታወቁ የጣት አሻራ ሰብሳቢዎች</string>
     <!-- Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
          as we use it on the UI to indicate which trackers have been partially unblocked.  -->
     <string name="preference_etp_smartblock_description">ከዚህ በታች ምልክት የተደረገባቸው አንዳንድ መከታተያዎች በዚህ ገጽ ላይ እገዳው በከፊል ተነስቷል ምክንያቱም ከእነሱ ጋር ስለተገናኙ *።</string>
@@ -2150,6 +2182,8 @@
     <string name="top_sites_rename_dialog_title">ስም</string>
     <!-- Hint for renaming title of a shortcut -->
     <string name="shortcut_name_hint">የአቋራጭ ስም</string>
+    <!-- Hint for editing URL of a shortcut. -->
+    <string name="shortcut_url_hint">የአቋራጭ URL</string>
     <!-- Button caption to confirm the renaming of the top site. -->
     <string name="top_sites_rename_dialog_ok" moz:removedIn="130" tools:ignore="UnusedResources">እሺ</string>
     <!-- Dialog button text for canceling the rename top site prompt. -->
@@ -2160,6 +2194,17 @@
     <string name="top_sites_menu_sponsor_privacy">የእኛ ስፖንሰሮች እና የእርስዎ ግላዊነት</string>
     <!-- Label text displayed for a sponsored top site. -->
     <string name="top_sites_sponsored_label">ስፖንሰር የተደረገ</string>
+
+    <!-- Text for the menu item to edit a top site. -->
+    <string name="top_sites_edit_top_site">አርትዕ</string>
+    <!-- Text for the dialog title to edit a top site. -->
+    <string name="top_sites_edit_dialog_title">አቋራጭ አርትዕ</string>
+    <!-- Button caption to confirm the edit of the top site. -->
+    <string name="top_sites_edit_dialog_save">አስቀምጥ</string>
+    <!-- Error message when the user entered an invalid URL -->
+    <string name="top_sites_edit_dialog_url_error">የሚሰራ URL ያስገቡ</string>
+    <!-- Label for the URL edit field in the edit top site dialog. -->
+    <string name="top_sites_edit_dialog_url_title">URL</string>
 
     <!-- Inactive tabs in the tabs tray -->
     <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
