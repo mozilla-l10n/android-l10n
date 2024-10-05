@@ -20,6 +20,11 @@
     <!-- "Snackbar" shown after the user has pressed the 'erase' button at the end of a browsing session -->
     <string name="feedback_erase">Lúubsa\'ab tuláakal ba\'ax ta kaxtej.</string>
 
+    <string name="feedback_erase2">Ts\'o\'ok u tselik u k\'ajláayil navegación</string>
+
+    <!-- "Snackbar" shown after the user has pressed the 'erase' button at the end of a custom tab browsing session -->
+    <string name="feedback_erase_custom_tab">U k\'ajláayo\' u navegación le ficha ts\'o\'ok u borrado.</string>
+
     <!-- This label is shown below the URL bar as soon as the user enters text. Clicking the label will perform a search -->
     <string name="search_hint">Kaxbil %1$s</string>
 
@@ -43,6 +48,12 @@
     <!-- Menu item: Add the current page as a shortcut to the device's home screen (launcher). -->
     <string name="menu_add_to_home_screen">Ts\'áabak tu\'ux u yila\'al tun káajal</string>
 
+    <!-- Menu item: Add the current site as a shortcut on the Home screen -->
+    <string name="menu_add_to_shortcuts">Ts\'áa ti\' le atajos</string>
+    <!-- Menu item: Remove the current site as a shortcut from the Home screen -->
+    <string name="menu_remove_from_shortcuts">Luk\'es ti\' le atajos</string>
+
+    <!-- Menu item: Shows information about features and changes that are new to this version -->
     <string name="menu_settings">Máak’anbil</string>
     <string name="menu_about">Yo\'sal</string>
     <string name="menu_help">Áantaj</string>
@@ -55,6 +66,15 @@
          doesn't work correctly with blocked content. -->
     <string name="menu_trackers_blocked_title">Kaxan ba\'al tupa\'anilo\'ob</string>
 
+    <!-- Menu item: This is the subtitle for the Trackers blocked menu entry that shows how many
+    trackers have been blocked for the currently loaded website.  -->
+    <string name="menu_trackers_blocked_subtitle">Wa ka tu\'upul le je\'ela\' je\'el u yutskíintik yaan talamilo\'ob ti\' le ts\'ono\'oto\'</string>
+
+    <!-- Menu item: This is the label for turning off content blocking for the current website. -->
+    <string name="menu_content_blocking">Ma\' meyajta\'al u jejelas ba\'alo\'ob</string>
+    <!-- This is the subtitle content blocking toggle -->
+    <string name="menu_content_blocking_subtitle">Tu\'upul uti\'al u yutskíinta\'al yaan lu\'umo\'ob</string>
+
     <!-- This is a small text at the bottom of the menu shown in a "custom tab" for branding purposes.
      See https://github.com/mozilla-mobile/focus-android/issues/2106
       %1$s will be replaced by the app name (e.g. Firefox Focus) -->
@@ -64,10 +84,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Túuxbil yéetel</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_text_android_14" moz:RemovedIn="124" tools:ignore="UnusedResources">Pulse wa borrar le notificación utia\'al u borrar seguramente u historial navegación.</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Pulse wa desliza le notificación utia\'al u borrar seguramente u historial navegación.</string>
+
     <string name="notification_erase_text">Lúubsal tuláakal tu\'ux maanech</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -98,6 +120,23 @@
     <string name="shortcut_erase_and_open_long_label">Tuupuk ts\'óokole\' ka je\'ebek %1$s</string>
 
 
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+         Focus is hard coded since we can't use variables in this context.
+         Do not translate or transliterate Focus.-->
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Kaxant ti\' Focus</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+             Klar is hard coded since we can't use variables in this context.
+             Do not translate or transliterate Klar.-->
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Kaxant ti\' Klar</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+            Focus Beta is hard coded since we can't use variables in this context.
+            Do not translate or transliterate Focus Beta.-->
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Kaxant ti\' Focus Beta</string>
+    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
+          Focus Nightly is hard coded since we can't use variables in this context.
+          Do not translate or transliterate Focus Nightly.-->
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Kaxant ti\' Focus Nightly</string>
+
     <!-- Header for the Privacy and Security settings menu -->
     <string name="preference_privacy_and_security_header">Ta wóok’sal yéetel Jeets’el óol</string>
 
@@ -119,13 +158,28 @@
     <!-- Preference category: stealth settings for while switching apps -->
     <string name="preference_category_switching_apps">K’exlantik biilalo’ob</string>
 
+    <!-- Preference category for General Settings -->
+    <string name="preference_category_general">Tuláakalil</string>
+
+    <!-- Preference summary for General Settings category; the two things users can find in this category -->
+    <string name="preference_general_summary2">Navegador tumen defecto, t\'aan</string>
+
     <!-- Preference category for settings about sending usage data -->
     <string name="preference_category_data_collection_use">Much’lantik péeksililo’ob yéetel bix beelankil</string>
 
     <string name="preference_category_search">Kaxta’ak</string>
 
+    <!-- Title of "switch" preference that enables/disables search suggestions -->
+    <string name="preference_show_search_suggestions">K\'amik sugerencias xookilo\'</string>
+    <!-- Description of the preference that enables/disables search suggestions
+        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
+    <string name="preference_show_search_suggestions_summary">%1$s le ka ts\'íibtiko\' yáan u túuxtaj tu\'ux u láaj chíikpajal le kaxantbilo\'</string>
+
     <!-- This label is shown below the name of the default search engine in settings -->
     <string name="preference_search_engine_default">Le ta yáax ts’íibo’</string>
+
+    <!-- This label is shown above the currently selected search engine in settings -->
+    <string name="preference_search_engine_label">U múuk\'il a kaxant ba\'al</string>
 
     <!-- Text that is shown below a "switch" preference that is enabled. -->
     <string name="preference_state_on">Meyajta’al</string>
@@ -136,14 +190,43 @@
     <!-- Item in settings that will open a new preference screen for configuring the URL autocomplete behavior. -->
     <string name="preference_subitem_autocomplete">Chuupuk tu juunaj URL</string>
 
+    <!-- Title of "switch" preference that enables/disables autocomplete for the default list -->
+    <string name="preference_switch_autocomplete_topsites">Utia\'al u yáax kúuchilo\'ob</string>
+
+    <!-- Summary for the toggle to enable autocomplete for the topsites list
+    %s is a placeholder for the app name (e.g. Firefox Focus)-->
+    <string name="preference_autocomplete_topsite_summary2">Habilitar u yaantal %s autocompleto yóok\'ol 450 URLs populares ti\' le barra direcciones.</string>
+
+    <!-- Title of "switch" preference that enables/disables autocomplete for the user-defined list -->
+    <string name="preference_switch_autocomplete_user_list">Utia\'al u ts\'ono\'oto\'ob ku ts\'áabal</string>
+
+    <!-- Summary for the toggle to enable autocomplete for the user-defined list
+     %s is a placeholder for the app name (e.g. Firefox Focus)-->
+    <string name="preference_autocomplete_user_list_summary2">Habilitar utia\'al u yantal %s autocompletar u URLs favoritas.</string>
+
+    <!-- Preference category: Manage (user-defined) sites -->
+    <string name="preference_category_autocomplete_manage_sites">Uts meyajtej le kúuchilo\'ob</string>
+
+    <!-- Item in autocomplete settings that will open a new preference screen for adding and removing URLs to the user-defined list-->
+    <string name="preference_autocomplete_subitem_manage_sites">Uts meyajtej le kúuchilo\'ob</string>
+
     <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
     <string name="preference_autocomplete_action_add">+ Ts’áabak URL tsikbe’eniltal</string>
+
+    <!-- Explanation text above the list of custom autocomplete URLs. -->
+    <string name="preference_autocomplete_explanation_text">U tsoolol autocompletar:</string>
+
+    <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
+    <string name="preference_autocomplete_action_add2">Ts\'áa URL</string>
 
     <!-- Title of the screen for adding custom autocomplete URLs. -->
     <string name="preference_autocomplete_title_add">Ts’áabak URL tsikbe’eniltal</string>
 
     <!-- Label for the button to quick add custom autocomplete URLs. -->
     <string name="custom_autocomplete_quick_add">Ts’áabak URL tsikbe’eniltal</string>
+
+    <!-- Label for the button to quick add the current URL to the custom autocomplete list -->
+    <string name="add_custom_autocomplete_label">Ts\'a\'a u túumben núupankil ti\'al le u chúupul tu juunalo\'</string>
 
     <!-- Preference category for settings about cookies and site data -->
     <string name="preference_category_cookies">Cookies yéetel u péeksilil le tu’uxilo’</string>
@@ -200,7 +283,22 @@
     <string name="preference_privacy_block_content_summary2">Wa ka meyajtike’ ju beytal u k’as jela’antik u meyaj jejelas tseel ju’unilob</string>
     <string name="preference_privacy_category_cookies">Ma’ meyajta’ak cookies</string>
 
+    <!-- Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
+    only (Only 3rd-party Cookies Blocked), No (No cookies blocked) -->
+    <string name="preference_privacy_should_block_cookies_no_option2">Ma\', Nib óolal</string>
+    <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Ma\' meyajta\'al chen le cookies ku tsaypachtik óoxililo\'ob</string>
     <string name="preference_privacy_should_block_cookies_third_party_only_option">Ma’ meyajta’ak chen cookies ti’ yaanalilo’ob</string>
+
+    <string name="preference_privacy_should_block_cookies_cross_site_option">Bloquear le cookies ichil ts\'ono\'oto\'ob</string>
+    <string name="preference_privacy_should_block_cookies_yes_option2">Jaaj, beet uts</string>
+
+    <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
+    <string name="preference_security_biometric">Meyajt u huella dactilar uti\'al u je\'ebel le app</string>
+    <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
+        open when the app was last run to ensure that only the phone's owner can view a previous session.
+        %s will be replaced by the app name (e.g. Firefox Focus)
+        Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them-->
+    <string name="preference_security_biometric_summary2">Je\'ek\'abt yéetel u huella dactilar wa ts\'o\'ok a ts\'áaik atajos wa ken ts\'o\'ok u je\'ebel jump\'éel ts\'ono\'oto\' web ti\' %s.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -210,6 +308,8 @@
      screen. Additionally Android will prevent the user from taking screenshots or casting the app
      to other displays. -->
     <string name="preference_privacy_stealth_summary">Ta’akbesa’al le tseel ju’unob web ken u káajal u k’exel biilalilo’ob.</string>
+
+    <string name="preference_category_security">Kana\'antbil</string>
 
     <string name="preference_category_performance">Buka’ajil</string>
     <string name="preference_performance_block_webfonts">Ma’ meyajta’al u sayab web</string>
@@ -432,7 +532,7 @@
 
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Éemsa’ak Firefox</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Éemsa’ak Firefox</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
