@@ -1039,6 +1039,19 @@
     <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
     <string name="mozac_browser_errorpages_security_bad_cert_title">الاتصال غير آمن</string>
 
+     <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
+    قد تكون هذه مشكلة في تكوين الخادم، أو قد يوجد من يحاول انتحال شخصية الخادم.<br/><br/>
+    إذا اتصلت بهذا الخادم بنجاح مسبقًا، فقد يكون الخطأ مؤقتًا.
+    ]]></string>
+
+    <!-- The advanced certificate information shown when a website has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[
+        <label>قد يحاول أحد ما انتحال هوية الموقع، فالاستمرار هنا محفوفٌ بالمخاطر.</label>
+        <br><br>
+        <label>لا يثق %1$s بـ<b>%2$s</b> لأن الجهة المصدرة للشهادة غير معروفة، أو لأن الشهادة موقعة ذاتيًا، أو لأن الخادم لم يرسل الشهادات الوسيطة الصحيحة.</label>
+]]></string>
+
      <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">أغلِق اللسان</string>
@@ -1058,6 +1071,9 @@
     <!-- Tool Tip "X" button Content description (not visible, for screen readers etc.) :Button that closes the tool tip -->
     <string name="tool_tip_dismiss_button_content_description">أهمِل</string>
 
+    <!-- CFR for Toolbar Delete Icon (Banner Info Message) -->
+    <string name="cfr_for_toolbar_delete_icon2">انقر هنا لحذف كل شيء - التاريخ وملفات تعريف الارتباط وكل شيء - وابدأ بانتعاشة في لسان جديد.</string>
+
     <!-- Promote SearchWidget Dialog -->
 
     <!-- Content description (not visible, for screen readers etc.): This is the description for the
@@ -1067,4 +1083,23 @@
     <!-- This is the title of promote search widget dialog. -->
     <string name="promote_search_widget_dialog_title">مُسح تأريخ التصفح! 🎉</string>
 
-    </resources>
+    <!-- Banner Info Message than will appear when user first enters in the app. The location is at the toolbar. -->
+    <string name="cfr_for_start_browsing">ابدأ جلسة التصفح الخاصة، وسنقوم بحظر أدوات التتبع والأشياء السيئة الأخرى أثناء تصفحك.</string>
+
+    <!-- This is the subtitle of promote search widget dialog. %1$s will get replaced with the name
+    of the app (e.g. "Focus") -->
+    <string name="promote_search_widget_dialog_subtitle">سنتركك لتصفحك الخاص ، ولكن ابدأ بشكل أسرع في المرة القادمة باستخدام ودجت %1$s على شاشتك الرئيسية.</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled -->
+    <string name="exit_fullscreen_with_gesture" moz:removedIn="132" tools:ignore="UnusedResources">للخروج من وضع ملء الشاشة، اسحب من الأعلى واستخدم إيماء الرجوع</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation -->
+    <string name="exit_fullscreen_with_back_button" moz:removedIn="132" tools:ignore="UnusedResources">للخروج من وضع ملء الشاشة، اسحب من الأعلى واضغط زر الحذف</string>
+
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">اسحب من الأعلى واستخدم إيماء الرجوع للخروج</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">اسحب من الأعلى واضغط على زر الحذف للخروج</string>
+</resources>
