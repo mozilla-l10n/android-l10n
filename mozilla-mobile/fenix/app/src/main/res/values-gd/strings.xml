@@ -564,6 +564,10 @@
     <!-- Preference for enabling "HTTPS-Only" mode -->
     <string name="preferences_https_only_title">Modh HTTPS a-mhàin</string>
 
+    <!-- Label for cookie banner section in quick settings panel. -->
+    <string name="cookie_banner_blocker">Blocaiche bratach bhriosgaidean</string>
+    <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
+    <string name="preferences_cookie_banner_reduction_private_mode">Blocaiche bratach bhriosgaidean ann am brabhsadh prìobhaideach</string>
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_off_for_site">Dheth air an làrach seo</string>
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
@@ -581,8 +585,15 @@
     <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_unsupported_site">Chan eil taic ris an làrach seo an-dràsta fhèin</string>
 
+    <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
+    <string name="reduce_cookie_banner_details_panel_title_on_for_site_1">A bheil thu airson blocaiche bratach bhriosgaidean a chur air airson %1$s?</string>
+    <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
+    <string name="reduce_cookie_banner_details_panel_title_off_for_site_1">A bheil thu airson blocaiche bratach bhriosgaidean a chur dheth airson %1$s?</string>
     <!-- Title text for a detail explanation indicating cookie banner reducer didn't work for the current site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name-->
     <string name="reduce_cookie_banner_details_panel_title_unsupported_site_request_2">Chan urrainn dha %1$s iarrtasan airson bhriosgaidean air an làrach seo a dhiùltadh gu fèin-obrachail. ’S urrainn dhut iarrtas a chur gun tèid taic a chur ris an làrach seo san àm ri teachd.</string>
+
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is the application name -->
+    <string name="reduce_cookie_banner_details_panel_description_off_for_site_1">Cuir dheth seo is falamhaichidh %1$s na briosgaidean is ath-luchdaichidh e an làrach seo. Dh’fhaoidte gun dèid do chlàradh a-mach à làraichean no gun dèid basgaidean ceannachd fhalamhachadh.</string>
 
     <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preferences_https_only_summary">Nì seo oidhirp leis fhèin ceangal a dhèanamh ri làraichean le pròtacal crioptachadh HTTPS airson tèarainteachd a bharrachd.</string>
@@ -719,6 +730,16 @@
     <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
     <string name="wallpapers_onboarding_dialog_explore_more_button_text">Rùraich pàipearan-balla eile</string>
 
+    <!-- Button text on the extension crash dialog to prompt the user to try restarting the extensions but the dialog will reappear if it is unsuccessful again -->
+    <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Feuch is ath-thòisich na leudachain</string>
+    <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
+    <string name="extension_process_crash_dialog_disable_extensions_button_text">Lean air adhart leis na leudachain à comas</string>
+
+    <!-- Account Preferences -->
+    <!-- Preference for managing your account via accounts.firefox.com -->
+    <string name="preferences_manage_account">Stiùirich an cunntas</string>
+    <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
+    <string name="preferences_manage_account_summary">Atharraich am facal-faire agad, stiùirich cruinneachadh dàta no sguab às an cunntas agad</string>
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Sioncronaich an-dràsta</string>
     <!-- Preference category for sync -->
@@ -727,6 +748,8 @@
     <string name="preferences_sync_history">An eachdraidh</string>
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">Comharran-lìn</string>
+    <!-- Preference for syncing passwords -->
+    <string name="preferences_sync_logins_2">Faclan-faire</string>
     <!-- Preference for syncing tabs -->
     <string name="preferences_sync_tabs_2">Tabaichean fosgailte</string>
     <!-- Preference for signing out -->
@@ -751,6 +774,8 @@
         and the third is the device model. -->
     <string name="default_device_name_2">%1$s air %2$s %3$s</string>
 
+    <!-- Preference for syncing payment methods -->
+    <string name="preferences_sync_credit_cards_2">Dòighean pàighidh</string>
     <!-- Preference for syncing addresses -->
     <string name="preferences_sync_address">Seòlaidhean</string>
 
@@ -763,6 +788,14 @@
     <string name="fxa_tab_received_notification_name">Fhuaras taba</string>
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Taba o %s</string>
+
+    <!-- Close Synced Tabs -->
+    <!-- The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.  -->
+    <string name="fxa_tabs_closed_notification_title">Chaidh tabaichean %1$s a dhùnadh: %2$d</string>
+    <!-- The body for a "closed synced tabs" notification. -->
+    <string name="fxa_tabs_closed_text">Seall tabaichean a dhùin thu o chionn goirid</string>
 
     <!-- Advanced Preferences -->
     <!-- Preference for tracking protection exceptions -->
@@ -782,6 +815,10 @@
     <string name="preferences_marketing_data">Dàta margaideachd</string>
     <!-- Preference description for marketing data collection -->
     <string name="preferences_marketing_data_description2">Co-roinnidh seo dàta bunasach a’ cleachdaidh le Adjust, an reiceadair margaideachd mobile againn</string>
+    <!-- Preference switch title for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_title">Cuir aithisgean tuislidh gu fèin-obrachail</string>
+    <!-- Preference switch description for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_description">Co-roinnidh seo dàta mun tuisleadh gu fèin-obrachail nuair a nì Firefox ath-thòiseachadh an dèidh tuislidh</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Rannsachadh</string>
     <!-- Summary for studies preferences -->
@@ -822,6 +859,11 @@
     <string name="preference_gestures_dynamic_toolbar">Dèan sgroladh airson am bàr-inneal a chur am falach</string>
     <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
     <string name="preference_gestures_swipe_toolbar_show_tabs">Grad-shlaighd am bàr-inneal suas airson tabaichean fhosgladh</string>
+
+    <!-- Preference for using the dynamic toolbars -->
+    <string name="preference_gestures_dynamic_toolbar_2">Dèan sgroladh airson bàr an t-seòlaidh is am bàr-inneal a chur am falach</string>
+    <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Grad-shlaighd bàr an t-seòlaidh gu taobh airson leum a ghearradh gu taba eile</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -1069,6 +1111,15 @@
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">Aisig an taba</string>
 
+    <!-- Unsubmitted crash dialog title, The first parameter is the name of the app (e.g. Firefox)  -->
+    <string name="unsubmitted_crash_dialog_title">B’ fheudar dha %s ath-thòiseachadh</string>
+    <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
+    <string name="unsubmitted_crash_dialog_checkbox_label">Cuir aithisgean tuislidh gu fèin-obrachail</string>
+    <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+    <string name="unsubmitted_crash_dialog_negative_button">Dùin</string>
+    <!-- Unsubmitted crash dialog positive button to submit crash report -->
+    <string name="unsubmitted_crash_dialog_positive_button">Cuir a-steach aithisg tuislidh</string>
+
     <!-- Bookmarks -->
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">A bheil thu cinnteach gu bheil thu airson am pasgan seo a sguabadh às?</string>
@@ -1080,6 +1131,8 @@
     <string name="bookmark_add_folder">Cuir pasgan ris</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_saved_snackbar">Chaidh an comharra-lìn a shàbhaladh!</string>
+    <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
+    <string name="bookmark_saved_in_folder_snackbar">Air a shàbhaladh an-seo: “%s”</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">DEASAICH</string>
     <!-- Bookmark overflow menu edit button -->
@@ -1113,8 +1166,12 @@
     <string name="bookmark_url_label">URL</string>
     <!-- Bookmark FOLDER editing field label -->
     <string name="bookmark_folder_label">PASGAN</string>
+    <!-- Text indicating which folder a bookmark or folder will be saved in -->
+    <string name="bookmark_save_in_label">Sàbhail an-seo:</string>
     <!-- Bookmark NAME editing field label -->
     <string name="bookmark_name_label">AINM</string>
+    <!-- Label for a text input field for a bookmark or folder name -->
+    <string name="bookmark_name_label_normal_case">An t-ainm</string>
     <!-- Bookmark add folder screen title -->
     <string name="bookmark_add_folder_fragment_label">Cuir pasgan ris</string>
     <!-- Bookmark select folder screen title -->
@@ -1137,6 +1194,25 @@
 
     <!-- Text for the button to search all bookmarks -->
     <string name="bookmark_search">Cuir a-steach briathran-luirg</string>
+
+    <!-- Content description for the bookmark navigation bar back button -->
+    <string name="bookmark_navigate_back_button_content_description">Air ais</string>
+    <!-- Content description for the bookmark list new folder navigation bar button -->
+    <string name="bookmark_add_new_folder_button_content_description">Cuir pasgan ùr ris</string>
+    <!-- Content description for the bookmark navigation bar close button -->
+    <string name="bookmark_close_button_content_description" tools:ignore="UnusedResources" moz:removedIn="130">Dùin na comharran-lìn</string>
+    <!-- Content description for bookmark search floating action button -->
+    <string name="bookmark_search_button_content_description">Lorg sna comharran-lìn</string>
+    <!-- Content description for the overflow menu for a bookmark item. Paramter will a folder name or bookmark title. -->
+    <string name="bookmark_item_menu_button_content_description">An clàr-taice aig %s</string>
+    <!-- Title for the bookmark list empty state-->
+    <string name="bookmark_empty_list_title">Chan eil comharra-lìn sam bith agad fhathast</string>
+    <!-- Description for the bookmark list empty state when you're not signed into sync. -->
+    <string name="bookmark_empty_list_guest_description">Sàbhail làraichean is tu ri brabhsadh. Clàraich a-steach is faigh greim air comharran-lìn a th’ agad air uidheaman sioncronaichte eile.</string>
+    <!-- Text for the button to navigate to sync authentication -->
+    <string name="bookmark_empty_list_guest_cta">Clàraich a-steach a shioncronachadh</string>
+    <!-- Description for the bookmark list empty state when you're signed into sync. -->
+    <string name="bookmark_empty_list_authenticated_description">Sàbhail làraichean is tu ri brabhsadh. Gheibh sinn greim cuideachd air na comharran-lìn a th’ agad air uidheaman sioncronaichte eile.</string>
 
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
@@ -1280,6 +1356,12 @@
     <string name="share_save_to_pdf">Sàbhail mar PDF</string>
     <!-- Text for error message when generating a PDF file Text. -->
     <string name="unable_to_save_to_pdf_error">Chan urrainn dhuinn am PDF a ghintinn</string>
+    <!-- Text for standard error snackbar dismiss button. -->
+    <string name="standard_snackbar_error_dismiss">Leig seachad</string>
+    <!-- Text for error message when printing a page and it fails. -->
+    <string name="unable_to_print_page_error">Chan urrainn dhuinn an duilleag seo a chlò-bhualadh</string>
+    <!-- Text for the print feature in the share and browser menu -->
+    <string name="menu_print">Clò-bhuail</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">Cuir gu uidheam</string>
     <!-- Sub-header in the dialog to share a link to an app from the full list -->
@@ -1320,6 +1402,21 @@
     <!-- Notifications -->
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Dùin na tabaichean prìobhaideach</string>
+
+    <!-- Text for option one, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_0" tools:ignore="UnusedResources" moz:removedIn="130">Neodrach</string>
+    <!-- Text for option two, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_1" tools:ignore="UnusedResources" moz:removedIn="130">Glè mhì-riaraichte</string>
+    <!-- Text for option three, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_2" tools:ignore="UnusedResources" moz:removedIn="130">Mì-riaraichte</string>
+    <!-- Text for option four, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_3" tools:ignore="UnusedResources" moz:removedIn="130">Riaraichte</string>
+    <!-- Text for option five, shown in microsurvey.-->
+    <string name="microsurvey_survey_5_point_option_4" tools:ignore="UnusedResources" moz:removedIn="130">Glè riaraichte</string>
+
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
+    <string name="notification_erase_title_android_14">A bheil thu airson na tabaichean prìobhaideach a dhùnadh?</string>
+    <string name="notification_erase_text_android_14">Thoir gnogag no grad-shlaighd am brath seo airson na tabaichean prìobhaideach a dhùnadh.</string>
 
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Margaideachd</string>
@@ -1363,6 +1460,8 @@
     <string name="snackbar_tab_closed">Chaidh an taba a dhùnadh</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Chaidh na tabaichean a dhùnadh</string>
+    <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
+    <string name="snackbar_num_tabs_closed">Chaidh na tabaichean a dhùnadh, %1$s dhiubh</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs -->
     <string name="snackbar_message_bookmarks_saved">Chaidh na comharran-lìn a shàbhaladh!</string>
     <!-- Text shown in snackbar when user adds a site to shortcuts -->
@@ -1371,6 +1470,8 @@
     <string name="snackbar_private_tab_closed">Chaidh an taba prìobhaideach a dhùnadh</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
     <string name="snackbar_private_tabs_closed">Chaidh na tabaichean prìobhaideach a dhùnadh</string>
+    <!-- Text shown in snackbar when user erases their private browsing data -->
+    <string name="snackbar_private_data_deleted">Chaidh dàta a’ bhrabhsaidh phrìobhaidich a sguabadh às</string>
     <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
     <string name="snackbar_deleted_undo">NEO-DHÈAN</string>
     <!-- Text shown in snackbar when user removes a top site -->
@@ -1412,9 +1513,14 @@
     <string name="preferences_delete_browsing_data_tabs_title_2">Tabaichean fosgailte</string>
     <!-- Subtitle for the tabs item in Delete browsing data, parameter will be replaced with the number of open tabs -->
     <string name="preferences_delete_browsing_data_tabs_subtitle">Tabaichean (%d)</string>
+    <!-- Title for the data and history items in Delete browsing data -->
+    <!-- Title for the history item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_browsing_history_title">An eachdraidh brabhsaidh</string>
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">Seòlaidhean (%d)</string>
+    <!-- Title for the cookies and site data items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_and_site_data">Briosgaidean is dàta làraichean</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies_subtitle">Thèid do chlàradh a-mach às a’ mhòrchuid de làraichean</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
