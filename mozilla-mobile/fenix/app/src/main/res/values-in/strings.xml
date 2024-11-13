@@ -511,6 +511,8 @@
     <!-- Text for the button to dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_add_search_widget_negative_button" tools:ignore="UnusedResources">Jangan sekarang</string>
 
+    <!-- Onboarding add-ons card, for checking more add-ons on, used by Nimbus experiments. -->
+    <string name="onboarding_add_on_explore_more_extensions" tools:ignore="UnusedResources" moz:removedIn="133">Jelajahi lebih banyak ekstensi.</string>
     <!-- Onboarding add-ons card, button for start browsing, used by Nimbus experiments. -->
     <string name="onboarding_add_on_start_browsing_button" tools:ignore="UnusedResources" moz:removedIn="133">Mulai menjelajah.</string>
     <!-- Onboarding add-ons card, for checking more add-ons on, used by Nimbus experiments. -->
@@ -857,6 +859,11 @@
     <!-- Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled -->
     <string name="extension_process_crash_dialog_title">Ekstensi dinonaktifkan untuk sementara</string>
 
+    <!-- Button text on the extension crash dialog to prompt the user to try restarting the extensions but the dialog will reappear if it is unsuccessful again -->
+    <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Cobalah memulai ulang ekstensi</string>
+    <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
+    <string name="extension_process_crash_dialog_disable_extensions_button_text">Lanjutkan dengan ekstensi yang dinonaktifkan</string>
+
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">Kelola akun</string>
@@ -912,6 +919,14 @@
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Tab dari %s</string>
 
+    <!-- Close Synced Tabs -->
+    <!-- The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.  -->
+    <string name="fxa_tabs_closed_notification_title">%1$s tab ditutup: %2$d</string>
+    <!-- The body for a "closed synced tabs" notification. -->
+    <string name="fxa_tabs_closed_text">Lihat tab yang baru saja ditutup</string>
+
     <!-- Advanced Preferences -->
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Kekecualian</string>
@@ -931,6 +946,10 @@
     <string name="preferences_marketing_data">Data pemasaran</string>
     <!-- Preference description for marketing data collection -->
     <string name="preferences_marketing_data_description2">Bagikan data penggunaan dasar dengan Adjust, vendor pemasaran seluler kami</string>
+    <!-- Preference switch title for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_title">Kirim laporan kerusakan secara otomatis</string>
+    <!-- Preference switch description for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_description">Bagikan data kerusakan secara otomatis saat memulai dengan Mozilla setelah terjadi kerusakan</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Kajian</string>
     <!-- Summary for studies preferences -->
@@ -972,6 +991,11 @@
     <string name="preference_gestures_dynamic_toolbar">Gulir untuk menyembunyikan bilah alat</string>
     <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
     <string name="preference_gestures_swipe_toolbar_show_tabs">Geser bilah alat ke atas untuk membuka tab</string>
+
+    <!-- Preference for using the dynamic toolbars -->
+    <string name="preference_gestures_dynamic_toolbar_2">Gulir untuk menyembunyikan bilah alamat dan bilah alat</string>
+    <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Gesek bilah alamat ke samping untuk beralih tab</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -1210,6 +1234,20 @@
 
     <!-- WebCompat Reporter -->
 
+    <!-- These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site. -->
+    <!-- Broken site reason text for site slow or not working -->
+    <string name="webcompat_reporter_reason_slow">Situs lambat atau tidak berfungsi</string>
+    <!-- Broken site reason text for images or videos -->
+    <string name="webcompat_reporter_reason_media">Gambar atau video</string>
+    <!-- Broken site reason text for buttons, links, and other content -->
+    <string name="webcompat_reporter_reason_content">Tombol, tautan, dan konten lainnya</string>
+    <!-- Broken site reason text for sign in or sign out -->
+    <string name="webcompat_reporter_reason_account">Masuk atau keluar</string>
+    <!-- Broken site reason text for ad blocker -->
+    <string name="webcompat_reporter_reason_ad_blocker">Pemblokir iklan</string>
+    <!-- Broken site reason text for something else -->
+    <string name="webcompat_reporter_reason_other">Lainnya</string>
+
     <!-- Crashes -->
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">Maaf. %1$s tidak dapat memuat halaman.</string>
@@ -1221,9 +1259,20 @@
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">Pulihkan tab</string>
 
+    <!-- Unsubmitted crash dialog title, The first parameter is the name of the app (e.g. Firefox)  -->
+    <string name="unsubmitted_crash_dialog_title">%s harus dimulai ulang</string>
+    <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
+    <string name="unsubmitted_crash_dialog_checkbox_label">Kirim laporan kerusakan secara otomatis</string>
+    <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+    <string name="unsubmitted_crash_dialog_negative_button">Tutup</string>
+    <!-- Unsubmitted crash dialog positive button to submit crash report -->
+    <string name="unsubmitted_crash_dialog_positive_button">Kirim laporan kerusakan</string>
+
     <!-- Bookmarks -->
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">Yakin akan menghapus folder ini?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items. -->
+    <string name="bookmark_delete_folders_confirmation_dialog">Yakin ingin menghapus item yang dipilih?</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
     <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s akan menghapus item terpilih.</string>
     <!-- Text for the cancel button on delete bookmark dialog -->
@@ -1232,8 +1281,12 @@
     <string name="bookmark_add_folder">Tambah folder</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_saved_snackbar" moz:removedIn="132" tools:ignore="UnusedResources">Markah berhasil disimpan!</string>
+    <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
+    <string name="bookmark_saved_in_folder_snackbar">Disimpan di “%s”</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">EDIT</string>
+    <!-- Bookmark menu move button -->
+    <string name="bookmark_menu_move_button">Pindah</string>
     <!-- Bookmark overflow menu edit button -->
     <string name="bookmark_menu_edit_button">Ubah</string>
     <!-- Bookmark overflow menu copy button -->
@@ -1265,6 +1318,8 @@
     <string name="bookmark_url_label">URL</string>
     <!-- Bookmark FOLDER editing field label -->
     <string name="bookmark_folder_label">FOLDER</string>
+    <!-- Text indicating which folder a bookmark or folder will be saved in -->
+    <string name="bookmark_save_in_label">Simpan di</string>
     <!-- Bookmark NAME editing field label -->
     <string name="bookmark_name_label">NAMA</string>
     <!-- Label for a text input field for a bookmark or folder name -->
@@ -1314,6 +1369,8 @@
     <string name="bookmark_empty_list_guest_description">Simpan situs saat Anda menjelajah. Masuk untuk mengambil markah dari perangkat lain yang disinkronkan.</string>
     <!-- Text for the button to navigate to sync authentication -->
     <string name="bookmark_empty_list_guest_cta">Masuk untuk sinkronisasi</string>
+    <!-- Description for the bookmark list empty state when you're signed into sync. -->
+    <string name="bookmark_empty_list_authenticated_description">Simpan situs saat Anda menjelajah. Kami juga akan mengambil markah dari perangkat lain yang disinkronkan.</string>
     <!-- Description for the add new folder button when selecting a folder. -->
     <string name="bookmark_select_folder_new_folder_button_title">Folder baru</string>
 
