@@ -850,6 +850,15 @@
     <!-- Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled -->
     <string name="extension_process_crash_dialog_title">Додаци су привремено онемогућени</string>
 
+    <!-- This is a message shown to the user when too many errors have occurred with the extensions process and they have been disabled.
+    The user can decide if they would like to continue trying to start extensions or if they'd rather continue without them.
+    The first parameter is the application name. -->
+    <string name="extension_process_crash_dialog_message">Један или више додатака је престало да ради што је довело до нестабилности вашег система. %1$s је покушао да их поново покрене без успеха.\n\nДодаци неће бити поново покренути током тренутне сесије.\n\nУклањање или онемогућавање додатака може да реши проблем.</string>
+    <!-- Button text on the extension crash dialog to prompt the user to try restarting the extensions but the dialog will reappear if it is unsuccessful again -->
+    <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Покушајте поново покренути додатке</string>
+    <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
+    <string name="extension_process_crash_dialog_disable_extensions_button_text">Наставите са онемогућеним додацима</string>
+
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">Управљајте налогом</string>
@@ -863,6 +872,8 @@
     <string name="preferences_sync_history">Историја</string>
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">Забелешке</string>
+    <!-- Preference for syncing passwords -->
+    <string name="preferences_sync_logins_2">Лозинке</string>
     <!-- Preference for syncing tabs -->
     <string name="preferences_sync_tabs_2">Отвори језичке</string>
     <!-- Preference for signing out -->
@@ -888,6 +899,8 @@
         and the third is the device model. -->
     <string name="default_device_name_2">%1$s на %2$s %3$s</string>
 
+    <!-- Preference for syncing payment methods -->
+    <string name="preferences_sync_credit_cards_2">Начини плаћања</string>
     <!-- Preference for syncing addresses -->
     <string name="preferences_sync_address">Адресе</string>
 
@@ -901,6 +914,14 @@
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Језичак са уређаја %s</string>
 
+    <!-- Close Synced Tabs -->
+    <!-- The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.  -->
+    <string name="fxa_tabs_closed_notification_title">%1$s картица затворено: %2$d</string>
+    <!-- The body for a "closed synced tabs" notification. -->
+    <string name="fxa_tabs_closed_text">Прегледај недавно затворене картице</string>
+
     <!-- Advanced Preferences -->
     <!-- Preference for tracking protection exceptions -->
     <string name="preferences_tracking_protection_exceptions">Изузеци</string>
@@ -913,12 +934,20 @@
 
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">Употреба и технички подаци</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data_1">Технички и интеракцијски подаци</string>
+    <!-- Preference switch for usage and technical learn more link -->
+    <string name="preference_usage_data_learn_more" tools:ignore="UnusedResources">Сазнајте више</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">Делите податке о перформансама, употреби, хардверу и прилагођавањима вашег прегледача с Mozilla-ом како бисте нам помогли у побољшавању апликације %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Маркетиншки подаци</string>
     <!-- Preference description for marketing data collection -->
     <string name="preferences_marketing_data_description2">Подели податке о основном коришћењу са фирмом Adjust, нашим сарадником за маркетинг</string>
+    <!-- Preference switch title for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_title">Аутоматски шаљите извештаје о паду</string>
+    <!-- Preference switch description for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_description">Након пада, аутоматски дели податке о паду са Mozilla-ом при покретању</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Студије</string>
     <!-- Summary for studies preferences -->
@@ -961,6 +990,11 @@
 
     <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
     <string name="preference_gestures_swipe_toolbar_show_tabs">Превуците траку с алаткама на горе да отворите језичке</string>
+
+    <!-- Preference for using the dynamic toolbars -->
+    <string name="preference_gestures_dynamic_toolbar_2">Скролујте да сакријете адресну и траку са алаткама</string>
+    <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Превуците адресну траку у страну да промените картице</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -1198,6 +1232,11 @@
 
 
     <!-- WebCompat Reporter -->
+
+
+    <!-- WebCompat Reporter -->
+    <!-- The title of the Web Compat Reporter feature. This is displayed in the top app bar. -->
+    <string name="webcompat_reporter_screen_title">Пријавите неисправан сајт</string>
 
 
     <!-- Crashes -->
