@@ -124,6 +124,9 @@
     <!-- Text for the title displayed in the contextual feature recommendation popup promoting swipe of address bar. -->
     <string name="address_bar_swipe_cfr_title">قورال بالداق سۈرۈلسە بەتكۈچ ئالماشتۇرىدۇ</string>
 
+    <!-- Text for the message displayed in the contextual feature recommendation popup promoting swipe of address bar. -->
+    <string name="address_bar_swipe_cfr_message">ئوڭ ياكى سولغا سۈرۈلسە ئالماشتۇرىدۇ. ئاخىرقى بەتكۈچىڭىز سولغا سۈرۈلسە يېڭى بەتكۈچ ئېچىلىدۇ.</string>
+
     <!-- Tablet navigation bar "contextual feature recommendation" (CFR) -->
     <!-- Text for the title displayed in the contextual feature recommendation popup promoting the tablet navigation bar. -->
     <string name="tablet_nav_bar_cfr_title" moz:removedIn="132" tools:ignore="UnusedResources">يېڭى: ئالدىغا كەينىگە يا ئوقنى چېكىپ بەت ئالماشتۇرغىلى بولىدۇ</string>
@@ -250,8 +253,12 @@
     <string name="browser_menu_open_in_regular_tab">ئادەتتىكى بەتكۈچتە ئاچ</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">باش ئېكرانغا قوش</string>
+    <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+    <string name="browser_menu_add_app_to_homescreen">ئەپنى باش ئېكرانغا قوش</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen_2">باش ئېكرانغا قوش…</string>
+    <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+    <string name="browser_menu_add_app_to_homescreen_2">ئەپنى باش ئېكرانغا قوش…</string>
     <!-- Text for notifying users that Xiaomi devices require additional permissions to add to home screen -->
     <string name="browser_menu_add_to_homescreen_xiaomi">شياۋمى ئۈسكۈنىلىرىدە باش ئېكرانغا تېزلەتمە قوشۇشتا قوشۇمچە ئىجازەتكە ئېھتىياجلىق بولۇشى مۇمكىن. تەڭشەكلىرىڭىزنى تەكشۈرۈڭ.</string>
     <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
@@ -340,6 +347,16 @@
     <string name="browser_menu_tools_description_with_translate" moz:removedIn="133" tools:ignore="UnusedResources">ئوقۇرمەن كۆرۈنۈشى، تەرجىمە، بېسىش، ھەمبەھىر، ئەپ ئېچىش</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
     <string name="browser_menu_tools_description" moz:removedIn="133" tools:ignore="UnusedResources">ئوقۇرمەن كۆرۈنۈشى، بېسىش، ھەمبەھىر، ئەپ ئېچىش</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_translate_with_report_site">ئوقۇرمەن كۆرۈنۈشى، تەرجىمە، %s، بېسىش، ھەمبەھىر، ئەپ ئېچىش</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_with_translate_without_report_site">ئوقۇرمەن كۆرۈنۈشى، تەرجىمە، بېسىش، ھەمبەھىر، ئەپ ئېچىش</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_report_site">ئوقۇرمەن كۆرۈنۈشى، %s، بېسىش، ھەمبەھىر، ئەپ ئېچىش</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_without_report_site">ئوقۇرمەن كۆرۈنۈشى، بېسىش، ھەمبەھىر، ئەپ ئېچىش</string>
     <!-- Browser menu label that navigates to the save sub-menu, which contains various save related menu items such as
          bookmarking a page, saving to collection, shortcut or as a PDF, and adding to home screen -->
     <string name="browser_menu_save">ساقلا</string>
@@ -949,6 +966,10 @@
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">ئىشلىتىلىشى ۋە تېخنىكىلىق سانلىق مەلۇمات</string>
 
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data_1">تېخنىكىلىق ۋە تەسىرلىشىش سانلىق مەلۇماتى</string>
+    <!-- Preference switch for usage and technical learn more link -->
+    <string name="preference_usage_data_learn_more" tools:ignore="UnusedResources">تەپسىلاتى</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">تور كۆرگۈ ئىشلىتىش جەريانىدىكى ئىش ئۈنۈمى، ئىشلىتىش ئۇسۇلى، قاتتىق دېتال ۋە خاسلاشتۇرۇلغان سانلىق مەلۇماتنى Mozilla بىلەن ھەمبەھىرلەپ، %1$s نى ياخشىلىشىمىزغا ياردەم بېرىڭ</string>
     <!-- Preference switch for marketing data collection -->
@@ -1246,6 +1267,11 @@
 
 
     <!-- WebCompat Reporter -->
+
+
+    <!-- WebCompat Reporter -->
+    <!-- The title of the Web Compat Reporter feature. This is displayed in the top app bar. -->
+    <string name="webcompat_reporter_screen_title">بۇزۇلغان بېكەتنى دوكلات قىلىدۇ</string>
 
 
     <!-- These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site. -->
