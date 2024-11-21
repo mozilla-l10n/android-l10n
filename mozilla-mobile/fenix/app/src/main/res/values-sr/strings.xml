@@ -1296,6 +1296,8 @@
     <!-- Bookmarks -->
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">Да ли сте сигурни да желите да избришете ову фасциклу?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items. -->
+    <string name="bookmark_delete_folders_confirmation_dialog">Јесте ли сигурни да желите обрисати изабране ставке?</string>
     <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
     <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s ће обрисати одабране ставке.</string>
     <!-- Text for the cancel button on delete bookmark dialog -->
@@ -1304,8 +1306,12 @@
     <string name="bookmark_add_folder">Додај фасциклу</string>
     <!-- Snackbar title shown after a bookmark has been created. -->
     <string name="bookmark_saved_snackbar" moz:removedIn="132" tools:ignore="UnusedResources">Забелешка је сачувана!</string>
+    <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
+    <string name="bookmark_saved_in_folder_snackbar">Сачувано у “%s”</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">УРЕДИ</string>
+    <!-- Bookmark menu move button -->
+    <string name="bookmark_menu_move_button">Премести</string>
     <!-- Bookmark overflow menu edit button -->
     <string name="bookmark_menu_edit_button">Уреди</string>
     <!-- Bookmark overflow menu copy button -->
@@ -1337,8 +1343,12 @@
     <string name="bookmark_url_label">Адреса</string>
     <!-- Bookmark FOLDER editing field label -->
     <string name="bookmark_folder_label">ФАСЦИКЛА</string>
+    <!-- Text indicating which folder a bookmark or folder will be saved in -->
+    <string name="bookmark_save_in_label">Сачувај у</string>
     <!-- Bookmark NAME editing field label -->
     <string name="bookmark_name_label">НАЗИВ</string>
+    <!-- Label for a text input field for a bookmark or folder name -->
+    <string name="bookmark_name_label_normal_case">Назив</string>
     <!-- Bookmark add folder screen title -->
     <string name="bookmark_add_folder_fragment_label">Додај фасциклу</string>
     <!-- Bookmark select folder screen title -->
@@ -1359,8 +1369,37 @@
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">ОПОЗОВИ</string>
 
+    <!-- Bookmark snackbar message for deleting a single item. Parameter is the title of the item being deleted -->
+    <string name="bookmark_delete_single_item">%s је избрисан</string>
+    <!-- Bookmark snackbar message for deleting multiple items. Parameter is the number of items being deleted -->
+    <string name="bookmark_delete_multiple_items">Избрисане ставке: %s</string>
     <!-- Text for the button to search all bookmarks -->
     <string name="bookmark_search">Унеси појмове за претрагу</string>
+
+    <!-- Content description for the bookmark navigation bar back button -->
+    <string name="bookmark_navigate_back_button_content_description">Иди назад</string>
+    <!-- Content description for the bookmark list new folder navigation bar button -->
+    <string name="bookmark_add_new_folder_button_content_description">Додај нову фасциклу</string>
+    <!-- Content description for the bookmark screen delete bookmark navigation bar button -->
+    <string name="bookmark_delete_bookmark_content_description">Обриши обележивач</string>
+    <!-- Content description for the bookmark screen delete bookmark folder navigation bar button -->
+    <string name="bookmark_delete_folder_content_description">Обриши фасциклу</string>
+    <!-- Content description for bookmark search floating action button -->
+    <string name="bookmark_search_button_content_description">Претражи обележиваче</string>
+    <!-- Content description for the overflow menu for a bookmark item. Paramter will a folder name or bookmark title. -->
+    <string name="bookmark_item_menu_button_content_description">Мени ставки за %s</string>
+    <!-- Title for the bookmark list empty state-->
+    <string name="bookmark_empty_list_title">Још нема обележивача</string>
+    <!-- Description for the bookmark list empty state when you're not signed into sync. -->
+    <string name="bookmark_empty_list_guest_description">Чувајте сајтове док прегледате. Пријавите се да преузмете обележиваче са других синхронизованих уређаја.</string>
+    <!-- Text for the button to navigate to sync authentication -->
+    <string name="bookmark_empty_list_guest_cta">Пријави се ради синхронизације</string>
+    <!-- Description for the bookmark list empty state when you're signed into sync. -->
+    <string name="bookmark_empty_list_authenticated_description">Чувајте сајтове док прегледате. Такође ћемо преузети обележиваче са других синхронизованих уређаја.</string>
+    <!-- Description for the bookmark list empty state when you're in an empty folder. -->
+    <string name="bookmark_empty_list_folder_description">Додајте обележиваче док прегледате да би касније нашли ваше омиљене сајтове.</string>
+    <!-- Description for the add new folder button when selecting a folder. -->
+    <string name="bookmark_select_folder_new_folder_button_title">Нова фасцикла</string>
 
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
@@ -1444,6 +1483,13 @@
     <string name="studies_on">Укљ.</string>
     <!-- Summary of studies data on quit preference if it is set to off -->
     <string name="studies_off">Искљ.</string>
+
+    <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
+    <string name="preferences_category_permissions">Дозволе</string>
+    <!-- Category header of a preference that allows a user to alter settings related to web content. -->
+    <string name="preferences_category_content">Садржај</string>
+    <!-- Preference for altering the default browsing mode. When enabled, the desktop site will always be requested. -->
+    <string name="preference_feature_desktop_mode_default">Увек захтевај сајт у десктоп приказу</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -1553,6 +1599,10 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Затвори приватне језичке</string>
 
+    <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
+    <string name="notification_erase_title_android_14">Затвори приватне картице?</string>
+    <string name="notification_erase_text_android_14">Додирните или превуците ово обавештење да затворите приватне картице.</string>
+
     <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="notification_marketing_channel_name">Маркетинг</string>
 
@@ -1596,6 +1646,8 @@
     <string name="snackbar_tab_closed">Језичак затворен</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Језичци затворени</string>
+    <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
+    <string name="snackbar_num_tabs_closed">Затворених картица: %1$s</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs -->
     <string name="snackbar_message_bookmarks_saved" moz:removedIn="132" tools:ignore="UnusedResources">Забелешке сачуване!</string>
     <!-- Text shown in snackbar when user adds a site to shortcuts -->
