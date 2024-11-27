@@ -265,9 +265,9 @@
     <!-- Content description (not visible, for screen readers etc.) for main menu settings button. -->
     <string name="browser_main_menu_content_description_settings_button">Көйләүләр</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description_with_translate">Уку режимы, Тәрҗемә итү, Бастыру, Уртаклашу, Кушымтаны ачу</string>
+    <string name="browser_menu_tools_description_with_translate" moz:removedIn="133" tools:ignore="UnusedResources">Уку режимы, Тәрҗемә итү, Бастыру, Уртаклашу, Кушымтаны ачу</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description">Уку режимы, Бастыру, Уртаклашу, Кушымтаны ачу</string>
+    <string name="browser_menu_tools_description" moz:removedIn="133" tools:ignore="UnusedResources">Уку режимы, Бастыру, Уртаклашу, Кушымтаны ачу</string>
     <!-- Browser menu label that navigates to the save sub-menu, which contains various save related menu items such as
          bookmarking a page, saving to collection, shortcut or as a PDF, and adding to home screen -->
     <string name="browser_menu_save">Саклау</string>
@@ -471,6 +471,10 @@
     <string name="preferences_search_engines_suggestions">Эзләү системаларыннан тәкъдимнәр</string>
     <!-- Preference Category for settings related to Search address bar -->
     <string name="preferences_settings_address_bar">Адрес юлына кагылышлы көйләүләр</string>
+    <!-- Preference Category for settings to Firefox Suggest -->
+    <string name="preference_search_address_bar_fx_suggest" tools:ignore="BrandUsage">Адрес юлы - Firefox Suggest</string>
+    <!-- Preference link to Learn more about Firefox Suggest -->
+    <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">Firefox Suggest турында күбрәк белү</string>
     <!-- Preference link to rating Fenix on the Play Store -->
     <string name="preferences_rate">Google Play-да бәяләү</string>
     <!-- Preference linking to about page for Fenix
@@ -484,6 +488,8 @@
     <string name="preferences_category_privacy_security">Хосусыйлык һәм хәвефсезлек</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions" moz:removedIn="133" tools:ignore="UnusedResources">Сайт рөхсәтләре</string>
+    <!-- Preference for advanced site settings -->
+    <string name="preferences_site_settings">Сайт көйләүләре</string>
     <!-- Preference for private browsing options -->
     <string name="preferences_private_browsing_options">Хосусый гизү</string>
     <!-- Preference for opening links in a private tab-->
@@ -514,8 +520,15 @@
     <string name="cookie_banner_handling_report_site_snack_bar_text_2">Cорау җибәрелде</string>
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_on_for_site">Бу сайт өчен кабынган</string>
+    <!-- Text for indicating that a request for unsupported site was sent to Nimbus (it's a Mozilla library for experiments), this is shown as part of the protections panel with the tracking protection toggle -->
+    <string name="reduce_cookie_banner_unsupported_site_request_submitted_2">Тәэмин ителүен сорау җибәрелде</string>
     <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_unsupported_site">Бу сайт хәзерге вакытта танылмый</string>
+
+    <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
+    <string name="reduce_cookie_banner_details_panel_title_on_for_site_1">%1$s өчен Куки баннерларын тыючы эшләсенме?</string>
+    <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
+    <string name="reduce_cookie_banner_details_panel_title_off_for_site_1">%1$s өчен Куки баннерларын тыючы сүндерелсенме?</string>
 
     <!-- Summary of https only preference if https only is set to off -->
     <string name="preferences_https_only_off">Сүнгән</string>
@@ -545,12 +558,16 @@
     <string name="preferences_gestures">Ишарәләр</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Яраклаштыру</string>
+    <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
+    <string name="preferences_account_default_name_2">Mozilla хисап язмасы</string>
     <!-- Preference text for account title when there was an error syncing FxA -->
     <string name="preferences_account_sync_error">Синхронлауны дәвам итү өчен яңадан тоташыгыз</string>
     <!-- Preference for language -->
     <string name="preferences_language">Тел</string>
 
 
+    <!-- Preference for translations -->
+    <string name="preferences_translations">Тәрҗемәләр</string>
     <!-- Preference for data choices -->
     <string name="preferences_data_choices">Бирелгәннәрне сайлау</string>
     <!-- Preference for data collection -->
@@ -575,6 +592,8 @@
     <string name="preferences_account_settings">Хисап язмасы көйләүләре</string>
     <!-- Preference for enabling url autocomplete-->
     <string name="preferences_enable_autocomplete_urls">URL aдресларын автотәмамлау</string>
+    <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
+    <string name="preferences_show_sponsored_suggestions">Иганәчеләрдән тәкъдимнәр</string>
     <!-- Preference for open links in third party apps -->
     <string name="preferences_open_links_in_apps">Сылтамаларны кушымталарда ачу</string>
     <!-- Preference for open links in third party apps always open in apps option -->
@@ -742,7 +761,9 @@
     <string name="exceptions_empty_message_learn_more_link">Күбрәк белү</string>
 
     <!-- Preference switch for usage and technical data collection -->
-    <string name="preference_usage_data">Куллану турында һәм техник мәгълүматлар</string>
+    <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">Куллану турында һәм техник мәгълүматлар</string>
+    <!-- Preference switch for usage and technical learn more link -->
+    <string name="preference_usage_data_learn_more" tools:ignore="UnusedResources">Күбрәк белү</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Маркетинг мәгълүматлары</string>
     <!-- Title for studies preferences -->
@@ -951,6 +972,9 @@
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (Хосусый режим)</string>
 
+    <!-- History -->
+    <!-- Text for the button to search all history -->
+    <string name="history_search_1">Эзләү терминнарын кертү</string>
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">Тарихны бетерү</string>
     <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
@@ -991,6 +1015,19 @@
 
     <!-- WebCompat Reporter -->
 
+    <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
+    <string name="webcompat_reporter_label_url">URL</string>
+    <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
+    <string name="webcompat_reporter_cancel">Баш тарту</string>
+    <!-- The button text for the send button to submit the provided form data. -->
+    <string name="webcompat_reporter_send">Җибәрү</string>
+
+
+    <!-- Broken site reason text for images or videos -->
+    <string name="webcompat_reporter_reason_media">Рәсемнәр яки видеолар</string>
+    <!-- Broken site reason text for sign in or sign out -->
+    <string name="webcompat_reporter_reason_account">Керү яки чыгу</string>
+
     <!-- Crashes -->
     <!-- Title text displayed on the tab crash page. This first parameter is the name of the application (For example: Fenix) -->
     <string name="tab_crash_title_2">Гафу. %1$s бу сәхифәне йөкли алмый.</string>
@@ -1001,6 +1038,9 @@
     <string name="tab_crash_close">Табны ябу</string>
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">Табны кире кайтару</string>
+
+    <!-- Unsubmitted crash dialog title, The first parameter is the name of the app (e.g. Firefox)  -->
+    <string name="unsubmitted_crash_dialog_title">%s кушымчасын сүндереп кабызырга туры килде</string>
 
     <!-- Bookmarks -->
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
@@ -1783,6 +1823,8 @@
     <string name="top_sites_toggle_top_recent_sites_4">Ярлыклар</string>
     <!-- Title text displayed in the rename top site dialog. -->
     <string name="top_sites_rename_dialog_title">Исем</string>
+    <!-- Hint for renaming title of a shortcut -->
+    <string name="shortcut_name_hint">Ярлык исеме</string>
     <!-- Dialog button text for canceling the rename top site prompt. -->
     <string name="top_sites_rename_dialog_cancel">Баш тарту</string>
 
