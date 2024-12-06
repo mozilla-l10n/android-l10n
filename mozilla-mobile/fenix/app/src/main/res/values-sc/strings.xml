@@ -92,16 +92,9 @@
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">Iscarta</string>
 
-    <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
-    <string name="tcp_cfr_learn_more">Leghe àteru subra de s’amparu totale contra is testimòngios</string>
-
 
     <!-- Text for the message displayed for the popup promoting the long press of navigation in the navigation bar. -->
     <string name="navbar_navigation_buttons_cfr_message">Toca e mantene is fritzas pro brincare intre pàginas de sa cronologia de custa ischeda.</string>
-
-    <!-- Tablet navigation bar "contextual feature recommendation" (CFR) -->
-    <!-- Text for the title displayed in the contextual feature recommendation popup promoting the tablet navigation bar. -->
-    <string name="tablet_nav_bar_cfr_title">Nou: fritzas a coa e a in antis a tocu ùnicu</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Atzessu rechestu a sa fotocàmera. Bae a sa cunfiguratzione de Android, toca is permissos e sèbera permite.</string>
@@ -207,8 +200,14 @@
     <string name="browser_menu_open_in_regular_tab">Aberi in un’ischeda normale</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">Agiunghe a s’ischermu printzipale</string>
+    <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+    <string name="browser_menu_add_app_to_homescreen">Agiunghe s’aplicatzione a s’ischermu printzipale</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen_2">Agiunghe a s’ischermu printzipale…</string>
+    <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+    <string name="browser_menu_add_app_to_homescreen_2">Agiunghe s’aplicatzione a s’ischermu printzipale…</string>
+    <!-- Text for notifying users that Xiaomi devices require additional permissions to add to home screen -->
+    <string name="browser_menu_add_to_homescreen_xiaomi">Is dispositivos Xiaomi podent rechèdere permissos extra pro agiùnghere curtzadòrgios a s’ischermu printzipale. Controlla sa cunfiguratzione.</string>
     <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
     <string name="resync_button_content_description">Torra a sincronizare</string>
     <!-- Browser menu button that opens the find in page menu -->
@@ -273,12 +272,40 @@
     <string name="browser_menu_switch_to_mobile_site">Passa a su situ mòbile</string>
     <!-- Browser menu label that navigates to the page tools sub-menu -->
     <string name="browser_menu_tools">Istrumentos</string>
-    <!-- Content description (not visible, for screen readers etc.): Back button for the page tools sub-menu -->
+    <!-- Content description (not visible, for screen readers etc.): Back button for all menu redesign sub-menu -->
     <string name="browser_menu_back_button_content_description">Torra a su menù printzipale</string>
+    <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar main menu. -->
+    <string name="browser_main_menu_handlebar_content_description">Serra su pannellu de su menù printzipale</string>
+    <!-- Content description (not visible, for screen readers etc.) for main menu help button. -->
+    <string name="browser_main_menu_content_description_help_button">Agiudu</string>
+    <!-- Content description (not visible, for screen readers etc.) for main menu settings button. -->
+    <string name="browser_main_menu_content_description_settings_button">Cunfiguratzione</string>
+    <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar extensions menu. -->
+    <string name="browser_extensions_menu_handlebar_content_description">Serra su pannellu de su menù de estensiones</string>
+    <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar save menu. -->
+    <string name="browser_save_menu_handlebar_content_description">Serra su pannellu de menù de sarvamentu</string>
+    <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar tools menu. -->
+    <string name="browser_tools_menu_handlebar_content_description">Serra su pannellu de menù de ainas</string>
+    <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
+    <string name="browser_custom_tab_menu_handlebar_content_description">Serra su pannellu de menù de ischedas personalizadas</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description_with_translate">Visualizatzione de letura, Tradue, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <string name="browser_menu_tools_description_with_translate" moz:removedIn="134" tools:ignore="UnusedResources">Visualizatzione de letura, Tradue, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description">Visualizatzione de letura, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <string name="browser_menu_tools_description" moz:removedIn="134" tools:ignore="UnusedResources">Visualizatzione de letura, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_translate_with_report_site" moz:removedIn="135" tools:ignore="UnusedResources">Visualizatzione de letura, Tradue, %s, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu when the "Report broken site" feature is available-->
+    <string name="browser_menu_tools_description_with_translate_with_report_site_2">Visualizatzione de letura, Tradue, Sinnala unu situ chi non funtzionat, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_with_translate_without_report_site">Visualizatzione de letura, Tradue, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_report_site" moz:removedIn="135" tools:ignore="UnusedResources">Visualizatzione de letura, %s, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu when the "Report broken site" feature is available-->
+    <string name="browser_menu_tools_description_with_report_site_2">Visualizatzione de letura, Sinnala unu situ chi non funtzionat, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_without_report_site">Visualizatzione de letura, Imprenta, Cumpartzi, Aberi s’aplicatzione</string>
     <!-- Browser menu label that navigates to the save sub-menu, which contains various save related menu items such as
          bookmarking a page, saving to collection, shortcut or as a PDF, and adding to home screen -->
     <string name="browser_menu_save">Sarva</string>
@@ -296,6 +323,8 @@
     <string name="browser_menu_turn_off_reader_view">Disativa sa visualizatzione de letura</string>
     <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
     <string name="browser_menu_translate_page">Tradue sa pàgina…</string>
+    <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
+    <string name="browser_menu_webcompat_reporter">Sinnala unu situ chi non funtzionat…</string>
     <!-- Browser menu label that is displayed when the current page has been translated by the translation feature.
          The first parameter is the name of the language that page was translated to (e.g. English). -->
     <string name="browser_menu_translated_to">Traduidu in %1$s</string>
@@ -305,6 +334,12 @@
     <!-- Browser menu label for the Delete browsing data on quit feature.
         The first parameter is the name of the app defined in app_name (for example: Fenix). -->
     <string name="browser_menu_delete_browsing_data_on_quit">Essi de %1$s</string>
+
+    <!-- Menu "contextual feature recommendation" (CFR) -->
+    <!-- Text for the title in the contextual feature recommendation popup promoting the menu feature. -->
+    <string name="menu_cfr_title">Nou: menù simplificadu</string>
+    <!-- Text for the message in the contextual feature recommendation popup promoting the menu feature. -->
+    <string name="menu_cfr_body">Agata prus a lestru su chi ti serbit, dae sa navigatzione privada a is atziones pro sarvare.</string>
 
     <!-- Extensions management fragment -->
     <!-- Text displayed when there are no extensions to be shown -->
@@ -335,7 +370,9 @@
 
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
-    <string name="search_scan_button">Iscansiona</string>
+    <string name="search_scan_button" moz:removedIn="133" tools:ignore="UnusedResources">Iscansiona</string>
+    <!-- Button in the search view that lets a user search by scanning a QR code -->
+    <string name="search_scan_button_2">Iscansiona unu còdighe QR</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">Cunfiguratzione de su motore de chirca</string>
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
@@ -358,11 +395,13 @@
     <string name="search_header_menu_item_2">Custa borta, chirca cun:</string>
 
     <!-- Content description (not visible, for screen readers etc.): Search engine icon. The first parameter is the search engine name (for example: DuckDuckGo). -->
-    <string name="search_engine_icon_content_description" tools:ignore="UnusedResources">Motore de chirca %s</string>
+    <string name="search_engine_icon_content_description" tools:ignore="UnusedResources" moz:removedIn="133">Motore de chirca %s</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Search engine icon.
+    The parameter is the search engine name (for example: DuckDuckGo). -->
+    <string name="search_engine_icon_content_description_1">Motores de chirca: %s</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint_2">Iscoberi sa personalizatzione de sa pàgina printzipale. Is ischedas reghentes, sinnalibros e resurtados de chirca ant a èssere ammustrados inoghe.</string>
     <!-- Home onboarding dialog welcome screen title text. -->
     <string name="onboarding_home_welcome_title_2">Ti donamus su benebènnidu a un’internet mègius</string>
     <!-- Home onboarding dialog welcome screen description text. -->
@@ -380,11 +419,6 @@
     <!-- Content description (not visible, for screen readers etc.): Close button for the home onboarding dialog -->
     <string name="onboarding_home_content_description_close_button">Serra</string>
 
-    <!-- Text for the button to request notification permission on the device -->
-    <string name="onboarding_home_enable_notifications_positive_button" moz:removedIn="124" tools:ignore="UnusedResources">Sighi</string>
-    <!-- Text for the button to not request notification permission on the device and dismiss the dialog -->
-    <string name="onboarding_home_enable_notifications_negative_button" moz:removedIn="124" tools:ignore="UnusedResources">Immoe nono</string>
-
     <!-- Juno first user onboarding flow experiment, strings are marked unused as they are only referenced by Nimbus experiments. -->
     <!-- Description for learning more about our privacy notice. -->
     <string name="juno_onboarding_privacy_notice_text" tools:ignore="BrandUsage">Avisu de riservadesa de Firefox</string>
@@ -394,11 +428,6 @@
     <string name="juno_onboarding_default_browser_title_nimbus_4" tools:ignore="UnusedResources">Navigatzione segura cun prus optziones</string>
     <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
     <string name="juno_onboarding_default_browser_description_nimbus_3">Su navigadore nostru isvilupadu chena iscopu de lucru agiudat a blocare is aziendas chi iscrocant is fainas tuas in su web.</string>
-    <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
-    <string name="juno_onboarding_default_browser_description_nimbus_2" moz:RemovedIn="124" tools:ignore="UnusedResources">Su navigadore nostru isvilupadu chena iscopu de lucru agiudat a blocare is aziendas chi iscrocant is fainas tuas in su web.\n\nÀteras informatziones in s’avisu de riservadesa nostru.</string>
-    <!-- Text for the link to the privacy notice webpage for set as firefox default browser screen.
-    This is part of the string with the key "juno_onboarding_default_browser_description". -->
-    <string name="juno_onboarding_default_browser_description_link_text" moz:RemovedIn="124" tools:ignore="UnusedResources">avisu de riservadesa</string>
     <!-- Text for the button to set firefox as default browser on the device -->
     <string name="juno_onboarding_default_browser_positive_button" tools:ignore="UnusedResources">Cunfigura comente navigadore predefinidu</string>
     <!-- Text for the button dismiss the screen and move on with the flow -->
@@ -474,7 +503,7 @@
     <!-- Preference category for privacy and security settings -->
     <string name="preferences_category_privacy_security">Riservadesa e seguresa</string>
     <!-- Preference for advanced site permissions -->
-    <string name="preferences_site_permissions">Permissos de is sitos</string>
+    <string name="preferences_site_permissions" moz:removedIn="133" tools:ignore="UnusedResources">Permissos de is sitos</string>
     <!-- Preference for private browsing options -->
     <string name="preferences_private_browsing_options">Navigatzione privada</string>
     <!-- Preference for opening links in a private tab-->
@@ -495,9 +524,9 @@
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_cancel_button">Annulla</string>
     <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
-    <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button_2" moz:RemovedIn="130" tools:ignore="UnusedResources">Imbia una rechesta</string>
+    <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button_2">Imbia una rechesta</string>
     <!-- Text for title indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
-    <string name="cookie_banner_handling_details_site_is_not_supported_title_2" moz:RemovedIn="130" tools:ignore="UnusedResources">Boles preguntare agiudu pro custu situ?</string>
+    <string name="cookie_banner_handling_details_site_is_not_supported_title_2">Boles preguntare agiudu pro custu situ?</string>
     <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
     <string name="cookie_banner_handling_report_site_snack_bar_text_2">Rechesta imbiada</string>
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle -->
@@ -506,10 +535,8 @@
     <!-- Text for indicating that a request for unsupported site was sent to Nimbus (it's a Mozilla library for experiments), this is shown as part of the protections panel with the tracking protection toggle -->
     <string name="reduce_cookie_banner_unsupported_site_request_submitted_2">Rechesta de agiudu imbiada</string>
     <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
-    <string name="reduce_cookie_banner_unsupported_site" moz:RemovedIn="130" tools:ignore="UnusedResources">Situ non cumpatìbile</string>
+    <string name="reduce_cookie_banner_unsupported_site">Situ non cumpatìbile</string>
 
-    <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
-    <string name="reduce_cookie_banner_unsupported_site_1">Situ non cumpatìbile</string>
     <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
     <string name="reduce_cookie_banner_details_panel_title_on_for_site_1">Boles ativare su blocu de is avisos de testimòngios pro %1$s?</string>
     <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site-->
@@ -794,7 +821,7 @@
     <string name="exceptions_empty_message_learn_more_link">Àteras informatziones</string>
 
     <!-- Preference switch for usage and technical data collection -->
-    <string name="preference_usage_data">Impreu e datos tècnicos</string>
+    <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">Impreu e datos tècnicos</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Istùdios</string>
 
@@ -1007,8 +1034,6 @@
     <string name="collection_open_tabs">Aberi is ischedas</string>
     <!-- Hint for adding name of a collection -->
     <string name="collection_name_hint">Nòmine de sa colletzione</string>
-    <!-- Text for the menu button to rename a top site -->
-    <string name="rename_top_site" moz:removedIn="130" tools:ignore="UnusedResources">Torra a nominare</string>
     <!-- Text for the menu button to remove a top site -->
     <string name="remove_top_site">Boga</string>
     <!-- Text for the menu button to delete a top site from history -->
@@ -1072,8 +1097,6 @@
     <string name="bookmark_delete_negative">Annulla</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Agiunghe una cartella</string>
-    <!-- Snackbar title shown after a bookmark has been created. -->
-    <string name="bookmark_saved_snackbar">Sinnalibru sarvadu.</string>
 
     <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
     <string name="bookmark_saved_in_folder_snackbar">Sarvadu in “%s”</string>
@@ -1138,8 +1161,6 @@
     <string name="bookmark_navigate_back_button_content_description">Nàviga a coa</string>
     <!-- Content description for the bookmark list new folder navigation bar button -->
     <string name="bookmark_add_new_folder_button_content_description">Agiunghe una cartella noa</string>
-    <!-- Content description for the bookmark navigation bar close button -->
-    <string name="bookmark_close_button_content_description">Serra is sinnalibros</string>
     <!-- Content description for bookmark search floating action button -->
     <string name="bookmark_search_button_content_description">Chirca in sinnalibros</string>
     <!-- Content description for the overflow menu for a bookmark item. Paramter will a folder name or bookmark title. -->
@@ -1325,17 +1346,6 @@
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active. -->
     <string name="notification_pbm_delete_text_2">Serra is ischedas privadas</string>
 
-    <!-- Text for option one, shown in microsurvey.-->
-    <string name="microsurvey_survey_5_point_option_0" tools:ignore="UnusedResources" moz:removedIn="130">Indiferente</string>
-    <!-- Text for option two, shown in microsurvey.-->
-    <string name="microsurvey_survey_5_point_option_1" tools:ignore="UnusedResources" moz:removedIn="130">Discuntentesa arta</string>
-    <!-- Text for option three, shown in microsurvey.-->
-    <string name="microsurvey_survey_5_point_option_2" tools:ignore="UnusedResources" moz:removedIn="130">Discuntentesa</string>
-    <!-- Text for option four, shown in microsurvey.-->
-    <string name="microsurvey_survey_5_point_option_3" tools:ignore="UnusedResources" moz:removedIn="130">Satisfatzione mèdia</string>
-    <!-- Text for option five, shown in microsurvey.-->
-    <string name="microsurvey_survey_5_point_option_4" tools:ignore="UnusedResources" moz:removedIn="130">Satisfatzione arta</string>
-
     <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
     <string name="notification_erase_title_android_14">Boles serrare is ischedas privadas?</string>
     <string name="notification_erase_text_android_14">Toca o iscurre in custa notìfica pro serrare is ischedas privadas.</string>
@@ -1368,8 +1378,6 @@
     <string name="snackbar_tabs_closed">Ischedas serradas</string>
     <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
     <string name="snackbar_num_tabs_closed">Ischedas serradas: %1$s</string>
-    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
-    <string name="snackbar_message_bookmarks_saved">Sinnalibros sarvados.</string>
     <!-- Text shown in snackbar when user adds a site to shortcuts -->
     <string name="snackbar_added_to_shortcuts">Agiuntu a is curtzadòrgios.</string>
     <!-- Text shown in snackbar when user closes a private tab -->
@@ -1397,8 +1405,6 @@
     <string name="tab_collection_dialog_message">Seguru chi boles cantzellare %1$s?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">Cantzella</string>
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification" moz:removedIn="130" tools:ignore="UnusedResources">Intrende a sa modalidade de ischermu cumpletu</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">URL copiadu</string>
     <!-- Title for Accessibility Text Size Scaling Preference -->
@@ -1534,8 +1540,6 @@
     <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Isceti in is ischedas privadas</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Cripto-minadores</string>
-    <!-- Preference for enhanced tracking protection for the custom protection settings -->
-    <string name="preference_enhanced_tracking_protection_custom_fingerprinters" moz:RemovedIn="130" tools:ignore="UnusedResources">Generadores de imprentas digitales</string>
     <!-- Button label for navigating to the Enhanced Tracking Protection details -->
     <string name="enhanced_tracking_protection_details">Detàllios</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
@@ -1550,8 +1554,6 @@
     <string name="etp_cookies_title_2">Testimòngios intre-sitos</string>
     <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_cryptominers_title">Cripto-minadores</string>
-    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
-    <string name="etp_fingerprinters_title" moz:RemovedIn="130" tools:ignore="UnusedResources">Generadores de imprentas digitales</string>
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">Cuntenutu de sighidura</string>
     <!-- Enhanced Tracking Protection message that protection is currently on for this site -->
@@ -1946,8 +1948,6 @@
     <string name="shortcut_name_hint">Nòmine de su curtzadòrgiu</string>
     <!-- Hint for editing URL of a shortcut. -->
     <string name="shortcut_url_hint">URL de su curtzadòrgiu</string>
-    <!-- Button caption to confirm the renaming of the top site. -->
-    <string name="top_sites_rename_dialog_ok" moz:removedIn="130" tools:ignore="UnusedResources">AB</string>
     <!-- Dialog button text for canceling the rename top site prompt. -->
     <string name="top_sites_rename_dialog_cancel">Annulla</string>
     <!-- Text for the menu button to open the homepage settings. -->
@@ -2010,7 +2010,7 @@
     <string name="radio_preference_info_content_description">Incarca inoghe pro àteros detàllios</string>
 
     <!-- Content description for the action bar "up" button -->
-    <string name="action_bar_up_description" moz:removedIn="124" tools:ignore="UnusedResources">Nàviga in artu</string>
+    <string name="action_bar_up_description">Nàviga in artu</string>
 
     <!-- Content description for privacy content close button -->
     <string name="privacy_content_close_button_content_description">Serra</string>
@@ -2124,12 +2124,6 @@
     <string name="review_quality_check_contextual_onboarding_primary_button_text">Eja, dd’apo a proare</string>
     <!-- Text for opt-out button from the review quality check contextual onboarding card. -->
     <string name="review_quality_check_contextual_onboarding_secondary_button_text">Immoe nono</string>
-    <!-- Text displayed in the first CFR presenting the review quality check feature that opens the review checker when clicked. -->
-    <string name="review_quality_check_first_cfr_action" tools:ignore="UnusedResources">Proa su verificadore de retzensiones</string>
-    <!-- Text displayed in the second CFR presenting the review quality check feature that opens the review checker when clicked. -->
-    <string name="review_quality_check_second_cfr_action" tools:ignore="UnusedResources">Aberi su verificadore de retzensiones</string>
-    <!-- Flag showing that the review quality check feature is work in progress. -->
-    <string name="review_quality_check_beta_flag" moz:removedIn="130" tools:ignore="UnusedResources">Beta</string>
     <!-- Content description (not visible, for screen readers etc.) for opening browser menu button to open review quality check bottom sheet. -->
     <string name="review_quality_check_open_handle_content_description">Aberi su verificadore de retzensiones</string>
     <!-- Content description (not visible, for screen readers etc.) for closing browser menu button to open review quality check bottom sheet. -->
@@ -2246,9 +2240,6 @@
     <!-- The Delete site dialogue negative button will appear when the user clicks on a list item. The dialog will be dismissed. -->
     <string name="never_translate_site_dialog_cancel_preference">Annulla</string>
 
-    <!-- Download languages preference screen -->
-    <!-- Title of the download languages preference screen toolbar.-->
-    <string name="download_languages_toolbar_title_preference" moz:removedIn="130" tools:ignore="UnusedResources">Iscàrriga lìnguas</string>
     <!-- Clickable text from the screen header that links to a website. -->
     <string name="download_languages_header_learn_more_preference">Àteras informatziones</string>
     <!-- The subhead of the download language preference screen will appear above the pivot language. -->
