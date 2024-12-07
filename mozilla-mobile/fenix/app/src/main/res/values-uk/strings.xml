@@ -95,12 +95,6 @@
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">Відхилити</string>
 
-    <!-- Total cookie protection "contextual feature recommendation" (CFR) -->
-    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the total cookie protection feature. -->
-    <string name="tcp_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Наша найпотужніша функція приватності ізолює елементи стеження між сайтами.</string>
-    <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
-    <string name="tcp_cfr_learn_more" moz:removedIn="132" tools:ignore="UnusedResources">Докладніше про функцію Total Cookie Protection</string>
-
     <!-- Private browsing erase action "contextual feature recommendation" (CFR) -->
     <!-- Text for the message displayed in the contextual feature recommendation popup promoting the erase private browsing feature. -->
     <string name="erase_action_cfr_message">Торкніться тут, щоб розпочати новий приватний сеанс. Видаліть історію, файли cookie – усе.</string>
@@ -113,12 +107,6 @@
     <string name="navbar_cfr_message_2">На вебсайті ця панель ховається, коли ви прокручуєте вниз, щоб збільшити простір огляду.</string>
     <!-- Text for the message displayed for the popup promoting the long press of navigation in the navigation bar. -->
     <string name="navbar_navigation_buttons_cfr_message">Натисніть і утримуйте на стрілці, щоб переходити між сторінками в історії цієї вкладки.</string>
-
-    <!-- Tablet navigation bar "contextual feature recommendation" (CFR) -->
-    <!-- Text for the title displayed in the contextual feature recommendation popup promoting the tablet navigation bar. -->
-    <string name="tablet_nav_bar_cfr_title" moz:removedIn="132" tools:ignore="UnusedResources">Нове: стрілки назад і вперед одним дотиком</string>
-    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the tablet navigation bar. -->
-    <string name="tablet_nav_bar_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Насолоджуйтесь швидшою навігацією, яка завжди у вас під рукою.</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Необхідний доступ до камери. Перейдіть до налаштувань Android, торкніться дозволів та торкніться дозволити.</string>
@@ -334,9 +322,19 @@
     <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
     <string name="browser_custom_tab_menu_handlebar_content_description">Закрити сторінку меню користувацьких вкладок</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description_with_translate">Режим читання, Переклад, Друк, Спільний доступ, Відкрити програму</string>
+    <string name="browser_menu_tools_description_with_translate" moz:removedIn="134" tools:ignore="UnusedResources">Режим читання, Переклад, Друк, Спільний доступ, Відкрити програму</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description">Режим читання, Друк, Спільний доступ, Відкрити програму</string>
+    <string name="browser_menu_tools_description" moz:removedIn="134" tools:ignore="UnusedResources">Режим читання, Друк, Спільний доступ, Відкрити програму</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_translate_with_report_site" moz:removedIn="135" tools:ignore="UnusedResources">Режим читання, Переклад, %s, Друк, Спільний доступ, Відкрити програму</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_with_translate_without_report_site">Режим читання, Переклад, Друк, Спільний доступ, Відкрити програму</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_report_site" moz:removedIn="135" tools:ignore="UnusedResources">Режим читання, %s, Друк, Спільний доступ, Відкрити програму</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_without_report_site">Режим читання, Друк, Спільний доступ, Відкрити програму</string>
     <!-- Browser menu label that navigates to the save sub-menu, which contains various save related menu items such as
          bookmarking a page, saving to collection, shortcut or as a PDF, and adding to home screen -->
     <string name="browser_menu_save">Зберегти</string>
@@ -436,8 +434,6 @@
     <string name="search_engine_icon_content_description_1">Пошукова система: %s</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint_2" moz:removedIn="132">Зустрічайте свою персоналізовану домівку. Тут з’являтимуться останні вкладки, закладки та результати пошуку.</string>
     <!-- Home onboarding dialog welcome screen title text. -->
     <string name="onboarding_home_welcome_title_2">Вітаємо у персоналізованому інтернеті</string>
     <!-- Home onboarding dialog welcome screen description text. -->
@@ -556,6 +552,17 @@
 
     <!-- Content description for the star rating group. -->
     <string name="onboarding_add_on_star_rating_content_description">Оцінка – %1$s з 5</string>
+
+    <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
+    <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage,UnusedResources">Допоможіть нам зробити Firefox кращим</string>
+    <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+    <string name="onboarding_preferences_dialog_crash_reporting_title" tools:ignore="UnusedResources">Автоматично надсилати звіти про збої</string>
+    <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+    <string name="onboarding_preferences_dialog_crash_reporting_description" tools:ignore="UnusedResources">Звіти про збої дозволяють нам діагностувати та виправляти проблеми з браузером. Вони можуть містити особисті або конфіденційні дані.</string>
+    <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+    <string name="onboarding_preferences_dialog_crash_reporting_learn_more" tools:ignore="UnusedResources">Докладніше про звіти про збої</string>
+    <!-- Negative button label for the privacy preferences dialog shown during onboarding. -->
+    <string name="onboarding_preferences_dialog_negative_button" tools:ignore="UnusedResources">Скасувати</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -957,13 +964,17 @@
     <string name="exceptions_empty_message_learn_more_link">Докладніше</string>
 
     <!-- Preference switch for usage and technical data collection -->
-    <string name="preference_usage_data">Використання й технічні дані</string>
+    <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">Використання й технічні дані</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data_1">Технічні дані та дані взаємодії</string>
+    <!-- Preference switch for usage and technical learn more link -->
+    <string name="preference_usage_data_learn_more" tools:ignore="UnusedResources">Докладніше</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">Надсилати в Mozilla дані про використання, швидкодію, апаратне забезпечення та налаштування браузера, щоб допомогти вдосконалити %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Маркетингові дані</string>
     <!-- Preference description for marketing data collection -->
-    <string name="preferences_marketing_data_description2">Надсилати основні дані про використання до нашого постачальника мобільного маркетингу Adjust</string>
+    <string name="preferences_marketing_data_description2" moz:removedIn="134" tools:ignore="UnusedResources">Надсилати основні дані про використання до нашого постачальника мобільного маркетингу Adjust</string>
     <!-- Preference switch title for automatically submitting crash reports -->
     <string name="preferences_automatically_submit_crashes_title">Автоматично надсилати звіти про збої</string>
     <!-- Preference switch description for automatically submitting crash reports -->
@@ -1253,6 +1264,23 @@
 
     <!-- WebCompat Reporter -->
 
+    <!-- WebCompat Reporter -->
+    <!-- The title of the Web Compat Reporter feature. This is displayed in the top app bar. -->
+    <string name="webcompat_reporter_screen_title">Повідомити про пошкоджений сайт</string>
+    <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
+    <string name="webcompat_reporter_label_url">URL</string>
+    <!-- The error message of the URL text field when an invalid URL has been entered. -->
+    <string name="webcompat_reporter_url_error_invalid">Введіть дійсний URL</string>
+    <!-- The placeholder text for the dropdown where a user can select a high-level reason why the site is broken. -->
+    <string name="webcompat_reporter_choose_reason">Виберіть причину</string>
+    <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
+    <string name="webcompat_reporter_send_more_info">Надішліть більше інформації</string>
+    <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
+    <string name="webcompat_reporter_cancel">Скасувати</string>
+    <!-- The button text for the send button to submit the provided form data. -->
+    <string name="webcompat_reporter_send">Надіслати</string>
+
+
     <!-- These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site. -->
     <!-- Broken site reason text for site slow or not working -->
     <string name="webcompat_reporter_reason_slow">Сайт повільний або не працює</string>
@@ -1298,8 +1326,6 @@
     <string name="bookmark_delete_negative">Скасувати</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Додати теку</string>
-    <!-- Snackbar title shown after a bookmark has been created. -->
-    <string name="bookmark_saved_snackbar" moz:removedIn="132" tools:ignore="UnusedResources">Закладку збережено!</string>
     <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
     <string name="bookmark_saved_in_folder_snackbar">Збережено в “%s”</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
@@ -1647,8 +1673,6 @@
     <string name="snackbar_tabs_closed">Вкладки закрито</string>
     <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
     <string name="snackbar_num_tabs_closed">Вкладки закрито: %1$s</string>
-    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
-    <string name="snackbar_message_bookmarks_saved" moz:removedIn="132" tools:ignore="UnusedResources">Закладки збережено!</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs. Parameter will be replaced by the name of the folder the bookmark was saved into.-->
     <string name="snackbar_message_bookmarks_saved_in">Закладки збережено в “%s”!</string>
     <!-- Text shown in snackbar when user adds a site to shortcuts -->
@@ -2553,15 +2577,7 @@
     <string name="review_quality_check_contextual_onboarding_primary_button_text">Так, спробувати</string>
     <!-- Text for opt-out button from the review quality check contextual onboarding card. -->
     <string name="review_quality_check_contextual_onboarding_secondary_button_text">Не зараз</string>
-    <!-- Text for the first CFR presenting the review quality check feature. -->
-    <string name="review_quality_check_first_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Дізнайтеся, чи можна довіряти відгукам про цей товар перед його купівлею.</string>
 
-    <!-- Text displayed in the first CFR presenting the review quality check feature that opens the review checker when clicked. -->
-    <string name="review_quality_check_first_cfr_action" moz:removedIn="132" tools:ignore="UnusedResources">Спробуйте засіб перевірки відгуків</string>
-    <!-- Text for the second CFR presenting the review quality check feature. -->
-    <string name="review_quality_check_second_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Чи надійні ці відгуки? Перевірте зараз, щоб переглянути скоригований рейтинг.</string>
-    <!-- Text displayed in the second CFR presenting the review quality check feature that opens the review checker when clicked. -->
-    <string name="review_quality_check_second_cfr_action" moz:removedIn="132" tools:ignore="UnusedResources">Відкрити засіб перевірки відгуків</string>
     <!-- Content description (not visible, for screen readers etc.) for opening browser menu button to open review quality check bottom sheet. -->
     <string name="review_quality_check_open_handle_content_description">Відкрити засіб перевірки відгуків</string>
     <!-- Content description (not visible, for screen readers etc.) for closing browser menu button to open review quality check bottom sheet. -->
@@ -2951,11 +2967,6 @@
     <string name="glean_debug_tools_title">Інструменти налагодження Glean</string>
 
     <!-- Messages explaining how to exit fullscreen mode -->
-    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled -->
-    <string name="exit_fullscreen_with_gesture" moz:removedIn="132" tools:ignore="UnusedResources">Щоб вийти з повноекранного режиму, потягніть зверху і скористайтеся жестом Назад</string>
-    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation -->
-    <string name="exit_fullscreen_with_back_button" moz:removedIn="132" tools:ignore="UnusedResources">Щоб вийти з повноекранного режиму, потягніть зверху і натисніть Назад</string>
-
     <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
     <!-- Localisation note: this text should be as short as possible, max 68 chars -->
     <string name="exit_fullscreen_with_gesture_short">Щоб вийти, потягніть зверху і скористайтеся жестом &quot;Назад&quot;</string>
@@ -2966,4 +2977,5 @@
     <!-- Beta Label Component !-->
     <!-- Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element. -->
     <string name="beta_feature">BETA</string>
-</resources>
+
+    </resources>
