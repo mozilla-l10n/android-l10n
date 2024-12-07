@@ -722,6 +722,8 @@
     <string name="preferences_theme">Tema</string>
     <!-- Preference for customizing the home screen -->
     <string name="preferences_home_2">Pàggina mastra</string>
+    <!-- Preference for gestures based actions -->
+    <string name="preferences_gestures">Muvimenti</string>
     <!-- Preference for settings related to visual options -->
     <string name="preferences_customize">Pirsunalizza</string>
     <!-- Preference description for banner about signing in -->
@@ -1313,6 +1315,12 @@
     <!-- Bookmarks -->
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">Cancillari sta carpetta?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items. -->
+    <string name="bookmark_delete_folders_confirmation_dialog">Cancillari l\'elimenti scartati?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s cancella l\'elimenti scartati.</string>
+    <!-- Text for the cancel button on delete bookmark dialog -->
+    <string name="bookmark_delete_negative">Sfai</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Agghiunci na carpetta</string>
     <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
@@ -1393,17 +1401,29 @@
     <string name="bookmark_delete_folder_content_description">Cancella a carpetta</string>
     <!-- Content description for bookmark search floating action button -->
     <string name="bookmark_search_button_content_description">Riscedi nnê nzingalibbri</string>
+    <!-- Content description for the overflow menu for a bookmark item. Paramter will a folder name or bookmark title. -->
+    <string name="bookmark_item_menu_button_content_description">Minù pi %s</string>
     <!-- Title for the bookmark list empty state-->
     <string name="bookmark_empty_list_title">Nun cc\'è ancora nuḍḍu nzingalibbru</string>
+    <!-- Description for the bookmark list empty state when you're not signed into sync. -->
+    <string name="bookmark_empty_list_guest_description">Sarba i siti mentri chi nàvighi. Trasi pi pigghiari i nzingalibbra di l\'autri dispusitivi sincrunizzati.</string>
     <!-- Text for the button to navigate to sync authentication -->
     <string name="bookmark_empty_list_guest_cta">Trasi pi sincrunizzari</string>
 
+    <!-- Description for the bookmark list empty state when you're signed into sync. -->
+    <string name="bookmark_empty_list_authenticated_description">Sarba i siti mentri chi nàvighi. Pigghiamu macari i nzingalibbra di l\'autri dispusitivi sincrunizzati.</string>
+    <!-- Description for the bookmark list empty state when you're in an empty folder. -->
+    <string name="bookmark_empty_list_folder_description">Agghiunci nzingalibbra mentri chi nàvighi, accussì ti l\'attrovi fàcili doppu.</string>
     <!-- Description for the add new folder button when selecting a folder. -->
     <string name="bookmark_select_folder_new_folder_button_title">Nova carpetta</string>
 
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">Vai nnê mpustazzioni</string>
+    <!-- Content description (not visible, for screen readers etc.): Quick settings sheet
+        to give users access to site specific information / settings. For example:
+        Secure settings status and a button to modify site permissions -->
+    <string name="quick_settings_sheet">Fogghiu dî mpustazzioni lesti</string>
     <!-- Label that indicates that this option it the recommended one -->
     <string name="phone_feature_recommended">Raccumannata</string>
     <!-- Button label for clearing all the information of site permissions-->
@@ -1413,6 +1433,10 @@
     <!-- Text for the cancel button on Clear permissions dialog -->
     <string name="clear_permissions_negative">Sfai</string>
 
+    <!-- Button label for clearing a site permission-->
+    <string name="clear_permission">Cancella u pirmisu</string>
+    <!-- Text for the OK button on Clear permission dialog -->
+    <string name="clear_permission_positive">OK</string>
     <!-- Text for the cancel button on Clear permission dialog -->
     <string name="clear_permission_negative">Sfai</string>
     <!-- Button label for clearing all the information on all sites-->
@@ -1894,6 +1918,23 @@
     <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
     <string name="preference_etp_smartblock_learn_more">Cchiù nfurmazzioni</string>
 
+    <!-- About page link text to open support link -->
+    <string name="about_support">Supportu</string>
+    <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
+    <string name="about_crashes">Scasci</string>
+    <!-- About page link text to open privacy notice link -->
+    <string name="about_privacy_notice">Abbisu di privatizza</string>
+    <!-- About page link text to open know your rights link -->
+    <string name="about_know_your_rights">Canusci i to diritti</string>
+    <!-- About page link text to open licensing information link -->
+    <string name="about_licensing_information">Nfurmazzioni ncapu â licenza</string>
+    <!-- About page link text to open a screen with libraries that are used -->
+    <string name="about_other_open_source_libraries">Libbrarìi chi usamu</string>
+
+    <!-- Browser long press popup menu -->
+    <!-- Copy the current url -->
+    <string name="browser_toolbar_long_press_popup_copy">Copia</string>
+
     <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
     <string name="add_to_homescreen_text_placeholder">Nomu di l\'accurzu</string>
     <!-- Describes the add to homescreen functionality -->
@@ -2095,6 +2136,13 @@
     <!-- The text for the "Delete address" button for deleting an address -->
     <string name="addressess_delete_address_button">Cancella u nnirizzu</string>
 
+    <!-- The text for the "Save address" menu item for saving an address -->
+    <string name="address_menu_save_address">Sarba nnirizzu</string>
+    <!-- The text for the "Delete address" menu item for deleting an address -->
+    <string name="address_menu_delete_address">Cancella nnirizzu</string>
+
+    <!-- Title of the Add search engine screen -->
+    <string name="search_engine_add_custom_search_engine_title">Agghiunci muturi di risciduta</string>
     <!-- Content description (not visible, for screen readers etc.): Title for the button that navigates to add new engine screen -->
     <string name="search_engine_add_custom_search_engine_button_content_description">Agghiunci un novu muturi di risciduta</string>
     <!-- Title of the Edit search engine screen -->
@@ -2196,9 +2244,65 @@
     <!--  Error text displayed underneath the password field when it is in an error case. -->
     <string name="saved_login_password_required_2">Metti na chiavi</string>
 
+    <!--  The error message in add login view when username field is blank. -->
+    <string name="saved_login_username_required_2">Metti un nomu utenti</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Nomu dû sirburi ubbligatoriu</string>
+    <!--  The error message in add login view when hostname field is blank. -->
+    <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Metti nu nnirizzu</string>
+    <!-- Voice search button content description  -->
+    <string name="voice_search_content_description">Risciduta vucali</string>
+    <!-- Voice search prompt description displayed after the user presses the voice search button -->
+    <string name="voice_search_explainer">Parra ora</string>
+    <!--  The error message in edit login view when a duplicate username exists. -->
+    <string name="saved_login_duplicate">Cc\'è già na cridinziali cu stu nomu utenti</string>
+    <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+    <string name="add_login_hostname_hint_text">https://www.example.com</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+    <string name="add_login_hostname_invalid_text_3">Nnô nnirizzu cci àvi a èssiri “https://” o “http://”</string>
+    <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+    <string name="add_login_hostname_invalid_text_2">Serbi un nomu vàlitu pû sirburi</string>
+
+    <!-- Synced Tabs -->
+    <!-- Text displayed to ask user to connect another device as no devices found with account -->
+    <string name="synced_tabs_connect_another_device">Culleja n\'autru dispusitivu.</string>
+    <!-- Text displayed asking user to re-authenticate -->
+    <string name="synced_tabs_reauth">Pi favuri autènticati arrè.</string>
+    <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
+    <string name="synced_tabs_enable_tab_syncing">Pi favuri abbìlita a sincrunizzazzioni dî schedi.</string>
+    <!-- Text displayed when user has no tabs that have been synced -->
+    <string name="synced_tabs_no_tabs" tools:ignore="BrandUsage">Nun ài nuḍḍa scheda graputa nni Firefox nnî to autri dispusitivi.</string>
+    <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
+    <string name="synced_tabs_sign_in_message">Vidi na lista dî schedi di l\'autri dispusitivi.</string>
     <!-- Text displayed on a button in the synced tabs screen to link users to sign in when a user is not signed in to Firefox Sync -->
     <string name="synced_tabs_sign_in_button">Trasi pi sincrunizzari</string>
 
+    <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
+    <string name="synced_tabs_no_open_tabs">Nuḍḍa scheda graputa</string>
+    <!-- Content description for expanding a group of synced tabs. -->
+    <string name="synced_tabs_expand_group">Allarga gruppu dî schedi sincrunizzati</string>
+    <!-- Content description for collapsing a group of synced tabs. -->
+    <string name="synced_tabs_collapse_group">Cumprimi gruppu dî schedi sincrunizzati</string>
+
+    <!-- Top Sites -->
+    <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
+    <string name="shortcut_max_limit_title">Agghicasti ô nùmmaru màssimu d\'accurzi</string>
+    <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
+    <string name="shortcut_max_limit_content">P\'agghiùnciri n\'accurzu novu, n\'hâ livari unu. Tocca e teni ammaccatu u situ e cancèllalu.</string>
+    <!-- Confirmation dialog button text when top sites limit is reached. -->
+    <string name="top_sites_max_limit_confirmation_button">Bonu, u capivi</string>
+    <!-- Label for the preference to show the shortcuts for the most visited top sites on the homepage -->
+    <string name="top_sites_toggle_top_recent_sites_4">Accurzi</string>
+    <!-- Title text displayed in the rename top site dialog. -->
+    <string name="top_sites_rename_dialog_title">Nomu</string>
+    <!-- Hint for renaming title of a shortcut -->
+    <string name="shortcut_name_hint">Nomu di l\'accurzu</string>
+    <!-- Hint for editing URL of a shortcut. -->
+    <string name="shortcut_url_hint">Nnirizzu di l\'accurzu</string>
+    <!-- Dialog button text for canceling the rename top site prompt. -->
+    <string name="top_sites_rename_dialog_cancel">Sfai</string>
+    <!-- Text for the menu button to open the homepage settings. -->
+    <string name="top_sites_menu_settings">Mpustazzioni</string>
     <!-- Text for the menu button to navigate to sponsors and privacy support articles. '&amp;' is replaced with the ampersand symbol: & -->
     <string name="top_sites_menu_sponsor_privacy">I nostri patrucinatura e a to privatizza</string>
     <!-- Label text displayed for a sponsored top site. -->
@@ -2560,6 +2664,13 @@
     <!-- Never translate site preference screen -->
     <!-- Title of the never translate site preference screen that will appear on the toolbar.-->
     <string name="never_translate_site_toolbar_title_preference">Nun tradùciri mai sti siti</string>
+    <!-- Screen header presenting the never translate site preference feature. It will appear under the toolbar. -->
+    <string name="never_translate_site_header_preference">P\'agghiùnciri un novu situ: vacci e scarta “Nun tradùciri mai” dû minù di traduzzioni.</string>
+    <!-- Content description (not visible, for screen readers etc.): For a never-translated site list item that is selected.
+             The first parameter is web site url (for example:"wikipedia.com") -->
+    <string name="never_translate_site_item_list_content_description_preference">Cancella %1$s</string>
+    <!-- The title of the warning card informs the user that an error has occurred at the never translate sites list. -->
+    <string name="never_translate_site_error_warning_text">Nun potti carricari i siti. Pi favuri prova cchiù tardu.</string>
     <!-- The Delete site dialogue positive button will appear when the user clicks on a list item. The site will be deleted. -->
     <string name="never_translate_site_dialog_confirm_delete_preference">Cancella</string>
     <!-- The Delete site dialogue negative button will appear when the user clicks on a list item. The dialog will be dismissed. -->
