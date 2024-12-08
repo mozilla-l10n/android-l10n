@@ -13,8 +13,18 @@
     <string name="content_description_private_browsing_button">Activar el mou de restolar en privao</string>
     <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
     <string name="content_description_disable_private_browsing_button">Desactivar el mou de restolar en privao</string>
-    <!-- Placeholder text shown in the search bar before a user enters text -->
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_private_browsing">Restolar en privao</string>
+    <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
     <string name="search_hint">Busca o introduz una direición</string>
+    <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
+    <string name="search_hint_general_engine">Buscar na web</string>
+    <!-- Placeholder text shown in search bar when using history search -->
+    <string name="history_search_hint">Buscar nel historial</string>
+    <!-- Placeholder text shown in search bar when using bookmarks search -->
+    <string name="bookmark_search_hint">Buscar nos marcadores</string>
+    <!-- Placeholder text shown in search bar when using tabs search -->
+    <string name="tab_search_hint">Buscar nes llingüetes</string>
     <!-- Placeholder text shown in the search bar when using application search engines -->
     <string name="application_search_hint">Introduz términos de busca</string>
     <!-- No Open Tabs Message Description -->
@@ -41,21 +51,20 @@
     <!-- Content description on checkmark while tab is selected in multiselect mode in tab tray -->
     <string name="tab_tray_multiselect_selected_content_description">Na seleición</string>
 
-    <!-- Content description for the button which navigates the user to show all of their saved bookmarks. -->
-    <string name="recently_saved_show_all_content_description_2">Amosar tolos marcadores guardaos</string>
+    <!-- Home - Bookmarks -->
+    <!-- Title for the home screen section with bookmarks. -->
+    <string name="home_bookmarks_title">Marcadores</string>
+    <!-- Content description for the button which navigates the user to show all of their bookmarks. -->
+    <string name="home_bookmarks_show_all_content_description">Amosar tolos marcadores</string>
     <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
-    <string name="recently_saved_menu_item_remove">Quitar</string>
+    <string name="home_bookmarks_menu_item_remove">Quitar</string>
 
     <!-- About content. The first parameter is the name of the application. (For example: Fenix) -->
     <string name="about_content">%1$s ta producíu por Mozilla.</string>
 
-    <!-- Private Browsing -->
-    <!-- Explanation for private browsing displayed to users on home view when they first enable private mode
-        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
-    <string name="private_browsing_placeholder_description_2">%1$s llimpia los historiales del mou de restolar en privao cuando coles de l\'aplicación o zarres toles llingüetes privaes. Magar qu\'esto nun t\'anonimiza n\'internet, fai que la to actividá en llinia seya fácil d\'anubrir a otros usuarios qu\'usen el preséu.</string>
     <string name="private_browsing_common_myths">Mitos comunes tocante al restolar en privao</string>
 
-    <!-- Text for the negative button -->
+    <!-- Text for the negative button to decline adding a Private Browsing shortcut to the Home screen -->
     <string name="cfr_neg_button_text">Non, gracies</string>
 
     <!-- Open in App "contextual feature recommendation" (CFR) -->
@@ -103,10 +112,6 @@
     <string name="browser_menu_refresh">Anovar</string>
     <!-- Content description (not visible, for screen readers etc.): Stop loading current website -->
     <string name="browser_menu_stop">Parar</string>
-    <!-- Browser menu button that opens the addon manager -->
-    <string name="browser_menu_add_ons">Complementos</string>
-    <!-- Text displayed when there are no add-ons to be shown -->
-    <string name="no_add_ons">Equí nun hai complementos</string>
     <!-- Browser menu button that sends a user to help articles -->
     <string name="browser_menu_help">Ayuda</string>
     <!-- Browser menu button that sends a to a the what's new article -->
@@ -120,8 +125,6 @@
 
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">Amestar a la pantalla d\'aniciu</string>
-    <!-- Browser menu toggle that installs a Progressive Web App shortcut to the site on the device home screen. -->
-    <string name="browser_menu_install_on_homescreen">Instalar</string>
     <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
     <string name="resync_button_content_description">Volver sincronizar</string>
     <!-- Browser menu button that opens the find in page menu -->
@@ -171,7 +174,7 @@
 
     <!-- Search Fragment -->
     <!-- Button in the search view that lets a user search by scanning a QR code -->
-    <string name="search_scan_button">Escaniar</string>
+    <string name="search_scan_button" moz:removedIn="133" tools:ignore="UnusedResources">Escaniar</string>
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">Axustes de los motores de busca</string>
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
@@ -217,7 +220,7 @@
     <!-- Preference category for privacy and security settings -->
     <string name="preferences_category_privacy_security">Privacidá y seguranza</string>
     <!-- Preference for advanced site permissions -->
-    <string name="preferences_site_permissions">Permisos de sitios</string>
+    <string name="preferences_site_permissions" moz:removedIn="133" tools:ignore="UnusedResources">Permisos de sitios</string>
     <!-- Preference for private browsing options -->
     <string name="preferences_private_browsing_options">Restolar en privao</string>
     <!-- Preference for opening links in a private tab-->
@@ -249,8 +252,6 @@
     <string name="preferences_override_sync_tokenserver">Sirvidor personalizáu de sincronización</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">Cuenta</string>
-    <!-- Preference for changing where the toolbar is positioned -->
-    <string name="preferences_toolbar">Barra de ferramientes</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">Estilu</string>
     <!-- Preference for customizing the home screen -->
@@ -293,9 +294,6 @@
     <!-- Preference for open download with an external download manager app -->
     <string name="preferences_external_download_manager">Xestor de descargues esternu</string>
 
-    <!-- Preference for add_ons -->
-    <string name="preferences_addons">Complementos</string>
-
     <!-- Preference for notifications -->
     <string name="preferences_notifications">Avisos</string>
 
@@ -308,11 +306,7 @@
     <string name="customize_addon_collection_hint">Nome de la coleición</string>
     <!-- Hint displayed on input field for custom collection user ID-->
     <string name="customize_addon_collection_user_hint">Propietariu de la coleición (ID d\'usuariu)</string>
-    <!-- Toast shown after confirming the custom add-on collection configuration -->
-    <string name="toast_customize_addon_collection_done">Modificóse la coleición de complementos. L\'aplicación va zarrase p\'aplicar los cambeos…</string>
 
-    <!-- Title for the customize home screen section with recently saved bookmarks. -->
-    <string name="customize_toggle_recent_bookmarks">Marcadores de recién</string>
     <!-- Title for the opening wallpaper settings screen -->
     <string name="customize_wallpapers">Fondos de pantalla</string>
     <!-- Title for the customize home screen section with sponsored shortcuts. -->
@@ -323,7 +317,6 @@
     <!-- Snackbar label for action to view selected wallpaper -->
     <string name="wallpaper_updated_snackbar_action">Ver</string>
 
-    <!-- Account Preferences -->
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">Sincronizar agora</string>
     <!-- Preference category for sync -->
@@ -332,8 +325,6 @@
     <string name="preferences_sync_history">Historial</string>
     <!-- Preference for syncing bookmarks -->
     <string name="preferences_sync_bookmarks">Marcadores</string>
-    <!-- Preference for syncing logins -->
-    <string name="preferences_sync_logins">Cuentes</string>
     <!-- Preference for syncing tabs -->
     <string name="preferences_sync_tabs_2">Llingüetes abiertes</string>
     <!-- Preference for signing out -->
@@ -359,8 +350,6 @@
         and the third is the device model. -->
     <string name="default_device_name_2">%1$s en %2$s %3$s</string>
 
-    <!-- Preference for syncing credit cards -->
-    <string name="preferences_sync_credit_cards">Tarxetes de creitu</string>
     <!-- Preference for syncing addresses -->
     <string name="preferences_sync_address">Señes</string>
 
@@ -368,7 +357,7 @@
     <!-- Name of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
     <string name="fxa_received_tab_channel_name">Llingüetes recibíes</string>
     <!-- Description of the "receive tabs" notification channel. Displayed in the "App notifications" system settings for the app -->
-    <string name="fxa_received_tab_channel_description">Los avisos de les llingüetes recibíes d\'otros preseos con Firefox n\'execución.</string>
+    <string name="fxa_received_tab_channel_description" tools:ignore="BrandUsage">Los avisos de les llingüetes recibíes d\'otros preseos con Firefox n\'execución.</string>
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">Llingüeta de: %s</string>
 
@@ -384,13 +373,13 @@
     <string name="exceptions_empty_message_learn_more_link">Saber más</string>
 
     <!-- Preference switch for usage and technical data collection -->
-    <string name="preference_usage_data">Datos téunicos y d\'usu</string>
+    <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">Datos téunicos y d\'usu</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">Comparte\'l rindimientu, l\'usu, el hardaware y los datos personalizaos del restolador con Mozilla p\'ayudanos a ameyorar %1$s</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Datos de marketing</string>
     <!-- Preference description for marketing data collection -->
-    <string name="preferences_marketing_data_description2">Comparte l\'usu básicu con Adjust, el nuesu fornidor de marketing móvil</string>
+    <string name="preferences_marketing_data_description2" moz:removedIn="134" tools:ignore="UnusedResources">Comparte l\'usu básicu con Adjust, el nuesu fornidor de marketing móvil</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">Estudios</string>
     <!-- Summary for studies preferences -->
@@ -429,8 +418,6 @@
 
     <!-- Preference for using the dynamic toolbar -->
     <string name="preference_gestures_dynamic_toolbar">Desplazase p\'anubrir la barra de ferramientes</string>
-    <!-- Preference for switching tabs by swiping horizontally on the toolbar -->
-    <string name="preference_gestures_swipe_toolbar_switch_tabs">Eslizar pa un llau pa cambiar de llingüeta</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -587,10 +574,8 @@
     <string name="collection_open_tabs">Abrir lo qu\'heba</string>
     <!-- Hint for adding name of a collection -->
     <string name="collection_name_hint">Nome de la coleición</string>
-    <!-- Text for the menu button to rename a top site -->
-	<string name="rename_top_site">Renomar</string>
     <!-- Text for the menu button to remove a top site -->
-	<string name="remove_top_site">Quitar</string>
+    <string name="remove_top_site">Quitar</string>
 
     <!-- Text for the menu button to delete a top site from history -->
     <string name="delete_from_history">Desaniciar del historial</string>
@@ -658,8 +643,6 @@
     <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s va desaniciar los elementos seleicionaos.</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Amestar una carpeta</string>
-    <!-- Snackbar title shown after a bookmark has been created. -->
-    <string name="bookmark_saved_snackbar">¡Guardóse\'l marcador!</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">EDITAR</string>
     <!-- Bookmark overflow menu edit button -->
@@ -845,7 +828,7 @@
     <!-- An option to connect additional devices -->
     <string name="sync_connect_device">Coneutar otru preséu</string>
     <!-- The dialog text shown when additional devices are not available -->
-    <string name="sync_connect_device_dialog">Pa unviar una llingüeta, anicia sesión nel Firefox de polo menos un preséu más.</string>
+    <string name="sync_connect_device_dialog" tools:ignore="BrandUsage">Pa unviar una llingüeta, anicia sesión nel Firefox de polo menos un preséu más.</string>
     <!-- Confirmation dialog button -->
     <string name="sync_confirmation_button">¡Entendílo!</string>
     <!-- Share error message -->
@@ -872,8 +855,6 @@
     <string name="snackbar_tab_closed">Zarróse la llingüeta</string>
     <!-- Text shown in snackbar when user closes all tabs -->
     <string name="snackbar_tabs_closed">Zarráronse les llingüetes</string>
-    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
-    <string name="snackbar_message_bookmarks_saved">¡Guardáronse los marcadores!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
     <string name="snackbar_private_tab_closed">Zarróse la llingüeta privada</string>
     <!-- Text shown in snackbar when user closes all private tabs -->
@@ -891,15 +872,9 @@
     <string name="qr_scanner_dialog_negative">ÑEGAR</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">¿De xuru que quies desaniciar %1$s?</string>
-    <!-- Collection and tab deletion prompt dialog message. This will show when the last tab from a collection is deleted -->
-    <string name="delete_tab_and_collection_dialog_message">Desaniciar esta llingüeta va desaniciar tola coleición. Pues crear coleiciones nueves en cualesquier momentu.</string>
-    <!-- Collection and tab deletion prompt dialog title. Placeholder will be replaced with the collection name. This will show when the last tab from a collection is deleted -->
-    <string name="delete_tab_and_collection_dialog_title">¿Desaniciar %1$s?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
     <string name="tab_collection_dialog_positive">Desaniciar</string>
 
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Tas nel mou a pantalla completa</string>
     <!-- Message for copying the URL via long press on the toolbar -->
     <string name="url_copied">Copióse la URL</string>
     <!-- Sample text for accessibility font size -->
@@ -960,9 +935,11 @@
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">Desaniciando l\'historial de restolar…</string>
 
+    <!-- Onboarding -->
     <!-- text to display in the snackbar once account is signed-in -->
     <string name="onboarding_firefox_account_sync_is_on">La sincronización ta activada</string>
 
+    <!-- Onboarding theme -->
     <!-- Text shown in snackbar when multiple tabs have been sent to device -->
     <string name="sync_sent_tabs_snackbar">¡Unviáronse les llingüetes!</string>
     <!-- Text shown in snackbar when one tab has been sent to device  -->
@@ -975,7 +952,7 @@
     <!-- Title of QR Pairing Fragment -->
     <string name="sync_scan_code">Escanéu d\'un códigu</string>
     <!-- Instructions on how to access pairing -->
-    <string name="sign_in_instructions"><![CDATA[Nun ordenador, abri Firefox y vete a <b>https://firefox.com/pair</b>]]></string>
+    <string name="sign_in_instructions" tools:ignore="BrandUsage"><![CDATA[Nun ordenador, abri Firefox y vete a <b>https://firefox.com/pair</b>]]></string>
     <!-- Text shown for sign in pairing when ready -->
     <string name="sign_in_ready_for_scan">Escaniar</string>
     <!-- Text shown for settings option for sign with pairing -->
@@ -983,7 +960,7 @@
     <!-- Text shown for settings option for sign with email -->
     <string name="sign_in_with_email">Usar una direición de corréu</string>
     <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here.-->
-    <string name="sign_in_create_account_text"><![CDATA[¿Nun tienes cuenta? <u>Crea una</u> pa sincronizar Firefox ente preseos.]]></string>
+    <string name="sign_in_create_account_text" tools:ignore="BrandUsage"><![CDATA[¿Nun tienes cuenta? <u>Crea una</u> pa sincronizar Firefox ente preseos.]]></string>
     <!-- Text shown in confirmation dialog to sign out of account. The first parameter is the name of the app (e.g. Firefox Preview) -->
     <string name="sign_out_confirmation_message_2">%s va dexar de sincronizase cola to cuenta mas nun va desaniciar nengún datu d\'esti preséu.</string>
     <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
@@ -1035,8 +1012,6 @@
     <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Namás nes llingüetes privaes</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">Criptomineros</string>
-    <!-- Preference for enhanced tracking protection for the custom protection settings -->
-    <string name="preference_enhanced_tracking_protection_custom_fingerprinters">Xeneradores de buelgues</string>
     <!-- Button label for navigating to the Enhanced Tracking Protection details -->
     <string name="enhanced_tracking_protection_details">Detalles</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
@@ -1055,11 +1030,7 @@
     <string name="etp_cryptominers_title">Criptomineros</string>
     <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_cryptominers_description">Evita que los scripts maliciosos consigan accesu al preséu pa minar divises dixitales.</string>
-    <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
-    <string name="etp_fingerprinters_title">Xeneradores de buelgues</string>
 
-    <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
-    <string name="etp_fingerprinters_description">Evita la recoyida de datos identificables de forma esclusiva del preséu que puen usase pa rastrexar.</string>
     <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
     <string name="etp_tracking_content_title">Conteníu que rastrexa</string>
     <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
@@ -1130,10 +1101,6 @@
     <!-- Describes the add to homescreen functionality -->
     <string name="add_to_homescreen_description_2">Pues amestar fácilmente esti sitiu web a la pantalla d\'Aniciu del preséu p\'acceder aína a elli como si fore una aplicación nativa.</string>
 
-    <!-- Preference for managing the settings for logins and passwords in Fenix -->
-    <string name="preferences_passwords_logins_and_passwords">Cuentes y contraseñes</string>
-    <!-- Preference for managing the saving of logins and passwords in Fenix -->
-    <string name="preferences_passwords_save_logins">Guardáu de cuentes y contraseñes</string>
     <!-- Preference option for asking to save passwords in Fenix -->
     <string name="preferences_passwords_save_logins_ask_to_save">Entrugar</string>
     <!-- Preference option for never saving passwords in Fenix -->
@@ -1144,26 +1111,10 @@
     <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
     <string name="preferences_android_autofill">Autorrellenu n\'otres aplicaciones</string>
 
-    <!-- Preference for syncing saved logins in Fenix -->
-    <string name="preferences_passwords_sync_logins">Sincronización de cuentes</string>
-    <!-- Preference for syncing saved logins in Fenix, when not signed in-->
-    <string name="preferences_passwords_sync_logins_across_devices">Sincronizar les cuentes ente preseos</string>
-    <!-- Preference to access list of saved logins -->
-    <string name="preferences_passwords_saved_logins">Cuentes guardaes</string>
-    <!-- Description of empty list of saved passwords. Placeholder is replaced with app name.  -->
-    <string name="preferences_passwords_saved_logins_description_empty_text">Equí apaecen les cuentes que guardes o sincronices con %s.</string>
-    <!-- Preference to access list of saved logins -->
-    <string name="preferences_passwords_saved_logins_description_empty_learn_more_link">Saber más tocante a Sync.</string>
     <!-- Preference to access list of login exceptions that we never save logins for -->
     <string name="preferences_passwords_exceptions">Esceiciones</string>
-    <!-- Empty description of list of login exceptions that we never save logins for -->
-    <string name="preferences_passwords_exceptions_description_empty">Equí apaecen les cuentes y les contraseñes que nun se guarden.</string>
-    <!-- Description of list of login exceptions that we never save logins for -->
-    <string name="preferences_passwords_exceptions_description">Nun van guardase les cuentes y les contraseñes d\'estos sitios.</string>
     <!-- Text on button to remove all saved login exceptions -->
     <string name="preferences_passwords_exceptions_remove_all">Quitar toles esceiciones</string>
-    <!-- Hint for search box in logins list -->
-    <string name="preferences_passwords_saved_logins_search">Buscar cuentes</string>
     <!-- The header for the site that a login is for -->
     <string name="preferences_passwords_saved_logins_site">Sitiu</string>
     <!-- The header for the username for a login -->
@@ -1191,12 +1142,6 @@
     <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
     <string name="saved_login_hide_password">Anubrir la contraseña</string>
 
-    <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their logins -->
-    <string name="logins_biometric_prompt_message">Desbloquia pa ver les cuentes guardaes</string>
-    <!-- Title of warning dialog if users have no device authentication set up -->
-    <string name="logins_warning_dialog_title">Cuentes y contraseñes protexíes</string>
-    <!-- Message of warning dialog if users have no device authentication set up -->
-    <string name="logins_warning_dialog_message">Configura un patrón de bloquéu, una contraseña o un PIN pa protexer les cuentes guardaes y les contraseñes, y evitar qu\'otros usuarios accedan a elles.</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
     <string name="logins_warning_dialog_later">Dempués</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -1214,22 +1159,10 @@
     <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
     <string name="saved_logins_sort_strategy_last_used">Últimu usu</string>
 
-    <!-- Content description (not visible, for screen readers etc.): Sort saved logins dropdown menu chevron icon -->
-    <string name="saved_logins_menu_dropdown_chevron_icon_content_description">Menú pa ordenar los anicios sesión</string>
-
-    <!-- Preference and title for managing the settings for credit cards -->
-    <string name="preferences_credit_cards">Tarxetes de creitu</string>
-    <!-- Preference summary for saving and autofilling credit card data -->
-    <string name="preferences_credit_cards_save_and_autofill_cards_summary">Cífrense los datos</string>
-
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
     <string name="preferences_credit_cards_sync_cards_across_devices">Sincronizar les tarxetes ente preseos</string>
     <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
     <string name="preferences_credit_cards_sync_cards">Sincronizar les tarxetes</string>
-    <!-- Preference option for adding a credit card -->
-    <string name="preferences_credit_cards_add_credit_card">Amestar una tarxeta de creitu</string>
-    <!-- Preference option for managing saved credit cards -->
-    <string name="preferences_credit_cards_manage_saved_cards">Xestionar les tarxetes guardaes</string>
 
     <!-- Title of the "Add card" screen -->
     <string name="credit_cards_add_card">Amiestu d\'una tarxeta</string>
@@ -1251,8 +1184,6 @@
     <!-- Title of the "Saved cards" screen -->
     <string name="credit_cards_saved_cards">Tarxetes guardaes</string>
 
-    <!-- Error message for credit card name on card validation -->
-    <string name="credit_cards_name_on_card_validation_error_message">Rellena esti campu</string>
     <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
     <string name="credit_cards_warning_dialog_set_up_now">Configurar</string>
     <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
@@ -1260,8 +1191,6 @@
 
     <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their credit cards -->
     <string name="credit_cards_biometric_prompt_message_pin">Desbloquéu del preséu</string>
-    <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored credit card information -->
-    <string name="credit_cards_biometric_prompt_unlock_message">Desbloquia pa usar les tarxetes de creitu atroxaes</string>
 
     <!-- Title of the Add search engine screen -->
     <string name="search_engine_add_custom_search_engine_title">Amestar un motor de busca</string>
@@ -1273,7 +1202,7 @@
     <string name="search_engine_delete">Desaniciar</string>
 
     <!-- Description text for the Search String TextField. The %s is part of the string -->
-    <string formatted="false" name="search_add_custom_engine_search_string_example">Troca la consulta por «%s». Exemplu:\nhttps://www.duckduckgo.com/?q=%s</string>
+    <string name="search_add_custom_engine_search_string_example" formatted="false">Troca la consulta por «%s». Exemplu:\nhttps://www.duckduckgo.com/?q=%s</string>
 
     <!-- Text shown when a user leaves the name field empty -->
     <string name="search_add_custom_engine_error_empty_name">Introduz el nome d\'un motor de busca</string>
@@ -1320,21 +1249,9 @@
     <string name="login_menu_delete_button">Desaniciar</string>
     <!-- Login overflow menu edit button -->
     <string name="login_menu_edit_button">Editar</string>
-    <!-- Message in delete confirmation dialog for logins -->
-    <string name="login_deletion_confirmation">¿De xuru que quies desaniciar esta cuenta?</string>
 
     <!-- Positive action of a dialog asking to delete  -->
     <string name="dialog_delete_positive">Desaniciar</string>
-    <!--  The editable text field for a login's web address. -->
-    <string name="saved_login_hostname_description">El campu de testu editable pa la direición web de la cuenta.</string>
-    <!--  The editable text field for a login's username. -->
-    <string name="saved_login_username_description">El campu de testu editable pal nome d\'usuariu de la cuenta.</string>
-    <!--  The editable text field for a login's password. -->
-    <string name="saved_login_password_description">El campu de testu editable pa la contraseña de la cuenta.</string>
-    <!--  The page title for editing a saved login. -->
-    <string name="edit">Edición</string>
-    <!--  The error message in add/edit login view when password field is blank. -->
-    <string name="saved_login_password_required">Ríquese la contraseña</string>
     <!-- Voice search button content description  -->
     <string name="voice_search_content_description">Busca pela voz</string>
     <!-- Voice search prompt description displayed after the user presses the voice search button -->
@@ -1351,7 +1268,7 @@
     <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
     <string name="synced_tabs_enable_tab_syncing">Activa la sincronización de llingüetes.</string>
     <!-- Text displayed when user has no tabs that have been synced -->
-    <string name="synced_tabs_no_tabs">Nun tienes llingüetes abiertes nel Firefox de los demás preseos de to.</string>
+    <string name="synced_tabs_no_tabs" tools:ignore="BrandUsage">Nun tienes llingüetes abiertes nel Firefox de los demás preseos de to.</string>
 
     <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
     <string name="synced_tabs_sign_in_message">Ve una llista de les llingüetes que tienes nos demás preseos de to.</string>
@@ -1367,18 +1284,16 @@
     <!-- Label for the preference to show the shortcuts for the most visited top sites on the homepage -->
     <string name="top_sites_toggle_top_recent_sites_4">Atayos</string>
     <!-- Title text displayed in the rename top site dialog. -->
-	<string name="top_sites_rename_dialog_title">Nome</string>
-    <!-- Button caption to confirm the renaming of the top site. -->
-	<string name="top_sites_rename_dialog_ok">Aceutar</string>
+    <string name="top_sites_rename_dialog_title">Nome</string>
     <!-- Dialog button text for canceling the rename top site prompt. -->
-	<string name="top_sites_rename_dialog_cancel">Encaboxar</string>
+    <string name="top_sites_rename_dialog_cancel">Encaboxar</string>
 
     <!-- Inactive tabs in the tabs tray -->
     <!-- Title text displayed in the tabs tray when a tab has been unused for 14 days. -->
     <string name="inactive_tabs_title">Llingüetes inactives</string>
 
     <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
-    <string name="inactive_tabs_auto_close_message_description" tools:ignore="UnusedResources">Firefox pue zarrar les llingüetes que nun visitesti demientres el mes pasáu.</string>
+    <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox pue zarrar les llingüetes que nun visitesti demientres el mes pasáu.</string>
 
     <!-- Content description for close button in collection placeholder. -->
     <string name="remove_home_collection_placeholder_content_description">Quitar</string>
@@ -1390,7 +1305,7 @@
     <string name="privacy_content_close_button_content_description">Zarrar</string>
 
     <!-- Caption for describing a certain feature. The placeholder is for a clickable text (eg: Learn more) which will load an url in a new tab when clicked.  -->
-    <string name="pocket_stories_feature_caption">Parte de la familia de Firefox. %s</string>
+    <string name="pocket_stories_feature_caption" tools:ignore="BrandUsage">Parte de la familia de Firefox. %s</string>
     <!-- Clickable text for opening an external link for more information about Pocket. -->
     <string name="pocket_stories_feature_learn_more">Saber más</string>
 
