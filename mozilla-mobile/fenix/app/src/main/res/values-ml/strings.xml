@@ -307,6 +307,10 @@
         The first parameter is the name of the app defined in app_name (for example: Fenix). -->
     <string name="browser_menu_delete_browsing_data_on_quit">%1$s-ൽ നിന്നു് പുറത്തുകടക്കുക</string>
 
+    <!-- Menu "contextual feature recommendation" (CFR) -->
+    <!-- Text for the title in the contextual feature recommendation popup promoting the menu feature. -->
+    <string name="menu_cfr_title">പുതിയതു്: ധാരാരേഖിതപെട്ട കുറിപ്പടിക്കട്ട</string>
+
     <!-- Extensions management fragment -->
     <!-- Text displayed when there are no extensions to be shown -->
     <string name="extensions_management_no_extensions">ഇവിടെ വിപുലീകരണങ്ങളൊന്നുമില്ല</string>
@@ -341,7 +345,7 @@
     <!-- Button in the search view when shortcuts are displayed that takes a user to the search engine settings -->
     <string name="search_shortcuts_engine_settings">തിരച്ചിൽ ക്രമീകരണങ്ങൾ</string>
     <!-- Button in the search view that lets a user navigate to the site in their clipboard -->
-    <string name="awesomebar_clipboard_title">ക്ലിപ്പ്ബോർഡിൽ നിന്ന് കണ്ണി പൂരിപ്പിക്കുക</string>
+    <string name="awesomebar_clipboard_title">പകർത്തൽപെട്ടി നിന്ന് കണ്ണി പൂരിപ്പിക്കുക</string>
     <!-- Button in the search suggestions onboarding that allows search suggestions in private sessions -->
     <string name="search_suggestions_onboarding_allow_button">അനുവദിക്കുക</string>
     <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
@@ -368,6 +372,8 @@
     <!-- Home onboarding -->
     <!-- Home onboarding dialog welcome screen title text. -->
     <string name="onboarding_home_welcome_title_2">താങ്ങളുടെ സ്വന്തം ഗോളാന്തരവലയിലേക്കു സ്വാഗതം</string>
+    <!-- Home onboarding dialog welcome screen description text. -->
+    <string name="onboarding_home_welcome_description">ഇനിയും നിറങ്ങൾ. മെച്ചപ്പെട്ട സ്വകാര്യത. ലാഭത്തേക്കാൾ ജനങ്ങളോടുള്ള അതേ പ്രതിബദ്ധത.</string>
     <!-- Text for the button to continue the onboarding on the home onboarding dialog. -->
     <string name="onboarding_home_get_started_button">ഉപയോഗിക്കാൻ തുടങ്ങുക</string>
     <!-- Text for the button to navigate to the sync sign in screen on the home onboarding dialog. -->
@@ -392,13 +398,21 @@
     <string name="juno_onboarding_enable_notifications_negative_button" tools:ignore="UnusedResources">ഇപ്പോഴല്ല</string>
     <!-- Text for the button to dismiss the screen and move on with the flow -->
     <string name="juno_onboarding_add_search_widget_negative_button" tools:ignore="UnusedResources">ഇപ്പോഴല്ല</string>
+    <!-- Onboarding add-ons card, for checking more add-ons on, used by Nimbus experiments. -->
+    <string name="onboarding_add_on_explore_more_extensions" tools:ignore="UnusedResources" moz:removedIn="133">കൂടുതൽ വിപുലീകരണങ്ങൾ കാണുക.</string>
     <!-- Onboarding add-ons card, button for start browsing, used by Nimbus experiments. -->
     <string name="onboarding_add_on_start_browsing_button" tools:ignore="UnusedResources" moz:removedIn="133">തിരയുകാൻ തുടങ്ങുക.</string>
+    <!-- Onboarding add-ons card, for checking more add-ons on, used by Nimbus experiments. -->
+    <string name="onboarding_add_on_explore_more_extensions_2">കൂടുതൽ വിപുലീകരണങ്ങൾ കാണുക</string>
     <!-- Onboarding add-ons card, button for start browsing, used by Nimbus experiments. -->
     <string name="onboarding_add_on_start_browsing_button_2">തിരയുകാൻ തുടങ്ങുക</string>
+    <!-- Ublock description for the onboarding add-ons card, used by Nimbus experiments. -->
+    <string name="onboarding_add_on_ublock_description" tools:ignore="UnusedResources">പരസ്യങ്ങൾ നല്ലോണം തടയുക.</string>
     <!-- Search by Image name for the onboarding add-ons card, used by Nimbus experiments. Note: The word "Search by Image" is a brand name should NOT be translated -->
     <string name="onboarding_add_on_search_by_image_name" tools:ignore="UnusedResources">ചിത്രം കൊണ്ടു് തിരയുക</string>
 
+    <!-- Dark Reader name for the onboarding add-ons card, used by Nimbus experiments. Note: The word "Dark Reader" is a brand name should NOT be translated -->
+    <string name="onboarding_add_on_dark_reader_name" tools:ignore="UnusedResources">ഡാർക്കു് റീടർ</string>
     <!-- Label for the number of reviews for an add-on. The parameter is for the formatted number of reviews e.g. "1,234", "12,345", "123,456". -->
     <string name="onboarding_add_on_reviews_label">അവലോകനങ്ങൾ: %1$s</string>
     <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
@@ -463,6 +477,8 @@
     <string name="preferences_category_privacy_security">സ്വകാര്യതയും സുരക്ഷയും</string>
     <!-- Preference for advanced site permissions -->
     <string name="preferences_site_permissions" moz:removedIn="133" tools:ignore="UnusedResources">സൈറ്റ് അനുമതികൾ</string>
+    <!-- Preference for advanced site settings -->
+    <string name="preferences_site_settings">വെബ്സ്ഥാന ക്രമീകരണങ്ങൾ</string>
     <!-- Preference for private browsing options -->
     <string name="preferences_private_browsing_options">സ്വകാര്യ ബ്രൗസിങ്</string>
     <!-- Preference for opening links in a private tab-->
@@ -470,16 +486,27 @@
     <!-- Preference for allowing screenshots to be taken while in a private tab-->
     <string name="preferences_allow_screenshots_in_private_mode">സ്വകാര്യ ബ്രൗസിങ്ങിൽ സ്‌ക്രീൻഷോട്ടുകൾ അനുവദിക്കുക</string>
 
+    <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+    <string name="preferences_screenshots_in_private_mode_disclaimer">അനുവദിക്കുകയാണെങ്കിൽ, ഒന്നിലധികം അപ്ലിക്കേഷനുകൾ തുറക്കുമ്പോൾ സ്വകാര്യ ടാബുകളും ദൃശ്യമാകും</string>
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">സ്വകാര്യ ബ്രൗസിംഗ് കുറുക്കുവഴി ചേർക്കുക</string>
 
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_cancel_button">റദ്ദാക്കുക</string>
 
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
+    <string name="cookie_banner_handling_details_site_is_not_supported_request_support_button_2">അഭ്യർത്ഥനം അയക്കുക</string>
+
     <!-- Summary of https only preference if https only is set to off -->
     <string name="preferences_https_only_off">അണച്ചതു്</string>
+    <!-- Summary of https only preference if https only is set to on in all tabs -->
+    <string name="preferences_https_only_on_all">എല്ല ടാബുകളിൽ തുറന്നിരിക്കുന്ന</string>
+    <!-- Summary of https only preference if https only is set to on in private tabs only -->
+    <string name="preferences_https_only_on_private">സ്വകാര്യ ടാബുകളിൽ തുറന്നിരിക്കുന്ന</string>
     <!-- Text displayed that links to website containing documentation about "HTTPS-Only" mode -->
     <string name="preferences_http_only_learn_more">കൂടുതല്‍ അറിയുക</string>
+    <!-- Option for the https only setting -->
+    <string name="preferences_https_only_in_private_tabs">സ്വകാര്യ ടാബുകളിൽ മാത്രം പ്രവർത്തനക്ഷമമാക്കുക</string>
     <!-- Preference for accessibility -->
     <string name="preferences_accessibility">ആക്സസ്സെബിലിറ്റി</string>
     <!-- Preference to override the Sync token server -->
