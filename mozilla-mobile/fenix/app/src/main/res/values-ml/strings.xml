@@ -974,6 +974,9 @@
     <!-- Restore tab button text on the tab crash page -->
     <string name="tab_crash_restore">ടാബ് പുനസ്ഥാപിക്കുക</string>
 
+    <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
+    <string name="unsubmitted_crash_dialog_checkbox_label">തകർച്ച വിവരങ്ങൾ തന്നെതാന്നെ അയയ്ക്കുക</string>
+
     <!-- Bookmarks -->
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">ഈ ഫോൾഡർ നീക്കം ചെയ്യണമെന്ന് താങ്കൾക്ക് ഉറപ്പാണോ?</string>
@@ -1029,6 +1032,9 @@
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">പൂർവസ്ഥിതിയാക്കുക</string>
 
+    <!-- Description for the add new folder button when selecting a folder. -->
+    <string name="bookmark_select_folder_new_folder_button_title">പുതിയ അറ</string>
+
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
     <string name="phone_feature_go_to_settings">സജ്ജീകരണങ്ങളിലേക്കു പോവുക</string>
@@ -1040,8 +1046,16 @@
     <string name="phone_feature_recommended">ശുപാർശ ചെയ്തത്</string>
     <!-- Button label for clearing all the information of site permissions-->
     <string name="clear_permissions">അനുമതികൾ ഇല്ലാതാക്കുക</string>
+    <!-- Text for the OK button on Clear permissions dialog -->
+    <string name="clear_permissions_positive">ശരി</string>
+    <!-- Text for the cancel button on Clear permissions dialog -->
+    <string name="clear_permissions_negative">റദ്ദാക്കുക</string>
     <!-- Button label for clearing a site permission-->
     <string name="clear_permission">അനുമതി ഇല്ലാതാക്കുക</string>
+    <!-- Text for the OK button on Clear permission dialog -->
+    <string name="clear_permission_positive">ശരി</string>
+    <!-- Text for the cancel button on Clear permission dialog -->
+    <string name="clear_permission_negative">റദ്ദാക്കുക</string>
     <!-- Button label for clearing all the information on all sites-->
     <string name="clear_permissions_on_all_sites">എല്ലാ സൈറ്റുകളിലെയും അനുമതികൾ ഇല്ലാതാക്കുക</string>
     <!-- Preference for altering video and audio autoplay for all websites -->
@@ -1054,6 +1068,8 @@
     <string name="preference_phone_feature_location">സ്ഥലവിവരം</string>
     <!-- Preference for altering the notification access for all websites -->
     <string name="preference_phone_feature_notification">അറിയിപ്പ്</string>
+    <!-- Preference for altering the persistent storage access for all websites -->
+    <string name="preference_phone_feature_persistent_storage">സ്ഥിരമായ സംഭരണം</string>
     <!-- Preference for altering the EME access for all websites -->
     <string name="preference_phone_feature_media_key_system_access">DRM- നിയന്ത്രിത ഉള്ളടക്കം</string>
     <!-- Label that indicates that a permission must be asked always -->
@@ -1069,20 +1085,41 @@
 
     <!-- Summary of tracking protection preference if tracking protection is set to off -->
     <string name="tracking_protection_off">ഓഫ്</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to standard -->
+    <string name="tracking_protection_standard">നിലവാരം</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to strict -->
+    <string name="tracking_protection_strict">കർശനമായി</string>
+    <!-- Summary of tracking protection preference if tracking protection is set to custom -->
+    <string name="tracking_protection_custom">ഇഷ്ടമ്പോലെ</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
     <string name="preference_option_autoplay_allowed2">ഓഡിയോയും വീഡിയോയും അനുവദിക്കുക</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is allowed -->
+    <string name="quick_setting_option_autoplay_allowed">ശബ്ദവും ദൃശ്യവും അനുവദിക്കുക</string>
     <!-- Label that indicates that video and audio autoplay is only allowed over Wi-Fi -->
     <string name="preference_option_autoplay_allowed_wifi_only2">സെല്ലുലാർ ഡാറ്റയിൽ മാത്രം ഓഡിയോയും വീഡിയോയും തടയുക</string>
     <!-- Subtext that explains 'autoplay on Wi-Fi only' option -->
     <string name="preference_option_autoplay_allowed_wifi_subtext">ഓഡിയോയും വീഡിയോയും വൈഫൈയിൽ പ്രവർത്തിക്കും</string>
     <!-- Label for global setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
     <string name="preference_option_autoplay_block_audio2">ശബ്ദം മാത്രം തടയുക</string>
+    <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_block_audio">ശബ്ദം മാത്രം തടയുക</string>
     <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
     <string name="preference_option_autoplay_blocked3">ഓഡിയോയും വീഡിയോയും തടയുക</string>
+    <!-- Label for site specific setting that indicates that all video and audio autoplay is blocked -->
+    <string name="quick_setting_option_autoplay_blocked">ശബ്ദവും ദൃശ്യവും തടയുക</string>
     <!-- Summary of delete browsing data on quit preference if it is set to on -->
     <string name="delete_browsing_data_quit_on">ഓണ്‍</string>
     <!-- Summary of delete browsing data on quit preference if it is set to off -->
     <string name="delete_browsing_data_quit_off">ഓഫ്</string>
+
+    <!-- Summary of studies preference if it is set to on -->
+    <string name="studies_on">തുറന്നതു്</string>
+    <!-- Summary of studies data on quit preference if it is set to off -->
+    <string name="studies_off">അണച്ചതു്</string>
+    <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
+    <string name="preferences_category_permissions">അനുമതികൾ</string>
+    <!-- Category header of a preference that allows a user to alter settings related to web content. -->
+    <string name="preferences_category_content">ഉള്ളടക്കം</string>
 
     <!-- Collections -->
     <!-- Collections header on home fragment -->
@@ -1111,6 +1148,8 @@
     <string name="create_collection_save_to_collection_tab_selected">%d ടാബ് തിരഞ്ഞെടുത്തു</string>
     <!-- Text shown in snackbar when multiple tabs have been saved in a collection -->
     <string name="create_collection_tabs_saved">ടാബുകൾ സൂക്ഷിച്ചു!</string>
+    <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+    <string name="create_collection_tabs_saved_new_collection">ശേഖരം കരുതിവച്ചു!</string>
     <!-- Text shown in snackbar when one tab has been saved in a collection -->
     <string name="create_collection_tab_saved">ടാബ് സൂക്ഷിച്ചു!</string>
     <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
@@ -1119,6 +1158,11 @@
     <string name="create_collection_save">സൂക്ഷിക്കുക</string>
     <!-- Snackbar action to view the collection the user just created or updated -->
     <string name="create_collection_view">കാണുക</string>
+
+    <!-- Text for the OK button from collection dialogs -->
+    <string name="create_collection_positive">ശരി</string>
+    <!-- Text for the cancel button from collection dialogs -->
+    <string name="create_collection_negative">റദ്ദാക്കുക</string>
 
     <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections-->
     <string name="create_collection_default_name">%d ശേഖരം</string>
@@ -1129,12 +1173,24 @@
     <!-- Content description (not visible, for screen readers etc.):
         "Share" button. Opens the share menu when pressed. -->
     <string name="share_button_content_description">പങ്കിടുക</string>
+    <!-- Text for the Save to PDF feature in the share menu -->
+    <string name="share_save_to_pdf">പീ.ഡീ.എഫ ആയി കരുതിവയ്ക്കുക</string>
+    <!-- Text for error message when generating a PDF file Text. -->
+    <string name="unable_to_save_to_pdf_error">പീ.ഡീ.എഫ ഉണ്ടാക്കാൻ കഴിയുന്നില്ല</string>
+    <!-- Text for standard error snackbar dismiss button. -->
+    <string name="standard_snackbar_error_dismiss">കളയുക</string>
+    <!-- Text for error message when printing a page and it fails. -->
+    <string name="unable_to_print_page_error">ഈ താൾ അച്ചടിപ്പിക്കാൻ കഴിയുന്നില്ല</string>
+    <!-- Text for the print feature in the share and browser menu -->
+    <string name="menu_print">അച്ചടിപ്പിക്കുക</string>
     <!-- Sub-header in the dialog to share a link to another sync device -->
     <string name="share_device_subheader">ഉപകരണത്തിലേക്ക് അയക്കു</string>
     <!-- Sub-header in the dialog to share a link to an app from the full list -->
     <string name="share_link_all_apps_subheader">എല്ലാ പ്രവർത്തനങ്ങളും</string>
     <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
     <string name="share_link_recent_apps_subheader">സമീപകാലത്ത് ഉപയോഗിച്ചവ</string>
+    <!-- Toast shown after copying link to clipboard -->
+    <string name="toast_copy_link_to_clipboard">പകർത്തൽപെട്ടിയിലേക്കു് പകര്‍ത്തിയിരിയ്ക്കുന്നു</string>
     <!-- An option from the share dialog to sign into sync -->
     <string name="sync_sign_in">സമന്വയിപ്പിക്കാനായി പ്രവേശിക്കുക</string>
      <!-- An option from the share dialog to send link to all other sync devices -->
