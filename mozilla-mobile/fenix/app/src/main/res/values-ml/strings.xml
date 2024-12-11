@@ -1983,8 +1983,12 @@
     <!-- Text that is surrounded by quotes. The parameter is the actual text that is in quotes. An example of that text could be: Excellent craftsmanship, and that is displayed as “Excellent craftsmanship”. The text comes from a buyer's review that the feature is highlighting"   -->
     <string name="surrounded_with_quotes">&quot;%s&quot;</string>
 
+    <!-- Action label for links to a website containing documentation about a wallpaper collection. Talkback will append this to say "Double tap to open link to learn more about this collection". -->
+    <string name="a11y_action_label_wallpaper_collection_learn_more">ഈ ശേഖരം കുറിച്ചു് കൂടുതലറിയാൻ ഈ കണ്ണി തുറക്കുക</string>
     <!-- Action label for links that point to an article. Talkback will append this to say "Double tap to read the article". -->
     <string name="a11y_action_label_read_article">ലേഖനം വായിക്കുക</string>
+    <!-- Action label for links to the Firefox Pocket website. Talkback will append this to say "Double tap to open link to learn more". -->
+    <string name="a11y_action_label_pocket_learn_more">കൂടുതലറിയാൻ കണ്ണി തുറക്കുക</string>
     <!-- Content description for headings announced by accessibility service. The first parameter is the text of the heading. Talkback will announce the first parameter and then speak the word "Heading" indicating to the user that this text is a heading for a section. -->
     <string name="a11y_heading">%s, തലക്കെട്ടു്</string>
     <!-- Title for dialog displayed when trying to access links present in a text. -->
@@ -2003,10 +2007,26 @@
     The first parameter is the name of the language that the page was translated from, for example, "French".
     The second parameter is the name of the language that the page was translated to, for example, "English". -->
     <string name="translations_bottom_sheet_title_translation_completed">%1$s നിന്നു് %2$s-ലേക്കു് വിവർത്തനം ചെയ്തു</string>
+    <!-- Title for the translation dialog that allows a user to translate the webpage when a user uses the translation feature the first time. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="translations_bottom_sheet_title_first_time">%1$s-ൽ സ്വകാര്യ വിവർത്തനങ്ങൾ പരിശോധിച്ചു് നോക്കൂ</string>
     <!-- Text that links to additional information about the Firefox translations feature. -->
     <string name="translations_bottom_sheet_info_message_learn_more">കൂടുതല്‍ അറിയുക</string>
+    <!-- Label for the dropdown to select which language to translate from on the translations dialog. Usually the translate from language selected will be the same as the page language. -->
+    <string name="translations_bottom_sheet_translate_from">ഇതിൽ നിന്നു് വിവർത്തനം ചെയ്യുക</string>
+    <!-- Label for the dropdown to select which language to translate to on the translations dialog. Usually the translate to language selected will be the user's preferred language. -->
+    <string name="translations_bottom_sheet_translate_to">ഇതിലേക്കു് വിവർത്തനം ചെയ്യുക</string>
+    <!-- Label for the dropdown to select which language to translate from on the translations dialog when the page language is not supported. This selection is to allow the user to select another language, in case we automatically detected the page language incorrectly. -->
+    <string name="translations_bottom_sheet_translate_from_unsupported_language">മറ്റൊരു ഉറവിട ഭാഷ ശ്രമിച്ചു നോക്കുക</string>
     <!-- Button text on the translations dialog to dismiss the dialog and return to the browser. -->
     <string name="translations_bottom_sheet_negative_button">ഇപ്പോഴല്ല</string>
+    <!-- Button text on the translations dialog to restore the translated website back to the original untranslated version. -->
+    <string name="translations_bottom_sheet_negative_button_restore">യഥാര്‍ത്ഥമുള്ളതു് കാണിക്കുക</string>
+    <!-- Accessibility announcement (not visible, for screen readers etc.) for the translations dialog after restore button was pressed that indicates the original untranslated page was loaded. -->
+    <string name="translations_bottom_sheet_restore_accessibility_announcement">യഥാർത്ഥ വിവർത്തനം ചെയ്യാത്ത താൾ ലഭ്യമാക്കി</string>
+    <!-- Button text on the translations dialog when a translation error appears, used to dismiss the dialog and return to the browser. -->
+    <string name="translations_bottom_sheet_negative_button_error">കഴിഞ്ഞു</string>
+    <!-- Button text on the translations dialog to begin a translation of the website. -->
+    <string name="translations_bottom_sheet_positive_button">വിവർത്തനം ചെയ്യുക</string>
     <!-- Button text on the translations dialog when a translation error appears. -->
     <string name="translations_bottom_sheet_positive_button_error">വീണ്ടും ശ്രമിക്കുക</string>
     <!-- Inactive button text on the translations dialog that indicates a translation is currently in progress. This button will be accompanied by a loading icon. -->
@@ -2016,6 +2036,38 @@
     <!-- Default dropdown option when initially selecting a language from the translations dialog language selection dropdown. -->
     <string name="translations_bottom_sheet_default_dropdown_selection">ഒരു ഭാഷ തിരയുക</string>
 
+
+    <!-- The title of the warning card informs the user that a translation could not be completed. -->
+    <string name="translation_error_could_not_translate_warning_text">വിവർത്തനം ചെയ്യുമ്പോൾ ഒരു കുഴപ്പമുണ്ടായി. ദയവായി വീണ്ടും ശ്രമിച്ചു് നോക്കുക.</string>
+    <!-- The title of the warning card informs the user that the list of languages cannot be loaded. -->
+    <string name="translation_error_could_not_load_languages_warning_text">ഭാഷാകൾ ലഭ്യമാക്കാൻ കഴിഞ്ഞില്ല. താങ്ങളുടെ ഗോളാന്തരവല സമ്പർക്കം പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.</string>
+    <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
+    <string name="translation_in_progress_snackbar">വിവർത്തനം ചെയ്യുന്നു…</string>
+
+
+    <!-- Button text for the button that will take the user to the translation settings dialog. -->
+    <string name="translation_option_bottom_sheet_translation_settings">വിവർത്തന ക്രമീകരണങ്ങൾ</string>
+    <!-- Button text for the button that will take the user to a website to learn more about how translations works in the given app. The first parameter is the name of the application, for example, "Fenix". -->
+    <string name="translation_option_bottom_sheet_about_translations">%1$s-ലെ വിവർത്തനങ്ങളെക്കുറിച്ച്</string>
+
+    <!-- Translation settings dialog -->
+    <!-- Title of the translation settings dialog that allows a user to set their preferred translation settings. -->
+    <string name="translation_settings_toolbar_title">വിവർത്തനങ്ങൾ</string>
+    <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
+    <string name="translation_settings_download_language">ഭാഷാകൾ ഇറക്കിവയ്ക്കുക</string>
+
+    <!-- Preference option for never translate. Radio button title text.-->
+    <string name="automatic_translation_option_never_translate_title_preference">ഒരിക്കലും വിവർത്തനം ചെയ്യരുതു്</string>
+
+    <!-- Never translate site preference screen -->
+    <!-- Title of the never translate site preference screen that will appear on the toolbar.-->
+    <string name="never_translate_site_toolbar_title_preference">ഒരിക്കലും ഈ വെബ്സ്ഥാനങ്ങളുടെ വിവർത്തനം ചെയ്യരുതു്</string>
+    <!-- Content description (not visible, for screen readers etc.): For a never-translated site list item that is selected.
+             The first parameter is web site url (for example:"wikipedia.com") -->
+    <string name="never_translate_site_item_list_content_description_preference">%1$s മാറ്റുക</string>
+    <!-- The Delete site dialogue title will appear when the user clicks on a list item.
+             The first parameter is web site url (for example:"wikipedia.com") -->
+    <string name="never_translate_site_dialog_title_preference">%1$s-നു് മായ്ക്കുക</string>
 
     <!-- All languages list item. When the user presses this item, they can download all languages. -->
     <string name="download_language_all_languages_item_preference">എല്ലാ ഭാഷകൾ</string>
