@@ -1000,6 +1000,10 @@
 
     <!-- Broken site reason text for images or videos -->
     <string name="webcompat_reporter_reason_media">ചിത്രങ്ങൾ അല്ലെങ്കിൽ വീഡിയോകൾ</string>
+    <!-- Broken site reason text for buttons, links, and other content -->
+    <string name="webcompat_reporter_reason_content">ബട്ടണുകളും കണ്ണികളും മറ്റു് ഉള്ളടക്കം</string>
+    <!-- Broken site reason text for sign in or sign out -->
+    <string name="webcompat_reporter_reason_account">പ്രവേശിക്കൽ അല്ലെങ്കിൽ പുറത്തിറങ്ങൽ ചെയ്യുക</string>
     <!-- Broken site reason text for ad blocker -->
     <string name="webcompat_reporter_reason_ad_blocker">പരസ്യ തടയല്യന്ത്രം</string>
     <!-- Broken site reason text for something else -->
@@ -1019,14 +1023,27 @@
     <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
     <string name="unsubmitted_crash_dialog_checkbox_label">തകർച്ച വിവരങ്ങൾ തന്നെതാന്നെ അയയ്ക്കുക</string>
 
+    <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+    <string name="unsubmitted_crash_dialog_negative_button">അടയ്ക്കുക</string>
+    <!-- Unsubmitted crash dialog positive button to submit crash report -->
+    <string name="unsubmitted_crash_dialog_positive_button">തകരാറിനെപ്പറ്റിയുള്ള അറിയിപ്പ് അയയ്ക്കുക</string>
+
     <!-- Bookmarks -->
     <!-- Confirmation message for a dialog confirming if the user wants to delete the selected folder -->
     <string name="bookmark_delete_folder_confirmation_dialog">ഈ ഫോൾഡർ നീക്കം ചെയ്യണമെന്ന് താങ്കൾക്ക് ഉറപ്പാണോ?</string>
+    <!-- Confirmation message for a dialog confirming if the user wants to delete multiple items including folders. Parameter will be replaced by app name. -->
+    <string name="bookmark_delete_multiple_folders_confirmation_dialog">%s തിരഞ്ഞെടുത്ത ഇനങ്ങൾ മായ്ക്കും.</string>
+    <!-- Text for the cancel button on delete bookmark dialog -->
+    <string name="bookmark_delete_negative">റദ്ദാക്കുക</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">ഫോൾഡർ ചേർക്കുക</string>
 
+    <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
+    <string name="bookmark_saved_in_folder_snackbar">&quot;%s&quot;-ൽ കരുതവച്ചു</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
     <string name="edit_bookmark_snackbar_action">തിരുത്തുക</string>
+    <!-- Bookmark menu move button -->
+    <string name="bookmark_menu_move_button">നീക്കുക</string>
     <!-- Bookmark overflow menu edit button -->
     <string name="bookmark_menu_edit_button">തിരുത്തുക</string>
     <!-- Bookmark overflow menu copy button -->
@@ -1037,6 +1054,10 @@
     <string name="bookmark_menu_open_in_new_tab_button">പുതിയ ടാബില്‍ തുറക്കുക</string>
     <!-- Bookmark overflow menu open in private tab button -->
     <string name="bookmark_menu_open_in_private_tab_button">സ്വകാര്യ ടാബിൽ തുറക്കുക</string>
+    <!-- Bookmark overflow menu open all in tabs button -->
+    <string name="bookmark_menu_open_all_in_tabs_button">എല്ലാം പുതിയ ടാബുകളിൽ തുറക്കുക</string>
+    <!-- Bookmark overflow menu open all in private tabs button -->
+    <string name="bookmark_menu_open_all_in_private_tabs_button">എല്ലാം പുതിയ സ്വകാര്യ ടാബുകളിൽ തുറക്കുക</string>
     <!-- Bookmark overflow menu delete button -->
     <string name="bookmark_menu_delete_button">നീക്കം ചെയ്യുക</string>
     <!--Bookmark overflow menu save button -->
@@ -1054,8 +1075,12 @@
     <string name="bookmark_url_label">URL</string>
     <!-- Bookmark FOLDER editing field label -->
     <string name="bookmark_folder_label">ഫോൾഡർ</string>
+    <!-- Text indicating which folder a bookmark or folder will be saved in -->
+    <string name="bookmark_save_in_label">ഇതിൽ കരുതിവയ്ക്കൂ</string>
     <!-- Bookmark NAME editing field label -->
     <string name="bookmark_name_label">പേര്</string>
+    <!-- Label for a text input field for a bookmark or folder name -->
+    <string name="bookmark_name_label_normal_case">പേരു്</string>
     <!-- Bookmark add folder screen title -->
     <string name="bookmark_add_folder_fragment_label">ഫോൾഡർ ചേർക്കുക</string>
     <!-- Bookmark select folder screen title -->
@@ -1071,9 +1096,29 @@
     <string name="bookmark_deletion_snackbar_message">%1$s നീക്കം ചെയ്തു</string>
     <!-- Bookmark snackbar message on deleting multiple bookmarks not including folders-->
     <string name="bookmark_deletion_multiple_snackbar_message_2">അടയാളക്കുറിപ്പുകൾ നീക്കം ചെയ്തു</string>
+    <!-- Bookmark snackbar message on deleting multiple bookmarks including folders-->
+    <string name="bookmark_deletion_multiple_snackbar_message_3">തിരഞ്ഞെടുത്ത അറകൾ മായ്ക്കുന്നു</string>
     <!-- Bookmark undo button for deletion snackbar action -->
     <string name="bookmark_undo_deletion">പൂർവസ്ഥിതിയാക്കുക</string>
 
+    <!-- Bookmark snackbar message for deleting a single item. Parameter is the title of the item being deleted -->
+    <string name="bookmark_delete_single_item">%s മായച്ചതു്</string>
+    <!-- Bookmark snackbar message for deleting multiple items. Parameter is the number of items being deleted -->
+    <string name="bookmark_delete_multiple_items">മായച്ച ഇനങ്ങൾ: %s</string>
+    <!-- Text for the button to search all bookmarks -->
+    <string name="bookmark_search">തിരയൽ പദങ്ങൾ പറയുക</string>
+    <!-- Content description for the bookmark navigation bar back button -->
+    <string name="bookmark_navigate_back_button_content_description">പുറകോട്ട് ചെല്ലുക</string>
+    <!-- Content description for the bookmark list new folder navigation bar button -->
+    <string name="bookmark_add_new_folder_button_content_description">പുതിയ അറ ഉണ്ടാക്കുക</string>
+    <!-- Content description for the bookmark screen delete bookmark navigation bar button -->
+    <string name="bookmark_delete_bookmark_content_description">അടയാളക്കുറിപ്പു് മായ്ക്കുക</string>
+    <!-- Content description for the bookmark screen delete bookmark folder navigation bar button -->
+    <string name="bookmark_delete_folder_content_description">അറ മായ്ക്കുക</string>
+    <!-- Content description for bookmark search floating action button -->
+    <string name="bookmark_search_button_content_description">അടയാളക്കുറിപ്പുകളിൽ തേടുക</string>
+    <!-- Content description for the overflow menu for a bookmark item. Paramter will a folder name or bookmark title. -->
+    <string name="bookmark_item_menu_button_content_description">%s-നുള്ള ഇനം പട്ടിക</string>
     <!-- Description for the add new folder button when selecting a folder. -->
     <string name="bookmark_select_folder_new_folder_button_title">പുതിയ അറ</string>
 
