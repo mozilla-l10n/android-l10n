@@ -482,6 +482,8 @@
     <string name="preferences_search">തിരയുക</string>
     <!-- Preference for settings related to Search engines -->
     <string name="preferences_search_engines">തിരയൽ യന്ത്രങ്ങൾ</string>
+    <!-- Preference Category for settings related to Search address bar -->
+    <string name="preferences_settings_address_bar">വിലാസപ്പട്ട മുൻഗണനകൾ</string>
     <!-- Preference link to rating Fenix on the Play Store -->
     <string name="preferences_rate">ഗൂഗിൾ പ്ലേയിൽ വിലയിരുത്തുക</string>
     <!-- Preference linking to about page for Fenix
@@ -509,8 +511,15 @@
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">സ്വകാര്യ ബ്രൗസിംഗ് കുറുക്കുവഴി ചേർക്കുക</string>
 
+    <!-- Preference for enabling "HTTPS-Only" mode -->
+    <string name="preferences_https_only_title">HTTPS-മാത്രം രീതി</string>
+
     <!-- Label for cookie banner section in quick settings panel. -->
     <string name="cookie_banner_blocker">കുക്കീസു് പൊന്തുവരൽ തടയൽയന്ത്രം</string>
+    <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
+    <string name="preferences_cookie_banner_reduction_private_mode">സ്വകാര്യ തിരച്ചിലിൽ കുക്കീ പൊന്തുവരൽ തടയൽ</string>
+    <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle -->
+    <string name="reduce_cookie_banner_off_for_site">ഈ വെബ്സ്ഥാനത്തിനു് അണച്ചതു്</string>
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_cancel_button">റദ്ദാക്കുക</string>
 
@@ -525,6 +534,8 @@
     <string name="preferences_https_only_on_private">സ്വകാര്യ ടാബുകളിൽ തുറന്നിരിക്കുന്ന</string>
     <!-- Text displayed that links to website containing documentation about "HTTPS-Only" mode -->
     <string name="preferences_http_only_learn_more">കൂടുതല്‍ അറിയുക</string>
+    <!-- Option for the https only setting -->
+    <string name="preferences_https_only_in_all_tabs">എല്ലാ ടാബുകളിലും സജ്ജമാക്കുക</string>
     <!-- Option for the https only setting -->
     <string name="preferences_https_only_in_private_tabs">സ്വകാര്യ ടാബുകളിൽ മാത്രം പ്രവർത്തനക്ഷമമാക്കുക</string>
     <!-- Title shown in the error page for when trying to access a http website while https only mode is enabled. -->
@@ -1381,6 +1392,8 @@
     <string name="qr_scanner_dialog_negative">നിരസിക്കുക</string>
     <!-- QR code scanner prompt dialog error message shown when a hostname does not contain http or https. -->
     <string name="qr_scanner_dialog_invalid">ഈ വലവിലാസം സാധ്യമല്ല.</string>
+    <!-- QR code scanner prompt dialog positive option when there is an error -->
+    <string name="qr_scanner_dialog_invalid_ok">ശരി</string>
     <!-- Tab collection deletion prompt dialog message. Placeholder will be replaced with the collection name -->
     <string name="tab_collection_dialog_message">%1$s നീക്കം ചെയ്യണമെന്ന് താങ്കൾക്ക് ഉറപ്പാണോ?</string>
     <!-- Tab collection deletion prompt dialog option to delete the collection -->
@@ -1412,6 +1425,8 @@
     <!-- Subtitle for the data and history items in delete browsing data, parameter will be replaced with the
         number of history items the user has -->
     <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d വിലാസങ്ങൾ</string>
+    <!-- Title for the cookies and site data items in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_cookies_and_site_data">കുകീകളും സൈറ്റുദത്തയും</string>
     <!-- Subtitle for the cookies item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_cookies_subtitle">മിക്ക സൈറ്റുകളിൽ നിന്നും നിങ്ങൾ പുറത്തിറങ്ങും</string>
     <!-- Title for the cached images and files item in Delete browsing data -->
@@ -1420,6 +1435,8 @@
     <string name="preferences_delete_browsing_data_cached_files_subtitle">സംഭരണ ഇടം വൃത്തിയാക്കുന്നു</string>
     <!-- Title for the site permissions item in Delete browsing data -->
     <string name="preferences_delete_browsing_data_site_permissions">സൈറ്റ് അനുമതികൾ</string>
+    <!-- Title for the downloads item in Delete browsing data -->
+    <string name="preferences_delete_browsing_data_downloads">ഇറക്കിവയ്ക്കലുകൾ</string>
     <!-- Text for the button to delete browsing data -->
     <string name="preferences_delete_browsing_data_button">ബ്രൗസിങ്ങ് ഡാറ്റ നീക്കം ചെയ്യുക</string>
     <!-- Title for the Delete browsing data on quit preference -->
@@ -1428,6 +1445,13 @@
     <string name="preference_summary_delete_browsing_data_on_quit_2">പ്രധാന മെനുവിൽ നിന്ന് \&quot;പുറത്തുകടക്കുക\&quot; തിരഞ്ഞെടുക്കുമ്പോൾ ബ്രൗസിംഗ് ഡാറ്റ തനിയേ നീക്കം ചെയ്യുന്നു</string>
     <!-- Action item in menu for the Delete browsing data on quit feature -->
     <string name="delete_browsing_data_on_quit_action">പുറത്ത് കടക്കുക</string>
+
+    <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
+    <string name="delete_history_prompt_button_last_hour">കഴിഞ്ഞ മണിക്കൂരിൽ</string>
+    <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
+    <string name="delete_history_prompt_button_today_and_yesterday">ഇന്നലെയും ഇന്നും</string>
+    <!-- Radio button in the delete browsing data dialog to delete all history. -->
+    <string name="delete_history_prompt_button_everything">എല്ലാം</string>
 
     <!-- Dialog message to the user asking to delete browsing data. Parameter will be replaced by app name. -->
     <string name="delete_browsing_data_prompt_message_3">%s തിരഞ്ഞെടുത്ത ബ്രൗസിങ്ങ് ഡാറ്റ നീക്കം ചെയ്യും.</string>
@@ -1439,6 +1463,15 @@
     <string name="preferences_delete_browsing_data_snackbar">ബ്രൗസിംഗ് ഡാറ്റ നീക്കം ചെയ്തു</string>
     <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
     <string name="deleting_browsing_data_in_progress">ബ്രൗസിംഗ് ഡാറ്റ നീക്കം ചെയ്യുന്നു…</string>
+
+    <!-- Dialog message to the user asking to delete all history items inside the opened group. Parameter will be replaced by a history group name. -->
+    <string name="delete_all_history_group_prompt_message">&quot;%s&quot;-ൽ എല്ലാ സൈറ്റുകൾ മായ്ക്കുക</string>
+    <!-- Text for the cancel button for the history group deletion dialog -->
+    <string name="delete_history_group_prompt_cancel">റദ്ദാക്കുക</string>
+    <!-- Text for the allow button for the history group dialog -->
+    <string name="delete_history_group_prompt_allow">മായ്ക്കുക</string>
+    <!-- Text for the snackbar confirmation that the history group was deleted -->
+    <string name="delete_history_group_snackbar">കൂട്ടം മായച്ചു</string>
 
     <!-- Onboarding -->
     <!-- text to display in the snackbar once account is signed-in -->
@@ -1516,6 +1549,8 @@
     <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">സ്വകാര്യ ടാബുകളിൽ മാത്രം</string>
     <!-- Preference for enhanced tracking protection for the custom protection settings -->
     <string name="preference_enhanced_tracking_protection_custom_cryptominers">ക്രിപ്റ്റോമൈനേഴ്സ്</string>
+    <!-- Button label for navigating to the Enhanced Tracking Protection details -->
+    <string name="enhanced_tracking_protection_details">വിശദാംശങ്ങള്‍</string>
     <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
     <string name="enhanced_tracking_protection_blocked">തടഞ്ഞവ</string>
     <!-- Header for categories that are being not being blocked by current Enhanced Tracking Protection settings -->
