@@ -2082,6 +2082,8 @@
     <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
     <string name="translation_settings_download_language">ഭാഷാകൾ ഇറക്കിവയ്ക്കുക</string>
 
+    <!-- Preference option for always translate. Radio button title text. -->
+    <string name="automatic_translation_option_always_translate_title_preference">എപ്പോഴും വിവർത്തനം ചെയ്യുക</string>
     <!-- Preference option for never translate. Radio button title text.-->
     <string name="automatic_translation_option_never_translate_title_preference">ഒരിക്കലും വിവർത്തനം ചെയ്യരുതു്</string>
 
@@ -2103,8 +2105,65 @@
     <!-- Download languages preference screen -->
     <!-- Title of the toolbar for the translation feature screen where users may download different languages for translation. -->
     <string name="download_languages_translations_toolbar_title_preference">ഭാഷാകൾ ഇറക്കിവയ്ക്കുക</string>
+    <!-- Clickable text from the screen header that links to a website. -->
+    <string name="download_languages_header_learn_more_preference">കൂടുതല്‍ അറിയുക</string>
+    <!-- The subhead of the download language preference screen will appear above the pivot language. -->
+    <string name="download_languages_available_languages_preference">ലഭ്യമായ ഭാഷകൾ</string>
+    <!-- Text that will appear beside a core or pivot language package name to show that the language is necessary for the translation feature to function. -->
+    <string name="download_languages_default_system_language_require_preference">ആവശ്യമുള്ളതു്</string>
+    <!-- A text for download language preference item.
+    The first parameter is the language name, for example, "Spanish".
+    The second parameter is the language file size, for example, "(3.91 KB)" or, if the language package name is a pivot language, "(required)". -->
+    <string name="download_languages_language_item_preference">%1$s (%2$s)</string>
+    <!-- The subhead of the download language preference screen will appear above the items that were not downloaded. -->
+    <string name="download_language_header_preference">ഭാഷാകൾ ഇറക്കിവയ്ക്കുക</string>
     <!-- All languages list item. When the user presses this item, they can download all languages. -->
     <string name="download_language_all_languages_item_preference">എല്ലാ ഭാഷകൾ</string>
+
+    <!-- All languages list item. When the user presses this item, they can delete all languages that were downloaded. -->
+    <string name="download_language_all_languages_item_preference_to_delete">എല്ലാ ഭാഷാകൾ മായ്ക്കുക</string>
+    <!-- Content description (not visible, for screen readers etc.): For a language list item that was downloaded, the user can now delete it. -->
+    <string name="download_languages_item_content_description_downloaded_state">മായ്ക്കുക</string>
+    <!-- Content description (not visible, for screen readers etc.): For a language list item, deleting is in progress. -->
+    <string name="download_languages_item_content_description_delete_in_progress_state">പുരോഗതിയിൽ</string>
+    <!-- Content description (not visible, for screen readers etc.): For a language list item, downloading is in progress.
+    The first parameter is the language name, for example, "Spanish".
+    The second parameter is the language file size, for example, "(3.91 KB)". -->
+    <string name="download_languages_item_content_description_download_in_progress_state">%1$s (%2$s) ഇറക്കിവയ്ക്കാൻ നിരുത്തുക</string>
+    <!-- Content description (not visible, for screen readers etc.): For a language list item that was not downloaded. -->
+    <string name="download_languages_item_content_description_not_downloaded_state">ഇറക്കിവയ്ക്കുക</string>
+
+    <!-- Title for the dialog used by the translations feature to confirm deleting a language.
+    The dialog will be presented when the user requests deletion of a language.
+    The first parameter is the name of the language, for example, "Spanish" and the second parameter is the size in kilobytes or megabytes of the language file. -->
+    <string name="delete_language_file_dialog_title">%1$s (%2$s) മായ്ക്കണോ?</string>
+    <!-- Title for the dialog used by the translations feature to confirm deleting all languages file.
+    The dialog will be presented when the user requests deletion of all languages file.
+    The first parameter is the size in kilobytes or megabytes of the language file. -->
+    <string name="delete_language_all_languages_file_dialog_title">എല്ലാ ഭാഷാകൾ (%1$s) മായ്ക്കണോ?</string>
+    <!-- Button text on the dialog used by the translations feature to confirm deleting a language. -->
+    <string name="delete_language_file_dialog_positive_button_text">മായ്ക്കുക</string>
+    <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
+    <string name="delete_language_file_dialog_negative_button_text">റദ്ദാക്കുക</string>
+
+    <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
+    <string name="download_language_file_dialog_positive_button_text">ഇറക്കിവയ്ക്കുക</string>
+    <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
+    <string name="download_language_file_dialog_positive_button_text_all_languages">ഇറക്കിവച്ചിട്ടു് വിവർത്തനം ചെയ്യുക</string>
+    <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
+    <string name="download_language_file_dialog_negative_button_text">റദ്ദാക്കുക</string>
+
+    <!-- Unified Trust Panel -->
+    <!-- Title text for the protection panel banner when the site is not secure. -->
+    <string name="protection_panel_banner_not_secure_title">ഈ വെബ്സ്ഥാനത്തിൽ ശ്രദ്ധത്തോളം ഇരിക്കുക</string>
+    <!-- Description text for the protection panel banner when the site is not secure. -->
+    <string name="protection_panel_banner_not_secure_description">താങ്കളുടെ സമ്പർക്കം സുരക്ഷിതമല്ല.</string>
+    <!-- Title text for the protection panel banner when tracking protection is disabled. -->
+    <string name="protection_panel_banner_not_protected_title">താങ്ങൾ പരിരക്ഷകൾ അണച്ചു</string>
+    <!-- Description text for the protection panel banner when tracking protection is enabled. -->
+    <string name="protection_panel_banner_protected_description">താങ്ങൾ സംരക്ഷിക്കപ്പെട്ടിരിക്കുന്നു. ഞങ്ങൾ എന്തെങ്കിലും കണ്ടെത്തിയാൽ താങ്ങളെ അറിയിക്കാം.</string>
+    <!-- Label text for the Enhanced Tracking Protection toggle. -->
+    <string name="protection_panel_etp_toggle_label">മെച്ചപ്പെടുത്തിയ പിന്തുടർച്ച സംരക്ഷണം</string>
 
     <!-- The continue button label -->
     <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">തുടരുക</string>
@@ -2118,6 +2177,9 @@
     <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">ഞാൻ ഫൈയർഫോക്സിൽ തിരയൽ ഉപയോഗിക്കാരില്ല</string>
     <!-- Option for likert scale -->
     <string name="likert_scale_option_8" tools:ignore="UnusedResources">ഞാൻ സമന്വയം ഉപയോഗിക്കാരില്ല</string>
+    <!-- Accessibility -->
+    <!-- Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.  -->
+    <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">ഫയർഫോക്സു് അടയാളം</string>
     <!-- Content description for "X" button that is closing microsurvey. -->
     <string name="microsurvey_close_button_content_description">അടയ്ക്കുക</string>
 
