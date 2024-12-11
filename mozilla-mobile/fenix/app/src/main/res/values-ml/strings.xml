@@ -501,6 +501,8 @@
     <!-- Preference for adding private browsing shortcut -->
     <string name="preferences_add_private_browsing_shortcut">സ്വകാര്യ ബ്രൗസിംഗ് കുറുക്കുവഴി ചേർക്കുക</string>
 
+    <!-- Label for cookie banner section in quick settings panel. -->
+    <string name="cookie_banner_blocker">കുക്കീസു് പൊന്തുവരൽ തടയൽയന്ത്രം</string>
     <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
     <string name="cookie_banner_handling_details_site_is_not_supported_cancel_button">റദ്ദാക്കുക</string>
 
@@ -525,6 +527,8 @@
     <string name="preferences_override_sync_tokenserver">ഇഷ്‌ടാനുസൃത സമന്വയ സെർവർ</string>
     <!-- Preference category for account information -->
     <string name="preferences_category_account">അക്കൗണ്ട്</string>
+    <!-- Preference for changing where the AddressBar is positioned -->
+    <string name="preferences_toolbar_2">വിലാസം പട്ടയുടെ സ്ഥാനം</string>
     <!-- Preference for changing default theme to dark or light mode -->
     <string name="preferences_theme">കെട്ടും മട്ടും</string>
     <!-- Preference for customizing the home screen -->
@@ -777,6 +781,13 @@
     <!-- Dialog button text for canceling open all tabs -->
     <string name="open_all_warning_cancel">റദ്ദാക്കുക</string>
 
+    <!-- Text to show users they have one page in the history group section of the History fragment.
+    %d is a placeholder for the number of pages in the group. -->
+    <string name="history_search_group_site_1">%d താൾ</string>
+    <!-- Text to show users they have multiple pages in the history group section of the History fragment.
+    %d is a placeholder for the number of pages in the group. -->
+    <string name="history_search_group_sites_1">%d താളുകൾ</string>
+
     <!-- Option in library for Recently Closed Tabs -->
     <string name="library_recently_closed_tabs">അടുത്തിടെ അടച്ച റ്റാബുകള്‍</string>
     <!-- Option in library to open Recently Closed Tabs page -->
@@ -840,6 +851,10 @@
     <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
     <string name="opening_screen_after_four_hours_of_inactivity_summary">നാലു മണിക്കൂർ ശേഷം ആമുഖതാളിൽ തുറക്കുക</string>
 
+    <!-- Inactive tabs -->
+    <!-- Category header of a preference that allows a user to enable or disable the inactive tabs feature -->
+    <string name="preferences_inactive_tabs">പഴയ ടാബുകൾ നിഷ്ക്രിയത അറായിലേക്കു് മാറ്റുക</string>
+
     <!-- Studies -->
     <!-- Title of the remove studies button -->
     <string name="studies_remove">മാറ്റുക</string>
@@ -852,18 +867,25 @@
     <!-- Dialog button text for canceling removing a study. -->
     <string name="studies_restart_dialog_cancel">റദ്ദാക്കുക</string>
 
+    <!-- Toast shown after turning on/off studies preferences -->
+    <string name="studies_toast_quit_application" tools:ignore="UnusedResources">മാറ്റങ്ങൾ പ്രാവർത്തികമാക്കാൻ പ്രയോഗത്തിൽ നിന്നും പുറത്തുകടക്കുന്നു…</string>
+
     <!-- Sessions -->
     <!-- Title for the list of tabs -->
     <string name="tab_header_label">തുറന്നിരുന്ന ടാബുകള്‍</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title">സ്വകാര്യ ടാബുകൾ</string>
 
+    <!-- Title for the list of tabs in the synced tabs -->
+    <string name="tabs_header_synced_tabs_title">സമന്വയിപ്പിച്ച ടാബുകള്‍</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">ടാബ് ചേര്‍ക്കുക</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_private_tab">സ്വകാര്യ ടാബ് ചേർക്കുക</string>
     <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
     <string name="tab_drawer_fab_content">സ്വകാര്യം</string>
+    <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
+    <string name="tab_drawer_fab_sync">സമന്വയം</string>
     <!-- Text shown in the menu for sharing all tabs -->
     <string name="tab_tray_menu_item_share">എല്ലാ ടാബുകളും പങ്കിടുക</string>
     <!-- Text shown in the menu to view recently closed tabs -->
@@ -911,6 +933,9 @@
     <!-- Postfix for private WebApp titles, placeholder is replaced with app name -->
     <string name="pwa_site_controls_title_private">%1$s (സ്വകാര്യ രീതി)</string>
 
+    <!-- History -->
+    <!-- Text for the button to search all history -->
+    <string name="history_search_1">തിരയൽ പദങ്ങൾ പറയുക</string>
     <!-- Text for the button to clear all history -->
     <string name="history_delete_all">നാള്‍വഴികൾ ഇല്ലാതാക്കുക</string>
     <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
@@ -937,17 +962,30 @@
     <string name="history_empty_message">ഇവിടെ ചരിത്രമൊന്നുമില്ല</string>
 
 
+    <!-- Downloads -->
+    <!-- Text for the snackbar to confirm that multiple downloads items have been removed -->
+    <string name="download_delete_multiple_items_snackbar_1">ഇറക്കിവയ്ക്കലുകൾ മാറ്റി</string>
     <!-- Text for the snackbar to confirm that a single download item has been removed. The first parameter is the name of the download item. -->
     <string name="download_delete_single_item_snackbar">%1$s മാറ്റി</string>
+    <!-- Text shown when no download exists -->
+    <string name="download_empty_message_1">ഇറക്കിവച്ച ഫയലുകളൊന്നുമില്ല</string>
     <!-- History multi select title in app bar
     The first parameter is the number of downloads selected -->
     <string name="download_multi_select_title">%1$d തിരഞ്ഞെടുത്തിരിക്കുന്നു</string>
 
 
+    <!-- Text for the button to remove a single download item -->
+    <string name="download_delete_item_1">മാറ്റുക</string>
+
+    <!-- WebCompat Reporter -->
+    <!-- The title of the Web Compat Reporter feature. This is displayed in the top app bar. -->
+    <string name="webcompat_reporter_screen_title">പൊട്ടിയ സൈറ്റിന്റെ വിവരം അറിയിക്കുക</string>
     <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
     <string name="webcompat_reporter_label_url">യുആര്‍എല്‍</string>
     <!-- The error message of the URL text field when an invalid URL has been entered. -->
     <string name="webcompat_reporter_url_error_invalid">ശരിയായൊരു യുആര്‍എല്‍ നല്‍കുക</string>
+    <!-- The label/title of an optional field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+    <string name="webcompat_reporter_label_whats_broken">കേഡു് എന്തിനാണു് ഉണ്ടായതു് (ഉത്തരവു് നല്കാൻ ആവശ്യമല്ല)</string>
     <!-- The placeholder text for the dropdown where a user can select a high-level reason why the site is broken. -->
     <string name="webcompat_reporter_choose_reason">കാരണം തിരഞ്ഞെടുക്കുക</string>
     <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
@@ -960,6 +998,8 @@
     <string name="webcompat_reporter_send">അയയ്ക്കുക</string>
 
 
+    <!-- Broken site reason text for images or videos -->
+    <string name="webcompat_reporter_reason_media">ചിത്രങ്ങൾ അല്ലെങ്കിൽ വീഡിയോകൾ</string>
     <!-- Broken site reason text for ad blocker -->
     <string name="webcompat_reporter_reason_ad_blocker">പരസ്യ തടയല്യന്ത്രം</string>
     <!-- Broken site reason text for something else -->
