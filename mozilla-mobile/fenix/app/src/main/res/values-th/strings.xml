@@ -2905,8 +2905,21 @@
     <string name="protection_panel_banner_not_secure_description">การเชื่อมต่อของคุณไม่ปลอดภัย</string>
     <!-- Title text for the protection panel banner when tracking protection is disabled. -->
     <string name="protection_panel_banner_not_protected_title">คุณปิดการป้องกัน</string>
+    <!-- Description text for the protection panel banner when tracking protection is disabled.
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="protection_panel_banner_not_protected_description">%s ไม่ได้ทำงานอยู่ เราขอแนะนำให้เปิดการป้องกันกลับมาใหม่อีกครั้ง</string>
+    <!-- Title text for the protection panel banner when tracking protection is enabled.
+        The first parameter is the name of the app defined in app_name (for example: Fenix) -->
+    <string name="protection_panel_banner_protected_title">%s ทำงานอยู่</string>
+    <!-- Description text for the protection panel banner when tracking protection is enabled. -->
+    <string name="protection_panel_banner_protected_description">คุณได้รับการปกป้อง หากเราพบสิ่งใดเราจะแจ้งให้คุณทราบ</string>
     <!-- Label text for the Enhanced Tracking Protection toggle. -->
     <string name="protection_panel_etp_toggle_label">การป้องกันการติดตามแบบพิเศษ</string>
+
+    <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
+    <string name="protection_panel_etp_toggle_enabled_description">หากมีบางอย่างดูเสียหายในไซต์นี้ ให้ลองปิดการป้องกัน</string>
+    <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
+    <string name="protection_panel_etp_toggle_disabled_description">การป้องกันปิดอยู่ เราขอแนะนำให้เปิดกลับมาใหม่อีกครั้ง</string>
 
     <!-- Debug drawer -->
     <!-- The user-facing title of the Debug Drawer feature. -->
@@ -3025,6 +3038,9 @@
     <!-- The title of the Addresses feature in the Debug Drawer. -->
     <string name="debug_drawer_addresses_title">ที่อยู่</string>
 
+    <!-- The title of the section header for the list of debug locales that can be enabled and disabled. -->
+    <string name="debug_drawer_addresses_debug_locales_header">รูปแบบภาษาดีบั๊กที่ต้องการเปิดใช้งาน</string>
+
     <!-- Debug drawer "contextual feature recommendation" (CFR) tools -->
     <!-- The title of the CFR Tools feature in the Debug Drawer -->
     <string name="debug_drawer_cfr_tools_title">เครื่องมือ CFR</string>
@@ -3051,4 +3067,30 @@
     <!-- These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !-->
     <!-- Homepage card button to open Google Play Store. "Update" is a verb. -->
     <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">อัปเดตตอนนี้</string>
-    </resources>
+    <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
+    <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">อัปเดตเบราว์เซอร์ Firefox ของคุณ</string>
+    <!-- Homepage card message about old Firefox version -->
+    <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">ใบรับรองรากจะหมดอายุ ทำให้คุณลักษณะบางอย่างหยุดทำงานเมื่อถึงวันที่ 14 มีนาคม</string>
+    <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
+    <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">โปรดอัปเดตก่อนวันที่ 14 มีนาคม</string>
+    <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+    <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">ใบรับรองรากจะหมดอายุ ทำให้ Firefox รุ่นของคุณไม่สามารถทำงานอย่างถูกต้อง</string>
+    <!-- Homepage card title about old Firefox version -->
+    <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">เหลือเวลาไม่ถึง 7 วันสำหรับการอัปเดต</string>
+    <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+    <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">เมื่อถึงวันที่ 14 มีนาคม ส่วนเสริมและคุณลักษณะ Firefox อื่นๆ จะหยุดทำงานเนื่องจากใบรับรองรากจะหมดอายุ</string>
+    <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+    <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">โอกาสสุดท้ายที่จะรักษา Firefox ของคุณไว้</string>
+    <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+    <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Firefox รุ่นของคุณจะไม่สามารถทำงานอย่างถูกต้องเมื่อถึงวันที่ 14 มีนาคมเนื่องจากใบรับรองรากจะหมดอายุ</string>
+    <!-- Push notification title about old Firefox version. "Update" is a noun. -->
+    <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">อัปเดตที่แนะนำ</string>
+    <!-- Push notification message about old Firefox version -->
+    <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">ส่วนเสริมและคุณลักษณะบางอย่างจะหยุดทำงานเมื่อถึงวันที่ 14 มีนาคม</string>
+    <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+    <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">คุณใช้ Firefox รุ่นเก่ากว่า</string>
+    <!-- Push notification message about old Firefox version. "Update" is a verb. -->
+    <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">อัปเดตก่อนวันที่ 14 มีนาคมเพื่อใช้งานส่วนเสริมและคุณลักษณะอื่นๆ ต่อไป</string>
+    <!-- Push notification message about old Firefox version -->
+    <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">คุณลักษณะบางอย่างจะหยุดทำงานในวันพรุ่งนี้</string>
+</resources>
