@@ -13,6 +13,8 @@
     <string name="content_description_private_browsing_button">Aktivigi privatan retumon</string>
     <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
     <string name="content_description_disable_private_browsing_button">Malaktivigi privatan retumon</string>
+    <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+    <string name="content_description_private_browsing">Privata retumo</string>
     <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
     <string name="search_hint">Serĉo aŭ adreso</string>
     <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -92,12 +94,6 @@
     <!-- Text for the negative action button -->
     <string name="open_in_app_cfr_negative_button_text">Ignori</string>
 
-    <!-- Total cookie protection "contextual feature recommendation" (CFR) -->
-    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the total cookie protection feature. -->
-    <string name="tcp_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Nia ĝisnune plej pova privateca trajto izolas interretejajn spurilojn.</string>
-    <!-- Text displayed that links to website containing documentation about the "Total cookie protection" feature. -->
-    <string name="tcp_cfr_learn_more" moz:removedIn="132" tools:ignore="UnusedResources">Pli da informo pri totalan protekto kontraŭ kuketoj</string>
-
     <!-- Private browsing erase action "contextual feature recommendation" (CFR) -->
     <!-- Text for the message displayed in the contextual feature recommendation popup promoting the erase private browsing feature. -->
     <string name="erase_action_cfr_message">Tuŝetu ĉi tie por komenci novan freŝan privatan seancon. Forigu vian historion, kuketojn — ĉion.</string>
@@ -111,11 +107,11 @@
     <!-- Text for the message displayed for the popup promoting the long press of navigation in the navigation bar. -->
     <string name="navbar_navigation_buttons_cfr_message">Longe premu la sagojn por salti inter paĝoj en la historio de tiu ĉi langeto.</string>
 
-    <!-- Tablet navigation bar "contextual feature recommendation" (CFR) -->
-    <!-- Text for the title displayed in the contextual feature recommendation popup promoting the tablet navigation bar. -->
-    <string name="tablet_nav_bar_cfr_title" moz:removedIn="132" tools:ignore="UnusedResources">Nova: unutuŝaj sagetoj antaŭen kaj malantaŭen</string>
-    <!-- Text for the message displayed in the contextual feature recommendation popup promoting the tablet navigation bar. -->
-    <string name="tablet_nav_bar_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Ĝuu pli rapidan retumon, ĉiam ĉemane.</string>
+    <!-- Address bar swipe "contextual feature recommendation" (CFR) -->
+    <!-- Text for the title displayed in the contextual feature recommendation popup promoting swipe of address bar. -->
+    <string name="address_bar_swipe_cfr_title">Ŝovu la ilaron por ŝanĝi langetojn</string>
+    <!-- Text for the message displayed in the contextual feature recommendation popup promoting swipe of address bar. -->
+    <string name="address_bar_swipe_cfr_message">Ŝovu maldekstren aŭ dekstren por ŝanĝi. Ŝovu maldekstren en vi lasta langeto por malfermi novan langeton.</string>
 
     <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
     <string name="camera_permissions_needed_message">Aliro al la fimilo postulata. Iru al agordoj de Android, tuŝetu Permesojn kaj poste Permesi.</string>
@@ -221,6 +217,8 @@
     <string name="browser_menu_discover_more_extensions">Malkovri pli da etendaĵoj</string>
     <!-- Browser menu description that is shown when one or more extensions are disabled due to extension errors -->
     <string name="browser_menu_extensions_disabled_description">Provizore malaktiva</string>
+    <!-- The description of the browser menu appears when the user hasn't installed any extensions. -->
+    <string name="browser_menu_no_extensions_installed_description">Neniu aktiva etendaĵo</string>
     <!-- Browser menu button that opens account settings -->
     <string name="browser_menu_account_settings">Informoj pri konto</string>
     <!-- Browser menu button that sends a user to help articles -->
@@ -237,8 +235,12 @@
     <string name="browser_menu_open_in_regular_tab">Malfermi en normala langeto</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen">Aldoni al hejmekrano</string>
+    <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+    <string name="browser_menu_add_app_to_homescreen">Aldoni apon al la hejmekrano</string>
     <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
     <string name="browser_menu_add_to_homescreen_2">Aldoni al hejmekrano…</string>
+    <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+    <string name="browser_menu_add_app_to_homescreen_2">Aldoni apon al la hejmekrano…</string>
     <!-- Text for notifying users that Xiaomi devices require additional permissions to add to home screen -->
     <string name="browser_menu_add_to_homescreen_xiaomi">La aparatoj de Xiami povus peti kromajn permesojn por aldoni ŝparvojojn al la hejmekrano. Bonvolu kontroli viajn agordojn.</string>
     <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
@@ -311,6 +313,10 @@
     <string name="browser_menu_back_button_content_description">Reen al ĉefa menuo</string>
     <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar main menu. -->
     <string name="browser_main_menu_handlebar_content_description">Fermi ĉefan menuon</string>
+    <!-- Content description (not visible, for screen readers etc.) for main menu help button. -->
+    <string name="browser_main_menu_content_description_help_button">Helpo</string>
+    <!-- Content description (not visible, for screen readers etc.) for main menu settings button. -->
+    <string name="browser_main_menu_content_description_settings_button">Agordoj</string>
     <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar extensions menu. -->
     <string name="browser_extensions_menu_handlebar_content_description">Fermi menuon de etendaĵoj</string>
     <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar save menu. -->
@@ -320,9 +326,23 @@
     <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
     <string name="browser_custom_tab_menu_handlebar_content_description">Fermi menuon de personecigo de langetoj</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description_with_translate">Lega vido, traduki, presi, dividi, malfermi apon</string>
+    <string name="browser_menu_tools_description_with_translate" moz:removedIn="134" tools:ignore="UnusedResources">Lega vido, traduki, presi, dividi, malfermi apon</string>
     <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
-    <string name="browser_menu_tools_description">Lega vido, presi, dividi, malfermi apon</string>
+    <string name="browser_menu_tools_description" moz:removedIn="134" tools:ignore="UnusedResources">Lega vido, presi, dividi, malfermi apon</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_translate_with_report_site" moz:removedIn="135" tools:ignore="UnusedResources">Lega vido, traduki, %s, presi, dividi, malfermi apon</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu when the "Report broken site" feature is available-->
+    <string name="browser_menu_tools_description_with_translate_with_report_site_2">Lega vido, traduki, raporti misfunkciantan retejon, presi, dividi, malfermi apon</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_with_translate_without_report_site">Lega vido, traduki, presi, dividi, malfermi apon</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu
+         The first parameter is the label of the report site issue (for example: Report Site issue) -->
+    <string name="browser_menu_tools_description_with_report_site" moz:removedIn="135" tools:ignore="UnusedResources">Lega vido, %s, presi, dividi, malfermi apon</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu when the "Report broken site" feature is available-->
+    <string name="browser_menu_tools_description_with_report_site_2">Lega vido, raporti misfunkciantan retejon, presi, dividi, malfermi apon</string>
+    <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+    <string name="browser_menu_tools_description_without_report_site">Lega vido, presi, dividi, malfermi apon</string>
     <!-- Browser menu label that navigates to the save sub-menu, which contains various save related menu items such as
          bookmarking a page, saving to collection, shortcut or as a PDF, and adding to home screen -->
     <string name="browser_menu_save">Konservi</string>
@@ -341,6 +361,8 @@
     <string name="browser_menu_turn_off_reader_view">Malŝalti legilan vidon</string>
     <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
     <string name="browser_menu_translate_page">Traduki paĝon…</string>
+    <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
+    <string name="browser_menu_webcompat_reporter">Raporti misfunkciantan retejon…</string>
     <!-- Browser menu label that is displayed when the current page has been translated by the translation feature.
          The first parameter is the name of the language that page was translated to (e.g. English). -->
     <string name="browser_menu_translated_to">Tradukita en la %1$sn</string>
@@ -415,11 +437,13 @@
     <string name="search_header_menu_item_2">Ĉi foje serĉi:</string>
 
     <!-- Content description (not visible, for screen readers etc.): Search engine icon. The first parameter is the search engine name (for example: DuckDuckGo). -->
-    <string name="search_engine_icon_content_description">Serĉilo: %s</string>
+    <string name="search_engine_icon_content_description" tools:ignore="UnusedResources" moz:removedIn="133">Serĉilo: %s</string>
+
+    <!-- Content description (not visible, for screen readers etc.): Search engine icon.
+    The parameter is the search engine name (for example: DuckDuckGo). -->
+    <string name="search_engine_icon_content_description_1">Serĉilo: %s</string>
 
     <!-- Home onboarding -->
-    <!-- Onboarding home screen popup dialog, shown on top of the Jump back in section. -->
-    <string name="onboarding_home_screen_jump_back_contextual_hint_2" moz:removedIn="132">Malkovru vian personecigitan ekan paĝon. Ĵusaj langetoj, legosignoj, kaj serĉaj rezultoj aperos ĉi tie.</string>
     <!-- Home onboarding dialog welcome screen title text. -->
     <string name="onboarding_home_welcome_title_2">Bonvenon al pli persona interreto</string>
     <!-- Home onboarding dialog welcome screen description text. -->
@@ -502,9 +526,9 @@
     <!-- Onboarding add-ons card, button for start browsing, used by Nimbus experiments. -->
     <string name="onboarding_add_on_start_browsing_button" tools:ignore="UnusedResources" moz:removedIn="133">Komenci retumi.</string>
     <!-- Onboarding add-ons card, for checking more add-ons on, used by Nimbus experiments. -->
-    <string name="onboarding_add_on_explore_more_extensions_2" tools:ignore="UnusedResources">Esplori pli da etendaĵoj</string>
+    <string name="onboarding_add_on_explore_more_extensions_2">Esplori pli da etendaĵoj</string>
     <!-- Onboarding add-ons card, button for start browsing, used by Nimbus experiments. -->
-    <string name="onboarding_add_on_start_browsing_button_2" tools:ignore="UnusedResources">Komenci retumi</string>
+    <string name="onboarding_add_on_start_browsing_button_2">Komenci retumi</string>
     <!-- Ublock name for the onboarding add-ons card, used by Nimbus experiments. Note: The word "Ublock Origin" is a brand name should NOT be translated -->
     <string name="onboarding_add_on_ublock_name" tools:ignore="UnusedResources">uBlock Origin</string>
 
@@ -522,6 +546,23 @@
     <string name="onboarding_add_on_dark_reader_name" tools:ignore="UnusedResources">Dark Reader</string>
     <!-- Privacy Badger description for the onboarding add-ons card, used by Nimbus experiments. -->
     <string name="onboarding_add_on_dark_reader_description" tools:ignore="UnusedResources">Personecigita malhela reĝimo por retumi en poŝaparatoj.</string>
+
+    <!-- Label for the number of reviews for an add-on. The parameter is for the formatted number of reviews e.g. "1,234", "12,345", "123,456". -->
+    <string name="onboarding_add_on_reviews_label">Revizioj: %1$s</string>
+    <!-- Content description for the add-on icon. -->
+    <string name="onboarding_add_on_icon_content_description">Emblemo por aldonaĵo</string>
+    <!-- Content description for the an installed add-on icon. -->
+    <string name="onboarding_installed_add_on_icon_content_description">Emblemo por instalita aldonaĵo</string>
+    <!-- Content description for the an installing add-on icon. -->
+    <string name="onboarding_installing_add_on_icon_content_description">Emblemo por instalata aldonaĵo</string>
+    <!-- Content description for the add add-on button. -->
+    <string name="onboarding_add_on_add_button_content_description">Aldoni butonon por aldonaĵoj</string>
+    <!-- Content description for the star rating group. -->
+    <string name="onboarding_add_on_star_rating_content_description">Takso: %1$s el 5</string>
+    <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
+    <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage,UnusedResources">Helpu nin plibonigi Firefox</string>
+    <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+    <string name="onboarding_preferences_dialog_crash_reporting_title" tools:ignore="UnusedResources">Aŭtomate sendi raportojn pri paneoj</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -921,13 +962,13 @@
     <string name="exceptions_empty_message_learn_more_link">Pli da informo</string>
 
     <!-- Preference switch for usage and technical data collection -->
-    <string name="preference_usage_data">Uzo kaj teknikaj datumoj</string>
+    <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">Uzo kaj teknikaj datumoj</string>
     <!-- Preference description for usage and technical data collection -->
     <string name="preferences_usage_data_description">Divido kun Mozilla de retumilaj datumoj pri efikeco, uzo, aparataro kaj personecigoj, por helpi nin plibonigi %1$s.</string>
     <!-- Preference switch for marketing data collection -->
     <string name="preferences_marketing_data">Merkatikaj datumoj</string>
     <!-- Preference description for marketing data collection -->
-    <string name="preferences_marketing_data_description2">Divido de informoj kun Adjust, nia provizanto de marketiko poŝaparata</string>
+    <string name="preferences_marketing_data_description2" moz:removedIn="134" tools:ignore="UnusedResources">Divido de informoj kun Adjust, nia provizanto de marketiko poŝaparata</string>
     <!-- Preference switch title for automatically submitting crash reports -->
     <string name="preferences_automatically_submit_crashes_title">Aŭtomate sendi raportojn pri paneoj</string>
     <!-- Preference switch description for automatically submitting crash reports -->
@@ -1245,8 +1286,6 @@
     <string name="bookmark_delete_negative">Nuligi</string>
     <!-- Screen title for adding a bookmarks folder -->
     <string name="bookmark_add_folder">Aldoni dosierujon</string>
-    <!-- Snackbar title shown after a bookmark has been created. -->
-    <string name="bookmark_saved_snackbar">Legosigno konservita!</string>
     <!-- Snackbar title that confirms a bookmark was saved into a folder. Parameter will be replaced by the name of the folder the bookmark was saved into. -->
     <string name="bookmark_saved_in_folder_snackbar">Konservita en “%s”</string>
     <!-- Snackbar edit button shown after a bookmark has been created. -->
@@ -1314,7 +1353,7 @@
     <!-- Bookmark snackbar message for deleting a single item. Parameter is the title of the item being deleted -->
     <string name="bookmark_delete_single_item">%s forigita</string>
     <!-- Bookmark snackbar message for deleting multiple items. Parameter is the number of items being deleted -->
-    <string name="bookmark_delete_multiple_items" tools:ignore="UnusedResources">Forigitaj elementoj: %s</string>
+    <string name="bookmark_delete_multiple_items">Forigitaj elementoj: %s</string>
     <!-- Text for the button to search all bookmarks -->
     <string name="bookmark_search">Tajpu serĉan tekston</string>
 
@@ -1339,7 +1378,7 @@
     <string name="bookmark_empty_list_folder_description">Aldonu legosignojn dum vi retumas, tiel ke vi povos pli rapide retrovi viajn ŝatatajn retejojn.</string>
 
     <!-- Description for the add new folder button when selecting a folder. -->
-    <string name="bookmark_select_folder_new_folder_button_title" tools:ignore="UnusedResources">Nova dosierujo</string>
+    <string name="bookmark_select_folder_new_folder_button_title">Nova dosierujo</string>
 
     <!-- Site Permissions -->
     <!-- Button label that take the user to the Android App setting -->
@@ -1591,10 +1630,8 @@
     <string name="snackbar_tabs_closed">Langetoj fermitaj</string>
     <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
     <string name="snackbar_num_tabs_closed">Fermitaj langetoj: %1$s</string>
-    <!-- Text shown in snackbar when user bookmarks a list of tabs -->
-    <string name="snackbar_message_bookmarks_saved">Legosignoj fermitaj!</string>
     <!-- Text shown in snackbar when user bookmarks a list of tabs. Parameter will be replaced by the name of the folder the bookmark was saved into.-->
-    <string name="snackbar_message_bookmarks_saved_in" tools:ignore="UnusedResources">Legosignoj konservitaj en “%s”!</string>
+    <string name="snackbar_message_bookmarks_saved_in">Legosignoj konservitaj en “%s”!</string>
     <!-- Text shown in snackbar when user adds a site to shortcuts -->
     <string name="snackbar_added_to_shortcuts">Aldonita al ŝparvojoj!</string>
     <!-- Text shown in snackbar when user closes a private tab -->
@@ -2505,14 +2542,6 @@
     <string name="review_quality_check_contextual_onboarding_primary_button_text">Jes, provi ĝin</string>
     <!-- Text for opt-out button from the review quality check contextual onboarding card. -->
     <string name="review_quality_check_contextual_onboarding_secondary_button_text">Ne nun</string>
-    <!-- Text for the first CFR presenting the review quality check feature. -->
-    <string name="review_quality_check_first_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Kontrolu ĉu vi povas fidi la recenzojn de tiu ĉi produkto — antaŭ ol aĉeti.</string>
-    <!-- Text displayed in the first CFR presenting the review quality check feature that opens the review checker when clicked. -->
-    <string name="review_quality_check_first_cfr_action" moz:removedIn="132" tools:ignore="UnusedResources">Provi la kontrolilon de recenzoj</string>
-    <!-- Text for the second CFR presenting the review quality check feature. -->
-    <string name="review_quality_check_second_cfr_message" moz:removedIn="132" tools:ignore="UnusedResources">Ĉu tiuj recenzoj estas fidindaj? Kontrolu nun por vidi alĝustigitan taksadon.</string>
-    <!-- Text displayed in the second CFR presenting the review quality check feature that opens the review checker when clicked. -->
-    <string name="review_quality_check_second_cfr_action" moz:removedIn="132" tools:ignore="UnusedResources">Malfermi la kontrolilon de recenzoj</string>
     <!-- Content description (not visible, for screen readers etc.) for opening browser menu button to open review quality check bottom sheet. -->
     <string name="review_quality_check_open_handle_content_description">Malfermi la kontrolilon de recenzoj</string>
     <!-- Content description (not visible, for screen readers etc.) for closing browser menu button to open review quality check bottom sheet. -->
@@ -2900,12 +2929,6 @@
     <string name="glean_debug_tools_title">Senerarigaj iloj de Glean</string>
 
     <!-- Messages explaining how to exit fullscreen mode -->
-    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled -->
-    <string name="exit_fullscreen_with_gesture" moz:removedIn="132" tools:ignore="UnusedResources">Por eliri el la plenekrana reĝimo, trenu el supre kaj uzu la geston por iri malantaŭen</string>
-
-    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation -->
-    <string name="exit_fullscreen_with_back_button" moz:removedIn="132" tools:ignore="UnusedResources">Por eliri el la plenekrana reiĝmon, trenu el supre kaj premu la butonon &quot;reen&quot;</string>
-
     <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
     <!-- Localisation note: this text should be as short as possible, max 68 chars -->
     <string name="exit_fullscreen_with_gesture_short">Trenu el supre kaj uzu la geston malantaŭen por eliri</string>
@@ -2916,4 +2939,5 @@
     <!-- Beta Label Component !-->
     <!-- Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element. -->
     <string name="beta_feature">BETA</string>
-</resources>
+
+    </resources>
