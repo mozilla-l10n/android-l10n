@@ -956,6 +956,8 @@
     <!-- Account Preferences -->
     <!-- Preference for managing your account via accounts.firefox.com -->
     <string name="preferences_manage_account">مدیریت حساب</string>
+    <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
+    <string name="preferences_manage_account_summary">گذرواژه خود را تغییر دهید، جمع‌آوری داده‌ها را مدیریت کنید یا حساب خود را حذف کنید</string>
     <!-- Preference for triggering sync -->
     <string name="preferences_sync_now">هم اکنون همگام سازی کن</string>
     <!-- Preference category for sync -->
@@ -1005,6 +1007,11 @@
     <!-- %s is the device name -->
     <string name="fxa_tab_received_from_notification_name">زبانه از %s</string>
 
+    <!-- Close Synced Tabs -->
+    <!-- The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.  -->
+    <string name="fxa_tabs_closed_notification_title">%1$s زبانه بسته شدند: %2$d</string>
     <!-- The body for a "closed synced tabs" notification. -->
     <string name="fxa_tabs_closed_text">نمایش زبانه‌های تازه بسته شده</string>
 
@@ -1020,6 +1027,8 @@
 
     <!-- Preference switch for usage and technical data collection -->
     <string name="preference_usage_data" moz:removedIn="134" tools:ignore="UnusedResources">میزان استفاده و داده فنی</string>
+    <!-- Preference switch for usage and technical data collection -->
+    <string name="preference_usage_data_1">داده‌های فنی و تعاملی</string>
     <!-- Preference switch for usage and technical learn more link -->
     <string name="preference_usage_data_learn_more" tools:ignore="UnusedResources">بیشتر بدانید</string>
     <!-- Preference description for usage and technical data collection -->
@@ -1028,6 +1037,14 @@
     <string name="preferences_marketing_data">ارزیابی داده</string>
     <!-- Preference description for marketing data collection -->
     <string name="preferences_marketing_data_description2" moz:removedIn="134" tools:ignore="UnusedResources">داده‌های کاربردی اولیه را با Adjust، فراهم‌کنندهٔ بازریابی سیستم موبایل ما، اشتراک بگذارید</string>
+    <!-- Preference description for marketing data collection. Note: The words "Firefox" and "Mozilla" should NOT be translated -->
+    <string name="preferences_marketing_data_description_3" tools:ignore="BrandUsage">اطلاعاتی را درباره نحوه آشنایی شما با Firefox با همکاران بازاریابی Mozilla به هم‌رسانی بگذارید. این به ما کمک می‌کند تا Firefox را رشد دهیم و یک اینترنت بهتر بسازیم</string>
+    <!-- Learn more link for marketing data preference -->
+    <string name="preferences_marketing_data_learn_more">بیشتر درباره داده‌های بازاریابی بدانید</string>
+    <!-- Preference switch title for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_title">به‌طور خودکار گزارشات خرابی را ارسال کنید</string>
+    <!-- Preference switch description for automatically submitting crash reports -->
+    <string name="preferences_automatically_submit_crashes_description">به‌طور خودکار داده‌های خرابی را در زمان راه‌اندازی پس از وقوع خرابی‌ها با Mozilla به هم‌رسانی می‌گذارد</string>
     <!-- Title for studies preferences -->
     <string name="preference_experiments_2">مطالعات</string>
     <!-- Summary for studies preferences -->
@@ -1068,6 +1085,11 @@
     <string name="preference_gestures_dynamic_toolbar">برای پنهان‌ کردن نوار ابزار پیمایش کنید</string>
     <!-- Preference for showing the opened tabs by swiping up on the toolbar-->
     <string name="preference_gestures_swipe_toolbar_show_tabs">برای باز کردن زبانه‌ها، نوار ابزار را به سمت بالا بکشید</string>
+
+    <!-- Preference for using the dynamic toolbars -->
+    <string name="preference_gestures_dynamic_toolbar_2">برای پنهان کردن نوار نشانی و نوار ابزار، اسکرول کنید</string>
+    <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
+    <string name="preference_gestures_swipe_toolbar_switch_tabs_2">نوار نشانی را به طرفین بکشید تا زبانه‌ها را عوض کنید</string>
 
     <!-- Library -->
     <!-- Option in Library to open Downloads page -->
@@ -1309,16 +1331,33 @@
     <string name="webcompat_reporter_screen_title">گزارش خرابی وبگاه</string>
 
 
+    <!-- The description of the Web Compat Reporter feature. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="webcompat_reporter_description">به بهتر شدن %1$s برای همه کمک کنید. کارکنان Mozilla از اطلاعاتی که ارسال می‌کنید برای رفع مشکلات وبگاه استفاده می‌کنند.</string>
     <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
     <string name="webcompat_reporter_label_url">نشانی اینترنتی</string>
     <!-- The error message of the URL text field when an invalid URL has been entered. -->
     <string name="webcompat_reporter_url_error_invalid">لطفا یک نشانی اینترنتی معتبر وارد کنید</string>
+    <!-- The label/title of an optional field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+    <string name="webcompat_reporter_label_whats_broken">چه چیزی خراب است؟ (اختیاری)</string>
+    <!-- The placeholder text for the dropdown where a user can select a high-level reason why the site is broken. -->
+    <string name="webcompat_reporter_choose_reason">انتخاب دلیل</string>
+    <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
+    <string name="webcompat_reporter_label_description">مشکل را شرح دهید (اختیاری)</string>
+    <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
+    <string name="webcompat_reporter_send_more_info">ارسال اطلاعات بیشتر</string>
     <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
     <string name="webcompat_reporter_cancel">انصراف</string>
     <!-- The button text for the send button to submit the provided form data. -->
     <string name="webcompat_reporter_send">ارسال</string>
 
 
+    <!-- These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site. -->
+    <!-- Broken site reason text for site slow or not working -->
+    <string name="webcompat_reporter_reason_slow">وبگاه کند است یا کار نمی‌کند</string>
+    <!-- Broken site reason text for images or videos -->
+    <string name="webcompat_reporter_reason_media">تصاویر یا ویدیوها</string>
+    <!-- Broken site reason text for buttons, links, and other content -->
+    <string name="webcompat_reporter_reason_content">دکمه‌ها، پیوندها و محتوای دیگر</string>
     <!-- Broken site reason text for something else -->
     <string name="webcompat_reporter_reason_other">موارد دیگر</string>
 
