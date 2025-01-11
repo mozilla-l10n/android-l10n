@@ -444,6 +444,11 @@
     The parameter is the search engine name (for example: DuckDuckGo). -->
     <string name="search_engine_icon_content_description_1">საძიებო სისტემა: %s</string>
 
+    <!-- Content description (not visible, for screen readers etc.) of the search engine selector from the search toolbar.
+    The parameter is the search engine name (for example: DuckDuckGo).
+    The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button. -->
+    <string name="search_engine_selector_content_description">%s: საძიებო სისტემის ამრჩევი</string>
+
     <!-- Home onboarding -->
     <!-- Home onboarding dialog welcome screen title text. -->
     <string name="onboarding_home_welcome_title_2">კეთილი იყოს თქვენი ფეხი მეტად პირად ინტერნეტსივრცეში</string>
@@ -613,6 +618,9 @@
     <string name="onboarding_customize_toolbar_placement_bottom_content_description">ქვემოთ ხელსაწყოთა ზოლის გამოსახულება</string>
     <string name="onboarding_customize_toolbar_placement_top_content_description">ზემოთ ხელსაწყოთა ზოლის გამოსახულება</string>
 
+    <!-- Onboarding toolbar selection card label for 'Not now' button, used by Nimbus experiments. -->
+    <string name="onboarding_customize_toolbar_not_now_button">ახლა არა</string>
+
     <!-- Onboarding header for the theme selection card, used by Nimbus experiments. -->
     <string name="onboarding_customize_theme_title" tools:ignore="UnusedResources">გაფორმების შერჩევა</string>
     <!-- Onboarding sub header for theme selection card, used by Nimbus experiments. -->
@@ -631,6 +639,9 @@
     <string name="onboarding_customize_theme_main_image_content_description">თავსართად დიდი სურათი გაფორმების ასარჩევად, რომელზეც გამოსახულია ხელოვანი და ხელსაწყოები.</string>
     <!-- Onboarding theme selection card content description for the theme selection image. %1$s is placeholder for either 'system', 'light' or 'dark'. -->
     <string name="onboarding_customize_theme_content_description">%1$s გაფორმების გამოსახულება</string>
+
+    <!-- Onboarding theme selection card label for 'Not now' button, used by Nimbus experiments. -->
+    <string name="onboarding_customize_theme_not_now_button">ახლა არა</string>
 
     <!-- Search Widget -->
     <!-- Content description for searching with a widget. The first parameter is the name of the application.-->
@@ -1227,8 +1238,14 @@
     <string name="tab_header_label" moz:removedIn="135" tools:ignore="UnusedResources">გახსნილი ჩანართები</string>
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title" moz:removedIn="136" tools:ignore="UnusedResources">პირადი ჩანართები</string>
+    <!-- Title for the list of tabs in the current private session used by a11y services
+    The %1$s will be replaced by the number of opened private tabs -->
+    <string name="tabs_header_private_tabs_counter_title">გახსნილი პირადი ჩანართი: %1$s. შეეხეთ გადასაცვლელად.</string>
     <!-- Title for the list of tabs in the synced tabs -->
     <string name="tabs_header_synced_tabs_title" moz:removedIn="136" tools:ignore="UnusedResources">დასინქ. ჩანართები</string>
+    <!-- Title for the list of tabs in the synced tabs used by a11y services
+    The %1$s will be replaced by the number of opened synced tabs -->
+    <string name="tabs_header_synced_tabs_counter_title">გახსნილი დასინქ. ჩანართი: %1$s. შეეხეთ გადასაცვლელად.</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
     <string name="add_tab">ჩანართის დამატება</string>
     <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1355,6 +1372,11 @@
     <!-- The button text for the send button to submit the provided form data. -->
     <string name="webcompat_reporter_send">გაგზავნა</string>
 
+
+    <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
+    <string name="webcompat_reporter_success_snackbar_text">თქვენი მოხსენება გაიგზავნა</string>
+    <!-- Button text for closing or dismissing the snackbar shown after successfully submitting a WebCompat report. -->
+    <string name="webcompat_reporter_dismiss_success_snackbar_text">დახურვა</string>
 
     <!-- These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site. -->
     <!-- Broken site reason text for site slow or not working -->
