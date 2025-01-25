@@ -839,6 +839,9 @@
     <!-- The title of the origin permission option allowing a user to enable the extension to run on all sites -->
     <string name="addons_permissions_allow_for_all_sites" tools:ignore="UnusedResources">എല്ല വെബ്സ്ഥാനങ്ങൾക്കു് അനുവദിക്കുക</string>
 
+    <!-- The text shown when an extension does not require permissions -->
+    <string name="addons_does_not_require_permissions">ഈ വിപുലീകരണത്തിനു് അനുമതികളുടെ അവിശ്യമില്ല.</string>
+
     <!-- Add-on Preferences -->
     <!-- Preference to customize the configured AMO (addons.mozilla.org) collection -->
     <string name="preferences_customize_extension_collection">ഇഷ്ടനുസൃത വിപുലീകരണ ശേഖരം</string>
@@ -887,6 +890,8 @@
     <!-- Text displayed that links to website containing documentation about the "Limited Edition" wallpapers. -->
     <string name="wallpaper_learn_more">കൂടുതലറിയുക</string>
 
+    <!-- Text for classic wallpapers title. The first parameter is the Firefox name. -->
+    <string name="wallpaper_classic_title">ക്ലാസിക് %s</string>
     <!-- Wallpaper onboarding dialog header text. -->
     <string name="wallpapers_onboarding_dialog_title_text">നിറത്തിന്റെ നീർത്തെറിപ്പ് ഉരച്ചുനോക്കുക</string>
     <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
@@ -994,6 +999,8 @@
     <!-- Learn more link for marketing data preference -->
     <string name="preferences_marketing_data_learn_more">വില്പനദത്തയെ കുറിച്ചു് കൂടുതൽ അറിയുക</string>
 
+    <!-- Preference switch title for automatically submitting crash reports -->
+    <string name="preferences_automatically_send_crashes_title">തകർച്ച വിവരങ്ങൾ തന്നെതാന്നെ അയയ്ക്കുക</string>
     <string name="preferences_automatically_submit_crashes_title" moz:removedIn="136" tools:ignore="UnusedResources">തകർച്ച വിവരങ്ങൾ തന്നെതാന്നെ അയയ്ക്കുക</string>
 
     <string name="preferences_automatically_submit_crashes_description" moz:removedIn="136" tools:ignore="UnusedResources">തകർച്ച സംഭവിച്ചു് ശേഷം വീണ്ടും പ്രയോഗം തുടങ്ങുമ്പോഴു് തകർച്ചദത്ത തന്നെതാനെ മോസ്സില്ലയ്ക്കു് പങ്കിടുന്നു</string>
@@ -1181,6 +1188,9 @@
     <!-- Title for the list of tabs in the current private session -->
     <string name="tabs_header_private_tabs_title" moz:removedIn="136" tools:ignore="UnusedResources">സ്വകാര്യ ടാബുകൾ</string>
 
+    <!-- Title for the list of tabs in the current private session used by a11y services
+    The %1$s will be replaced by the number of opened private tabs -->
+    <string name="tabs_header_private_tabs_counter_title">തുറന്നിരിപ്പുണ്ട സ്വകാര്യ ടാബുകൾ: %1$s. ടാബുമാറാൻ അമൎത്തുക.</string>
     <!-- Title for the list of tabs in the synced tabs -->
     <string name="tabs_header_synced_tabs_title" moz:removedIn="136" tools:ignore="UnusedResources">സമന്വയിപ്പിച്ച ടാബുകള്‍</string>
     <!-- Title for the list of tabs in the synced tabs used by a11y services
@@ -1288,14 +1298,20 @@
     <!-- WebCompat Reporter -->
     <!-- The title of the Web Compat Reporter feature. This is displayed in the top app bar. -->
     <string name="webcompat_reporter_screen_title">പൊട്ടിയ സൈറ്റിന്റെ വിവരം അറിയിക്കുക</string>
+    <!-- The description of the Web Compat Reporter feature. This first parameter is the name of the application (For example: Fenix) -->
+    <string name="webcompat_reporter_description">എല്ലാവൎക്കുമായി %1$s-നെ മെച്ചപ്പെടുത്താൻ സഹായിക്കുക. മോസില്ല ഉദ്യോഗസ്ഥന്മാർ താങ്ങൾ അയയ്ക്കുന്ന വിവരങ്ങൾ വെബ്സ്ഥാനക്കുഴപ്പങ്ങളെ പരിഹരിക്കാൻ ഉപയോഗിക്കുന്നു.</string>
     <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
     <string name="webcompat_reporter_label_url">യുആര്‍എല്‍</string>
     <!-- The error message of the URL text field when an invalid URL has been entered. -->
     <string name="webcompat_reporter_url_error_invalid">ശരിയായൊരു യുആര്‍എല്‍ നല്‍കുക</string>
     <!-- The label/title of an optional field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
     <string name="webcompat_reporter_label_whats_broken" moz:removedIn="136" tools:ignore="UnusedResources">കേഡു് എന്തിനാണു് ഉണ്ടായതു് (ഉത്തരവു് നല്കാൻ ആവശ്യമല്ല)</string>
+    <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+    <string name="webcompat_reporter_label_whats_broken_2">എന്താണു് തകൎന്നപോയതു്?</string>
     <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
     <string name="webcompat_reporter_choose_reason">കാരണം തിരഞ്ഞെടുക്കുക</string>
+    <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
+    <string name="webcompat_reporter_choose_reason_error">ഒരു കാരണം തിരഞ്ഞെടുക്കുക</string>
     <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
     <string name="webcompat_reporter_label_description">പ്രശ്നം വിവരിക്കുക (ഇതു് നല്കാൻ ആവശ്യമല്ല)</string>
     <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
@@ -1673,6 +1689,10 @@
     <!-- Title B shown in the notification that pops up to re-engage the user -->
     <string name="notification_re_engagement_B_title">താങ്ങളുടെ ആദ്യ തിരയൽ ആരംഭിക്കുക</string>
 
+    <!-- Survey -->
+    <!-- Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments -->
+    <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">ഒരു ചെറിയ കണക്കെടുപ്പിൽ പങ്കെടുത്തിട്ടു് ഫയൎഫോക്സിനെ മികച്ചതാക്കാൻ സഹായിക്കുക.</string>
     <!-- Preference for taking the short survey. -->
     <string name="preferences_take_survey">നിരീക്ഷണത്തിൽ പങ്കെടുക്കുക</string>
     <!-- Preference for not taking the short survey. -->
@@ -2441,6 +2461,10 @@
     <string name="review_quality_check_analysis_in_progress_warning_body" moz:removedIn="136" tools:ignore="UnusedResources">ഇതു് ചിലപ്പോൾ 60 സെക്കണ്ടുകൾ എടുക്കും.</string>
     <!-- Title for info card displayed after the user reports a product is back in stock. -->
     <string name="review_quality_check_analysis_requested_info_title" moz:removedIn="136" tools:ignore="UnusedResources">വിവരം അറിയിക്കുന്നതിനു് നന്ദി!</string>
+    <!-- Title for info card displayed when another user reported the displayed product is back in stock. -->
+    <string name="review_quality_check_analysis_requested_other_user_info_title" moz:removedIn="136" tools:ignore="UnusedResources">വിവരം ഉടൻ വരുന്നു</string>
+    <!-- Title for info card displayed to the user when analysis finished updating. -->
+    <string name="review_quality_check_analysis_updated_confirmation_title" moz:removedIn="136" tools:ignore="UnusedResources">വിശകലനം കാലികമാണു്</string>
     <!-- Text for the action button from info card displayed to the user when analysis finished updating. -->
     <string name="review_quality_check_analysis_updated_confirmation_action" moz:removedIn="136" tools:ignore="UnusedResources">മനസ്സിലായി</string>
     <!-- Title for error card displayed to the user when an error occurred. -->
