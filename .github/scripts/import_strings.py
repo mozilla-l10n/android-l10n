@@ -64,10 +64,10 @@ def getReferenceFilesToml(toml_path, reference_locale):
     print(f"Getting list of files for reference locale ({reference_locale}).")
     reference_files = [
         {
-            "abs_path": os.path.abspath(ref_path.format(android_locale=None)),
-            "rel_path": os.path.relpath(ref_path.format(android_locale=None), basedir),
+            "abs_path": os.path.abspath(ref_path),
+            "rel_path": os.path.relpath(ref_path, basedir),
         }
-        for (ref_path, tgt_path), locales in project_config_paths.all().items()
+        for ref_path in project_config_paths.ref_paths
     ]
 
     return reference_files
