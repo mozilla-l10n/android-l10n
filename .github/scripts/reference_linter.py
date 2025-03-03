@@ -12,20 +12,14 @@
 # with return value 1.
 
 from collections import defaultdict
+from compare_locales.parser import getParser
 from html.parser import HTMLParser
+from moz.l10n.paths import L10nConfigPaths, get_android_locale
 import argparse
 import copy
 import json
 import os
 import sys
-
-try:
-    from compare_locales import paths
-    from compare_locales.parser import getParser
-except ImportError as e:
-    print("FATAL: make sure that dependencies are installed")
-    print(e)
-    sys.exit(1)
 
 
 class HTMLStripper(HTMLParser):
@@ -57,10 +51,16 @@ class StringExtraction:
     def extractStrings(self):
         """Extract strings using TOML configuration."""
 
-        project_config = paths.TOMLParser().parse(self.toml_path, env={"l10n_base": ""})
-        files = paths.ProjectFiles(None, [project_config])
         basedir = os.path.dirname(self.toml_path)
-        for l10n_file, reference_file, _, _ in files:
+        project_config_paths = L10nConfigPaths(
+            self.toml_path, locale_map={"android_locale": get_android_locale}
+        )
+
+        reference_files = [
+            ref_path.format(android_locale=None)
+            for (ref_path, tgt_path), locales in project_config_paths.all().items()
+        ]
+        for reference_file in reference_files:
             key_path = os.path.relpath(reference_file, basedir)
             try:
                 p = getParser(reference_file)
@@ -218,9 +218,9 @@ def mergeErrors(new_content, old_content):
                             + merged_content[config_name][filename][string_id]["errors"]
                         )
                     )
-                    merged_content[config_name][filename][string_id][
-                        "errors"
-                    ] = merged_errors
+                    merged_content[config_name][filename][string_id]["errors"] = (
+                        merged_errors
+                    )
                 else:
                     merged_content[config_name][filename][string_id] = file_data
 
