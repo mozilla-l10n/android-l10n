@@ -32,22 +32,20 @@ def getL10nFilesToml(toml_path):
     l10n_files = []
     locales = list(project_config_paths.all_locales)
     locales.sort()
+
+    tgt_paths = [tgt_path for _, tgt_path in project_config_paths.all()]
     for locale in locales:
         print(f"Creating list of files for locale: {locale}.")
-        locale_files = [
-            tgt_path.format(android_locale=get_android_locale(locale))
-            for (ref_path, tgt_path), locales in project_config_paths.all().items()
-        ]
         # Exclude missing files
         l10n_files.extend(
-            [
-                {
-                    "abs_path": os.path.abspath(path),
-                    "rel_path": os.path.relpath(path, basedir),
-                }
-                for path in locale_files
-                if os.path.exists(path)
-            ]
+            {
+                "abs_path": os.path.abspath(path),
+                "rel_path": os.path.relpath(path, basedir),
+            }
+            for tgt_path in tgt_paths
+            if os.path.exists(
+                path := project_config_paths.format_target_path(tgt_path, locale)
+            )
         )
 
     return l10n_files
