@@ -14,7 +14,8 @@ Copy localized files in code repo
 python import_strings.py l10n --toml android-l10n/mozilla-mobile/android-components/l10n.toml --dest firefox-android/android-components
 """
 
-from compare_locales import parser, paths
+from compare_locales import parser
+from moz.l10n.paths import L10nConfigPaths, get_android_locale
 import argparse
 import os
 import shutil
@@ -24,25 +25,28 @@ def getL10nFilesToml(toml_path):
     """Extract list of localized files from project configuration (TOML)"""
 
     basedir = os.path.dirname(toml_path)
-    project_config = paths.TOMLParser().parse(toml_path, env={"l10n_base": ""})
-    basedir = os.path.join(basedir, project_config.root)
+    project_config_paths = L10nConfigPaths(
+        toml_path, locale_map={"android_locale": get_android_locale}
+    )
 
     l10n_files = []
-    for locale in project_config.all_locales:
+    locales = list(project_config_paths.all_locales)
+    locales.sort()
+
+    tgt_paths = [tgt_path for _, tgt_path in project_config_paths.all()]
+    for locale in locales:
         print(f"Creating list of files for locale: {locale}.")
-        files = paths.ProjectFiles(locale, [project_config])
-
-        for l10n_file, reference_file, _, _ in files:
-            # Ignore missing files for locale
-            if not os.path.exists(l10n_file):
-                continue
-
-            l10n_files.append(
-                {
-                    "abs_path": l10n_file,
-                    "rel_path": os.path.relpath(l10n_file, basedir),
-                }
+        # Exclude missing files
+        l10n_files.extend(
+            {
+                "abs_path": os.path.abspath(path),
+                "rel_path": os.path.relpath(path, basedir),
+            }
+            for tgt_path in tgt_paths
+            if os.path.exists(
+                path := project_config_paths.format_target_path(tgt_path, locale)
             )
+        )
 
     return l10n_files
 
@@ -51,20 +55,18 @@ def getReferenceFilesToml(toml_path, reference_locale):
     """Extract list of reference files from project configuration (TOML)"""
 
     basedir = os.path.dirname(toml_path)
-    project_config = paths.TOMLParser().parse(toml_path, env={"l10n_base": ""})
-    basedir = os.path.join(basedir, project_config.root)
+    project_config_paths = L10nConfigPaths(
+        toml_path, locale_map={"android_locale": get_android_locale}
+    )
 
     print(f"Getting list of files for reference locale ({reference_locale}).")
-    files = paths.ProjectFiles(None, [project_config])
-
-    reference_files = []
-    for l10n_file, reference_file, _, _ in files:
-        reference_files.append(
-            {
-                "abs_path": reference_file,
-                "rel_path": os.path.relpath(reference_file, basedir),
-            }
-        )
+    reference_files = [
+        {
+            "abs_path": os.path.abspath(ref_path),
+            "rel_path": os.path.relpath(ref_path, basedir),
+        }
+        for ref_path in project_config_paths.ref_paths
+    ]
 
     return reference_files
 
