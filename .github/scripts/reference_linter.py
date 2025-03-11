@@ -269,7 +269,7 @@ def main():
                 try:
                     with open(json_file, "r") as f:
                         previous_content = json.load(f)
-                except:
+                except Exception:
                     previous_content = {}
             else:
                 previous_content = {}
