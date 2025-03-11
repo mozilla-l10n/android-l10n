@@ -31,6 +31,11 @@ jobs:
           python l10n/.github/scripts/import_strings.py source
           --toml source/mobile/android/focus-android/l10n.toml
           --dest l10n/mozilla-mobile/focus-android
+      - name: Update linter exceptions
+        run: >
+          python .github/scripts/update_config.py
+          --toml l10n/focus.toml
+          --config l10n/.github/scripts/linter_config.json
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:

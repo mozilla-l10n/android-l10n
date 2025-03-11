@@ -52,7 +52,7 @@ class QueryPR:
         r = requests.get(url=url, headers=headers)
         try:
             json_data = r.json()["artifacts"]
-        except:
+        except Exception:
             return {}
 
         errors = {}
@@ -173,7 +173,7 @@ class QueryPR:
             if self.lines[current_line_index] <= range["endingLine"]:
                 try:
                     author = range["commit"]["author"]["user"]["login"]
-                except:
+                except Exception:
                     author = None
                 if author and author not in self.authors:
                     self.authors.append(author)
