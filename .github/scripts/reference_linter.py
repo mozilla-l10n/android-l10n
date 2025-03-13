@@ -19,6 +19,7 @@ import argparse
 import copy
 import json
 import os
+import re
 import sys
 
 
@@ -71,7 +72,10 @@ class StringExtraction:
             self.ref_strings.update(
                 (
                     f"{key_path}:{entity.key}",
-                    entity.raw_val,
+                    {
+                        "text": entity.raw_val,
+                        "comment": str(entity.pre_comment),
+                    },
                 )
                 for entity in p.parse()
             )
@@ -90,6 +94,7 @@ class QualityCheck:
         self.config_path = config_path
         self.toml_path = toml_path
         self.errors = {toml_path: defaultdict(dict)}
+        self.placeable_pattern = re.compile(r"%(?:\d+\$)?(?:\.[0-9]+)?[sdf]")
 
         self.runChecks()
 
@@ -102,7 +107,8 @@ class QualityCheck:
                 self.errors[self.toml_path][filename][id]["errors"].append(error_msg)
             else:
                 self.errors[self.toml_path][filename][id] = {
-                    "text": self.ref_strings[string_id],
+                    "text": self.ref_strings[string_id]["text"],
+                    "comment": self.ref_strings[string_id]["comment"],
                     "errors": [error_msg],
                 }
 
@@ -131,7 +137,9 @@ class QualityCheck:
                 sys.exit(e)
 
         html_stripper = HTMLStripper()
-        for ref_id, ref_string in self.ref_strings.items():
+        for ref_id, ref_data in self.ref_strings.items():
+            ref_string = ref_data["text"]
+            ref_comment = ref_data["comment"]
             # Ignore strings excluded from all checks
             if ignoreString(exceptions, "general", ref_id):
                 continue
@@ -168,7 +176,7 @@ class QualityCheck:
                         'Incorrect straight double quote character `"`. use `“”` instead.',
                     )
 
-            # Check for hard-coded brand names:
+            # Check for hard-coded brand names
             if not ignoreString(exceptions, "brand", ref_id):
                 for brand in brands:
                     if brand in ref_string:
@@ -176,6 +184,27 @@ class QualityCheck:
                             ref_id,
                             f"Hard-coded brand `{brand}`. Use a variable instead.",
                         )
+
+            # Check for missing placeable references in comments
+            string_placeables = set(re.findall(self.placeable_pattern, ref_string))
+            if string_placeables and not ignoreString(exceptions, "placeables", ref_id):
+                if ref_comment == "":
+                    storeError(
+                        ref_id,
+                        f"Identified placeables in string {ref_id}: {', '.join(sorted(string_placeables))}\n"
+                        f"  The string doesn't have a comment.\n",
+                    )
+                    continue
+                comment_placeables = set(
+                    re.findall(self.placeable_pattern, ref_comment)
+                )
+                missing = string_placeables - comment_placeables
+                if missing:
+                    storeError(
+                        ref_id,
+                        f"Identified placeables in string {ref_id}: {', '.join(sorted(string_placeables))}\n"
+                        f"  Comment does not include the following placeables: {', '.join(sorted(missing))}\n",
+                    )
 
 
 def outputErrors(errors):
@@ -190,7 +219,8 @@ def outputErrors(errors):
             output.append(f"\n### File: {filename}")
             for id, file_data in ids.items():
                 output.append(f"\n**ID**: `{id}`")
-                output.append(f"**Text**: `{file_data['text']}`")
+                output.append(rf"**Text**: `{file_data['text']}`")
+                output.append(rf"**Comment**: `{file_data['comment']}`")
                 output.append("**Errors:**")
                 for e in file_data["errors"]:
                     output.append(f"- {e}")
