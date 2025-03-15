@@ -3078,6 +3078,42 @@
   <string name="automatic_translation_option_always_translate_summary_preference">%1$s akan menerjemahkan bahasa ini secara otomatis saat laman dimuat.</string>
   <!-- Preference option for never translate. Radio button title text. -->
   <string name="automatic_translation_option_never_translate_title_preference">Jangan pernah terjemahkan</string>
+  <!--
+    Content description (not visible, for screen readers etc.): For a never-translated site list item that is selected.
+    %1$s is web site url (for example:"wikipedia.com")
+  -->
+  <string name="never_translate_site_item_list_content_description_preference">Buang %1$s</string>
+  <!-- The title of the warning card informs the user that an error has occurred at the never translate sites list. -->
+  <string name="never_translate_site_error_warning_text">Tidak bisa memuat situs. Silakan periksa kembali nanti.</string>
+  <!--
+    The Delete site dialogue title will appear when the user clicks on a list item.
+    %1$s is web site url (for example:"wikipedia.com")
+  -->
+  <string name="never_translate_site_dialog_title_preference">Hapus %1$s?</string>
+  <!-- The Delete site dialogue positive button will appear when the user clicks on a list item. The site will be deleted. -->
+  <string name="never_translate_site_dialog_confirm_delete_preference">Hapus</string>
+  <!-- The Delete site dialogue negative button will appear when the user clicks on a list item. The dialog will be dismissed. -->
+  <string name="never_translate_site_dialog_cancel_preference">Batal</string>
+  <!--
+    Download languages preference screen
+
+    Title of the toolbar for the translation feature screen where users may download different languages for translation.
+  -->
+  <string name="download_languages_translations_toolbar_title_preference">Unduh bahasa</string>
+  <!-- Screen header presenting the download language preference feature. It will appear under the toolbar. %1$s is a link using download_languages_header_learn_more_preference as text ("Learn more"). Talkback will append this to say "Double tap to open link to learn more". -->
+  <string name="download_languages_header_preference">Unduh bahasa lengkap untuk terjemahan yang lebih cepat dan untuk menerjemahkan secara luring. %1$s</string>
+  <!-- Clickable text from the screen header that links to a website. -->
+  <string name="download_languages_header_learn_more_preference">Pelajari lebih lanjut</string>
+  <!-- The subhead of the download language preference screen will appear above the pivot language. -->
+  <string name="download_languages_available_languages_preference">Bahasa yang tersedia</string>
+  <!-- Text that will appear beside a core or pivot language package name to show that the language is necessary for the translation feature to function. -->
+  <string name="download_languages_default_system_language_require_preference">diperlukan</string>
+  <!--
+    A text for download language preference item.
+    %1$s is the language name, for example, "Spanish".
+    %2$s is the language file size, for example, "(3.91 KB)" or, if the language package name is a pivot language, the string defined in download_languages_default_system_language_require_preference ("required").
+  -->
+  <string name="download_languages_language_item_preference">%1$s (%2$s)</string>
   <!-- The subhead of the download language preference screen will appear above the items that were not downloaded. -->
   <string name="download_language_header_preference">Unduh Bahasa</string>
   <!-- All languages list item. When the user presses this item, they can download all languages. -->
@@ -3114,6 +3150,31 @@
     %1$s is the name of the language, for example, "Spanish" and %2$s is the size in kilobytes or megabytes of the language file.
   -->
   <string name="delete_language_file_dialog_title">Hapus %1$s (%2$s)?</string>
+  <!-- Additional information for the dialog used by the translations feature to confirm deleting a language. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="delete_language_file_dialog_message">Jika Anda menghapus bahasa ini, %1$s akan mengunduh sebagian bahasa ke singgahan saat Anda menerjemahkan.</string>
+  <!--
+    Title for the dialog used by the translations feature to confirm deleting all languages file.
+    The dialog will be presented when the user requests deletion of all languages file.
+    %1$s is the size in kilobytes or megabytes of the language file.
+  -->
+  <string name="delete_language_all_languages_file_dialog_title">Hapus semua bahasa (%1$s)?</string>
+  <!-- Additional information for the dialog used by the translations feature to confirm deleting all languages file. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="delete_language_all_languages_file_dialog_message">Jika Anda menghapus semua bahasa, %1$s akan mengunduh sebagian bahasa ke singgahan saat Anda menerjemahkan.</string>
+  <!-- Button text on the dialog used by the translations feature to confirm deleting a language. -->
+  <string name="delete_language_file_dialog_positive_button_text">Hapus</string>
+  <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
+  <string name="delete_language_file_dialog_negative_button_text">Batal</string>
+  <!--
+    Title for the data saving mode warning dialog used by the translations feature.
+    This dialog will be presented when the user attempts to download a language or perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    %1$s is the size in kilobytes or megabytes of the language file.
+  -->
+  <string name="download_language_file_dialog_title">Unduh saat dalam mode hemat data (%1$s)?</string>
+  <!-- Additional information for the data saving mode warning dialog used by the translations feature. This text explains the reason a download is required for a translation. -->
+  <string name="download_language_file_dialog_message_all_languages">Kami mengunduh sebagian bahasa ke singgahan Anda untuk menjaga terjemahan tetap pribadi.</string>
+  <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
+  <string name="download_language_file_dialog_checkbox_text">Selalu unduh dalam mode hemat data</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
   <string name="download_language_file_dialog_positive_button_text">Unduh</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
@@ -3128,6 +3189,10 @@
   <string name="protection_panel_header_secure">Aman</string>
   <!-- Text for the protection panel header when the site is not secure. -->
   <string name="protection_panel_header_not_secure">Tidak aman</string>
+  <!-- Title text for the protection panel banner when the site is not secure. -->
+  <string name="protection_panel_banner_not_secure_title">Hati-hati dengan situs ini</string>
+  <!-- Description text for the protection panel banner when the site is not secure. -->
+  <string name="protection_panel_banner_not_secure_description">Sambungan Anda tidak aman.</string>
   <!-- Title text for the protection panel banner when tracking protection is disabled. -->
   <string name="protection_panel_banner_not_protected_title">Anda menonaktifkan perlindungan</string>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
@@ -3152,6 +3217,12 @@
     %d is a placeholder for the number of trackers blocked.
   -->
   <string name="trackers_blocked_panel_total_num_trackers_blocked">Pelacak diblokir: %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
   <!--
     Debug drawer
 
@@ -3226,6 +3297,12 @@
   <string name="micro_survey_feedback_confirmation">Terima kasih atas masukan Anda!</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_1" tools:ignore="UnusedResources">Sangat puas</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_2" tools:ignore="UnusedResources">Puas</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Netral</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_4" tools:ignore="UnusedResources">Tidak puas</string>
   <!--
     Beta Label Component !
 
