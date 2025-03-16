@@ -1877,6 +1877,8 @@
   <string name="sync_add_new_device_learn_button">Pelajari Tentang Pengiriman Tab…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">Sambungkan Peranti Lain…</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nDikirim dari %2$s Coba peramban seluler: %3$s</string>
   <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nDikirim dari %2$s 🦊 %3$s</string>
   <!--
@@ -2223,6 +2225,8 @@
     Preference title for DNS over HTTPS settings
   -->
   <string name="preference_doh_title">DNS Di Atas HTTPS</string>
+  <!-- Description of the preference to enable "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_summary">Domain Name System (DNS) melalui HTTPS mengirimkan permintaan Anda untuk mendapatkan nama domain melalui koneksi terenkripsi, sehingga menyediakan DNS yang aman dan mempersulit orang lain untuk melihat situs web mana yang akan diakses. %1$s</string>
   <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
   <string name="preference_doh_learn_more">Pelajari lebih lanjut</string>
   <!-- Content description for the toolbar "Navigate up" button -->
@@ -2239,6 +2243,8 @@
   <string name="preference_doh_default_protection_summary">%1$s memutuskan kapan menggunakan DNS aman untuk melindungi privasi Anda.</string>
   <!-- Bullet point 1 for "Default Protection" information page under "DNS over HTTPS" -->
   <string name="preference_doh_default_protection_info_1">Gunakan penyedia yang Anda pilih</string>
+  <!-- Bullet point 2 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_2">Gunakan resolver DNS bawaan Anda jika ada masalah dengan penyedia DNS aman</string>
   <!-- Bullet point 3 for "Default Protection" information page under "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
   <string name="preference_doh_default_protection_info_3">Gunakan penyedia lokal, jika memungkinkan. %1$s</string>
   <!-- Bullet point 4 for "Default Protection" information page under "DNS over HTTPS" -->
@@ -2499,6 +2505,8 @@
   <string name="credit_cards_biometric_prompt_message">Buka kunci untuk melihat kartu yang Anda simpan</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
   <string name="credit_cards_warning_dialog_title_2">Amankan metode pembayaran Anda yang tersimpan</string>
+  <!-- Message of warning dialog if users have no device authentication set up -->
+  <string name="credit_cards_warning_dialog_message_3">Siapkan pola kunci perangkat, PIN, atau kata sandi untuk melindungi metode pembayaran Anda yang tersimpan agar tidak diakses jika perangkat Anda berpindah tangan.</string>
   <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
   <string name="credit_cards_warning_dialog_set_up_now">Atur sekarang</string>
   <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
@@ -2762,6 +2770,11 @@
   <string name="firefox_suggest_header" tools:ignore="BrandUsage">Saran Firefox</string>
   <!-- Search suggestions title for trending searches. -->
   <string name="trending_searches_header" moz:removedIn="137" tools:ignore="UnusedResources">Pencarian Tren</string>
+  <!--
+    Search suggestions title for trending search suggestions.
+    %s is a placeholder for the name of the search engine providing the trending search suggestions.
+  -->
+  <string name="trending_searches_header_2">Sedang tren di %s</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Pencarian Google</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
@@ -2964,6 +2977,8 @@
   <string name="a11y_state_label_collapsed">diciutkan</string>
   <!-- Action label for elements that can be expanded if interacting with them. Talkback will append this to say "Double tap to expand". -->
   <string name="a11y_action_label_expand">bentangkan</string>
+  <!-- Current state for elements that can be expanded if interacting with them. Talkback will dictate this after a state change. -->
+  <string name="a11y_state_label_expanded">dibentangkan</string>
   <!-- Action label for links to a website containing documentation about a wallpaper collection. Talkback will append this to say "Double tap to open link to learn more about this collection". -->
   <string name="a11y_action_label_wallpaper_collection_learn_more">buka tautan untuk mempelajari lebih lanjut tentang koleksi ini</string>
   <!-- Action label for links that point to an article. Talkback will append this to say "Double tap to read the article". -->
