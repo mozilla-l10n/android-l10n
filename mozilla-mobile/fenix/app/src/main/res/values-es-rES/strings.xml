@@ -667,6 +667,12 @@
   <string name="onboarding_marketing_learn_more" tools:ignore="UnusedResources">Cómo utilizamos los datos</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
   <string name="onboarding_marketing_positive_button" tools:ignore="UnusedResources">Aceptar y empezar a navegar</string>
+  <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
+  <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">Una última cosa</string>
+  <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">Comparte con los socios de marketing de Mozilla cómo descubriste Firefox y cómo lo usas. Estos datos nunca se venden.</string>
+  <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
+  <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Aceptar y empezar a navegar</string>
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
   <string name="onboarding_customize_toolbar_title" tools:ignore="UnusedResources">Escoge la posición de la barra de herramientas</string>
   <!-- Onboarding sub header for toolbar selection card, used by Nimbus experiments. -->
@@ -702,6 +708,12 @@
   <string name="onboarding_customize_theme_content_description">Imagen del tema %1$s</string>
   <!-- Onboarding theme selection card label for 'Not now' button, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_not_now_button" moz:removedIn="136" tools:ignore="UnusedResources">Ahora no</string>
+  <!--
+    Widget Picker
+
+    Widget description for widget picker screen
+  -->
+  <string name="widget_picket_description">Iniciar una búsqueda rápida</string>
   <!--
     Search Widget
 
@@ -871,12 +883,16 @@
   <string name="preferences_show_search_suggestions_in_private">Mostrar en sesiones privadas</string>
   <!-- Preference title for switch preference to show trending search suggestions -->
   <string name="preferences_show_trending_search_suggestions">Mostrar las sugerencias más populares</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Mostrar búsquedas recientes</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Mostrar sugerencias del portapapeles</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
   <string name="preferences_search_browsing_history">Buscar historial de navegación</string>
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">Buscar marcadores</string>
+  <!-- Preference title for switch preference to show shortcuts when searching -->
+  <string name="preferences_show_shortcuts">Mostrar accesos directos</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
   <string name="preferences_search_synced_tabs">Buscar pestañas sincronizadas</string>
   <!-- Preference for account settings -->
@@ -897,6 +913,16 @@
   <string name="preferences_show_nonsponsored_suggestions">Sugerencias de %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Recibir sugerencias de la web relacionadas con tu búsqueda</string>
+  <!-- Preference for link sharing -->
+  <string name="preferences_link_sharing">Compartir enlaces</string>
+  <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_title">Incluir enlace de descarga de %1$s al compartir en WhatsApp</string>
+  <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_body">Invita a tus amigos a probar una navegación más rápida y segura con %1$s cada vez que compartas un enlace en WhatsApp.</string>
+  <!-- Snackbar message shown when user shares a link -->
+  <string name="link_shared_snackbar_message">Enlace compartido</string>
+  <!-- Snackbar action label shown when user shares a link -->
+  <string name="link_shared_snackbar_action">Administrar ajustes</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">Abrir enlaces en aplicaciones</string>
   <!-- Preference for open links in third party apps always open in apps option -->
@@ -1460,6 +1486,20 @@
   <!-- Text for the button to remove a single download item -->
   <string name="download_delete_item_1">Eliminar</string>
   <!--
+    Time period headers for downloads
+
+    Text for the header that groups the downloads for today
+  -->
+  <string name="download_time_period_today">Hoy</string>
+  <!-- Text for the header that groups the downloads for yesterday -->
+  <string name="download_time_period_yesterday">Ayer</string>
+  <!-- Text for the header that groups the downloads the past 7 days -->
+  <string name="download_time_period_last_7_days">Últimos 7 días</string>
+  <!-- Text for the header that groups the downloads the past 30 days -->
+  <string name="download_time_period_last_30_days">Últimos 30 días</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">Más antiguas</string>
+  <!--
     WebCompat Reporter
 
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
@@ -1838,6 +1878,10 @@
   <string name="sync_add_new_device_learn_button">Saber más sobre cómo enviar pestañas…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">Conectar otro dispositivo…</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nEnviado desde %2$s 🦊 Prueba el navegador móvil: %3$s</string>
+  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nEnviado desde %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2176,6 +2220,28 @@
     Enhanced tracking protection exception preference icon for ETP settings.
   -->
   <string name="preference_etp_exceptions_icon_description">Icono de preferencia de excepción de protección contra el rastreo mejorada</string>
+  <!--
+    DNS Over HTTPS (DoH)
+
+    Preference title for DNS over HTTPS settings
+  -->
+  <string name="preference_doh_title">DNS sobre HTTPS</string>
+  <!-- Description of the preference to enable "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_summary">El sistema de nombres de dominio (DNS) a través de HTTPS envía la solicitud de un nombre de dominio a través de una conexión cifrada, lo que proporciona un DNS seguro y dificulta que otros vean a qué sitio web estás a punto de acceder. %1$s</string>
+  <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
+  <string name="preference_doh_learn_more">Saber más</string>
+  <!-- Content description for the toolbar "Navigate up" button -->
+  <string name="preference_doh_up_description">Navegar hacia arriba</string>
+  <!-- Content description for the "Exceptions" button -->
+  <string name="preference_doh_exceptions_description">Excepciones</string>
+  <!-- Content description for the "Info" button -->
+  <string name="preference_doh_info_description">Info</string>
+  <!-- Content description for the "Add Site" button -->
+  <string name="preference_doh_add_site_description">Añadir sitio</string>
+  <!-- Title displayed for "Default Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection">Protección predeterminada</string>
+  <!-- Summary displayed for "Default Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_doh_default_protection_summary">%1$s decide cuándo usar DNS seguro para proteger tu privacidad.</string>
   <!-- About page link text to open support link -->
   <string name="about_support">Ayuda</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
