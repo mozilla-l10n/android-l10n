@@ -674,6 +674,8 @@
   <string name="onboarding_marketing_positive_button" tools:ignore="UnusedResources">ਤਸਦੀਕ ਕਰੋ ਅਤੇ ਬਰਾਊਜ਼ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">ਇੱਕ ਆਖਰੀ ਗੱਲ</string>
+  <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">ਤੁਸੀਂ Firefox ਨੂੰ ਕਿਵੇਂ ਲੱਭਿਆ ਅਤੇ ਇਸ ਨੂੰ ਕਿਵੇਂ ਵਰਤਦੇ ਹੋ, ਉਸ ਜਾਣਕਾਰੀ ਨੂੰ Mozilla ਦੇ ਮਾਰਕੀਟਿੰਗ ਹਿੱਸੇਦਾਰਾਂ ਨਾਲ ਸਾਂਝਾ ਕਰੋ। ਇਹ ਡਾਟੇ ਨੂੰ ਕਦੇ ਨਹੀਂ ਵੇਚਿਆ ਜਾਂਦਾ ਹੈ।</string>
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
   <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">ਸਹਿਮਤ ਅਤੇ ਬਰਾਊਜ਼ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ</string>
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -921,6 +923,8 @@
   <string name="preferences_link_sharing">ਲਿੰਕ ਸਾਂਝਾ ਕਰਨਾ</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="link_sharing_toggle_title">WhatsApp ਸ਼ੇਅਰ ਉੱਤੇ %1$s ਡਾਊਨਲੋਡ ਲਿੰਕ ਸਮੇਤ</string>
+  <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_body">ਜਦੋਂ ਵੀ WhatsApp ਉੱਤੇ ਤੁਸੀਂ ਆਪਣੇ ਦੋਸਤਾਂ ਮਿੱਤਰਾਂ ਨਾਲ ਲਿੰਕ ਸਾਂਝਾ ਕਰੋ ਤਾਂ ਉਹਨਾਂ ਨੂੰ %1$s ਨਾਲ ਵੱਧ ਤੇਜ਼, ਸੁਰੱਖਿਅਤ ਬਰਾਊਜ਼ ਕਰਨ ਲਈ ਸੱਦਾ ਦਿਓ।</string>
   <!-- Snackbar message shown when user shares a link -->
   <string name="link_shared_snackbar_message">ਸਾਂਝਾ ਕੀਤਾ ਲਿੰਕ</string>
   <!-- Snackbar action label shown when user shares a link -->
@@ -1488,6 +1492,20 @@
   <!-- Text for the button to remove a single download item -->
   <string name="download_delete_item_1">ਹਟਾਓ</string>
   <!--
+    Time period headers for downloads
+
+    Text for the header that groups the downloads for today
+  -->
+  <string name="download_time_period_today">ਅੱਜ</string>
+  <!-- Text for the header that groups the downloads for yesterday -->
+  <string name="download_time_period_yesterday">ਕੱਲ੍ਹ</string>
+  <!-- Text for the header that groups the downloads the past 7 days -->
+  <string name="download_time_period_last_7_days">ਆਖਰੀ 7 ਦਿਨ</string>
+  <!-- Text for the header that groups the downloads the past 30 days -->
+  <string name="download_time_period_last_30_days">ਆਖਰੀ 30 ਦਿਨਾ</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">ਹੋਰ ਪੁਰਾਣੇ</string>
+  <!--
     WebCompat Reporter
 
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
@@ -1867,6 +1885,10 @@
   <string name="sync_add_new_device_learn_button">ਟੈਬਾਂ ਭੇਜਣ ਬਾਰੇ ਸਿ਼ੱਖੋ…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">…ਹੋਰ ਡਿਵਾਈਸ ਨਾਲ ਕਨੈਕਟ ਕਰੋ</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\n%2$s  🦊  ਤੋਂ ਭੇਜਿਆ। ਮੋਬਾਈਲ ਬਰਾਊਜ਼ ਅਜ਼ਮਾ ਕੇ ਵੇਖੋ: %3$s</string>
+  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\n%2$s 🦊 ਤੋਂ ਭੇਜਿਆ, %3$s</string>
   <!--
     Notifications
 
@@ -2223,6 +2245,8 @@
   <string name="preference_doh_add_site_description">ਸਾਈਟ ਨੂੰ ਜੋੜੋ</string>
   <!-- Title displayed for "Default Protection" option under "DNS over HTTPS" -->
   <string name="preference_doh_default_protection">ਮੂਲ ਸੁਰੱਖਿਆ</string>
+  <!-- Summary displayed for "Default Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_doh_default_protection_summary">%1$s ਫ਼ੈਸਲਾ ਕਰਦਾ ਹੈ ਕਿ ਤੁਹਾਡੀ ਪਰਦੇਦਾਰੀ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ ਕਦੋਂ ਸੁਰੱਖਿਅਤ DNS ਨੂੰ ਵਰਤਣਾ ਹੈ।</string>
   <!-- Title displayed for "Increased Protection" option under "DNS over HTTPS" -->
   <string name="preference_doh_increased_protection">ਵਾਧਾ ਕੀਤੀ ਸੁਰੱਖਿਆ</string>
   <!-- Summary displayed for "Increased Protection" option under "DNS over HTTPS" -->
