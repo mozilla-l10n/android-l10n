@@ -358,6 +358,10 @@
   <string name="browser_save_menu_handlebar_content_description">Lat att menyen lagre</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar tools menu. -->
   <string name="browser_tools_menu_handlebar_content_description">Lat att verktøymenyen</string>
+  <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu when the "Report broken site" feature is available -->
+  <string name="browser_menu_tools_description_with_translate_with_report_site_2">Lesevising, Omset, Rapporter øydelagd nettstad, Skriv ut, Del, Opne app</string>
+  <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
+  <string name="browser_menu_tools_description_with_translate_without_report_site">Lesevising, omset, skriv ut, del, opne app</string>
   <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
   <string name="browser_menu_tools_description_without_report_site">Lesevising, Skriv ut, Del, Opne app</string>
   <!--
@@ -638,8 +642,12 @@
   <string name="onboarding_marketing_title" tools:ignore="BrandUsage,UnusedResources">Hjelp oss med å utvikle Firefox</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <string name="onboarding_marketing_learn_more" tools:ignore="UnusedResources">Korleis vi brukar dataa</string>
+  <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
+  <string name="onboarding_marketing_positive_button" tools:ignore="UnusedResources">Stadfest og begynn å surfe</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">Ein siste ting</string>
+  <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
+  <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Godkjenn og begynn å surfe</string>
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
   <string name="onboarding_customize_toolbar_title" tools:ignore="UnusedResources">Vel plassering for verktøylinja</string>
   <!-- Onboarding sub header for toolbar selection card, used by Nimbus experiments. -->
@@ -650,18 +658,25 @@
   <string name="onboarding_customize_toolbar_top_option">Topp</string>
   <!-- Onboarding toolbar selection card label for 'bottom' option, used by Nimbus experiments. -->
   <string name="onboarding_customize_toolbar_bottom_option">Botn</string>
+  <!-- Onboarding toolbar selection card content description for the toolbar placement image. -->
+  <string name="onboarding_customize_toolbar_placement_bottom_content_description">Bilde av den nedste verktøylinja</string>
+  <string name="onboarding_customize_toolbar_placement_top_content_description">Bilde av den øvste verktøylinja</string>
   <!-- Onboarding toolbar selection card label for 'Not now' button, used by Nimbus experiments. -->
   <string name="onboarding_customize_toolbar_not_now_button" moz:removedIn="136" tools:ignore="UnusedResources">Ikkje no</string>
   <!-- Onboarding header for the theme selection card, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_title" tools:ignore="UnusedResources">Vel eit tema</string>
   <!-- Onboarding sub header for theme selection card, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_description" tools:ignore="UnusedResources">Sjå nettet i det beste lyset.</string>
+  <!-- Onboarding label for 'Save and start browsing' button, used by Nimbus experiments. -->
+  <string name="onboarding_save_and_start_button">Lagre og begynn å surfe</string>
   <!-- Onboarding theme selection card label for 'dark' option, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_dark_option">Mørkt</string>
   <!-- Onboarding theme selection card label for 'light' option, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_light_option">Lyst</string>
   <!-- Onboarding theme selection card label for 'System auto' option, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_system_option">Same som systemet</string>
+  <!-- Onboarding theme selection card content description for the theme selection image. %1$s is placeholder for either 'system', 'light' or 'dark'. -->
+  <string name="onboarding_customize_theme_content_description">Bilde av %1$s-temaet</string>
   <!-- Onboarding theme selection card label for 'Not now' button, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_not_now_button" moz:removedIn="136" tools:ignore="UnusedResources">Ikkje no</string>
   <!--
@@ -871,6 +886,10 @@
   <string name="preferences_show_nonsponsored_suggestions_summary">Få forslag frå nettet relatert til søkinga di</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">Lenkedeling</string>
+  <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_title">Inkluder %1$s-nedlastingslenke på WhatsApp-delingar</string>
+  <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_body">Inviter vennane dine til å prøve raskare og tryggare surfing med %1$s kvar gong du deler ei lenke på WhatsApp.</string>
   <!-- Snackbar message shown when user shares a link -->
   <string name="link_shared_snackbar_message">Lenke delt</string>
   <!-- Snackbar action label shown when user shares a link -->
@@ -1091,6 +1110,8 @@
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Les meir</string>
   <!-- Preference switch for usage and technical data collection -->
+  <string name="preference_usage_data_1" tools:ignore="UnusedResources" moz:removedIn="138">Tekniske data og samhandlingsdata</string>
+  <!-- Preference switch for usage and technical data collection -->
   <string name="preference_usage_data_2">Send tekniske data og samhandlingsdata</string>
   <!-- Preference switch for usage and technical learn more link -->
   <string name="preference_usage_data_learn_more">Les meir</string>
@@ -1103,6 +1124,7 @@
   <!-- Preference switch for daily usage ping data collection -->
   <string name="preferences_daily_usage_ping_title">Ping for dagleg bruk</string>
   <string name="preferences_daily_usage_ping_description">Dette hjelper Mozilla med å berekne aktive brukarar.</string>
+  <string name="preferences_daily_usage_ping_learn_more">Les meir om ping for dagleg bruk</string>
   <!-- Preference switch title for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_title">Send inn krasjrapportar automatisk</string>
   <string name="preferences_automatically_submit_crashes_title" moz:removedIn="136" tools:ignore="UnusedResources">Send inn krasjrapportar automatisk</string>
@@ -1295,6 +1317,8 @@
   <string name="studies_active">Aktiv</string>
   <!-- Description for studies, it indicates why Firefox use studies. %1$s is the name of the app (for example "Firefox"). -->
   <string name="studies_description_2" tools:ignore="UnusedResources" moz:removedIn="136">%1$s kan installere og køyre studiar frå tid til annan.</string>
+  <!-- Description for studies -->
+  <string name="studies_description_3">Prøv nye funksjonar og idéar før dei blir tilgjengelege for alle.</string>
   <!-- Title of the Studies data preference -->
   <string name="studies_title">Installer og køyr studium</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
@@ -1305,8 +1329,18 @@
     Title for the list of tabs in the current private session
   -->
   <string name="tabs_header_private_tabs_title" moz:removedIn="136" tools:ignore="UnusedResources">Private faner</string>
+  <!--
+    Title for the list of tabs in the current private session used by a11y services
+    The %1$s will be replaced by the number of opened private tabs
+  -->
+  <string name="tabs_header_private_tabs_counter_title">Private faner opne: %1$s. Trykk for å byte fane.</string>
   <!-- Title for the list of tabs in the synced tabs -->
   <string name="tabs_header_synced_tabs_title" moz:removedIn="136" tools:ignore="UnusedResources">Synkroniserte faner</string>
+  <!--
+    Title for the list of tabs in the synced tabs used by a11y services
+    The %1$s will be replaced by the number of opened synced tabs
+  -->
+  <string name="tabs_header_synced_tabs_counter_title">Synkroniserte faner opne: %1$s. Trykk for å byte fane.</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Legg til fane</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1431,6 +1465,8 @@
   <string name="webcompat_reporter_screen_title">Rapporter problem med ein nettstad</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">URL</string>
+  <!-- The error message of the URL text field when an invalid URL has been entered. -->
+  <string name="webcompat_reporter_url_error_invalid">Skriv inn ei gyldig nettadresse</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken" moz:removedIn="136" tools:ignore="UnusedResources">Kva er øydelagt? (valfritt)</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
@@ -1447,6 +1483,8 @@
   <string name="webcompat_reporter_cancel">Avbryt</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Send</string>
+  <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
+  <string name="webcompat_reporter_success_snackbar_text">Rapporten din vart sendt</string>
   <!-- Button text for closing or dismissing the snackbar shown after successfully submitting a WebCompat report. -->
   <string name="webcompat_reporter_dismiss_success_snackbar_text">Lat att</string>
   <!--
