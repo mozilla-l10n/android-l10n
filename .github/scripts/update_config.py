@@ -66,7 +66,7 @@ def main():
         "IncorrectStraightQuote": "single_quotes",
         "IncorrectStraightDoubleQuote": "double_quotes",
         "BrandUsage": "brand",
-        "PlaceableComment": "placeables",
+        "PlaceholderComment": "placeables",
     }
 
     for ref_file in ref_files:
