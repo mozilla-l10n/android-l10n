@@ -1488,15 +1488,59 @@
   <!-- Text for the button to remove a single download item -->
   <string name="download_delete_item_1">አስወግድ</string>
   <!--
+    Time period headers for downloads
+
+    Text for the header that groups the downloads for today
+  -->
+  <string name="download_time_period_today">ዛሬ</string>
+  <!-- Text for the header that groups the downloads for yesterday -->
+  <string name="download_time_period_yesterday">ትናንት</string>
+  <!-- Text for the header that groups the downloads the past 7 days -->
+  <string name="download_time_period_last_7_days">ባለፉት 7 ቀናት</string>
+  <!-- Text for the header that groups the downloads the past 30 days -->
+  <string name="download_time_period_last_30_days">ባለፉት 30 ቀናት</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">ይበልጥ የቆየ</string>
+  <!--
+    Downloads Content Type Filters
+
+    Text for the filter button to show all files in the downloads list
+  -->
+  <string name="download_content_type_filter_all">ሁሉም</string>
+  <!-- Text for the filter button to show only images in the downloads list -->
+  <string name="download_content_type_filter_image">ምስሎች</string>
+  <!-- Text for the filter button to show only video files in the downloads list -->
+  <string name="download_content_type_filter_video">ተንቀሳቃሽ-ምስሎች</string>
+  <!-- Text for the filter button to show only documents in the downloads list -->
+  <string name="download_content_type_filter_document">ሠነዶች</string>
+  <!-- Text for the filter button to show all other file types in the downloads list -->
+  <string name="download_content_type_filter_other">ሌሎች</string>
+  <!--
+    Description of a downloaded item, displayed in the downloads list.
+    %1$s: The size of the downloaded file.
+    %2$s: The URL of the downloaded file.
+  -->
+  <string name="download_item_description">%1$s • %2$s</string>
+  <!--
     WebCompat Reporter
 
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
   -->
   <string name="webcompat_reporter_screen_title">የተበላሽ ጣቢያ አሳውቅ</string>
+  <!-- The description of the Web Compat Reporter feature. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="webcompat_reporter_description">%1$s ለሁሉም ሰው የተሻለ እንዲሆን ያግዙ። የMozilla ሰራተኞች የድረ-ገጽ ችግሮችን ለማስተካከል የላኩትን መረጃ ይጠቀማሉ።</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">URL</string>
+  <!-- The error message of the URL text field when an invalid URL has been entered. -->
+  <string name="webcompat_reporter_url_error_invalid">አባክዎ የሚሰራ URL ያስገቡ</string>
+  <!-- The label/title of an optional field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_label_whats_broken" moz:removedIn="136" tools:ignore="UnusedResources">ምኑ ተበላሽቷል? (አማራጭ)</string>
+  <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_label_whats_broken_2">ምኑ ተበላሽቷል?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason">ምክንያት ይምረጡ</string>
+  <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_choose_reason_error">እባክዎ ምክንያት ይምረጡ</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description">ችግሩን ይግለጹ (አማራጭ)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
@@ -1505,6 +1549,8 @@
   <string name="webcompat_reporter_cancel">ሰርዝ</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">ላክ</string>
+  <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
+  <string name="webcompat_reporter_success_snackbar_text">ማሳወቂያዎ ተልኳል</string>
   <!-- Button text for closing or dismissing the snackbar shown after successfully submitting a WebCompat report. -->
   <string name="webcompat_reporter_dismiss_success_snackbar_text">ዝጋ</string>
   <!--
@@ -1513,6 +1559,16 @@
     Broken site reason text for site slow or not working
   -->
   <string name="webcompat_reporter_reason_slow">ጣቢያ ቀርፋፋ ወይም አይሰራም</string>
+  <!-- Broken site reason text for images or videos -->
+  <string name="webcompat_reporter_reason_media">ምስሎች ወይም ተንቀሳቃሽ-ምስሎች</string>
+  <!-- Broken site reason text for buttons, links, and other content -->
+  <string name="webcompat_reporter_reason_content">አዝራሮች፣ አገናኞች እና ሌሎች ይዘቶች</string>
+  <!-- Broken site reason text for sign in or sign out -->
+  <string name="webcompat_reporter_reason_account">መግባት ወይም መውጣት</string>
+  <!-- Broken site reason text for ad blocker -->
+  <string name="webcompat_reporter_reason_ad_blocker">ማስታወቂያ ማገጃ</string>
+  <!-- Broken site reason text for something else -->
+  <string name="webcompat_reporter_reason_other">ሌላ ነገር</string>
   <!--
     Crashes
 
@@ -2182,6 +2238,18 @@
     Enhanced tracking protection exception preference icon for ETP settings.
   -->
   <string name="preference_etp_exceptions_icon_description">የተሻሻለ የመከታተያ ጥበቃ ልዩ ምርጫ አዶ</string>
+  <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
+  <string name="preference_doh_learn_more">የበለጠ ለማወቅ</string>
+  <!-- Content description for the toolbar "Navigate up" button -->
+  <string name="preference_doh_up_description">ወደ ላይ አስስ</string>
+  <!-- Content description for the "Exceptions" button -->
+  <string name="preference_doh_exceptions_description">ልዩ ሁኔታዎች</string>
+  <!-- Content description for the "Info" button -->
+  <string name="preference_doh_info_description">መረጃ</string>
+  <!-- Content description for the "Add Site" button -->
+  <string name="preference_doh_add_site_description">ጣቢያ ያክሉ</string>
+  <!-- Title displayed for "Default Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection">ነባሪ ጥበቃ</string>
   <!-- About page link text to open support link -->
   <string name="about_support">ድጋፍ</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
