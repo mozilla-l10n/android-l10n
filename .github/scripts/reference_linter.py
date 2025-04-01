@@ -220,7 +220,7 @@ def outputErrors(errors):
             for id, file_data in ids.items():
                 output.append(f"\n**ID**: `{id}`")
                 output.append(rf"**Text**: `{file_data['text']}`")
-                output.append(rf"**Comment**: `{file_data['comment']}`")
+                output.append(rf"**Comment**: `{file_data.get('comment', '')}`")
                 output.append("**Errors:**")
                 for e in file_data["errors"]:
                     output.append(f"- {e}")

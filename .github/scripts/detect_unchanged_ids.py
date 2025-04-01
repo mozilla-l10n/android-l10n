@@ -60,7 +60,8 @@ def main():
     errors = {
         key: {"previous": base_strings[key], "new": head_strings[key]}
         for key in base_strings.keys()
-        if key in head_strings and base_strings[key] != head_strings[key]
+        if key in head_strings
+        and base_strings[key]["text"] != head_strings[key]["text"]
     }
 
     errors_json = {toml_path: defaultdict(dict)}
