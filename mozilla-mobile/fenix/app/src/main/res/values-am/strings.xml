@@ -2212,6 +2212,8 @@
   <string name="preference_doh_add_site_description">ጣቢያ ያክሉ</string>
   <!-- Title displayed for "Default Protection" option under "DNS over HTTPS" -->
   <string name="preference_doh_default_protection">ነባሪ ጥበቃ</string>
+  <!-- Title displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off">ጠፍቷል</string>
   <!-- Text displayed above provider dropdown under "DNS over HTTPS" -->
   <string name="preference_doh_choose_provider">አቅራቢ ይምረጡ</string>
   <!-- Text displayed for "Default provider" under "DNS over HTTPS" providers -->
@@ -3031,6 +3033,14 @@
   <string name="download_language_file_dialog_positive_button_text_all_languages">ያውርዱ እና ይተርጉሙ</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
   <string name="download_language_file_dialog_negative_button_text">ተወው</string>
+  <!--
+    Unified Trust Panel
+
+    Text for the protection panel header when the site is secure.
+  -->
+  <string name="protection_panel_header_secure">ደህንነቱ የተጠበቀ</string>
+  <!-- Text for the protection panel header when the site is not secure. -->
+  <string name="protection_panel_header_not_secure">ደህንነቱ የተጠበቀ አይደለም</string>
   <!-- Title text for the protection panel banner when the site is not secure. -->
   <string name="protection_panel_banner_not_secure_title">በዚህ ድረ-ገፅ ላይ ይጠንቀቁ</string>
   <!-- Description text for the protection panel banner when the site is not secure. -->
@@ -3053,6 +3063,41 @@
   <string name="protection_panel_etp_toggle_label">የተሻሻለ የክትትል ጥበቃ</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
   <string name="protection_panel_etp_toggle_enabled_description">በዚህ ጣቢያ ላይ የሆነ ነገር የተሰበረ ከመሰለ፣ ጥበቃዎችን በማጥፋት ይሞክሩ።</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">መከታተያዎች ታግደዋል፡ %d</string>
+  <!-- Text for when no trackers have been blocked. -->
+  <string name="protection_panel_no_trackers_blocked">ምንም መከታተያዎች አልተገኙም</string>
+  <!-- Link text to navigate to privacy and security settings from the protection panel. -->
+  <string name="protection_panel_privacy_and_security_settings">የግላዊነት እና የደህንነት ቅንብሮች</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the trackers blocked panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_total_num_trackers_blocked">መከታተያዎች ታግደዋል፡ %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s፡ %d</string>
+  <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
+  <string name="clear_site_data_dialog_positive_button_text">አጽዳ</string>
+  <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
+  <string name="clear_site_data_dialog_negative_button_text">ተወው</string>
+  <!-- Snackbar title shown when the site data has been cleared. -->
+  <string name="clear_site_data_snackbar">ኩኪዎች እና የድረ-ገፅ ውሂብ ተወግደዋል</string>
+  <!-- Text for the connection security panel when the site is secure. -->
+  <string name="connection_security_panel_secure">ደህንነቱ የተጠበቀ ግንኙነት</string>
+  <!-- Text for the connection security panel when the site is not secure. -->
+  <string name="connection_security_panel_not_secure">ግንኙነት ደህንነቱ የተጠበቀ አይደለም</string>
+  <!--
+    Text for the connection security panel to indicate who the certificate was verified by.
+    %s is a placeholder for the name of the certificate authority that verified the ticket
+  -->
+  <string name="connection_security_panel_verified_by">በ%s የተረጋገጠ</string>
   <!--
     Debug drawer
 
@@ -3180,6 +3225,18 @@
   <!-- Content description for delete button. %s is the username of the login. -->
   <string name="debug_drawer_logins_delete_login_button_content_description">በተጠቃሚ ስም %s መግባትን ሰርዝ</string>
   <!--
+    Debug drawer addresses
+
+    The title of the Addresses feature in the Debug Drawer.
+  -->
+  <string name="debug_drawer_addresses_title">አድራሻዎች</string>
+  <!-- The title of the header for the section for managing addresses. -->
+  <string name="debug_drawer_addresses_management_header">አድራሻዎችን ያስተዳድሩ</string>
+  <!-- The title of the button in the debug drawer for adding a new address. -->
+  <string name="debug_drawer_add_new_address">ለተመረጠው አካባቢ አዲስ አድራሻ ያክሉ</string>
+  <!-- The title of the button for deleting in the debug drawer all addresses. -->
+  <string name="debug_drawer_delete_all_addresses">ሁሉንም አድራሻዎች ሰርዝ</string>
+  <!--
     Debug drawer "contextual feature recommendation" (CFR) tools
 
     The title of the CFR Tools feature in the Debug Drawer
@@ -3213,6 +3270,42 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
+  <!--
+    Root certificate expiration warnings
+
+    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
+
+    Homepage card button to open Google Play Store. "Update" is a verb.
+  -->
+  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">አሁን አዘምን</string>
+  <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">የእርስዎን Firefox ለማቆየት የመጨረሻው ዕድል</string>
+  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
+  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">ማዘመን ይመከራል</string>
+  <!--
+    TextField Design System Component
+
+    The default content description for the eye trailing icon button in TextField
+  -->
+  <string name="text_field_eye_trailing_icon_default_content_description">የተደበቀ ጽሑፍ አሳይ</string>
   <!-- The default content description for the cross trailing icon button in TextField -->
   <string name="text_field_cross_trailing_icon_default_content_description">ጽሑፍ አጽዳ</string>
+  <!--
+    Setup checklist component
+
+    Accessibility description for a check mark on a completed task
+  -->
+  <string name="a11y_completed_task_description">የተጠናቀቀ ተግባር</string>
+  <!-- Accessibility description for the task icon -->
+  <string name="a11y_task_icon_description">ተግባር አዶ</string>
+  <!--
+    Private browsing mode authentication screen
+
+    Label for the secondary action to exit private browsing mode
+  -->
+  <string name="pbm_authentication_leave_private_tabs">የግል ትሮችን ዝጋ</string>
+  <!-- Label for the primary action button to unlock private tabs -->
+  <string name="pbm_authentication_unlock">ክፈት</string>
+  <!-- Title text instructing the user to unlock private tabs -->
+  <string name="pbm_authentication_unlock_private_tabs">የግል ትሮችን ይክፈቱ</string>
 </resources>
