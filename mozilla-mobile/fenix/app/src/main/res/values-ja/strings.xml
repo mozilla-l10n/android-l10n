@@ -1458,8 +1458,20 @@
   <string name="download_delete_single_item_snackbar_2">“%1$s” を削除しました</string>
   <!-- Text for the snackbar to confirm that downloads are in progress. -->
   <string name="download_in_progress_snackbar" tools:ignore="UnusedResources">ダウンロードしています...</string>
+  <!-- Text for the snackbar action button to view in progress download details. -->
+  <string name="download_in_progress_snackbar_action_details" tools:ignore="UnusedResources">詳細</string>
+  <!-- Text for the snackbar to confirm that a download has completed. -->
+  <string name="download_completed_snackbar" tools:ignore="UnusedResources">ダウンロードが完了しました</string>
+  <!-- Text for the snackbar action button to open a completed download. -->
+  <string name="download_completed_snackbar_action_open" tools:ignore="UnusedResources">開く</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">元に戻す</string>
   <!-- Text shown when no download exists -->
   <string name="download_empty_message_1" moz:removedIn="138" tools:ignore="UnusedResources">ダウンロード済みのファイルはありません</string>
+  <!-- Text shown when no download exists -->
+  <string name="download_empty_message_2">まだダウンロードしていません</string>
+  <!-- Text description shown when no download exists -->
+  <string name="download_empty_description">ダウンロードしたファイルがここに表示されます。</string>
   <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
@@ -1467,6 +1479,20 @@
   <string name="download_multi_select_title">%1$d 件選択</string>
   <!-- Text for the button to remove a single download item -->
   <string name="download_delete_item_1" moz:removedIn="138" tools:ignore="UnusedResources">削除</string>
+  <!-- Text for the button to delete a single downloaded file item -->
+  <string name="download_delete_item">削除</string>
+  <!-- Text for the button to share the download URL -->
+  <string name="download_share_url">URL を共有</string>
+  <!-- Text for the button to share the download file -->
+  <string name="download_share_file">ファイルを共有</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
+  <string name="download_delete_multi_select_dialog_confirmation" tools:ignore="UnusedResources">本当に選択したアイテムを削除してもよろしいですか？</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
+  <string name="download_delete_multi_select_dialog_confirm" tools:ignore="UnusedResources">削除</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
+  <string name="download_delete_multi_select_dialog_cancel" tools:ignore="UnusedResources">キャンセル</string>
+  <!-- Text for the header of in progress downloads -->
+  <string name="download_header_in_progress" tools:ignore="UnusedResources">ダウンロード中</string>
   <!--
     Time period headers for downloads
 
@@ -1482,6 +1508,23 @@
   <!-- Text for the header that groups the downloads older than other groups -->
   <string name="download_time_period_older">それ以前</string>
   <!--
+    Description of an in progress download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description" tools:ignore="UnusedResources">%1$s / %2$s • 残り %3$s</string>
+  <!-- Text to indicate that an in progress download is paused. -->
+  <string name="download_item_status_paused" tools:ignore="UnusedResources">一時停止中</string>
+  <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
+  <string name="download_item_download_speed_pending" tools:ignore="UnusedResources">計算中</string>
+  <!-- Text to indicate that a download has failed to download. -->
+  <string name="download_item_status_failed" tools:ignore="UnusedResources">ダウンロードに失敗しました</string>
+  <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
+  <string name="download_search_placeholder" tools:ignore="UnusedResources">ダウンロードを検索</string>
+  <!-- Text to indicate that no downloads match the search query. -->
+  <string name="download_search_no_results_found" tools:ignore="UnusedResources">検索結果はありません</string>
+  <!--
     Downloads Content Type Filters
 
     Text for the filter button to show all files in the downloads list
@@ -1495,6 +1538,8 @@
   <string name="download_content_type_filter_document">ドキュメント</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other" moz:removedIn="138" tools:ignore="UnusedResources">その他</string>
+  <!-- Text for the filter button to show all other file types in the downloads list -->
+  <string name="download_content_type_filter_other_1">その他</string>
   <!--
     Description of a downloaded item, displayed in the downloads list.
     %1$s: The size of the downloaded file.
@@ -1605,6 +1650,14 @@
   <string name="bookmark_menu_delete_button">削除</string>
   <!-- Bookmark overflow menu save button -->
   <string name="bookmark_menu_save_button">保存</string>
+  <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_newest">新しい順に並べ替え</string>
+  <!-- Label for button to sort bookmarks by oldest in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_oldest">古い順に並べ替え</string>
+  <!-- Label for button to sort bookmarks in alphabetical order in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_a_to_z">名前で並べ替え (昇順)</string>
+  <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_z_to_a">名前で並べ替え (降順)</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -3382,8 +3435,28 @@
   <string name="text_field_eye_trailing_icon_default_content_description">隠しテキストを表示</string>
   <!-- The default content description for the cross trailing icon button in TextField -->
   <string name="text_field_cross_trailing_icon_default_content_description">テキストを消去</string>
+  <!--
+    Setup checklist feature
+
+    The title of the default browser task for the setup checklist
+  -->
+  <string name="setup_checklist_task_default_browser" tools:ignore="UnusedResources">既定のブラウザーに設定</string>
+  <!-- The title of the sign-in task for the setup checklist -->
+  <string name="setup_checklist_task_account_sync" tools:ignore="UnusedResources">アカウントにログイン</string>
+  <!-- The title of the theme selection task for the setup checklist -->
+  <string name="setup_checklist_task_theme_selection" tools:ignore="UnusedResources">テーマを選択</string>
+  <!-- The title of the toolbar selection task for the setup checklist -->
+  <string name="setup_checklist_task_toolbar_selection" tools:ignore="UnusedResources">ツールバーの配置を選択</string>
+  <!-- The title of the explore extensions task for the setup checklist -->
+  <string name="setup_checklist_task_explore_extensions" tools:ignore="UnusedResources">拡張機能を探す</string>
+  <!-- The title of the search widget task for the setup checklist -->
+  <string name="setup_checklist_task_search_widget" tools:ignore="UnusedResources">検索ウィジェットをインストール</string>
   <!-- Accessibility description for a check mark on a completed task -->
   <string name="a11y_completed_task_description">完了したタスク</string>
   <!-- Accessibility description for the task icon -->
   <string name="a11y_task_icon_description">タスクアイコン</string>
+  <!-- Label for the primary action button to unlock private tabs -->
+  <string name="pbm_authentication_unlock">ロック解除</string>
+  <!-- Title text instructing the user to unlock private tabs -->
+  <string name="pbm_authentication_unlock_private_tabs">プライベートタブのロックを解除</string>
 </resources>
