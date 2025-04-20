@@ -91,6 +91,8 @@
   <string name="home_screen_shortcut_open_new_tab_2">Bagong tab</string>
   <!-- Shortcut action to open new private tab -->
   <string name="home_screen_shortcut_open_new_private_tab_2">Bagong private tab</string>
+  <!-- Shortcut action to open Passwords screen -->
+  <string name="home_screen_shortcut_passwords">Mga password</string>
   <!--
     Recent Tabs
 
@@ -513,22 +515,56 @@
   <string name="preferences_show_voice_search">Ipakita ang voice search</string>
   <!-- Preference title for switch preference to show search suggestions also in private mode -->
   <string name="preferences_show_search_suggestions_in_private">Ipakita sa mga pribadong session</string>
+  <!-- Preference title for switch preference to show trending search suggestions -->
+  <string name="preferences_show_trending_search_suggestions">Ipakita ang mga nagte-trend na mungkahi</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Ipakita ang mga hinanap kamakailan</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Ipakita ang mga mungkahi mula sa clipboard</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
   <string name="preferences_search_browsing_history">Ipakita ang kasaysayan ng pag-browse</string>
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">Hanapin sa mga bookmark</string>
+  <!-- Preference title for switch preference to show shortcuts when searching -->
+  <string name="preferences_show_shortcuts">Ipakita ang mga shortcut</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
   <string name="preferences_search_synced_tabs">Hanapin sa mga naka-sync na tab</string>
   <!-- Preference for account settings -->
   <string name="preferences_account_settings">Mga account setting</string>
   <!-- Preference for enabling url autocomplete -->
   <string name="preferences_enable_autocomplete_urls">Autocomplete URLs</string>
+  <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
+  <string name="preferences_show_sponsored_suggestions">Mga mungkahi mula sa mga sponsor</string>
+  <!--
+    Summary for preference to show sponsored Firefox Suggest search suggestions.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="preferences_show_sponsored_suggestions_summary">Suportahan ang %1$s sa mga minsanang sponsored suggestion</string>
+  <!--
+    Preference title for switch preference to show Firefox Suggest search suggestions for web content.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="preferences_show_nonsponsored_suggestions">Mga mungkahi mula sa %1$s</string>
+  <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+  <string name="preferences_show_nonsponsored_suggestions_summary">Kumuha ng mga mungkahi sa web na may kaugnayan sa hinahanap mo</string>
+  <!-- Preference for link sharing -->
+  <string name="preferences_link_sharing">Pagbahagi ng link</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">Buksan ang mga link sa mga app</string>
+  <!-- Preference for open links in third party apps always open in apps option -->
+  <string name="preferences_open_links_in_apps_always">Palagi</string>
+  <!-- Preference for open links in third party apps ask before opening option -->
+  <string name="preferences_open_links_in_apps_ask">Magtanong bago buksan</string>
+  <!-- Preference for open links in third party apps never open in apps option -->
+  <string name="preferences_open_links_in_apps_never">Hindi kailanman</string>
   <!-- Preference for open download with an external download manager app -->
   <string name="preferences_external_download_manager">Hiwalay na download manager</string>
+  <!-- Preference for enabling gecko engine logs -->
+  <string name="preferences_enable_gecko_logs">I-enable ang mga Gecko log</string>
+  <!-- Message to indicate users that we are quitting the application to apply the changes -->
+  <string name="quit_application">Nagsasara na ang application para mailapat ang mga pagbabago…</string>
+  <!-- Preference for extensions -->
+  <string name="preferences_extensions">Mga extension</string>
   <!-- Preference for notifications -->
   <string name="preferences_notifications">Mga abiso</string>
   <!-- Button caption to confirm the add-on collection configuration -->
@@ -568,6 +604,8 @@
   <string name="wallpaper_select_error_snackbar_message">Hindi mapalitan ang wallpaper</string>
   <!-- Text displayed that links to website containing documentation about the "Limited Edition" wallpapers. -->
   <string name="wallpaper_learn_more">Alamin</string>
+  <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
+  <string name="preferences_manage_account_summary">Baguhin ang iyong password, i-manage ang pagkolekta ng data, o burahin ang iyong account</string>
   <!-- Preference for triggering sync -->
   <string name="preferences_sync_now">Mag-sync na</string>
   <!-- Preference category for sync -->
@@ -576,6 +614,8 @@
   <string name="preferences_sync_history">Kasaysayan</string>
   <!-- Preference for syncing bookmarks -->
   <string name="preferences_sync_bookmarks">Mga Bookmark</string>
+  <!-- Preference for syncing passwords -->
+  <string name="preferences_sync_logins_2">Mga password</string>
   <!-- Preference for syncing tabs -->
   <string name="preferences_sync_tabs_2">Mga nakabukas na tab</string>
   <!-- Preference for signing out -->
@@ -1434,16 +1474,36 @@
   <string name="add_to_homescreen_text_placeholder">Pangalan ng shortcut</string>
   <!-- Describes the add to homescreen functionality -->
   <string name="add_to_homescreen_description_2">Madali lang maidagdag ang website na ito sa Home screen ng iyong device para agarang ma-access at ma-browse na parang app lamang.</string>
+  <!-- Preference for managing the settings for logins and passwords in Fenix -->
+  <string name="preferences_passwords_logins_and_passwords_2">Mga password</string>
+  <!-- Preference for managing the saving of logins and passwords in Fenix -->
+  <string name="preferences_passwords_save_logins_2">I-save ang mga password</string>
   <!-- Preference option for asking to save passwords in Fenix -->
   <string name="preferences_passwords_save_logins_ask_to_save">Tanungin kung ise-save</string>
   <!-- Preference option for never saving passwords in Fenix -->
   <string name="preferences_passwords_save_logins_never_save">Huwag mag-save kailanman</string>
   <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
   <string name="preferences_passwords_autofill2">i-Autofill ang %1$s</string>
+  <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+  <string name="preferences_passwords_autofill_description">Punan at mag-save ng mga username at password sa mga website habang gumagamit ng %1$s.</string>
   <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
   <string name="preferences_android_autofill">i-Autofill sa ibang apps</string>
+  <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+  <string name="preferences_android_autofill_description">Punan ang mga username at password sa ibang mga app ng iyong device.</string>
+  <!-- Preference option for adding a password -->
+  <string name="preferences_logins_add_login_2">Magdagdag ng password</string>
+  <!-- Preference for syncing saved passwords in Fenix -->
+  <string name="preferences_passwords_sync_logins_2">Mag-sync ng mga password</string>
+  <!-- Preference for syncing saved passwords in Fenix, when not signed in -->
+  <string name="preferences_passwords_sync_logins_across_devices_2">Mag-sync ng mga password sa iba\'t-ibang mga device</string>
+  <!-- Preference to access list of saved passwords -->
+  <string name="preferences_passwords_saved_logins_2">Mga naka-save na password</string>
+  <!-- Description of empty list of saved passwords. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_saved_logins_description_empty_text_2">Ang iyong mga password na naka-save o naka-sync sa %s ay malilista rito. Lahat ng mga password na naka-save ay naka-encrypt.</string>
   <!-- Preference to access list of login exceptions that we never save logins for -->
   <string name="preferences_passwords_exceptions">Mag exception</string>
+  <!-- Empty description of list of login exceptions that we never save passwords for. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_exceptions_description_empty_2">Hindi magse-save ng password ang %s sa mga site na nakalista rito.</string>
   <!-- Text on button to remove all saved login exceptions -->
   <string name="preferences_passwords_exceptions_remove_all">Burahin lahat ng mga exception</string>
   <!-- The header for the site that a login is for -->
