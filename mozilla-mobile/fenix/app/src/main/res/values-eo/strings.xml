@@ -1030,7 +1030,7 @@
   <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
   <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Konu pli ol 100+ novajn etendaĵojn, kiuj permesas al vi personecigi Firefox.</string>
   <!-- Button text of the Nimbus message for extensions general availability. -->
-  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Esplori etendaĵoj</string>
+  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Esplori etendaĵojn</string>
   <!--
     Extension process crash dialog to user
 
@@ -2580,6 +2580,8 @@
   <string name="quick_settings_sheet_secure_connection_2">Sekura konekto</string>
   <!-- Label that indicates a site is using a insecure connection -->
   <string name="quick_settings_sheet_insecure_connection_2">Nesekura konekto</string>
+  <!-- Label that indicates a site is displaying a local document -->
+  <string name="quick_settings_sheet_local_page">Tiu ĉi paĝo estas konservita en via aparato.</string>
   <!-- Label to clear site data -->
   <string name="clear_site_data">Viŝi kuketojn kaj retejajn datumojn</string>
   <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site. %s is the domain of the site. -->
@@ -2737,10 +2739,17 @@
   <string name="firefox_suggest_header" tools:ignore="BrandUsage">Sugestoj de Firefox</string>
   <!-- Search suggestions title for trending searches. -->
   <string name="trending_searches_header" moz:removedIn="137" tools:ignore="UnusedResources">Popularaj serĉoj</string>
+  <!--
+    Search suggestions title for trending search suggestions.
+    %s is a placeholder for the name of the search engine providing the trending search suggestions.
+  -->
+  <string name="trending_searches_header_2">Populara en %s</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Serĉo per Google</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">Serĉo de %s</string>
+  <!-- Title for recent search suggestions. -->
+  <string name="recent_searches_header">Ĵusaj serĉoj</string>
   <!--
     Default browser experiment
 
@@ -3280,6 +3289,26 @@
   -->
   <string name="glean_debug_tools_title">Senerarigaj iloj de Glean</string>
   <!--
+    Debug drawer region tools
+
+    Title of the Region tools in the Debug Drawer.
+    This tool allows temporarily overriding the home region (user's default locale)
+    and the current region (device's detected location) for testing purposes.
+  -->
+  <string name="debug_drawer_region_tools_title">Regionaj iloj</string>
+  <!-- The description of the Region tools in the Debug Drawer -->
+  <string name="debug_drawer_regin_tools_description">Provizora superrego de la valoroj por hejma kaj nuna regiono, por testi.</string>
+  <!-- The text label for displaying home region. -->
+  <string name="debug_drawer_home_region_label">Hejma regiono</string>
+  <!-- The text label for displaying current region. -->
+  <string name="debug_drawer_current_region_label">Nuna regiono</string>
+  <!-- The text field label for overriding home region. -->
+  <string name="debug_drawer_override_home_region_label">Superregi hejman regionon</string>
+  <!-- The text field label for overriding current region. -->
+  <string name="debug_drawer_override_current_region_label">Superregi nunan regionon</string>
+  <!-- The title of the button for overriding home and current region. -->
+  <string name="debug_drawer_override_region">Superregi kaj hejman kaj nunan regionon</string>
+  <!--
     Messages explaining how to exit fullscreen mode
 
     Message shown to explain how to exit fullscreen mode when gesture navigation is enabled.
@@ -3341,4 +3370,44 @@
   <string name="text_field_eye_trailing_icon_default_content_description" moz:removedIn="139" tools:ignore="UnusedResources">Montri kaŝitan tekston</string>
   <!-- The default content description for the cross trailing icon button in TextField -->
   <string name="text_field_cross_trailing_icon_default_content_description" moz:removedIn="139" tools:ignore="UnusedResources">Viŝi tekston</string>
+  <!--
+    Setup checklist feature
+
+    ===== Setup checklist feature: Title =====
+
+    Title for the setup checklist feature when the state is 'incomplete'. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_title_state_incomplete">Fini la agordon de %1$s</string>
+  <!-- Title for the setup checklist feature when the state is 'completed' -->
+  <string name="setup_checklist_title_state_completed">Gratulon!</string>
+  <!--
+    ===== Setup checklist feature: Subtitles for 3 steps =====
+
+    Subtitle for a setup checklist with 3 steps initial step. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_subtitle_3_steps_initial_state">Seku la jenajn 3 paŝojn por agordi %1$s por la plej bona retuma sperto.</string>
+  <!--
+    ===== Setup checklist feature: Task titles =====
+
+    The title of the default browser task for the setup checklist
+  -->
+  <string name="setup_checklist_task_default_browser">Difini kiel norma retumilo</string>
+  <!-- The title of the sign-in task for the setup checklist -->
+  <string name="setup_checklist_task_account_sync">Komenci seancon per via konto</string>
+  <!-- The title of the theme selection task for the setup checklist -->
+  <string name="setup_checklist_task_theme_selection">Elekti etoson</string>
+  <!-- The title of the toolbar selection task for the setup checklist -->
+  <string name="setup_checklist_task_toolbar_selection">Elekti lokon por ilaro</string>
+  <!-- The title of the explore extensions task for the setup checklist -->
+  <string name="setup_checklist_task_explore_extensions">Esplori etendaĵojn</string>
+  <!--
+    Private browsing mode authentication screen
+
+    Label for the secondary action to exit private browsing mode
+  -->
+  <string name="pbm_authentication_leave_private_tabs">Forlasi privatajn langetojn</string>
+  <!-- Label for the primary action button to unlock private tabs -->
+  <string name="pbm_authentication_unlock">Malbloki</string>
+  <!-- Title text instructing the user to unlock private tabs -->
+  <string name="pbm_authentication_unlock_private_tabs">Malbloki privatajn langetojn</string>
 </resources>
