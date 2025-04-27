@@ -14,6 +14,8 @@
   <string name="content_description_private_browsing_button">Paganahin ang private browsing</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_disable_private_browsing_button">I-disable ang private browsing</string>
+  <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
+  <string name="content_description_private_browsing">Pribadong pag-browse</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Maghanap o ilagay ang address</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -50,6 +52,8 @@
   <string name="home_bookmarks_title">Mga bookmark</string>
   <!-- Content description for the button which navigates the user to show all of their bookmarks. -->
   <string name="home_bookmarks_show_all_content_description">Ipakita lahat ng mga bookmark</string>
+  <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
+  <string name="home_bookmarks_menu_item_remove">Alisin</string>
   <!-- About content. %1$s is the name of the app (for example "Firefox"). -->
   <string name="about_content">Ang %1$s ay gawa ng Mozilla.</string>
   <!--
@@ -666,6 +670,10 @@
   <string name="preferences_https_only_title">HTTPS-Only Mode</string>
   <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
   <string name="preferences_pbm_lock_screen_summary">Tingnan ang mga tab gamit ang fingerprint, face unlock, o PIN.</string>
+  <!-- Label for cookie banner section in quick settings panel. -->
+  <string name="cookie_banner_blocker">Cookie Banner Blocker</string>
+  <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
+  <string name="preferences_cookie_banner_reduction_private_mode">Cookie Banner Blocker sa pribadong pag-browse</string>
   <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle -->
   <string name="reduce_cookie_banner_off_for_site">Nakasarado para sa site na ito</string>
   <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
@@ -796,6 +804,8 @@
   <string name="quit_application">Nagsasara na ang application para mailapat ang mga pagbabago…</string>
   <!-- Preference for extensions -->
   <string name="preferences_extensions">Mga extension</string>
+  <!-- Preference for installing a local extension -->
+  <string name="preferences_install_local_extension">Mag-install ng extension mula sa file</string>
   <!-- Preference for notifications -->
   <string name="preferences_notifications">Mga abiso</string>
   <!-- Summary for notification preference indicating notifications are allowed -->
@@ -808,6 +818,8 @@
     The title of the required permissions section from addon's permissions screen
   -->
   <string name="addons_permissions_heading_required" tools:ignore="UnusedResources">Kinakailangan</string>
+  <!-- The title of the optional permissions section from addon's permissions screen -->
+  <string name="addons_permissions_heading_optional" tools:ignore="UnusedResources">Opsyonal</string>
   <!-- The title of the origin permission option allowing a user to enable the extension to run on all sites -->
   <string name="addons_permissions_allow_for_all_sites" tools:ignore="UnusedResources">Payagan para sa lahat ng mga site</string>
   <!-- Button caption to confirm the add-on collection configuration -->
@@ -1136,6 +1148,8 @@
   <string name="close_tabs_after_one_month_summary">Isara pagkatapos ng isang buwan</string>
   <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
   <string name="opening_screen_homepage_summary">Buksan sa homepage</string>
+  <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
+  <string name="opening_screen_last_tab_summary">Buksan sa huling tab</string>
   <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
   <string name="opening_screen_after_four_hours_of_inactivity_summary">Buksan sa homepage pagkatapos ng apat na oras</string>
   <!--
@@ -1160,6 +1174,13 @@
   <string name="studies_title">Mag-install at magpatakbo ng mga study</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Matuto ng higit pa</string>
+  <!--
+    Sessions
+
+    Title for the list of tabs in the current private session used by a11y services
+    The %1$s will be replaced by the number of opened private tabs
+  -->
+  <string name="tabs_header_private_tabs_counter_title">Mga Nakabuksan na Pribadong Tab: %1$s. I-tap para lumipat ng tab.</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Magdagdag ng Tab</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1320,6 +1341,8 @@
     %3$s is the amount of time remaining to complete the download.
   -->
   <string name="download_item_in_progress_description" tools:ignore="UnusedResources">%1$s / %2$s • natitirang %3$s </string>
+  <!-- Text to indicate that an in progress download is paused. -->
+  <string name="download_item_status_paused" tools:ignore="UnusedResources">nakatigil</string>
   <!-- Text to indicate that a download has failed to download. -->
   <string name="download_item_status_failed" tools:ignore="UnusedResources">Bigo ang pag-download</string>
   <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
@@ -1622,6 +1645,8 @@
   <string name="studies_off">Nakasara</string>
   <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
   <string name="preferences_category_permissions">Mga pahintulot</string>
+  <!-- Category header of a preference that allows a user to alter settings related to web content. -->
+  <string name="preferences_category_content">Nilalaman</string>
   <!-- Preference for altering the default browsing mode. When enabled, the desktop site will always be requested. -->
   <string name="preference_feature_desktop_mode_default">Palaging hilingin ang desktop site</string>
   <!--
@@ -1689,8 +1714,12 @@
   <string name="share_button_content_description">Ibahagi</string>
   <!-- Text for the Save to PDF feature in the share menu -->
   <string name="share_save_to_pdf">i-Save bilang PDF</string>
+  <!-- Text for error message when generating a PDF file Text. -->
+  <string name="unable_to_save_to_pdf_error">Hindi makabuo ng PDF</string>
   <!-- Text for standard error snackbar dismiss button. -->
   <string name="standard_snackbar_error_dismiss">Alisin</string>
+  <!-- Text for error message when printing a page and it fails. -->
+  <string name="unable_to_print_page_error">Hindi kayang ma-print ang pahinang ito</string>
   <!-- Text for the print feature in the share and browser menu -->
   <string name="menu_print">I-print</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
@@ -1737,6 +1766,7 @@
   <string name="notification_pbm_delete_text_2">Isara ang mga pribadong tab</string>
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">Isara ang mga pribadong tab?</string>
+  <string name="notification_erase_text_android_14">I-tap o i-swipe ang abisong ito para isara ang mga pribadong tab.</string>
   <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
   <string name="notification_marketing_channel_name">Marketing</string>
   <!--
@@ -1751,6 +1781,10 @@
   <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Gawin mong default browser ang Firefox</string>
   <!-- Title shown in the notification that pops up to re-engage the user -->
   <string name="notification_re_engagement_title">Subukang ang pribadong pag-browse</string>
+  <!-- Title A shown in the notification that pops up to re-engage the user -->
+  <string name="notification_re_engagement_A_title">Mag-browse nang walang bakas</string>
+  <!-- Title B shown in the notification that pops up to re-engage the user -->
+  <string name="notification_re_engagement_B_title">Simulan ang iyong unang paghahanap</string>
   <!-- Preference for taking the short survey. -->
   <string name="preferences_take_survey">Sagutin ang Survey</string>
   <!-- Preference for not taking the short survey. -->
@@ -1967,6 +2001,8 @@
   <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Sa mga Pribadong tab lamang</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
   <string name="preference_enhanced_tracking_protection_custom_cryptominers">Mga cryptominer</string>
+  <!-- Preference for enhanced tracking protection for the custom protection settings -->
+  <string name="preference_enhanced_tracking_protection_custom_known_fingerprinters">Mga Kilalang Fingerprinter</string>
   <!-- Button label for navigating to the Enhanced Tracking Protection details -->
   <string name="enhanced_tracking_protection_details">Mga detalye</string>
   <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
@@ -2015,6 +2051,10 @@
   <string name="etp_redirect_trackers_title">Mga Redirect Tracker</string>
   <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_redirect_trackers_description">Inaalis ang mga cookie na itinakda ng mga redirect sa mga kilalang tracking website.</string>
+  <!-- Preference for fingerprinting protection for the custom protection settings -->
+  <string name="etp_suspected_fingerprinters_title">Pinaghihinalaang mga Fingerprinter</string>
+  <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_known_fingerprinters_title">Mga Kilalang Fingerprinter</string>
   <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
   <string name="preference_etp_smartblock_learn_more">Alamin</string>
   <!--
@@ -2033,10 +2073,26 @@
   <string name="preference_doh_add_site_description">Magdagdag ng Site</string>
   <!-- Title displayed for "Increased Protection" option under "DNS over HTTPS" -->
   <string name="preference_doh_increased_protection">Karagdagang Proteksyon</string>
+  <!-- Bullet point 1 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_1">Gamitin lang ang provider na pinili mo</string>
+  <!-- Bullet point 2 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_2">Palaging magbabala kung hindi available ang secure DNS</string>
   <!-- Title displayed for "Off" option under "DNS over HTTPS" -->
   <string name="preference_doh_off">Nakasara</string>
+  <!-- Text displayed above provider dropdown under "DNS over HTTPS" -->
+  <string name="preference_doh_choose_provider">Pumili ng provider</string>
+  <!-- Text displayed for "Default provider" under "DNS over HTTPS" providers -->
+  <string name="preference_doh_provider_default">(default)</string>
   <!-- Text displayed for "Custom" under "DNS over HTTPS" providers -->
   <string name="preference_doh_provider_custom">Pasadya</string>
+  <!-- Text displayed for "Custom provider" dialog under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_title">Pasadyang provider</string>
+  <!-- Text displayed above provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_textfield">Provider</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL does not start with "https://" or its scheme is not "https" -->
+  <string name="preference_doh_provider_custom_dialog_error_https">Dapat magsimula sa “https://” ang URL</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL is invalid -->
+  <string name="preference_doh_provider_custom_dialog_error_invalid">Di-wastong URL</string>
   <!-- Cancel button text for provider textfield under "DNS over HTTPS" -->
   <string name="preference_doh_provider_custom_dialog_cancel">Ikansela</string>
   <!-- Add button text for provider textfield under "DNS over HTTPS" -->
@@ -2195,8 +2251,12 @@
   <string name="preferences_credit_cards_sync_cards_across_devices">Mag-sync ng mga card sa iba\'t-ibang mga device</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
   <string name="preferences_credit_cards_sync_cards">Mag-sync ng mga card</string>
+  <!-- Preference option for adding a card -->
+  <string name="preferences_credit_cards_add_credit_card_2">Magdagdag ng card</string>
   <!-- Preference option for adding an address -->
   <string name="preferences_addresses_add_address">Magdagdag ng tirahan</string>
+  <!-- Preference for saving and filling addresses -->
+  <string name="preferences_addresses_save_and_autofill_addresses_2">I-save ang maglagay ng mga address</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">Magdagdag ng card</string>
   <!-- Title of the "Edit card" screen -->
@@ -2293,6 +2353,8 @@
   <string name="search_add_custom_engine_name_label">Pangalan</string>
   <!-- Placeholder text shown in the Search Engine Name text field before a user enters text -->
   <string name="search_add_custom_engine_name_hint_2">Pangalan ng search engine</string>
+  <!-- Placeholder text shown in the Search String TextField before a user enters text -->
+  <string name="search_add_custom_engine_search_string_hint_2">URL na gagamitin sa paghahanap</string>
   <!-- Description text for the Search String TextField. The %s is part of the string -->
   <string name="search_add_custom_engine_search_string_example" formatted="false">Palitan ang query ng “%s”. Halimbawa:\nhttps://www.google.com/search?q=%s</string>
   <!-- Accessibility description for the form in which details about the custom search engine are entered -->
