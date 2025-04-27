@@ -2383,6 +2383,8 @@
   <string name="phone_feature_blocked_step_permissions">2. i-Tap ang &lt;b&gt;Mga pahintulot&lt;/b&gt;</string>
   <!-- Third step for the allowing a permission (%1$s is the permission name, for example "Camera"). -->
   <string name="phone_feature_blocked_step_feature">3. i-Toggle ang &lt;b&gt;%1$s&lt;/b&gt; sa nakabukas</string>
+  <!-- Label that indicates a site is using a insecure connection -->
+  <string name="quick_settings_sheet_insecure_connection_2">Ang koneksyon ay hindi ligtas</string>
   <!-- Label to clear site data -->
   <string name="clear_site_data">Burahin ang mga cookie at site data</string>
   <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site. %s is the domain of the site. -->
@@ -2414,6 +2416,8 @@
   <string name="login_deletion_confirmation_2">Sigurado ka ba na gusto mong i-delete ang password na ito?</string>
   <!-- Positive action of a dialog asking to delete -->
   <string name="dialog_delete_positive">Burahin</string>
+  <!-- Negative action of a dialog asking to delete login -->
+  <string name="dialog_delete_negative">Ikansela</string>
   <!-- The saved password options menu description. -->
   <string name="login_options_menu_2">Mga pamimilian sa password</string>
   <!-- The editable text field for a login's password. -->
@@ -2424,14 +2428,24 @@
   <string name="add_login_2">Magdagdag ng password</string>
   <!-- Error text displayed underneath the password field when it is in an error case. -->
   <string name="saved_login_password_required_2">Maglagay ng password</string>
+  <!-- The error message in add login view when username field is blank. -->
+  <string name="saved_login_username_required_2">Maglagay ng username</string>
+  <!-- The error message in add login view when hostname field is blank. -->
+  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Kailangan ang hostname</string>
+  <!-- The error message in add login view when hostname field is blank. -->
+  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Maglagay ng web address</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Paghanap gamit ang boses</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
   <string name="voice_search_explainer">Magsalita na</string>
   <!-- The error message in edit login view when a duplicate username exists. -->
   <string name="saved_login_duplicate">Mayroon nang login na may ganyang username</string>
+  <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+  <string name="add_login_hostname_hint_text">https://www.example.com</string>
   <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
   <string name="add_login_hostname_invalid_text_3">Kailangang may “https://” o “http://” ang web address</string>
+  <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+  <string name="add_login_hostname_invalid_text_2">Kinakailangan ang wastong hostname</string>
   <!--
     Synced Tabs
 
@@ -2456,10 +2470,27 @@
   <string name="top_sites_toggle_top_recent_sites_4">Mga shortcut</string>
   <!-- Title text displayed in the rename top site dialog. -->
   <string name="top_sites_rename_dialog_title">Pangalan</string>
+  <!-- Hint for renaming title of a shortcut -->
+  <string name="shortcut_name_hint">Pangalan ng shortcut</string>
+  <!-- Hint for editing URL of a shortcut. -->
+  <string name="shortcut_url_hint">URL ng shortcut</string>
   <!-- Dialog button text for canceling the rename top site prompt. -->
   <string name="top_sites_rename_dialog_cancel">Ikansela</string>
   <!-- Text for the menu button to open the homepage settings. -->
   <string name="top_sites_menu_settings">Mga setting</string>
+  <!-- Text for the menu button to navigate to sponsors and privacy support articles. '&amp;' is replaced with the ampersand symbol: & -->
+  <string name="top_sites_menu_sponsor_privacy">Ang aming mga suki at iyong pribasiya</string>
+  <!-- Label text displayed for a sponsored top site. -->
+  <string name="top_sites_sponsored_label">Naka-sponsor</string>
+  <!-- Text for the menu item to edit a top site. -->
+  <string name="top_sites_edit_top_site">Baguhin</string>
+  <!-- Error message when the user entered an invalid URL -->
+  <string name="top_sites_edit_dialog_url_error">Maglagay ng wastong URL</string>
+  <!--
+    Search suggestions title for trending search suggestions.
+    %s is a placeholder for the name of the search engine providing the trending search suggestions.
+  -->
+  <string name="trending_searches_header_2">Mga nagte-trend sa %s</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Paghahanap sa Google</string>
   <!-- Default browser card text -->
@@ -2478,6 +2509,10 @@
   <string name="a11y_action_label_expand">palawigin</string>
   <!-- Action label for links that point to an article. Talkback will append this to say "Double tap to read the article". -->
   <string name="a11y_action_label_read_article">basahin ang artikulo</string>
+  <!-- Action label for links to the Firefox Pocket website. Talkback will append this to say "Double tap to open link to learn more". -->
+  <string name="a11y_action_label_pocket_learn_more">buksan ang link para matuto pa</string>
+  <!-- Title for dialog displayed when trying to access links present in a text. -->
+  <string name="a11y_links_title">Mga link</string>
   <!-- Translations feature -->
 
   <!--
@@ -2496,14 +2531,38 @@
   <string name="translations_bottom_sheet_title_first_time">Subukan ang mga pribadong pagsasalin sa %1$s</string>
   <!-- Additional information on the translation dialog that appears when a user uses the translation feature the first time. %1$s is a link using translations_bottom_sheet_info_message_learn_more as text. -->
   <string name="translations_bottom_sheet_info_message">Para sa iyong pribasiya, hindi kailanaman lalabas sa device mo ang mga pagsasalin. May mga bagong wika at pagpapaganda, parating na! %1$s</string>
+  <!-- Text that links to additional information about the Firefox translations feature. -->
+  <string name="translations_bottom_sheet_info_message_learn_more">Alamin</string>
   <!-- Label for the dropdown to select which language to translate from on the translations dialog. Usually the translate from language selected will be the same as the page language. -->
   <string name="translations_bottom_sheet_translate_from">Isalin mula</string>
   <!-- Label for the dropdown to select which language to translate to on the translations dialog. Usually the translate to language selected will be the user's preferred language. -->
   <string name="translations_bottom_sheet_translate_to">Isalin sa</string>
+  <!-- Label for the dropdown to select which language to translate from on the translations dialog when the page language is not supported. This selection is to allow the user to select another language, in case we automatically detected the page language incorrectly. -->
+  <string name="translations_bottom_sheet_translate_from_unsupported_language">Sumubok ng ibang wikang pagbabasihan</string>
+  <!-- Button text on the translations dialog to dismiss the dialog and return to the browser. -->
+  <string name="translations_bottom_sheet_negative_button">Hindi sa ngayon</string>
+  <!-- Button text on the translations dialog to restore the translated website back to the original untranslated version. -->
+  <string name="translations_bottom_sheet_negative_button_restore">Ipakita ang orihinal</string>
   <!-- Accessibility announcement (not visible, for screen readers etc.) for the translations dialog after restore button was pressed that indicates the original untranslated page was loaded. -->
   <string name="translations_bottom_sheet_restore_accessibility_announcement">Naka-load ang orihinal at hindi nasalin na pahina</string>
+  <!-- Button text on the translations dialog when a translation error appears, used to dismiss the dialog and return to the browser. -->
+  <string name="translations_bottom_sheet_negative_button_error">Tapos na</string>
   <!-- Button text on the translations dialog to begin a translation of the website. -->
   <string name="translations_bottom_sheet_positive_button">Isalin</string>
+  <!-- Button text on the translations dialog when a translation error appears. -->
+  <string name="translations_bottom_sheet_positive_button_error">Subukan muli</string>
+  <!-- Inactive button text on the translations dialog that indicates a translation is currently in progress. This button will be accompanied by a loading icon. -->
+  <string name="translations_bottom_sheet_translating_in_progress">Nagsasalin</string>
+  <!-- Button content description (not visible, for screen readers etc.) for the translations dialog translate button that indicates a translation is currently in progress. -->
+  <string name="translations_bottom_sheet_translating_in_progress_content_description">Kasalukuyang nagsasalin</string>
+  <!-- Default dropdown option when initially selecting a language from the translations dialog language selection dropdown. -->
+  <string name="translations_bottom_sheet_default_dropdown_selection">Pumili ng wika</string>
+  <!-- The title of the warning card informs the user that a translation could not be completed. -->
+  <string name="translation_error_could_not_translate_warning_text">Nagkaroon ng problema sa pagsasalin. Pakisubukang muli.</string>
+  <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
+  <string name="translation_error_language_not_supported_warning_text">Pasensya na, hindi pa namin suportado ang %1$s.</string>
+  <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
+  <string name="translation_in_progress_snackbar">Nagsasalin…</string>
   <!--
     Translations options dialog
 
@@ -2574,14 +2633,80 @@
   <string name="never_translate_site_toolbar_title_preference">Huwag kailanman isalin ang mga site na ito</string>
   <!-- Screen header presenting the never translate site preference feature. It will appear under the toolbar. -->
   <string name="never_translate_site_header_preference">Para magdagdag ng bagong site: Bisitahin ito at piliin ang “Huwag kailanman isalin ang site na ito” mula sa menu ng pagsasalin.</string>
+  <!--
+    Content description (not visible, for screen readers etc.): For a never-translated site list item that is selected.
+    %1$s is web site url (for example:"wikipedia.com")
+  -->
+  <string name="never_translate_site_item_list_content_description_preference">Tanggalin ang %1$s</string>
+  <!--
+    The Delete site dialogue title will appear when the user clicks on a list item.
+    %1$s is web site url (for example:"wikipedia.com")
+  -->
+  <string name="never_translate_site_dialog_title_preference">Burahin ang %1$s?</string>
+  <!-- The Delete site dialogue positive button will appear when the user clicks on a list item. The site will be deleted. -->
+  <string name="never_translate_site_dialog_confirm_delete_preference">Burahin</string>
+  <!-- The Delete site dialogue negative button will appear when the user clicks on a list item. The dialog will be dismissed. -->
+  <string name="never_translate_site_dialog_cancel_preference">Ikansela</string>
   <!-- Screen header presenting the download language preference feature. It will appear under the toolbar. %1$s is a link using download_languages_header_learn_more_preference as text ("Learn more"). Talkback will append this to say "Double tap to open link to learn more". -->
   <string name="download_languages_header_preference">Mag-download ng kumpletong wika para sa mas mabilis na pagsasalin at sa pagsasalin offline. %1$s</string>
+  <!-- Clickable text from the screen header that links to a website. -->
+  <string name="download_languages_header_learn_more_preference">Alamin</string>
+  <!-- Text that will appear beside a core or pivot language package name to show that the language is necessary for the translation feature to function. -->
+  <string name="download_languages_default_system_language_require_preference">kailangan</string>
+  <!--
+    A text for download language preference item.
+    %1$s is the language name, for example, "Spanish".
+    %2$s is the language file size, for example, "(3.91 KB)" or, if the language package name is a pivot language, the string defined in download_languages_default_system_language_require_preference ("required").
+  -->
+  <string name="download_languages_language_item_preference">%1$s (%2$s)</string>
+  <!-- All languages list item. When the user presses this item, they can download all languages. -->
+  <string name="download_language_all_languages_item_preference">Lahat ng mga wika</string>
+  <!-- All languages list item. When the user presses this item, they can delete all languages that were downloaded. -->
+  <string name="download_language_all_languages_item_preference_to_delete">Burahin lahat ng mga wika</string>
+  <!-- Content description (not visible, for screen readers etc.): For a language list item that was downloaded, the user can now delete it. -->
+  <string name="download_languages_item_content_description_downloaded_state">Burahin</string>
+  <!-- Content description (not visible, for screen readers etc.): For a language list item, deleting is in progress. -->
+  <string name="download_languages_item_content_description_delete_in_progress_state">Kasalukuyang nagaganap</string>
+  <!--
+    Content description (not visible, for screen readers etc.): For a language list item, downloading is in progress.
+    %1$s is the language name, for example, "Spanish".
+    %2$s is the language file size, for example, "(3.91 KB)".
+  -->
+  <string name="download_languages_item_content_description_download_in_progress_state">Itigil ang pag-download sa %1$s (%2$s)</string>
+  <!-- Content description (not visible, for screen readers etc.): For a language list item that was not downloaded. -->
+  <string name="download_languages_item_content_description_not_downloaded_state">I-download</string>
   <!-- Additional information for the dialog used by the translations feature to confirm deleting a language. %1$s is the name of the app (for example "Firefox"). -->
   <string name="delete_language_file_dialog_message">Kung buburahin mo ang wikang ito, magda-download lang ng bahagyang wika ang %1$s sa iyong cache habang nagsasalin.</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
   <string name="download_language_file_dialog_positive_button_text_all_languages">I-download at isalin</string>
+  <!--
+    Unified Trust Panel
+
+    Text for the protection panel header when the site is secure.
+  -->
+  <string name="protection_panel_header_secure">Ligtas</string>
+  <!-- Text for the protection panel header when the site is not secure. -->
+  <string name="protection_panel_header_not_secure">Hindi ligtas</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
   <string name="protection_panel_etp_toggle_enabled_description">Kung mukhang may sira sa site na ito, subukang isara ang mga proteksyon.</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">Mga naharang na tracker: %d</string>
+  <!-- Text for when no trackers have been blocked. -->
+  <string name="protection_panel_no_trackers_blocked">Walang natagpuang mga tracker</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the trackers blocked panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_total_num_trackers_blocked">Mga naharang na tracker: %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
@@ -2589,4 +2714,46 @@
   <string name="clear_site_data_dialog_description">Maaari kang ma-log out sa mga website at mawala ang shopping cart kapag tinanggal mo ang mga cookie at site data para sa &lt;b&gt;%s&lt;/b&gt;.</string>
   <!-- Snackbar title shown when the site data has been cleared. -->
   <string name="clear_site_data_snackbar">Natanggal na ang mga cookie at site data</string>
+  <!--
+    Debug drawer
+
+    The user-facing title of the Debug Drawer feature.
+  -->
+  <string name="debug_drawer_title">Mga Kagamitan sa Pag-debug</string>
+  <!-- Content description (not visible, for screen readers etc.): Navigate back within the debug drawer. -->
+  <string name="debug_drawer_back_button_content_description">Bumalik</string>
+  <!-- The title of the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_title">Bilang ng tab</string>
+  <!-- The active tab count category in the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_active">Aktibo</string>
+  <!-- The inactive tab count category in the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_inactive">Di aktibo</string>
+  <!-- The private tab count category in the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_private">Pribado</string>
+  <!-- The total tab count category in the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_total">Kabuuan</string>
+  <!-- The error message of the text field in the tab creation tool when the text field is a zero -->
+  <string name="debug_drawer_tab_tools_tab_quantity_non_zero_error">Mangyaring maglagay ng numerong higit sa zero</string>
+  <!-- The continue button label -->
+  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Magpatuloy</string>
+  <!--
+    Survey view
+
+    The survey header
+  -->
+  <string name="micro_survey_survey_header_2">Mangyaring kumpletuhin ang survey</string>
+  <!-- The privacy notice link -->
+  <string name="micro_survey_privacy_notice_2">Paunawa sa pribasiya</string>
+  <!-- The submit button label text -->
+  <string name="micro_survey_submit_button_label">Ipadala</string>
+  <!-- The survey completion header -->
+  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">Tapos na ang survey</string>
+  <!-- The survey completion confirmation text -->
+  <string name="micro_survey_feedback_confirmation">Salamat sa iyong mga puna!</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_1" tools:ignore="UnusedResources">Lubos na nasiyahan</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_2" tools:ignore="UnusedResources">Nasiyahan</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_3" tools:ignore="UnusedResources">Neutral</string>
 </resources>
