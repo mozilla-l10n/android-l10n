@@ -223,6 +223,8 @@
   <string name="browser_menu_disabled_extensions_banner_onboarding_body">Para makagamit ng mga extension, i-enable ang mga ito sa mga setting o kaya\'y pagpili ng “%s” sa baba.</string>
   <!-- Browser menu banner link text for learning more about extensions -->
   <string name="browser_menu_extensions_banner_learn_more">Alamin</string>
+  <!-- Browser menu button that opens the extensions manager -->
+  <string name="browser_menu_manage_extensions">Pamahalaan ang mga extension</string>
   <!-- Content description (not visible, for screen readers etc.): Section heading for recommended extensions. -->
   <string name="browser_menu_recommended_section_content_description">Inirerekomendang mga extension</string>
   <!--
@@ -332,10 +334,22 @@
   <string name="browser_menu_tools">Mga kagamitan</string>
   <!-- Content description (not visible, for screen readers etc.): Back button for all menu redesign sub-menu -->
   <string name="browser_menu_back_button_content_description">Bumalik sa main menu</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar main menu. -->
+  <string name="browser_main_menu_handlebar_content_description">Isara ang main menu sheet</string>
   <!-- Content description (not visible, for screen readers etc.) for main menu help button. -->
   <string name="browser_main_menu_content_description_help_button">Tulong</string>
   <!-- Content description (not visible, for screen readers etc.) for main menu settings button. -->
   <string name="browser_main_menu_content_description_settings_button">Mga setting</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar extensions menu. -->
+  <string name="browser_extensions_menu_handlebar_content_description">Isara ang extension menu sheet</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar save menu. -->
+  <string name="browser_save_menu_handlebar_content_description">Isara ang save menu sheet</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar tools menu. -->
+  <string name="browser_tools_menu_handlebar_content_description">Isara ang tools menu sheet</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
+  <string name="browser_custom_tab_menu_handlebar_content_description">Isara ang pasadyang tab menu sheet</string>
+  <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu when the "Report broken site" feature is available -->
+  <string name="browser_menu_tools_description_with_translate_with_report_site_2">Reader View, Isalin, Mag-ulat ng sirang site, I-print, Ibahagi, Buksan ang app</string>
   <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu -->
   <string name="browser_menu_tools_description_with_translate_without_report_site">Reader View, Isalin, I-print, Ibahagi, Buksan sa app</string>
   <!-- Browser menu description that describes the various tools related menu items inside of the tools sub-menu when the "Report broken site" feature is available -->
@@ -500,7 +514,7 @@
     Description for sign in to sync screen. Nimbus experiments do not support string placeholders.
     Note: The word "Firefox" should NOT be translated
   -->
-  <string name="juno_onboarding_sign_in_description_3" tools:ignore="BrandUsage">Ine-encrypt ng Firefox ang iyong mga password, bookmark, at iba pa kapag naka-sync ka.</string>
+  <string name="juno_onboarding_sign_in_description_3" tools:ignore="BrandUsage">Kapag naka-sync ka, ine-encrypt ng Firefox ang iyong mga password, bookmark, at iba pa.</string>
   <!-- Text for the button to sign in to sync on the device -->
   <string name="juno_onboarding_sign_in_positive_button" tools:ignore="UnusedResources">Mag sign-in</string>
   <!-- Text for the button dismiss the screen and move on with the flow -->
@@ -561,6 +575,14 @@
   <string name="onboarding_add_on_reviews_label">Mga review: %1$s</string>
   <!-- Content description for the add-on icon. -->
   <string name="onboarding_add_on_icon_content_description">Icon ng add-on</string>
+  <!-- Content description for the an installed add-on icon. -->
+  <string name="onboarding_installed_add_on_icon_content_description">Icon para sa naka-install na na add-on</string>
+  <!-- Content description for the an installing add-on icon. -->
+  <string name="onboarding_installing_add_on_icon_content_description">Icon para sa pag-iinstall ng add-on</string>
+  <!-- Content description for the add add-on button. -->
+  <string name="onboarding_add_on_add_button_content_description">Button para sa magdagdag ng add-on</string>
+  <!-- Content description for the star rating group. %1$s is the rating. -->
+  <string name="onboarding_add_on_star_rating_content_description">May markang %1$s / 5</string>
   <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
   <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Tulungan kaming pagandahin ang Firefox</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
@@ -737,6 +759,8 @@
   <string name="reduce_cookie_banner_on_for_site">Nakabukas para sa site na ito</string>
   <!-- Text for indicating that a request for unsupported site was sent to Nimbus (it's a Mozilla library for experiments), this is shown as part of the protections panel with the tracking protection toggle -->
   <string name="reduce_cookie_banner_unsupported_site_request_submitted_2">Naipadala na ang support request</string>
+  <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
+  <string name="reduce_cookie_banner_unsupported_site">Hindi suportado ang site sa ngayon</string>
   <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. %1$s is a shortened URL of the current site. -->
   <string name="reduce_cookie_banner_details_panel_title_on_for_site_1">Buksan ang Cookie Banner Blocker para sa %1$s?</string>
   <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. %1$s is a shortened URL of the current site. -->
@@ -745,6 +769,10 @@
   <string name="reduce_cookie_banner_details_panel_title_unsupported_site_request_2">Hindi kusang makakatanggi ng cookie request sa %1$s sa site na ito. Maaari kang magpadala ng request para suportahan ang site na ito sa hinaharap.</string>
   <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
   <string name="reduce_cookie_banner_details_panel_description_off_for_site_1">Isara at buburahin ng %1$s ang mga cookie at ireload ang site na ito. Maaari kang ma-sign out o mawala ang shopping cart.</string>
+  <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="reduce_cookie_banner_details_panel_description_on_for_site_3">Buksan at susubukang kusang tanggihan ng %1$s ang lahat ng mga cookie banner sa site na ito.</string>
+  <!-- Message for the cookie banner re-engagement CFR -->
+  <string name="cookie_banner_cfr_message">Mas kaunting panggulo, mas kaunting mga cookie na nagmamanman sa iyo sa site na ito.</string>
   <!-- Description of the preference to enable "HTTPS-Only" mode. -->
   <string name="preferences_https_only_summary">Kusang sumusubok kumonekta sa mga site gamit ang HTTPS encryption protocol para sa karagdagang seguridad.</string>
   <!-- Summary of https only preference if https only is set to off -->
