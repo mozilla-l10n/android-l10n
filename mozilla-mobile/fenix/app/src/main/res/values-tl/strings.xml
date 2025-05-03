@@ -2441,7 +2441,7 @@
   <!-- The text for the "Delete card" button for deleting a credit card -->
   <string name="credit_cards_delete_card_button">Tanggalin ang card</string>
   <!-- The text for the confirmation message of "Delete card" dialog -->
-  <string name="credit_cards_delete_dialog_confirmation_2"> Burahin ang card?</string>
+  <string name="credit_cards_delete_dialog_confirmation_2">Burahin ang card?</string>
   <!-- The text for the positive button on "Delete card" dialog -->
   <string name="credit_cards_delete_dialog_button">Burahin</string>
   <!-- The title for the "Save" menu item for saving a credit card -->
@@ -2458,6 +2458,8 @@
   <string name="credit_cards_name_on_card_validation_error_message_2">Maglagay ng pangalan</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
   <string name="credit_cards_biometric_prompt_message">I-unlock para makita ang iyong mga naka-save na card</string>
+  <!-- Title of warning dialog if users have no device authentication set up -->
+  <string name="credit_cards_warning_dialog_title_2">I-secure ang iyong mga naka-save na payment method</string>
   <!-- Message of warning dialog if users have no device authentication set up -->
   <string name="credit_cards_warning_dialog_message_3">Magtakda ng device lock pattern, PIN, o password para maprotektahan ang iyong mga naka-save na payment method sakaling mapasakamay ng ibang tao ang iyong device.</string>
   <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -2601,6 +2603,10 @@
   <string name="dialog_delete_negative">Ikansela</string>
   <!-- The saved password options menu description. -->
   <string name="login_options_menu_2">Mga pamimilian sa password</string>
+  <!-- The editable text field for a website address. -->
+  <string name="saved_login_hostname_description_3">Ang editable text field para sa address ng website.</string>
+  <!-- The editable text field for a username. -->
+  <string name="saved_login_username_description_3">Ang editable text field para sa username.</string>
   <!-- The editable text field for a login's password. -->
   <string name="saved_login_password_description_2">Ang editable text field para sa password.</string>
   <!-- The button description to save changes to an edited password. -->
@@ -2647,6 +2653,16 @@
   <string name="synced_tabs_sign_in_button">Mag-sign in sa sync</string>
   <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
   <string name="synced_tabs_no_open_tabs">Walang nakabukas na mga tab</string>
+  <!-- Content description for expanding a group of synced tabs. -->
+  <string name="synced_tabs_expand_group">I-expand ang grupo ng mga naka-sync na tab</string>
+  <!-- Content description for collapsing a group of synced tabs. -->
+  <string name="synced_tabs_collapse_group">I-collapse ang grupo ng mga naka-sync na tab</string>
+  <!--
+    Top Sites
+
+    Title text displayed in the dialog when shortcuts limit is reached.
+  -->
+  <string name="shortcut_max_limit_title">Naabot na ang hangganan na bilang ng mga shortcut</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
   <string name="shortcut_max_limit_content">Para magdagdag ng bagong shortcut, magtanggal ng isa. I-tap nang matagal ang site at tanggalin.</string>
   <!-- Confirmation dialog button text when top sites limit is reached. -->
@@ -2697,6 +2713,10 @@
   <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Kusang isara pagkatapos ng isang buwan?</string>
   <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
   <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Pwedeng isara ng Firefox ang mga tab na hindi mo natingnan sa nakaraang buwan.</string>
+  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">BUKSAN ANG AUTO CLOSE</string>
+  <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
+  <string name="inactive_tabs_auto_close_message_snackbar">Naka-enable ang auto-close</string>
   <!--
     Awesome bar suggestion's headers
 
@@ -2742,6 +2762,18 @@
   <string name="pocket_stories_feature_learn_more">Matuto ng higit pa</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">Naka-sponsor</string>
+  <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
+  <string name="experiments_snackbar">I-enable ang telemetry para magpadala ng data.</string>
+  <!-- Snackbar button text to navigate to telemetry settings. -->
+  <string name="experiments_snackbar_button">Magpunta sa mga setting</string>
+  <!--
+    Review quality check feature
+
+    Paragraph explaining the grading system we use to classify the reliability of a product's reviews.
+  -->
+  <string name="review_quality_check_info_review_grade_header" moz:removedIn="136" tools:ignore="UnusedResources">Ang bawat produkto ay binibigyan namin ng marka &lt;b&gt;gamit ang letra&lt;/b&gt; mula A hanggang F.</string>
+  <!-- Paragraph explaining how a product's adjusted grading is calculated. -->
+  <string name="review_quality_check_explanation_body_adjusted_grading" moz:removedIn="136" tools:ignore="UnusedResources">Ang &lt;b&gt;adjusted rating&lt;/b&gt; ay base lamang sa mga review na sa tingin namin ay maaasahan.</string>
   <!-- Paragraph explaining product review highlights. %s is the name of the retailer (e.g. Amazon). -->
   <string name="review_quality_check_explanation_body_highlights" moz:removedIn="136" tools:ignore="UnusedResources">Ang &lt;b&gt;Mga Highlight&lt;/b&gt; ay mula sa %s pagsisiyasat sa huling 80 araw na sa tingin namin ay maaasahan.</string>
   <!--
@@ -2817,6 +2849,13 @@
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">Nagsasalin…</string>
   <!--
+    Title for the data saving mode warning dialog used in the translation request dialog.
+    This dialog will be presented when the user attempts to perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    %1$s is the size in kilobytes or megabytes of the language file.
+  -->
+  <string name="translations_download_language_file_dialog_title">I-download ang wika sa data saving mode (%1$s)?</string>
+  <!--
     Translations options dialog
 
     Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on.
@@ -2836,6 +2875,8 @@
   <string name="translation_option_bottom_sheet_translation_settings">Mga setting sa pagsasalin</string>
   <!-- Button text for the button that will take the user to a website to learn more about how translations works in the given app. %1$s is the name of the app (for example "Firefox"). -->
   <string name="translation_option_bottom_sheet_about_translations">Tungkol sa mga pagsasalin sa %1$s</string>
+  <!-- Content description (not visible, for screen readers etc.) for closing the translations bottom sheet. -->
+  <string name="translation_option_bottom_sheet_close_content_description">Isara ang Translations sheet</string>
   <!-- The title of the warning card informs the user that an error has occurred at page settings. -->
   <string name="translation_option_bottom_sheet_error_warning_text">May ilang mga setting na pansamantalang hindi mababago.</string>
   <!--
@@ -2864,6 +2905,8 @@
   <string name="automatic_translation_toolbar_title_preference">Kusang pagsasalin</string>
   <!-- Screen header presenting the automatic translation preference feature. It will appear under the toolbar. -->
   <string name="automatic_translation_header_preference">Pumili ng wika para pamahalaan ang mga kagustuhan sa ”palaging isalin“ at ”hindi kailanman isalin“.</string>
+  <!-- The title of the warning card informs the user that the system could not load languages for translation settings. -->
+  <string name="automatic_translation_error_warning_text">Hindi ma-load ang mga wika. Balikan mo na lang mamaya.</string>
   <!--
     Automatic translation options preference screen
 
@@ -2893,6 +2936,8 @@
     %1$s is web site url (for example:"wikipedia.com")
   -->
   <string name="never_translate_site_item_list_content_description_preference">Tanggalin ang %1$s</string>
+  <!-- The title of the warning card informs the user that an error has occurred at the never translate sites list. -->
+  <string name="never_translate_site_error_warning_text">Hindi ma-load ang mga site. Balikan mo na lang mamaya.</string>
   <!--
     The Delete site dialogue title will appear when the user clicks on a list item.
     %1$s is web site url (for example:"wikipedia.com")
@@ -2912,6 +2957,8 @@
   <string name="download_languages_header_preference">Mag-download ng kumpletong wika para sa mas mabilis na pagsasalin at sa pagsasalin offline. %1$s</string>
   <!-- Clickable text from the screen header that links to a website. -->
   <string name="download_languages_header_learn_more_preference">Alamin</string>
+  <!-- The subhead of the download language preference screen will appear above the pivot language. -->
+  <string name="download_languages_available_languages_preference">Mga wikang pwedeng magamit</string>
   <!-- Text that will appear beside a core or pivot language package name to show that the language is necessary for the translation feature to function. -->
   <string name="download_languages_default_system_language_require_preference">kailangan</string>
   <!--
@@ -2938,6 +2985,24 @@
   <string name="download_languages_item_content_description_download_in_progress_state">Itigil ang pag-download sa %1$s (%2$s)</string>
   <!-- Content description (not visible, for screen readers etc.): For a language list item that was not downloaded. -->
   <string name="download_languages_item_content_description_not_downloaded_state">I-download</string>
+  <!-- The title of the warning card informs the user that an error has occurred when fetching the list of languages. -->
+  <string name="download_languages_fetch_error_warning_text">Hindi ma-load ang mga wika. Balikan mo na lang mamaya.</string>
+  <!--
+    The title of the warning card informs the user that an error has occurred at downloading a language.
+    %1$s is the language name, for example, "Spanish".
+  -->
+  <string name="download_languages_error_warning_text">Hindi ma-download ang &lt;b&gt;%1$s&lt;/b&gt;. Pakisubukan uli.</string>
+  <!--
+    The title of the warning card informs the user that an error has occurred at deleting a language.
+    %1$s is the language name, for example, "Spanish".
+  -->
+  <string name="download_languages_delete_error_warning_text">Hindi mabura ang &lt;b&gt;%1$s&lt;/b&gt;. Pakisubukan uli.</string>
+  <!--
+    Title for the dialog used by the translations feature to confirm deleting a language.
+    The dialog will be presented when the user requests deletion of a language.
+    %1$s is the name of the language, for example, "Spanish" and %2$s is the size in kilobytes or megabytes of the language file.
+  -->
+  <string name="delete_language_file_dialog_title">Burahin ang %1$s (%2$s)?</string>
   <!-- Additional information for the dialog used by the translations feature to confirm deleting a language. %1$s is the name of the app (for example "Firefox"). -->
   <string name="delete_language_file_dialog_message">Kung buburahin mo ang wikang ito, magda-download lang ng bahagyang wika ang %1$s sa iyong cache habang nagsasalin.</string>
   <!--
@@ -2950,6 +3015,13 @@
   <string name="delete_language_file_dialog_positive_button_text">Burahin</string>
   <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
   <string name="delete_language_file_dialog_negative_button_text">Ikansela</string>
+  <!--
+    Title for the data saving mode warning dialog used by the translations feature.
+    This dialog will be presented when the user attempts to download a language or perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    %1$s is the size in kilobytes or megabytes of the language file.
+  -->
+  <string name="download_language_file_dialog_title">I-download habang nasa data saving mode (%1$s)?</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
   <string name="download_language_file_dialog_positive_button_text_all_languages">I-download at isalin</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
