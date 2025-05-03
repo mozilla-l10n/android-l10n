@@ -3022,6 +3022,10 @@
     %1$s is the size in kilobytes or megabytes of the language file.
   -->
   <string name="download_language_file_dialog_title">I-download habang nasa data saving mode (%1$s)?</string>
+  <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
+  <string name="download_language_file_dialog_checkbox_text">Palaging mag-download sa data saving mode</string>
+  <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
+  <string name="download_language_file_dialog_positive_button_text">I-download</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
   <string name="download_language_file_dialog_positive_button_text_all_languages">I-download at isalin</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
@@ -3038,10 +3042,21 @@
   <string name="protection_panel_banner_not_secure_title">Mag-ingat sa site na ito</string>
   <!-- Description text for the protection panel banner when the site is not secure. -->
   <string name="protection_panel_banner_not_secure_description">Hindi ligtas ang koneksyon.</string>
+  <!-- Title text for the protection panel banner when tracking protection is disabled. -->
+  <string name="protection_panel_banner_not_protected_title">Isinara mo ang mga proteksyon</string>
+  <!--
+    Title text for the protection panel banner when tracking protection is enabled.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="protection_panel_banner_protected_title">Nakabantay ang %s</string>
+  <!-- Description text for the protection panel banner when tracking protection is enabled. -->
+  <string name="protection_panel_banner_protected_description">Protektado ka. Kapag may napansin kami, sasabihan ka namin.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">Enhanced Tracking Protection</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
   <string name="protection_panel_etp_toggle_enabled_description">Kung mukhang may sira sa site na ito, subukang isara ang mga proteksyon.</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
+  <string name="protection_panel_etp_toggle_disabled_description">SARADO ang mga proteksyon. Iminumungkahi naming buksan muli ito.</string>
   <!--
     Text for displaying the total number of trackers blocked in the protection panel.
     %d is a placeholder for the number of trackers blocked.
@@ -3049,6 +3064,8 @@
   <string name="protection_panel_num_trackers_blocked">Mga naharang na tracker: %d</string>
   <!-- Text for when no trackers have been blocked. -->
   <string name="protection_panel_no_trackers_blocked">Walang natagpuang mga tracker</string>
+  <!-- Link text to navigate to privacy and security settings from the protection panel. -->
+  <string name="protection_panel_privacy_and_security_settings">Mga setting sa pribasiya at seguridad</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">Mga pahintulot</string>
   <!--
@@ -3067,12 +3084,19 @@
     %s is a placeholder for the base domain of website.
   -->
   <string name="clear_site_data_dialog_description">Maaari kang ma-log out sa mga website at mawala ang shopping cart kapag tinanggal mo ang mga cookie at site data para sa &lt;b&gt;%s&lt;/b&gt;.</string>
+  <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
+  <string name="clear_site_data_dialog_positive_button_text">Burahin</string>
   <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
   <string name="clear_site_data_dialog_negative_button_text">Ikansela</string>
   <!-- Snackbar title shown when the site data has been cleared. -->
   <string name="clear_site_data_snackbar">Natanggal na ang mga cookie at site data</string>
   <!-- Text for the connection security panel when the site is secure. -->
   <string name="connection_security_panel_secure">Ligtas na koneksyon</string>
+  <!--
+    Text for the connection security panel to indicate who the certificate was verified by.
+    %s is a placeholder for the name of the certificate authority that verified the ticket
+  -->
+  <string name="connection_security_panel_verified_by">Beniripika ng %s</string>
   <!--
     Debug drawer
 
@@ -3081,6 +3105,14 @@
   <string name="debug_drawer_title">Mga Kagamitan sa Pag-debug</string>
   <!-- Content description (not visible, for screen readers etc.): Navigate back within the debug drawer. -->
   <string name="debug_drawer_back_button_content_description">Bumalik</string>
+  <!-- Content description (not visible, for screen readers etc.): Open debug drawer. -->
+  <string name="debug_drawer_fab_content_description">Buksan ang debug drawer</string>
+  <!--
+    Debug drawer tabs tools
+
+    The title of the Tab Tools feature in the Debug Drawer.
+  -->
+  <string name="debug_drawer_tab_tools_title">Mga Tab Tool</string>
   <!-- The title of the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_title">Bilang ng tab</string>
   <!-- The active tab count category in the tab count section in Tab Tools. -->
@@ -3091,6 +3123,12 @@
   <string name="debug_drawer_tab_tools_tab_count_private">Pribado</string>
   <!-- The total tab count category in the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_total">Kabuuan</string>
+  <!-- The title of the tab creation tool section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_title">Tab creation tool</string>
+  <!-- The label of the text field in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_text_field_label">Bilang ng tab na lilikhain</string>
+  <!-- The error message of the text field in the tab creation tool when the text field is empty -->
+  <string name="debug_drawer_tab_tools_tab_quantity_empty_error">Walang laman ang text field</string>
   <!-- The error message of the text field in the tab creation tool when the text field has characters other than digits -->
   <string name="debug_drawer_tab_tools_tab_quantity_non_digits_error">Mangyaring magpasok ng mga positibong numero lamang</string>
   <!-- The error message of the text field in the tab creation tool when the text field is a zero -->
@@ -3185,6 +3223,8 @@
     The title of the Addresses feature in the Debug Drawer.
   -->
   <string name="debug_drawer_addresses_title">Mga tirahan</string>
+  <!-- The title of the section header for the list of debug locales that can be enabled and disabled. -->
+  <string name="debug_drawer_addresses_debug_locales_header">I-debug ang locale para ma-enable</string>
   <!-- The title of the header for the section for managing addresses. -->
   <string name="debug_drawer_addresses_management_header">Pamahalaan ang mga tirahan</string>
   <!-- The title of the button in the debug drawer for adding a new address. -->
@@ -3205,10 +3245,24 @@
     The title of the glean debugging feature
   -->
   <string name="glean_debug_tools_title">Glean Debug Tools</string>
+  <!--
+    Debug drawer region tools
+
+    Title of the Region tools in the Debug Drawer.
+    This tool allows temporarily overriding the home region (user's default locale)
+    and the current region (device's detected location) for testing purposes.
+  -->
+  <string name="debug_drawer_region_tools_title">Mga Region Tool</string>
   <!-- The text label for displaying home region. -->
   <string name="debug_drawer_home_region_label">Home region</string>
   <!-- The text label for displaying current region. -->
   <string name="debug_drawer_current_region_label">Kasalukuyang rehiyon</string>
+  <!-- The text field label for overriding home region. -->
+  <string name="debug_drawer_override_home_region_label">I-override ang home region</string>
+  <!-- The text field label for overriding current region. -->
+  <string name="debug_drawer_override_current_region_label">I-override ang kasalukuyang rehiyon</string>
+  <!-- The title of the button for overriding home and current region. -->
+  <string name="debug_drawer_override_region">I-override ang home at kasalukuyang rehiyon</string>
   <!--
     Messages explaining how to exit fullscreen mode
 
@@ -3243,6 +3297,12 @@
   <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">May root certificate na mag-eexpire na magdudulot para tumigil ang ilang mga feature sa Marso 14.</string>
   <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
   <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Mag-update bago Marso 14</string>
+  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">May mag-e-expire na root certificate na magdudulot ng pagkasira ng iyong bersyon ng Firefox.</string>
+  <!-- Homepage card title about old Firefox version -->
+  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Hindi hihigit sa 7 araw na lang ang nalalabi para mag-update</string>
+  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">Sa Marso 14, titigil nang gumana ang mga add-on at ibang Firefox feature dahil mayroong root certificate na mag-e-expire.</string>
   <!-- Homepage card title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
   <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">Huling pagkakataon para mapanatili ang iyong Firefox</string>
   <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
@@ -3263,6 +3323,8 @@
     The default content description for the eye trailing icon button in TextField
   -->
   <string name="text_field_eye_trailing_icon_default_content_description" moz:removedIn="139" tools:ignore="UnusedResources">Ipakita ang nakatagong text</string>
+  <!-- The default content description for the cross trailing icon button in TextField -->
+  <string name="text_field_cross_trailing_icon_default_content_description" moz:removedIn="139" tools:ignore="UnusedResources">Alisin ang text</string>
   <!--
     Setup checklist feature
 
@@ -3309,6 +3371,14 @@
   <string name="setup_checklist_group_essentials">%1$s essentials</string>
   <!-- The title of the 'customize' group in the setup checklist. %1$s is the name of the app (for example "Firefox"). -->
   <string name="setup_checklist_group_customize">Ipasadya ang iyong %1$s</string>
+  <!--
+    ===== Setup checklist feature: Button =====
+
+    Text for the 'remove' button for the setup checklist
+  -->
+  <string name="setup_checklist_button_remove">Alisin ang checklist</string>
+  <!-- Accessibility description for the task icon -->
+  <string name="a11y_task_icon_description">Task icon</string>
   <!--
     Private browsing mode authentication screen
 
