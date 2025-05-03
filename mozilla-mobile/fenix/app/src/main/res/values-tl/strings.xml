@@ -939,6 +939,8 @@
   <string name="customize_addon_collection_hint">Pangalan ng collection</string>
   <!-- Hint displayed on input field for custom collection user ID -->
   <string name="customize_addon_collection_user_hint">May-ari ng collection (User ID)</string>
+  <!-- Toast shown after confirming the custom extension collection configuration -->
+  <string name="toast_customize_extension_collection_done">Nabago na ang koleksyon ng extension. Isasara nang saglit ang application para mailapat ang mga pagbabago…</string>
   <!--
     Customize Home
 
@@ -1943,6 +1945,13 @@
   <string name="notification_re_engagement_A_text">Hindi nase-save ang info mo sa pribadong pag-browse sa %1$s.</string>
   <!-- Title B shown in the notification that pops up to re-engage the user -->
   <string name="notification_re_engagement_B_title">Simulan ang iyong unang paghahanap</string>
+  <!--
+    Survey
+
+    Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments
+  -->
+  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Pakitulungan pagandahin ang Firefox sa pamamagitan ng pagsagot sa isang maikling survey.</string>
   <!-- Preference for taking the short survey. -->
   <string name="preferences_take_survey">Sagutin ang Survey</string>
   <!-- Preference for not taking the short survey. -->
@@ -1969,6 +1978,8 @@
   <string name="snackbar_private_tab_closed">Naisara na ang pribadong tab</string>
   <!-- Text shown in snackbar when user closes all private tabs -->
   <string name="snackbar_private_tabs_closed">Naisara na ang mga pribadong tab</string>
+  <!-- Text shown in snackbar when user erases their private browsing data -->
+  <string name="snackbar_private_data_deleted">Nabura na ang pribadong browsing data</string>
   <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
   <string name="snackbar_deleted_undo">i-UNDO</string>
   <!-- Text shown in snackbar when user removes a top site -->
@@ -2215,8 +2226,15 @@
   <string name="etp_redirect_trackers_description">Inaalis ang mga cookie na itinakda ng mga redirect sa mga kilalang tracking website.</string>
   <!-- Preference for fingerprinting protection for the custom protection settings -->
   <string name="etp_suspected_fingerprinters_title">Pinaghihinalaang mga Fingerprinter</string>
+  <!-- Description of fingerprinters that can be blocked by fingerprinting protection -->
+  <string name="etp_suspected_fingerprinters_description">Pinapagana ang fingerprinting protection para mapigilan ang mga hinihinalang fingerprinter.</string>
   <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_known_fingerprinters_title">Mga Kilalang Fingerprinter</string>
+  <!--
+    Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
+    as we use it on the UI to indicate which trackers have been partially unblocked.
+  -->
+  <string name="preference_etp_smartblock_description">May ilang mga tracker na nabanggit sa ibaba na bahagyang pinayagan sa pahinang ito dahil nag-interact ka sa kanila *.</string>
   <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
   <string name="preference_etp_smartblock_learn_more">Alamin</string>
   <!--
@@ -2798,6 +2816,12 @@
   <string name="action_bar_up_description">Mag-navigate pataas</string>
   <!-- Content description for privacy content close button -->
   <string name="privacy_content_close_button_content_description">Isara</string>
+  <!--
+    Pocket recommended stories
+
+    Header text for a section on the home screen.
+  -->
+  <string name="pocket_stories_header_1">Mga kagila-gilalas na kwento</string>
   <!-- Header text for a section on the home screen. -->
   <string name="pocket_stories_categories_header">Mga kwento ayon sa paksa</string>
   <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
@@ -3074,6 +3098,8 @@
     %1$s is the size in kilobytes or megabytes of the language file.
   -->
   <string name="download_language_file_dialog_title">I-download habang nasa data saving mode (%1$s)?</string>
+  <!-- Additional information for the data saving mode warning dialog used by the translations feature. This text explains the reason a download is required for a translation. -->
+  <string name="download_language_file_dialog_message_all_languages">Nag-download kami ng wika nang bahagya sa iyong cache para mapanatiling pribado ang mga pagsasalin.</string>
   <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
   <string name="download_language_file_dialog_checkbox_text">Palaging mag-download sa data saving mode</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
@@ -3149,6 +3175,8 @@
   <string name="clear_site_data_snackbar">Natanggal na ang mga cookie at site data</string>
   <!-- Text for the connection security panel when the site is secure. -->
   <string name="connection_security_panel_secure">Ligtas na koneksyon</string>
+  <!-- Text for the connection security panel when the site is not secure. -->
+  <string name="connection_security_panel_not_secure">Hindi ligtas ang koneksyon</string>
   <!--
     Text for the connection security panel to indicate who the certificate was verified by.
     %s is a placeholder for the name of the certificate authority that verified the ticket
@@ -3190,6 +3218,12 @@
   <string name="debug_drawer_tab_tools_tab_quantity_non_digits_error">Mangyaring magpasok ng mga positibong numero lamang</string>
   <!-- The error message of the text field in the tab creation tool when the text field is a zero -->
   <string name="debug_drawer_tab_tools_tab_quantity_non_zero_error">Mangyaring maglagay ng numerong higit sa zero</string>
+  <!--
+    The error message of the text field in the tab creation tool when the text field is a
+    quantity greater than the max tabs. %1$s is the maximum number of tabs
+    that can be generated in one operation.
+  -->
+  <string name="debug_drawer_tab_tools_tab_quantity_exceed_max_error">Lumampas na sa bilang ng mga tab (%1$s) na maaaring buuin sa isang operasyon</string>
   <!-- The button text to add tabs to the active tab group in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_active">Idagdag sa mga aktibong tab</string>
   <!-- The button text to add tabs to the inactive tab group in the tab creation tool. -->
@@ -3310,6 +3344,8 @@
     and the current region (device's detected location) for testing purposes.
   -->
   <string name="debug_drawer_region_tools_title">Mga Region Tool</string>
+  <!-- The description of the Region tools in the Debug Drawer -->
+  <string name="debug_drawer_regin_tools_description">Pansamantalang ino-override ang laman ng home at current region para sa testing.</string>
   <!-- The text label for displaying home region. -->
   <string name="debug_drawer_home_region_label">Home region</string>
   <!-- The text label for displaying current region. -->
