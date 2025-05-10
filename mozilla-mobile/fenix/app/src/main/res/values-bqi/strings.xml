@@ -621,6 +621,8 @@
     Preferences for using pull to refresh in a webpage
   -->
   <string name="preference_gestures_website_pull_to_refresh">کشیڌن سی وانۊ کردن</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs">سی گۊشیڌن بلگه یل، نوار ٱوزار ن ب روء بکشین</string>
   <!--
     Library
 
@@ -639,10 +641,19 @@
   <string name="library_desktop_bookmarks_unfiled">نشووکا دیری</string>
   <!-- Option in Library to open History page -->
   <string name="library_history">ویرگار</string>
+  <!-- Option in Library to open a new tab -->
+  <string name="library_new_tab">بلگه نۊ</string>
   <!-- Settings Page Title -->
   <string name="settings_title">سامووا</string>
   <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
   <string name="content_description_close_button">بستن</string>
+  <!--
+    Title to show in alert when a lot of tabs are to be opened
+    %d is a placeholder for the number of tabs that will be opened
+  -->
+  <string name="open_all_warning_title">گۊشیڌن %d بلگه؟</string>
+  <!-- Dialog button text for confirming open all tabs -->
+  <string name="open_all_warning_confirm">گۊشیڌن بلگه یل</string>
   <!-- Dialog button text for canceling open all tabs -->
   <string name="open_all_warning_cancel">لقو</string>
   <!--
@@ -655,22 +666,50 @@
     %d is a placeholder for the number of pages in the group.
   -->
   <string name="history_search_group_sites_1">%d بلگه یل</string>
+  <!-- Option in library for Recently Closed Tabs -->
+  <string name="library_recently_closed_tabs">بلگه یلی ک سکو بسته وابین</string>
   <!-- Option in library to open Recently Closed Tabs page -->
   <string name="recently_closed_show_full_history">نشوݩ داڌن پوی ویرگار</string>
+  <!--
+    Text to show users they have multiple tabs saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected.
+  -->
+  <string name="recently_closed_tabs">بلگه یل %d</string>
+  <!--
+    Text to show users they have one tab saved in the Recently Closed Tabs section of history.
+    %d is a placeholder for the number of tabs selected.
+  -->
+  <string name="recently_closed_tab">بلگه %d</string>
+  <!--
+    Tab Management
+
+    Title of preference for tabs management
+  -->
+  <string name="preferences_tabs">بلگه یل</string>
+  <!-- Title of preference that allows a user to specify the tab view -->
+  <string name="preferences_tab_view">نما بلگه یل</string>
   <!-- Option for a list tab view -->
   <string name="tab_view_list">نومگه ای</string>
   <!-- Option for a grid tab view -->
   <string name="tab_view_grid">شبکه ای</string>
+  <!-- Title of preference that allows a user to auto close tabs after a specified amount of time -->
+  <string name="preferences_close_tabs">بستن بلگه یل</string>
   <!-- Option for auto closing tabs that will auto close tabs after one day -->
   <string name="close_tabs_after_one_day">بئڌ ی رۊز</string>
   <!-- Option for auto closing tabs that will auto close tabs after one week -->
   <string name="close_tabs_after_one_week">بئڌ ی هفته</string>
   <!-- Option for auto closing tabs that will auto close tabs after one month -->
   <string name="close_tabs_after_one_month">بئڌ ی ما</string>
+  <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
+  <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">بستن خوتکار بلگه یل واز</string>
   <!-- Option for always opening the homepage when re-opening the app -->
   <string name="opening_screen_homepage">بلگه هووه ای</string>
+  <!-- Option for always opening the user's last-open tab when re-opening the app -->
+  <string name="opening_screen_last_tab">بلگه دیندایی</string>
   <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
   <string name="opening_screen_homepage_summary">گۊشیڌن من بلگه هووه ای</string>
+  <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
+  <string name="opening_screen_last_tab_summary">گۊشیڌن من بلگه دیندایی</string>
   <!--
     Studies
 
@@ -679,14 +718,30 @@
   <string name="studies_remove">پاک کردن</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">قلوه دووسته بۊین</string>
+  <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+  <string name="add_tab">ٱووردن بلگه</string>
+  <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
+  <string name="add_private_tab">ٱووردن بلگه سیخومی</string>
   <!-- Text for the new tab button to indicate adding a new private tab in the tab -->
   <string name="tab_drawer_fab_content">سیخومی</string>
+  <!-- Text shown in the menu for sharing all tabs -->
+  <string name="tab_tray_menu_item_share">یک رسۊوی پوی بلگه یل</string>
+  <!-- Text shown in the menu to view recently closed tabs -->
+  <string name="tab_tray_menu_recently_closed">بلگه یلی ک سکو بسته وابین</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">سامووا هساو</string>
+  <!-- Text shown in the menu to view tab settings -->
+  <string name="tab_tray_menu_tab_settings">سامووا سر بلگ</string>
+  <!-- Text shown in the menu for closing all tabs -->
+  <string name="tab_tray_menu_item_close">بستن پوی بلگه یل</string>
   <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_bookmark">نشووک ناهاڌن</string>
   <!-- Text shown in the multiselect menu for closing selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_close">بستن</string>
+  <!-- Content description for tabs tray multiselect share button -->
+  <string name="tab_tray_multiselect_share_content_description">یک رسۊوی بلگه یل پسند بیڌه</string>
+  <!-- Content description for tabs tray multiselect menu -->
+  <string name="tab_tray_multiselect_menu_content_description">نومگه بلگه یل پسند بیڌه</string>
   <!-- Title text displayed for a homepage tab in the tabs tray. -->
   <string name="tab_tray_homepage_tab">بلگه هووه ای</string>
   <!-- Text for the menu button to remove a top site -->
@@ -1079,6 +1134,8 @@
   <string name="snackbar_message_bookmarks_saved_in">نشووکا من «%s» زفت وابین!</string>
   <!-- Text shown in snackbar when user adds a site to shortcuts -->
   <string name="snackbar_added_to_shortcuts">و ر نهنگا ٱوورده وابی!</string>
+  <!-- Text shown in snackbar when user closes all private tabs -->
+  <string name="snackbar_private_tabs_closed">بلگه یل سیخومی بسته وابین</string>
   <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
   <string name="snackbar_deleted_undo">وورگندن</string>
   <!-- Text shown in snackbar when user removes a top site -->
@@ -1108,6 +1165,10 @@
   <string name="preference_accessibility_auto_size_2">هندا فونت خوتکار</string>
   <!-- Title for the Delete browsing data preference -->
   <string name="preferences_delete_browsing_data">داده یل گشتن ن پاک کۊنین</string>
+  <!-- Title for the tabs item in Delete browsing data -->
+  <string name="preferences_delete_browsing_data_tabs_title_2">بلگه یل واز</string>
+  <!-- Subtitle for the tabs item in Delete browsing data, %d is the number of open tabs -->
+  <string name="preferences_delete_browsing_data_tabs_subtitle">بلگه یل %d</string>
   <!--
     Title for the data and history items in Delete browsing data
 
@@ -1147,6 +1208,14 @@
   <string name="delete_history_group_prompt_allow">پاک کردن</string>
   <!-- Text for the snackbar confirmation that the history group was deleted -->
   <string name="delete_history_group_snackbar">بونکۊ پاک وابی</string>
+  <!--
+    Onboarding theme
+
+    Text shown in snackbar when multiple tabs have been sent to device
+  -->
+  <string name="sync_sent_tabs_snackbar">بلگه یل فشناڌه وابین!</string>
+  <!-- Text shown in snackbar when one tab has been sent to device -->
+  <string name="sync_sent_tab_snackbar">بلگه ن فشناڌ!</string>
   <!-- Title of QR Pairing Fragment -->
   <string name="sync_scan_code">اسکن کود</string>
   <!-- Text shown for sign in pairing when ready -->
