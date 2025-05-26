@@ -55,6 +55,7 @@
   <string name="menu_settings">Postavke</string>
   <string name="menu_about">Informacije</string>
   <string name="menu_help">Pomoć</string>
+  <string name="menu_terms_of_use">Uvjeti korištenja</string>
   <!--
     Menu item: This is the label for a menu entry that shows how many trackers have been blocked
     for the currently loaded website. The number of blocked trackers is shown below this label.
@@ -148,16 +149,7 @@
     Content of about focus. %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar").
     %2$s is the url for the learn-more link.
   -->
-  <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote">&lt;p&gt;%1$s daje ti kontrolu.&lt;/p&gt;
-&lt;p&gt;Koristi ga kao privatni pretraživač:
-  &lt;ul&gt;
-    &lt;li&gt;traži i pretražuj direktno u aplikaciji&lt;/li&gt;
-    &lt;li&gt;blokiraj programe za praćenje (ili ih omogući u postavkama)&lt;/li&gt;
-    &lt;li&gt;izbriši sve kolačiće kao i povijest pretraživanja i pregledavanja&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/p&gt;
-&lt;p&gt;%1$s je kreirala Mozilla. Naša misija je njegovanje zdravog i otvorenog interneta.&lt;br/&gt;
-&lt;a href="%2$s"&gt;Saznaj više&lt;/a&gt;&lt;/p&gt;</string>
+  <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s daje ti kontrolu.</p> <p>Koristi ga kao privatni pretraživač: <ul> <li>traži i pretražuj direktno u aplikaciji</li> <li>blokiraj programe za praćenje (ili ih omogući u postavkama)</li> <li>izbriši sve kolačiće kao i povijest pretraživanja i pregledavanja</li> </ul> </p> <p>%1$s je kreirala Mozilla. Naša misija je njegovanje zdravog i otvorenog interneta.<br/> <a href=\"%2$s\">Saznaj više</a></p>]]></string>
   <!-- Header for the Privacy and Security settings menu -->
   <string name="preference_privacy_and_security_header">Privatnost i sigurnost</string>
   <!-- Preference summary for settings related to privacy and security -->
@@ -338,6 +330,8 @@
   <string name="preference_licensing_info">Informacije o licenciranju</string>
   <!-- Link to Focus licensing information from other libraries that we use. -->
   <string name="preference_libraries_we_use">Biblioteke koje koristimo</string>
+  <!-- Link to Focus Crash reports list. -->
+  <string name="preference_crashes">Prekidi rada programa</string>
   <!-- Open Source Licenses page title. %s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
   <string name="open_source_licenses_title">%s | OSS biblioteke</string>
   <!-- Item in Preferences that shows the about page. %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
@@ -463,6 +457,18 @@
   <string name="onboarding_first_screen_title">Dobro došao, dobro došla u %1$s</string>
   <!-- New Onboarding flow first screen subtitle the one that appears under title -->
   <string name="onboarding_first_screen_subtitle">Brzo. Privatno. Bez ometanja.</string>
+  <!--
+    New Onboarding flow first screen 'terms of use' text
+
+    %1$s will be replaced by a link using onboarding_first_screen_terms_of_use_link as text
+  -->
+  <string name="onboarding_first_screen_terms_of_use_text" tools:ignore="UnusedResources">Nastavljanjem prihvaćaš %1$s</string>
+  <!--
+    New Onboarding flow first screen 'terms of use link'
+
+    Text for the link used in onboarding_first_screen_terms_of_use_text
+  -->
+  <string name="onboarding_first_screen_terms_of_use_link" tools:ignore="BrandUsage">Firefoxove uvjete korištenja.</string>
   <!--
     Onboarding second screen: Title
 
@@ -641,11 +647,11 @@
   <!-- First step for the allowing a permission -->
   <string name="phone_feature_blocked_step_settings">1. Idi na Android postavke</string>
   <!-- Second step for the allowing a permission -->
-  <string name="phone_feature_blocked_step_permissions">2. Dodirni &lt;b&gt;Dozvole&lt;/b&gt;</string>
+  <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Dodirni <b>Dozvole</b>]]></string>
   <!-- Button label that take the user to the Android App setting -->
   <string name="phone_feature_go_to_settings">Idi na postavke</string>
   <!-- Third step for allowing a permission. %1$s is the permission name, for example, "Camera" -->
-  <string name="phone_feature_blocked_step_feature">3. Promijeni &lt;b&gt;%1$s&lt;/b&gt; na UKLJUČENO</string>
+  <string name="phone_feature_blocked_step_feature"><![CDATA[3. Promijeni <b>%1$s</b> na UKLJUČENO]]></string>
   <!-- Preference for altering the camera access for all websites -->
   <string name="preference_phone_feature_camera">Kamera</string>
   <!-- Preference for altering the microphone access for all websites -->
@@ -730,8 +736,7 @@
     Tip displayed on home view explaining how to disable tracking protection
     The new line here must be kept as the second half of the string is clickable for the user.
   -->
-  <string name="tip_disable_tracking_protection">Stranica se ponaša neočekivano?\n
-    Pokušaj isključiti zaštitu od praćenja</string>
+  <string name="tip_disable_tracking_protection">Stranica se ponaša neočekivano?\nPokušaj isključiti zaštitu od praćenja</string>
   <!--
     Tip displayed on home view explaining how to add sites to homescreen
     %1$s is replaced with a line break in the application.
@@ -742,23 +747,17 @@
     %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar").
     The new line here must be kept as the second half of the string is clickable for the user.
   -->
-  <string name="tip_set_default_browser">Otvori svaku poveznicu u %1$su\n
-        Postavi %1$s kao zadani preglednik
-    </string>
+  <string name="tip_set_default_browser">Otvori svaku poveznicu u %1$su\nPostavi %1$s kao zadani preglednik</string>
   <!--
     Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user.
   -->
-  <string name="tip_autocomplete_url">Automatski ispuni URL-ove često korištenih stranica\n
-        Dugo pritisni bilo koji URL u adresnoj traci
-    </string>
+  <string name="tip_autocomplete_url">Automatski ispuni URL-ove često korištenih stranica\nDugo pritisni bilo koji URL u adresnoj traci</string>
   <!--
     Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user.
   -->
-  <string name="tip_open_in_new_tab">Otvori poveznicu u novoj kartici\n
-        Dugo pritisni bilo koju poveznicu na stranici
-    </string>
+  <string name="tip_open_in_new_tab">Otvori poveznicu u novoj kartici\nDugo pritisni bilo koju poveznicu na stranici</string>
   <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
   <string name="tip_disable_tips2">Isključi savjete na početnom zaslonu</string>
   <!-- Label for the snackbar when a user opens a new tab -->
@@ -772,7 +771,7 @@
   <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
   <string name="preference_safe_browsing_summary">Blokiraj prijavljene zavaravajuće i napadačke stranice, stranice zaražene zlonamjernim softverom i stranice neželjenog softvera.</string>
   <!-- Title of the preference to enable "HTTPS-Only" mode -->
-  <string name="preference_https_only_title">Način rada "Samo HTTPS"</string>
+  <string name="preference_https_only_title">Način rada \"Samo HTTPS\"</string>
   <!-- Description of the preference to enable "HTTPS-Only" mode. -->
   <string name="preference_https_only_summary3">Automatski se pokušava povezati s web stranicama koristeći HTTPS šifriranje za povećanu sigurnost.</string>
   <!-- Preference for exceptions tracking protection -->
@@ -839,7 +838,7 @@
     Text for context menu additional note.
     %1$s is a placeholder for the app name.
   -->
-  <string name="contextmenu_erased_images_note2">Spremljene i podijeljene slike &lt;b&gt;neće biti&lt;/b&gt; izbrisane kada izbrišeš %1$su povijest</string>
+  <string name="contextmenu_erased_images_note2"><![CDATA[Spremljene i podijeljene slike <b>neće biti</b> izbrisane kada izbrišeš %1$su povijest]]></string>
   <!--
     Theme Preferences
 
