@@ -2994,6 +2994,22 @@
   <string name="download_languages_language_item_preference">%1$s (%2$s)</string>
   <!-- The subhead of the download language preference screen will appear above the items that were not downloaded. -->
   <string name="download_language_header_preference">دانلود زوونا</string>
+  <!-- All languages list item. When the user presses this item, they can download all languages. -->
+  <string name="download_language_all_languages_item_preference">پوی زوونا</string>
+  <!-- All languages list item. When the user presses this item, they can delete all languages that were downloaded. -->
+  <string name="download_language_all_languages_item_preference_to_delete">پاک کردن پوی زوونا</string>
+  <!-- Content description (not visible, for screen readers etc.): For a language list item that was downloaded, the user can now delete it. -->
+  <string name="download_languages_item_content_description_downloaded_state">پاک کردن</string>
+  <!-- Content description (not visible, for screen readers etc.): For a language list item, deleting is in progress. -->
+  <string name="download_languages_item_content_description_delete_in_progress_state">هونی پؽش اروه</string>
+  <!--
+    Content description (not visible, for screen readers etc.): For a language list item, downloading is in progress.
+    %1$s is the language name, for example, "Spanish".
+    %2$s is the language file size, for example, "(3.91 KB)".
+  -->
+  <string name="download_languages_item_content_description_download_in_progress_state">واڌاشتن دانلود %1$s (%2$s)</string>
+  <!-- Content description (not visible, for screen readers etc.): For a language list item that was not downloaded. -->
+  <string name="download_languages_item_content_description_not_downloaded_state">دانلود</string>
   <!--
     The title of the warning card informs the user that an error has occurred at downloading a language.
     %1$s is the language name, for example, "Spanish".
@@ -3043,8 +3059,26 @@
   <string name="protection_panel_banner_not_secure_description">منپیز ایسا ایمن نؽ.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">زفت وابیڌن پؽش رئڌه جلاو رڌجۊری</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">رڌجۊرا مسدۊد وابین: %d</string>
+  <!-- Text for when no trackers have been blocked. -->
+  <string name="protection_panel_no_trackers_blocked">رڌجۊری نجوست</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings">سامووا هریم سیخومی وو ٱمنیت</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the trackers blocked panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_total_num_trackers_blocked">رڌجۊرا مسدۊد وابین: %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
   <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
   <string name="clear_site_data_dialog_positive_button_text">پاک کردن</string>
   <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
@@ -3057,6 +3091,10 @@
   <string name="debug_drawer_tab_tools_title">ٱوزارا بلگه</string>
   <!-- The title of the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_title">تئداد بلگه یل</string>
+  <!-- The active tab count category in the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_active">فعال</string>
+  <!-- The inactive tab count category in the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_inactive">قیر فعال</string>
   <!-- The private tab count category in the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_private">سیخومی</string>
   <!-- The total tab count category in the tab count section in Tab Tools. -->
@@ -3065,14 +3103,50 @@
   <string name="debug_drawer_tab_tools_tab_creation_tool_title">ٱوزار وورکل بلگه</string>
   <!-- The label of the text field in the tab creation tool. -->
   <string name="debug_drawer_tab_tools_tab_creation_tool_text_field_label">تئداد بلگه یلی ک وا وورکل بۊن</string>
+  <!-- The error message of the text field in the tab creation tool when the text field is empty -->
+  <string name="debug_drawer_tab_tools_tab_quantity_empty_error">زمینه هؽلی پتی هڌ</string>
+  <!-- The error message of the text field in the tab creation tool when the text field has characters other than digits -->
+  <string name="debug_drawer_tab_tools_tab_quantity_non_digits_error">تینا عددا زبال موسبت ن بزنین</string>
   <!-- The error message of the text field in the tab creation tool when the text field is a zero -->
   <string name="debug_drawer_tab_tools_tab_quantity_non_zero_error">عددی گفتر ز 0 بزنین</string>
+  <!-- The button text to add tabs to the active tab group in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_active">ٱووردن و بلگه یل فعال</string>
+  <!-- The button text to add tabs to the inactive tab group in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">ٱووردن و بلگه یل قیر فعال</string>
+  <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">ٱووردن و بلگه یل سیخومی</string>
+  <!--
+    Microsurvey
+
+    Prompt view
+
+    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
+  -->
+  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">و ایما هیاری بڌین Firefox ن بؽڌر کۊنیم. تینا ی دؽقه تۊل اکشه.</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">رئڌن وا پؽش</string>
+  <!--
+    Survey view
+
+    The survey header
+  -->
+  <string name="micro_survey_survey_header_2">منشڌسنجی ن کامل کۊنین</string>
   <!-- The privacy notice link -->
   <string name="micro_survey_privacy_notice_2">نوکات زفت مهرموویی</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">فشناڌن</string>
+  <!-- The survey completion header -->
+  <string name="micro_survey_survey_header_confirmation" tools:ignore="UnusedResources">منشڌسنجی کامل وابی</string>
+  <!-- The survey completion confirmation text -->
+  <string name="micro_survey_feedback_confirmation">ممنووݩ ز منشڌ ایسا!</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_1" tools:ignore="UnusedResources">قلوه رازی</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_2" tools:ignore="UnusedResources">رازی</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_3" tools:ignore="UnusedResources">بؽ ترف</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_4" tools:ignore="UnusedResources">ن رازی</string>
   <!--
     Accessibility
 
