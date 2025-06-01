@@ -56,6 +56,13 @@
   <string name="home_bookmarks_menu_item_remove">پاک کردن</string>
   <!-- About content. %1$s is the name of the app (for example "Firefox"). -->
   <string name="about_content">%1$s و دست مۊزیلا وورکل وابیڌه.</string>
+  <!--
+    Private Browsing
+
+    Explanation for private browsing displayed to users on home view when they first enable private mode.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="private_browsing_placeholder_description_2">%1$s پیتینیڌنا وو ویرگار گشتن ایسا ن مجال ودر زیڌن ز برنومه یا بستن بلگه یل سیخومی پاک اکونه. ٱلبت ای کار ایسا ن سی وبگه یل یا جۊر کونووݩ اینترنت نشناخته نؽکونه، ای کار تینا بؽڌار کردن فعالیتا ریتور ایسا ز ور هر کس دی ک ای دسگا ن و کار اگره ساڌه تر اکونه.</string>
   <string name="private_browsing_common_myths">باورا اشتوا من زایار زبار گشتن سیخومی</string>
   <!--
     True Private Browsing Mode
@@ -2722,6 +2729,12 @@
   <string name="pocket_stories_sponsor_indication">هؽزگری وابیڌه</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->
   <string name="experiments_snackbar_button">راو و سامووا</string>
+  <!--
+    Accessibility services actions labels. These will be appended to accessibility actions like "Double tap to.." but not by or applications but by services like Talkback.
+
+    Action label for elements that can be collapsed if interacting with them. Talkback will append this to say "Double tap to collapse".
+  -->
+  <string name="a11y_action_label_collapse">کۊتال کردن</string>
   <!-- Current state for elements that can be collapsed if interacting with them. Talkback will dictate this after a state change. -->
   <string name="a11y_state_label_collapsed">کۊتال وابیڌه</string>
   <!-- Action label for elements that can be expanded if interacting with them. Talkback will append this to say "Double tap to expand". -->
@@ -2730,6 +2743,12 @@
   <string name="a11y_state_label_expanded">بولند وابیڌه</string>
   <!-- Action label for links to a website containing documentation about a wallpaper collection. Talkback will append this to say "Double tap to open link to learn more about this collection". -->
   <string name="a11y_action_label_wallpaper_collection_learn_more">سی قلوه ویر گرؽڌن زبار ای کتن، لینگ ن بۊگۊشین</string>
+  <!-- Action label for links that point to an article. Talkback will append this to say "Double tap to read the article". -->
+  <string name="a11y_action_label_read_article">خوندن مقاله</string>
+  <!-- Action label for links to the Firefox Pocket website. Talkback will append this to say "Double tap to open link to learn more". -->
+  <string name="a11y_action_label_pocket_learn_more" moz:removedIn="140" tools:ignore="UnusedResources">سی ویر گرؽڌن قلوه، لینگ ن بۊگۊشین</string>
+  <!-- Content description for headings announced by accessibility service. %s is the text of the heading. Talkback will announce the text and then speak the word "Heading" indicating to the user that this text is a heading for a section. -->
+  <string name="a11y_heading">%s، عونوان</string>
   <!-- Title for dialog displayed when trying to access links present in a text. -->
   <string name="a11y_links_title">لینگا</string>
   <!-- Additional content description for text bodies that contain urls. -->
@@ -2760,6 +2779,10 @@
   <string name="translations_bottom_sheet_translate_from_unsupported_language">ی زووݩ بونچک دیری ن امتهووݩ کۊنین</string>
   <!-- Button text on the translations dialog to dismiss the dialog and return to the browser. -->
   <string name="translations_bottom_sheet_negative_button">سکو ن</string>
+  <!-- Button text on the translations dialog to restore the translated website back to the original untranslated version. -->
+  <string name="translations_bottom_sheet_negative_button_restore">نشووݩ داڌن ٱسلی</string>
+  <!-- Accessibility announcement (not visible, for screen readers etc.) for the translations dialog after restore button was pressed that indicates the original untranslated page was loaded. -->
+  <string name="translations_bottom_sheet_restore_accessibility_announcement">بلگه ٱسلی بؽ ولرنیڌه وابیڌن بار ونی وابی</string>
   <!-- Button text on the translations dialog when a translation error appears, used to dismiss the dialog and return to the browser. -->
   <string name="translations_bottom_sheet_negative_button_error">ٱنجوم وابی</string>
   <!-- Button text on the translations dialog to begin a translation of the website. -->
@@ -2776,6 +2799,8 @@
   <string name="translation_error_could_not_translate_warning_text">موشکلی من ولرنیڌن پؽش ٱووڌ. دووارته قپ ریت کۊنین.</string>
   <!-- The title of the warning card informs the user that the list of languages cannot be loaded. -->
   <string name="translation_error_could_not_load_languages_warning_text">نترستیم زووانه دانلود کۊنیم. منپیز اینترنت خوتووݩ ن واجۊری کۊنین وو دووارته قپ ریت کۊنین.</string>
+  <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
+  <string name="translation_error_language_not_supported_warning_text">وابخشی، ایما هنی ز %1$s لادراری نؽکۊنیم.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">ولرنیڌن هونی ٱنجوم ابۊ…</string>
   <!--
@@ -2799,6 +2824,10 @@
   <string name="translation_option_bottom_sheet_never_translate_in_language">هرگشت %1$s ن نولرنین</string>
   <!-- Toggle switch label that allows a user to set the setting if they would like the browser to never translate the site the user is currently visiting. -->
   <string name="translation_option_bottom_sheet_never_translate_site">هرگشت ای وبگه ن نولرنین</string>
+  <!-- Toggle switch description that will appear under the "Never translate these sites" settings toggle switch to provide more information on how this setting interacts with other settings. -->
+  <string name="translation_option_bottom_sheet_switch_never_translate_site_description">پوی سامووا دیری ن لقو اکونه</string>
+  <!-- Toggle switch description that will appear under the "Never translate" and "Always translate" toggle switch settings to provide more information on how these  settings interacts with other settings. -->
+  <string name="translation_option_bottom_sheet_switch_description">پؽشنهاڌا ولرنیڌن ن لقو اکونه</string>
   <!-- Button text for the button that will take the user to the translation settings dialog. -->
   <string name="translation_option_bottom_sheet_translation_settings">سامووا ولرنیڌن</string>
   <!-- Button text for the button that will take the user to a website to learn more about how translations works in the given app. %1$s is the name of the app (for example "Firefox"). -->
