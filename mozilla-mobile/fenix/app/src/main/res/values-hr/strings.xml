@@ -344,6 +344,8 @@
   <string name="browser_menu_save_description">Dodaj zabilješku, prečac, početna stranica, zbirka, PDF</string>
   <!-- Browser menu label that bookmarks the currently visited page -->
   <string name="browser_menu_bookmark_this_page" moz:removedIn="141" tools:ignore="UnusedResources">Zabilježi ovu stranicu</string>
+  <!-- Browser menu label that bookmarks the currently visited page -->
+  <string name="browser_menu_bookmark_this_page_2">Zabilježi stranicu</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
   <string name="browser_menu_edit_bookmark">Uredi zabilješku</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
@@ -352,6 +354,8 @@
   <string name="browser_menu_turn_on_reader_view">Uključi prikaz čitača</string>
   <!-- Browser menu label for turning OFF reader view of the current visited page -->
   <string name="browser_menu_turn_off_reader_view">Isključi prikaz čitača</string>
+  <!-- Browser menu button that reopens a private tab as a regular tab -->
+  <string name="browser_menu_open_in_normal_tab">Prijeđi na karticu koja nije privatna</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page">Prevedi stranicu…</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
@@ -444,6 +448,12 @@
     %s is the search engine name (for example: DuckDuckGo).
   -->
   <string name="search_engine_icon_content_description_1">Tražilica: %s</string>
+  <!--
+    Content description (not visible, for screen readers etc.) of the search engine selector from the search toolbar.
+    %s is the search engine name (for example: DuckDuckGo).
+    The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
+  -->
+  <string name="search_engine_selector_content_description">%s: birač tražilice</string>
   <!--
     Home onboarding
 
@@ -568,6 +578,8 @@
   <string name="onboarding_preferences_dialog_crash_reporting_description">Izvještaji o prekidu programa nam pomažu dijagnosticirati i riješiti probleme s preglednikom. Izvještaji mogu uključivati osobne ili osjetljive podatke.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Saznaj više</string>
+  <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
+  <string name="onboarding_preferences_dialog_usage_data_title">Šalji tehničke podatke i podatke o interakciji Mozilli</string>
   <string name="onboarding_preferences_dialog_usage_data_learn_more_2">Saznaj više</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_positive_button">Gotovo</string>
@@ -587,6 +599,8 @@
   <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Firefox brine o tvojoj privatnosti. Saznaj više na stranici %1$s.</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
   <string name="onboarding_term_of_service_line_two_link_text">Napomena o privatnosti</string>
+  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
+  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Kako bi poboljšao preglednik, Firefox šalje dijagnostičke podatke i podatke o interakciji Mozilli. %1$s</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Upravljaj</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
@@ -1456,6 +1470,10 @@
   <string name="webcompat_reporter_reason_account2">Nije moguće se prijaviti ili registrirati</string>
   <!-- Broken site reason text for ad blocker -->
   <string name="webcompat_reporter_reason_ad_blocker" moz:removedIn="140" tools:ignore="UnusedResources">Blokator oglasa</string>
+  <!-- Broken site reason text for site asked to turn off ad blocker -->
+  <string name="webcompat_reporter_reason_turn_off_adblocker">Stranica je zatražila da se isključi blokator oglasa</string>
+  <!-- Broken site reason text for browser isn’t supported or blocked -->
+  <string name="webcompat_reporter_reason_notsupported">Preglednik nije podržan ili je blokiran</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">Nešto drugo</string>
   <!--
@@ -1524,6 +1542,10 @@
   <string name="bookmark_sort_menu_newest">Razvrstaj po najnovijim</string>
   <!-- Label for button to sort bookmarks by oldest in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_oldest">Razvrstaj po najstarijim</string>
+  <!-- Label for button to sort bookmarks in alphabetical order in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_a_to_z">Poredaj od A do Ž</string>
+  <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_z_to_a">Poredaj od Ž do A</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -1682,6 +1704,10 @@
   <string name="studies_on">Uključeno</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">Isključeno</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">Uključeno</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">Isključeno</string>
   <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
   <string name="preferences_category_permissions">Dozvole</string>
   <!-- Category header of a preference that allows a user to alter settings related to web content. -->
@@ -1797,6 +1823,10 @@
   <string name="sync_add_new_device_learn_button">Saznaj više o slanju kartica …</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">Poveži jedan drugi uređaj …</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nPoslano od aplikacije %2$s 🦊 Isprobaj mobilni preglednik: %3$s</string>
+  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nPoslano od aplikacije %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -3215,4 +3245,6 @@
     Subtitle for a setup checklist with 5 steps initial state. %1$s is the name of the app (for example "Firefox").
   -->
   <string name="setup_checklist_subtitle_5_steps_initial_state">Dovrši ovih 5 koraka za postavljanje %1$sa za najbolje iskustvo pregledavanja.</string>
+  <!-- Label for a button opening a feedback forum -->
+  <string name="review_prompt_feedback_button">Pošalji povratne informacije</string>
 </resources>
