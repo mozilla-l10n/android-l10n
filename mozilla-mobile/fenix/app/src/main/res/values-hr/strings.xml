@@ -2849,6 +2849,11 @@
     Search suggestions title for Firefox Suggest.
   -->
   <string name="firefox_suggest_header" tools:ignore="BrandUsage">Firefox prijedlozi</string>
+  <!--
+    Search suggestions title for trending search suggestions.
+    %s is a placeholder for the name of the search engine providing the trending search suggestions.
+  -->
+  <string name="trending_searches_header_2">U trendu na %s</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Google pretraga</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
@@ -2878,6 +2883,8 @@
   -->
   <string name="pocket_stories_header_1" tools:ignore="UnusedResources" moz:removedIn="140">Priče koje potiču na razmišljanje</string>
   <!-- Header text for a section on the home screen. -->
+  <string name="pocket_stories_header_2">Priče</string>
+  <!-- Header text for a section on the home screen. -->
   <string name="pocket_stories_categories_header" moz:removedIn="141" tools:ignore="UnusedResources">Priče po temama</string>
   <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
   <string name="pocket_stories_placeholder_text" moz:removedIn="141" tools:ignore="UnusedResources">Otkrij više</string>
@@ -2893,6 +2900,16 @@
   <string name="experiments_snackbar">Aktiviraj telemetriju za slanje podataka.</string>
   <!-- Snackbar button text to navigate to telemetry settings. -->
   <string name="experiments_snackbar_button">Idi u postavke</string>
+  <!--
+    Review quality check feature
+
+    Paragraph explaining the grading system we use to classify the reliability of a product's reviews.
+  -->
+  <string name="review_quality_check_info_review_grade_header" moz:removedIn="136" tools:ignore="UnusedResources"><![CDATA[Svakoj recenziji proizvoda dodjeljujemo <b>slovnu ocjenu</b> od A do F.]]></string>
+  <!-- Paragraph explaining how a product's adjusted grading is calculated. -->
+  <string name="review_quality_check_explanation_body_adjusted_grading" moz:removedIn="136" tools:ignore="UnusedResources"><![CDATA[<b>Prilagođena ocjena</b> se temelji samo na recenzijama za koje smatramo da su pouzdane.]]></string>
+  <!-- Paragraph explaining product review highlights. %s is the name of the retailer (e.g. Amazon). -->
+  <string name="review_quality_check_explanation_body_highlights" moz:removedIn="136" tools:ignore="UnusedResources"><![CDATA[<b>Istaknuti proizvodi</b> potječu od %s recenzija u zadnjih 80 dana za koje smatramo da su pouzdane.]]></string>
   <!--
     Accessibility services actions labels. These will be appended to accessibility actions like "Double tap to.." but not by or applications but by services like Talkback.
 
@@ -3171,8 +3188,22 @@
   <string name="protection_panel_banner_not_secure_description">Tvoja veza nije sigurna.</string>
   <!-- Title text for the protection panel banner when tracking protection is disabled. -->
   <string name="protection_panel_banner_not_protected_title">Isključio/la si zaštitu</string>
+  <!--
+    Description text for the protection panel banner when tracking protection is disabled.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="protection_panel_banner_not_protected_description">%s nije na dužnosti. Predlažemo ponovno uključivanje zaštite.</string>
+  <!--
+    Title text for the protection panel banner when tracking protection is enabled.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="protection_panel_banner_protected_title">%s stražari</string>
+  <!-- Description text for the protection panel banner when tracking protection is enabled. -->
+  <string name="protection_panel_banner_protected_description">Zaštićen/a si. Ako nešto uočimo, javit ćemo ti.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">Poboljšana zaštita od praćenja</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
+  <string name="protection_panel_etp_toggle_enabled_description">Ako nešto na ovoj stranici izgleda neispravno, pokušaj isključiti zaštite.</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
   <string name="protection_panel_etp_toggle_disabled_description">Zaštite su ISKLJUČENE. Predlažemo da ih ponovo uključiš.</string>
   <!--
@@ -3184,6 +3215,8 @@
   <string name="protection_panel_no_trackers_blocked">Nije pronađen nijedan program za praćenje</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings">Postavke privatnosti i sigurnosti</string>
+  <!-- Title text for the protection panel permissions section. -->
+  <string name="protection_panel_permissions_title">Dozvole</string>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
@@ -3195,6 +3228,11 @@
     %d is a placeholder for the number of trackers blocked.
   -->
   <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
+  <!--
+    Description text for a dialog confirming whether the user wants to delete all data for current site.
+    %s is a placeholder for the base domain of website.
+  -->
+  <string name="clear_site_data_dialog_description"><![CDATA[Uklanjanje kolačića i podataka web stranice za <b>%s</b> moglo bi te odjaviti s web stranice i izbrisati košarice za kupnju.]]></string>
   <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
   <string name="clear_site_data_dialog_positive_button_text">Izbriši</string>
   <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
@@ -3405,11 +3443,31 @@
   <!-- Push notification message about old Firefox version -->
   <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Neke funkcije će sutra prestati raditi.</string>
   <!--
+    TextField Design System Component
+
+    The default content description for the eye trailing icon button in TextField
+  -->
+  <string name="text_field_eye_trailing_icon_default_content_description" moz:removedIn="139" tools:ignore="UnusedResources">Prikaži skriveni tekst</string>
+  <!-- The default content description for the cross trailing icon button in TextField -->
+  <string name="text_field_cross_trailing_icon_default_content_description" moz:removedIn="139" tools:ignore="UnusedResources">Izbriši tekst</string>
+  <!--
+    Setup checklist feature
+
+    ===== Setup checklist feature: Title =====
+
+    Title for the setup checklist feature when the state is 'incomplete'. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_title_state_incomplete">Završi postavljanje aplikacije %1$s</string>
+  <!-- Title for the setup checklist feature when the state is 'completed' -->
+  <string name="setup_checklist_title_state_completed">Čestitamo!</string>
+  <!--
     ===== Setup checklist feature: Subtitles for 3 steps =====
 
     Subtitle for a setup checklist with 3 steps initial step. %1$s is the name of the app (for example "Firefox").
   -->
   <string name="setup_checklist_subtitle_3_steps_initial_state">Dovrši ova 3 koraka za postavljanje %1$sa za najbolje iskustvo pregledavanja.</string>
+  <!-- Subtitle for a setup checklist with 3 steps when the first task is completed. -->
+  <string name="setup_checklist_subtitle_3_steps_first_step">Odličan početak! Završio/la si 1 od 3 koraka.</string>
   <!--
     ===== Setup checklist feature: Subtitles for 6 steps =====
 
@@ -3422,6 +3480,32 @@
     Subtitle for a setup checklist with 5 steps initial state. %1$s is the name of the app (for example "Firefox").
   -->
   <string name="setup_checklist_subtitle_5_steps_initial_state">Dovrši ovih 5 koraka za postavljanje %1$sa za najbolje iskustvo pregledavanja.</string>
+  <!--
+    ===== Setup checklist feature: Task titles =====
+
+    The title of the default browser task for the setup checklist
+  -->
+  <string name="setup_checklist_task_default_browser">Postavi kao standardni preglednik</string>
+  <!-- The title of the sign-in task for the setup checklist -->
+  <string name="setup_checklist_task_account_sync">Prijavi se na tvoj račun</string>
+  <!-- The title of the theme selection task for the setup checklist -->
+  <string name="setup_checklist_task_theme_selection">Odaberi temu</string>
+  <!-- The title of the toolbar selection task for the setup checklist -->
+  <string name="setup_checklist_task_toolbar_selection">Odaberi položaj alatne trake</string>
+  <!-- The title of the explore extensions task for the setup checklist -->
+  <string name="setup_checklist_task_explore_extensions">Istraži proširenja</string>
+  <!-- The title of the search widget task for the setup checklist -->
+  <string name="setup_checklist_task_search_widget">Instaliraj widget za pretraživanje</string>
+  <!--
+    Private browsing mode authentication screen
+
+    Label for the secondary action to exit private browsing mode
+  -->
+  <string name="pbm_authentication_leave_private_tabs">Napusti privatne kartice</string>
+  <!-- Label for the primary action button to unlock private tabs -->
+  <string name="pbm_authentication_unlock">Otključaj</string>
+  <!-- Title text instructing the user to unlock private tabs -->
+  <string name="pbm_authentication_unlock_private_tabs">Otključaj privatne kartice</string>
   <!-- Label for a button opening a feedback forum -->
   <string name="review_prompt_feedback_button">Pošalji povratne informacije</string>
 </resources>
