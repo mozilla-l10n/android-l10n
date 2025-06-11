@@ -752,6 +752,8 @@
   <string name="preferences_pbm_lock_screen_title">Koristi zaključavanje ekrana za skrivanje kartica u privatnom pregledavanju</string>
   <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
   <string name="preferences_pbm_lock_screen_summary" moz:removedIn="140" tools:ignore="UnusedResources">Pogledaj kartice otiskom prsta, otključavanjem licem ili PIN-om.</string>
+  <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
+  <string name="preferences_pbm_lock_screen_summary_2">Pogledaj kartice otiskom prsta, PIN-om ili otključavanjem licem.</string>
   <!-- Label for cookie banner section in quick settings panel. -->
   <string name="cookie_banner_blocker">Blokiranje dijaloga kolačića</string>
   <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
@@ -846,12 +848,18 @@
   <string name="preferences_show_voice_search">Prikaži glasovno pretraživanje</string>
   <!-- Preference title for switch preference to show search suggestions also in private mode -->
   <string name="preferences_show_search_suggestions_in_private">Prikaži u privatnim sesijama</string>
+  <!-- Preference title for switch preference to show trending search suggestions -->
+  <string name="preferences_show_trending_search_suggestions">Prikaži prijedloge u trendu</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Prikaži nedavne pretrage</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Prikaži prijedloge međuspremnika</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
   <string name="preferences_search_browsing_history">Pretraži povijest pregledavanja</string>
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">Pretraži zabilješke</string>
+  <!-- Preference title for switch preference to show shortcuts when searching -->
+  <string name="preferences_show_shortcuts">Prikaži prečace</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
   <string name="preferences_search_synced_tabs">Pretraži sinkronizirane kartice</string>
   <!-- Preference for account settings -->
@@ -872,6 +880,10 @@
   <string name="preferences_show_nonsponsored_suggestions">Prijedlozi od %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Dobij prijedloge s weba koji se odnose na tvoju pretragu</string>
+  <!-- Preference for link sharing -->
+  <string name="preferences_link_sharing">Dijeljenje poveznica</string>
+  <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_title">Uključi poveznicu za preuzimanje aplikacije %1$s u WhatsApp dijeljenja</string>
   <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="link_sharing_toggle_body">Pozovi svoje prijatelje da isprobaju brže i sigurnije pregledavanje uz %1$s svaki put kada dijeliš poveznicu na WhatsAppu.</string>
   <!-- Snackbar message shown when user shares a link -->
@@ -947,6 +959,8 @@
   <string name="customize_toggle_recently_visited">Nedavno posjećeno</string>
   <!-- Title for the customize home screen section with Pocket. -->
   <string name="customize_toggle_pocket_2" tools:ignore="UnusedResources" moz:removedIn="140">Priče koje potiču na razmišljanje</string>
+  <!-- Title for the customize home screen section with Pocket. -->
+  <string name="customize_toggle_pocket_3">Priče</string>
   <!-- Summary for the customize home screen section with Pocket. %s is "Pocket". -->
   <string name="customize_toggle_pocket_summary" tools:ignore="UnusedResources" moz:removedIn="140">Članci pokretani od %s</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
@@ -1346,8 +1360,24 @@
   <string name="studies_remove">Ukloni</string>
   <!-- Title of the active section on the studies list -->
   <string name="studies_active">Aktivne</string>
+  <!-- Description for studies -->
+  <string name="studies_description_3">Isprobaj funkcije i ideje prije nego što se objave.</string>
+  <!-- Title of the Studies data preference -->
+  <string name="studies_title">Instaliraj i pokreni istraživanja</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Saznaj više</string>
+  <!--
+    Sessions
+
+    Title for the list of tabs in the current private session used by a11y services
+    The %1$s will be replaced by the number of opened private tabs
+  -->
+  <string name="tabs_header_private_tabs_counter_title">Otvorene privatne kartice: %1$s. Dodirni za mijenjanje kartice.</string>
+  <!--
+    Title for the list of tabs in the synced tabs used by a11y services
+    The %1$s will be replaced by the number of opened synced tabs
+  -->
+  <string name="tabs_header_synced_tabs_counter_title">Otvorene sinkronizirane kartice: %1$s. Dodirni za mijenjanje kartice.</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Dodaj karticu</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1448,6 +1478,16 @@
   <string name="download_in_progress_snackbar">Preuzimanje u tijeku …</string>
   <!-- Text for the snackbar action button to view in progress download details. -->
   <string name="download_in_progress_snackbar_action_details">Detalji</string>
+  <!-- Text for the snackbar to confirm that a download has completed. -->
+  <string name="download_completed_snackbar">Preuzimanje završeno</string>
+  <!-- Text for the snackbar action button to open a completed download. -->
+  <string name="download_completed_snackbar_action_open">Otvori</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">Poništi</string>
+  <!-- Text shown when no download exists -->
+  <string name="download_empty_message_2">Još nema preuzimanja</string>
+  <!-- Text description shown when no download exists -->
+  <string name="download_empty_description">Ovdje će se prikazati datoteke koje preuzmeš.</string>
   <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
@@ -1470,10 +1510,26 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Odustani</string>
+  <!-- Text for the button to delete a single downloaded file item -->
+  <string name="download_delete_item">Izbriši</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">Navigiraj nazad</string>
   <!-- Content description for the toolbar "Navigate up" button -->
   <string name="download_navigate_up_description" moz:removedIn="139" tools:ignore="UnusedResources">Navigiraj prema gore</string>
+  <!-- Content description for the toolbar back button while searching the downloads -->
+  <string name="download_close_search_description">Natrag i zatvori pretragu</string>
+  <!-- Content description for the search bar clear text button on the downloads screen -->
+  <string name="download_clear_search_description">Izbriši</string>
+  <!-- Text for the button to share the download URL -->
+  <string name="download_share_url">Dijeli URL</string>
+  <!-- Text for the button to share the download file -->
+  <string name="download_share_file">Dijeli datoteku</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
+  <string name="download_delete_multi_select_dialog_confirmation">Stvarno želiš izbrisati odabrane stavke?</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
+  <string name="download_delete_multi_select_dialog_confirm">Izbriši</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
+  <string name="download_delete_multi_select_dialog_cancel">Odustani</string>
   <!--
     Time period headers for downloads
 
@@ -1482,6 +1538,12 @@
   <string name="download_time_period_today">Danas</string>
   <!-- Text for the header that groups the downloads for yesterday -->
   <string name="download_time_period_yesterday">Jučer</string>
+  <!-- Text for the header that groups the downloads the past 7 days -->
+  <string name="download_time_period_last_7_days">Zadnjih 7 dana</string>
+  <!-- Text for the header that groups the downloads the past 30 days -->
+  <string name="download_time_period_last_30_days">Zadnjih 30 dana</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">Starije</string>
   <!-- Description of an in progress download item, displayed in the downloads list when the download has just started. -->
   <string name="download_item_in_progress_description_preparing">Pripremanje preuzimanja …</string>
   <!--
@@ -1509,6 +1571,20 @@
   <string name="download_search_placeholder">Pretraži preuzimanja</string>
   <!-- Text to indicate that no downloads match the search query. -->
   <string name="download_search_no_results_found">Nema rezultata</string>
+  <!-- Text for the "Select all" button, which selects all downloaded items in the downloads list. -->
+  <string name="download_select_all_items">Odaberi sve</string>
+  <!--
+    Downloads Content Type Filters
+
+    Text for the filter button to show all files in the downloads list
+  -->
+  <string name="download_content_type_filter_all">Sve</string>
+  <!-- Text for the filter button to show only images in the downloads list -->
+  <string name="download_content_type_filter_image">Slike</string>
+  <!-- Text for the filter button to show only video files in the downloads list -->
+  <string name="download_content_type_filter_video">Videa</string>
+  <!-- Text for the filter button to show only documents in the downloads list -->
+  <string name="download_content_type_filter_document">Dokumenti</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Ostalo</string>
   <!--
@@ -1517,6 +1593,8 @@
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
   -->
   <string name="webcompat_reporter_screen_title">Prijavi pokvarenu web stranicu</string>
+  <!-- The description of the Web Compat Reporter feature. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="webcompat_reporter_description">Pomogni nam da %1$s bude bolji za sve. Zaposlenici Mozille koriste podatke koje šalješ za rješavanje problema s web stranicom.</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">URL</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
@@ -2296,6 +2374,8 @@
   <string name="preference_doh_provider_custom_dialog_add">Dodaj</string>
   <!-- Preference to access list of login exceptions that we don't use DNS over HTTPS -->
   <string name="preference_doh_exceptions">Iznimke</string>
+  <!-- Description of "exceptions" for "DNS over HTTPS". %1$s is the name of the app (for example "Firefox"). -->
+  <string name="preference_doh_exceptions_summary">%1$s neće koristiti sigurni DNS na ovim stranicama i njihovim poddomenama.</string>
   <!-- Text displayed that links to adding website domain for "DNS over HTTPS" exceptions. -->
   <string name="preference_doh_exceptions_add">Dodaj stranicu</string>
   <!-- Text displayed above the input field when adding exceptions for "DNS over HTTPS". -->
@@ -2390,6 +2470,8 @@
   <string name="preferences_passwords_exceptions_remove_all">Obriši sve iznimke</string>
   <!-- Hint for search box in passwords list -->
   <string name="preferences_passwords_saved_logins_search_2">Pretraži lozinke</string>
+  <!-- Content description for the logins navigation bar back button -->
+  <string name="logins_navigate_back_button_content_description">Natrag</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">Stranica</string>
   <!-- The header for the username for a login -->
