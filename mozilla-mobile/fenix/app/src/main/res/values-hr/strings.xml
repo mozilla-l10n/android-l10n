@@ -407,6 +407,10 @@
     %1$s is the name of the app (for example "Firefox").
   -->
   <string name="browser_menu_default_banner_title">Postavi %1$s kao standardni preglednik</string>
+  <!-- Label text within the set as default banner -->
+  <string name="browser_menu_default_banner_subtitle">Potrebno je samo par sekundi. Promijeni bilo kada.</string>
+  <!-- Content description for the button that dismisses the set as default banner in the menu -->
+  <string name="browser_menu_default_banner_dismiss">Odbaci</string>
   <!--
     Menu "contextual feature recommendation" (CFR)
 
@@ -1565,6 +1569,8 @@
   <string name="download_delete_multi_select_dialog_confirm">Izbriši</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Odustani</string>
+  <!-- Text for the header of in progress downloads -->
+  <string name="download_header_in_progress">U tijeku</string>
   <!--
     Time period headers for downloads
 
@@ -1581,6 +1587,13 @@
   <string name="download_time_period_older">Starije</string>
   <!-- Description of an in progress download item, displayed in the downloads list when the download has just started. -->
   <string name="download_item_in_progress_description_preparing">Pripremanje preuzimanja …</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description" moz:removedIn="141" tools:ignore="UnusedResources">%1$s / %2$s • %3$s preostalo</string>
   <!--
     Description of an in progress download item, displayed in the downloads list when the download time remaining is known.
     %1$s is the current file size that has been downloaded.
@@ -1600,6 +1613,12 @@
     %2$s is the total size of the downloaded file.
   -->
   <string name="download_item_paused_description">%1$s / %2$s • pauzirano</string>
+  <!-- Text to indicate that an in progress download is paused. -->
+  <string name="download_item_status_paused" moz:removedIn="141" tools:ignore="UnusedResources">pauzirano</string>
+  <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
+  <string name="download_item_download_speed_pending" moz:removedIn="141" tools:ignore="UnusedResources">na čekanju</string>
+  <!-- Text to indicate that a download has failed to download. -->
+  <string name="download_item_status_failed">Preuzimanje nije uspjelo</string>
   <!-- Text for the snackbar action button to view failed download details. -->
   <string name="download_failed_snackbar_action_details">Detalji</string>
   <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
@@ -2303,6 +2322,8 @@
   <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Samo u privatnim karticama</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
   <string name="preference_enhanced_tracking_protection_custom_cryptominers">Kripto rudari</string>
+  <!-- Preference for enhanced tracking protection for the custom protection settings -->
+  <string name="preference_enhanced_tracking_protection_custom_known_fingerprinters">Poznati prikupljači digitalnih otisaka</string>
   <!-- Button label for navigating to the Enhanced Tracking Protection details -->
   <string name="enhanced_tracking_protection_details">Detalji</string>
   <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
@@ -2325,6 +2346,8 @@
   <string name="etp_cryptominers_title">Kripto rudari</string>
   <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cryptominers_description">Sprečava da zlonamjerne skripte dobiju pristup tvom uređaju za rudarenje digitalne valute.</string>
+  <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_known_fingerprinters_description">Zaustavlja prikupljanje jedinstvenih podataka o tvom uređaju koji se mogu koristiti za praćenje.</string>
   <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_tracking_content_title">Sadržaj za praćenje</string>
   <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
@@ -2351,6 +2374,12 @@
   <string name="etp_redirect_trackers_title">Pratitelji preusmjeravanja</string>
   <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_redirect_trackers_description">Čisti kolačiće koje postavljaju preusmjeravanja na poznate stranice za praćenje.</string>
+  <!-- Preference for fingerprinting protection for the custom protection settings -->
+  <string name="etp_suspected_fingerprinters_title">Sumnjivi prikupljači digitalnih otisaka</string>
+  <!-- Description of fingerprinters that can be blocked by fingerprinting protection -->
+  <string name="etp_suspected_fingerprinters_description">Omogućuje zaštitu od prikupljača digitalnih otisaka kako bi se zaustavili sumnjivi prikupljači digitalnih otisaka.</string>
+  <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_known_fingerprinters_title">Poznati prikupljači digitalnih otisaka</string>
   <!--
     Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
     as we use it on the UI to indicate which trackers have been partially unblocked.
@@ -2369,6 +2398,8 @@
     Preference title for DNS over HTTPS settings
   -->
   <string name="preference_doh_title">DNS preko HTTPS-a</string>
+  <!-- Description of the preference to enable "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_summary">Domain Name System (DNS) preko HTTPS šalje tvoje zahtjeve s imenom domene putem šifrirane veze, stvarajući siguran DNS i otežava drugima da vide koje web stranice namjeravaš posjetiti. %1$s</string>
   <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
   <string name="preference_doh_learn_more">Saznaj više</string>
   <!-- Content description for the "Exceptions" button -->
