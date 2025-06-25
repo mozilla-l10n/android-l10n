@@ -943,6 +943,10 @@
   <string name="preferences_external_download_manager" tools:ignore="UnusedResources" moz:removedIn="141">Harici indirme yöneticisi</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">İndirmeleri başka bir uygulamadan yönet</string>
+  <!-- Title for the setting to automatically clean up downloaded files. %s is the brand of the phone (for example: Samsung). -->
+  <string name="preferences_downloads_settings_clean_up_files_title">%s uygulamasından ve cihazdan sil</string>
+  <!-- Summary for the setting to automatically clean up downloaded files -->
+  <string name="preferences_downloads_settings_clean_up_files_summary">İndirme yöneticinizden sildiğiniz dosyalar cihazınızdan da silinir</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads">İndirilenler</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -1758,12 +1762,20 @@
   <string name="tab_crash_restore">Sekmeyi geri yükle</string>
   <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
   <string name="unsubmitted_crash_dialog_title">%s yeniden başlamak zorunda kaldı</string>
+  <!-- Single unsubmitted crash matching remote settings. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_title">Araştırdığımız çökmelerle ilgili gönderilmemiş bir çökme raporunuz var. Raporunuzu göndererek %1$s tarayıcısını geliştirmemize yardımcı olabilirsiniz. Bu bildirimi kapatırsanız bu rapor görmezden gelinecektir.</string>
+  <!-- Multiple unsubmitted crashes matching remote settings. %1$d is the number of unsent crash reports, %2$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crashes_requested_by_devs_dialog_title">Araştırdığımız çökmelerle ilgili gönderilmemiş %1$d çökme raporunuz var. Raporunuzu göndererek %2$s tarayıcısını geliştirmemize yardımcı olabilirsiniz. Bu bildirimi kapatırsanız bu rapor görmezden gelinecektir.</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">Çökme raporlarını otomatik olarak gönder</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Kapat</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Bir daha gösterme</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">Çökme raporu gönder</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">Daha fazla bilgi al</string>
   <!--
     Bookmarks
 
@@ -2440,7 +2452,7 @@
   -->
   <string name="preference_doh_title">HTTPS üzerinden DNS</string>
   <!-- Description of the preference to enable "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
-  <string name="preference_doh_summary">HTTPS Üzerinden Alan Adı Sistemi (DNS), alan adı isteklerinizi şifreli bir bağlantı üzerinden göndererek güvenli bir DNS sağlar. Böylece hangi web sitelerine eriştiğinizi başkalarının görmesi zorlaştır. %1$s</string>
+  <string name="preference_doh_summary">HTTPS Üzerinden Alan Adı Sistemi (DNS), alan adı isteklerinizi şifreli bir bağlantı üzerinden göndererek güvenli bir DNS sağlar. Böylece hangi web sitelerine eriştiğinizi başkalarının görmesi zorlaşır. %1$s</string>
   <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
   <string name="preference_doh_learn_more">Daha fazla bilgi al</string>
   <!-- Content description for the "Exceptions" button -->
@@ -2788,7 +2800,7 @@
   <!-- Placeholder text shown in the Search String TextField before a user enters text -->
   <string name="search_add_custom_engine_search_string_hint_2">Arama için kullanılacak URL</string>
   <!-- Description text for the Search String TextField. The %s is part of the string -->
-  <string name="search_add_custom_engine_search_string_example" formatted="false">Sorguyu “%s” ile değiştirin. Örnek:\nhttps://www.google.com/search?q=%s</string>
+  <string name="search_add_custom_engine_search_string_example" formatted="false">Sorgunun yerine “%s” yazın. Örnek:\nhttps://www.google.com/search?q=%s</string>
   <!-- Accessibility description for the form in which details about the custom search engine are entered -->
   <string name="search_add_custom_engine_form_description">Özel arama motoru ayrıntıları</string>
   <!-- Label for the TextField in which user enters custom search engine suggestion URL -->
