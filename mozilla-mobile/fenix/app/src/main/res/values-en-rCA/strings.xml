@@ -360,6 +360,8 @@
   <string name="browser_menu_edit_bookmark">Edit bookmark</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf" moz:removedIn="141" tools:ignore="UnusedResources">Save as PDF…</string>
+  <!-- Browser menu label that the saves the currently visited page as a PDF -->
+  <string name="browser_menu_save_as_pdf_2">Save as PDF</string>
   <!-- Browser menu label for turning ON reader view of the current visited page -->
   <string name="browser_menu_turn_on_reader_view" moz:removedIn="141" tools:ignore="UnusedResources">Turn on Reader View</string>
   <!-- Browser menu label for turning OFF reader view of the current visited page -->
@@ -379,6 +381,8 @@
     %1$s is the name of the language that page was translated to (e.g. English).
   -->
   <string name="browser_menu_translated_to" moz:removedIn="141" tools:ignore="UnusedResources">Translated to %1$s</string>
+  <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
+  <string name="browser_menu_translated">Translated</string>
   <!-- Browser menu label for the print feature -->
   <string name="browser_menu_print" moz:removedIn="141" tools:ignore="UnusedResources">Print…</string>
   <!-- Browser menu label for the print feature -->
@@ -1098,6 +1102,8 @@
   <string name="alternative_app_icon_group_solid_colors">Solid colours</string>
   <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
   <string name="alternative_app_icon_group_gradients">Gradients</string>
+  <!-- Title for the "Other" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
+  <string name="alternative_app_icon_group_other">Other</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1257,6 +1263,10 @@
   <string name="preference_top_toolbar">Top</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">Bottom</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">Simple</string>
+  <!-- Preference for using expanded toolbar -->
+  <string name="preference_expanded_toolbar">Expanded</string>
   <!--
     Theme Preferences
 
@@ -1459,6 +1469,8 @@
   <string name="tab_tray_multiselect_share_content_description">Share selected tabs</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">Selected tabs menu</string>
+  <!-- Title text displayed for a homepage tab in the tabs tray. -->
+  <string name="tab_tray_homepage_tab">Homepage</string>
   <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
   <string name="remove_tab_from_collection">Remove tab from collection</string>
   <!-- Text for button to enter multiselect mode in tabs tray -->
@@ -1517,10 +1529,81 @@
   <!-- Text shown when no history exists -->
   <string name="history_empty_message">No history here</string>
   <!--
+    Downloads
+
+    Text for the snackbar to confirm that a multiple download items have been removed. %1$s is the number of removed download items.
+    %1$d is the number of items deleted.
+  -->
+  <string name="download_delete_multiple_items_snackbar_2">Items deleted: %1$d</string>
+  <!-- Title for the dialog that prompts the user to choose an app for downloading a file. -->
+  <string name="download_app_dialog_title">Download file with:</string>
+  <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
+  <string name="download_delete_single_item_snackbar_2">Deleted “%1$s”</string>
+  <!-- Text for the snackbar to confirm that downloads are in progress. -->
+  <string name="download_in_progress_snackbar">Download in progress…</string>
+  <!-- Text for the snackbar action button to view in progress download details. -->
+  <string name="download_in_progress_snackbar_action_details">Details</string>
+  <!-- Text for the snackbar to confirm that a download has completed. -->
+  <string name="download_completed_snackbar">Download completed</string>
+  <!-- Text for the snackbar action button to open a completed download. -->
+  <string name="download_completed_snackbar_action_open">Open</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">Undo</string>
+  <!-- Text shown when no download exists -->
+  <string name="download_empty_message_2">No downloads yet</string>
+  <!-- Text description shown when no download exists -->
+  <string name="download_empty_description">Files you download will appear here.</string>
+  <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
   -->
   <string name="download_multi_select_title">%1$d selected</string>
+  <!-- Title for the dialog that is shown when there is not enough storage space to download a file. -->
+  <string name="download_file_has_not_enough_storage_dialog_title">Not enough space</string>
+  <!--
+    Message for the dialog that is shown when there is not enough storage space to download a file.
+    %s is the name of the file to download.
+  -->
+  <string name="download_file_has_not_enough_storage_dialog_message"><![CDATA[This device doesn’t have enough space to download <b>%s</b>.]]></string>
+  <!--
+    Text for the confirm button in the dialog that is shown when there is not enough storage space to download a file.
+    This button will navigate the user to the device's storage management settings.
+  -->
+  <string name="download_file_has_not_enough_storage_dialog_confirm_button_text">Manage Files</string>
+  <!--
+    Text for the cancel button in the dialog that is shown when there is not enough storage space to download a file.
+    This button will dismiss the dialog.
+  -->
+  <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Cancel</string>
+  <!-- Text for the button to delete a single downloaded file item -->
+  <string name="download_delete_item">Delete</string>
+  <!-- Content description for the toolbar "Navigate back" button -->
+  <string name="download_navigate_back_description">Navigate back</string>
+  <!-- Content description for the toolbar back button while searching the downloads -->
+  <string name="download_close_search_description">Back and close search</string>
+  <!--
+    Content description for the search bar clear text button on the downloads screen
+
+    Content description for pause action button on the downloads screen
+  -->
+  <string name="download_pause_action">Pause</string>
+  <!-- Content description for resume action button on the downloads screen -->
+  <string name="download_resume_action">Resume</string>
+  <!-- Content description for retry download action button on the downloads screen -->
+  <string name="download_retry_action">Retry</string>
+  <string name="download_clear_search_description">Clear</string>
+  <!-- Text for the button to share the download URL -->
+  <string name="download_share_url">Share URL</string>
+  <!-- Text for the button to share the download file -->
+  <string name="download_share_file">Share file</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
+  <string name="download_delete_multi_select_dialog_confirmation">Are you sure you want to delete the selected items?</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
+  <string name="download_delete_multi_select_dialog_confirm">Delete</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
+  <string name="download_delete_multi_select_dialog_cancel">Cancel</string>
+  <!-- Text for the header of in progress downloads -->
+  <string name="download_header_in_progress">In progress</string>
   <!--
     Time period headers for downloads
 
@@ -1535,12 +1618,58 @@
   <string name="download_time_period_last_30_days">Last 30 days</string>
   <!-- Text for the header that groups the downloads older than other groups -->
   <string name="download_time_period_older">Older</string>
+  <!-- Description of an in progress download item, displayed in the downloads list when the download has just started. -->
+  <string name="download_item_in_progress_description_preparing">Preparing download…</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description" moz:removedIn="141" tools:ignore="UnusedResources">%1$s / %2$s • %3$s left</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the download time remaining is known.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description_2">%1$s / %2$s • in %3$s.</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the estimated download time remaining is still being calculated.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_in_progress_description_pending">%1$s / %2$s • pending</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • unknown time</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_paused_description">%1$s / %2$s • paused</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • paused</string>
+  <!-- Text to indicate that an in progress download is paused. -->
+  <string name="download_item_status_paused" moz:removedIn="141" tools:ignore="UnusedResources">paused</string>
+  <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
+  <string name="download_item_download_speed_pending" moz:removedIn="141" tools:ignore="UnusedResources">pending</string>
   <!-- Text to indicate that a download has failed to download. -->
   <string name="download_item_status_failed">Download failed</string>
+  <!-- Text for the snackbar action button to view failed download details. -->
+  <string name="download_failed_snackbar_action_details">Details</string>
   <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
   <string name="download_search_placeholder">Search downloads</string>
   <!-- Text to indicate that no downloads match the search query. -->
   <string name="download_search_no_results_found">No results found</string>
+  <!-- Text for the "Select all" button, which selects all downloaded items in the downloads list. -->
+  <string name="download_select_all_items">Select all</string>
   <!--
     Downloads Content Type Filters
 
@@ -1591,12 +1720,24 @@
     Broken site reason text for site slow or not working
   -->
   <string name="webcompat_reporter_reason_slow" moz:removedIn="140" tools:ignore="UnusedResources">Site slow or not working</string>
+  <!-- Broken site reason text for site doesn’t load -->
+  <string name="webcompat_reporter_reason_load">Site doesn’t load</string>
+  <!-- Broken site reason text for can’t pay, check out or shop -->
+  <string name="webcompat_reporter_reason_checkout">Can’t pay, check out or shop</string>
   <!-- Broken site reason text for images or videos -->
   <string name="webcompat_reporter_reason_media" moz:removedIn="140" tools:ignore="UnusedResources">Images or videos</string>
   <!-- Broken site reason text for buttons, links, and other content -->
   <string name="webcompat_reporter_reason_content" moz:removedIn="140" tools:ignore="UnusedResources">Buttons, links, and other content</string>
   <!-- Broken site reason text for sign in or sign out -->
   <string name="webcompat_reporter_reason_account" moz:removedIn="140" tools:ignore="UnusedResources">Sign-in or sign-out</string>
+  <!-- Broken site reason text for site is slow -->
+  <string name="webcompat_reporter_reason_slow2">Site is slow</string>
+  <!-- Broken site reason text for video isn’t playing or loading -->
+  <string name="webcompat_reporter_reason_media2">Video isn’t playing or loading</string>
+  <!-- Broken site reason text for missing content -->
+  <string name="webcompat_reporter_reason_content2">Missing content</string>
+  <!-- Broken site reason text for can’t sign in or register -->
+  <string name="webcompat_reporter_reason_account2">Can’t sign in or register</string>
   <!-- Broken site reason text for ad blocker -->
   <string name="webcompat_reporter_reason_ad_blocker" moz:removedIn="140" tools:ignore="UnusedResources">Ad blocker</string>
   <!-- Broken site reason text for site asked to turn off ad blocker -->
