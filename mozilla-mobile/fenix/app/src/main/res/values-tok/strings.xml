@@ -565,16 +565,34 @@
   <string name="preferences_extensions">ilo namako</string>
   <!-- Preference for installing a local extension -->
   <string name="preferences_install_local_extension">o kama e ilo namako tan ilo sina</string>
+  <!-- Summary for notification preference indicating notifications are allowed -->
+  <string name="notifications_allowed_summary">ken</string>
+  <!-- Summary for notification preference indicating notifications are not allowed -->
+  <string name="notifications_not_allowed_summary">ken ala</string>
+  <!--
+    Add-on Permissions
+
+    The title of the required permissions section from addon's permissions screen
+  -->
+  <string name="addons_permissions_heading_required" tools:ignore="UnusedResources" moz:removedIn="141">wile</string>
+  <!-- The title of the optional permissions section from addon's permissions screen -->
+  <string name="addons_permissions_heading_optional" tools:ignore="UnusedResources" moz:removedIn="141">ken wile ala</string>
   <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
   <string name="addons_permissions_required_data_collection_description" moz:removedIn="141" tools:ignore="UnusedResources">mama lawa la ilo li wile e sona ni: %1$s.</string>
   <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
   <string name="addons_permissions_required_data_collection_description_2">mama lawa la ilo li wile e sona ni: %1$s</string>
   <!-- The description of the "none" data collection permission, when the extension doesn't collect anything according to the developer. -->
   <string name="addons_permissions_none_required_data_collection_description">mama lawa la ilo li wile e sona ala.</string>
+  <!-- The title of the required permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_permissions">ilo li wile e ken:</string>
   <!-- Button caption to confirm the add-on collection configuration -->
   <string name="customize_addon_collection_ok">o ken</string>
   <!-- Button caption to abort the add-on collection configuration -->
   <string name="customize_addon_collection_cancel">o ken ala</string>
+  <!-- Hint displayed on input field for custom collection name -->
+  <string name="customize_addon_collection_hint">nimi kulupu</string>
+  <!-- Hint displayed on input field for custom collection user ID -->
+  <string name="customize_addon_collection_user_hint">mama kulupu (nanpa)</string>
   <!--
     Customize Home
 
@@ -894,6 +912,8 @@
   <string name="download_in_progress_snackbar">mi kama jo e lipu…</string>
   <!-- Text for the snackbar action button to view in progress download details. -->
   <string name="download_in_progress_snackbar_action_details">sona jo</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">o weka ala</string>
   <!-- Text shown when no download exists -->
   <string name="download_empty_message_2">jo lipu ala li lon</string>
   <!-- Text description shown when no download exists -->
@@ -903,10 +923,15 @@
     %s is the name of the file to download.
   -->
   <string name="download_file_has_not_enough_storage_dialog_message"><![CDATA[pakala la ilo sina li ken ala kama jo e lipu <b>%s</b>. ona li jo e ijo mute li ken ala jo e ijo ante.]]></string>
+  <!-- Text for the button to delete a single downloaded file item -->
+  <string name="download_delete_item">o weka</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">o tawa pini</string>
+  <string name="download_clear_search_description">o weka</string>
   <!-- Text for the button to share the download URL -->
   <string name="download_share_url">o pana e nimi nasin</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
+  <string name="download_delete_multi_select_dialog_confirm">o weka</string>
   <!--
     Time period headers for downloads
 
@@ -921,8 +946,29 @@
   <string name="download_time_period_last_30_days">sike suno pini 30</string>
   <!-- Text for the header that groups the downloads older than other groups -->
   <string name="download_time_period_older">sike weka</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description" moz:removedIn="141" tools:ignore="UnusedResources">%1$s / %2$s • %3$s li wile</string>
+  <!-- Text to indicate that a download has failed to download. -->
+  <string name="download_item_status_failed">kama jo li pakala</string>
   <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
   <string name="download_search_placeholder">o alasa e jo lipu</string>
+  <!--
+    Downloads Content Type Filters
+
+    Text for the filter button to show all files in the downloads list
+  -->
+  <string name="download_content_type_filter_all">jo ale</string>
+  <!-- Text for the filter button to show only images in the downloads list -->
+  <string name="download_content_type_filter_image">sitelen</string>
+  <!-- Text for the filter button to show only video files in the downloads list -->
+  <string name="download_content_type_filter_video">sitelen tawa</string>
+  <!-- Text for the filter button to show only documents in the downloads list -->
+  <string name="download_content_type_filter_document">lipu</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">nimi nasin</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
@@ -949,8 +995,20 @@
   <string name="tab_crash_send_report">o pana e sona pakala tawa kulupu Mozilla</string>
   <!-- Close tab button text on the tab crash page -->
   <string name="tab_crash_close">o weka e poki</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button">o pini</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report -->
+  <string name="unsubmitted_crash_dialog_positive_button">o pana e toki pakala</string>
   <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
   <string name="unsubmitted_crash_requested_by_devs_learn_more">o sona</string>
+  <!--
+    Bookmarks
+
+    Confirmation message for a dialog confirming if the user wants to delete the selected folder
+  -->
+  <string name="bookmark_delete_folder_confirmation_dialog">sina wile ala wile weka e poki ni?</string>
+  <!-- Text for the cancel button on delete bookmark dialog -->
+  <string name="bookmark_delete_negative">wile ala</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">o ante</string>
   <!-- Bookmark overflow menu edit button -->
@@ -959,8 +1017,12 @@
   <string name="bookmark_menu_share_button">o pana</string>
   <!-- Bookmark overflow menu open in new tab button -->
   <string name="bookmark_menu_open_in_new_tab_button">o pana e lipu tawa poki sin</string>
+  <!-- Bookmark overflow menu open in private tab button -->
+  <string name="bookmark_menu_open_in_private_tab_button">o open lon poki len</string>
   <!-- Bookmark overflow menu open all in tabs button -->
   <string name="bookmark_menu_open_all_in_tabs_button">o pana e lipu ale ni tawa poki sin</string>
+  <!-- Bookmark overflow menu delete button -->
+  <string name="bookmark_menu_delete_button">o weka</string>
   <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_custom">o nasin sina</string>
   <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
@@ -971,6 +1033,8 @@
   <string name="bookmark_sort_menu_a_to_z">nimi open o lon open nasin</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">nimi open o lon pini nasin</string>
+  <!-- Bookmark editing screen title -->
+  <string name="edit_bookmark_fragment_title">o ante e lipu awen</string>
   <!-- Bookmark URL editing field label -->
   <string name="bookmark_url_label">nimi nasin</string>
   <!-- Bookmark editing error missing or improper URL -->
