@@ -859,6 +859,8 @@
   <string name="preferences_category_account">Konto</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Adresselinjens placering</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">Tilpas værktøjslinje</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">Tema</string>
   <!-- Preference for customizing the home screen -->
@@ -941,6 +943,12 @@
   <string name="preferences_open_links_in_apps_never">Aldrig</string>
   <!-- Preference for open download with an external download manager app -->
   <string name="preferences_external_download_manager" tools:ignore="UnusedResources" moz:removedIn="141">Ekstern håndtering af filhentning</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">Håndter filhentninger med en anden app</string>
+  <!-- Title for the setting to automatically clean up downloaded files. %s is the brand of the phone (for example: Samsung). -->
+  <string name="preferences_downloads_settings_clean_up_files_title">Slet fra %s og enhed</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads">Filhentninger</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Aktiver Gecko-logfiler</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -1106,6 +1114,12 @@
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo_subtitle">Skabt af @heyheymomodraws</string>
+  <!-- Title for the "Solid colors" group of alternative app icon variants in the icon picker screen. This group contains icons with flat, uniform color backgrounds. -->
+  <string name="alternative_app_icon_group_solid_colors">Ensfarvede</string>
+  <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
+  <string name="alternative_app_icon_group_gradients">Farveforløb</string>
+  <!-- Title for the "Other" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
+  <string name="alternative_app_icon_group_other">Andet</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1265,6 +1279,10 @@
   <string name="preference_top_toolbar">Top</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">Bund</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">Enkel</string>
+  <!-- Preference for using expanded toolbar -->
+  <string name="preference_expanded_toolbar">Udvidet</string>
   <!--
     Theme Preferences
 
@@ -1639,11 +1657,21 @@
   -->
   <string name="download_item_in_progress_description_pending">%1$s / %2$s • afventer</string>
   <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • ukendt tid</string>
+  <!--
     Description of a paused download item, displayed in the downloads list.
     %1$s is the current file size that has been downloaded.
     %2$s is the total size of the downloaded file.
   -->
   <string name="download_item_paused_description">%1$s / %2$s • sat på pause</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • sat på pause</string>
   <!-- Text to indicate that an in progress download is paused. -->
   <string name="download_item_status_paused" moz:removedIn="141" tools:ignore="UnusedResources">sat på pause</string>
   <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
@@ -1752,8 +1780,12 @@
   <string name="unsubmitted_crash_dialog_checkbox_label">Send automatisk fejlrapporter</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Luk</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Vis aldrig igen</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">Send fejlrapport</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">Læs mere</string>
   <!--
     Bookmarks
 
