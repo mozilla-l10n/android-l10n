@@ -859,6 +859,8 @@
   <string name="preferences_category_account">Račun</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Mesto naslovne vrstice</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">Razporeditev orodne vrstice</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">Tema</string>
   <!-- Preference for customizing the home screen -->
@@ -941,6 +943,8 @@
   <string name="preferences_open_links_in_apps_never">Nikoli</string>
   <!-- Preference for open download with an external download manager app -->
   <string name="preferences_external_download_manager" tools:ignore="UnusedResources" moz:removedIn="141">Zunanji upravitelj prenosov</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">Upravljaj prenose z drugo aplikacijo</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the brand of the phone (for example: Samsung). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Izbriši iz %sa in iz naprave</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1112,6 +1116,12 @@
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo_subtitle">Avtor: @heyheymomodraws</string>
+  <!-- Title for the "Solid colors" group of alternative app icon variants in the icon picker screen. This group contains icons with flat, uniform color backgrounds. -->
+  <string name="alternative_app_icon_group_solid_colors">Enobarvno</string>
+  <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
+  <string name="alternative_app_icon_group_gradients">Prelivi</string>
+  <!-- Title for the "Other" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
+  <string name="alternative_app_icon_group_other">Drugo</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1271,6 +1281,10 @@
   <string name="preference_top_toolbar">Na vrhu</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">Na dnu</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">Preprosto</string>
+  <!-- Preference for using expanded toolbar -->
+  <string name="preference_expanded_toolbar">Razširjeno</string>
   <!--
     Theme Preferences
 
@@ -1645,11 +1659,21 @@
   -->
   <string name="download_item_in_progress_description_pending">%1$s/%2$s • na čakanju</string>
   <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • neznan čas</string>
+  <!--
     Description of a paused download item, displayed in the downloads list.
     %1$s is the current file size that has been downloaded.
     %2$s is the total size of the downloaded file.
   -->
   <string name="download_item_paused_description">%1$s/%2$s • ustavljen</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • ustavljeno</string>
   <!-- Text to indicate that an in progress download is paused. -->
   <string name="download_item_status_paused" moz:removedIn="141" tools:ignore="UnusedResources">ustavljeno</string>
   <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
@@ -2627,6 +2651,14 @@
   <string name="saved_login_clear_username">Počisti uporabniško ime</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">Počisti domeno</string>
+  <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
+  <string name="login_detail_menu_button_content_description">Meni s podrobnostmi o prijavi</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
+  <string name="login_details_navigate_back_button_content_description">Pojdi nazaj</string>
+  <!-- Edit text for the login detail menu edit button -->
+  <string name="login_detail_menu_edit_button">Uredi</string>
+  <!-- Delete text for the login detail menu delete button -->
+  <string name="login_detail_menu_delete_button">Izbriši</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">Odpri stran v brskalniku</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
