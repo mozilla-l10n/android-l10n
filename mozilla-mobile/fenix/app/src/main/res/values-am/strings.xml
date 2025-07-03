@@ -1667,6 +1667,11 @@
     %2$s is the total size of the downloaded file.
   -->
   <string name="download_item_paused_description">%1$s / %2$s • ባለበት ቆሟል</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • ባለበት ቆሟል</string>
   <!-- Text to indicate that an in progress download is paused. -->
   <string name="download_item_status_paused" moz:removedIn="141" tools:ignore="UnusedResources">ለአፍታ ቆሟል</string>
   <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
@@ -1734,15 +1739,27 @@
   <!-- Broken site reason text for site doesn’t load -->
   <string name="webcompat_reporter_reason_load">ጣቢያ አይክፍትም</string>
   <!-- Broken site reason text for can’t pay, check out or shop -->
-  <string name="webcompat_reporter_reason_checkout">መክፈል፣ መፈተሽ ወይም መግዛት አይቻልም</string>
+  <string name="webcompat_reporter_reason_checkout">መክፈል፣ ማዘዝ ወይም መግዛት አይቻልም</string>
   <!-- Broken site reason text for images or videos -->
   <string name="webcompat_reporter_reason_media" moz:removedIn="140" tools:ignore="UnusedResources">ምስሎች ወይም ተንቀሳቃሽ-ምስሎች</string>
   <!-- Broken site reason text for buttons, links, and other content -->
   <string name="webcompat_reporter_reason_content" moz:removedIn="140" tools:ignore="UnusedResources">አዝራሮች፣ አገናኞች እና ሌሎች ይዘቶች</string>
   <!-- Broken site reason text for sign in or sign out -->
   <string name="webcompat_reporter_reason_account" moz:removedIn="140" tools:ignore="UnusedResources">መግባት ወይም መውጣት</string>
+  <!-- Broken site reason text for site is slow -->
+  <string name="webcompat_reporter_reason_slow2">ጣቢያው ቀርፋፋ ነው</string>
+  <!-- Broken site reason text for video isn’t playing or loading -->
+  <string name="webcompat_reporter_reason_media2">ቪዲዮው እየተጫወተ ወይም እየተጫነ አይደለም</string>
+  <!-- Broken site reason text for missing content -->
+  <string name="webcompat_reporter_reason_content2">የተጓደለ ይዘት</string>
+  <!-- Broken site reason text for can’t sign in or register -->
+  <string name="webcompat_reporter_reason_account2">መግባት ወይም መመዝገብ አይቻልም</string>
   <!-- Broken site reason text for ad blocker -->
   <string name="webcompat_reporter_reason_ad_blocker" moz:removedIn="140" tools:ignore="UnusedResources">ማስታወቂያ ማገጃ</string>
+  <!-- Broken site reason text for site asked to turn off ad blocker -->
+  <string name="webcompat_reporter_reason_turn_off_adblocker">ጣቢያ የማስታወቂያ ማገጃውን እንዲያጠፋ ተጠይቋል</string>
+  <!-- Broken site reason text for browser isn’t supported or blocked -->
+  <string name="webcompat_reporter_reason_notsupported">አሳሽ አይደገፍም ወይም ታግዷል</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">ሌላ ነገር</string>
   <!--
@@ -3560,6 +3577,8 @@
   <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">የእርስዎን Firefox ለማቆየት የመጨረሻው ዕድል</string>
   <!-- Push notification title about old Firefox version. "Update" is a noun. -->
   <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">ማዘመን ይመከራል</string>
+  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">የቆየ የFirefox ስሪት ላይ ነዎት</string>
   <!-- TextField Design System Component -->
 
   <!--
@@ -3580,6 +3599,10 @@
   <string name="setup_checklist_subtitle_3_steps_initial_state">%1$sን ለምርጥ የአሰሳ ተሞክሮ ለማዘጋጀት እነዚህን 3 ደረጃዎች ያጠናቅቁ።</string>
   <!-- Subtitle for a setup checklist with 3 steps when the first task is completed. -->
   <string name="setup_checklist_subtitle_3_steps_first_step">ጥሩ ጅምር! ከ3 ደረጃዎች 1 ጨርሰዋል።</string>
+  <!-- Subtitle for a setup checklist with 6 steps when the fourth task is completed. -->
+  <string name="setup_checklist_subtitle_6_steps_fourth_step">4 ደረጃዎች ገብተዋል። 2 ተጨማሪ ብቻ ነው የቀረው!</string>
+  <!-- Subtitle for a setup checklist with 6 steps when the fifth task is completed. -->
+  <string name="setup_checklist_subtitle_6_steps_fifth_step">ሊደርሱ ነው! ከመጨረሻው መስመር 1 እርምጃ ብቻ ይቀርዎታል።</string>
   <!--
     ===== Setup checklist feature: Task titles =====
 
@@ -3626,10 +3649,24 @@
   <string name="pbm_authentication_unlock_private_tabs">የግል ትሮችን ይክፈቱ</string>
   <!-- Authentication prompt title to enable the private tabs mode -->
   <string name="pbm_authentication_enable_lock">የግል ትሮች የማያ ገጽ መቆለፊያን አንቃ</string>
+  <!-- Authentication prompt title to disable the private tabs mode -->
+  <string name="pbm_authentication_disable_lock">የግል ትሮችን የማያ ገጽ መቆለፊያን አሰናክል</string>
+  <!-- Label for a preference shown when the device supports screen lock (e.g., PIN, pattern, or password) but the user has not set one up. -->
+  <string name="pbm_authentication_lock_device_feature_disabled">ትሮችን ለመደበቅ የማያ ገጽ መቆለፊያን ያዘጋጁ</string>
   <!-- Negative button text for the contextual feature recommendation (CFR) dismissing the screen lock suggestion -->
   <string name="private_tab_cfr_negative">አልፈልግም፣አመሰግናለሁ</string>
   <!-- Positive button text for the contextual feature recommendation (CFR) enabling screen lock for private tabs -->
   <string name="private_tab_cfr_positive">ትሮችን ቆልፍ</string>
+  <!--
+    Review prompt
+
+    Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="review_prompt_pre_prompt_header">ስለ%1$s ምን ያስባሉ?</string>
+  <!-- Label for a button negatively rating the user's experience with the app -->
+  <string name="review_prompt_negative_button">ችግሮች እያጋጠሙኝ ነው</string>
+  <!-- Label for a button positively rating the user's experience with the app -->
+  <string name="review_prompt_positive_button">በጣም ጥሩ ነው!</string>
   <!-- Label for a button opening a feedback forum -->
   <string name="review_prompt_feedback_button">አስተያየት ይተው</string>
 </resources>
