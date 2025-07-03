@@ -1740,8 +1740,12 @@
   <string name="unsubmitted_crash_dialog_checkbox_label">የብልሽት ሪፖርቶችን በራስ-ሰር ይላኩ</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">ዝጋ</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">ዳግም አታሳይ</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">የብልሽት ሪፖርት ላክ</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">ተጨማሪ ይወቁ</string>
   <!--
     Bookmarks
 
@@ -1950,6 +1954,10 @@
   <string name="studies_on">በርቷል</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">ጠፍቷል</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">በርቷል</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">ጠፍቷል</string>
   <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
   <string name="preferences_category_permissions">ፈቃዶች</string>
   <!-- Category header of a preference that allows a user to alter settings related to web content. -->
@@ -2543,6 +2551,8 @@
   <string name="preferences_passwords_exceptions_remove_all">ሁሉንም የማይካተቱትን ሰርዝ</string>
   <!-- Hint for search box in passwords list -->
   <string name="preferences_passwords_saved_logins_search_2">የይለፍ ቃላትን ፈልግ</string>
+  <!-- Content description for the logins navigation bar back button -->
+  <string name="logins_navigate_back_button_content_description">ተመለስ</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">ድረ-ገፅ</string>
   <!-- The header for the username for a login -->
@@ -2563,6 +2573,22 @@
   <string name="saved_login_clear_username">የተጠቃሚ ስም አጽዳ</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">የአስተናጋጅ ስም ያጽዱ</string>
+  <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
+  <string name="login_detail_menu_button_content_description">የመግቢያ ዝርዝር ምናሌ</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
+  <string name="login_details_navigate_back_button_content_description">ወደ ኋላ ዳስስ</string>
+  <!-- Edit text for the login detail menu edit button -->
+  <string name="login_detail_menu_edit_button">አርትዕ</string>
+  <!-- Delete text for the login detail menu delete button -->
+  <string name="login_detail_menu_delete_button">አጥፋ</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the add login view. -->
+  <string name="add_login_navigate_back_button_content_description">ወደ ኋላ ዳስስ</string>
+  <!-- Content description, used by tools like screenreaders, to press on the save new login button. -->
+  <string name="add_login_save_new_login_button_content_description">አዲስ መግቢያን አስቀምጥ</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the edit login view. -->
+  <string name="edit_login_navigate_back_button_content_description">ወደ ኋላ ዳስስ</string>
+  <!-- Content description, used by tools like screenreaders, to press on the edit login button. -->
+  <string name="edit_login_button_content_description">መግቢያ አርትዕ</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">ድረ-ገፅን በአሳሽ ውስጥ ይክፈቱ</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -2956,6 +2982,8 @@
   -->
   <string name="pocket_stories_header_1" tools:ignore="UnusedResources" moz:removedIn="140">አነቃቂ ታሪኮች</string>
   <!-- Header text for a section on the home screen. -->
+  <string name="pocket_stories_header_2">ታሪኮች</string>
+  <!-- Header text for a section on the home screen. -->
   <string name="pocket_stories_categories_header" moz:removedIn="141" tools:ignore="UnusedResources">ታሪኮች በርዕስ</string>
   <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
   <string name="pocket_stories_placeholder_text" moz:removedIn="141" tools:ignore="UnusedResources">ተጨማሪ ያግኙ</string>
@@ -3275,6 +3303,8 @@
   <string name="protection_panel_etp_toggle_label">የተሻሻለ የክትትል ጥበቃ</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
   <string name="protection_panel_etp_toggle_enabled_description">በዚህ ጣቢያ ላይ የሆነ ነገር የተሰበረ ከመሰለ፣ ጥበቃዎችን በማጥፋት ይሞክሩ።</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
+  <string name="protection_panel_etp_toggle_disabled_description">ጥበቃዎች ጠፍተዋል። እነሱን መልሰው እንዲያበሩዋቸው እንመክራለን።</string>
   <!--
     Text for displaying the total number of trackers blocked in the protection panel.
     %d is a placeholder for the number of trackers blocked.
@@ -3297,6 +3327,11 @@
     %d is a placeholder for the number of trackers blocked.
   -->
   <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s፡ %d</string>
+  <!--
+    Description text for a dialog confirming whether the user wants to delete all data for current site.
+    %s is a placeholder for the base domain of website.
+  -->
+  <string name="clear_site_data_dialog_description"><![CDATA[ለ<b>%s</b> ኩኪዎችን እና የጣቢያ ውሂብን ማስወገድ ከድር ጣቢያዎች ሊያወጣዎት እና የግዢ ጋሪዎችን ሊያጸዳ ይችላል።]]></string>
   <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
   <string name="clear_site_data_dialog_positive_button_text">አጽዳ</string>
   <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
