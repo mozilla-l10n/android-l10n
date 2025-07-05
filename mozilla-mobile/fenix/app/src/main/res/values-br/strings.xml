@@ -1332,6 +1332,8 @@
   <string name="tab_tray_multiselect_share_content_description">Serriñ an ivinelloù diuzet</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">Lañser an ivinelloù diuzet</string>
+  <!-- Title text displayed for a homepage tab in the tabs tray. -->
+  <string name="tab_tray_homepage_tab">Degemer</string>
   <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
   <string name="remove_tab_from_collection">Dilemel an ivinell eus an dastumad</string>
   <!-- Text for button to enter multiselect mode in tabs tray -->
@@ -1440,6 +1442,11 @@
   -->
   <string name="download_item_in_progress_description" moz:removedIn="141" tools:ignore="UnusedResources">%1$s / %2$s • %3$s a chom</string>
   <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • amzer dianav</string>
+  <!--
     Description of a paused download item, displayed in the downloads list when the total download size is unknown.
     %1$s is the current file size that has been downloaded.
   -->
@@ -1500,6 +1507,8 @@
     Broken site reason text for site slow or not working
   -->
   <string name="webcompat_reporter_reason_slow" moz:removedIn="140" tools:ignore="UnusedResources">N’a ket en-dro pe gorrek eo al lec’hienn</string>
+  <!-- Broken site reason text for site doesn’t load -->
+  <string name="webcompat_reporter_reason_load">Ne garg ket al lec’hienn</string>
   <!-- Broken site reason text for images or videos -->
   <string name="webcompat_reporter_reason_media" moz:removedIn="140" tools:ignore="UnusedResources">Skeudennoù pe videoioù</string>
   <!-- Broken site reason text for buttons, links, and other content -->
@@ -2203,6 +2212,8 @@
   <string name="preference_doh_provider_custom_dialog_title">Pourchaser personelaet</string>
   <!-- Text displayed above provider textfield under "DNS over HTTPS" -->
   <string name="preference_doh_provider_custom_dialog_textfield">Pourchaser</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL does not start with "https://" or its scheme is not "https" -->
+  <string name="preference_doh_provider_custom_dialog_error_https">An URL a rank kregiñ gant “https://”</string>
   <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL is invalid -->
   <string name="preference_doh_provider_custom_dialog_error_invalid">URL direizh</string>
   <!-- Cancel button text for provider textfield under "DNS over HTTPS" -->
@@ -2215,6 +2226,10 @@
   <string name="preference_doh_exceptions_add">Ouzhpennañ ul lec’hienn</string>
   <!-- Text displayed above the input field when adding exceptions for "DNS over HTTPS". -->
   <string name="preference_doh_exceptions_add_site">Lec’hienn</string>
+  <!-- Placeholder URL displayed in the input field when adding exceptions for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_placeholder">skouer.bzh</string>
+  <!-- Text displayed on the button within the input field for adding exceptions to "DNS over HTTPS" -->
+  <string name="preference_doh_exceptions_add_save">Enrollañ</string>
   <!-- About page link text to open support link -->
   <string name="about_support">Skor</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -2701,6 +2716,8 @@
   -->
   <string name="pocket_stories_header_1" tools:ignore="UnusedResources" moz:removedIn="140">Boued spered</string>
   <!-- Header text for a section on the home screen. -->
+  <string name="pocket_stories_header_2">Pennadoù</string>
+  <!-- Header text for a section on the home screen. -->
   <string name="pocket_stories_categories_header" moz:removedIn="141" tools:ignore="UnusedResources">Istorioù dre dem</string>
   <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
   <string name="pocket_stories_placeholder_text" moz:removedIn="141" tools:ignore="UnusedResources">Dizoloiñ muioc’h</string>
@@ -2788,6 +2805,12 @@
   <string name="translation_error_language_not_supported_warning_text">Hon digarezit, n’eo ket skoret ar yezh \"%1$s\" c’hoazh.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">O treiñ…</string>
+  <!--
+    Translations options dialog
+
+    Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on.
+  -->
+  <string name="translation_option_bottom_sheet_title_heading">Arventennoù an droidigezh</string>
   <!-- Toggle switch label that allows a user to set if they would like to never be offered a translation of the given language. %1$s is the language name, for example, "Spanish". -->
   <string name="translation_option_bottom_sheet_never_translate_in_language">Na dreiñ biken %1$s</string>
   <!-- Toggle switch label that allows a user to set the setting if they would like the browser to never translate the site the user is currently visiting. -->
@@ -2959,8 +2982,55 @@
   <string name="download_language_file_dialog_positive_button_text_all_languages">Pellgargañ ha treiñ</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
   <string name="download_language_file_dialog_negative_button_text">Nullañ</string>
+  <!--
+    Unified Trust Panel
+
+    Text for the protection panel header when the site is secure.
+  -->
+  <string name="protection_panel_header_secure">Diogel</string>
+  <!-- Text for the protection panel header when the site is not secure. -->
+  <string name="protection_panel_header_not_secure">Diziogel</string>
+  <!-- Title text for the protection panel banner when the site is not secure. -->
+  <string name="protection_panel_banner_not_secure_title">Taolit evezh war al lec’hienn-mañ</string>
+  <!-- Description text for the protection panel banner when the site is not secure. -->
+  <string name="protection_panel_banner_not_secure_description">N’eo ket diogel ho kennask.</string>
+  <!-- Title text for the protection panel banner when tracking protection is disabled. -->
+  <string name="protection_panel_banner_not_protected_title">Diweredekaet ho peus ar gwarezioù</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">Heulierien stanket: %d</string>
+  <!-- Text for when no trackers have been blocked. -->
+  <string name="protection_panel_no_trackers_blocked">N’eo bet kavet heulier ebet</string>
+  <!-- Link text to navigate to privacy and security settings from the protection panel. -->
+  <string name="protection_panel_privacy_and_security_settings">Arventennoù evit ho puhez prevez ha diogelroez</string>
+  <!-- Title text for the protection panel permissions section. -->
+  <string name="protection_panel_permissions_title">Aotreoù</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the trackers blocked panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_total_num_trackers_blocked">Heulierien stanket: %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
+  <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
+  <string name="clear_site_data_dialog_positive_button_text">Skarzhañ</string>
   <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
   <string name="clear_site_data_dialog_negative_button_text">Nullañ</string>
+  <!-- Text for the connection security panel when the site is secure. -->
+  <string name="connection_security_panel_secure">Kennask diarvar</string>
+  <!-- Text for the connection security panel when the site is not secure. -->
+  <string name="connection_security_panel_not_secure">N’eo ket diarvar ar c’hennask</string>
+  <!--
+    Text for the connection security panel to indicate who the certificate was verified by.
+    %s is a placeholder for the name of the certificate authority that verified the ticket
+  -->
+  <string name="connection_security_panel_verified_by">Gwiriet gant %s</string>
   <!--
     Debug drawer
 
@@ -3088,6 +3158,18 @@
   <!-- Content description for delete button. %s is the username of the login. -->
   <string name="debug_drawer_logins_delete_login_button_content_description">Dilemel an titour kennaskañ gant an anv arveriad %s</string>
   <!--
+    Debug drawer addresses
+
+    The title of the Addresses feature in the Debug Drawer.
+  -->
+  <string name="debug_drawer_addresses_title">Chomlec’hioù</string>
+  <!-- The title of the header for the section for managing addresses. -->
+  <string name="debug_drawer_addresses_management_header">Merañ ar chomlec’hioù</string>
+  <!-- The title of the button in the debug drawer for adding a new address. -->
+  <string name="debug_drawer_add_new_address">Ouzhpennañ chomlec’hioù nevez evit ar yezh diuzet</string>
+  <!-- The title of the button for deleting in the debug drawer all addresses. -->
+  <string name="debug_drawer_delete_all_addresses">Dilemel an holl chomlec’hioù</string>
+  <!--
     Debug drawer "contextual feature recommendation" (CFR) tools
 
     The title of the CFR Tools feature in the Debug Drawer
@@ -3121,6 +3203,22 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">BETA</string>
+  <!--
+    Root certificate expiration warnings
+
+    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
+
+    Homepage card button to open Google Play Store. "Update" is a verb.
+  -->
+  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Hizivaat bremañ</string>
+  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Hizivait ho merdeer Firefox</string>
+  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
+  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Hizivait a-raok ar 14 a viz Meurzh</string>
+  <!-- Homepage card title about old Firefox version -->
+  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Chom a ra nebeutoc’h eget 7 deiz evit hizivaat</string>
+  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
+  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Hizivadur erbedet</string>
   <!-- TextField Design System Component -->
 
   <!--
@@ -3133,4 +3231,14 @@
   <string name="a11y_task_icon_description">Ikon trevell</string>
   <!-- Negative button text for the contextual feature recommendation (CFR) dismissing the screen lock suggestion -->
   <string name="private_tab_cfr_negative">Ket, trugarez</string>
+  <!-- Positive button text for the contextual feature recommendation (CFR) enabling screen lock for private tabs -->
+  <string name="private_tab_cfr_positive">Prennañ an ivinell</string>
+  <!--
+    Review prompt
+
+    Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="review_prompt_pre_prompt_header">Petra soñjit eus %1$s?</string>
+  <!-- Label for a button negatively rating the user's experience with the app -->
+  <string name="review_prompt_negative_button">Kudennoù am eus</string>
 </resources>
