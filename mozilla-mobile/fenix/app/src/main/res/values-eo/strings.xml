@@ -427,6 +427,10 @@
   <string name="browser_menu_default_banner_subtitle">Tio postulas sekundojn. Vi povas ŝanĝi iam ajn.</string>
   <!-- Content description for the button that dismisses the set as default banner in the menu -->
   <string name="browser_menu_default_banner_dismiss" moz:removedIn="142" tools:ignore="UnusedResources">Ignori</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button that dismisses the set as default banner in the menu -->
+  <string name="browser_menu_default_banner_dismiss_promotion">Rifuzi oferton</string>
+  <!-- Content description (not visible, for screen readers etc.) for recommended extensions in main menu -->
+  <string name="browser_menu_recommended_extensions_content_description">Pli da informo</string>
   <!--
     Menu "contextual feature recommendation" (CFR)
 
@@ -867,10 +871,14 @@
   <string name="preferences_category_account">Konto</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Loko por la adresa strio</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">Aranĝo de ilarstrio</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">Etoso</string>
   <!-- Preference for customizing the home screen -->
   <string name="preferences_home_2">Eka paĝo</string>
+  <!-- Preference for customizing the app icon -->
+  <string name="preferences_app_icon">Emblemo de apo</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Gestoj</string>
   <!-- Preference for settings related to visual options -->
@@ -949,6 +957,14 @@
   <string name="preferences_open_links_in_apps_never">Neniam</string>
   <!-- Preference for open download with an external download manager app -->
   <string name="preferences_external_download_manager" tools:ignore="UnusedResources" moz:removedIn="141">Ekstera administranto de elŝutoj</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">Administri elŝutojn per alia apo</string>
+  <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_downloads_settings_clean_up_files_title">Forigi el %s kaj el aparato</string>
+  <!-- Summary for the setting to automatically clean up downloaded files -->
+  <string name="preferences_downloads_settings_clean_up_files_summary">Forigo de dosieroj el via administranto de elŝutoj ankaŭ forigas ilin el via aparato</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads">Elŝutoj</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Aktivigi registrojn de Gecko</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -977,6 +993,20 @@
   <string name="addons_permissions_allow_for_all_sites_subtitle">Se vi fidas tiun ĉi etendaĵon vi povas doni al ĝi tiun permeson por ĉiuj retejoj.</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">Tiu ĉi etendaĵo ne postulas iun ajn permeson.</string>
+  <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
+  <string name="addons_permissions_required_data_collection_description" moz:removedIn="141" tools:ignore="UnusedResources">La programisto indikas ke tiu ĉi etendaĵo kolektas: %1$s.</string>
+  <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
+  <string name="addons_permissions_required_data_collection_description_2">La programisto indikas ke tiu ĉi etendaĵo kolektas: %1$s</string>
+  <!-- The description of the "none" data collection permission, when the extension doesn't collect anything according to the developer. -->
+  <string name="addons_permissions_none_required_data_collection_description">La programisto indikas ke tiu ĉi etendaĵo ne postulas kolekton de datumoj.</string>
+  <!-- The title of the required permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_permissions">Postulataj permesoj:</string>
+  <!-- The title of the optional permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_permissions">Nedevigaj permesoj:</string>
+  <!-- The title of the required data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_data_collection">Postulata kolekto de datumoj:</string>
+  <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_data_collection">Nedeviga kolekto de datumoj:</string>
   <!--
     Add-on Preferences
 
@@ -1100,6 +1130,12 @@
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo_subtitle">Kreita de @heyheymomodraws</string>
+  <!-- Title for the "Solid colors" group of alternative app icon variants in the icon picker screen. This group contains icons with flat, uniform color backgrounds. -->
+  <string name="alternative_app_icon_group_solid_colors">Solidaj koloroj</string>
+  <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
+  <string name="alternative_app_icon_group_gradients">Gamoj</string>
+  <!-- Title for the "Other" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
+  <string name="alternative_app_icon_group_other">Aliaj</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1208,6 +1244,8 @@
   <string name="exceptions_empty_message_learn_more_link">Pli da informo</string>
   <!-- Preference switch for usage and technical data collection -->
   <string name="preference_usage_data_2">Sendi teknikajn kaj interagajn datumojn</string>
+  <!-- Preference switch for usage and technical learn more link in new compose -->
+  <string name="preference_usage_data_learn_more_2">Pli da informo pri teknikaj datumoj</string>
   <!-- Preference switch for usage and technical learn more link -->
   <string name="preference_usage_data_learn_more" tools:ignore="UnusedResources" moz:removedIn="141">Pli da informo</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
@@ -1220,6 +1258,16 @@
   <string name="preferences_automatically_send_crashes_title" tools:ignore="UnusedResources" moz:removedIn="142">Aŭtomate sendi raportojn pri paneoj</string>
   <!-- Preference switch description for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_description" tools:ignore="UnusedResources" moz:removedIn="142">Tio ĉi helpas nin diagnozi kaj solvi problemojn en la retumilo. Raportoj povus inkluzivi personajn aŭ delikatajn datumojn.</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">Pli da informo pri raportoj pri paneo</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">Raportoj pri paneo</string>
+  <string name="usage_data_category">Datumoj pri uzado</string>
+  <string name="studies_data_category">Studoj</string>
+  <string name="technical_data_category">Teknikaj datumoj</string>
+  <string name="crash_reporting_description">Raportoj pri paneo helpas nin diagnozi kaj solvi problemojn en la retumilo. Raportoj povus inkluzivi personajn aŭ delikatajn datumojn.</string>
+  <!-- Section title for campaign measurement in data collections screen -->
+  <string name="preferences_marketing_data_title">Kampanja mezuro</string>
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
   <string name="preferences_marketing_data_2">Kampanjo pri mezuro de datumoj</string>
   <!--
@@ -1259,6 +1307,16 @@
   <string name="preference_top_toolbar">Supre</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">Malsupre</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">Simpla</string>
+  <!-- Preference for using expanded toolbar -->
+  <string name="preference_expanded_toolbar">Etendita</string>
+  <!--
+    App icon Preferences
+
+    Title for the preference that lets the user pick a new app icon
+  -->
+  <string name="preference_select_app_icon_title">Elekti emblemon de apo</string>
   <!--
     Theme Preferences
 
@@ -1422,6 +1480,13 @@
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Pli da informo</string>
   <!--
+    Sessions
+
+    Title for the list of tabs in the current normal session used by a11y services
+    The %1$s will be replaced by the number of opened normal tabs
+  -->
+  <string name="tabs_header_normal_tabs_counter_title">Normalaj malfermitaj langetoj: %1$s. Tuŝetu por ŝanĝi langetojn.</string>
+  <!--
     Title for the list of tabs in the current private session used by a11y services
     The %1$s will be replaced by the number of opened private tabs
   -->
@@ -1431,6 +1496,12 @@
     The %1$s will be replaced by the number of opened synced tabs
   -->
   <string name="tabs_header_synced_tabs_counter_title">Spegulitaj malfermitaj langetoj: %1$s. Tuŝetu por ŝanĝi langetojn.</string>
+  <!-- Text for the tabs header private tabs -->
+  <string name="tabs_header_private_tabs_title">Privataj</string>
+  <!-- Text for the tabs header normal tabs -->
+  <string name="tabs_header_normal_tabs_title">Langetoj</string>
+  <!-- Text for the tabs header synced tabs -->
+  <string name="tabs_header_synced_tabs_title">Spegulado</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Aldoni langeton</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1525,6 +1596,8 @@
     %1$d is the number of items deleted.
   -->
   <string name="download_delete_multiple_items_snackbar_2">Elementoj forigitaj: %1$d</string>
+  <!-- Title for the dialog that prompts the user to choose an app for downloading a file. -->
+  <string name="download_app_dialog_title">Elŝuti dosieron per:</string>
   <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
   <string name="download_delete_single_item_snackbar_2">“%1$s” forigita</string>
   <!-- Text for the snackbar to confirm that downloads are in progress. -->
@@ -1629,11 +1702,21 @@
   -->
   <string name="download_item_in_progress_description_pending">%1$s / %2$s • en atendo</string>
   <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • nekonata tempo</string>
+  <!--
     Description of a paused download item, displayed in the downloads list.
     %1$s is the current file size that has been downloaded.
     %2$s is the total size of the downloaded file.
   -->
   <string name="download_item_paused_description">%1$s / %2$s • en paŭzo</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • paŭzinta</string>
   <!-- Text to indicate that an in progress download is paused. -->
   <string name="download_item_status_paused" moz:removedIn="141" tools:ignore="UnusedResources">paŭzigita</string>
   <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
@@ -1670,6 +1753,10 @@
   <string name="webcompat_reporter_screen_title">Raporti ne bone funkciantan retejon</string>
   <!-- The description of the Web Compat Reporter feature. %1$s is the name of the app (for example "Firefox"). -->
   <string name="webcompat_reporter_description" moz:removedIn="142" tools:ignore="UnusedResources">Helpu igi %1$s pli bona por ĉiuj. Laboristoj en Mozilla uzas la informon, kiun vi sendas, por solvi problemojn kun retejoj.</string>
+  <!-- The description of the Web Compat Reporter feature, which has a "learn more" button text for navigating to a SUMO link to learn more about reporting a broken site. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="webcompat_reporter_description_2">Via raporto helpos nin kompreni kaj solvi problemojn en %1$s kaj igi ĝin pli bona por ĉiuj. Pli da informo</string>
+  <!-- The button text for navigating to the SUMO link to learn more about reporting a broken site. -->
+  <string name="webcompat_reporter_learn_more">Pli da informo</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">Retadreso</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
@@ -1678,6 +1765,8 @@
   <string name="webcompat_reporter_label_whats_broken_2">Kio ne bone funkcias?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason" moz:removedIn="142" tools:ignore="UnusedResources">Elektu kialon</string>
+  <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_choose_reason_2">Elektu kialon</string>
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Bonvolu elekti kialon</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
@@ -1692,6 +1781,8 @@
   <string name="webcompat_reporter_success_snackbar_text">Via raporto estis sendita</string>
   <!-- Button text for closing or dismissing the snackbar shown after successfully submitting a WebCompat report. -->
   <string name="webcompat_reporter_dismiss_success_snackbar_text">Fermi</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text">Kio okazis? Kio estus devinta okazi?</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
