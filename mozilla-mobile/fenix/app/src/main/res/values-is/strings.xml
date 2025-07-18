@@ -34,6 +34,8 @@
   <string name="no_private_tabs_description">Opnu huliðsfliparnir þínir verða sýndir hér.</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">%1$d valið</string>
+  <!-- Tab tray multi select title in app bar when no tabs are selected -->
+  <string name="tab_tray_multi_select_title_empty">Veldu flipa</string>
   <!-- Label of button in create collection dialog for creating a new collection -->
   <string name="tab_tray_add_new_collection">Bæta við nýju safni</string>
   <!-- Label of editable text in create collection dialog for naming a new collection -->
@@ -674,7 +676,7 @@
   <!-- Marketing onboarding page body. 'Firefox' is intentionally hardcoded. -->
   <string name="onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">Ef þú deilir því hvernig þú uppgötvaðir Firefox og að þú notar hann, hjálpar þú við að kynna vafrann okkar fyrir fleirum.</string>
   <!-- Marketing onboarding page opt-in checkbox. 'Mozilla' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_opt_in_checkbox" tools:ignore="UnusedResources">Deildu lágmarksgögnum með markaðstæknifélögum Mozilla. Þessi gögn eru aldrei seld eða notuð til að sýna þér auglýsingar.</string>
+  <string name="onboarding_marketing_opt_in_checkbox" tools:ignore="UnusedResources">Deila lágmarksgögnum með markaðstæknifélögum Mozilla. Þessi gögn eru aldrei seld eða notuð til að sýna þér auglýsingar.</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <string name="onboarding_marketing_learn_more" tools:ignore="UnusedResources">Hvernig við notum gögnin</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
@@ -682,7 +684,7 @@
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">Eitt að lokum</string>
   <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
-  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">Deildu því hvernig þú uppgötvaðir Firefox og að þú notar hann með markaðstækniaðilum Mozilla. Þessi gögn eru aldrei seld.</string>
+  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">Deila því hvernig þú uppgötvaðir Firefox og að þú notar hann með markaðstækniaðilum Mozilla. Þessi gögn eru aldrei seld.</string>
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
   <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Samþykkja og byrja að vafra</string>
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -873,6 +875,10 @@
   <string name="preferences_theme">Þema</string>
   <!-- Preference for customizing the home screen -->
   <string name="preferences_home_2">Upphafssíða</string>
+  <!-- Preference for customizing the app icon -->
+  <string name="preferences_app_icon">Forritstákn</string>
+  <!-- Preference for showing the tab strip -->
+  <string name="preferences_tab_strip">Birting flipastikunnar</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Bendingar</string>
   <!-- Preference for settings related to visual options -->
@@ -955,6 +961,8 @@
   <string name="preferences_choose_app_for_downloads">Stýra niðurhölum með öðru forriti</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Eyða úr %s og tæki</string>
+  <!-- Summary for the setting to automatically clean up downloaded files -->
+  <string name="preferences_downloads_settings_clean_up_files_summary">Ef þú fjarlægir skrár úr niðurhalsstjóranum þínum, fjarlægir þú þær einnig af tækinu þínu</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads">Sóttar skrár</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -1266,7 +1274,7 @@
     Preference description for marketing data collection.
     Note: The words "Firefox" and "Mozilla" should NOT be translated. “That you use it” is to mean that the user is opting in to sharing that they are continuing to use Firefox after installing it; not that Firefox is tracking their “usage” or what they’re using it for.
   -->
-  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">Deildu því hvernig þú uppgötvaðir Firefox og að þú notar hann með markaðstæknifélögum Mozilla.</string>
+  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">Deila því hvernig þú uppgötvaðir Firefox og að þú notar hann með markaðstæknifélögum Mozilla.</string>
   <!-- Learn more link for marketing data preference -->
   <string name="preferences_marketing_data_learn_more">Frekari upplýsingar um markaðsgögn</string>
   <!-- Learn more link for crash reporting preference -->
@@ -1304,6 +1312,12 @@
   <!-- Preference for using expanded toolbar -->
   <string name="preference_expanded_toolbar">Dregið sundur</string>
   <!--
+    App icon Preferences
+
+    Title for the preference that lets the user pick a new app icon
+  -->
+  <string name="preference_select_app_icon_title">Veldu forritstákn</string>
+  <!--
     Theme Preferences
 
     Preference for using light theme
@@ -1315,6 +1329,12 @@
   <string name="preference_auto_battery_theme">Stillt af Battery Saver</string>
   <!-- Preference for using following device theme -->
   <string name="preference_follow_device_theme">Fylgja þema tækisins</string>
+  <!--
+    Tab Strip Preferences
+
+    Preferences for showing tab strip
+  -->
+  <string name="preference_tab_strip_show">Sýna flipastiku</string>
   <!--
     Gestures Preferences
 
@@ -1465,6 +1485,13 @@
   <string name="studies_title">Settu upp og keyrðu rannsóknir</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Frekari upplýsingar</string>
+  <!--
+    Sessions
+
+    Title for the list of tabs in the current normal session used by a11y services
+    The %1$s will be replaced by the number of opened normal tabs
+  -->
+  <string name="tabs_header_normal_tabs_counter_title">Opnir venjulegir flipar: %1$s. Ýttu til að skipta um flipa.</string>
   <!--
     Title for the list of tabs in the current private session used by a11y services
     The %1$s will be replaced by the number of opened private tabs
@@ -1741,7 +1768,7 @@
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description">Lýstu vandamálinu (valfrjálst)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
-  <string name="webcompat_reporter_send_more_info">Sendu frekari upplýsingar</string>
+  <string name="webcompat_reporter_send_more_info">Senda frekari upplýsingar</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Hætta við</string>
   <!-- The button text for the send button to submit the provided form data. -->
@@ -1798,6 +1825,10 @@
   <string name="tab_crash_restore">Endurheimta flipa</string>
   <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
   <string name="unsubmitted_crash_dialog_title">%s þurfti að endurræsa</string>
+  <!-- Single unsubmitted crash matching remote settings. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_title">Þú ert með ósenda hrunskýrslu sem tengist hrunum sem verið er að rannsaka. Ef þú sendir hana mun það hjálpa okkur að bæta %1$s. Ef þessari tilkynningu er lokað verður skýrslan hunsuð.</string>
+  <!-- Multiple unsubmitted crashes matching remote settings. %1$d is the number of unsent crash reports, %2$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crashes_requested_by_devs_dialog_title">Þú ert með ósendar hrunskýrslur (%1$d) sem tengjast hrunum sem verið er að rannsaka. Ef þú sendir þær mun það hjálpa okkur að bæta %2$s. Ef þessari tilkynningu er lokað verða skýrslurnar hunsaðar.</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">Senda hrunskýrslur inn sjálfkrafa</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
