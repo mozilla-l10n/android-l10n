@@ -34,6 +34,8 @@
   <string name="no_private_tabs_description">Is ischedas privadas tuas ant a èssere ammustradas inoghe.</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">%1$d seletzionada</string>
+  <!-- Tab tray multi select title in app bar when no tabs are selected -->
+  <string name="tab_tray_multi_select_title_empty">Seletziona is ischedas</string>
   <!-- Label of button in create collection dialog for creating a new collection -->
   <string name="tab_tray_add_new_collection">Agiunghe una colletzione noa</string>
   <!-- Label of editable text in create collection dialog for naming a new collection -->
@@ -64,6 +66,8 @@
   -->
   <string name="private_browsing_placeholder_description_2" moz:removedIn="141" tools:ignore="UnusedResources">%1$s lìmpiat sa cronologia de chirca e de navigatzione tuas dae is ischedas privadas cando ddas serras o essis de s’aplicatzione. Non ti faghet abarrare in anònimu pro is sitos web e su frunidore de servìtzios de internet tuo, però t’agiudat a cunservare in privadu su chi ses faghende in lìnia dae àtera gente chi imperat custu dispositivu.</string>
   <string name="private_browsing_common_myths">Mitos fitianos subra de sa navigatzione privada</string>
+  <!-- Text to be announced by the accessibility service to inform the user that the private browsing mode is currently active. -->
+  <string name="private_browsing_a11y_session_announcement">Sessione de navigatzione privada</string>
   <!--
     True Private Browsing Mode
 
@@ -198,6 +202,16 @@
   <string name="browser_menu_extensions_banner_onboarding_header" moz:removedIn="141" tools:ignore="UnusedResources">Personaliza %s</string>
   <!-- Browser menu banner header text for extensions onboarding when all installed extensions have been disabled. -->
   <string name="browser_menu_disabled_extensions_banner_onboarding_header">Tenes estensiones installadas, ma no ativadas</string>
+  <!--
+    Browser menu banner body text for extensions onboarding.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="browser_menu_extensions_banner_onboarding_body" moz:removedIn="141" tools:ignore="UnusedResources">Is estensiones megiorant sa navigatzione: podent modificare s’aspetu e su rendimentu de %s o fàghere crèschere sa riservadesa e sa seguresa.</string>
+  <!--
+    Browser menu banner body text for extensions onboarding when all installed extensions have been disabled.
+    %s is the label of the button that opens the extension manager (for example "Manage extensions").
+  -->
+  <string name="browser_menu_disabled_extensions_banner_onboarding_body" moz:removedIn="141" tools:ignore="UnusedResources">Pro impreare is estensiones, ativa·ddas in is cunfiguratziones o seletzionende “%s” a suta.</string>
   <!-- Browser menu banner link text for learning more about extensions -->
   <string name="browser_menu_extensions_banner_learn_more" moz:removedIn="141" tools:ignore="UnusedResources">Àteras informatziones</string>
   <!-- Browser menu button that opens the extensions manager -->
@@ -304,6 +318,8 @@
   <string name="browser_menu_sign_back_in_to_sync">Torra·ti a identificare pro sincronizare</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
   <string name="browser_menu_syncing_paused_caption">Sincronizatzione in pàusa</string>
+  <!-- Browser menu caption label for an authenticated user -->
+  <string name="browser_menu_signed_in_caption">Gesti su chi boles sarvare e sincronizare</string>
   <!-- Browser menu label that creates a private tab -->
   <string name="browser_menu_new_private_tab">Ischeda privada noa</string>
   <!-- Browser menu label that navigates to the Password screen -->
@@ -323,6 +339,10 @@
   <string name="browser_menu_back_button_content_description" moz:removedIn="141" tools:ignore="UnusedResources">Torra a su menù printzipale</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar main menu. -->
   <string name="browser_main_menu_handlebar_content_description" moz:removedIn="142" tools:ignore="UnusedResources">Serra su pannellu de su menù printzipale</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
+  <string name="browser_close_main_menu_handlebar_content_description">Serra su menù</string>
+  <!-- Content description (not visible, for screen readers etc.) for main menu navigation header. -->
+  <string name="browser_main_menu_content_description_navigation_header">Navigatzione</string>
   <!-- Content description (not visible, for screen readers etc.) for main menu help button. -->
   <string name="browser_main_menu_content_description_help_button">Agiudu</string>
   <!-- Content description (not visible, for screen readers etc.) for main menu settings button. -->
@@ -395,8 +415,16 @@
     %1$s is the name of the app (for example "Firefox").
   -->
   <string name="browser_menu_default_banner_title">Cunfigura %1$s comente predefinidu</string>
+  <!-- Label text within the set as default banner -->
+  <string name="browser_menu_default_banner_subtitle" moz:removedIn="143" tools:ignore="UnusedResources">Bastat unu segundu. Modifica·ddu cando boles.</string>
+  <!-- Label text within the set as default banner -->
+  <string name="browser_menu_default_banner_subtitle_2">Lestru, privadu e fatu pro tene.</string>
   <!-- Content description for the button that dismisses the set as default banner in the menu -->
   <string name="browser_menu_default_banner_dismiss" moz:removedIn="142" tools:ignore="UnusedResources">Iscarta</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button that dismisses the set as default banner in the menu -->
+  <string name="browser_menu_default_banner_dismiss_promotion">Refuda sa proposta</string>
+  <!-- Content description (not visible, for screen readers etc.) for recommended extensions in main menu -->
+  <string name="browser_menu_recommended_extensions_content_description">Àteras informatziones</string>
   <!--
     Menu "contextual feature recommendation" (CFR)
 
@@ -471,6 +499,12 @@
     %s is the search engine name (for example: DuckDuckGo).
   -->
   <string name="search_engine_icon_content_description_1">Motores de chirca: %s</string>
+  <!--
+    Content description (not visible, for screen readers etc.) of the search engine selector from the search toolbar.
+    %s is the search engine name (for example: DuckDuckGo).
+    The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
+  -->
+  <string name="search_engine_selector_content_description">%s: seletore de su motore de chirca</string>
   <!--
     Home onboarding
 
@@ -752,10 +786,16 @@
   <string name="preferences_category_account">Contu</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Positzione de sa barra de indiritzos</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">Dispositzione de sa barra de ainas</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">Tema</string>
   <!-- Preference for customizing the home screen -->
   <string name="preferences_home_2">Pàgina printzipale</string>
+  <!-- Preference for customizing the app icon -->
+  <string name="preferences_app_icon">Icona de s’aplicatzione</string>
+  <!-- Preference for showing the tab strip -->
+  <string name="preferences_tab_strip">Visualizatzione de sa barra de is ischedas</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Gestos</string>
   <!-- Preference for settings related to visual options -->
@@ -782,12 +822,18 @@
   <string name="preferences_show_voice_search">Ammustra chirca de boghe</string>
   <!-- Preference title for switch preference to show search suggestions also in private mode -->
   <string name="preferences_show_search_suggestions_in_private">Ammustra in sessiones privadas</string>
+  <!-- Preference title for switch preference to show trending search suggestions -->
+  <string name="preferences_show_trending_search_suggestions">Ammustra is cussìgios populares</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Ammustra chircas reghentes</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Ammustra cussìgios de punta de billete</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
   <string name="preferences_search_browsing_history">Chirca in sa cronologia de navigatzione</string>
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">Chirca in is sinnalibros</string>
+  <!-- Preference title for switch preference to show shortcuts when searching -->
+  <string name="preferences_show_shortcuts">Ammustra incurtzaduras</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
   <string name="preferences_search_synced_tabs">Chirca ischedas sincronizadas</string>
   <!-- Preference for account settings -->
@@ -808,6 +854,16 @@
   <string name="preferences_show_nonsponsored_suggestions">Cussìgios dae %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Otene cussìgios de sa rete acapiados a sa chirca tua</string>
+  <!-- Preference for link sharing -->
+  <string name="preferences_link_sharing">Cumpartzidura de ligòngios</string>
+  <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_title">Include su ligòngiu de iscarrigamentu de %1$s in is cumpartziduras de WhatsApp</string>
+  <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_body">Invita a is amistades tuas a proare una navigatzione prus lestra e segura cun %1$s onni borta chi cumpartzis unu ligòngiu in WhatsApp.</string>
+  <!-- Snackbar message shown when user shares a link -->
+  <string name="link_shared_snackbar_message">Ligòngiu cumpartzidu</string>
+  <!-- Snackbar action label shown when user shares a link -->
+  <string name="link_shared_snackbar_action">Gesti sa cunfiguratzione</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">Aberi is ligòngios in is aplicatziones</string>
   <!-- Preference for open links in third party apps always open in apps option -->
@@ -818,6 +874,8 @@
   <string name="preferences_open_links_in_apps_never">Mai</string>
   <!-- Preference for open download with an external download manager app -->
   <string name="preferences_external_download_manager" tools:ignore="UnusedResources" moz:removedIn="141">Gestore de iscarrigamentos esternu</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">Gesti is iscarrigamentos cun un’àtera aplicatzione</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Ativa is registros de Gecko</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -842,6 +900,8 @@
   <string name="addons_permissions_heading_optional" tools:ignore="UnusedResources" moz:removedIn="141">Optzionale</string>
   <!-- The title of the origin permission option allowing a user to enable the extension to run on all sites -->
   <string name="addons_permissions_allow_for_all_sites">Permite pro totu is sitos</string>
+  <!-- The subtitle for the allow for all sites preference toggle -->
+  <string name="addons_permissions_allow_for_all_sites_subtitle">Si custa estensione est fidada, ddi podes donare permissos pro totu is sitos.</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">Custa estensione non rechedet permissos.</string>
   <!--
