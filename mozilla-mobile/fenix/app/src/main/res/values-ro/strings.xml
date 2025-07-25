@@ -1180,6 +1180,10 @@
   <string name="tabs_header_normal_tabs_counter_title">File normale deschise: %1$s. Atinge pentru a schimba între file.</string>
   <!-- Text for the tabs header private tabs -->
   <string name="tabs_header_private_tabs_title">Privat</string>
+  <!-- Text for the tabs header normal tabs -->
+  <string name="tabs_header_normal_tabs_title">File</string>
+  <!-- Text for the tabs header synced tabs -->
+  <string name="tabs_header_synced_tabs_title">Sincronizare</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Adaugă fila</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1265,6 +1269,8 @@
   <string name="history_older">Mai vechi</string>
   <!-- Text shown when no history exists -->
   <string name="history_empty_message">Fără istoric</string>
+  <!-- Title for the dialog that prompts the user to choose an app for downloading a file. -->
+  <string name="download_app_dialog_title">Descarcă fișierul cu:</string>
   <!-- Text for the snackbar action button to undo deleting a download. -->
   <string name="download_undo_delete_snackbar_action">Anulează</string>
   <!-- Text shown when no download exists -->
@@ -1278,11 +1284,73 @@
   <string name="download_multi_select_title">%1$d selectate</string>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Șterge</string>
+  <!--
+    Content description for the search bar clear text button on the downloads screen
+
+    Content description for pause action button on the downloads screen
+  -->
+  <string name="download_pause_action">Pauză</string>
+  <!-- Content description for resume action button on the downloads screen -->
+  <string name="download_resume_action">Continuă</string>
+  <!-- Content description for retry download action button on the downloads screen -->
+  <string name="download_retry_action">Reîncearcă</string>
   <string name="download_clear_search_description">Șterge</string>
   <!-- Text for the button to share the download URL -->
   <string name="download_share_url">Distribuie adresa URL</string>
+  <!-- Text for the button to share the download file -->
+  <string name="download_share_file">Distribuie fișierul</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
+  <string name="download_delete_multi_select_dialog_confirmation">Sigur vrei să ștergi elementele selectate?</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
+  <string name="download_delete_multi_select_dialog_confirm">Șterge</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
+  <string name="download_delete_multi_select_dialog_cancel">Anulează</string>
+  <!-- Text for the header of in progress downloads -->
+  <string name="download_header_in_progress">În desfășurare</string>
   <!-- Text for the header that groups the downloads older than other groups -->
   <string name="download_time_period_older">Mai vechi</string>
+  <!-- Description of an in progress download item, displayed in the downloads list when the download has just started. -->
+  <string name="download_item_in_progress_description_preparing">Se pregătește descărcarea…</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description" moz:removedIn="141" tools:ignore="UnusedResources">%1$s / %2$s • %3$s au mai rămas</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the download time remaining is known.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description_2">%1$s / %2$s • în %3$s.</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the estimated download time remaining is still being calculated.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_in_progress_description_pending">%1$s / %2$s • în așteptare</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_paused_description">%1$s / %2$s • întrerupt</string>
+  <!-- Text to indicate that an in progress download is paused. -->
+  <string name="download_item_status_paused" moz:removedIn="141" tools:ignore="UnusedResources">întrerupt</string>
+  <!-- Text to indicate that the download speed of an in progress download is being calculated. -->
+  <string name="download_item_download_speed_pending" moz:removedIn="141" tools:ignore="UnusedResources">în așteptare</string>
+  <!-- Text to indicate that a download has failed to download. -->
+  <string name="download_item_status_failed">Descărcare eșuată</string>
+  <!-- Text for the snackbar action button to view failed download details. -->
+  <string name="download_failed_snackbar_action_details">Detalii</string>
+  <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
+  <string name="download_search_placeholder">Caută descărcări</string>
+  <!-- Text to indicate that no downloads match the search query. -->
+  <string name="download_search_no_results_found">Niciun rezultat găsit</string>
+  <!-- Text for the "Select all" button, which selects all downloaded items in the downloads list. -->
+  <string name="download_select_all_items">Selectează tot</string>
   <!--
     Downloads Content Type Filters
 
@@ -1295,6 +1363,8 @@
   <string name="download_content_type_filter_video">Videoclipuri</string>
   <!-- Text for the filter button to show only documents in the downloads list -->
   <string name="download_content_type_filter_document">Documente</string>
+  <!-- Text for the filter button to show all other file types in the downloads list -->
+  <string name="download_content_type_filter_other_1">Altele</string>
   <!--
     Crashes
 
@@ -1325,8 +1395,12 @@
   <string name="bookmark_delete_negative">Anulează</string>
   <!-- Screen title for adding a bookmarks folder -->
   <string name="bookmark_add_folder">Adaugă dosarul</string>
+  <!-- Snackbar title that confirms a bookmark was saved into a folder. %s is the name of the folder the bookmark was saved into. -->
+  <string name="bookmark_saved_in_folder_snackbar">Salvat în „%s”</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">EDITEAZĂ</string>
+  <!-- Bookmark menu move button -->
+  <string name="bookmark_menu_move_button">Mută</string>
   <!-- Bookmark overflow menu edit button -->
   <string name="bookmark_menu_edit_button">Editează</string>
   <!-- Bookmark overflow menu copy button -->
@@ -1360,8 +1434,12 @@
   <string name="bookmark_url_label">URL</string>
   <!-- Bookmark FOLDER editing field label -->
   <string name="bookmark_folder_label">DOSAR</string>
+  <!-- Text indicating which folder a bookmark or folder will be saved in -->
+  <string name="bookmark_save_in_label">Salvează în</string>
   <!-- Bookmark NAME editing field label -->
   <string name="bookmark_name_label">DENUMIRE</string>
+  <!-- Label for a text input field for a bookmark or folder name -->
+  <string name="bookmark_name_label_normal_case">Nume</string>
   <!-- Bookmark add folder screen title -->
   <string name="bookmark_add_folder_fragment_label">Adaugă dosarul</string>
   <!-- Bookmark select folder screen title -->
@@ -1383,8 +1461,20 @@
   <string name="bookmark_deletion_multiple_snackbar_message_3">Se șterg dosarele selectate</string>
   <!-- Bookmark undo button for deletion snackbar action -->
   <string name="bookmark_undo_deletion">ANULEAZĂ</string>
+  <!-- Bookmark snackbar message for deleting a single item. %s is the title of the item being deleted -->
+  <string name="bookmark_delete_single_item">Șters %s</string>
+  <!-- Bookmark snackbar message for deleting multiple items. %s is the number of items being deleted -->
+  <string name="bookmark_delete_multiple_items">Elemente șterse: %s</string>
   <!-- Text for the button to search all bookmarks -->
   <string name="bookmark_search">Introdu termenii de căutare</string>
+  <!-- Content description for the bookmark navigation bar back button -->
+  <string name="bookmark_navigate_back_button_content_description">Navighează înapoi</string>
+  <!-- Content description for the bookmark list new folder navigation bar button -->
+  <string name="bookmark_add_new_folder_button_content_description">Adaugă un folder nou</string>
+  <!-- Content description for the bookmark screen delete bookmark navigation bar button -->
+  <string name="bookmark_delete_bookmark_content_description">Șterge marcajul</string>
+  <!-- Content description for the bookmark screen delete bookmark folder navigation bar button -->
+  <string name="bookmark_delete_folder_content_description">Șterge dosarul</string>
   <!--
     Site Permissions
 
@@ -1471,6 +1561,10 @@
   <string name="studies_on">Activat</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">Dezactivat</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">Activat</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">Dezactivat</string>
   <!--
     Collections
 
@@ -1668,10 +1762,18 @@
   <!-- Subtitle for the tabs item in Delete browsing data, %d is the number of open tabs -->
   <string name="preferences_delete_browsing_data_tabs_subtitle">%d (de) file</string>
   <!--
+    Title for the data and history items in Delete browsing data
+
+    Title for the history item in Delete browsing data
+  -->
+  <string name="preferences_delete_browsing_data_browsing_history_title">Istoricul navigării</string>
+  <!--
     Subtitle for the data and history items in delete browsing data, %d is the
     number of history items the user has
   -->
   <string name="preferences_delete_browsing_data_browsing_data_subtitle">%d (de) adrese</string>
+  <!-- Title for the cookies and site data items in Delete browsing data -->
+  <string name="preferences_delete_browsing_data_cookies_and_site_data">Cookie-uri și date ale site-urilor</string>
   <!-- Subtitle for the cookies item in Delete browsing data -->
   <string name="preferences_delete_browsing_data_cookies_subtitle">Vei fi deconectat(ă) de pe majoritatea site-urilor</string>
   <!-- Title for the cached images and files item in Delete browsing data -->
@@ -1690,6 +1792,16 @@
   <string name="preference_summary_delete_browsing_data_on_quit_2">Șterge automat datele de navigare când selectezi \\„Închide\\” în meniul principal</string>
   <!-- Action item in menu for the Delete browsing data on quit feature -->
   <string name="delete_browsing_data_on_quit_action">Închide</string>
+  <!-- Title text of a delete browsing data dialog. -->
+  <string name="delete_history_prompt_title">Interval de timp pentru ștergere</string>
+  <!-- Body text of a delete browsing data dialog. -->
+  <string name="delete_history_prompt_body_2">Elimină istoricul (inclusiv istoricul sincronizat de pe alte dispozitive)</string>
+  <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
+  <string name="delete_history_prompt_button_last_hour">Ultima oră</string>
+  <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
+  <string name="delete_history_prompt_button_today_and_yesterday">Azi și ieri</string>
+  <!-- Radio button in the delete browsing data dialog to delete all history. -->
+  <string name="delete_history_prompt_button_everything">Totul</string>
   <!-- Dialog message to the user asking to delete browsing data. %s is the name of the app (for example "Firefox"). -->
   <string name="delete_browsing_data_prompt_message_3">%s va șterge datele de navigare selectate.</string>
   <!-- Text for the cancel button for the data deletion dialog -->
@@ -1700,6 +1812,14 @@
   <string name="preferences_delete_browsing_data_snackbar">Date de navigare șterse</string>
   <!-- Text for the snackbar to show the user that the deletion of browsing data is in progress -->
   <string name="deleting_browsing_data_in_progress">Se șterg datele de navigare…</string>
+  <!-- Dialog message to the user asking to delete all history items inside the opened group. %s is a history group name. -->
+  <string name="delete_all_history_group_prompt_message">Șterge toate site-urile din „%s”</string>
+  <!-- Text for the cancel button for the history group deletion dialog -->
+  <string name="delete_history_group_prompt_cancel">Anulează</string>
+  <!-- Text for the allow button for the history group dialog -->
+  <string name="delete_history_group_prompt_allow">Șterge</string>
+  <!-- Text for the snackbar confirmation that the history group was deleted -->
+  <string name="delete_history_group_snackbar">Grupul a fost șters</string>
   <!--
     Onboarding
 
@@ -1746,10 +1866,16 @@
   <string name="etp_settings">Setări de protecție</string>
   <!-- Preference title for enhanced tracking protection settings -->
   <string name="preference_enhanced_tracking_protection">Protecție îmbunătățită împotriva urmăririi</string>
+  <!-- Preference summary for enhanced tracking protection settings on/off switch -->
+  <string name="preference_enhanced_tracking_protection_summary">Acum includem Protecție Totală pentru Cookie-uri, cea mai puternică barieră de până acum împotriva trackerelor cross-site.</string>
+  <!-- Description of enhanced tracking protection. %s is the name of the app (for example "Firefox"). -->
+  <string name="preference_enhanced_tracking_protection_explanation_2">%s te protejează de multe dintre cele mai comune dispozitive de urmărire care urmăresc ceea ce faci online.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Află mai multe</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (implicit)</string>
+  <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+  <string name="preference_enhanced_tracking_protection_standard_description_5">Paginile se vor încărca normal, dar vor bloca mai puține trackere.</string>
   <!-- Accessibility text for the Standard protection information icon -->
   <string name="preference_enhanced_tracking_protection_standard_info_button">Ce blochează protecția standard împotriva urmăririi</string>
   <!-- Preference for enhanced tracking protection for the strict protection settings -->
@@ -1790,6 +1916,8 @@
   <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">Numai în filele private</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
   <string name="preference_enhanced_tracking_protection_custom_cryptominers">Criptomineri</string>
+  <!-- Preference for enhanced tracking protection for the custom protection settings -->
+  <string name="preference_enhanced_tracking_protection_custom_known_fingerprinters">Amprente digitale cunoscute</string>
   <!-- Button label for navigating to the Enhanced Tracking Protection details -->
   <string name="enhanced_tracking_protection_details">Detalii</string>
   <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
