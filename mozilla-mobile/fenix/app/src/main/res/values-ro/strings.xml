@@ -52,6 +52,10 @@
     Title for the home screen section with bookmarks.
   -->
   <string name="home_bookmarks_title">Marcaje</string>
+  <!-- Content description for the button which navigates the user to show all of their bookmarks. -->
+  <string name="home_bookmarks_show_all_content_description">Afișează toate marcajele</string>
+  <!-- Text for the menu button to remove a recently saved bookmark from the user's home screen -->
+  <string name="home_bookmarks_menu_item_remove">Elimină</string>
   <!-- About content. %1$s is the name of the app (for example "Firefox"). -->
   <string name="about_content">%1$s este realizat de Mozilla.</string>
   <!--
@@ -62,6 +66,8 @@
   -->
   <string name="private_browsing_placeholder_description_2" moz:removedIn="141" tools:ignore="UnusedResources">%1$s îți șterge istoricul de căutare și navigare din filele private când le închizi sau când ieși din aplicație. Deși nu te anonimizează pe site-urile web sau pentru furnizorul de servicii de internet, ușurează păstrarea confidențialității asupra a ce faci online față de oricine altcineva folosește acest dispozitiv.</string>
   <string name="private_browsing_common_myths">Mituri comune despre navigarea privată</string>
+  <!-- Text to be announced by the accessibility service to inform the user that the private browsing mode is currently active. -->
+  <string name="private_browsing_a11y_session_announcement">Sesiune de navigare privată</string>
   <!--
     True Private Browsing Mode
 
@@ -97,6 +103,12 @@
     Text for the message displayed in the contextual feature recommendation popup promoting the erase private browsing feature.
   -->
   <string name="erase_action_cfr_message" moz:removedIn="141" tools:ignore="UnusedResources">Atinge aici pentru a începe o nouă sesiune privată. Șterge-ți istoricul, cookie-urile — totul.</string>
+  <!--
+    Address bar swipe "contextual feature recommendation" (CFR)
+
+    Text for the message displayed in the contextual feature recommendation popup promoting swipe of address bar.
+  -->
+  <string name="address_bar_swipe_cfr_message_2">Glisează bara de instrumente la stânga sau la dreapta și schimbă între file.</string>
   <!-- Text for the info dialog when camera permissions have been denied but user tries to access a camera feature. -->
   <string name="camera_permissions_needed_message">Este nevoie de acces la cameră. Accesează setările Android, atinge permisiuni și atinge permite.</string>
   <!-- Text for the positive action button to go to Android Settings to grant permissions. -->
@@ -132,6 +144,8 @@
   <string name="home_screen_shortcut_open_new_tab_2">Filă nouă</string>
   <!-- Shortcut action to open new private tab -->
   <string name="home_screen_shortcut_open_new_private_tab_2">Filă privată nouă</string>
+  <!-- Shortcut action to open Passwords screen -->
+  <string name="home_screen_shortcut_passwords">Parole</string>
   <!--
     Recent Tabs
 
@@ -179,6 +193,48 @@
   <string name="browser_menu_refresh">Reîmprospătare</string>
   <!-- Content description (not visible, for screen readers etc.): Stop loading current website -->
   <string name="browser_menu_stop">Oprire</string>
+  <!-- Browser menu button that opens the extensions manager -->
+  <string name="browser_menu_extensions">Extensii</string>
+  <!--
+    Browser menu banner header text for extensions onboarding.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="browser_menu_extensions_banner_onboarding_header" moz:removedIn="141" tools:ignore="UnusedResources">Personalizează-ți %s</string>
+  <!-- Browser menu banner header text for extensions onboarding when all installed extensions have been disabled. -->
+  <string name="browser_menu_disabled_extensions_banner_onboarding_header">Ai extensii instalate, dar nu activate</string>
+  <!--
+    Browser menu banner body text for extensions onboarding.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="browser_menu_extensions_banner_onboarding_body" moz:removedIn="141" tools:ignore="UnusedResources">Extensiile îți îmbunătățesc navigarea, de la schimbarea aspectului și performanței site-ului %s până la creșterea confidențialității și siguranței.</string>
+  <!--
+    Browser menu banner body text for extensions onboarding when all installed extensions have been disabled.
+    %s is the label of the button that opens the extension manager (for example "Manage extensions").
+  -->
+  <string name="browser_menu_disabled_extensions_banner_onboarding_body" moz:removedIn="141" tools:ignore="UnusedResources">Ca să folosești extensii, activează-le în setări sau selectează „%s” mai jos.</string>
+  <!-- Browser menu banner link text for learning more about extensions -->
+  <string name="browser_menu_extensions_banner_learn_more" moz:removedIn="141" tools:ignore="UnusedResources">Află mai multe</string>
+  <!-- Browser menu button that opens the extensions manager -->
+  <string name="browser_menu_manage_extensions">Gestionează extensiile</string>
+  <!-- Browser menu group that contains additional settings in collapsed state -->
+  <string name="browser_menu_more_settings">Mai multe</string>
+  <!-- Browser menu group that contains additional settings in expanded state -->
+  <string name="browser_menu_less_settings">Mai puțin</string>
+  <!-- Content description (not visible, for screen readers etc.): Section heading for recommended extensions. -->
+  <string name="browser_menu_recommended_section_content_description" moz:removedIn="141" tools:ignore="UnusedResources">Extensii recomandate</string>
+  <!--
+    Content description (not visible, for screen readers etc.): Label for plus icon used to add extension.
+    %1$s is the name of the extension (for example: ClearURLs).
+  -->
+  <string name="browser_menu_extension_plus_icon_content_description_2">Adaugă %1$s</string>
+  <!-- Browser menu button that opens AMO in a tab -->
+  <string name="browser_menu_discover_more_extensions">Descoperă mai multe extensii</string>
+  <!-- Browser menu description that is shown when one or more extensions are disabled due to extension errors -->
+  <string name="browser_menu_extensions_disabled_description">Dezactivate temporar</string>
+  <!-- The description of the browser menu appears when the user hasn't installed any extensions. -->
+  <string name="browser_menu_no_extensions_installed_description">Nicio extensie activată</string>
+  <!-- The description of the browser menu appears when the user hasn't installed any extensions and there are recommended extensions. -->
+  <string name="browser_menu_try_a_recommended_extension_description">Încearcă o extensie recomandată</string>
   <!-- Browser menu button that opens account settings -->
   <string name="browser_menu_account_settings">Informații despre cont</string>
   <!-- Browser menu button that sends a user to help articles -->
@@ -195,16 +251,30 @@
   <string name="browser_menu_open_in_regular_tab">Deschide într-o filă nouă</string>
   <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
   <string name="browser_menu_add_to_homescreen">Adaugă în ecranul de start</string>
+  <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+  <string name="browser_menu_add_app_to_homescreen">Adaugă aplicația pe ecranul principal</string>
+  <!-- Browser menu toggle that adds a shortcut to the site on the device home screen. -->
+  <string name="browser_menu_add_to_homescreen_2" moz:removedIn="141" tools:ignore="UnusedResources">Adaugă la ecranul principal…</string>
+  <!-- Browser menu toggle that adds a PWA of the site on the device home screen. -->
+  <string name="browser_menu_add_app_to_homescreen_2" moz:removedIn="141" tools:ignore="UnusedResources">Adaugă aplicația pe ecranul principal…</string>
+  <!-- Text for notifying users that Xiaomi devices require additional permissions to add to home screen -->
+  <string name="browser_menu_add_to_homescreen_xiaomi">Dispozitivele Xiaomi pot necesita permisiuni suplimentare pentru a adăuga comenzi rapide pe ecranul de pornire. Verifică setările.</string>
   <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
   <string name="resync_button_content_description">Resincronizează</string>
   <!-- Browser menu button that opens the find in page menu -->
   <string name="browser_menu_find_in_page">Caută în pagină</string>
+  <!-- Browser menu button that opens the find in page menu -->
+  <string name="browser_menu_find_in_page_2" moz:removedIn="141" tools:ignore="UnusedResources">Găsește în pagina…</string>
   <!-- Browser menu button that opens the translations dialog, which has options to translate the current browser page. -->
   <string name="browser_menu_translations">Tradu pagina</string>
+  <!-- Browser menu button that saves the current tab to a collection -->
+  <string name="browser_menu_save_to_collection" moz:removedIn="141" tools:ignore="UnusedResources">Salvează în colecție…</string>
   <!-- Browser menu button that saves the current tab to a collection -->
   <string name="browser_menu_save_to_collection_2">Salvează în colecție</string>
   <!-- Browser menu button that open a share menu to share the current site -->
   <string name="browser_menu_share">Partajează</string>
+  <!-- Browser menu button that open a share menu to share the current site -->
+  <string name="browser_menu_share_2" moz:removedIn="141" tools:ignore="UnusedResources">Distribuie…</string>
   <!--
     Browser menu button shown in custom tabs that opens the current tab in Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -228,12 +298,45 @@
   <string name="browser_menu_open_app_link">Deschide în aplicație</string>
   <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
   <string name="browser_menu_customize_reader_view">Personalizează modul de citire</string>
+  <!-- Browser menu button to show reader view appearance controls e.g. the used font type and size -->
+  <string name="browser_menu_customize_reader_view_2">Personalizează vizualizarea Cititor</string>
   <!-- Browser menu label for adding a bookmark -->
   <string name="browser_menu_add">Adaugă</string>
   <!-- Browser menu label for editing a bookmark -->
   <string name="browser_menu_edit">Editează</string>
   <!-- Button shown on the home page that opens the Customize home settings -->
   <string name="browser_menu_customize_home_1">Personalizează pagina de start</string>
+  <!-- Browser menu label to sign in to sync on the device using Mozilla accounts -->
+  <string name="browser_menu_sign_in">Autentificare</string>
+  <!-- Browser menu caption label for the "Sign in" browser menu item described in `browser_menu_sign_in` -->
+  <string name="browser_menu_sign_in_caption" moz:removedIn="141" tools:ignore="UnusedResources">Sincronizează parolele, filele și multe altele</string>
+  <!-- Browser menu caption label for the "Sign in" browser menu item described in `browser_menu_sign_in` -->
+  <string name="browser_menu_sign_in_caption_2" moz:removedIn="141" tools:ignore="UnusedResources">Sincronizează marcajele, parolele, filele și multe altele</string>
+  <!-- Browser menu caption label for the "Sign in" browser menu item described in `browser_menu_sign_in` -->
+  <string name="browser_menu_sign_in_caption_3">Sincronizează parolele, marcajele și multe altele</string>
+  <!-- Browser menu label to sign back in to sync on the device when the user's account needs to be reauthenticated -->
+  <string name="browser_menu_sign_back_in_to_sync">Conectează-te din nou pentru sincronizare</string>
+  <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
+  <string name="browser_menu_syncing_paused_caption">Sincronizarea a fost întreruptă</string>
+  <!-- Browser menu caption label for an authenticated user -->
+  <string name="browser_menu_signed_in_caption">Gestionează fișierele pentru care faci backup și sincronizează</string>
+  <!-- Browser menu label that creates a private tab -->
+  <string name="browser_menu_new_private_tab">Filă privată nouă</string>
+  <!-- Browser menu label that navigates to the Password screen -->
+  <string name="browser_menu_passwords">Parole</string>
+  <!--
+    Browser menu label that navigates to the SUMO page for the Firefox for Android release notes.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="browser_menu_new_in_firefox" moz:removedIn="141" tools:ignore="UnusedResources">Nou în %1$s</string>
+  <!-- Browser menu label that toggles the request for the desktop site of the currently visited page -->
+  <string name="browser_menu_switch_to_desktop_site" moz:removedIn="141" tools:ignore="UnusedResources">Schimbă la site-ul pentru desktop</string>
+  <!-- Browser menu label that toggles the request for the mobile site of the currently visited page -->
+  <string name="browser_menu_switch_to_mobile_site" moz:removedIn="142" tools:ignore="UnusedResources">Treci la site-ul mobil</string>
+  <!-- Browser menu label that navigates to the page tools sub-menu -->
+  <string name="browser_menu_tools" moz:removedIn="141" tools:ignore="UnusedResources">Instrumente</string>
+  <!-- Content description (not visible, for screen readers etc.): Back button for all menu redesign sub-menu -->
+  <string name="browser_menu_back_button_content_description" moz:removedIn="141" tools:ignore="UnusedResources">Înapoi la meniul principal</string>
   <!--
     Browser Toolbar
 
