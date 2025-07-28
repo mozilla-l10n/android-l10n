@@ -760,6 +760,8 @@
   <string name="preferences_pbm_lock_screen_summary_2">Vizualizează filele cu amprenta, codul PIN sau deblocarea facială.</string>
   <!-- Label for cookie banner section in quick settings panel. -->
   <string name="cookie_banner_blocker">Funcție de blocare a bannerelor de cookie-uri</string>
+  <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
+  <string name="preferences_cookie_banner_reduction_private_mode">Funcția de blocare a bannerelor pentru cookie-uri în navigarea privată</string>
   <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle -->
   <string name="reduce_cookie_banner_off_for_site">Dezactivat pentru acest site</string>
   <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
@@ -776,8 +778,20 @@
   <string name="reduce_cookie_banner_unsupported_site_request_submitted_2">Solicitare de asistență trimisă</string>
   <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
   <string name="reduce_cookie_banner_unsupported_site">Site-ul nu este asistat momentan</string>
+  <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. %1$s is a shortened URL of the current site. -->
+  <string name="reduce_cookie_banner_details_panel_title_on_for_site_1">Activezi blocarea bannerelor pentru cookie-uri pentru %1$s?</string>
+  <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. %1$s is a shortened URL of the current site. -->
+  <string name="reduce_cookie_banner_details_panel_title_off_for_site_1">Dezactivezi blocarea bannerelor pentru cookie-uri pentru %1$s?</string>
   <!-- Title text for a detail explanation indicating cookie banner reducer didn't work for the current site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
   <string name="reduce_cookie_banner_details_panel_title_unsupported_site_request_2">%1$s nu poate respinge automat solicitările de cookie-uri de pe acest site. Poți trimite o solicitare pentru a sprijini acest site în viitor.</string>
+  <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="reduce_cookie_banner_details_panel_description_off_for_site_1">Dezactivează și %1$s va șterge cookie-urile și va reîncărca acest site. Această acțiune îți poate deconecta sau goli coșurile de cumpărături.</string>
+  <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="reduce_cookie_banner_details_panel_description_on_for_site_3">Activează și %1$s va încerca să refuze automat toate bannerele cookie de pe acest site.</string>
+  <!-- Title for the cookie banner re-engagement CFR, the placeholder is replaced with app name. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="cookie_banner_cfr_title">%1$s tocmai a refuzat cookie-urile pentru tine</string>
+  <!-- Message for the cookie banner re-engagement CFR -->
+  <string name="cookie_banner_cfr_message">Mai puține distrageri, mai puține cookie-uri care te urmăresc pe acest site.</string>
   <!-- Description of the preference to enable "HTTPS-Only" mode. -->
   <string name="preferences_https_only_summary">Încearcă automat să se conecteze la site-uri folosind protocolul de criptare HTTPS pentru o securitate sporită.</string>
   <!-- Summary of https only preference if https only is set to off -->
@@ -800,14 +814,24 @@
   <string name="errorpage_httpsonly_message_summary">Cu toate acestea, este, de asemenea, posibil ca un atacator să fie implicat. Dacă continui pe site, nu trebuie să introduci informații sensibile. Dacă continui, modul HTTPS-Only va fi dezactivat temporar pentru site.</string>
   <!-- Preference for accessibility -->
   <string name="preferences_accessibility">Accesibilitate</string>
+  <!-- Preference to override the Mozilla account server -->
+  <string name="preferences_override_account_server">Server de cont Mozilla personalizat</string>
   <!-- Preference to override the Sync token server -->
   <string name="preferences_override_sync_tokenserver">Server personalizat de sincronizare</string>
   <!-- Preference category for account information -->
   <string name="preferences_category_account">Cont</string>
+  <!-- Preference for changing where the AddressBar is positioned -->
+  <string name="preferences_toolbar_2">Locația barei de adrese</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">Aspectul barei de instrumente</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">Temă</string>
   <!-- Preference for customizing the home screen -->
   <string name="preferences_home_2">Pagină de start</string>
+  <!-- Preference for customizing the app icon -->
+  <string name="preferences_app_icon">Iconița aplicației</string>
+  <!-- Preference for showing the tab strip -->
+  <string name="preferences_tab_strip">Afișarea barei de file</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Gesturi</string>
   <!-- Preference for settings related to visual options -->
@@ -820,6 +844,8 @@
   <string name="preferences_account_sync_error">Reconectează-te pentru a continua sincronizarea</string>
   <!-- Preference for language -->
   <string name="preferences_language">Limbă</string>
+  <!-- Preference for translations -->
+  <string name="preferences_translations">Traduceri</string>
   <!-- Preference for data choices -->
   <string name="preferences_data_choices" tools:ignore="UnusedResources" moz:removedIn="141">Selecții de date</string>
   <!-- Preference for data collection -->
@@ -832,12 +858,18 @@
   <string name="preferences_show_voice_search">Afișează căutarea vocală</string>
   <!-- Preference title for switch preference to show search suggestions also in private mode -->
   <string name="preferences_show_search_suggestions_in_private">Afișează în sesiuni private</string>
+  <!-- Preference title for switch preference to show trending search suggestions -->
+  <string name="preferences_show_trending_search_suggestions">Afișează sugestiile în tendințe</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Afișează căutările recente</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Afișează sugestii din clipboard</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
   <string name="preferences_search_browsing_history">Caută în istoricul de navigare</string>
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">Caută în marcaje</string>
+  <!-- Preference title for switch preference to show shortcuts when searching -->
+  <string name="preferences_show_shortcuts">Afișează comenzile rapide</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
   <string name="preferences_search_synced_tabs">Caută în filele sincronizate</string>
   <!-- Preference for account settings -->
@@ -847,10 +879,17 @@
   <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
   <string name="preferences_show_sponsored_suggestions">Sugestii de la sponsori</string>
   <!--
+    Summary for preference to show sponsored Firefox Suggest search suggestions.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="preferences_show_sponsored_suggestions_summary">Susține %1$s cu sugestii sponsorizate ocazionale</string>
+  <!--
     Preference title for switch preference to show Firefox Suggest search suggestions for web content.
     %1$s is the name of the app (for example "Firefox").
   -->
   <string name="preferences_show_nonsponsored_suggestions">Sugestii de la %1$s</string>
+  <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+  <string name="preferences_show_nonsponsored_suggestions_summary">Primește sugestii de pe web legate de căutarea ta</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">Deschide linkuri în aplicații</string>
   <!-- Preference for open links in third party apps always open in apps option -->
@@ -2072,6 +2111,8 @@
   <string name="etp_cryptominers_title">Criptomineri</string>
   <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cryptominers_description">Împiedică accesul scripturilor rău-intenționate pe dispozitivul tău ca să mineze monede digitale.</string>
+  <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_known_fingerprinters_description">Oprește colectarea datelor unice de identificare despre dispozitivul tău, care pot fi utilizate în scopuri de urmărire.</string>
   <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_tracking_content_title">Conținut de urmărire</string>
   <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
