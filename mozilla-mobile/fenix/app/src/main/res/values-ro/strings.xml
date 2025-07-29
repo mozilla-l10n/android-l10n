@@ -2562,6 +2562,14 @@
   <string name="saved_login_clear_username">Șterge numele de utilizator</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">Șterge numele gazdei</string>
+  <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
+  <string name="login_detail_menu_button_content_description">Meniul detaliilor de conectare</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
+  <string name="login_details_navigate_back_button_content_description">Navighează înapoi</string>
+  <!-- Edit text for the login detail menu edit button -->
+  <string name="login_detail_menu_edit_button">Editează</string>
+  <!-- Delete text for the login detail menu delete button -->
+  <string name="login_detail_menu_delete_button">Șterge</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">Deschide site-ul în browser</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -2686,6 +2694,8 @@
   <string name="phone_feature_blocked_step_permissions"><![CDATA[2. Atinge <b>Permisiuni</b>]]></string>
   <!-- Third step for the allowing a permission (%1$s is the permission name, for example "Camera"). -->
   <string name="phone_feature_blocked_step_feature"><![CDATA[3. Comută <b>%1$s</b> pe ON]]></string>
+  <!-- Label that indicates a site is displaying a local document -->
+  <string name="quick_settings_sheet_local_page">Această pagină este stocată pe dispozitivul tău.</string>
   <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for all sites -->
   <string name="confirm_clear_permissions_on_all_sites">Sigur vrei să ștergi toate permisiunile pe toate site-urile?</string>
   <!-- Confirmation message for a dialog confirming if the user wants to delete all the permissions for a site -->
@@ -2707,12 +2717,36 @@
   <string name="login_menu_edit_button">Editează</string>
   <!-- Positive action of a dialog asking to delete -->
   <string name="dialog_delete_positive">Șterge</string>
+  <!-- The editable text field for a username. -->
+  <string name="saved_login_username_description_3">Câmpul de text editabil pentru numele de utilizator.\u0020</string>
+  <!-- The editable text field for a login's password. -->
+  <string name="saved_login_password_description_2">Câmpul de text editabil pentru parolă.</string>
+  <!-- The button description to save changes to an edited password. -->
+  <string name="save_changes_to_login_2">Salvează modificările.</string>
+  <!-- The page title for editing a saved password. -->
+  <string name="edit_2">Editează parola</string>
+  <!-- The page title for adding new password. -->
+  <string name="add_login_2">Adaugă parola</string>
+  <!-- Error text displayed underneath the password field when it is in an error case. -->
+  <string name="saved_login_password_required_2">Introdu o parolă</string>
+  <!-- The error message in add login view when username field is blank. -->
+  <string name="saved_login_username_required_2">Introdu un nume de utilizator</string>
+  <!-- The error message in add login view when hostname field is blank. -->
+  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">Este necesar un nume de gazdă</string>
+  <!-- The error message in add login view when hostname field is blank. -->
+  <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">Introdu o adresă web</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">Căutare vocală</string>
   <!-- Voice search prompt description displayed after the user presses the voice search button -->
   <string name="voice_search_explainer">Vorbește acum</string>
   <!-- The error message in edit login view when a duplicate username exists. -->
   <string name="saved_login_duplicate">Există un set de date de autentificare cu acest nume de utilizator</string>
+  <!-- This is the hint text that is shown inline on the hostname field of the create new login page. 'https://www.example.com' intentionally hardcoded here -->
+  <string name="add_login_hostname_hint_text">https://www.example.com</string>
+  <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
+  <string name="add_login_hostname_invalid_text_3">Adresa web trebuie să conțină „https://” sau „http://”</string>
+  <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+  <string name="add_login_hostname_invalid_text_2">Este necesar un nume de gazdă valid</string>
   <!--
     Synced Tabs
 
@@ -2731,27 +2765,165 @@
   <string name="synced_tabs_sign_in_button">Intră în contul Sync</string>
   <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
   <string name="synced_tabs_no_open_tabs">Nicio filă deschisă</string>
+  <!-- Content description for expanding a group of synced tabs. -->
+  <string name="synced_tabs_expand_group">Extinde grupul de file sincronizate</string>
+  <!-- Content description for collapsing a group of synced tabs. -->
+  <string name="synced_tabs_collapse_group">Restrânge grupul de file sincronizate</string>
+  <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
+  <string name="shortcut_max_limit_title">Limita de comenzi rapide a fost atinsă</string>
+  <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
+  <string name="shortcut_max_limit_content">Pentru a adăuga o comandă rapidă nouă, elimină una. Atinge și menține apăsat site-ul și selectează Eliminare.</string>
   <!-- Confirmation dialog button text when top sites limit is reached. -->
   <string name="top_sites_max_limit_confirmation_button">OK, am înțeles</string>
   <!-- Label for the preference to show the shortcuts for the most visited top sites on the homepage -->
   <string name="top_sites_toggle_top_recent_sites_4">Comenzi rapide</string>
   <!-- Title text displayed in the rename top site dialog. -->
   <string name="top_sites_rename_dialog_title">Nume</string>
+  <!-- Hint for renaming title of a shortcut -->
+  <string name="shortcut_name_hint">Denumire comandă rapidă</string>
+  <!-- Hint for editing URL of a shortcut. -->
+  <string name="shortcut_url_hint">URL-ul comenzii rapide</string>
   <!-- Dialog button text for canceling the rename top site prompt. -->
   <string name="top_sites_rename_dialog_cancel">Anulează</string>
+  <!-- Text for the menu button to open the homepage settings. -->
+  <string name="top_sites_menu_settings">Setări</string>
+  <!-- Text for the menu button to navigate to sponsors and privacy support articles. '&amp;' is replaced with the ampersand symbol: & -->
+  <string name="top_sites_menu_sponsor_privacy">Sponsorii noștri și confidențialitatea ta</string>
+  <!-- Label text displayed for a sponsored top site. -->
+  <string name="top_sites_sponsored_label">Sponsorizat</string>
+  <!-- Text for the menu item to edit a top site. -->
+  <string name="top_sites_edit_top_site">Editează</string>
+  <!-- Text for the dialog title to edit a top site. -->
+  <string name="top_sites_edit_dialog_title">Editează comanda rapidă</string>
+  <!-- Button caption to confirm the edit of the top site. -->
+  <string name="top_sites_edit_dialog_save">Salvează</string>
+  <!-- Error message when the user entered an invalid URL -->
+  <string name="top_sites_edit_dialog_url_error">Introdu un URL valid</string>
+  <!-- Label for the URL edit field in the edit top site dialog. -->
+  <string name="top_sites_edit_dialog_url_title">URL-ul</string>
   <!--
     Inactive tabs in the tabs tray
 
     Title text displayed in the tabs tray when a tab has been unused for 14 days.
   -->
   <string name="inactive_tabs_title">File inactive</string>
+  <!-- Content description for closing all inactive tabs -->
+  <string name="inactive_tabs_delete_all">Închide toate filele inactive</string>
+  <!-- Content description for expanding the inactive tabs section. -->
+  <string name="inactive_tabs_expand_content_description">Extinde filele inactive</string>
+  <!-- Content description for collapsing the inactive tabs section. -->
+  <string name="inactive_tabs_collapse_content_description">Restrânge filele inactive</string>
+  <!--
+    Inactive tabs auto-close message in the tabs tray
+
+    The header text of the auto-close message when the user is asked if they want to turn on the auto-closing of inactive tabs.
+  -->
+  <string name="inactive_tabs_auto_close_message_header" tools:ignore="UnusedResources">Închidere automată după o lună?</string>
+  <!-- A description below the header to notify the user what the inactive tabs auto-close feature is. -->
+  <string name="inactive_tabs_auto_close_message_description" tools:ignore="BrandUsage,UnusedResources">Firefox poate închide filele pe care nu le-ai vizualizat în ultima lună.</string>
+  <!-- A call to action below the description to allow the user to turn on the auto closing of inactive tabs. -->
+  <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">PORNEȘTE ÎNCHIDERE AUTOMATĂ</string>
+  <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
+  <string name="inactive_tabs_auto_close_message_snackbar">Închidere automată activată</string>
+  <!--
+    Awesome bar suggestion's headers
+
+    Search suggestions title for Firefox Suggest.
+  -->
+  <string name="firefox_suggest_header" tools:ignore="BrandUsage">Sugestii Firefox</string>
+  <!-- Title for search suggestions when Google is the default search suggestion engine. -->
+  <string name="google_search_engine_suggestion_header">Căutare Google</string>
+  <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
+  <string name="other_default_search_engine_suggestion_header">Căutare %s</string>
+  <!--
+    Default browser experiment
+
+    Default browser card title
+  -->
+  <string name="default_browser_experiment_card_title">Schimbă browserul implicit</string>
+  <!-- Default browser card text -->
+  <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Setează linkurile de pe site-uri web, din mesaje de pe e-mail și din mesaje ca să se deschidă automat cu Firefox.</string>
   <!-- Content description for close button in collection placeholder. -->
   <string name="remove_home_collection_placeholder_content_description">Elimină</string>
+  <!-- Content description radio buttons with a link to more information -->
+  <string name="radio_preference_info_content_description">Clic aici pentru mai multe detalii</string>
+  <!-- Content description for the action bar "up" button -->
+  <string name="action_bar_up_description">Navighează sus</string>
+  <!-- Content description for privacy content close button -->
+  <string name="privacy_content_close_button_content_description">Închide</string>
+  <!--
+    Pocket recommended stories
+
+    Header text for a section on the home screen.
+  -->
+  <string name="pocket_stories_header_2">Povești</string>
+  <!-- Header text for a section on the home screen. -->
+  <string name="pocket_stories_categories_header" moz:removedIn="141" tools:ignore="UnusedResources">Povești după subiect</string>
+  <!-- Text of a button allowing users to access an external url for more Pocket recommendations. -->
+  <string name="pocket_stories_placeholder_text" moz:removedIn="141" tools:ignore="UnusedResources">Descoperă mai multe</string>
+  <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
+  <string name="pocket_stories_sponsor_indication">Sponsorizată</string>
+  <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
+  <string name="experiments_snackbar">Activează telemetria pentru a trimite date.</string>
   <!-- Translations feature -->
 
   <!-- Toggle switch label that allows a user to set the setting if they would like the browser to always offer or suggest translations when available. -->
   <string name="translation_option_bottom_sheet_always_translate">Oferă întotdeauna traducerea</string>
   <!-- Toggle switch description that will appear under the "Never translate" and "Always translate" toggle switch settings to provide more information on how these  settings interacts with other settings. -->
   <string name="translation_option_bottom_sheet_switch_description">Suprascrie oferirea traducerii</string>
+  <!-- Content description (not visible, for screen readers etc.) for closing the translations bottom sheet. -->
+  <string name="translation_option_bottom_sheet_close_content_description">Închide foaia traduceri</string>
+  <!-- The title of the warning card informs the user that an error has occurred at page settings. -->
+  <string name="translation_option_bottom_sheet_error_warning_text">Unele setări sunt temporar indisponibile.</string>
+  <!--
+    Translation settings dialog
+
+    Title of the translation settings dialog that allows a user to set their preferred translation settings.
+  -->
+  <string name="translation_settings_toolbar_title">Traduceri</string>
+  <!-- Toggle switch label that indicates that the browser should signal or indicate when a translation is possible for any page. -->
+  <string name="translation_settings_offer_to_translate">Oferă-te să traduci atunci când este posibil</string>
+  <!-- Toggle switch label that indicates that downloading files required for translating is permitted when using data saver mode in Android. -->
+  <string name="translation_settings_always_download">Descarcă întotdeauna limbile în modul de economisire a datelor</string>
+  <!-- Section header text that begins the section of a list of different options the user may select to adjust their translation preferences. -->
+  <string name="translation_settings_translation_preference">Preferințe pentru traducere</string>
+  <!-- Button text for the button that will take the user to the automatic translations settings dialog. On the automatic translations settings dialog, the user can set if translations should occur automatically for a given language. -->
+  <string name="translation_settings_automatic_translation">Traducere automată</string>
+  <!-- Button text for the button that will take the user to the never translate these sites dialog. On the never translate these sites dialog, the user can set if translations should never occur on certain websites. -->
+  <string name="translation_settings_automatic_never_translate_sites">Nu tradu niciodată aceste site-uri</string>
+  <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
+  <string name="translation_settings_download_language">Descarcă limbi</string>
+  <!--
+    Automatic translation preference screen
+
+    Title of the automatic translation preference screen that will appear on the toolbar.
+  -->
+  <string name="automatic_translation_toolbar_title_preference">Traducere automată</string>
+  <!-- Screen header presenting the automatic translation preference feature. It will appear under the toolbar. -->
+  <string name="automatic_translation_header_preference">Selectează o limbă pentru a gestiona preferințele „tradu întotdeauna” și „nu tradu niciodată”.</string>
+  <!-- The title of the warning card informs the user that the system could not load languages for translation settings. -->
+  <string name="automatic_translation_error_warning_text">Nu s-au putut încărca limbile. Revino mai târziu.</string>
+  <!--
+    Automatic translation options preference screen
+
+    Preference option for offering to translate. Radio button title text.
+  -->
+  <string name="automatic_translation_option_offer_to_translate_title_preference">Ofertă de traducere (implicit)</string>
+  <!-- Preference option for offering to translate. Radio button summary text. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="automatic_translation_option_offer_to_translate_summary_preference">%1$s se va oferi să traducă site-uri în această limbă.</string>
+  <!-- Preference option for always translate. Radio button title text. -->
+  <string name="automatic_translation_option_always_translate_title_preference">Tradu întotdeauna</string>
+  <!-- Preference option for always translate. Radio button summary text. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="automatic_translation_option_always_translate_summary_preference">%1$s va traduce automat această limbă când pagina se încarcă.</string>
+  <!-- Preference option for never translate. Radio button title text. -->
+  <string name="automatic_translation_option_never_translate_title_preference">Nu tradu niciodată</string>
+  <!-- Preference option for never translate. Radio button summary text. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="automatic_translation_option_never_translate_summary_preference">%1$s nu va oferi niciodată traducerea site-urilor în această limbă.</string>
+  <!--
+    Never translate site preference screen
+
+    Title of the never translate site preference screen that will appear on the toolbar.
+  -->
+  <string name="never_translate_site_toolbar_title_preference">Nu tradu niciodată aceste site-uri</string>
   <!-- TextField Design System Component -->
 </resources>
