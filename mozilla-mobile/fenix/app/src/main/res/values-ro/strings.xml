@@ -1728,6 +1728,8 @@
   <string name="webcompat_reporter_label_whats_broken_2">Ce nu merge?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason" moz:removedIn="142" tools:ignore="UnusedResources">Alege un motiv</string>
+  <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_choose_reason_2">Alege un motiv</string>
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Te rugăm să alegi un motiv</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
@@ -1742,6 +1744,8 @@
   <string name="webcompat_reporter_success_snackbar_text">Raportul tău a fost trimis</string>
   <!-- Button text for closing or dismissing the snackbar shown after successfully submitting a WebCompat report. -->
   <string name="webcompat_reporter_dismiss_success_snackbar_text">Închide</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text">Ce s-a întâmplat? Ce ar fi trebuit să se întâmple?</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
@@ -1778,12 +1782,20 @@
   <string name="tab_crash_restore">Restaurează fila</string>
   <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
   <string name="unsubmitted_crash_dialog_title">%s a trebuit să repornească</string>
+  <!-- Single unsubmitted crash matching remote settings. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_title">Ai un raport de blocare netrimis, legat de erorile investigate. Trimiterea acestuia ne va ajuta să îmbunătățim %1$s. Închiderea acestei notificări va ignora acest raport.</string>
+  <!-- Multiple unsubmitted crashes matching remote settings. %1$d is the number of unsent crash reports, %2$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crashes_requested_by_devs_dialog_title">Ai rapoarte de blocare netrimise (%1$d) legate de erori investigate. Trimiterea lor ne va ajuta să îmbunătățim %2$s. Închiderea acestei notificări va ignora aceste rapoarte.</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">Trimite automat rapoarte de blocare</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Închide</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Nu mai afișa vreodată</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">Trimite raportul de defecțiuni</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">Află mai multe</string>
   <!--
     Bookmarks
 
@@ -2069,6 +2081,12 @@
   <string name="share_save_to_pdf">Salvează ca PDF</string>
   <!-- Text for error message when generating a PDF file Text. -->
   <string name="unable_to_save_to_pdf_error">Nu se poate genera PDF</string>
+  <!-- Text for standard error snackbar dismiss button. -->
+  <string name="standard_snackbar_error_dismiss">Înlătură</string>
+  <!-- Text for error message when printing a page and it fails. -->
+  <string name="unable_to_print_page_error">Nu se poate imprima această pagină</string>
+  <!-- Text for the print feature in the share and browser menu -->
+  <string name="menu_print">Tipărește</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Trimite pe dispozitiv</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
@@ -2105,12 +2123,19 @@
   <string name="sync_add_new_device_learn_button">Află mai multe despre transmiterea filelor…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">Conectează alt dispozitiv…</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nTrimis de la %2$s 🦊 Încearcă browserul mobil: %3$s</string>
+  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nTrimis de la %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
     Text shown in the notification that pops up to remind the user that a private browsing session is active.
   -->
   <string name="notification_pbm_delete_text_2">Închide filele private</string>
+  <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
+  <string name="notification_erase_title_android_14">Închizi filele private?</string>
+  <string name="notification_erase_text_android_14">Atinge sau glisează această notificare pentru a închide filele private.</string>
   <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
   <string name="notification_marketing_channel_name">Marketing</string>
   <!--
@@ -2141,6 +2166,15 @@
   <string name="notification_re_engagement_B_title">Începe prima căutare</string>
   <!-- Text B shown in the notification that pops up to re-engage the user -->
   <string name="notification_re_engagement_B_text">Găsește ceva în apropiere. Sau descoperă ceva distractiv.</string>
+  <!--
+    Survey
+
+    Text shown in the fullscreen message that pops up to ask user to take a short survey.
+    The app name is in the text, due to limitations with localizing Nimbus experiments
+  -->
+  <string name="nimbus_survey_message_text" tools:ignore="BrandUsage">Te rugăm să ajuți la îmbunătățirea Firefox completând un scurt sondaj.</string>
+  <!-- Preference for taking the short survey. -->
+  <string name="preferences_take_survey">Completează sondajul</string>
   <!-- Preference for not taking the short survey. -->
   <string name="preferences_not_take_survey">Nu, mulțumesc</string>
   <!--
@@ -2155,10 +2189,18 @@
   <string name="snackbar_tab_closed">Filă închisă</string>
   <!-- Text shown in snackbar when user closes all tabs -->
   <string name="snackbar_tabs_closed">File închise</string>
+  <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
+  <string name="snackbar_num_tabs_closed">Taburi închise: %1$s</string>
+  <!-- Text shown in snackbar when user bookmarks a list of tabs. %s is the name of the folder the bookmark was saved into. -->
+  <string name="snackbar_message_bookmarks_saved_in">Semne de carte salvate în „%s”!</string>
+  <!-- Text shown in snackbar when user adds a site to shortcuts -->
+  <string name="snackbar_added_to_shortcuts">Adăugat la scurtături!</string>
   <!-- Text shown in snackbar when user closes a private tab -->
   <string name="snackbar_private_tab_closed">Filă privată închisă</string>
   <!-- Text shown in snackbar when user closes all private tabs -->
   <string name="snackbar_private_tabs_closed" moz:removedIn="141" tools:ignore="UnusedResources">File private închise</string>
+  <!-- Text shown in snackbar when user erases their private browsing data -->
+  <string name="snackbar_private_data_deleted">Datele private de navigare au fost șterse</string>
   <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
   <string name="snackbar_deleted_undo">ANULEAZĂ</string>
   <!-- Text shown in snackbar when user removes a top site -->
@@ -2407,6 +2449,12 @@
   <string name="etp_redirect_trackers_title">Redirecționarea elementelor de urmărire</string>
   <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_redirect_trackers_description">Șterge cookie-urile setate de redirecționări către site-uri web de urmărire cunoscute.</string>
+  <!-- Preference for fingerprinting protection for the custom protection settings -->
+  <string name="etp_suspected_fingerprinters_title">Amprente digitale suspectate</string>
+  <!-- Description of fingerprinters that can be blocked by fingerprinting protection -->
+  <string name="etp_suspected_fingerprinters_description">Activează protecția prin amprente digitale pentru a opri suspecții de amprentare.</string>
+  <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_known_fingerprinters_title">Amprente digitale cunoscute</string>
   <!--
     Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
     as we use it on the UI to indicate which trackers have been partially unblocked.
@@ -2414,6 +2462,41 @@
   <string name="preference_etp_smartblock_description">Unele instrumente de urmărire marcate mai jos au fost parțial deblocate pe această pagină, deoarece ai interacționat cu ele *.</string>
   <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
   <string name="preference_etp_smartblock_learn_more">Află mai multe</string>
+  <!--
+    Content description (not visible, for screen readers etc.):
+    Enhanced tracking protection exception preference icon for ETP settings.
+  -->
+  <string name="preference_etp_exceptions_icon_description">Pictogramă de preferință pentru excepții de protecție îmbunătățită împotriva urmăririi</string>
+  <!--
+    DNS over HTTPS (DoH)
+
+    Preference title for DNS over HTTPS settings
+  -->
+  <string name="preference_doh_title">DNS prin HTTPS</string>
+  <!-- Description of the preference to enable "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_summary">Sistemul de nume de domeniu (DNS) prin HTTPS trimite solicitarea ta pentru un nume de domeniu printr-o conexiune criptată, oferind un DNS securizat și îngreunând vizibilitatea site-ului web pe care urmează să îl accesezi de către alții. %1$s</string>
+  <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
+  <string name="preference_doh_learn_more">Află mai multe</string>
+  <!-- Content description for the "Exceptions" button -->
+  <string name="preference_doh_exceptions_description">Excepții</string>
+  <!-- Content description for the "Info" button -->
+  <string name="preference_doh_info_description">Informații</string>
+  <!-- Content description for the "Add Site" button -->
+  <string name="preference_doh_add_site_description">Adaugă un site</string>
+  <!-- Title displayed for "Default Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection">Protecție implicită</string>
+  <!-- Summary displayed for "Default Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_doh_default_protection_summary">%1$s decide când să utilizeze un DNS securizat ca să-ți protejezi confidențialitatea.</string>
+  <!-- Bullet point 1 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_1">Folosește furnizorul pe care îl alegi</string>
+  <!-- Bullet point 2 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_2">Folosește rezolvitorul DNS implicit dacă există o problemă cu furnizorul de DNS securizat</string>
+  <!-- Bullet point 3 for "Default Protection" information page under "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_default_protection_info_3">Folosește un furnizor local, dacă este posibil. %1$s</string>
+  <!-- Bullet point 4 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_4">Dezactivează când sunt active VPN-ul, controlul parental sau politicile companiei</string>
+  <!-- Bullet point 5 for "Default Protection" information page under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). %2$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_default_protection_info_5">Dezactivează când o rețea îi spune lui %1$s că nu ar trebui să utilizeze DNS securizat. %2$s</string>
   <!-- Summary displayed for "Increased Protection" option under "DNS over HTTPS" -->
   <string name="preference_doh_increased_protection_summary">Tu controlezi când să utilizezi DNS securizat și îți alegi furnizorul.</string>
   <!-- Bullet point 1 for "Increased Protection" information page under "DNS over HTTPS" -->
@@ -2476,6 +2559,8 @@
   <string name="about_privacy_notice">Notificare privind confidențialitatea</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Cunoaște-ți drepturile</string>
+  <!-- About page link text to open terms of use link -->
+  <string name="about_terms_of_use" tools:ignore="UnusedResources">Termeni de utilizare</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Informații despre licențiere</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2534,10 +2619,14 @@
   <string name="preferences_passwords_sync_logins_across_devices_2">Sincronizează parolele pe toate dispozitivele</string>
   <!-- Preference to access list of saved passwords -->
   <string name="preferences_passwords_saved_logins_2">Parole salvate</string>
+  <!-- Description of empty list of saved passwords. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_saved_logins_description_empty_text_2">Parolele pe care le salvezi sau le sincronizezi cu %s vor fi listate aici. Toate parolele pe care le salvezi sunt criptate.</string>
   <!-- Clickable text for opening an external link for more information about Sync. -->
   <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">Află mai multe despre sincronizare</string>
   <!-- Preference to access list of login exceptions that we never save logins for -->
   <string name="preferences_passwords_exceptions">Excepții</string>
+  <!-- Empty description of list of login exceptions that we never save passwords for. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_exceptions_description_empty_2">%s nu va salva parolele pentru site-urile listate aici.</string>
   <!-- Text on button to remove all saved login exceptions -->
   <string name="preferences_passwords_exceptions_remove_all">Șterge toate excepțiile</string>
   <!-- Hint for search box in passwords list -->
