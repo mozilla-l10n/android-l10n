@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:moz="http://mozac.org/tools" xmlns:tools="http://schemas.android.com/tools">
   <!--
     #######################################################################################
 
@@ -144,12 +144,14 @@
     Focus Nightly is hard coded since we can't use variables in this context.
     Do not translate or transliterate Focus Nightly.
   -->
-  <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Căutare în Focus Nightly</string>
+  <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Caută în Focus Nightly</string>
   <!--
     Content of about focus. %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar").
     %2$s is the url for the learn-more link.
   -->
   <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s îți oferă controlul.</p> <p>Folosește-l ca browser privat: <ul> <li>Caută și navighează direct în aplicație</li> <li>Blochează elementele de urmărire (sau actualizează setările pentru a permite elementele de urmărire)</li> <li>Șterge pentru a elimina cookie-urile, precum și istoricul de căutare și navigare</li> </ul> </p> <p>%1$s este produs de Mozilla. Misiunea noastră este să promovăm un internet sănătos și deschis.<br/> <a href=\"%2$s\">Află mai multe</a></p>]]></string>
+  <!-- A link to SUMO at the bottom of About Focus screen. -->
+  <string name="about_screen_learn_more">Află mai multe</string>
   <!-- Header for the Privacy and Security settings menu -->
   <string name="preference_privacy_and_security_header">Confidențialitate și securitate</string>
   <!-- Preference summary for settings related to privacy and security -->
@@ -167,12 +169,16 @@
     %1$s will be replaced by the app name (e.g. Firefox Focus)
   -->
   <string name="preference_mozilla_summary">Despre %1$s, ajutor</string>
+  <!-- Preference category for ad blocking and enhanced tracking protection settings -->
+  <string name="preference_category_tracking_protection3">Protecție îmbunătățită împotriva urmăririi</string>
   <!-- Preference category for settings related to controlling web content -->
   <string name="preference_category_web_content">Conținut web</string>
   <!-- Preference category: stealth settings for while switching apps -->
   <string name="preference_category_switching_apps">Comutare de aplicații</string>
   <!-- Preference category for General Settings -->
   <string name="preference_category_general">General</string>
+  <!-- Preference summary for General Settings category; the two things users can find in this category -->
+  <string name="preference_general_summary2">Browser implicit, limbă</string>
   <!-- Preference category for settings about sending usage data -->
   <string name="preference_category_data_collection_use">Colectare de date și utilizare</string>
   <string name="preference_category_search">Căutare</string>
@@ -195,14 +201,28 @@
   <string name="preference_subitem_autocomplete">Completare automată de URL-uri</string>
   <!-- Title of "switch" preference that enables/disables autocomplete for the default list -->
   <string name="preference_switch_autocomplete_topsites">Pentru site-uri de top</string>
+  <!--
+    Summary for the toggle to enable autocomplete for the topsites list
+    %s is the name of the app (for example "Firefox Focus" or "Firefox Klar").
+  -->
+  <string name="preference_autocomplete_topsite_summary2">Activează pentru ca %s să completeze automat peste 450 de URL-uri populare în bara de adrese.</string>
   <!-- Title of "switch" preference that enables/disables autocomplete for the user-defined list -->
   <string name="preference_switch_autocomplete_user_list">Pentru site-uri pe care le adaugi</string>
+  <!--
+    Summary for the toggle to enable autocomplete for the user-defined list
+    %s is the name of the app (for example "Firefox Focus" or "Firefox Klar").
+  -->
+  <string name="preference_autocomplete_user_list_summary2">Permite %s să completeze automat URL-urile tale favorite.</string>
   <!-- Preference category: Manage (user-defined) sites -->
   <string name="preference_category_autocomplete_manage_sites">Gestionează site-urile</string>
   <!-- Item in autocomplete settings that will open a new preference screen for adding and removing URLs to the user-defined list -->
   <string name="preference_autocomplete_subitem_manage_sites">Gestionează site-urile</string>
   <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
   <string name="preference_autocomplete_action_add">+ Adaugă URL personalizat</string>
+  <!-- Explanation text above the list of custom autocomplete URLs. -->
+  <string name="preference_autocomplete_explanation_text">Lista ta de completare automată:</string>
+  <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
+  <string name="preference_autocomplete_action_add2">Adaugă URL</string>
   <!-- Title of the screen for adding custom autocomplete URLs. -->
   <string name="preference_autocomplete_title_add">Adaugă URL personalizat</string>
   <!-- Label for the button to quick add custom autocomplete URLs. -->
@@ -251,11 +271,24 @@
   <string name="preference_privacy_block_content">Blochează alte elemente de urmărire de conținut</string>
   <string name="preference_privacy_block_content_summary2">Activarea poate cauza un comportament neașteptat al unor pagini</string>
   <string name="preference_privacy_category_cookies">Blochează cookie-urile</string>
+  <!--
+    Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
+    only (Only 3rd-party Cookies Blocked), No (No cookies blocked)
+  -->
+  <string name="preference_privacy_should_block_cookies_no_option2">Nu, mulțumesc</string>
   <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Blochează numai cookie-urile de urmărire de la terți</string>
   <string name="preference_privacy_should_block_cookies_third_party_only_option">Blochează numai cookie-urile de la terți</string>
   <string name="preference_privacy_should_block_cookies_cross_site_option">Blochează cookie-urile inter-site-uri</string>
+  <string name="preference_privacy_should_block_cookies_yes_option2">Da, te rog</string>
   <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
   <string name="preference_security_biometric">Folosește amprenta pentru a debloca aplicația</string>
+  <!--
+    Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
+    open when the app was last run to ensure that only the phone's owner can view a previous session.
+    %s is the name of the app (for example "Firefox Focus" or "Firefox Klar")
+    Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them.
+  -->
+  <string name="preference_security_biometric_summary2">Deblochează folosind amprenta digitală dacă ai adăugat Comenzi rapide sau când un site web este deja deschis în %s.</string>
   <!--
     Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
     and prevents the user from taking screenshots or casting the app to other displays.
@@ -289,12 +322,26 @@
   <string name="preference_mozilla_telemetry_summary">Află mai multe</string>
   <!-- %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
   <string name="preference_mozilla_telemetry_summary2">Mozilla se străduiește să colecteze doar strictul necesar pentru a furniza și a îmbunătăți %1$s pentru toți.</string>
+  <!-- Preference switch for daily usage ping data collection -->
+  <string name="preference_daily_usage_ping_title">Ping de utilizare zilnică</string>
+  <string name="preference_daily_usage_ping_description">Ajută Mozilla să estimeze utilizatorii activi.</string>
+  <string name="preference_daily_usage_ping_learn_more">Află mai multe</string>
   <!-- In-app link (in settings) to Focus privacy notice. -->
   <string name="preference_privacy_notice">Politica de confidențialitate</string>
+  <!-- In-app link (in settings) to Focus licensing information. -->
+  <string name="preference_licensing_info">Informații despre licențiere</string>
+  <!-- Link to Focus licensing information from other libraries that we use. -->
+  <string name="preference_libraries_we_use">Biblioteci pe care le folosim</string>
+  <!-- Link to Focus Crash reports list. -->
+  <string name="preference_crashes">Închideri neașteptate</string>
+  <!-- Open Source Licenses page title. %s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
+  <string name="open_source_licenses_title">%s | Biblioteci OSS</string>
   <!-- Item in Preferences that shows the about page. %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
   <string name="preference_about">Despre %1$s</string>
   <!-- Header for the list of installed search engines -->
   <string name="preference_search_installed_search_engines">Motoare de căutare instalate</string>
+  <!-- Header for the list of installed search engines -->
+  <string name="preference_choose_search_engine">Alege motorul de căutare</string>
   <!-- Action for restoring the default list of search engines -->
   <string name="preference_search_restore">Restaurează motoarele de căutare implicite</string>
   <!--
@@ -304,6 +351,10 @@
   <string name="preference_search_add2">+ Adaugă alt motor de căutare</string>
   <string name="preference_search_remove_title">Elimină motoare de căutare</string>
   <string name="preference_search_remove">Elimină</string>
+  <!-- Action for dding an additional search engine to the list -->
+  <string name="preference_search_add3">Adaugă alt motor de căutare</string>
+  <!-- Explanation text above the list of search engines -->
+  <string name="preference_select_preferred_engine">Selectează motorul preferat:</string>
   <!-- Clickable action text that shows when user long-presses on a search engine search field (this is similar to paste or copy when long-pressing a text field) -->
   <string name="action_option_add_search_engine">Adaugă motorul de căutare</string>
   <string name="search_add_manually_name_hint">Numele motorului de căutare</string>
@@ -397,7 +448,67 @@
   <string name="download_snackbar_finished">Descărcarea %1$s s-a terminat</string>
   <!-- Snackbar action to immediately open the successfully downloaded file. -->
   <string name="download_snackbar_open">Deschide</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+  <string name="snackbar_added_to_shortcuts">Adăugat la comenzi rapide!</string>
   <string name="error_hostLookup_title">Server negăsit</string>
+  <!--
+    New Onboarding flow first screen title
+
+    %1$s is the app name and build variant (for example "Firefox Focus", "Firefox Klar Nightly").
+  -->
+  <string name="onboarding_first_screen_title">Bine ai venit pe %1$s</string>
+  <!-- New Onboarding flow first screen subtitle the one that appears under title -->
+  <string name="onboarding_first_screen_subtitle">Rapid. Privat. Fără distrageri ale atenției.</string>
+  <!--
+    New Onboarding flow first screen 'terms of use' text
+
+    %1$s will be replaced by a link using onboarding_first_screen_terms_of_use_link as text
+  -->
+  <string name="onboarding_first_screen_terms_of_use_text" moz:removedIn="141" tools:ignore="UnusedResources">Prin continuare, ești de acord cu %1$s</string>
+  <!-- %1$s will be replaced by a link using onboarding_first_screen_terms_of_use_link as text -->
+  <string name="onboarding_first_screen_terms_of_use_text_2" tools:ignore="UnusedResources">Prin continuare, ești de acord cu %1$s.</string>
+  <!--
+    New Onboarding flow first screen 'terms of use link'
+
+    Text for the link used in onboarding_first_screen_terms_of_use_text
+  -->
+  <string name="onboarding_first_screen_terms_of_use_link" moz:removedIn="141" tools:ignore="BrandUsage">Condiții de utilizare Firefox.</string>
+  <!-- Text for the link used in onboarding_first_screen_terms_of_use_text -->
+  <string name="onboarding_first_screen_terms_of_use_link_2" tools:ignore="BrandUsage">Condiții de utilizare Firefox</string>
+  <!--
+    New Onboarding flow first screen 'privacy notice' text
+
+    %1$s will be replaced by a link using onboarding_first_screen_privacy_notice_link as text
+  -->
+  <string name="onboarding_first_screen_privacy_notice_text" moz:removedIn="141" tools:ignore="BrandUsage">Firefox are grijă de confidențialitatea ta. Află mai multe în %1$s</string>
+  <!-- %1$s will be replaced by a link using onboarding_first_screen_privacy_notice_link as text -->
+  <string name="onboarding_first_screen_privacy_notice_text_2" tools:ignore="BrandUsage">Firefox are grijă de confidențialitatea ta. Află mai multe în %1$s.</string>
+  <!-- Text for the link used in onboarding_first_screen_privacy_notice_text -->
+  <string name="onboarding_first_screen_privacy_notice_link" moz:removedIn="141" tools:ignore="UnusedResources">Notificare privind confidențialitatea.</string>
+  <!-- Text for the link used in onboarding_first_screen_privacy_notice_text -->
+  <string name="onboarding_first_screen_privacy_notice_link_2">Notificare privind confidențialitatea</string>
+  <!-- New Onboarding flow first screen button label -->
+  <string name="onboarding_first_screen_button_agree_and_continue_2">Continuă</string>
+  <!-- In the first screen of new onboarding flow, additional accessibility description for content that contain urls. -->
+  <string name="a11y_link_available">Link disponibil</string>
+  <!--
+    Onboarding second screen: Title
+
+    %1$s will be replaced by the app short name(Focus)
+  -->
+  <string name="onboarding_second_screen_title">%1$s nu este ca alte browsere</string>
+  <!-- New Onboarding flow second screen subtitle the one that appears under title -->
+  <string name="onboarding_second_screen_subtitle_one">Îți ștergem istoricul când închizi aplicația pentru un plus de confidențialitate.</string>
+  <!--
+    New Onboarding flow second screen subtitle two the one that appears under subtitle one
+
+    %1$s will be replaced by the app short name(Focus)
+  -->
+  <string name="onboarding_second_screen_subtitle_two">Setează %1$s ca implicit pentru a-ți proteja datele cu fiecare link pe care îl deschizi.</string>
+  <!-- New Onboarding flow second screen make Focus default browser button label -->
+  <string name="onboarding_second_screen_default_browser_button_text">Setează ca browser implicit</string>
+  <!-- New Onboarding flow second screen skip onboarding button label -->
+  <string name="onboarding_second_screen_skip_button_text">Omite</string>
   <!-- First run tour (Default browser): Title -->
   <string name="firstrun_defaultbrowser_title">Consolidează-ți confidențialitatea</string>
   <!-- First run tour (Default browser): Text. -->
@@ -421,8 +532,17 @@
   <string name="content_blocking_disabled">-</string>
   <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
   <string name="dialog_addtohomescreen_action_add">Adaugă</string>
+  <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+  <string name="dialog_addtohomescreen_action_yes">DA</string>
   <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
   <string name="dialog_addtohomescreen_action_cancel">Anulează</string>
+  <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
+  <string name="dialog_addtohomescreen_action_no">NU</string>
+  <!--
+    When enhanced tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+    let the user know that the shortcut will always be opened with enhanced tracking protection disabled.
+  -->
+  <string name="dialog_addtohomescreen_tracking_protection2">Comanda rapidă se va deschide cu protecţia îmbunătățită împotriva urmăririi dezactivată</string>
   <!--
     The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
@@ -441,6 +561,8 @@
   <string name="notification_browsing_session_channel_description">Notificările îți permit să ștergi sesiunea %1$s cu o atingere. Nu e nevoie să deschizi aplicația sau să vezi ce rulează în browser.</string>
   <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
   <string name="tabs_tray_action_erase">Șterge istoricul de navigare</string>
+  <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+  <string name="tabs_tray_action_erase_other">Închide alte file</string>
   <!--
     If the user decides to open the current page in another browser and if Firefox is not installed then we show this
     item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play).
@@ -485,13 +607,61 @@
   <!-- String to be read by the accessibility service when focusing the dismiss button in the "find in page" UI -->
   <string name="accessibility_dismiss_find_in_page">Anulează căutarea în pagină</string>
   <!-- Checkbox menu item text to request desktop site -->
-  <string name="preference_performance_request_desktop_site">Cere versiune de desktop</string>
+  <string name="preference_performance_request_desktop_site">Cere versiune pentru desktop</string>
+  <!-- Checkbox menu item text to request desktop site -->
+  <string name="preference_performance_request_desktop_site2">Versiune site pentru desktop</string>
   <!-- Displayed after a user long presses on the URL in a custom tab to copy the URL -->
   <string name="custom_tab_copy_url_action">URL copiat</string>
   <!-- Description of what a user may find in the Advanced Setting category, used for debugging -->
   <string name="preference_advanced_summary">Instrumente de dezvoltare</string>
+  <!-- Preference for open links in third party apps -->
+  <string name="preferences_open_links_in_apps">Deschide linkuri în aplicații</string>
   <!-- Title of Advanced Setting category -->
   <string name="preference_category_advanced">Avansat</string>
+  <!-- Preference for site permissions -->
+  <string name="preference_site_permissions">Permisiuni pentru site-uri</string>
+  <!-- Preference for cookie banner. The name of the item from settings screen and the title of the cookie banner screen. -->
+  <string name="preferences_cookie_banner">Reducerea bannerelor de cookie-uri</string>
+  <!-- Preference summary for the cookie banner. If the cookie banner option is not disabled. -->
+  <string name="preferences_cookie_banner_summary_on">Activată</string>
+  <!-- Preference summary for the cookie banner. If the cookie banner option is disabled. -->
+  <string name="preferences_cookie_banner_summary_off">Dezactivată</string>
+  <!-- Title preference inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+  <string name="cookie_banner_reject_all_option_title">Reducerea bannerelor de cookie-uri</string>
+  <!-- Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+  <string name="cookie_banner_reject_all_option_summary">Vezi mai puține bannere respingând automat solicitările de cookie-uri, atunci când este posibil.</string>
+  <!-- Preference for removing cookie/consent banners from sites automatically, this is shown as part of the protections panel with the tracking protection toggle. -->
+  <string name="cookie_banner_exception_item_title">Reducerea bannerelor de cookie-uri</string>
+  <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
+  <string name="cookie_banner_exception_item_description_state_on">Activată pentru acest site</string>
+  <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+  <string name="cookie_banner_exception_site_not_supported">Site-ul nu este acceptat momentan</string>
+  <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
+  <string name="cookie_banner_exception_item_description_state_off">Dezactivată pentru acest site</string>
+  <!-- Preference for removing cookie/consent banners from sites automatically, this is shown when the user enters in details after he clicks on the item from protection panel. -->
+  <string name="cookie_banner_exception_panel_switch_title">Reducerea bannerelor de cookie-uri</string>
+  <!-- Text for indicating cookie banner handling is off this site, this is shown when the user enters in details after he clicks on the item from protection panel. -->
+  <string name="cookie_banner_exception_panel_switch_state_off">Dezactivată pentru acest site</string>
+  <!-- Text for indicating cookie banner handling is on this site, this is shown when the user enters in details after he clicks on the item from protection panel. -->
+  <string name="cookie_banner_exception_panel_switch_state_on">Activată pentru acest site</string>
+  <!-- Title text for a detail explanation indicating cookie banner handling is on this site, this is shown as part of the cookie banner panel in the toolbar. %1$s is a shortened URL of the current site. -->
+  <string name="cookie_banner_exception_panel_title_state_on_for_site">Activezi blocarea bannerelor de cookie-uri pentru %1$s?</string>
+  <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. %1$s is a shortened URL of the current site. -->
+  <string name="cookie_banner_exception_panel_title_state_off_for_site">Dezactivezi blocarea bannerelor de cookie-uri pentru %1$s?</string>
+  <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
+  <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s va șterge cookie-urile site-ului și va reîmprospăta pagina. Ștergerea tuturor cookie-urilor te poate deconecta sau poate goli coșul de cumpărături.</string>
+  <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
+  <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s poate încerca să respingă automat solicitările de cookie-uri.</string>
+  <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+  <string name="cookie_banner_exception_panel_description_site_is_not_supported">Acest site nu este acceptat momentan de reducerea bannerelor de cookie-uri. Vrei să ceri echipei noastre să revizuiască site-ul și să adauge suport pe viitor?</string>
+  <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+  <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Anulează</string>
+  <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+  <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Solicită suport</string>
+  <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+  <string name="cookie_banner_report_a_site_snackbar_label">Solicitarea de suport pentru site a fost trimisă.</string>
+  <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+  <string name="cookie_banner_the_site_was_reported">Solicitarea de suport pentru site a fost trimisă.</string>
   <!-- Preference to enable remote debugging of the app via USB or Wi-Fi -->
   <string name="preference_remote_debugging">Depanare de la distanță prin USB/Wi-Fi</string>
   <!--
