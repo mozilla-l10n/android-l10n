@@ -32,6 +32,12 @@
   <string name="no_open_tabs_description">Opnu fliparnir þínir verða sýndir hér.</string>
   <!-- No Private Tabs Message Description -->
   <string name="no_private_tabs_description">Opnu huliðsfliparnir þínir verða sýndir hér.</string>
+  <!-- The header text displayed on the private tabs page when no private tabs are open -->
+  <string name="tab_manager_empty_private_tabs_page_header">Huliðsvafur</string>
+  <!-- The supplementary text displayed on the private tabs page when no private tabs are open. %1$s is the name of the app (for example "Firefox") -->
+  <string name="tab_manager_empty_private_tabs_page_description">%1$s man hvorki ferilinn þinn né vefkökur en ný bókamerki munu vistast.</string>
+  <!-- The header text displayed on the normal tabs page when no normal tabs are open -->
+  <string name="tab_manager_empty_normal_tabs_page_header">Búa til nýjan flipa til að hefja leit</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">%1$d valið</string>
   <!-- Tab tray multi select title in app bar when no tabs are selected -->
@@ -46,6 +52,8 @@
   <string name="tab_tray_close_multiselect_content_description">Hætta í fjölvalsham</string>
   <!-- Content description for save to collection button while in multiselect mode in tab tray -->
   <string name="tab_tray_collection_button_multiselect_content_description">Vista valda flipa í safn</string>
+  <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
+  <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">Skrá inn</string>
   <!--
     Home - Bookmarks
 
@@ -1092,6 +1100,8 @@
   <string name="preferences_daily_usage_ping_learn_more">Frekari upplýsingar um notkunargögn</string>
   <!-- Preference switch title for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_title" tools:ignore="UnusedResources" moz:removedIn="142">Senda hrunskýrslur inn sjálfkrafa</string>
+  <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="crash_reporting_snack_bar_message">Skýrsla send</string>
   <!-- Preference switch description for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_description" tools:ignore="UnusedResources" moz:removedIn="142">Þetta gerir okkur kleift að greina og laga vandamál með vafrann. Slíkar skýrslur geta innihaldið persónuleg eða viðkvæm gögn.</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
@@ -1344,6 +1354,12 @@
   <string name="tabs_header_normal_tabs_title">Flipar</string>
   <!-- Text for the tabs header synced tabs -->
   <string name="tabs_header_synced_tabs_title">Samstiling</string>
+  <!-- Text for the new tab button in the Tab Manager to indicate opening a new normal tab -->
+  <string name="tab_manager_floating_action_button_new_normal_tab">Nýr flipi</string>
+  <!-- Text for the new tab button in the Tab Manager to indicate opening a new private tab -->
+  <string name="tab_manager_floating_action_button_new_private_tab">Nýr huliðsflipi</string>
+  <!-- Text for floating action button in the Tab Manager used to initiate a re-sync of synced tabs -->
+  <string name="tab_manager_floating_action_button_sync_tabs">Samstilla flipa</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Bæta við flipa</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1648,6 +1664,8 @@
   <string name="tab_crash_restore">Endurheimta flipa</string>
   <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
   <string name="unsubmitted_crash_dialog_title" moz:removedIn="142" tools:ignore="UnusedResources">%s þurfti að endurræsa</string>
+  <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_dialog_title_2">%s hrundi. Senda skýrslu?</string>
   <!-- Single unsubmitted crash matching remote settings. %1$s is the name of the app (for example "Firefox"). -->
   <string name="unsubmitted_crash_requested_by_devs_dialog_title">Þú ert með ósenda hrunskýrslu sem tengist hrunum sem verið er að rannsaka. Ef þú sendir hana mun það hjálpa okkur að bæta %1$s. Ef þessari tilkynningu er lokað verður skýrslan hunsuð.</string>
   <!-- Multiple unsubmitted crashes matching remote settings. %1$d is the number of unsent crash reports, %2$s is the name of the app (for example "Firefox"). -->
@@ -1656,10 +1674,17 @@
   <string name="unsubmitted_crash_dialog_checkbox_label">Senda hrunskýrslur inn sjálfkrafa</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Loka</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button_2">LOKA</string>
   <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
   <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Aldrei sýna þetta aftur</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
+  <string name="unsubmitted_crash_dialog_positive_button_2">SENDA</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">Senda hrunskýrslu</string>
+  <!-- Body text for crash report dialog. %s is the link text in the annotated string (ie. "Learn More") -->
+  <string name="unsubmitted_crash_dialog_body">Hrunskýrslur gera okkur kleift að greina og laga vandamál með vafrann. Slíkar skýrslur geta innihaldið persónuleg eða viðkvæm gögn. %s</string>
+  <string name="unsubmitted_crash_dialog_learn_more">Frekari upplýsingar</string>
   <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
   <string name="unsubmitted_crash_requested_by_devs_learn_more">Frekari upplýsingar</string>
   <!--
@@ -1814,6 +1839,8 @@
   <string name="clear_permissions_on_all_sites">Hreinsa heimildir á fyrir öll vefsvæði</string>
   <!-- Preference for altering video and audio autoplay for all websites -->
   <string name="preference_browser_feature_autoplay">Sjálfvirk spilun</string>
+  <!-- Preference for local device access for all websites -->
+  <string name="preference_browser_feature_local_device_access">Forrit á tæki og þjónustur</string>
   <!-- Preference for altering the camera access for all websites -->
   <string name="preference_phone_feature_camera">Myndavél</string>
   <!-- Preference for altering the microphone access for all websites -->
