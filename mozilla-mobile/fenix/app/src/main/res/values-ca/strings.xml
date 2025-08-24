@@ -1096,6 +1096,8 @@
   <string name="exceptions_empty_message_learn_more_link">Més informació</string>
   <!-- Preference switch for usage and technical data collection -->
   <string name="preference_usage_data_2">Envia dades tècniques i d’interacció</string>
+  <!-- Preference switch for usage and technical learn more link in new compose -->
+  <string name="preference_usage_data_learn_more_2">Més informació sobre les dades tècniques</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
   <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Les dades sobre el vostre dispositiu, sobre la configuració del maquinari i com l’utilitzeu ajuden a millorar les funcions, el rendiment i l’estabilitat del Firefox.</string>
   <!-- Preference switch for daily usage ping data collection -->
@@ -1104,8 +1106,20 @@
   <string name="preferences_daily_usage_ping_learn_more">Més informació sobre el ping d’ús diari</string>
   <!-- Preference switch title for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_title" tools:ignore="UnusedResources" moz:removedIn="142">Envia automàticament informes de fallada</string>
+  <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="crash_reporting_snack_bar_message">S’ha enviat l’informe</string>
   <!-- Preference switch description for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_description" tools:ignore="UnusedResources" moz:removedIn="142">Ajuden a diagnosticar i solucionar problemes del navegador. Els informes poden incloure dades personals o confidencials.</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">Més informació sobre els informes de fallada</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">Informes de fallada</string>
+  <string name="usage_data_category">Dades d’ús</string>
+  <string name="studies_data_category">Estudis</string>
+  <string name="technical_data_category">Dades tècniques</string>
+  <string name="crash_reporting_description">Els informes de fallada permeten diagnosticar i solucionar problemes del navegador. Els informes poden incloure dades personals o confidencials.</string>
+  <!-- Section title for campaign measurement in data collections screen -->
+  <string name="preferences_marketing_data_title">Mesurament de campanyes</string>
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
   <string name="preferences_marketing_data_2">Dades de mesurament de campanyes</string>
   <!--
@@ -1145,6 +1159,18 @@
   <string name="preference_top_toolbar">Superior</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">Inferior</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">Senzilla</string>
+  <!-- Preference for using expanded toolbar -->
+  <string name="preference_expanded_toolbar">Ampliada</string>
+  <!-- Preference description indicating the toolbar location preference is disabled when the tab strip is enabled -->
+  <string name="preference_toolbar_pref_disabled_explanation">La barra d’adreces ha d’estar a la part superior quan es mostra la barra de pestanyes.</string>
+  <!--
+    App icon Preferences
+
+    Title for the preference that lets the user pick a new app icon
+  -->
+  <string name="preference_select_app_icon_title">Seleccioneu la icona de l’aplicació</string>
   <!--
     Theme Preferences
 
@@ -1157,6 +1183,12 @@
   <string name="preference_auto_battery_theme">Definit per l’estalvi de bateria</string>
   <!-- Preference for using following device theme -->
   <string name="preference_follow_device_theme">Segons el tema del dispositiu</string>
+  <!--
+    Tab Strip Preferences
+
+    Preferences for showing tab strip
+  -->
+  <string name="preference_tab_strip_show">Mostra la barra de pestanyes</string>
   <!--
     Gestures Preferences
 
@@ -1306,6 +1338,13 @@
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Més informació</string>
   <!--
+    Sessions
+
+    Title for the list of tabs in the current normal session used by a11y services
+    The %1$s will be replaced by the number of opened normal tabs
+  -->
+  <string name="tabs_header_normal_tabs_counter_title">Pestanyes normals obertes: %1$s. Toqueu per canviar de pestanya.</string>
+  <!--
     Title for the list of tabs in the current private session used by a11y services
     The %1$s will be replaced by the number of opened private tabs
   -->
@@ -1315,6 +1354,18 @@
     The %1$s will be replaced by the number of opened synced tabs
   -->
   <string name="tabs_header_synced_tabs_counter_title">Pestanyes sincronitzades obertes: %1$s. Toqueu per canviar de pestanya.</string>
+  <!-- Text for the tabs header private tabs -->
+  <string name="tabs_header_private_tabs_title">Privades</string>
+  <!-- Text for the tabs header normal tabs -->
+  <string name="tabs_header_normal_tabs_title">Pestanyes</string>
+  <!-- Text for the tabs header synced tabs -->
+  <string name="tabs_header_synced_tabs_title">Sincronitzades</string>
+  <!-- Text for the new tab button in the Tab Manager to indicate opening a new normal tab -->
+  <string name="tab_manager_floating_action_button_new_normal_tab">Pestanya nova</string>
+  <!-- Text for the new tab button in the Tab Manager to indicate opening a new private tab -->
+  <string name="tab_manager_floating_action_button_new_private_tab">Pestanya privada nova</string>
+  <!-- Text for floating action button in the Tab Manager used to initiate a re-sync of synced tabs -->
+  <string name="tab_manager_floating_action_button_sync_tabs">Sincronitza les pestanyes</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Afegeix una pestanya</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
@@ -1409,6 +1460,8 @@
     %1$d is the number of items deleted.
   -->
   <string name="download_delete_multiple_items_snackbar_2">Elements suprimits: %1$d</string>
+  <!-- Title for the dialog that prompts the user to choose an app for downloading a file. -->
+  <string name="download_app_dialog_title">Baixa el fitxer amb:</string>
   <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
   <string name="download_delete_single_item_snackbar_2">S’ha suprimit «%1$s»</string>
   <!-- Text for the snackbar to confirm that downloads are in progress. -->
@@ -1506,11 +1559,21 @@
   -->
   <string name="download_item_in_progress_description_pending">%1$s / %2$s • pendent</string>
   <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • temps desconegut</string>
+  <!--
     Description of a paused download item, displayed in the downloads list.
     %1$s is the current file size that has been downloaded.
     %2$s is the total size of the downloaded file.
   -->
   <string name="download_item_paused_description">%1$s / %2$s • en pausa</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • en pausa</string>
   <!-- Text to indicate that a download has failed to download. -->
   <string name="download_item_status_failed">Ha fallat la baixada</string>
   <!-- Text for the snackbar action button to view failed download details. -->
@@ -1543,6 +1606,12 @@
   <string name="webcompat_reporter_screen_title">Informeu sobre un lloc que no funciona</string>
   <!-- The description of the Web Compat Reporter feature. %1$s is the name of the app (for example "Firefox"). -->
   <string name="webcompat_reporter_description" moz:removedIn="142" tools:ignore="UnusedResources">Ajudeu a fer que el %1$s sigui millor per a tothom. Els empleats de Mozilla utilitzen la informació que envieu per solucionar problemes dels llocs web.</string>
+  <!-- The description of the Web Compat Reporter feature, which has a "learn more" button text for navigating to a SUMO link to learn more about reporting a broken site. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="webcompat_reporter_description_2" moz:removedIn="143" tools:ignore="UnusedResources">El vostre informe ens ajuda a entendre i solucionar problemes del %1$s, i així millorar-lo per a tothom. Més informació</string>
+  <!-- The description of the Web Compat Reporter feature, which has a "learn more" button text for navigating to a SUMO link to learn more about reporting a broken site. %1$s is the name of the app (for example "Firefox") and %2$s is the learn more button. -->
+  <string name="webcompat_reporter_description_3">El vostre informe ens ajuda a entendre i solucionar problemes del %1$s, i així millorar-lo per a tothom. %2$s</string>
+  <!-- The button text for navigating to the SUMO link to learn more about reporting a broken site. -->
+  <string name="webcompat_reporter_learn_more">Més informació</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">URL</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
@@ -1551,6 +1620,8 @@
   <string name="webcompat_reporter_label_whats_broken_2">Què no funciona?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason" moz:removedIn="142" tools:ignore="UnusedResources">Trieu el motiu</string>
+  <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_choose_reason_2">Trieu un motiu</string>
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Trieu un motiu</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
