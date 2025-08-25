@@ -32,6 +32,12 @@
   <string name="no_open_tabs_description">Tab terbuka Anda akan ditampilkan di sini.</string>
   <!-- No Private Tabs Message Description -->
   <string name="no_private_tabs_description">Tab privat Anda akan muncul di sini.</string>
+  <!-- The header text displayed on the private tabs page when no private tabs are open -->
+  <string name="tab_manager_empty_private_tabs_page_header">Penjelajahan pribadi</string>
+  <!-- The supplementary text displayed on the private tabs page when no private tabs are open. %1$s is the name of the app (for example "Firefox") -->
+  <string name="tab_manager_empty_private_tabs_page_description">%1$s tidak akan mengingat riwayat atau kuki Anda, tetapi markah baru akan disimpan.</string>
+  <!-- The header text displayed on the normal tabs page when no normal tabs are open -->
+  <string name="tab_manager_empty_normal_tabs_page_header">Buat tab baru untuk mulai mencari</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">%1$d terpilih</string>
   <!-- Tab tray multi select title in app bar when no tabs are selected -->
@@ -46,6 +52,10 @@
   <string name="tab_tray_close_multiselect_content_description">Keluar mode seleksi ganda</string>
   <!-- Content description for save to collection button while in multiselect mode in tab tray -->
   <string name="tab_tray_collection_button_multiselect_content_description">Simpan tab terpilih ke koleksi</string>
+  <!-- The header text displayed on the synced tabs page when the user is not logged into an account. -->
+  <string name="tab_manager_empty_synced_tabs_page_header">Ambil tab dari perangkat apa pun</string>
+  <!-- The supplementary text displayed on the synced tabs page when the user is not logged into an account. -->
+  <string name="tab_manager_empty_synced_tabs_page_description">Masuk untuk mengelola tab yang disinkronkan dari semua perangkat Anda.</string>
   <!--
     Home - Bookmarks
 
@@ -817,6 +827,12 @@
   <string name="addons_permissions_allow_for_all_sites_subtitle">Jika Anda memercayai ekstensi ini, Anda dapat memberikannya izin di setiap situs web.</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">Ekstensi ini tidak memerlukan izin apa pun.</string>
+  <!-- The title of the optional permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_permissions">Izin opsional:</string>
+  <!-- The title of the required data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_data_collection">Pengumpulan data yang diperlukan:</string>
+  <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_data_collection">Pengumpulan data opsional:</string>
   <!--
     Add-on Preferences
 
@@ -936,6 +952,20 @@
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo_subtitle">Dibuat oleh @heyheymomodraws</string>
+  <!-- Title for the "Solid colors" group of alternative app icon variants in the icon picker screen. This group contains icons with flat, uniform color backgrounds. -->
+  <string name="alternative_app_icon_group_solid_colors">Warna rata</string>
+  <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
+  <string name="alternative_app_icon_group_gradients">Gradien</string>
+  <!-- Title for the "Other" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
+  <string name="alternative_app_icon_group_other" tools:ignore="UnusedResources">Lainnya</string>
+  <!-- Title to show in alert when user selects an alternative app icon -->
+  <string name="restart_warning_dialog_title">Ubah ikon aplikasi?</string>
+  <!-- Message to warn users that applying an alternative app icon requires an app restart -->
+  <string name="restart_warning_dialog_body">Mengubah ikon mengharuskan aplikasi untuk memulai ulang.</string>
+  <!-- Dialog button text for confirming the app restart to apply the selected icon -->
+  <string name="restart_warning_dialog_button_positive">Mulai ulang sekarang</string>
+  <!-- Dialog button text for cancelling app icon change -->
+  <string name="restart_warning_dialog_button_negative">Batal</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1044,6 +1074,8 @@
   <string name="exceptions_empty_message_learn_more_link">Pelajari lebih lanjut</string>
   <!-- Preference switch for usage and technical data collection -->
   <string name="preference_usage_data_2">Kirim data teknis dan interaksi</string>
+  <!-- Preference switch for usage and technical learn more link in new compose -->
+  <string name="preference_usage_data_learn_more_2">Pelajari lebih lanjut tentang data teknis</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
   <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Data tentang perangkat Anda, konfigurasi perangkat keras, dan penggunaan membantu kami meningkatkan fitur, kinerja, dan stabilitas Firefox.</string>
   <!-- Preference switch for daily usage ping data collection -->
@@ -1052,8 +1084,20 @@
   <string name="preferences_daily_usage_ping_learn_more">Pelajari lebih lanjut tentang ping penggunaan harian</string>
   <!-- Preference switch title for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_title" tools:ignore="UnusedResources" moz:removedIn="142">Kirim laporan kerusakan secara otomatis</string>
+  <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="crash_reporting_snack_bar_message">Laporan terkirim</string>
   <!-- Preference switch description for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_description" tools:ignore="UnusedResources" moz:removedIn="142">Ini membantu kami mendiagnosis dan memperbaiki masalah pada peramban. Laporan mungkin termasuk data pribadi atau sensitif.</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">Pelajari lebih lanjut tentang laporan kerusakan</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">Laporan Kerusakan</string>
+  <string name="usage_data_category">Data penggunaan</string>
+  <string name="studies_data_category">Kajian</string>
+  <string name="technical_data_category">Data Teknis</string>
+  <string name="crash_reporting_description">Laporan kerusakan memungkinkan kami mendiagnosis dan memperbaiki masalah pada peramban. Laporan mungkin termasuk data pribadi atau sensitif.</string>
+  <!-- Section title for campaign measurement in data collections screen -->
+  <string name="preferences_marketing_data_title">Pengukuran kampanye</string>
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
   <string name="preferences_marketing_data_2">Data pengukuran kampanye</string>
   <!--
@@ -1093,6 +1137,18 @@
   <string name="preference_top_toolbar">Atas</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">Bawah</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">Sederhana</string>
+  <!-- Preference for using expanded toolbar -->
+  <string name="preference_expanded_toolbar">Diperluas</string>
+  <!-- Preference description indicating the toolbar location preference is disabled when the tab strip is enabled -->
+  <string name="preference_toolbar_pref_disabled_explanation">Bilah alamat harus di atas saat bilah tab ditampilkan.</string>
+  <!--
+    App icon Preferences
+
+    Title for the preference that lets the user pick a new app icon
+  -->
+  <string name="preference_select_app_icon_title">Pilih Ikon Aplikasi</string>
   <!--
     Theme Preferences
 
@@ -1105,6 +1161,12 @@
   <string name="preference_auto_battery_theme">Diatur oleh Penghemat Baterai</string>
   <!-- Preference for using following device theme -->
   <string name="preference_follow_device_theme">Ikuti tema peranti</string>
+  <!--
+    Tab Strip Preferences
+
+    Preferences for showing tab strip
+  -->
+  <string name="preference_tab_strip_show">Tampilkan bilah tab</string>
   <!--
     Gestures Preferences
 
@@ -1263,6 +1325,12 @@
     The %1$s will be replaced by the number of opened synced tabs
   -->
   <string name="tabs_header_synced_tabs_counter_title">Tab Terselaras Terbuka: %1$s. Ketuk untuk beralih tab.</string>
+  <!-- Text for the new tab button in the Tab Manager to indicate opening a new normal tab -->
+  <string name="tab_manager_floating_action_button_new_normal_tab">Tab baru</string>
+  <!-- Text for the new tab button in the Tab Manager to indicate opening a new private tab -->
+  <string name="tab_manager_floating_action_button_new_private_tab">Tab pribadi baru</string>
+  <!-- Text for floating action button in the Tab Manager used to initiate a re-sync of synced tabs -->
+  <string name="tab_manager_floating_action_button_sync_tabs">Sinkronkan tab</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_tab">Tambah tab</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
