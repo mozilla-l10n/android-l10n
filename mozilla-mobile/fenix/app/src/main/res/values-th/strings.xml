@@ -32,6 +32,8 @@
   <string name="no_open_tabs_description">แท็บที่คุณเปิดจะถูกแสดงที่นี่</string>
   <!-- No Private Tabs Message Description -->
   <string name="no_private_tabs_description">แท็บส่วนตัวของคุณจะถูกแสดงที่นี่</string>
+  <!-- The header text displayed on the private tabs page when no private tabs are open -->
+  <string name="tab_manager_empty_private_tabs_page_header">การเรียกดูแบบส่วนตัว</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">เลือกอยู่ %1$d</string>
   <!-- Tab tray multi select title in app bar when no tabs are selected -->
@@ -46,6 +48,8 @@
   <string name="tab_tray_close_multiselect_content_description">ออกจากโหมดเลือกหลายรายการ</string>
   <!-- Content description for save to collection button while in multiselect mode in tab tray -->
   <string name="tab_tray_collection_button_multiselect_content_description">บันทึกแท็บที่เลือกลงในชุดสะสม</string>
+  <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
+  <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">ลงชื่อเข้าใช้</string>
   <!--
     Home - Bookmarks
 
@@ -1361,8 +1365,16 @@
   <string name="tab_tray_menu_item_close">ปิดแท็บทั้งหมด</string>
   <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_bookmark">ที่คั่นหน้า</string>
+  <!-- Content description (not visible, for screen readers etc.): Bookmarks selected tabs. -->
+  <string name="tab_manager_multiselect_menu_item_bookmark_content_description">เพิ่มที่คั่นหน้าสำหรับแท็บที่เลือก</string>
   <!-- Text shown in the multiselect menu for closing selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_close">ปิด</string>
+  <!-- Content description (not visible, for screen readers etc.): Closes selected tabs. -->
+  <string name="tab_manager_multiselect_menu_item_close_content_description">ปิดแท็บที่เลือก</string>
+  <!-- Text shown in the multiselect menu for sharing selected tabs. -->
+  <string name="tab_manager_multiselect_menu_item_share">แบ่งปัน</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_collection">เพิ่มไปยังชุดสะสม</string>
   <!-- Content description for tabs tray multiselect share button -->
   <string name="tab_tray_multiselect_share_content_description">แบ่งปันแท็บที่เลือก</string>
   <!-- Content description for tabs tray multiselect menu -->
@@ -1700,6 +1712,8 @@
   <string name="bookmark_menu_delete_button">ลบ</string>
   <!-- Bookmark overflow menu save button -->
   <string name="bookmark_menu_save_button" tools:ignore="UnusedResources" moz:removedIn="143">บันทึก</string>
+  <!-- Accessibility label for sorting options -->
+  <string name="bookmark_sort_menu_content_desc">ตัวเลือกการจัดเรียง</string>
   <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_custom">เรียงลำดับแบบกำหนดเอง</string>
   <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
@@ -1770,6 +1784,8 @@
   <string name="bookmark_search_button_content_description">ค้นหาที่คั่นหน้า</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">เมนูรายการสำหรับ %s</string>
+  <!-- Content description for the "close" button in bookmarks screen. -->
+  <string name="bookmark_close_button_content_description">ปิดที่คั่นหน้า</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">ไม่มีที่คั่นหน้า</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -1812,6 +1828,8 @@
   <string name="clear_permissions_on_all_sites">ล้างสิทธิอนุญาตบนไซต์ทั้งหมด</string>
   <!-- Preference for altering video and audio autoplay for all websites -->
   <string name="preference_browser_feature_autoplay">การเล่นอัตโนมัติ</string>
+  <!-- Preference for local network access for all websites -->
+  <string name="preference_browser_feature_local_network_access">อุปกรณ์เครือข่ายภายใน</string>
   <!-- Preference for altering the camera access for all websites -->
   <string name="preference_phone_feature_camera">กล้อง</string>
   <!-- Preference for altering the microphone access for all websites -->
@@ -2934,6 +2952,13 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">เรื่องราว</string>
+  <!--
+    Context description text for the "Discover more" button in the stories home screen section
+    which navigates the user to a screen displaying more stories.
+  -->
+  <string name="stories_discover_more_content_description">ค้นพบเรื่องราวเพิ่มเติม</string>
+  <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
+  <string name="stories_back_button_content_description">นำทางย้อนกลับ</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">ได้รับการสนับสนุน</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
@@ -3257,6 +3282,8 @@
   <string name="protection_panel_num_trackers_blocked">ตัวติดตามที่ปิดกั้น: %d</string>
   <!-- Text for when no trackers have been blocked. -->
   <string name="protection_panel_no_trackers_blocked">ไม่พบตัวติดตาม</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">ตัวติดตามไม่ถูกปิดกั้น</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings" moz:removedIn="142" tools:ignore="UnusedResources">การตั้งค่าความเป็นส่วนตัวและความปลอดภัย</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
@@ -3606,6 +3633,8 @@
   <string name="setup_checklist_task_explore_extensions">สำรวจส่วนขยาย</string>
   <!-- The title of the search widget task for the setup checklist -->
   <string name="setup_checklist_task_search_widget" moz:removedIn="143" tools:ignore="UnusedResources">ติดตั้งวิดเจ็ตค้นหา</string>
+  <!-- The title of the search widget task for the setup checklist -->
+  <string name="setup_checklist_task_search_widget_2">สำรวจเครื่องมือค้นหา</string>
   <!--
     ===== Setup checklist feature: Group titles =====
 
