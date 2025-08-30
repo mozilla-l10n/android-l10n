@@ -54,6 +54,10 @@
   <string name="tab_tray_collection_button_multiselect_content_description">Gorde hautatutako fitxak bilduman</string>
   <!-- The header text displayed on the synced tabs page when the user is not logged into an account. -->
   <string name="tab_manager_empty_synced_tabs_page_header">Hartu fitxak edozein gailutatik</string>
+  <!-- The supplementary text displayed on the synced tabs page when the user is not logged into an account. -->
+  <string name="tab_manager_empty_synced_tabs_page_description">Hasi saioa zure gailu guztietako sinkronizatutako fitxak kudeatzeko.</string>
+  <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
+  <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">Hasi saioa</string>
   <!--
     Home - Bookmarks
 
@@ -374,6 +378,18 @@
   -->
   <string name="browser_toolbar_translated_successfully">Orria %1$s hizkuntzatik %2$s hizkuntzara itzuli da.</string>
   <!--
+    Translation Toolbar
+
+    Translation toolbar label that is displayed when the current page has been translated by the translation feature.
+    %1$s is the name of the language that is displayed in the original page. (For example: English)
+    %2$s is the name of the language which the page was translated to. (For example: French)
+  -->
+  <string name="translation_toolbar_translated_from_and_to" tools:ignore="UnusedResources">%1$s hizkuntzatik %2$s hizkuntzara itzuli da</string>
+  <!-- Content description for the translate toolbar action that opens the translations dialog. -->
+  <string name="translation_toolbar_expand_action">Ireki itzulpenen orria</string>
+  <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
+  <string name="translation_toolbar_close_action">Baztertu mezua</string>
+  <!--
     Locale Settings Fragment
 
     Content description for tick mark on selected language
@@ -503,6 +519,16 @@
   <string name="onboarding_preferences_dialog_crash_reporting_description">Hutsegite-txostenek nabigatzailearen arazoak diagnostikatu eta konpontzen laguntzen digute. Txostenek datu pertsonal edo kontuzkoak izan litzakete.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Argibide gehiago</string>
+  <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_title">%s berrabiarazi egin behar da</string>
+  <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_body">Arazo bat egon da %s irekitzen.\nHutsegite-txostenek nabigatzailearen arazoak diagnostikatu eta konpontzen laguntzen digute. Txostenek datu pertsonal edo kontuzkoak izan litzakete.</string>
+  <!-- Button text to submit a startup crash report -->
+  <string name="startup_crash_positive">Bidali hutsegite-txostena</string>
+  <!-- Button text to continue and not send a startup crash report -->
+  <string name="startup_crash_negative">Ez, eskerrik asko</string>
+  <!-- Button text to reopen firefox after the crash is processed %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_restart">Berrireki %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <string name="onboarding_preferences_dialog_usage_data_title">Bidali datu tekniko eta interakziozkoak Mozillara</string>
   <string name="onboarding_preferences_dialog_usage_data_description_2" tools:ignore="BrandUsage">Zure gailuaren, hardware-konfigurazioaren eta Firefox erabiltzen duzun moduaren inguruko datuek eginbideak, errendimendua eta egonkortasuna mundu guztiarentzat hobetzen laguntzen dute.</string>
@@ -733,6 +759,8 @@
   <string name="preferences_home_2">Hasiera-orria</string>
   <!-- Preference for customizing the app icon -->
   <string name="preferences_app_icon">Aplikazioaren ikonoa</string>
+  <!-- Preference for showing the tab strip -->
+  <string name="preferences_tab_strip">Fitxa-barraren bistaratzea</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Keinuak</string>
   <!-- Preference for settings related to visual options -->
@@ -807,6 +835,14 @@
   <string name="preferences_open_links_in_apps_ask">Galdetu ireki aurretik</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Inoiz ez</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">Kudeatu deskargak beste aplikazio batekin</string>
+  <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_downloads_settings_clean_up_files_title">Ezabatu %s aplikaziotik eta gailutik</string>
+  <!-- Summary for the setting to automatically clean up downloaded files -->
+  <string name="preferences_downloads_settings_clean_up_files_summary">Fitxategiak deskarga-kudeatzailetik kentzean zure gailutik ere kentzen ditu</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads">Deskargak</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Gaitu Gecko erregistroak</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -831,6 +867,18 @@
   <string name="addons_permissions_allow_for_all_sites_subtitle">Hedapena fidagarritzat baduzu, webgune guztietarako baimena eman diezaiokezu.</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">Hedapen honek ez du baimenik behar.</string>
+  <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
+  <string name="addons_permissions_required_data_collection_description_2">Garatzaileak dio hedapen honek ondorengoa biltzen duela: %1$s</string>
+  <!-- The description of the "none" data collection permission, when the extension doesn't collect anything according to the developer. -->
+  <string name="addons_permissions_none_required_data_collection_description">Garatzaileak dio hedapen honek ez duela daturik biltzen.</string>
+  <!-- The title of the required permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_permissions">Beharrezko baimenak:</string>
+  <!-- The title of the optional permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_permissions">Aukerako baimenak:</string>
+  <!-- The title of the required data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_data_collection">Beharrezko datu-bilketa:</string>
+  <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_data_collection">Aukerazko datu-bilketa:</string>
   <!--
     Add-on Preferences
 
@@ -860,6 +908,8 @@
     a section where users see a list of tabs that they have visited in the past few days
   -->
   <string name="customize_toggle_recently_visited">Bisitatutako azkenak</string>
+  <!-- Title for the customize home screen section with Pocket. -->
+  <string name="customize_toggle_pocket_3">Istorioak</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
   <string name="customize_toggle_pocket_sponsored">Babesleen istorioak</string>
   <!-- Title for the opening wallpaper settings screen -->
@@ -898,6 +948,30 @@
   <string name="wallpapers_onboarding_dialog_body_text">Aukeratu zuri egokitzen zaizun horma-papera.</string>
   <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
   <string name="wallpapers_onboarding_dialog_explore_more_button_text">Arakatu horma-paper gehiago</string>
+  <!--
+    Icon picker
+
+    Title for the "Default" alternative app icon variant in the icon picker screen.
+  -->
+  <string name="alternative_app_icon_option_default">Lehenetsia</string>
+  <!-- Title for the "Light" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_light">Argia</string>
+  <!-- Title for the "Dark" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_dark">Iluna</string>
+  <!-- Title for the "Red" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_red">Gorria</string>
+  <!-- Title for the "Green" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_green">Berdea</string>
+  <!-- Title for the "Blue" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_blue">Urdina</string>
+  <!-- Title for the "Purple" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_purple">Morea</string>
+  <!-- Title for the "Purple Dark" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_purple_dark">More iluna</string>
+  <!-- Title for the "Sunrise" gradient alternative app icon variant in the icon picker screen. The app icon features a soft yellow-to-blue gradient background, resembling the colors of early morning light. -->
+  <string name="alternative_app_icon_option_gradient_sunrise">Egunsentia</string>
+  <!-- Title for the "Golden Hour" gradient alternative app icon variant in the icon picker screen. The app icon features a warm golden-to-pink gradient background, resembling the colors of the sunlight shortly before sunset. -->
+  <string name="alternative_app_icon_option_gradient_golden_hour">Urrezko ordua</string>
   <!-- Title for the "Sunset" gradient alternative app icon variant in the icon picker screen. The app icon has a rich red-to-purple gradient background, resembling the tones of a sunset sky. -->
   <string name="alternative_app_icon_option_gradient_sunset">Ilunabarra</string>
   <!-- Title for the "Blue Hour" gradient alternative app icon variant in the icon picker screen. The app icon has a cool blue gradient background, resembling the sky color around the time just after sunset or before sunrise. -->
@@ -922,14 +996,24 @@
   <string name="alternative_app_icon_option_cute">Polita</string>
   <!-- Title for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo">Momo</string>
+  <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
+  <string name="alternative_app_icon_option_momo_subtitle">\u0040heyheymomodraws-ek sortuta</string>
   <!-- Title for the "Solid colors" group of alternative app icon variants in the icon picker screen. This group contains icons with flat, uniform color backgrounds. -->
   <string name="alternative_app_icon_group_solid_colors">Kolore solidoak</string>
   <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
   <string name="alternative_app_icon_group_gradients">Gradienteak</string>
   <!-- Title for the "Other" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
   <string name="alternative_app_icon_group_other" tools:ignore="UnusedResources">Bestelakoak</string>
+  <!-- Title to show in alert when user selects an alternative app icon -->
+  <string name="restart_warning_dialog_title">Aldatu aplikazio-ikonoa?</string>
+  <!-- Message to warn users that applying an alternative app icon requires an app restart -->
+  <string name="restart_warning_dialog_body" tools:ignore="UnusedResources" moz:removedIn="144">Ikonoa aldatzeak aplikazioa berrabiaraztea eskatzen du.</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_warning_dialog_body_2">Aplikazioa itxi liteke. Sakatu zure ikono berria %1$s berrirekitzeko.</string>
   <!-- Dialog button text for confirming the app restart to apply the selected icon -->
   <string name="restart_warning_dialog_button_positive" tools:ignore="UnusedResources" moz:removedIn="144">Berrabiarazi orain</string>
+  <!-- Dialog button text for confirming the possible app restart and new icon selection -->
+  <string name="restart_warning_dialog_button_positive_2">Aldatu ikonoa</string>
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Utzi</string>
   <!--
@@ -1040,6 +1124,8 @@
   <string name="exceptions_empty_message_learn_more_link">Argibide gehiago</string>
   <!-- Preference switch for usage and technical data collection -->
   <string name="preference_usage_data_2">Bidali datu tekniko eta interakziozkoak</string>
+  <!-- Preference switch for usage and technical learn more link in new compose -->
+  <string name="preference_usage_data_learn_more_2">Datuen teknikoei buruzko argibide gehiago</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
   <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Zure gailuaren, hardware-konfigurazioaren eta erabilpenaren inguruko datuek guztientzat Firefoxen eginbideak, errendimendua eta egonkortasuna hobetzen laguntzen dute.</string>
   <!-- Preference switch for daily usage ping data collection -->
@@ -1052,12 +1138,16 @@
   <string name="crash_reporting_snack_bar_message">Txostena bidalita</string>
   <!-- Preference switch description for automatically submitting crash reports -->
   <string name="preferences_automatically_send_crashes_description" tools:ignore="UnusedResources" moz:removedIn="142">Hauek nabigatzailearen arazoak diagnostikatu eta konpontzen laguntzen digu honek. Txostenek datu pertsonal edo kontuzkoak izan litzakete.</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">Hutsegite-txostenei buruzko argibide gehiago</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">Hutsegite-txostenak</string>
   <string name="usage_data_category">Erabilpen-datuak</string>
   <string name="studies_data_category">Esperimentuak</string>
   <string name="technical_data_category">Datu teknikoak</string>
   <string name="crash_reporting_description">Hutsegite-txostenek nabigatzailearen arazoak diagnostikatu eta konpontzen laguntzen digute. Txostenek datu pertsonal edo kontuzkoak izan litzakete.</string>
+  <!-- Section title for campaign measurement in data collections screen -->
+  <string name="preferences_marketing_data_title">Kanpainen neurketa</string>
   <!-- Preference switch for campaign measurement data (marketing data) collection -->
   <string name="preferences_marketing_data_2">Kanpainen neurketa-datuak</string>
   <!--
@@ -1101,6 +1191,8 @@
   <string name="preference_simple_toolbar">Sinplea</string>
   <!-- Preference for using expanded toolbar -->
   <string name="preference_expanded_toolbar">Zabaldua</string>
+  <!-- Preference description indicating the toolbar location preference is disabled when the tab strip is enabled -->
+  <string name="preference_toolbar_pref_disabled_explanation">Helbide-barrak goian egon behar du fitxa-barra erakustean.</string>
   <!--
     App icon Preferences
 
@@ -1119,6 +1211,12 @@
   <string name="preference_auto_battery_theme">Bateria-aurrezlea ezarrita</string>
   <!-- Preference for using following device theme -->
   <string name="preference_follow_device_theme">Erabili gailuaren itxura</string>
+  <!--
+    Tab Strip Preferences
+
+    Preferences for showing tab strip
+  -->
+  <string name="preference_tab_strip_show">Erakutsi fitxa-barra</string>
   <!--
     Gestures Preferences
 
@@ -3468,6 +3566,12 @@
   <string name="debug_drawer_override_region">Baliogabetu etxeko eta uneko eskualdea</string>
   <!-- The title of the button for overriding home region permanently. -->
   <string name="debug_drawer_override_home_region_permanently">Baliogabetu etxeko eskualdea behin betiko</string>
+  <!--
+    Add-ons debug tools
+
+    The description of the Add-ons Tools in the Debug Drawer
+  -->
+  <string name="debug_drawer_addons_tools_title">Gehigarrien tresnak</string>
   <!-- The title of the button used to check for add-on updates. -->
   <string name="addons_debug_tools_check_for_updates_button">Bilatu eguneraketak</string>
   <!--
@@ -3598,6 +3702,8 @@
   <string name="setup_checklist_task_explore_extensions">Arakatu hedapenak</string>
   <!-- The title of the search widget task for the setup checklist -->
   <string name="setup_checklist_task_search_widget" moz:removedIn="143" tools:ignore="UnusedResources">Instalatu bilaketarako widgeta</string>
+  <!-- The title of the search widget task for the setup checklist -->
+  <string name="setup_checklist_task_search_widget_2">Arakatu bilaketarako widgeta</string>
   <!--
     ===== Setup checklist feature: Group titles =====
 
@@ -3654,12 +3760,32 @@
   <string name="review_prompt_negative_button">Arazoak izaten ari naiz</string>
   <!-- Label for a button positively rating the user's experience with the app -->
   <string name="review_prompt_positive_button">Oso ona da!</string>
+  <!-- Title for a prompt asking the user to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="review_prompt_rate_header">Eskerrik asko %1$s gustuko izateagatik. Baduzu segundo bat iritzia balorazio batekin zabaltzeko?</string>
+  <!-- Label for a button proceeding to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="review_prompt_rate_button">Puntuatu %1$s Play Storen</string>
+  <!-- Title for a prompt asking the user send us feedback. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="review_prompt_feedback_header">Sentitzen dugu arazoak izaten ari zarela. Esan iezaguzu nola hobe dezakegun %1$s.</string>
+  <!-- Label for a button opening a feedback forum -->
+  <string name="review_prompt_feedback_button">Eman iritzia</string>
   <!--
     Terms of use pop up prompt
 
     Title for the pop up prompt
   -->
   <string name="terms_of_use_prompt_title">Nobedade bat dugu</string>
+  <!--
+    Message for the terms of use pop up prompt
+    %1$s is the product name "Firefox"
+    %2$s is the string terms_of_use_prompt_link_terms_of_use (Terms of Use) that is a link to the terms of use
+    %3$s is the string terms_of_use_prompt_link_privacy_notice (Privacy Notice) that is a link to the privacy notice
+  -->
+  <string name="terms_of_use_prompt_message_1">%1$s %2$s sarrarazi dugu eta gure %3$s eguneratu dugu.</string>
+  <!--
+    Second part of the terms of use pop up prompt
+    %1$s is the string terms_of_use_prompt_link_learn_more (Learn more) that is a link to a website with more information about the terms of use
+  -->
+  <string name="terms_of_use_prompt_message_2">Har ezazu une bat berrikusi eta onartzeko. %1$s.</string>
   <!-- Terms of use link in the pop up prompt message that links to the terms of use -->
   <string name="terms_of_use_prompt_link_terms_of_use">Erabilera-baldintzak</string>
   <!-- Privacy notice link in the pop up prompt message that links to the privacy notice -->
