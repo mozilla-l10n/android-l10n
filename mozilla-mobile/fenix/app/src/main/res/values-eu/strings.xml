@@ -32,6 +32,12 @@
   <string name="no_open_tabs_description">Irekitako fitxak hemen erakutsiko dira.</string>
   <!-- No Private Tabs Message Description -->
   <string name="no_private_tabs_description">Zure fitxa pribatuak hemen erakutsiko dira.</string>
+  <!-- The header text displayed on the private tabs page when no private tabs are open -->
+  <string name="tab_manager_empty_private_tabs_page_header">Nabigatze pribatua</string>
+  <!-- The supplementary text displayed on the private tabs page when no private tabs are open. %1$s is the name of the app (for example "Firefox") -->
+  <string name="tab_manager_empty_private_tabs_page_description">%1$s(e)k ez du historia edo cookierik gogoratuko baina laster-marka berriak gorde egingo dira.</string>
+  <!-- The header text displayed on the normal tabs page when no normal tabs are open -->
+  <string name="tab_manager_empty_normal_tabs_page_header">Sortu fitxa berria edo hasi bilatzen</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">%1$d hautatuta</string>
   <!-- Tab tray multi select title in app bar when no tabs are selected -->
@@ -46,6 +52,8 @@
   <string name="tab_tray_close_multiselect_content_description">Irten hautapen anitzeko modutik</string>
   <!-- Content description for save to collection button while in multiselect mode in tab tray -->
   <string name="tab_tray_collection_button_multiselect_content_description">Gorde hautatutako fitxak bilduman</string>
+  <!-- The header text displayed on the synced tabs page when the user is not logged into an account. -->
+  <string name="tab_manager_empty_synced_tabs_page_header">Hartu fitxak edozein gailutatik</string>
   <!--
     Home - Bookmarks
 
@@ -1536,6 +1544,12 @@
   <string name="webcompat_reporter_screen_title">Eman hondatutako gunearen berri</string>
   <!-- The description of the Web Compat Reporter feature. %1$s is the name of the app (for example "Firefox"). -->
   <string name="webcompat_reporter_description" moz:removedIn="142" tools:ignore="UnusedResources">Lagundu %1$s denontzat hobetzen. Mozillako langileek zuk bidalitako informazioa erabiltzen dute webguneetako arazoak konpontzeko.</string>
+  <!-- The description of the Web Compat Reporter feature, which has a "learn more" button text for navigating to a SUMO link to learn more about reporting a broken site. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="webcompat_reporter_description_2" moz:removedIn="143" tools:ignore="UnusedResources">Zure txostenak %1$s(e)n arazoak ulertu eta konpontzen laguntzen digu, horrela denontzat hobetzeko. Argibide gehiago</string>
+  <!-- The description of the Web Compat Reporter feature, which has a "learn more" button text for navigating to a SUMO link to learn more about reporting a broken site. %1$s is the name of the app (for example "Firefox") and %2$s is the learn more button. -->
+  <string name="webcompat_reporter_description_3">Zure txostenak %1$s(e)n arazoak ulertu eta konpontzen laguntzen digu, horrela denontzat hobetzeko. %2$s</string>
+  <!-- The button text for navigating to the SUMO link to learn more about reporting a broken site. -->
+  <string name="webcompat_reporter_learn_more">Argibide gehiago</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">URLa</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
@@ -1544,6 +1558,8 @@
   <string name="webcompat_reporter_label_whats_broken_2">Zer dago hondatuta?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason" moz:removedIn="142" tools:ignore="UnusedResources">Aukeratu arrazoia</string>
+  <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_choose_reason_2">Aukeratu arrazoia</string>
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Aukeratu arrazoia</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
@@ -1560,6 +1576,8 @@
   <string name="webcompat_reporter_success_snackbar_text">Zure txostena bidali da</string>
   <!-- Button text for closing or dismissing the snackbar shown after successfully submitting a WebCompat report. -->
   <string name="webcompat_reporter_dismiss_success_snackbar_text">Itxi</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text">Zer gertatu da? Zerk gertatu beharko luke?</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
@@ -1576,6 +1594,10 @@
   <string name="webcompat_reporter_reason_content2">Edukia falta da</string>
   <!-- Broken site reason text for can’t sign in or register -->
   <string name="webcompat_reporter_reason_account2">Ezin da saioa hasi edo erregistratu</string>
+  <!-- Broken site reason text for site asked to turn off ad blocker -->
+  <string name="webcompat_reporter_reason_turn_off_adblocker">Guneak iragarki-blokeatzailea desgaitzeko eskatu du</string>
+  <!-- Broken site reason text for browser isn’t supported or blocked -->
+  <string name="webcompat_reporter_reason_notsupported">Nabigatzailea ez da onartzen edo blokeatuta dago</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">Beste zerbait</string>
   <!--
@@ -1592,12 +1614,20 @@
   <string name="tab_crash_restore">Berreskuratu fitxa</string>
   <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
   <string name="unsubmitted_crash_dialog_title" moz:removedIn="142" tools:ignore="UnusedResources">%s berrabiarazi egin behar izan da</string>
+  <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_dialog_title_2">%s(e)k huts egin du. Bidali txostena?</string>
+  <!-- Single unsubmitted crash matching remote settings. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_title">Bidali gabeko hutsegite-txosten bat duzu ikerketapean dauden hutsegiteekin zerikusia duena. Bidaltzeak %1$s hobetzen lagunduko digu. Jakinarazpen hau ixteak txosten hau ezikusiko du.</string>
+  <!-- Multiple unsubmitted crashes matching remote settings. %1$d is the number of unsent crash reports, %2$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crashes_requested_by_devs_dialog_title">Bidali gabeko hutsegite-txostenak dituzu (%1$d) ikerketapean dauden hutsegiteekin zerikusia dutena. Bidaltzeak %2$s hobetzen lagunduko digu. Jakinarazpen hau ixteak txosten hauek ezikusiko ditu.</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">Bidali automatikoki hutsegite-txostenak</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Itxi</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button_2">ITXI</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Ez erakutsi hau berriro</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button_2">BIDALI</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
@@ -1605,6 +1635,8 @@
   <!-- Body text for crash report dialog. %s is the link text in the annotated string (ie. "Learn More") -->
   <string name="unsubmitted_crash_dialog_body">Hutsegite-txostenek nabigatzailearen arazoak diagnostikatu eta konpontzen laguntzen digute. Txostenek datu pertsonal edo kontuzkoak izan litzakete. %s</string>
   <string name="unsubmitted_crash_dialog_learn_more">Argibide gehiago</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">Argibide gehiago</string>
   <!--
     Bookmarks
 
@@ -1645,6 +1677,8 @@
   <string name="bookmark_menu_delete_button">Ezabatu</string>
   <!-- Bookmark overflow menu save button -->
   <string name="bookmark_menu_save_button" tools:ignore="UnusedResources" moz:removedIn="143">Gorde</string>
+  <!-- Accessibility label for sorting options -->
+  <string name="bookmark_sort_menu_content_desc">Ordenatzeko aukerak</string>
   <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_custom">Ordenatu ordena pertsonalizatuaren arabera</string>
   <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
@@ -3598,12 +3632,28 @@
   <string name="pbm_authentication_unlock">Desblokeatu</string>
   <!-- Title text instructing the user to unlock private tabs -->
   <string name="pbm_authentication_unlock_private_tabs">Desblokeatu fitxa pribatuak</string>
+  <!-- Authentication prompt title to enable the private tabs mode -->
+  <string name="pbm_authentication_enable_lock">Gaitu fitxa pribatuetako pantailaren blokeoa</string>
+  <!-- Authentication prompt title to disable the private tabs mode -->
+  <string name="pbm_authentication_disable_lock">Desgaitu fitxa pribatuetako pantailaren blokeoa</string>
+  <!-- Label for a preference shown when the device supports screen lock (e.g., PIN, pattern, or password) but the user has not set one up. -->
+  <string name="pbm_authentication_lock_device_feature_disabled">Konfiguratu pantailaren blokeoa fitxak ezkutatzeko</string>
   <!-- Title text for the contextual feature recommendation (CFR) suggesting the user enable a screen lock to protect private tabs -->
   <string name="private_tab_cfr_title">Erabili pantailaren blokeoa fitxa pribatuak ezkutatzeko?</string>
   <!-- Negative button text for the contextual feature recommendation (CFR) dismissing the screen lock suggestion -->
   <string name="private_tab_cfr_negative">Ez, eskerrik asko</string>
   <!-- Positive button text for the contextual feature recommendation (CFR) enabling screen lock for private tabs -->
   <string name="private_tab_cfr_positive">Blokeatu fitxak</string>
+  <!--
+    Review prompt
+
+    Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="review_prompt_pre_prompt_header">Zer da %1$s(r)i buruzko zure iritzia?</string>
+  <!-- Label for a button negatively rating the user's experience with the app -->
+  <string name="review_prompt_negative_button">Arazoak izaten ari naiz</string>
+  <!-- Label for a button positively rating the user's experience with the app -->
+  <string name="review_prompt_positive_button">Oso ona da!</string>
   <!--
     Terms of use pop up prompt
 
