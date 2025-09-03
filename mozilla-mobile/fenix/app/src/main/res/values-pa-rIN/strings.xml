@@ -1008,6 +1008,8 @@
   <string name="restart_warning_dialog_title">ਐਪ ਦੇ ਆਈਕਾਨ ਨੂੰ ਬਦਲਣਾ ਹੈ?</string>
   <!-- Message to warn users that applying an alternative app icon requires an app restart -->
   <string name="restart_warning_dialog_body" tools:ignore="UnusedResources" moz:removedIn="144">ਆਈਕਾਨ ਨੂੰ ਬਦਲਣ ਲਈ ਐਪ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ।</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_warning_dialog_body_2">ਐਪ ਬੰਦ ਹੋ ਸਕਦੀ ਹੈ। %1$s ਨੂੰ ਮੁੜ-ਖੋਲ੍ਹਣ ਲਈ ਆਪਣੇ ਚਮਕਦੇ ਨਵੇਂ ਆਈਕਾਨ ਨੂੰ ਛੂਹੋ।</string>
   <!-- Dialog button text for confirming the app restart to apply the selected icon -->
   <string name="restart_warning_dialog_button_positive" tools:ignore="UnusedResources" moz:removedIn="144">ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ</string>
   <!-- Dialog button text for confirming the possible app restart and new icon selection -->
@@ -1414,6 +1416,8 @@
   <string name="tab_tray_menu_item_close">ਸਾਰੀਆਂ ਟੈਬਾਂ ਬੰਦ ਕਰੋ</string>
   <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_bookmark">ਬੁੱਕਮਾਰਕ</string>
+  <!-- Content description (not visible, for screen readers etc.): Bookmarks selected tabs. -->
+  <string name="tab_manager_multiselect_menu_item_bookmark_content_description">ਚੁਣੀਆਂ ਟੈਬਾਂ ਨੂੰ ਬੁੱਕਮਾਰਕ ਕਰੋ</string>
   <!-- Text shown in the multiselect menu for closing selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_close">ਬੰਦ ਕਰੋ</string>
   <!-- Content description (not visible, for screen readers etc.): Closes selected tabs. -->
@@ -1771,6 +1775,8 @@
   <string name="bookmark_menu_delete_button">ਹਟਾਓ</string>
   <!-- Bookmark overflow menu save button -->
   <string name="bookmark_menu_save_button" tools:ignore="UnusedResources" moz:removedIn="143">ਸੰਭਾਲੋ</string>
+  <!-- Accessibility label for sorting options -->
+  <string name="bookmark_sort_menu_content_desc">ਲੜੀਬੱਧ ਲਈ ਚੋਣਾਂ</string>
   <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_custom">ਪਸੰਦੀਦਾ ਲੜੀਬੱਧ ਢੰਗ</string>
   <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
@@ -1841,6 +1847,8 @@
   <string name="bookmark_search_button_content_description">ਬੁੱਕਮਾਰਕ ਖੋਜੋ</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">%s ਲਈ ਆਈਟਮ ਮੇਨੂ</string>
+  <!-- Content description for the "close" button in bookmarks screen. -->
+  <string name="bookmark_close_button_content_description">ਬੁੱਕਮਾਰਕ ਨੂੰ ਬੰਦ ਕਰੋ</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">ਹਾਲੇ ਕੋਈ ਬੁੱਕਮਾਰਕ ਨਹੀਂ</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -3013,6 +3021,13 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">ਲੇਖ</string>
+  <!--
+    Context description text for the "Discover more" button in the stories home screen section
+    which navigates the user to a screen displaying more stories.
+  -->
+  <string name="stories_discover_more_content_description">ਨਵੀਆਂ ਕਹਾਣੀਆਂ ਲੱਭੋ</string>
+  <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
+  <string name="stories_back_button_content_description">ਪਿੱਛੇ ਵੱਲ ਨੈਵੀਗੇਟ ਕਰੋ</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">ਸਪੌਂਸਰ ਕੀਤੇ</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
@@ -3336,6 +3351,8 @@
   <string name="protection_panel_num_trackers_blocked">ਪਾਬੰਦੀ ਲਾਏ ਟਰੈਕਰ: %d</string>
   <!-- Text for when no trackers have been blocked. -->
   <string name="protection_panel_no_trackers_blocked">ਕੋਈ ਟਰੈਕਰ ਨਹੀਂ ਲੱਭੇ</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">ਟਰੈਕਰਾਂ ਉੱਤੇ ਪਾਬੰਦੀ ਨਹੀਂ ਲਾਈ ਹੈ</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings" moz:removedIn="142" tools:ignore="UnusedResources">ਪਰਦੇਦਾਰੀ ਅਤੇ ਸੁਰੱਖਿਆ ਸੈਟਿੰਗਾਂ</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
@@ -3368,6 +3385,8 @@
   <string name="connection_security_panel_secure">ਸੁਰੱਖਿਅਤ ਕਨੈਕਸ਼ਨ</string>
   <!-- Text for the connection security panel when the site is not secure. -->
   <string name="connection_security_panel_not_secure">ਕਨੈਕਸ਼ਨ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੈ</string>
+  <!-- Text for the connection security panel when accessed from local PDF. -->
+  <string name="connection_security_panel_local_pdf">ਇਸ ਸਫ਼ੇ ਨੂੰ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਉੱਤੇ ਸੰਭਾਲਿਆ ਗਿਆ ਹੈ</string>
   <!--
     Text for the connection security panel to indicate who the certificate was verified by.
     %s is a placeholder for the name of the certificate authority that issued the certificate.
