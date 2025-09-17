@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone android-l10n repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: l10n
       - name: Clone firefox repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: mozilla-firefox/firefox
           path: source
           sparse-checkout: |
             mobile/android/android-components
       - name: Set up Python 3
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Install Python dependencies
@@ -42,7 +42,7 @@ jobs:
           --toml l10n/firefox.toml
           --config l10n/.github/scripts/linter_config.json
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
           path: l10n

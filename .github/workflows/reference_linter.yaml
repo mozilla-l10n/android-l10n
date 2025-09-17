@@ -15,16 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: src
       - name: Clone repository (default branch)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: base
           ref: "${{github.event.pull_request.base.sha}}"
       - name: Set up Python 3
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Install Python dependencies
