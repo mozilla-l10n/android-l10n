@@ -1758,12 +1758,29 @@
   <string name="tab_crash_close">ປິດແທັບ</string>
   <!-- Restore tab button text on the tab crash page -->
   <string name="tab_crash_restore">ກູ້ຄືນແທັບ</string>
+  <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_dialog_title_2">%s ຂັດຂ້ອງ. ສົ່ງລາຍງານບໍ?</string>
+  <!-- Single unsubmitted crash matching remote settings. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_title">ທ່ານມີລາຍງານການຂັດຂ້ອງທີ່ຍັງບໍ່ໄດ້ສົ່ງທີ່ກ່ຽວຂ້ອງກັບການຂັດຂ້ອງທີ່ຖືກສືບສວນ. ການສົ່ງມັນຈະຊ່ວຍໃຫ້ພວກເຮົາປັບປຸງ %1$s. ການປິດການແຈ້ງເຕືອນນີ້ຈະບໍ່ສົນໃຈລາຍງານນີ້.</string>
+  <!-- Multiple unsubmitted crashes matching remote settings. %1$d is the number of unsent crash reports, %2$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crashes_requested_by_devs_dialog_title">ທ່ານມີລາຍງານການຂັດຂ້ອງທີ່ຍັງບໍ່ໄດ້ສົ່ງ (%1$d) ທີ່ກ່ຽວຂ້ອງກັບການຂັດຂ້ອງທີ່ກຳລັງຖືກກວດສອບ. ການສົ່ງພວກມັນຈະຊ່ວຍໃຫ້ພວກເຮົາປັບປຸງ %2$s. ການປິດການແຈ້ງເຕືອນນີ້ຈະບໍ່ສົນໃຈລາຍງານເຫຼົ່ານີ້.</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">ສົ່ງລາຍງານການຂັດຂ້ອງໂດຍອັດຕະໂນມັດ</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">ປິດ</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button_2">ປິດ</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">ຢ່າສະແດງອີກ</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report -->
+  <string name="unsubmitted_crash_dialog_positive_button_2">ສົ່ງ</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">ສົ່ງລາຍງານການຂັດຂ້ອງ</string>
+  <!-- Body text for crash report dialog. %s is the link text in the annotated string (ie. "Learn More") -->
+  <string name="unsubmitted_crash_dialog_body">ບົດລາຍງານການຂັດຂ້ອງຊ່ວຍພວກເຮົາໃນການວິນິດໄສ ແລະ ແກ້ໄຂບັນຫາກັບຕົວທ່ອງເວັບ. ບົດລາຍງານອາດຈະປະກອບມີຂໍ້ມູນສ່ວນຕົວ ຫຼື ຂໍ້ມູນທີ່ລະອຽດອ່ອນ. %s</string>
+  <string name="unsubmitted_crash_dialog_learn_more">ຮຽນຮູ້ເພີ່ມເຕີມ</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">ຮຽນຮູ້ເພີ່ມເຕີມ</string>
   <!--
     Bookmarks
 
@@ -1780,6 +1797,14 @@
   <string name="bookmark_add_folder">ເພີ່ມໂຟລເດີ</string>
   <!-- Snackbar title that confirms a bookmark was saved into a folder. %s is the name of the folder the bookmark was saved into. -->
   <string name="bookmark_saved_in_folder_snackbar">ບັນທຶກໄວ້ໃນ “%s”</string>
+  <!-- Snackbar title describing failure to add a new folder -->
+  <string name="bookmark_error_add_folder">ບໍ່ສາມາດເພີ່ມໂຟນເດີໄດ້</string>
+  <!-- Snackbar title describing failure to edit an existing folder -->
+  <string name="bookmark_error_edit_folder">ບໍ່ສາມາດແກ້ໄຂໂຟນເດີໄດ້</string>
+  <!-- Snackbar title describing failure to select a new parent folder for a bookmark or folder -->
+  <string name="bookmark_error_select_folder">ບໍ່ສາມາດປ່ຽນໂຟນເດີຫຼັກໄດ້</string>
+  <!-- Snackbar title describing failure to edit a bookmark -->
+  <string name="bookmark_error_edit_bookmark">ບໍ່ສາມາດແກ້ໄຂບຸກມາກໄດ້</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">ແກ້ໄຂ</string>
   <!-- Bookmark menu move button -->
@@ -1804,6 +1829,8 @@
   <string name="bookmark_menu_delete_button">ລຶບ</string>
   <!-- Bookmark overflow menu save button -->
   <string name="bookmark_menu_save_button" tools:ignore="UnusedResources" moz:removedIn="143">ບັນທຶກ</string>
+  <!-- Accessibility label for sorting options -->
+  <string name="bookmark_sort_menu_content_desc">ຕົວເລືອກການຈັດຮຽງ</string>
   <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_custom">ຈັດຮຽງຕາມລຳດັບທີ່ກຳນົດເອງ</string>
   <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
@@ -1874,8 +1901,12 @@
   <string name="bookmark_search_button_content_description">ຊອກຫາບຸກມາກ</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">ເມນູລາຍການສຳລັບ %s</string>
+  <!-- Content description for the "close" button in bookmarks screen. -->
+  <string name="bookmark_close_button_content_description">ປິດບຸກມາກ</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">ບໍ່ທັນມີບຸກມາກເທື່ອ</string>
+  <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
+  <string name="bookmarks_folder_description">ບຸກມາກໃນໂຟນເດີ: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
   <string name="bookmark_empty_list_guest_description">ບັນທຶກເວັບໄຊໃນຂະນະທີ່ທ່ານທ່ອງເວັບ. ເຂົ້າສູ່ລະບົບເພື່ອເອົາບຸກມາກຈາກອຸປະກອນອື່ນທີ່ຊິ້ງແລ້ວ.</string>
   <!-- Text for the button to navigate to sync authentication -->
@@ -2085,6 +2116,8 @@
   <string name="sync_add_new_device_learn_button">ຮຽນຮູ້ກ່ຽວກັບການສົ່ງແທັບ…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">ເຊື່ອມຕໍ່ກັບອຸປະກອນອື່ນ…</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nສົ່ງມາຈາກ %2$s 🦊 ລອງໃຊ້ໂປຣແກຣມທ່ອງເວັບມືຖື: %3$s</string>
   <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nສົ່ງມາຈາກ %2$s 🦊 %3$s</string>
   <!--
