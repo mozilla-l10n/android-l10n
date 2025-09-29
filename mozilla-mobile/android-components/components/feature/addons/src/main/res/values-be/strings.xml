@@ -136,6 +136,10 @@
   <string name="mozac_feature_addons_permissions_user_scripts_description_for_update">Дазволіць неправераным староннім скрыптам доступ да вашых дадзеных.</string>
   <!-- Description for the "devtools" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
   <string name="mozac_feature_addons_permissions_devtools_description_for_update">Пашырыць прылады распрацоўшчыка для доступу да дадзеных у адкрытых картках.</string>
+  <!-- Description for giving an add-on access to users's data on one site. %1$s  will be replaced by the DNS host name for which a web extension is requesting access (e.g., www.mozilla.org). -->
+  <string name="mozac_feature_addons_permissions_one_site_description_for_update">Доступ да вашых дадзеных для %1$s.</string>
+  <!-- Description for giving an add-on access to users's data in multiple sites in the domain %1$s. %1$s will be replaced by the DNS domain for which a web extension is requesting access (e.g., mozilla.org). -->
+  <string name="mozac_feature_addons_permissions_sites_in_domain_description_for_update">Доступ да вашых дадзеных для сайтаў у дамене %1$s.</string>
   <!--
     When an add-on requires access to more than 2 domains, for example the add-on requires access for 3 domains. We will show the first 2 domains in individual entries, as in mozac_feature_addons_permissions_sites_in_domain_description_for_update,
     then we will show another collapsed entry saying "Access your data on another domain.".
@@ -146,6 +150,16 @@
     then we will show another collapsed entry saying "Access your data on other domains.".
   -->
   <string name="mozac_feature_addons_permissions_extra_domains_description_plural_for_update">Доступ да вашых дадзеных у іншых даменах.</string>
+  <!--
+    When an add-on requires access to more than 2 sites, for example the add-on requires access for 3 sites. We will show the first 2 sites in individual entries, as in mozac_feature_addons_permissions_one_site_description_for_update,
+    then we will show another collapsed entry saying "Access your data on another site.".
+  -->
+  <string name="mozac_feature_addons_permissions_one_extra_site_description_for_update">Доступ да вашых дадзеных на іншым сайце.</string>
+  <!--
+    When an add-on requires access to more than 2 sites, for example the add-on requires access for 4 sites. We will show the first 2 sites in individual entries, as in mozac_feature_addons_permissions_one_site_description_for_update,
+    then we will show another collapsed entry saying "Access your data on other sites.".
+  -->
+  <string name="mozac_feature_addons_permissions_extra_sites_description_for_update">Доступ да вашых дадзеных на іншых сайтах.</string>
   <!-- The text shown when an extension requests the userScripts permission, near the usual description of the userScripts permission -->
   <string name="mozac_feature_addons_permissions_user_scripts_extra_warning">Неправераныя скрыпты могуць пагражаць бяспецы і прыватнасці. Запускайце скрыпты толькі з пашырэнняў ці крыніц, якім давяраеце.</string>
   <!-- The sentence used when the extension has data collection permissions. %1$s is a formatted list of permissions. -->
@@ -254,6 +268,8 @@
   <string name="mozac_feature_addons_permissions_dialog_title_2">Дадаць %1$s</string>
   <!-- This is the title of a dialog that asks the users to grant optional permissions. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_optional_permissions_with_data_collection_dialog_title">%1$s запытвае дадатковыя налады</string>
+  <!-- This is the title of a dialog that asks the users to grant optional data collection permissions only. %1$s is the add-on name. -->
+  <string name="mozac_feature_addons_optional_permissions_with_data_collection_only_dialog_title">%1$s запытвае дадатковы збор дадзеных</string>
   <!-- Heading for the permissions section in the add-on install dialog. -->
   <string name="mozac_feature_addons_permissions_dialog_heading_required_permissions">Неабходныя дазволы:</string>
   <!-- Heading for the data collection permissions section in the add-on install dialog. -->
@@ -272,6 +288,8 @@
   <string name="mozac_feature_addons_permissions_dialog_deny">Адмовіць</string>
   <!-- Text link to learn more about permission requests on the add-on permissions dialog . -->
   <string name="mozac_feature_addons_permissions_dialog_learn_more">Падрабязней</string>
+  <!-- This is the text for the "technical and interaction" checkbox shown in the add-on permissions dialog. -->
+  <string name="mozac_feature_addons_permissions_dialog_technical_and_interaction_data">Дзяліцца тэхнічнымі дадзенымі і\u00a0звесткамі ўзаемадзеяння з\u00a0распрацоўшчыкам пашырэння</string>
   <!-- This is a button to cancel the add-on installation . -->
   <string name="mozac_feature_addons_permissions_dialog_cancel">Адмяніць</string>
   <!-- Accessibility content description to install add-on button. %1$s is the add-on name. -->
@@ -346,6 +364,8 @@
   <string name="mozac_feature_addons_failed_to_install_incompatible_error">%1$s не можа быць усталяваны, бо ён несумяшчальны з %2$s %3$s.</string>
   <!-- Text shown when attempting to install a (hard) blocked add-on. %1$s is the add-on name. %2$s is the app name. -->
   <string name="mozac_feature_addons_blocklisted_2">%1$s парушае палітыкі Mozilla і не можа быць усталяваны на %2$s.</string>
+  <!-- Text shown when attempting to install an add-on that can only be install via Enterprise Policies, which is not supported on Android.  %1$s is the add-on name. -->
+  <string name="mozac_feature_addons_admin_install_only">Немагчыма ўсталяваць %1$s, бо яго можа ўсталяваць толькі арганізацыя, якая выкарыстоўвае карпаратыўныя палітыкі, што не падтрымліваецца на гэтай платформе.</string>
   <!-- Text shown when attempting to install an add-on that is soft-blocked. %1$s is the add-on name. %2$s is the app name. -->
   <string name="mozac_feature_addons_soft_blocked_1">%1$s парушае палітыкі Mozilla і не можа быць усталяваны на %2$s.</string>
   <!-- Text shown after failed to enable an add-on. %1$s is the add-on name. -->
