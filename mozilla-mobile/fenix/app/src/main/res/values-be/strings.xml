@@ -305,6 +305,10 @@
     %1$s is the name of the app (for example "Firefox").
   -->
   <string name="browser_menu_default_banner_title">Зрабіць %1$s прыладай па змаўчанні</string>
+  <!-- Label text within the set as default banner -->
+  <string name="browser_menu_default_banner_subtitle_2">Хуткі, прыватны, і створаны для вас.</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button that dismisses the set as default banner in the menu -->
+  <string name="browser_menu_default_banner_dismiss_promotion">Адхіліць акцыю</string>
   <!-- Content description (not visible, for screen readers etc.) for recommended extensions in main menu -->
   <string name="browser_menu_recommended_extensions_content_description">Падрабязней</string>
   <!--
@@ -463,18 +467,37 @@
   <string name="onboarding_preferences_dialog_positive_button">Гатова</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Калі ласка да Firefox</string>
+  <!-- Terms of service sub header label. -->
+  <string name="onboarding_terms_of_service_sub_header_2">Хуткае і\u00a0бяспечнае агляданне сеціва</string>
   <!-- Terms of service onboarding page continue button label. -->
   <string name="onboarding_term_of_service_agree_and_continue_button_label_2">Працягнуць</string>
+  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
+  <string name="onboarding_term_of_service_line_one_2">Працягваючы, вы згаджаецеся з %1$s.</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
   <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Умовы выкарыстання Firefox</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
   <string name="onboarding_term_of_service_line_two_link_text">Паведамленнем аб прыватнасці</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">Кіраваць</string>
+  <!-- Terms of use (ToU) second subheader. -->
+  <string name="onboarding_redesign_tou_subheader_two">Аўтаматычная ахова ад сачэння</string>
+  <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
+  <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage">Умовы выкарыстання Firefox</string>
+  <!--
+    Terms of use (ToU) second body text. 'Firefox' is intentionally hardcoded.
+    %1$s is replaced by an active link, using onboarding_redesign_tou_body_two_link_text as text (“Privacy Notice”).
+  -->
+  <string name="onboarding_redesign_tou_body_two" tools:ignore="BrandUsage">Firefox клапоціцца аб вашай прыватнасці. Даведайцеся больш у нашых %1$s.</string>
+  <!-- Used as text for the link in onboarding_redesign_tou_body_two. -->
+  <string name="onboarding_redesign_tou_body_two_link_text">Паведамленне аб прыватнасці</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text">Кіраваць наладамі</string>
   <!-- Terms of use (ToU) onboarding page continue button label. -->
   <string name="onboarding_redesign_tou_agree_and_continue_button_label">Працягнуць</string>
+  <!-- Onboarding label for 'Continue' button. -->
+  <string name="onboarding_redesign_continue_button">Працягнуць</string>
+  <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_redesign_title" tools:ignore="BrandUsage">Дапамажыце нам развіваць Firefox</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <string name="onboarding_marketing_redesign_learn_more">Як мы выкарыстоўваем дадзеныя</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
@@ -718,6 +741,8 @@
   <string name="preferences_open_links_in_apps_ask">Спытаць перад адкрыццём</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Ніколі</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads">Сцягванні</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Уключыць журналы Gecko</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -738,6 +763,18 @@
     The title of the origin permission option allowing a user to enable the extension to run on all sites
   -->
   <string name="addons_permissions_allow_for_all_sites">Дазволіць для ўсіх сайтаў</string>
+  <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
+  <string name="addons_permissions_required_data_collection_description_2">Распрацоўшчык сцвярджае, што гэта пашырэнне збірае: %1$s</string>
+  <!-- The description of the "none" data collection permission, when the extension doesn't collect anything according to the developer. -->
+  <string name="addons_permissions_none_required_data_collection_description">Распрацоўшчык сцвярджае, што гэта пашырэнне не патрабуе збору дадзеных.</string>
+  <!-- The title of the required permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_permissions">Неабходныя дазволы:</string>
+  <!-- The title of the optional permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_permissions">Неабавязковыя дазволы:</string>
+  <!-- The title of the required data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_data_collection">Неабходны збор дадзеных:</string>
+  <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_data_collection">Неабавязковы збор дадзеных:</string>
   <!--
     Add-on Preferences
 
@@ -765,6 +802,8 @@
     a section where users see a list of tabs that they have visited in the past few days
   -->
   <string name="customize_toggle_recently_visited">Нядаўна наведаныя</string>
+  <!-- Title for the customize home screen section with Pocket. -->
+  <string name="customize_toggle_pocket_3">Гісторыі</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
   <string name="customize_toggle_pocket_sponsored">Артыкулы ад спонсараў</string>
   <!-- Title for the opening wallpaper settings screen -->
@@ -855,6 +894,8 @@
   <string name="addon_ga_message_title_2" tools:ignore="UnusedResources">Даступныя новыя пашырэнні</string>
   <!-- Body of the Nimbus message for add-ons general availability. 'Firefox' intentionally hardcoded here -->
   <string name="addon_ga_message_body" tools:ignore="BrandUsage,UnusedResources">Азнаёмцеся з больш за 100 новых пашырэнняў, якія дазваляюць зрабіць Firefox вашым уласным.</string>
+  <!-- Button text of the Nimbus message for extensions general availability. -->
+  <string name="addon_ga_message_button_2" tools:ignore="UnusedResources">Знайсці пашырэнні</string>
   <!--
     Extension process crash dialog to user
 
