@@ -1463,12 +1463,16 @@
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
   -->
   <string name="webcompat_reporter_screen_title">Senhalar un site copat</string>
+  <!-- The button text for navigating to the SUMO link to learn more about reporting a broken site. -->
+  <string name="webcompat_reporter_learn_more">Ne saber mai</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">URL</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Picatz una URL valida</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Qu’es copat ?</string>
+  <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_choose_reason_2">Causissètz un motiu</string>
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Mercés de causir una rason</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
@@ -1477,6 +1481,16 @@
   <string name="webcompat_reporter_cancel">Anullar</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Mandar</string>
+  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
+  <string name="webcompat_reporter_etp_checkbox_text">Enviar las URL blocada per la proteccion contra lo seguiment</string>
+  <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
+  <string name="webcompat_reporter_etp_checkbox_description">La proteccion contra lo seguiment renfortida pòt blocar d\'elements de seguiment e d’escripts que d\'unes sites web an besonh per foncionar corrèctament.</string>
+  <!-- The button text for the preview report button to view a preview of the report. -->
+  <string name="webcompat_reporter_preview_report">Visualizar lo rapòrt</string>
+  <!-- The title shown at the top of the WebCompat Report preview panel. This appears after the user taps the “Preview” button before sending a report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_header">Apercebut del raport</string>
+  <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_send">Enviar</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
@@ -1485,6 +1499,8 @@
   <string name="webcompat_reporter_reason_load">Lo site se carga pas</string>
   <!-- Broken site reason text for site is slow -->
   <string name="webcompat_reporter_reason_slow2">Lo site es lent</string>
+  <!-- Broken site reason text for missing content -->
+  <string name="webcompat_reporter_reason_content2">Contengut mancant</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">Quicòm mai</string>
   <!--
@@ -1499,17 +1515,23 @@
   <string name="tab_crash_close">Tampar l’onglet</string>
   <!-- Restore tab button text on the tab crash page -->
   <string name="tab_crash_restore">Restablir l’onglet</string>
+  <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_dialog_title_2">%s a plantat. Enviar un rapòrt\u00a0?</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">Enviar automaticament los rapòrts de plantatge</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Tampar</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button_2">TAMPAR</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Afichar pas mai aqueste messatge</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button_2">ENVIAR</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">Mandar un rapòrt de plantatge</string>
   <string name="unsubmitted_crash_dialog_learn_more">Ne saber mai</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">Ne saber mai</string>
   <!--
     Bookmarks
 
@@ -1522,6 +1544,14 @@
   <string name="bookmark_add_folder">Apondre un dossièr</string>
   <!-- Snackbar title that confirms a bookmark was saved into a folder. %s is the name of the folder the bookmark was saved into. -->
   <string name="bookmark_saved_in_folder_snackbar">Enregistrat dins « %s »</string>
+  <!-- Snackbar title describing failure to add a new folder -->
+  <string name="bookmark_error_add_folder">Apondon del dossièr impossible</string>
+  <!-- Snackbar title describing failure to edit an existing folder -->
+  <string name="bookmark_error_edit_folder">Modificacion del dossièr impossibla</string>
+  <!-- Snackbar title describing failure to select a new parent folder for a bookmark or folder -->
+  <string name="bookmark_error_select_folder">Modificacion del dossièr parent impossibla</string>
+  <!-- Snackbar title describing failure to edit a bookmark -->
+  <string name="bookmark_error_edit_bookmark">Modificacion del marcapagina impossibla</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">MODIFICAR</string>
   <!-- Bookmark menu move button -->
@@ -1544,6 +1574,8 @@
   <string name="bookmark_menu_open_all_in_private_tabs_button">Tot dobrir dins l’onglets privats</string>
   <!-- Bookmark overflow menu delete button -->
   <string name="bookmark_menu_delete_button">Suprimir</string>
+  <!-- Accessibility label for sorting options -->
+  <string name="bookmark_sort_menu_content_desc">Opcions de triada</string>
   <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_custom">Triar per òrdre personalizat</string>
   <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
@@ -1646,6 +1678,8 @@
   <string name="clear_permissions_on_all_sites">Escafar las permissions de totes los sites</string>
   <!-- Preference for altering video and audio autoplay for all websites -->
   <string name="preference_browser_feature_autoplay">Lectura automatica</string>
+  <!-- Preference for local device access for all websites -->
+  <string name="preference_browser_feature_local_device_access">Aplicacions e servicis de l’aparelh</string>
   <!-- Preference for local network access for all websites -->
   <string name="preference_browser_feature_local_network_access">Periferics del ret local</string>
   <!-- Preference for altering the camera access for all websites -->
@@ -1704,6 +1738,10 @@
   <string name="studies_on">Activat</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">Desactivat</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">Activat</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">Desactivat</string>
   <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
   <string name="preferences_category_permissions">Permissions</string>
   <!-- Category header of a preference that allows a user to alter settings related to web content. -->
@@ -2779,6 +2817,17 @@
   <string name="radio_preference_info_content_description">Clicatz per aver de detalhs</string>
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">Remontar</string>
+  <!--
+    Pocket recommended stories
+
+    Header text for a section on the home screen.
+  -->
+  <string name="pocket_stories_header_2">Istòrias</string>
+  <!--
+    Context description text for the "Discover more" button in the stories home screen section
+    which navigates the user to a screen displaying more stories.
+  -->
+  <string name="stories_discover_more_content_description">Descobrir mai d’istòrias</string>
   <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
   <string name="stories_back_button_content_description">Tornar</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
@@ -3081,6 +3130,10 @@
   <string name="protection_panel_banner_protected_description">Sètz jos proteccion. Se trobam quicòm, vos assabentarem.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">Proteccion renfortida contra lo seguiment</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
+  <string name="protection_panel_etp_toggle_enabled_description_2">Se quicòm sembla copat sus aqueste site, ensajatz de la desactivar.</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
+  <string name="protection_panel_etp_toggle_disabled_description_2">Se recomanda d’activar la proteccion contra lo seguiment.</string>
   <!--
     Text for displaying the total number of trackers blocked in the protection panel.
     %d is a placeholder for the number of trackers blocked.
@@ -3088,6 +3141,8 @@
   <string name="protection_panel_num_trackers_blocked">Traçadors blocats : %d</string>
   <!-- Text for when no trackers have been blocked. -->
   <string name="protection_panel_no_trackers_blocked">Cap de traçador pas trobat</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">Los traçadors sont pas blocats</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings_2">Paramètres de confidencialitat</string>
   <!-- Title text for the protection panel permissions section. -->
@@ -3285,6 +3340,14 @@
     The title of the glean debugging feature
   -->
   <string name="glean_debug_tools_title">Aisinas de desbugatge Glean</string>
+  <!--
+    Debug drawer region tools
+
+    Title of the Region tools in the Debug Drawer.
+    This tool allows temporarily overriding the home region (user's default locale)
+    and the current region (device's detected location) for testing purposes.
+  -->
+  <string name="debug_drawer_region_tools_title">Aisinas regionalas</string>
   <!-- The text label for displaying home region. -->
   <string name="debug_drawer_home_region_label">Region d’origina</string>
   <!-- The text label for displaying current region. -->
@@ -3387,6 +3450,12 @@
   <string name="setup_checklist_subtitle_5_steps_first_step">Bon començament ! Avètz completat un pas de tres.</string>
   <!-- Subtitle for the setup checklist when the second task is completed. -->
   <string name="setup_checklist_subtitle_5_steps_second_step">Avètz completat un pas de tres. Bona avançada !</string>
+  <!-- Subtitle for a setup checklist with 5 steps when three of the tasks are completed. -->
+  <string name="setup_checklist_subtitle_5_steps_third_step">Sètz a mièg camin! Tres etapas son acabadas e ne demòran doas.</string>
+  <!-- Subtitle for a setup checklist with 5 steps when the fifth task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_fourth_step">Gaireben a la fin ! Pas mai qu\'una estapa abans la linha d\'arribada.</string>
+  <!-- Subtitle for a setup checklist with 5 steps completed state. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="setup_checklist_subtitle_5_steps_completed_state">Avètz acabat las cinc etapas de la configuracion. Profitatz de la velocitat, de la confidencialitat e de la seguretat de %1$s.</string>
   <!--
     ===== Setup checklist feature: Task titles =====
 
@@ -3441,6 +3510,8 @@
   <string name="pbm_authentication_disable_lock">Desactivar lo blocatge de l’ecran pels onglets privats</string>
   <!-- Label for a preference shown when the device supports screen lock (e.g., PIN, pattern, or password) but the user has not set one up. -->
   <string name="pbm_authentication_lock_device_feature_disabled">Configurar lo blocatge d’ecran per amagar los onglets</string>
+  <!-- Title text for the contextual feature recommendation (CFR) suggesting the user enable a screen lock to protect private tabs -->
+  <string name="private_tab_cfr_title">Utilizar lo blocatge d’ecran per amagar los onglets privats ?</string>
   <!-- Negative button text for the contextual feature recommendation (CFR) dismissing the screen lock suggestion -->
   <string name="private_tab_cfr_negative">Non, mercé</string>
   <!-- Positive button text for the contextual feature recommendation (CFR) enabling screen lock for private tabs -->
