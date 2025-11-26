@@ -6,7 +6,7 @@
 
 
 from import_strings import getReferenceFilesToml
-from reference_linter import HTMLStripper
+from functions import strip_html
 import argparse
 import json
 import os
@@ -16,10 +16,7 @@ import xml.etree.ElementTree as ET
 
 def check_string_quotes(text, rule):
     quote = "'" if rule == "IncorrectStraightQuote" else '"'
-    html_stripper = HTMLStripper()
-    html_stripper.clear()
-    html_stripper.feed(text)
-    cleaned_text = html_stripper.get_data()
+    cleaned_text = strip_html(text)
     if quote in cleaned_text:
         return True
 
