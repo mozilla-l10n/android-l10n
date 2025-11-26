@@ -14,7 +14,6 @@
 from collections import defaultdict
 from functions import parse_file, strip_html
 from moz.l10n.paths import L10nConfigPaths, get_android_locale
-from moz.l10n.resource import parse_resource
 import argparse
 import copy
 import json
@@ -43,11 +42,7 @@ class StringExtraction:
         ]
         for reference_file in reference_files:
             try:
-                resource = parse_resource(reference_file, android_literal_quotes=True)
-
-                parse_file(
-                    resource, self.ref_strings, reference_file, f"{reference_file}"
-                )
+                parse_file(reference_file, self.ref_strings, f"{reference_file}")
             except Exception as e:
                 print(f"Error parsing resource: {reference_file}")
                 print(e)
