@@ -28,7 +28,6 @@ class StringExtraction:
         """Initialize object."""
 
         self.ref_strings = {}
-        self.ref_strings_cl = {}
         self.toml_path = toml_path
 
     def extractStrings(self):
