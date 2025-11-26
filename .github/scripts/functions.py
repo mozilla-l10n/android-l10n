@@ -2,20 +2,19 @@ from html import unescape
 from html.parser import HTMLParser
 from typing import Union
 from moz.l10n.message import serialize_message
+from moz.l10n.resource import parse_resource
 from moz.l10n.model import (
     CatchallKey,
     Entry,
     Message,
     PatternMessage,
-    Resource,
     SelectMessage,
 )
 
 
 def parse_file(
-    resource: Resource,
-    storage: dict[str, dict[str, str]],
     filename: str,
+    storage: dict[str, dict[str, str]],
     id_base: str,
 ) -> None:
     def get_entry_value(value: Message) -> str:
@@ -38,6 +37,8 @@ def parse_file(
         return "\n".join(lines)
 
     try:
+        resource = parse_resource(filename, android_literal_quotes=True)
+
         for section in resource.sections:
             for entry in section.entries:
                 if isinstance(entry, Entry):
@@ -73,7 +74,7 @@ class HTMLStripper(HTMLParser):
         self.reset()
         self.fed = []
 
-    def handle_data(self, data):
+    def handle_data(self, data: str):
         self.fed.append(data)
 
     def get_data(self):
