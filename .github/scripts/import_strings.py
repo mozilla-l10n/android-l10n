@@ -14,7 +14,6 @@ Copy localized files in code repo
 python import_strings.py l10n --toml android-l10n/mozilla-mobile/android-components/l10n.toml --dest firefox-android/android-components
 """
 
-from compare_locales import parser
 from moz.l10n.paths import L10nConfigPaths, get_android_locale
 import argparse
 import os
@@ -93,15 +92,10 @@ def copyReferenceFiles(reference_files, dest_path):
         ref_relative = ref_file["rel_path"]
         print(f"- {ref_relative}.")
 
-        # Parse the file and write it back in the new destination
-        p = parser.getParser(ref_relative)
-        p.readFile(ref_file["abs_path"])
-        entities = p.walk()
         dest_file = os.path.join(dest_path, ref_relative)
         # Create folder if missing
         os.makedirs(os.path.dirname(dest_file), exist_ok=True)
-        with open(dest_file, "w") as f:
-            f.write("".join(entity.all for entity in entities))
+        shutil.copy2(ref_file["abs_path"], dest_file)
 
 
 def copyTomlFile(toml_path, dest_path):
