@@ -12,9 +12,9 @@
 # with return value 1.
 
 from collections import defaultdict
-from compare_locales.parser import getParser
-from html.parser import HTMLParser
+from functions import parse_file, strip_html
 from moz.l10n.paths import L10nConfigPaths, get_android_locale
+from moz.l10n.resource import parse_resource
 import argparse
 import copy
 import json
@@ -23,36 +23,17 @@ import re
 import sys
 
 
-class HTMLStripper(HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.reset()
-        self.strict = False
-        self.convert_charrefs = True
-        self.fed = []
-
-    def clear(self):
-        self.reset()
-        self.fed = []
-
-    def handle_data(self, d):
-        self.fed.append(d)
-
-    def get_data(self):
-        return " ".join(self.fed)
-
-
 class StringExtraction:
     def __init__(self, toml_path):
         """Initialize object."""
 
         self.ref_strings = {}
+        self.ref_strings_cl = {}
         self.toml_path = toml_path
 
     def extractStrings(self):
         """Extract strings using TOML configuration."""
 
-        basedir = os.path.dirname(self.toml_path)
         project_config_paths = L10nConfigPaths(
             self.toml_path, locale_map={"android_locale": get_android_locale}
         )
@@ -62,23 +43,15 @@ class StringExtraction:
             for (ref_path, tgt_path), locales in project_config_paths.all().items()
         ]
         for reference_file in reference_files:
-            key_path = os.path.relpath(reference_file, basedir)
             try:
-                p = getParser(reference_file)
-            except UserWarning:
-                continue
+                resource = parse_resource(reference_file, android_literal_quotes=True)
 
-            p.readFile(reference_file)
-            self.ref_strings.update(
-                (
-                    f"{key_path}:{entity.key}",
-                    {
-                        "text": entity.raw_val,
-                        "comment": str(entity.pre_comment),
-                    },
+                parse_file(
+                    resource, self.ref_strings, reference_file, f"{reference_file}"
                 )
-                for entity in p.parse()
-            )
+            except Exception as e:
+                print(f"Error parsing resource: {reference_file}")
+                print(e)
 
         print(f"{len(self.ref_strings)} strings extracted")
 
@@ -107,7 +80,7 @@ class QualityCheck:
                 self.errors[self.toml_path][filename][id]["errors"].append(error_msg)
             else:
                 self.errors[self.toml_path][filename][id] = {
-                    "text": self.ref_strings[string_id]["text"],
+                    "value": self.ref_strings[string_id]["value"],
                     "comment": self.ref_strings[string_id]["comment"],
                     "errors": [error_msg],
                 }
@@ -136,9 +109,8 @@ class QualityCheck:
             except Exception as e:
                 sys.exit(e)
 
-        html_stripper = HTMLStripper()
         for ref_id, ref_data in self.ref_strings.items():
-            ref_string = ref_data["text"]
+            ref_string = ref_data["value"]
             ref_comment = ref_data["comment"]
             # Ignore strings excluded from all checks
             if ignoreString(exceptions, "general", ref_id):
@@ -167,9 +139,7 @@ class QualityCheck:
                 exceptions, "double_quotes", ref_id
             ):
                 # Check if the version without HTML is clean
-                html_stripper.clear()
-                html_stripper.feed(ref_string)
-                cleaned_str = html_stripper.get_data()
+                cleaned_str = strip_html(ref_string)
                 if '"' in cleaned_str:
                     storeError(
                         ref_id,
@@ -219,7 +189,7 @@ def outputErrors(errors):
             output.append(f"\n### File: {filename}")
             for id, file_data in ids.items():
                 output.append(f"\n**ID**: `{id}`")
-                output.append(rf"**Text**: `{file_data['text']}`")
+                output.append(rf"**Value**: `{file_data['value']}`")
                 output.append(rf"**Comment**: `{file_data.get('comment', '')}`")
                 output.append("**Errors:**")
                 for e in file_data["errors"]:
