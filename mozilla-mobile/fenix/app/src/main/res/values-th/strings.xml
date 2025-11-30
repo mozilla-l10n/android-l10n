@@ -2361,12 +2361,22 @@
   <string name="preference_enhanced_tracking_protection_allow_list_convenience" tools:ignore="UnusedResources" moz:removedIn="144">เปิดใช้งานข้อยกเว้นที่จำเป็นเฉพาะเพื่อแก้ไขปัญหาเล็กน้อยและเปิดใช้คุณสมบัติอำนวยความสะดวกโดยอัตโนมัติด้วย</string>
   <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
   <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">แก้ไขปัญหาหลัก ๆ ของไซต์ (แนะนำ)</string>
+  <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">แก้ไขปัญหาเล็ก ๆ ของไซต์</string>
+  <!-- Preference description for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_description">ต้องใช้ร่วมกับการแก้ไขปัญหาหลัก ๆ</string>
+  <!-- Preference sub header for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_subheader">แก้ไขปัญหาของไซต์</string>
+  <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_learn_more">เรียนรู้เพิ่มเติม</string>
   <!--
     Dialog that appears after user tries to uncheck the baseline exceptions preference under Strict or Custom tracking protection
 
     Title for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection
   -->
   <string name="preference_enhanced_tracking_protection_allow_list_dialog_title">คุณแน่ใจหรือไม่ว่าต้องการปิดการแก้ไข?</string>
+  <!-- Message for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_message">การตั้งค่านี้จะช่วยแก้ไขปัญหาไซต์ที่พบบ่อยที่สุดได้ ถ้าคุณปิดการตั้งค่านี้ บางไซต์อาจไม่ทำงาน และ %1$s จะไม่สามารถช่วยแก้ไขปัญหาเหล่านั้นได้</string>
   <!-- Confirmation button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection -->
   <string name="preference_enhanced_tracking_protection_allow_list_dialog_confirm">ปิดการแก้ไข</string>
   <!-- Cancel button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. This dismisses the dialog and re-enables the preference. -->
@@ -2747,8 +2757,12 @@
   <string name="preferences_addresses_sync_addresses_across_devices">ซิงค์ข้อมูลที่อยู่ในทุกอุปกรณ์</string>
   <!-- Preference option for syncing addresses across devices. This is displayed when the user is signed into sync -->
   <string name="preferences_addresses_sync_addresses">ซิงค์ข้อมูลที่อยู่</string>
+  <!-- Content description navigating back from autofill settings screen. -->
+  <string name="autofill_settings_navigate_back_button_content_description">ย้อนกลับ</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">เพิ่มบัตร</string>
+  <!-- Content description for the "credit card feature" top bar back button -->
+  <string name="credit_cards_navigate_back_button_content_description">นำทางย้อนกลับ</string>
   <!-- Title of the "Edit card" screen -->
   <string name="credit_cards_edit_card">แก้ไขบัตร</string>
   <!-- The header for the card number of a credit card -->
@@ -2855,6 +2869,8 @@
   <string name="addresses_postal_code" tools:ignore="UnusedResources">รหัสไปรษณีย์</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. the Eircode field, specific to Ireland is a unique postal code system that helps in precise location identification. -->
   <string name="addresses_eircode" tools:ignore="UnusedResources">เอียร์โค้ด</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in cases we want to only display the word "Country" over "Country or Region". -->
+  <string name="addresses_country_only" tools:ignore="UnusedResources">ประเทศ</string>
   <!-- The text for the "Save" button for saving an address -->
   <string name="addresses_save_button">บันทึก</string>
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
@@ -3590,6 +3606,8 @@
   <string name="microsurvey_close_handle_content_description">ปิดแบบสำรวจ</string>
   <!-- Content description for "X" button that is closing microsurvey. -->
   <string name="microsurvey_close_button_content_description">ปิด</string>
+  <!-- The title of the autofill tab in the Debug Drawer. -->
+  <string name="debug_drawer_autofill_title">เครื่องมือกรอกอัตโนมัติ</string>
   <!--
     Debug drawer logins
 
@@ -3862,6 +3880,28 @@
   <string name="review_prompt_feedback_header">ขออภัยในความไม่สะดวกที่เกิดขึ้น โปรดบอกเราว่ามีสิ่งใดที่เราสามารถพัฒนา %1$s ได้บ้าง</string>
   <!-- Label for a button opening a feedback forum -->
   <string name="review_prompt_feedback_button">เสนอข้อคิดเห็น</string>
+  <!--
+    Settings Search Strings
+
+    Title of Settings Search. "Search" is a verb here
+  -->
+  <string name="settings_search_title">การตั้งค่าการค้นหา</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to clear the search field for settings search -->
+  <string name="content_description_settings_search_clear_search">ล้างการค้นหา</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to navigate back to the Settings page from the Settings Search screen. -->
+  <string name="content_description_settings_search_navigate_back">นำทางย้อนกลับ</string>
+  <!-- Message displayed when the search field in the Settings Search screen is empty -->
+  <string name="settings_search_empty_query_placeholder">ไม่มีการค้นหาล่าสุด</string>
+  <!-- Message when error happens with Settings Search -->
+  <string name="settings_search_error_message">เกิดข้อผิดพลาด</string>
+  <!-- Text of button allowing to clear history of recent searches done in the settings screen. -->
+  <string name="settings_search_clear_recent_searches_message">ล้างทั้งหมด</string>
+  <!-- Section header for recent search results -->
+  <string name="settings_search_recent_searches_section_header">ผลค้นหาล่าสุด</string>
+  <!-- Message displayed when the search field is not empty but search results is empty. -->
+  <string name="settings_search_no_results_title">ไม่พบผลลัพธ์อะไรเลย</string>
+  <!-- Sub-message displayed when the search field is not empty but search results is empty. -->
+  <string name="settings_search_no_results_message">ลองค้นหาแบบอื่นดูไหม?</string>
   <!--
     Terms of use pop up prompt
 
