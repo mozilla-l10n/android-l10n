@@ -245,6 +245,8 @@
   <string name="browser_menu_save_to_collection_2">ശേഖരത്തിലേക്ക് കരുതിവയ്ക്കുക</string>
   <!-- Browser menu button that open a share menu to share the current site -->
   <string name="browser_menu_share">പങ്കിടുക</string>
+  <!-- Browser menu button that goes to the homepage screen -->
+  <string name="browser_menu_homepage">പൂമുറ്റം</string>
   <!--
     Browser menu button shown in custom tabs that opens the current tab in Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -757,6 +759,8 @@
   <string name="preferences_app_icon">പ്രയോഗയടയാളം</string>
   <!-- Preference for showing the tab strip -->
   <string name="preferences_tab_strip">ടാബുപ്പട്ട വിവരപ്പലക</string>
+  <!-- Preference for gestures based actions -->
+  <string name="preferences_toolbar_select_shortcut">കുറുക്കുവഴി തിരഞ്ഞെടുക്കുക</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">ആംഗ്യങ്ങൾ</string>
   <!-- Preference for settings related to visual options -->
@@ -1957,6 +1961,8 @@
   <string name="sync_sign_in">സമന്വയിപ്പിക്കാനായി പ്രവേശിക്കുക</string>
   <!-- An option from the three dot menu to sync and save data -->
   <string name="sync_menu_sync_and_save_data" tools:ignore="UnusedResources" moz:removedIn="145">ദത്ത സമന്വയിപ്പിച്ച് കരുതിവയ്ക്കുക</string>
+  <!-- An option from the three dot menu to sign in -->
+  <string name="sync_menu_sign_in">പ്രവേശിക്കുക</string>
   <!-- An option from the share dialog to send link to all other sync devices -->
   <string name="sync_send_to_all">എല്ലാ ഉപകരണങ്ങളിലേക്കും അയയ്ക്കുക</string>
   <!-- An option from the share dialog to reconnect to sync -->
@@ -2149,6 +2155,14 @@
     text to display in the snackbar once account is signed-in
   -->
   <string name="onboarding_firefox_account_sync_is_on">സിങ്ക് ഓണാണ്</string>
+  <!--
+    Onboarding theme
+
+    Text shown in snackbar when multiple tabs have been sent to device
+  -->
+  <string name="sync_sent_tabs_snackbar_2">ടാബുകൾ അയച്ചു</string>
+  <!-- Text shown in snackbar when one tab has been sent to device -->
+  <string name="sync_sent_tab_snackbar_2">ടാബു് അയച്ചു</string>
   <!-- Text shown in snackbar when sharing tabs failed -->
   <string name="sync_sent_tab_error_snackbar">അയയ്ക്കാനായില്ല</string>
   <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
@@ -2193,6 +2207,12 @@
   <string name="preference_enhanced_tracking_protection_strict">കർശനം</string>
   <!-- Preference description for enhanced tracking protection for the strict protection settings -->
   <string name="preference_enhanced_tracking_protection_strict_description_4">കരുത്തുറ്റ പിന്തുടൎച്ച പരിരക്ഷണവും വേഗേറിയ പ്രകടനവും എന്നാൽ ചില വെബിടങ്ങൾ ശരിയായിട്ടു് പ്രവൎത്തിക്കത്തില്ല.</string>
+  <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">വലിയ വെബ്ബിട കുഴപ്പങ്ങൾ പരിഹരിക്കുക (ശുപാൎശിക്കപ്പെട്ട)</string>
+  <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">ചെറിയ വെബ്ബിട കുഴപ്പങ്ങൾ പരിഹരിക്കുക</string>
+  <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_learn_more">കൂടുതലറിയുക</string>
   <!-- Accessibility text for the Strict protection information icon -->
   <string name="preference_enhanced_tracking_protection_strict_info_button">കർശന പിന്തുടർച്ച സംരക്ഷണം എന്തെല്ലാം തടയുന്നു</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -2532,8 +2552,12 @@
   <string name="preferences_addresses_sync_addresses_across_devices">എല്ലാ ഉപകരണങ്ങളിലും വിലാസങ്ങൾ സമന്വയിപ്പിക്കുക</string>
   <!-- Preference option for syncing addresses across devices. This is displayed when the user is signed into sync -->
   <string name="preferences_addresses_sync_addresses">വിലാസങ്ങൾ സമന്വയിപ്പിക്കുക</string>
+  <!-- Content description navigating back from autofill settings screen. -->
+  <string name="autofill_settings_navigate_back_button_content_description">തിരിച്ചു്</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">ചീട്ടു് ചേർക്കുക</string>
+  <!-- Content description for the "credit card feature" top bar back button -->
+  <string name="credit_cards_navigate_back_button_content_description">പുറകോട്ട് ചെല്ലുക</string>
   <!-- Title of the "Edit card" screen -->
   <string name="credit_cards_edit_card">ചീട്ടു് തിരുത്തുക</string>
   <!-- The header for the card number of a credit card -->
@@ -2636,6 +2660,12 @@
   <string name="addresses_oblast" tools:ignore="UnusedResources">ഒബ്ലാസ്റ്റു്</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The PIN (Postal Index Number) field, used in India is a code representing a specific area. -->
   <string name="addresses_pin" tools:ignore="UnusedResources">പിൻ</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The postal code field is universally used in address forms to specify the area code for mail sorting. -->
+  <string name="addresses_postal_code" tools:ignore="UnusedResources">തപാല്‍ സങ്കേതം</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. the Eircode field, specific to Ireland is a unique postal code system that helps in precise location identification. -->
+  <string name="addresses_eircode" tools:ignore="UnusedResources">എയർകോഡ്</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in cases we want to only display the word "Country" over "Country or Region". -->
+  <string name="addresses_country_only" tools:ignore="UnusedResources">രാജ്യം</string>
   <!-- The text for the "Save" button for saving an address -->
   <string name="addresses_save_button">കരുതിവയ്ക്കുക</string>
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
@@ -2834,6 +2864,11 @@
     Title text displayed in the tabs tray when a tab has been unused for 14 days.
   -->
   <string name="inactive_tabs_title">നിഷ്ക്രിയ ടാബുകൾ</string>
+  <!--
+    Text displayed in the tabs tray, indicating the number of inactive tabs.
+    %d is the number of inactive tabs.
+  -->
+  <string name="inactive_tabs_num_items">ഇനങ്ങൾ: %d</string>
   <!-- Content description for closing all inactive tabs -->
   <string name="inactive_tabs_delete_all">എല്ലാ നിഷ്ക്രിയ ടാബുകളും അടയ്ക്കുക</string>
   <!-- Content description for expanding the inactive tabs section. -->
@@ -2884,6 +2919,11 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">കഥകൾ</string>
+  <!--
+    Context description text for the "Discover more" button in the stories home screen section
+    which navigates the user to a screen displaying more stories.
+  -->
+  <string name="stories_discover_more_content_description">ഇനിയും കണ്ടെത്തുക</string>
   <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
   <string name="stories_back_button_content_description">പുറകോട്ടു ചെല്ലുക</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
@@ -3185,6 +3225,8 @@
   <string name="protection_panel_num_trackers_blocked">തടഞ്ഞിരിക്കുന്ന പിന്തുടർച്ചായന്ത്രങ്ങൾ: %d</string>
   <!-- Text for when no trackers have been blocked. -->
   <string name="protection_panel_no_trackers_blocked">പിന്തുടർച്ചയന്ത്രങ്ങൾ കണ്ടെത്താൻ കഴിഞ്ഞില്ല</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">പിന്തുൎച്ചയന്ത്രങ്ങൾ തടഞ്ഞിട്ടില്ല</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings_2">സ്വകാര്യത ക്രമീകരണങ്ങൾ</string>
   <!-- Title text for the protection panel permissions section. -->
