@@ -1469,6 +1469,8 @@
   <string name="tab_drawer_fab_content">Pribadi</string>
   <!-- Text for the new tab button to indicate syncing command on the synced tabs page -->
   <string name="tab_drawer_fab_sync">Sinkron</string>
+  <!-- Text for the tab search bar placeholder -->
+  <string name="tab_manager_search_bar_placeholder">Cari tab Anda</string>
   <!-- Text shown in the menu for sharing all tabs -->
   <string name="tab_tray_menu_item_share">Bagikan semua tab</string>
   <!-- Text shown in the menu to view recently closed tabs -->
@@ -1481,6 +1483,14 @@
   <string name="tab_tray_menu_tab_settings">Setelan tab</string>
   <!-- Text shown in the menu for closing all tabs -->
   <string name="tab_tray_menu_item_close">Tutup semua tab</string>
+  <!-- Text shown as the title of the Close all tabs confirmation dialog in Tab Manager -->
+  <string name="tab_manager_close_all_tabs_dialog_title">Tutup semua tab?</string>
+  <!-- Text shown in the body of the Close all tabs confirmation dialog in Tab Manager -->
+  <string name="tab_manager_close_all_tabs_dialog_body">Ini akan menutup semua tab yang terbuka.</string>
+  <!-- Text shown on the confirm button in the Close all tabs confirmation dialog -->
+  <string name="tab_manager_close_all_tabs_dialog_confirm">Tutup tab</string>
+  <!-- Text shown on the cancel button in the Close all tabs confirmation dialog -->
+  <string name="tab_manager_close_all_tabs_dialog_cancel">Batal</string>
   <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_bookmark">Markah</string>
   <!-- Content description (not visible, for screen readers etc.): Bookmarks selected tabs. -->
@@ -1503,12 +1513,18 @@
   <string name="remove_tab_from_collection">Hapus tab dari koleksi</string>
   <!-- Text for button to enter multiselect mode in tabs tray -->
   <string name="tabs_tray_select_tabs">Pilih tab</string>
+  <!-- Text for tab manager search page when there are no results. -->
+  <string name="tab_manager_no_search_results">Tidak ditemukan yang cocok.</string>
+  <!-- Additional text for tab manager search page when there are no results. -->
+  <string name="tab_manager_no_search_results_additional_text">Coba pencarian lain!</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
   <string name="close_tab">Tutup tab</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. %s is the tab title -->
   <string name="close_tab_title">Tutup tab %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Buka menu tab</string>
+  <!-- Content description (not visible, for screen readers etc.): Return to tab manager -->
+  <string name="tab_manager_search_bar_back_content_description">Kembali ke pengelola tab</string>
   <!-- Open tabs menu item to save tabs to collection -->
   <string name="tabs_menu_save_to_collection1">Simpan tab ke koleksi</string>
   <!-- Text for the menu button to delete a collection -->
@@ -1525,6 +1541,8 @@
   <string name="delete_from_history">Hapus dari riwayat</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">%1$s (Mode Privat)</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
+  <string name="tab_manager_open_tab_search">Buka pencarian tab</string>
   <!--
     History
 
@@ -1898,6 +1916,8 @@
   <string name="bookmark_delete_folder_content_description">Hapus folder</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">Cari markah</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">Cari folder</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">Item Menu untuk %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
@@ -1916,6 +1936,8 @@
   <string name="bookmark_empty_list_folder_description">Tambahkan markah saat Anda menjelajah sehingga Anda dapat menemukan situs favorit Anda nanti.</string>
   <!-- Description for the add new folder button when selecting a folder. -->
   <string name="bookmark_select_folder_new_folder_button_title">Folder baru</string>
+  <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
+  <string name="bookmark_moved_single_item">Dipindahkan %1$s ke %2$s</string>
   <!--
     Site Permissions
 
@@ -2687,6 +2709,10 @@
   <string name="edit_login_navigate_back_button_content_description">Navigasi balik</string>
   <!-- Content description, used by tools like screenreaders, to press on the edit login button. -->
   <string name="edit_login_button_content_description">Edit info masuk</string>
+  <!-- Content description, used by tools like screenreaders, to press on the add new login button. -->
+  <string name="saved_logins_add_new_login_button_content_description">Tambahkan log masuk baru</string>
+  <!-- Content description, used by tools like screenreaders, to press on the clear search text button. -->
+  <string name="saved_logins_clear_search_text_button_content_description">Bersihkan teks pencarian</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">Buka situs di peramban</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -3926,5 +3952,32 @@
   <string name="terms_of_use_prompt_postpone">Ingatkan saya nanti</string>
   <!-- ==== Experiment strings. ==== -->
 
+  <!-- A title for the popup prompt. -->
+  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">Syarat Penggunaan</string>
+  <!--
+    A title for the popup prompt.
+    %1$s is the product name "Firefox"
+  -->
+  <string name="terms_of_use_prompt_title_option_b" tools:ignore="UnusedResources">Catatan dari %1$s</string>
+  <!--
+    Copy for the Terms of Use popup prompt body line two.
+    %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
+  -->
+  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">Anda dapat mempelajari lebih lanjut %1$s.</string>
+  <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
+  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">di sini</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
+
+  <!--
+    Privacy notice homepage banner
+
+    A message we show the user on the homepage when there is a new version of the privacy notice. 'Firefox' is intentionally hardcoded.
+    %1$s is replaced by an active link using privacy_notice_updated_homepage_message_privacy_notice as text (Privacy Notice)
+    %2$s is replaced by an active link using privacy_notice_updated_homepage_message_learn_more as text (Learn more)
+  -->
+  <string name="privacy_notice_updated_homepage_message" tools:ignore="BrandUsage,UnusedResources">Kami telah memperbarui %1$s untuk mencerminkan fitur terbaru di Firefox. %2$s</string>
+  <!-- The first active link used in privacy_notice_updated_homepage_message -->
+  <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Pemberitahuan Privasi</string>
+  <!-- The second active link used in privacy_notice_updated_homepage_message -->
+  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Pelajari lebih lanjut</string>
 </resources>
