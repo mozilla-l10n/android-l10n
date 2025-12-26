@@ -6,7 +6,7 @@
   file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
   <!--
     #######################################################################################
 
@@ -64,6 +64,14 @@
   <string name="menu_help">مرسته</string>
   <string name="menu_terms_of_use">د کارولو شرایط</string>
   <!--
+    Menu item: This is the label for a menu entry that shows how many trackers have been blocked
+    for the currently loaded website. The number of blocked trackers is shown below this label.
+    Next to this label is a switch that allows the user to temporarily enable / disable the
+    blocking of trackers for the current browsing session - for example if the current website
+    doesn't work correctly with blocked content.
+  -->
+  <string name="menu_trackers_blocked_title">ټرېکرونه بند شوي</string>
+  <!--
     This is the title of a dialog that shows all the share targets (apps or contacts) when
     sharing an URL.
   -->
@@ -92,6 +100,27 @@
     This is the label for this shortcut. Android recommends a maximum length of 10 characters.
   -->
   <string name="shortcut_erase_and_open_short_label">پاک کړئ او خلاص کړئ</string>
+  <!--
+    The same as 'shortcut_erase_short_label' but more descriptive. The launcher shows this
+    instead of the short title when it has enough space. Android recommends a maximum length
+    of 25 characters.
+    %1$s will be replaced by the app name (e.g. Firefox Focus)
+  -->
+  <string name="shortcut_erase_and_open_long_label">پاکول او %1$s پرانیستل</string>
+  <!--
+    This is the label of an action we offer when the user selects text in other third-party apps.
+    Focus is hard coded since we can't use variables in this context.
+    Do not translate or transliterate Focus.
+  -->
+  <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">په Focus کې لټون</string>
+  <!--
+    This is the label of an action we offer when the user selects text in other third-party apps.
+    Klar is hard coded since we can't use variables in this context.
+    Do not translate or transliterate Klar.
+  -->
+  <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">په Klar کې لټون</string>
+  <!-- A link to SUMO at the bottom of About Focus screen. -->
+  <string name="about_screen_learn_more">نور مالومات ترلاسه کړئ</string>
   <!-- Preference category for General Settings -->
   <string name="preference_category_general">عمومي</string>
   <string name="preference_category_search">لټون</string>
@@ -99,7 +128,52 @@
   <string name="preference_state_on">فعال</string>
   <!-- Text that is shown below a "switch" preference that is disabled. -->
   <string name="preference_state_off">غير فغال</string>
+  <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
+  <string name="preference_autocomplete_action_add2">URL اضافه کړئ</string>
+  <!-- A link to SUMO at autocomplete settings. -->
+  <string name="preference_autocomplete_learn_more">نور مالومات ترلاسه کړئ</string>
+  <string name="preference_category_privacy">محرمیت</string>
+  <!--
+    Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
+    only (Only 3rd-party Cookies Blocked), No (No cookies blocked)
+  -->
+  <string name="preference_privacy_should_block_cookies_no_option2">نه مننه</string>
+  <!--
+    Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
+    and prevents the user from taking screenshots or casting the app to other displays.
+  -->
+  <string name="preference_privacy_secure_mode">پټ حالت</string>
+  <string name="preference_category_security">خونديتوب</string>
+  <string name="preference_category_mozilla">موزیلا</string>
+  <!-- A link to SUMO at the end of the summary (preference_mozilla_telemetry_summary2) of the "Send anonymous usage data" setting. -->
+  <string name="preference_mozilla_telemetry_summary">نور مالومات ترلاسه کړئ</string>
   <string name="preference_search_remove">لېرې کړئ</string>
+  <string name="error_hostLookup_title">سرور ونه موندل شو</string>
+  <!--
+    New Onboarding flow first screen 'terms of use link'
+
+    Text for the link used in onboarding_first_screen_terms_of_use_text
+  -->
+  <string name="onboarding_first_screen_terms_of_use_link_2" tools:ignore="BrandUsage">د فایرفوکس د کارولو شرایط</string>
+  <!-- New Onboarding flow first screen button label -->
+  <string name="onboarding_first_screen_button_agree_and_continue_2">دوام ورکړئ</string>
+  <!-- New Onboarding flow second screen skip onboarding button label -->
+  <string name="onboarding_second_screen_skip_button_text">پرېږدئ</string>
+  <string name="firstrun_close_button">سمه ده، پوه شوم!</string>
+  <string name="firstrun_skip_button">پرېږدئ</string>
+  <string name="firstrun_next_button">بل</string>
+  <!-- Indicator that no trackers are being blocked because content blocking is disabled; normally shows the number of blocked trackers -->
+  <string name="content_blocking_disabled">-</string>
+  <!-- Label of the action that will add the current website to the home screen (shown in the confirmation dialog). -->
+  <string name="dialog_addtohomescreen_action_add">اضافه کول</string>
+  <!--
+    If the user decides to open the current page in another browser and if Firefox is not installed then we show this
+    item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play).
+  -->
+  <string name="download_firefox" tools:ignore="BrandUsage">فایرفوکس راښکته کړئ</string>
+  <!-- Text shown in prompts for GeckoView -->
+  <string name="gv_prompt_username_hint">کارن نوم</string>
+  <string name="gv_prompt_password_hint">پاسورډ</string>
   <!-- Tips displayed on the home view -->
 
   <!-- Tracking protection bottom sheet -->
