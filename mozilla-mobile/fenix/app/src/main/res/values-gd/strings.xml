@@ -778,12 +778,20 @@
   <string name="preferences_category_account">Cunntas</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Ionad bàr an t-seòlaidh</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">Co-dhealbhachd a’ bhàr-inneal</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">An t-ùrlar</string>
   <!-- Preference for customizing the home screen -->
   <string name="preferences_home_2">An duilleag-dhachaigh</string>
+  <!-- Preference for customizing the app icon -->
+  <string name="preferences_app_icon">Ìomhaigheag na h-aplacaid</string>
+  <!-- Preference for showing the tab strip -->
+  <string name="preferences_tab_strip">Taisbeanadh bàr nan tabaichean</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_toolbar_shortcut">Ath-ghoirid a’ bhàr-inneal</string>
+  <!-- Preference for gestures based actions -->
+  <string name="preferences_toolbar_select_shortcut">Tagh ath-ghoirid</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Gluasadan</string>
   <!-- Preference for settings related to visual options -->
@@ -808,12 +816,18 @@
   <string name="preferences_show_voice_search">Seall an lorg-gutha</string>
   <!-- Preference title for switch preference to show search suggestions also in private mode -->
   <string name="preferences_show_search_suggestions_in_private">Seall ann an seiseanan prìobhaideach</string>
+  <!-- Preference title for switch preference to show trending search suggestions -->
+  <string name="preferences_show_trending_search_suggestions">Seall molaidhean a tha a’ treandadh</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Seall na lorg thu o chionn goirid</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Seall molaidhean on stòr-bhòrd</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
   <string name="preferences_search_browsing_history">Lorg san eachdraidh bhrabhsaidh</string>
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">Lorg sna comharran-lìn</string>
+  <!-- Preference title for switch preference to show shortcuts when searching -->
+  <string name="preferences_show_shortcuts" tools:ignore="UnusedResources" moz:removedIn="147">Seall na h-ath-ghoiridean</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
   <string name="preferences_search_synced_tabs">Lorg am measg nan tabaichean sioncronaichte</string>
   <!-- Preference for account settings -->
@@ -834,6 +848,10 @@
   <string name="preferences_show_nonsponsored_suggestions">Molaidhean o %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Faigh molaidhean on lìon co-cheangailte ris na lorg thu</string>
+  <!-- Preference for link sharing -->
+  <string name="preferences_link_sharing">Co-roinneadh cheanglaichean</string>
+  <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_title">Gabh a-staigh ceangal %1$s airson luchdadh a-nuas is tu a’ co-roinneadh air WhatsApp</string>
   <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="link_sharing_toggle_body">Thoir cuireadh dha do charaidean gu brabhsadh nas luaithe ’s nas tèarainte le %1$s gach turas a cho-roinneas tu ceangal air WhatsApp.</string>
   <!-- Snackbar message shown when user shares a link -->
@@ -848,6 +866,15 @@
   <string name="preferences_open_links_in_apps_ask">Faighnich dhìom mus tèid fhosgladh</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Chan ann idir</string>
+  <!-- Preference category for file storage. -->
+  <string name="preferences_category_file_storage">Stòras nam faidhlichean</string>
+  <!-- Preference title for downloads default location. -->
+  <string name="preferences_downloads_default_location_title">An t-ionad bunaiteach airson na luchdaicheas tu a-nuas</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost">Chan eil cead agad am pasgan seo a chleachdadh. Tagh fear eile.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Stiùirich na luchdaidhean a-nuas le aplacaid eile</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
@@ -1003,6 +1030,16 @@
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo_subtitle">Air a chruthachadh le @heyheymomodraws</string>
+  <!-- Title for the "Cuddling" themed alternative app icon variant in the icon picker screen. The app icon features a playful design with an adorable aesthetic. -->
+  <string name="alternative_app_icon_option_cuddling">Tutag</string>
+  <!-- Title for the "Flaming" themed alternative app icon variant in the icon picker screen. The app icon features a fiery design, with the Firefox logo surrounded by flames for a bold, energetic look. -->
+  <string name="alternative_app_icon_option_flaming">Teinnteach</string>
+  <!-- Title for the "Cool" themed alternative app icon variant in the icon picker screen. The app icon uses a warm orange-to-yellow gradient background with a sleek, modern twist on the Firefox logo, giving it a fresh and stylish appearance. -->
+  <string name="alternative_app_icon_option_cool">Sgoinneil</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_warning_dialog_body_2">Dh’fhaodte gun dùin an aplacaid e fhèin. Cha leig thu leas ach gnogag a thoirt air an ìomhaigheag ùr agad airson %1$s ath-fhosgladh.</string>
+  <!-- Dialog button text for confirming the possible app restart and new icon selection -->
+  <string name="restart_warning_dialog_button_positive_2">Atharraich an ìomhaigheag</string>
   <!--
     Add-ons general availability nimbus message
 
