@@ -434,6 +434,10 @@
     The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
   -->
   <string name="search_engine_selector_content_description">%s: 検索エンジンセレクター</string>
+  <!-- Text for the snackbar shown to confirm the deletion of a single browsing history item. %1$s is the shortened URL of the deleted history entry or the the actual deleted search term. Only one such item is deleted at a time. -->
+  <string name="search_suggestions_delete_history_item_snackbar">%1$s を履歴から削除しました</string>
+  <!-- Content description (not visible, for screen readers etc.): Button shown near a history search result allowing to delete it from browsing history. -->
+  <string name="mozac_browser_awesomebar_remove_suggestion" tools:ignore="UnusedResources">この履歴エントリーを削除</string>
   <!--
     Home onboarding
 
@@ -766,6 +770,8 @@
   <string name="preferences_search">検索</string>
   <!-- Preference for settings related to Search engines -->
   <string name="preferences_search_engines">検索エンジン</string>
+  <!-- Settings item to add a search widget on the device's homescreen. -->
+  <string name="preferences_add_search_widget_from_settings">ホーム画面ウィジェット</string>
   <!-- Preference for settings related to Search engines suggestions -->
   <string name="preferences_search_engines_suggestions">検索エンジンからの検索候補</string>
   <!-- Preference Category for settings related to Search address bar -->
@@ -957,6 +963,15 @@
   <string name="preferences_open_links_in_apps_ask">開く前に確認する</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">使用しない</string>
+  <!-- Preference category for file storage. -->
+  <string name="preferences_category_file_storage">ファイルストレージ</string>
+  <!-- Preference title for downloads default location. -->
+  <string name="preferences_downloads_default_location_title">既定のダウンロード場所</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost">このフォルダーを使用する権限がありません。別のフォルダーを選択してください。</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">別のアプリでダウンロードを管理する</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
@@ -1489,10 +1504,26 @@
   <string name="studies_active">有効</string>
   <!-- Description for studies -->
   <string name="studies_description_3" moz:removedIn="148" tools:ignore="UnusedResources">機能やアイデアを一般公開される前に試してみましょう。</string>
+  <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
+  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox がユーザーをランダムに選択して機能をテストし、全体の品質を向上させます。</string>
   <!-- Title of the Studies data preference -->
   <string name="studies_title" moz:removedIn="148" tools:ignore="UnusedResources">調査のインストールと実行</string>
+  <!-- Title of the Studies data preference -->
+  <string name="studies_title_2">機能の使用調査を許可する</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">詳細情報</string>
+  <!--
+    Remote Improvements (Rollouts)
+
+    Title of the Remote Improvements (rollouts) data preference
+  -->
+  <string name="remote_improvements_title">リモートの機能向上を許可する</string>
+  <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
+  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox の機能、パフォーマンス、安定性は更新ごとに向上しています。変更はリモートで適用されます。</string>
+  <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
+  <string name="remote_improvements_learn_more">詳細情報</string>
+  <!-- Title for remote improvements preference in Advanced settings -->
+  <string name="preferences_remote_improvements">リモートの機能向上</string>
   <!--
     Sessions
 
@@ -1686,6 +1717,8 @@
   <string name="download_delete_item">削除</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">前のページへ戻ります</string>
+  <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
+  <string name="download_navigate_settings_description">ダウンロード設定に移動します</string>
   <!-- Content description for the toolbar back button while searching the downloads -->
   <string name="download_close_search_description">戻って検索を閉じる</string>
   <!--
@@ -1709,6 +1742,12 @@
   <string name="download_delete_multi_select_dialog_confirm">削除</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">キャンセル</string>
+  <!-- Title for the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_title">ファイル名の変更</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">名前</string>
+  <string name="download_rename_dialog_confirm_button">保存</string>
+  <string name="download_rename_dialog_cancel_button">キャンセル</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">ダウンロード中</string>
   <!--
@@ -1901,6 +1940,8 @@
   <string name="bookmark_error_edit_bookmark">ブックマークを編集できませんでした</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">編集</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">選択</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">移動</string>
   <!-- Bookmark overflow menu edit button -->
@@ -1981,6 +2022,10 @@
   <string name="select_bookmark_search_button_content_description">フォルダーを検索</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">%s の項目メニュー</string>
+  <!-- Content description for the chevron that will open a folder on the select folder screen and display its children. %s is the title of the folder that will be opened -->
+  <string name="bookmark_select_folder_expand_folder_content_description">フォルダーを展開: %s</string>
+  <!-- Content description for the chevron that will close a folder on the select folder screen so that its children are no longer visible. %s is the title of the folder that will be closed -->
+  <string name="bookmark_select_folder_close_folder_content_description">フォルダーを閉じる: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">ブックマークを閉じます</string>
   <!-- Title for the bookmark list empty state -->
@@ -2806,6 +2851,20 @@
   <string name="saved_logins_sort_strategy_last_used">最終使用日時</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">パスワードを並べ替えます</string>
+  <!--
+    Email Masks
+
+    Title for the Email Masks in the settings menu
+  -->
+  <string name="preferences_email_masks">メールマスク</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">メールマスクを提案</string>
+  <!-- Summary for the Suggest Email Masks toggle. -->
+  <string name="preferences_email_masks_suggest_summary">受信トレイをスパムから守るため、実際のメールアドレスを隠します。一部のサイトではメールマスクがサポートされていません。</string>
+  <!-- Text that links to additional information about the Email Masks -->
+  <string name="preferences_email_masks_suggest_learn_more">詳細情報</string>
+  <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
+  <string name="preferences_email_masks_manage_title">メールマスクを管理</string>
   <!--
     Autofill
 
@@ -3985,6 +4044,8 @@
   <string name="settings_search_no_results_title">検索結果がありません</string>
   <!-- Sub-message displayed when the search field is not empty but search results is empty. -->
   <string name="settings_search_no_results_message">別の検索語をお試しください</string>
+  <!-- Content Description for the button to open Settings Search (to search through settings). -->
+  <string name="settings_search_button_content_description">設定検索ボタン</string>
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Title for the pop up prompt -->
