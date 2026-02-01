@@ -432,6 +432,10 @@
     The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
   -->
   <string name="search_engine_selector_content_description">%s: izbirnik iskalnika</string>
+  <!-- Text for the snackbar shown to confirm the deletion of a single browsing history item. %1$s is the shortened URL of the deleted history entry or the the actual deleted search term. Only one such item is deleted at a time. -->
+  <string name="search_suggestions_delete_history_item_snackbar">Stran %1$s izbrisana iz zgodovine</string>
+  <!-- Content description (not visible, for screen readers etc.): Button shown near a history search result allowing to delete it from browsing history. -->
+  <string name="mozac_browser_awesomebar_remove_suggestion" tools:ignore="UnusedResources">Izbriši to stran iz zgodovine</string>
   <!--
     Home onboarding
 
@@ -933,6 +937,13 @@
   <string name="preferences_open_links_in_apps_ask">Vprašaj pred odpiranjem</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Nikoli</string>
+  <!-- Preference title for downloads default location. -->
+  <string name="preferences_downloads_default_location_title">Privzeto mesto za prenose</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost">Za uporabo te mape nimate dovoljenja. Poskusite izbrati drugo.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Upravljaj prenose z drugo aplikacijo</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
@@ -1465,12 +1476,26 @@
   <string name="studies_active">Dejavna</string>
   <!-- Description for studies -->
   <string name="studies_description_3" moz:removedIn="148" tools:ignore="UnusedResources">Preizkusite funkcije in ideje, preden postanejo na voljo vsem.</string>
+  <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
+  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox naključno izbira uporabnike za preizkušanje novosti, kar pripomore k izboljšanju kakovosti za vse.</string>
   <!-- Title of the Studies data preference -->
   <string name="studies_title" moz:removedIn="148" tools:ignore="UnusedResources">Nameščaj in izvajaj raziskave</string>
+  <!-- Title of the Studies data preference -->
+  <string name="studies_title_2">Dovoli raziskave značilnosti</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Več o tem</string>
+  <!--
+    Remote Improvements (Rollouts)
+
+    Title of the Remote Improvements (rollouts) data preference
+  -->
+  <string name="remote_improvements_title">Dovoli izboljšave na daljavo</string>
+  <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
+  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox bo izboljševal zmogljivosti, zanesljivost in učinkovitost delovanja med posodobitvami. Spremembe se uveljavljajo na daljavo.</string>
   <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
   <string name="remote_improvements_learn_more">Več o tem</string>
+  <!-- Title for remote improvements preference in Advanced settings -->
+  <string name="preferences_remote_improvements">Izboljšave na daljavo</string>
   <!--
     Sessions
 
@@ -1664,6 +1689,8 @@
   <string name="download_delete_item">Izbriši</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">Pojdi nazaj</string>
+  <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
+  <string name="download_navigate_settings_description">Odpri nastavitve prenosov</string>
   <!-- Content description for the toolbar back button while searching the downloads -->
   <string name="download_close_search_description">Nazaj, zapri iskanje</string>
   <!--
@@ -1879,6 +1906,8 @@
   <string name="bookmark_error_edit_bookmark">Zaznamka ni bilo mogoče urediti</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">UREDI</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">Izberi</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">Premakni</string>
   <!-- Bookmark overflow menu edit button -->
