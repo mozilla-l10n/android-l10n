@@ -1255,6 +1255,8 @@
   <string name="preference_top_toolbar">بالأعلى</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">بالأسفل</string>
+  <!-- Preference description indicating the toolbar location preference is disabled when the tab strip is enabled -->
+  <string name="preference_toolbar_pref_disabled_explanation">يجب أن يكون شريط العنوان في الأعلى عند إظهار شريط علامة التبويب.</string>
   <!--
     App icon Preferences
 
@@ -1273,6 +1275,12 @@
   <string name="preference_auto_battery_theme">حسب وضع توفير الطاقة</string>
   <!-- Preference for using following device theme -->
   <string name="preference_follow_device_theme">اتبع سمة الجهاز</string>
+  <!--
+    Tab Strip Preferences
+
+    Preferences for showing tab strip
+  -->
+  <string name="preference_tab_strip_show">إظهار شريط علامة التبويب</string>
   <!--
     Gestures Preferences
 
@@ -1366,6 +1374,8 @@
   <string name="close_tabs_after_one_month">بعد شهر واحد</string>
   <!-- Title of preference that allows a user to specify the auto-close settings for open tabs -->
   <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">الإغلاق التلقائي للألسنة المفتوحة</string>
+  <!-- Content description (not visible, for screen readers etc.): Close tab button -->
+  <string name="tab_manager_close_tabs">إغلاق</string>
   <!--
     Opening screen
 
@@ -1436,12 +1446,22 @@
   <string name="tab_tray_menu_item_close">أغلِق كل الألسنة</string>
   <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_bookmark" tools:ignore="UnusedResources" moz:removedIn="149">علّم</string>
+  <!-- Content description (not visible, for screen readers etc.): Bookmarks selected tabs. -->
+  <string name="tab_manager_multiselect_menu_item_bookmark_content_description">علّم التبويبات المحددة</string>
   <!-- Text shown in the multiselect menu for closing selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_close" tools:ignore="UnusedResources" moz:removedIn="149">أغلِق</string>
+  <!-- Content description (not visible, for screen readers etc.): Closes selected tabs. -->
+  <string name="tab_manager_multiselect_menu_item_close_content_description">إغلاق التبويبات المحددة</string>
+  <!-- Text shown in the multiselect menu for sharing selected tabs. -->
+  <string name="tab_manager_multiselect_menu_item_share">مشاركة</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_collection">إضافة إلى المجموعة</string>
   <!-- Content description for tabs tray multiselect share button -->
   <string name="tab_tray_multiselect_share_content_description" tools:ignore="UnusedResources" moz:removedIn="149">شارِك الألسنة المحددة</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">قائمة الألسنة المحددة</string>
+  <!-- Title text displayed for a homepage tab in the tabs tray. -->
+  <string name="tab_tray_homepage_tab">الصفحة الرئيسية</string>
   <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
   <string name="remove_tab_from_collection">أزِل اللسان من المجموعة</string>
   <!-- Text for button to enter multiselect mode in tabs tray -->
@@ -1500,10 +1520,37 @@
   <!-- Text shown when no history exists -->
   <string name="history_empty_message">ما من تأريخ هنا</string>
   <!--
+    Downloads
+
+    Text for the snackbar to confirm that a multiple download items have been removed. %1$s is the number of removed download items.
+    %1$d is the number of items deleted.
+  -->
+  <string name="download_delete_multiple_items_snackbar_2">العناصر المحذوفة: %1$d</string>
+  <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
   -->
   <string name="download_multi_select_title">حدّدتَ %1$d</string>
+  <!-- Title for the dialog that is shown when there is not enough storage space to download a file. -->
+  <string name="download_file_has_not_enough_storage_dialog_title">لا توجد مساحة كافية</string>
+  <!--
+    WebCompat Reporter
+
+    The title of the Web Compat Reporter feature. This is displayed in the top app bar.
+  -->
+  <string name="webcompat_reporter_screen_title">الإبلاغ عن موقع معطل</string>
+  <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
+  <string name="webcompat_reporter_label_url">عنوان الرابط</string>
+  <!-- The error message of the URL text field when an invalid URL has been entered. -->
+  <string name="webcompat_reporter_url_error_invalid">يُرجى إدخال عنوان رابط سليم</string>
+  <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_label_whats_broken_2">ما الخلل؟</string>
+  <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_description">صِف المشكلة (اختياري)</string>
+  <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
+  <string name="webcompat_reporter_cancel">إلغاء</string>
+  <!-- The button text for the send button to submit the provided form data. -->
+  <string name="webcompat_reporter_send">إرسال</string>
   <!--
     Crashes
 
