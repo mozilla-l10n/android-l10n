@@ -772,6 +772,8 @@
   <string name="preferences_search">البحث</string>
   <!-- Preference for settings related to Search engines -->
   <string name="preferences_search_engines">محركات البحث</string>
+  <!-- Settings item to add a search widget on the device's homescreen. -->
+  <string name="preferences_add_search_widget_from_settings">أداة الشاشة الرئيسية</string>
   <!-- Preference for settings related to Search engines suggestions -->
   <string name="preferences_search_engines_suggestions">الاقتراحات من محركات البحث</string>
   <!-- Preference Category for settings related to Search address bar -->
@@ -807,8 +809,10 @@
   <string name="preferences_add_private_browsing_shortcut">أضِف اختصارًا للتصفح الخاص</string>
   <!-- Preference for enabling "HTTPS-Only" mode -->
   <string name="preferences_https_only_title">وضع HTTPS فقط</string>
+  <!-- Preference title for using the screen lock to hide tabs in private browsing -->
+  <string name="preferences_pbm_lock_screen_title">استخدم قفل الشاشة لإخفاء علامات التبويب في التصفح الخاص</string>
   <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
-  <string name="preferences_pbm_lock_screen_summary_3">افتح تبويباتك بالبصمة أو الرمز أو التعرف على الوجه. تفعيل هذه الميزة يمنع أيضاً تصوير الشاشة أو مشاركتها.</string>
+  <string name="preferences_pbm_lock_screen_summary_3">افتح علامات التبويب بالبصمة أو الرمز أو التعرف على الوجه. تفعيل هذه الميزة يمنع أيضاً تصوير الشاشة أو مشاركتها.</string>
   <!-- Label for cookie banner section in quick settings panel. -->
   <string name="cookie_banner_blocker">مانع لافتة ملفات تعريف الارتباط</string>
   <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
@@ -833,6 +837,16 @@
   <string name="reduce_cookie_banner_details_panel_title_on_for_site_1">أأشغل مانع لافتات ملفات تعريف الارتباط لـ%1$s؟</string>
   <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. %1$s is a shortened URL of the current site. -->
   <string name="reduce_cookie_banner_details_panel_title_off_for_site_1">أأطفئ مانع لافتات ملفات تعريف الارتباط لـ%1$s؟</string>
+  <!-- Title text for a detail explanation indicating cookie banner reducer didn't work for the current site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="reduce_cookie_banner_details_panel_title_unsupported_site_request_2">لا يمكن لـ %1$s رفض طلبات ملفات تعريف الارتباط تلقائياً في هذا الموقع. يمكنك إرسال طلب لدعم هذا الموقع في المستقبل.</string>
+  <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="reduce_cookie_banner_details_panel_description_off_for_site_1">أوقف التشغيل ليقوم %1$s بمسح ملفات تعريف الارتباط وتحديث الموقع. قد يؤدي هذا إلى تسجيل خروجك أو حذف محتويات سلة التسوق.</string>
+  <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="reduce_cookie_banner_details_panel_description_on_for_site_3">عند التفعيل، سيحاول %1$s رفض جميع لافتات ملفات تعريف الارتباط تلقائياً على هذا الموقع.</string>
+  <!-- Title for the cookie banner re-engagement CFR, the placeholder is replaced with app name. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="cookie_banner_cfr_title">رفض %1$s ملفات تعريف الارتباط نيابةً عنك</string>
+  <!-- Message for the cookie banner re-engagement CFR -->
+  <string name="cookie_banner_cfr_message">تصفح بلا إزعاج، وتتبع أقل لملفات تعريف الارتباط في هذا الموقع.</string>
   <!-- Description of the preference to enable "HTTPS-Only" mode. -->
   <string name="preferences_https_only_summary">يحاول الاتصال بالمواقع تلقائيا باستعمال بروتوكول التعمية HTTPS لمزيد من الأمان.</string>
   <!-- Summary of https only preference if https only is set to off -->
@@ -851,6 +865,8 @@
   <string name="errorpage_httpsonly_title">الموقع الآمن غير متوفر</string>
   <!-- Message shown in the error page for when trying to access a http website while https only mode is enabled. The message has two paragraphs. This is the first. -->
   <string name="errorpage_httpsonly_message_title">على الأغلب أن الموقع لا يدعم HTTPS.</string>
+  <!-- Message shown in the error page for when trying to access a http website while https only mode is enabled. The message has two paragraphs. This is the second. -->
+  <string name="errorpage_httpsonly_message_summary">ومع ذلك، من المحتمل أيضاً وجود مخترق. لا تُدخل أي بيانات سرية إذا قررت المتابعة. سيتم إيقاف وضع \"HTTPS فقط\" لهذا الموقع بشكل مؤقت.</string>
   <!-- Preference for accessibility -->
   <string name="preferences_accessibility">الإتاحة</string>
   <!-- Preference to override the Mozilla account server -->
@@ -861,14 +877,26 @@
   <string name="preferences_category_account">الحساب</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">موقع شريط العنوان</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">تنسيق شريط الأدوات</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">السمة</string>
   <!-- Preference for customizing the home screen -->
   <string name="preferences_home_2">صفحة البداية</string>
+  <!-- Preference for customizing the app icon -->
+  <string name="preferences_app_icon">أيقونة التطبيق</string>
+  <!-- Preference for showing the tab strip -->
+  <string name="preferences_tab_strip">عرض شريط التبويب</string>
+  <!-- Preference for gestures based actions -->
+  <string name="preferences_toolbar_shortcut">اختصار شريط الأدوات</string>
+  <!-- Preference for gestures based actions -->
+  <string name="preferences_toolbar_select_shortcut">حدّد اختصارًا</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">الإيماءات</string>
   <!-- Preference for settings related to visual options -->
   <string name="preferences_customize">خصّص</string>
+  <!-- Preference description shown in the banner prompting the user to sign in for sync features -->
+  <string name="preferences_sign_in_description">مزامنة علامات التبويب والإشارات المرجعية وكلمات المرور والمزيد.</string>
   <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
   <string name="preferences_account_default_name_2">حساب Mozilla</string>
   <!-- Preference text for account title when there was an error syncing FxA -->
@@ -887,12 +915,18 @@
   <string name="preferences_show_voice_search">اعرض البحث الصوتي</string>
   <!-- Preference title for switch preference to show search suggestions also in private mode -->
   <string name="preferences_show_search_suggestions_in_private">اعرض في الجلسات الخاصة</string>
+  <!-- Preference title for switch preference to show trending search suggestions -->
+  <string name="preferences_show_trending_search_suggestions">عرض اقتراحات البحث المُتداولة</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">إظهار عمليات البحث الأخيرة</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">اعرض اقتراحات الحافظة</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
   <string name="preferences_search_browsing_history">البحث في تأريخ التصفح</string>
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">البحث في العلامات</string>
+  <!-- Preference title for switch preference to show shortcuts when searching -->
+  <string name="preferences_show_shortcuts" tools:ignore="UnusedResources" moz:removedIn="147">عرض الاختصارات</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
   <string name="preferences_search_synced_tabs">ابحث في الألسنة المُزامنة</string>
   <!-- Preference for account settings -->
@@ -913,6 +947,16 @@
   <string name="preferences_show_nonsponsored_suggestions">اقتراحات من %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">احصل على اقتراحات من الوِب تتعلق ببحثك</string>
+  <!-- Preference for link sharing -->
+  <string name="preferences_link_sharing">مشاركة الروابط</string>
+  <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_title">تضمين رابط تحميل %1$s عند المشاركة عبر واتساب</string>
+  <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_body">ادعُ أصدقاءك لتجربة تصفح أسرع وأكثر أماناً مع %1$s في كل مرة تشارك فيها رابطاً عبر واتساب.</string>
+  <!-- Snackbar message shown when user shares a link -->
+  <string name="link_shared_snackbar_message">تمت مشاركة الرابط</string>
+  <!-- Snackbar action label shown when user shares a link -->
+  <string name="link_shared_snackbar_action">إدارة الإعدادات</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">افتح الروابط في التطبيقات</string>
   <!-- Preference for open links in third party apps always open in apps option -->
@@ -921,6 +965,16 @@
   <string name="preferences_open_links_in_apps_ask">اسأل قبل الفتح</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">أبدًا</string>
+  <!-- Preference category for file storage. -->
+  <string name="preferences_category_file_storage">تخزين الملفات</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">إدارة التنزيلات باستخدام تطبيق آخر</string>
+  <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_downloads_settings_clean_up_files_title">احذف من %s والجهاز</string>
+  <!-- Summary for the setting to automatically clean up downloaded files -->
+  <string name="preferences_downloads_settings_clean_up_files_summary">سيؤدي حذف الملفات من مدير التنزيلات إلى حذفها أيضًا من جهازك</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads">التنزيلات</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">تفعيل سجلات جيكو</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -963,6 +1017,8 @@
   <string name="customize_addon_collection_hint">اسم التجميعة</string>
   <!-- Hint displayed on input field for custom collection user ID -->
   <string name="customize_addon_collection_user_hint">مالك التجميعة (معرّف المستخدم)</string>
+  <!-- Toast shown after confirming the custom extension collection configuration -->
+  <string name="toast_customize_extension_collection_done">عُدّلت مجموعة الإضافات. جارٍ إغلاق التطبيق لإجراء التغييرات…</string>
   <!--
     Customize Home
 
