@@ -726,6 +726,8 @@
   <string name="onboarding_customize_theme_light_option">إضاءة</string>
   <!-- Onboarding theme selection card label for 'System auto' option, used by Nimbus experiments. -->
   <string name="onboarding_customize_theme_system_option">النظام التلقائي</string>
+  <!-- Onboarding theme selection card content description for the main image. -->
+  <string name="onboarding_customize_theme_main_image_content_description">صورة رأسية كبيرة لواجهة اختيار النسق، تظهر رسمًا لفنان وأدوات البناء.</string>
   <!-- Onboarding theme selection card content description for the theme selection image. %1$s is placeholder for either 'system', 'light' or 'dark'. -->
   <string name="onboarding_customize_theme_content_description">صورة لسمة %1$s</string>
   <!-- Action label for options that can be selected. Talkback will append this to say "Double tap to select". -->
@@ -1506,6 +1508,8 @@
   <string name="studies_active">نشطة</string>
   <!-- Description for studies -->
   <string name="studies_description_3" moz:removedIn="148" tools:ignore="UnusedResources">جرّب الميزات والأفكار قبل إصدارها للجميع.</string>
+  <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
+  <string name="studies_description_4" tools:ignore="BrandUsage">يختار Firefox مستخدمين عشوائيًا لاختبار الميزات، مما يحسن الجودة للجميع.</string>
   <!-- Title of the Studies data preference -->
   <string name="studies_title" moz:removedIn="148" tools:ignore="UnusedResources">تثبيت الدراسات وتشغيلها</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
@@ -1527,8 +1531,12 @@
     The %1$s will be replaced by the number of opened synced tabs
   -->
   <string name="tabs_header_synced_tabs_counter_title">التبويبات المتزامنة المفتوحة: %1$s. انقر للانتقال بين التبويبات.</string>
+  <!-- Text for the tabs header private tabs -->
+  <string name="tabs_header_private_tabs_title">خاص</string>
   <!-- Text for the tabs header normal tabs -->
   <string name="tabs_header_normal_tabs_title">التبويبات</string>
+  <!-- Text for the tabs header synced tabs -->
+  <string name="tabs_header_synced_tabs_title">المزامنة</string>
   <!-- Text for the new tab button in the Tab Manager to indicate opening a new normal tab -->
   <string name="tab_manager_floating_action_button_new_normal_tab">تبويب جديد</string>
   <!-- Text for the new tab button in the Tab Manager to indicate opening a new private tab -->
@@ -1563,6 +1571,8 @@
   <string name="tab_manager_close_all_tabs_dialog_body">سيؤدي هذا إلى إغلاق جميع التبويبات المفتوحة.</string>
   <!-- Text shown on the confirm button in the Close all tabs confirmation dialog -->
   <string name="tab_manager_close_all_tabs_dialog_confirm">إغلاق التبويبات</string>
+  <!-- Text shown on the cancel button in the Close all tabs confirmation dialog -->
+  <string name="tab_manager_close_all_tabs_dialog_cancel">إلغاء</string>
   <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_bookmark" tools:ignore="UnusedResources" moz:removedIn="149">علّم</string>
   <!-- Content description (not visible, for screen readers etc.): Bookmarks selected tabs. -->
@@ -1659,6 +1669,8 @@
   <string name="download_undo_delete_snackbar_action">تراجع</string>
   <!-- Text shown when no download exists -->
   <string name="download_empty_message_2">لا توجد تنزيلات بعد</string>
+  <!-- Text description shown when no download exists -->
+  <string name="download_empty_description">ستظهر الملفات التي تقوم بتنزيلها هنا.</string>
   <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
@@ -1681,6 +1693,8 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">إلغاء</string>
+  <!-- Text for the button to delete a single downloaded file item -->
+  <string name="download_delete_item">الحذف</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">تصفّح للوراء</string>
   <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
@@ -1688,6 +1702,14 @@
   <!-- Content description for the toolbar back button while searching the downloads -->
   <string name="download_close_search_description">الرجوع وإغلاق البحث</string>
   <string name="download_clear_search_description">مسح</string>
+  <!-- Text for the button to share the download URL -->
+  <string name="download_share_url">مشاركة الرابط</string>
+  <!-- Text for the button to share the download file -->
+  <string name="download_share_file">مشاركة الملف</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
+  <string name="download_delete_multi_select_dialog_confirmation">هل أنت متأكد من أنك تريد حذف العناصر المحددة؟</string>
+  <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
+  <string name="download_delete_multi_select_dialog_confirm">الحذف</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">إلغاء</string>
   <!--
@@ -1722,6 +1744,10 @@
   <string name="download_content_type_filter_all">الكل</string>
   <!-- Text for the filter button to show only images in the downloads list -->
   <string name="download_content_type_filter_image">الصور</string>
+  <!-- Text for the filter button to show only video files in the downloads list -->
+  <string name="download_content_type_filter_video">الفيديوهات</string>
+  <!-- Text for the filter button to show only documents in the downloads list -->
+  <string name="download_content_type_filter_document">المستندات</string>
   <!--
     WebCompat Reporter
 
@@ -1798,6 +1824,12 @@
   <string name="unsubmitted_crash_dialog_positive_button">أرسِل بلاغ انهيار</string>
   <!-- Body text for crash report dialog. %s is the link text in the annotated string (ie. "Learn More") -->
   <string name="unsubmitted_crash_dialog_body">تتيح لنا تقارير الأعطال تشخيص مشكلات المتصفح وإصلاحها. وقد تتضمن التقارير بيانات شخصية أو حساسة. %s</string>
+  <!--
+    Bookmarks
+
+    Confirmation message for a dialog confirming if the user wants to delete multiple items.
+  -->
+  <string name="bookmark_delete_folders_confirmation_dialog">هل أنت متأكد من أنك تريد حذف العناصر المحددة؟</string>
   <!-- Text for the cancel button on delete bookmark dialog -->
   <string name="bookmark_delete_negative">ألغِ</string>
   <!-- Screen title for adding a bookmarks folder -->
