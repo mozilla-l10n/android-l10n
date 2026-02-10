@@ -1127,16 +1127,26 @@
   <string name="alternative_app_icon_option_pride">فخر</string>
   <!-- Title for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo">مومو</string>
+  <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
+  <string name="alternative_app_icon_option_momo_subtitle">من تصميم @heyheymomodraws</string>
   <!-- Title for the "Cuddling" themed alternative app icon variant in the icon picker screen. The app icon features a playful design with an adorable aesthetic. -->
   <string name="alternative_app_icon_option_cuddling">حضن دافئ</string>
   <!-- Title for the "Flaming" themed alternative app icon variant in the icon picker screen. The app icon features a fiery design, with the Firefox logo surrounded by flames for a bold, energetic look. -->
   <string name="alternative_app_icon_option_flaming">متوهج</string>
   <!-- Title for the "Cool" themed alternative app icon variant in the icon picker screen. The app icon uses a warm orange-to-yellow gradient background with a sleek, modern twist on the Firefox logo, giving it a fresh and stylish appearance. -->
   <string name="alternative_app_icon_option_cool">هادئ</string>
+  <!-- Title for the "Featured" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
+  <string name="alternative_app_icon_group_featured">متميزة</string>
+  <!-- Title to show in alert when user selects an alternative app icon -->
+  <string name="restart_warning_dialog_title">تغيير أيقونة التطبيق؟</string>
   <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="restart_warning_dialog_body_2">قد يتوقف التطبيق عن العمل. ما عليك سوى النقر على أيقونتك الجديدة لإعادة فتح %1$s.</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart and will remove existing shortcuts because of the OS limitations. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_and_shortcuts_removal_warning_dialog_body">تغيير الأيقونة سيحذف المواقع والاختصارات المحفوظة في الشاشة الرئيسية. \n\nقد يُغلَق %1$s. انقر على الأيقونة الجديدة لإعادة فتحه.</string>
   <!-- Dialog button text for confirming the possible app restart and new icon selection -->
   <string name="restart_warning_dialog_button_positive_2">تغيير الأيقونة</string>
+  <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
+  <string name="shortcuts_update_error">تعذّر تحديث أيقونة التطبيق. احذف الاختصارات الموجودة وحاول مرة أخرى.</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1222,6 +1232,16 @@
   <!-- %s is the device name -->
   <string name="fxa_tab_received_from_notification_name">لسان من %s</string>
   <!--
+    Close Synced Tabs
+
+    The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.
+  -->
+  <string name="fxa_tabs_closed_notification_title">التبويبات المغلقة في %1$s: %2$d</string>
+  <!-- The body for a "closed synced tabs" notification. -->
+  <string name="fxa_tabs_closed_text">عرض التبويبات المغلقة مؤخرا</string>
+  <!--
     Advanced Preferences
 
     Preference for tracking protection exceptions
@@ -1233,6 +1253,10 @@
   <string name="exceptions_empty_message_description">تتيح لك الاستثناءات تعطيل الحماية من التعقّب لمواقع تختارها.</string>
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">اطّلع على المزيد</string>
+  <!-- Preference switch for daily usage ping data collection -->
+  <string name="preferences_daily_usage_ping_title">تنبيه الاستخدام اليومي</string>
+  <string name="preferences_daily_usage_ping_description">يساعد هذا Mozilla على تقدير عدد المستخدمين النشطين.</string>
+  <string name="preferences_daily_usage_ping_learn_more">اعرف المزيد عن تنبيه الاستخدام اليومي</string>
   <!-- Title for studies preferences -->
   <string name="preference_experiments_2">الدراسات</string>
   <!-- Summary for studies preferences -->
@@ -1650,8 +1674,8 @@
   <string name="webcompat_reporter_send">إرسال</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
   <string name="webcompat_reporter_success_snackbar_text_2">أُرسل التقرير</string>
-  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
-  <string name="webcompat_reporter_etp_checkbox_text">إرسال روابط المواقع التي حظرتها خاصية الحماية من التعقب</string>
+  <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
+  <string name="webcompat_reporter_etp_checkbox_description">قد تمنع خاصية الحماية من التعقب بعض الروابط والبرمجيات النصية التي تحتاجها بعض المواقع لتعمل بشكل صحيح.</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
@@ -1883,9 +1907,9 @@
   <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
   <string name="create_collection_select_all">اختر الكل</string>
   <!-- Button to deselect all tabs in the "select tabs" step of the collection creator -->
-  <string name="create_collection_deselect_all">ألغِ تحديد الكل</string>
+  <string name="create_collection_deselect_all">إلغاء تحديد الكل</string>
   <!-- Text to prompt users to select the tabs to save in the "select tabs" step of the collection creator -->
-  <string name="create_collection_save_to_collection_empty">حدّد الألسنة لحفظها</string>
+  <string name="create_collection_save_to_collection_empty">تحديد التبويبات لحفظها</string>
   <!--
     Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
     %d is a placeholder for the number of tabs selected.
