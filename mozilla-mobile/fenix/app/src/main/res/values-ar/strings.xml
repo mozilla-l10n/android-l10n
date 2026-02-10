@@ -1135,6 +1135,10 @@
   <string name="alternative_app_icon_option_flaming">متوهج</string>
   <!-- Title for the "Cool" themed alternative app icon variant in the icon picker screen. The app icon uses a warm orange-to-yellow gradient background with a sleek, modern twist on the Firefox logo, giving it a fresh and stylish appearance. -->
   <string name="alternative_app_icon_option_cool">هادئ</string>
+  <!-- Title for the "Solid colors" group of alternative app icon variants in the icon picker screen. This group contains icons with flat, uniform color backgrounds. -->
+  <string name="alternative_app_icon_group_solid_colors">الألوان الصلبة</string>
+  <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
+  <string name="alternative_app_icon_group_gradients">التدرجات</string>
   <!-- Title for the "Featured" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
   <string name="alternative_app_icon_group_featured">متميزة</string>
   <!-- Title to show in alert when user selects an alternative app icon -->
@@ -1145,6 +1149,8 @@
   <string name="restart_and_shortcuts_removal_warning_dialog_body">تغيير الأيقونة سيحذف المواقع والاختصارات المحفوظة في الشاشة الرئيسية. \n\nقد يُغلَق %1$s. انقر على الأيقونة الجديدة لإعادة فتحه.</string>
   <!-- Dialog button text for confirming the possible app restart and new icon selection -->
   <string name="restart_warning_dialog_button_positive_2">تغيير الأيقونة</string>
+  <!-- Dialog button text for cancelling app icon change -->
+  <string name="restart_warning_dialog_button_negative">إلغاء</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
   <string name="shortcuts_update_error">تعذّر تحديث أيقونة التطبيق. احذف الاختصارات الموجودة وحاول مرة أخرى.</string>
   <!--
@@ -1253,14 +1259,42 @@
   <string name="exceptions_empty_message_description">تتيح لك الاستثناءات تعطيل الحماية من التعقّب لمواقع تختارها.</string>
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">اطّلع على المزيد</string>
+  <!-- Preference switch for usage and technical data collection -->
+  <string name="preference_usage_data_2">إرسال البيانات الفنية والتفاعلية</string>
+  <!-- Preference switch for usage and technical learn more link in new compose -->
+  <string name="preference_usage_data_learn_more_2">اعرف المزيد عن البيانات الفنية</string>
+  <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
+  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">تساعدنا البيانات المتعلقة بجهازك وتكوينات الأجهزة وكيفية الاستخدام في تطوير ميزات Firefox ورفع كفاءة الأداء والاستقرار.</string>
   <!-- Preference switch for daily usage ping data collection -->
   <string name="preferences_daily_usage_ping_title">تنبيه الاستخدام اليومي</string>
   <string name="preferences_daily_usage_ping_description">يساعد هذا Mozilla على تقدير عدد المستخدمين النشطين.</string>
   <string name="preferences_daily_usage_ping_learn_more">اعرف المزيد عن تنبيه الاستخدام اليومي</string>
+  <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="crash_reporting_snack_bar_message">أُرسل التقرير</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">اعرف المزيد عن تقارير الأعطال</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">تقارير الأعطال</string>
+  <string name="crash_reporting_description">تتيح لنا تقارير الأعطال تشخيص مشكلات المتصفح وإصلاحها. وقد تتضمن التقارير بيانات شخصية أو حساسة.</string>
+  <!-- Preference switch for campaign measurement data (marketing data) collection -->
+  <string name="preferences_marketing_data_2">بيانات قياس الحملات</string>
+  <!--
+    Preference description for marketing data collection.
+    Note: The words "Firefox" and "Mozilla" should NOT be translated. “That you use it” is to mean that the user is opting in to sharing that they are continuing to use Firefox after installing it; not that Firefox is tracking their “usage” or what they’re using it for.
+  -->
+  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">شارك معلومات حول كيفية اكتشافك لـ Firefox وأنك تستخدمه مع شركاء Mozilla في مجال تكنولوجيا التسويق.</string>
+  <!-- Learn more link for marketing data preference -->
+  <string name="preferences_marketing_data_learn_more">اعرف المزيد عن بيانات التسويق</string>
   <!-- Title for studies preferences -->
   <string name="preference_experiments_2">الدراسات</string>
   <!-- Summary for studies preferences -->
   <string name="preference_experiments_summary_2">تسمح لمؤسسة Mozilla بتثبيت الدراسات وتشغيلها</string>
+  <!--
+    Turn On Sync Preferences
+
+    Header of the Sign in preference view
+  -->
+  <string name="preferences_sign_in">تسجيل الدخول</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">لِج لإعادة الاتصال</string>
   <!-- Preference for removing FxA account -->
@@ -1315,6 +1349,8 @@
   <string name="preference_gestures_dynamic_toolbar">مرّر لإخفاء شريط الأدوات</string>
   <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
   <string name="preference_gestures_swipe_toolbar_show_tabs">مرّر شريط الأدوات إلى أعلى لفتح الألسنة</string>
+  <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
+  <string name="preference_gestures_swipe_toolbar_switch_tabs_2">مرّر شريط العنوان جانبًا للانتقال بين التبويبات</string>
   <!--
     Library
 
@@ -1344,6 +1380,11 @@
     %d is a placeholder for the number of tabs that will be opened
   -->
   <string name="open_all_warning_title">أأفتح %d لسانا؟</string>
+  <!--
+    Message to warn users that a large number of tabs will be opened
+    %s will be replaced by app name.
+  -->
+  <string name="open_all_warning_message">قد يؤدي فتح هذا العدد الكبير من التبويبات إلى إبطاء %s أثناء تحميل الصفحات. هل أنت متأكد من أنك تريد المتابعة؟</string>
   <!-- Dialog button text for confirming open all tabs -->
   <string name="open_all_warning_confirm">الألسنة المفتوحة</string>
   <!-- Dialog button text for canceling open all tabs -->
