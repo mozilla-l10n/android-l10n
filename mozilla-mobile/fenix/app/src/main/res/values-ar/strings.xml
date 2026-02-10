@@ -2357,6 +2357,8 @@
   <string name="preference_accessibility_text_size_summary">كبرّ أو صغّر مقاس النص على المواقع</string>
   <!-- Title for Accessibility Text Size Scaling Preference -->
   <string name="preference_accessibility_font_size_title">حجم الخط</string>
+  <!-- %d is the percentage of the slide bar for setting the text font size and %% will be announced as "percent". -->
+  <string name="a11y_preference_accessibility_font_size_percentage" tools:ignore="UnusedResources" moz:removedIn="148">%d %%.</string>
   <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
   <string name="preference_accessibility_auto_size_2">غيّر مقاس النص تلقائيا</string>
   <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
@@ -2616,6 +2618,48 @@
   <string name="preference_doh_default_protection_info_2">أستخدم محلل DNS المبدئي إذا كان هناك مشكلة مع مزود DNS الآمن</string>
   <!-- Bullet point 3 for "Default Protection" information page under "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
   <string name="preference_doh_default_protection_info_3">استخدم مزودًا محليًا، إن أمكن. %1$s</string>
+  <!-- Bullet point 4 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_4">إيقاف التشغيل في حال كانت شبكة VPN أو الرقابة الأبوية أو سياسات الشركات مفعّلة</string>
+  <!-- Bullet point 5 for "Default Protection" information page under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). %2$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_default_protection_info_5">إيقاف التشغيل في حال أخبرت شبكة %1$s أنه لا يجب أن يستخدم نظام DNS الآمن. %2$s</string>
+  <!-- Title displayed for "Increased Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection">حماية معززة</string>
+  <!-- Summary displayed for "Increased Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_summary">يمكنك التحكم في الوقت الذي تستخدم فيه DNS آمن و إختيار مزودك.</string>
+  <!-- Bullet point 1 for "Increased Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_info_1">استخدم المزود الذي تحدده</string>
+  <!-- Bullet point 2 for "Increased Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_info_2">أستخدم فقط محلل DNS المبدئي إذا كانت هناك مشكلة مع DNS آمن</string>
+  <!-- Title displayed for "Max Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection">حماية قصوى</string>
+  <!-- Summary displayed for "Max Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_doh_max_protection_summary">سيستخدم %1$s دائما DNS آمن. سترى تحذير خطر أمني قبل أن نستخدم نظام DNS الخاص بك.</string>
+  <!-- Bullet point 1 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_1">استخدم فقط المزود الذي تحدده</string>
+  <!-- Bullet point 2 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_2">حذّر دائما إذا كان DNS الآمن غير متاح</string>
+  <!-- Bullet point 3 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_3">إذا لم يكن DNS الآمن متاحًا، فلن يتم تحميل المواقع أو لن تعمل كما ينبغي</string>
+  <!-- Title displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off">معطّل</string>
+  <!-- Summary displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off_summary">استخدم مُحلّل DNS الافتراضي الخاص بك</string>
+  <!-- Text displayed above provider dropdown under "DNS over HTTPS" -->
+  <string name="preference_doh_choose_provider">اختيار المزود</string>
+  <!-- Text displayed for "Default provider" under "DNS over HTTPS" providers -->
+  <string name="preference_doh_provider_default">(الافتراضي)</string>
+  <!-- Text displayed for "Custom" under "DNS over HTTPS" providers -->
+  <string name="preference_doh_provider_custom">مخصّص</string>
+  <!-- Text displayed for "Custom provider" dialog under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_title">مزود مخصص</string>
+  <!-- Text displayed above provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_textfield">مزوِّد</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL does not start with "https://" or its scheme is not "https" -->
+  <string name="preference_doh_provider_custom_dialog_error_https">يجب أن يبدأ عنوان الموقع بـ “https://”</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL is invalid -->
+  <string name="preference_doh_provider_custom_dialog_error_invalid">عنوان موقع غير صحيح</string>
+  <!-- Cancel button text for provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_cancel">إلغاء</string>
   <!-- About page link text to open support link -->
   <string name="about_support">الدعم</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -2690,8 +2734,14 @@
   <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">اطّلع على المزيد حول التزامن</string>
   <!-- Preference to access list of login exceptions that we never save logins for -->
   <string name="preferences_passwords_exceptions">الاستثناءات</string>
+  <!-- Empty description of list of login exceptions that we never save passwords for. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_exceptions_description_empty_2">%s لن يقوم بحفظ كلمات المرور للمواقع المدرجة هنا.</string>
+  <!-- Description of list of login exceptions that we never save passwords for. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_exceptions_description_2">%s لن يقوم بحفظ كلمات المرور هذه المواقع.</string>
   <!-- Text on button to remove all saved login exceptions -->
   <string name="preferences_passwords_exceptions_remove_all">احذف كل الاستثناءات</string>
+  <!-- Hint for search box in passwords list -->
+  <string name="preferences_passwords_saved_logins_search_2">البحث في كلمات السر</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">الموقع</string>
   <!-- The header for the username for a login -->
@@ -2718,6 +2768,10 @@
   <string name="saved_login_reveal_password">أظهِر كلمة السر</string>
   <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
   <string name="saved_login_hide_password">أخفِ كلمة السر</string>
+  <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their passwords -->
+  <string name="logins_biometric_prompt_message_2">ألغِ القفل لعرض كلمات المرور الخاصة بك المحفوظة</string>
+  <!-- Title of warning dialog if users have no device authentication set up -->
+  <string name="logins_warning_dialog_title_2">احمِ كلمات المرور الخاصة بك</string>
   <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
   <string name="logins_warning_dialog_later">لاحقًا</string>
   <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
