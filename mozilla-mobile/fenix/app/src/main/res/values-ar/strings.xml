@@ -2440,6 +2440,8 @@
     Text shown in snackbar when multiple tabs have been sent to device
   -->
   <string name="sync_sent_tabs_snackbar_2">التبويبات المُرسلة</string>
+  <!-- Text shown in snackbar when one tab has been sent to device -->
+  <string name="sync_sent_tab_snackbar_2">تم إرسال التبويب</string>
   <!-- Text shown in snackbar when sharing tabs failed -->
   <string name="sync_sent_tab_error_snackbar">تعذر الإرسال</string>
   <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
@@ -2488,6 +2490,30 @@
   <string name="preference_enhanced_tracking_protection_strict">صارم</string>
   <!-- Preference description for enhanced tracking protection for the strict protection settings -->
   <string name="preference_enhanced_tracking_protection_strict_description_4">حماية أقوى ضد المتعقّبات وأداء أسرع، لكن قد لا تشتغل بعض المواقع بشكل صحيح.</string>
+  <!-- Preference description for the checkbox setting for "baseline" exceptions (a set of content blocking exceptions applied to fix major website breakage). %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline" tools:ignore="UnusedResources" moz:removedIn="144">السماح لـ %1$s بتطبيق الاستثناءات المطلوبة تلقائيًا لتجنب حدوث أعطال كبيرة في المواقع الإلكترونية.</string>
+  <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">إصلاح المشاكل الرئيسية في الموقع (موصى به)</string>
+  <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">إصلاح المشاكل البسيطة في الموقع</string>
+  <!-- Preference description for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_description">يجب استخدامه مع إصلاحات المشاكل الرئيسية.</string>
+  <!-- Preference sub header for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_subheader">إصلاح مشاكل الموقع</string>
+  <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_learn_more">اطّلع على المزيد</string>
+  <!--
+    Dialog that appears after user tries to uncheck the baseline exceptions preference under Strict or Custom tracking protection
+
+    Title for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection
+  -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_title">هل أنت متأكد من أنك تريد \u0020تعطيل الإصلاحات؟</string>
+  <!-- Message for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_message">يساعد هذا الإعداد في إصلاح المشاكل الأكثر شيوعًا في المواقع. إذا قمت بتعطيله، قد لا تعمل بعض المواقع، ولن يتمكن %1$s من المساعدة في اكتشاف تلك المشاكل وإصلاحها.</string>
+  <!-- Confirmation button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_confirm">تعطيل الإصلاحات</string>
+  <!-- Cancel button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. This dismisses the dialog and re-enables the preference. -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_cancel">إبقاء الإصلاحات مُشغّلة</string>
   <!-- Accessibility text for the Strict protection information icon -->
   <string name="preference_enhanced_tracking_protection_strict_info_button">ما يحجبه أسلوب الحماية ضد التعقّب الصارم</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -2660,6 +2686,24 @@
   <string name="preference_doh_provider_custom_dialog_error_invalid">عنوان موقع غير صحيح</string>
   <!-- Cancel button text for provider textfield under "DNS over HTTPS" -->
   <string name="preference_doh_provider_custom_dialog_cancel">إلغاء</string>
+  <!-- Add button text for provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_add">إضافة</string>
+  <!-- Preference to access list of login exceptions that we don't use DNS over HTTPS -->
+  <string name="preference_doh_exceptions">الاستثناءات</string>
+  <!-- Description of "exceptions" for "DNS over HTTPS". %1$s is the name of the app (for example "Firefox"). -->
+  <string name="preference_doh_exceptions_summary">لن يستخدم %1$s نظام DNS آمنًا في هذه المواقع ونطاقاتها الفرعية.</string>
+  <!-- Text displayed that links to adding website domain for "DNS over HTTPS" exceptions. -->
+  <string name="preference_doh_exceptions_add">إضافة موقع</string>
+  <!-- Text displayed above the input field when adding exceptions for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_site">موقع</string>
+  <!-- Placeholder URL displayed in the input field when adding exceptions for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_placeholder">example.com</string>
+  <!-- Error displayed in the input field when adding invalid URLs for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_error">يجب إدخال نطاق صالح</string>
+  <!-- Text displayed on the button within the input field for adding exceptions to "DNS over HTTPS" -->
+  <string name="preference_doh_exceptions_add_save">حفظ</string>
+  <!-- Text displayed for removing all exceptions in "DNS over HTTPS" -->
+  <string name="preference_doh_exceptions_remove_all_exceptions">إزالة جميع الاستثناءات</string>
   <!-- About page link text to open support link -->
   <string name="about_support">الدعم</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -2772,6 +2816,8 @@
   <string name="logins_biometric_prompt_message_2">ألغِ القفل لعرض كلمات المرور الخاصة بك المحفوظة</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
   <string name="logins_warning_dialog_title_2">احمِ كلمات المرور الخاصة بك</string>
+  <!-- Message of warning dialog if users have no device authentication set up -->
+  <string name="logins_warning_dialog_message_2">قم بإعداد نمط قفل الجهاز أو رقم تعريف شخصي أو كلمة مرور لحماية كلمات المرور المحفوظة من الوصول إليها في حال وقع جهازك في يد شخص آخر.</string>
   <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
   <string name="logins_warning_dialog_later">لاحقًا</string>
   <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -2786,6 +2832,8 @@
   <string name="saved_logins_sort_strategy_alphabetically">الاسم (ا-ي)</string>
   <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
   <string name="saved_logins_sort_strategy_last_used">آخر استخدام</string>
+  <!-- Content description (not visible, for screen readers etc.) -->
+  <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">قائمة فرز كلمات المرور</string>
   <!--
     Autofill
 
@@ -2796,6 +2844,10 @@
   <string name="preferences_addresses">العناوين</string>
   <!-- Preference and title for managing the settings for payment methods -->
   <string name="preferences_credit_cards_2">طرق الدفع</string>
+  <!-- Preference for saving and autofilling credit cards -->
+  <string name="preferences_credit_cards_save_and_autofill_cards_2">حفظ وملء طرق الدفع</string>
+  <!-- Preference summary for saving and autofilling payment method data. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_credit_cards_save_and_autofill_cards_summary_2">يقوم %s بتشفير جميع طرق الدفع التي تحفظها</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
   <string name="preferences_credit_cards_sync_cards_across_devices">زامِن البطاقات بين الأجهزة</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
@@ -2810,6 +2862,8 @@
   <string name="preferences_addresses_manage_addresses">أدر العناوين</string>
   <!-- Preference for saving and filling addresses -->
   <string name="preferences_addresses_save_and_autofill_addresses_2">حفظ وملء العناوين</string>
+  <!-- Preference summary for saving and filling address data -->
+  <string name="preferences_addresses_save_and_autofill_addresses_summary_2">يشمل أرقام الهواتف وعناوين البريد الإلكتروني</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">أضِف بطاقة</string>
   <!-- Title of the "Edit card" screen -->
@@ -2844,12 +2898,18 @@
   <string name="credit_cards_name_on_card_validation_error_message_2">أضف اسمًا</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
   <string name="credit_cards_biometric_prompt_message">ألغِ القفل لعرض بطاقاتك المحفوظة</string>
+  <!-- Title of warning dialog if users have no device authentication set up -->
+  <string name="credit_cards_warning_dialog_title_2">تأمين طرق الدفع المحفوظة</string>
+  <!-- Message of warning dialog if users have no device authentication set up -->
+  <string name="credit_cards_warning_dialog_message_3">قم بإعداد نمط قفل الجهاز أو رقم تعريف شخصي أو كلمة مرور لحماية طرق الدفع المحفوظة من الوصول إليها في حال وقع جهازك في يد شخص آخر.</string>
   <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
   <string name="credit_cards_warning_dialog_set_up_now">اضبط ذلك الآن</string>
   <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
   <string name="credit_cards_warning_dialog_later">لاحقًا</string>
   <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their credit cards -->
   <string name="credit_cards_biometric_prompt_message_pin">ألغِ قفل جهازك</string>
+  <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored payment method information -->
+  <string name="credit_cards_biometric_prompt_unlock_message_2">فتح القفل لاستخدام طرق الدفع المحفوظة</string>
   <!-- Title of the "Add address" screen -->
   <string name="addresses_add_address">أضف عنوانًا</string>
   <!-- Title of the "Edit address" screen -->
