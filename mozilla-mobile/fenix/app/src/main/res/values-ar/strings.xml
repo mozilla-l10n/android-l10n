@@ -1424,6 +1424,13 @@
   <string name="studies_title" moz:removedIn="148" tools:ignore="UnusedResources">تثبيت الدراسات وتشغيلها</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">اطّلع على المزيد</string>
+  <!--
+    Sessions
+
+    Title for the list of tabs in the current normal session used by a11y services
+    The %1$s will be replaced by the number of opened normal tabs
+  -->
+  <string name="tabs_header_normal_tabs_counter_title">التبويبات العادية المفتوحة: %1$s. انقر للانتقال بين التبويبات.</string>
   <!-- Text for the new tab button in the Tab Manager to indicate opening a new normal tab -->
   <string name="tab_manager_floating_action_button_new_normal_tab">تبويب جديد</string>
   <!-- Text for the new tab button in the Tab Manager to indicate opening a new private tab -->
@@ -1452,6 +1459,10 @@
   <string name="tab_tray_menu_tab_settings">إعدادات اللسان</string>
   <!-- Text shown in the menu for closing all tabs -->
   <string name="tab_tray_menu_item_close">أغلِق كل الألسنة</string>
+  <!-- Text shown as the title of the Close all tabs confirmation dialog in Tab Manager -->
+  <string name="tab_manager_close_all_tabs_dialog_title">إغلاق جميع التبويبات؟</string>
+  <!-- Text shown in the body of the Close all tabs confirmation dialog in Tab Manager -->
+  <string name="tab_manager_close_all_tabs_dialog_body">سيؤدي هذا إلى إغلاق جميع التبويبات المفتوحة.</string>
   <!-- Text shown in the multiselect menu for bookmarking selected tabs. -->
   <string name="tab_tray_multiselect_menu_item_bookmark" tools:ignore="UnusedResources" moz:removedIn="149">علّم</string>
   <!-- Content description (not visible, for screen readers etc.): Bookmarks selected tabs. -->
@@ -1536,6 +1547,18 @@
   <string name="download_delete_multiple_items_snackbar_2">العناصر المحذوفة: %1$d</string>
   <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
   <string name="download_delete_single_item_snackbar_2">حذف “%1$s”</string>
+  <!-- Text for the snackbar to confirm that downloads are in progress. -->
+  <string name="download_in_progress_snackbar">جاري التنزيل…</string>
+  <!-- Text for the snackbar action button to view in progress download details. -->
+  <string name="download_in_progress_snackbar_action_details">التفاصيل</string>
+  <!-- Text for the snackbar to confirm that a download has completed. -->
+  <string name="download_completed_snackbar">اكتمل التنزيل</string>
+  <!-- Text for the snackbar action button to open a completed download. -->
+  <string name="download_completed_snackbar_action_open">فتح</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">تراجع</string>
+  <!-- Text shown when no download exists -->
+  <string name="download_empty_message_2">لا توجد تنزيلات بعد</string>
   <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
@@ -1560,12 +1583,41 @@
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">إلغاء</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">تصفّح للوراء</string>
+  <!-- Content description for the toolbar back button while searching the downloads -->
+  <string name="download_close_search_description">الرجوع وإغلاق البحث</string>
+  <string name="download_clear_search_description">مسح</string>
   <!--
     Time period headers for downloads
 
     Text for the header that groups the downloads for today
   -->
   <string name="download_time_period_today">اليوم</string>
+  <!-- Text for the header that groups the downloads for yesterday -->
+  <string name="download_time_period_yesterday">أمس</string>
+  <!-- Text for the header that groups the downloads the past 7 days -->
+  <string name="download_time_period_last_7_days">آخر 7 أيام</string>
+  <!-- Text for the header that groups the downloads the past 30 days -->
+  <string name="download_time_period_last_30_days">آخر 30 يومًا</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">الأقدم</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • وقت غير معروف</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • متوقف</string>
+  <!--
+    Downloads Content Type Filters
+
+    Text for the filter button to show all files in the downloads list
+  -->
+  <string name="download_content_type_filter_all">الكل</string>
+  <!-- Text for the filter button to show only images in the downloads list -->
+  <string name="download_content_type_filter_image">الصور</string>
   <!--
     WebCompat Reporter
 
@@ -1582,10 +1634,26 @@
   <string name="webcompat_reporter_choose_reason_error">يُرجى اختيار سبب</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description">صِف المشكلة (اختياري)</string>
+  <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
+  <string name="webcompat_reporter_add_more_info">إضافة المزيد من المعلومات</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">إلغاء</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">إرسال</string>
+  <!--
+    These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
+
+    Broken site reason text for site doesn’t load
+  -->
+  <string name="webcompat_reporter_reason_load">تعذّر تحميل الموقع</string>
+  <!-- Broken site reason text for can’t pay, check out or shop -->
+  <string name="webcompat_reporter_reason_checkout">لا يمكنني الدفع أو إتمام عملية الشراء أو التسوق</string>
+  <!-- Broken site reason text for site is slow -->
+  <string name="webcompat_reporter_reason_slow2">الموقع بطيء</string>
+  <!-- Broken site reason text for video isn’t playing or loading -->
+  <string name="webcompat_reporter_reason_media2">تعذر تشغيل الفيديو أو تحميله</string>
+  <!-- Broken site reason text for missing content -->
+  <string name="webcompat_reporter_reason_content2">محتوى مفقود</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">سبب آخر</string>
   <!--
@@ -1600,6 +1668,8 @@
   <string name="tab_crash_close">أغلِق اللسان</string>
   <!-- Restore tab button text on the tab crash page -->
   <string name="tab_crash_restore">استعِد اللسان</string>
+  <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
+  <string name="unsubmitted_crash_dialog_checkbox_label">إرسال تقارير الأعطال تلقائيا</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">أغلق</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
@@ -1618,6 +1688,8 @@
   <string name="bookmark_menu_copy_button">انسخ</string>
   <!-- Bookmark overflow menu share button -->
   <string name="bookmark_menu_share_button">شارِك</string>
+  <!-- Bookmark overflow menu select all bookmarks -->
+  <string name="bookmark_menu_select_all_bookmarks">تحديد الكل</string>
   <!-- Bookmark overflow menu open in new tab button -->
   <string name="bookmark_menu_open_in_new_tab_button">افتح في لسان جديد</string>
   <!-- Bookmark overflow menu open in private tab button -->
@@ -1628,6 +1700,10 @@
   <string name="bookmark_menu_open_all_in_private_tabs_button">افتح الكل في ألسنة خاصة</string>
   <!-- Bookmark overflow menu delete button -->
   <string name="bookmark_menu_delete_button">احذف</string>
+  <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_custom">ترتيب حسب اختيارك</string>
+  <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
+  <string name="bookmark_sort_menu_newest">تريب حسب الأحدث</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
