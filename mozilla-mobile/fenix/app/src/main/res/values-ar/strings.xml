@@ -1517,6 +1517,18 @@
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">اطّلع على المزيد</string>
   <!--
+    Remote Improvements (Rollouts)
+
+    Title of the Remote Improvements (rollouts) data preference
+  -->
+  <string name="remote_improvements_title">السماح بإجراء تحسينات عن بُعد</string>
+  <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
+  <string name="remote_improvements_description" tools:ignore="BrandUsage">سيقوم Firefox بتحسين الميزات والأداء والثبات بين التحديثات. تُطبّق التغييرات عن بُعد.</string>
+  <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
+  <string name="remote_improvements_learn_more">اطّلع على المزيد</string>
+  <!-- Title for remote improvements preference in Advanced settings -->
+  <string name="preferences_remote_improvements">التحسينات عن بُعد</string>
+  <!--
     Sessions
 
     Title for the list of tabs in the current normal session used by a11y services
@@ -1603,6 +1615,8 @@
   <string name="close_tab_title">أغلِق اللسان ”%s“</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">افتح قائمة الألسنة</string>
+  <!-- Content description (not visible, for screen readers etc.): Return to tab manager -->
+  <string name="tab_manager_search_bar_back_content_description">الرجوع إلى مدير التبويبات</string>
   <!-- Open tabs menu item to save tabs to collection -->
   <string name="tabs_menu_save_to_collection1">احفظ الألسنة في التجميعة</string>
   <!-- Text for the menu button to delete a collection -->
@@ -1619,6 +1633,8 @@
   <string name="delete_from_history">احذف من التأريخ</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">‏%1$s (الوضع الخاص)</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
+  <string name="tab_manager_open_tab_search">فتح تبويب البحث</string>
   <!--
     History
 
@@ -1657,6 +1673,8 @@
     %1$d is the number of items deleted.
   -->
   <string name="download_delete_multiple_items_snackbar_2">العناصر المحذوفة: %1$d</string>
+  <!-- Title for the dialog that prompts the user to choose an app for downloading a file. -->
+  <string name="download_app_dialog_title">تنزيل الملف باستخدام:</string>
   <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
   <string name="download_delete_single_item_snackbar_2">حذف “%1$s”</string>
   <!-- Text for the snackbar to confirm that downloads are in progress. -->
@@ -1703,6 +1721,16 @@
   <string name="download_navigate_settings_description">الانتقال إلى إعدادات التنزيلات</string>
   <!-- Content description for the toolbar back button while searching the downloads -->
   <string name="download_close_search_description">الرجوع وإغلاق البحث</string>
+  <!--
+    Content description for the search bar clear text button on the downloads screen
+
+    Content description for pause action button on the downloads screen
+  -->
+  <string name="download_pause_action">توقيف</string>
+  <!-- Content description for resume action button on the downloads screen -->
+  <string name="download_resume_action">استئناف</string>
+  <!-- Content description for retry download action button on the downloads screen -->
+  <string name="download_retry_action">حاول من جديد</string>
   <string name="download_clear_search_description">مسح</string>
   <!-- Text for the button to share the download URL -->
   <string name="download_share_url">مشاركة الرابط</string>
@@ -1730,16 +1758,43 @@
   <string name="download_time_period_last_30_days">آخر 30 يومًا</string>
   <!-- Text for the header that groups the downloads older than other groups -->
   <string name="download_time_period_older">الأقدم</string>
+  <!-- Description of an in progress download item, displayed in the downloads list when the download has just started. -->
+  <string name="download_item_in_progress_description_preparing">جارٍ تحضير التنزيل...</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the download time remaining is known.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description_2">%1$s / %2$s • في %3$s.</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the estimated download time remaining is still being calculated.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_in_progress_description_pending">%1$s /%2$s • قيد الانتظار</string>
   <!--
     Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
     %1$s is the current file size that has been downloaded.
   -->
   <string name="download_item_in_progress_description_unknown_total_size">%1$s • وقت غير معروف</string>
   <!--
+    Description of a paused download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_paused_description">%1$s / %2$s • متوقف</string>
+  <!--
     Description of a paused download item, displayed in the downloads list when the total download size is unknown.
     %1$s is the current file size that has been downloaded.
   -->
   <string name="download_item_paused_description_unknown_total_size">%1$s • متوقف</string>
+  <!-- Text to indicate that a download has failed to download. -->
+  <string name="download_item_status_failed">فشل التنزيل</string>
+  <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
+  <string name="download_search_placeholder">البحث في التنزيلات</string>
+  <!-- Text to indicate that no downloads match the search query. -->
+  <string name="download_search_no_results_found">لم يُعثر على نتائج</string>
   <!-- Text for the "Select all" button, which selects all downloaded items in the downloads list. -->
   <string name="download_select_all_items">اختيار الكل</string>
   <!--
@@ -1754,6 +1809,8 @@
   <string name="download_content_type_filter_video">الفيديوهات</string>
   <!-- Text for the filter button to show only documents in the downloads list -->
   <string name="download_content_type_filter_document">المستندات</string>
+  <!-- Text for the filter button to show all other file types in the downloads list -->
+  <string name="download_content_type_filter_other_1">أخرى</string>
   <!--
     WebCompat Reporter
 
@@ -1906,6 +1963,10 @@
   <string name="bookmark_deletion_snackbar_message">حُذف %1$s</string>
   <!-- Bookmark undo button for deletion snackbar action -->
   <string name="bookmark_undo_deletion">تراجَع</string>
+  <!-- Bookmark snackbar message for deleting a single item. %s is the title of the item being deleted -->
+  <string name="bookmark_delete_single_item">حُذف %s</string>
+  <!-- Bookmark snackbar message for deleting multiple items. %s is the number of items being deleted -->
+  <string name="bookmark_delete_multiple_items">العناصر المحذوفة: %s</string>
   <!-- Content description for the bookmark navigation bar back button -->
   <string name="bookmark_navigate_back_button_content_description">تصفّح للوراء</string>
   <!-- Content description for the bookmark list new folder navigation bar button -->
