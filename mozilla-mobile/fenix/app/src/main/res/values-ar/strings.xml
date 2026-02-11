@@ -2995,7 +2995,25 @@
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Townland field, specific to Ireland is a specific type of land division used in rural areas. -->
   <string name="addresses_townland" tools:ignore="UnusedResources">مقاطعة صغيرة</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used as secondary address information (below the country level, e.g. county) in Honk Kong, Sudan, Syria, Türkiye, and as sublocality (civil entity below a locality, e.g. district) in Korea. -->
-  <string name="addresses_district" tools:ignore="UnusedResources">محافظة</string>
+  <string name="addresses_district" tools:ignore="UnusedResources">الدائرة</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in the United Kingdom, Norway and Sweden -->
+  <string name="addresses_post_town" tools:ignore="UnusedResources">مدينة البريد</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used as a tertiary address information (below the state level, e.g. Tasmania in Australia -->
+  <string name="addresses_suburb" tools:ignore="UnusedResources">الضاحية</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is crucial for addressing in regions where county lines play a key role in postal services. -->
+  <string name="addresses_county" tools:ignore="UnusedResources">البلدة</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Significant in places where parishes are used for local administration and addressing. Ensures users can specify parish details for better autofill accuracy. Used in Barbados and Jamaica. -->
+  <string name="addresses_parish" tools:ignore="UnusedResources">الأبرشيّة</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Essential for addresses in countries like Japan where prefectures are a major administrative division. -->
+  <string name="addresses_prefecture" tools:ignore="UnusedResources">المحافظة</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Allowing users to specify a particular area within a city or region. Used in Hong Kong -->
+  <string name="addresses_area" tools:ignore="UnusedResources">المنطقة</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The header for the Do/Si of the address. Do/Si refers to provincial level divisions, pertinent to addresses in South Korea. -->
+  <string name="addresses_do_si" tools:ignore="UnusedResources">Do/Si</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in countries like Nicaragua and Colombia where departments are a key administrative division. -->
+  <string name="addresses_department" tools:ignore="UnusedResources">القِسْم</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Essential for addresses in the United Arab Emirates. -->
+  <string name="addresses_emirate" tools:ignore="UnusedResources">الإمارة</string>
   <!-- The text for the "Save" button for saving an address -->
   <string name="addresses_save_button">احفظ</string>
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
@@ -3236,6 +3254,12 @@
   <string name="radio_preference_info_content_description">انقر لتفاصيل أكثر</string>
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">انتقل لأعلى</string>
+  <!--
+    Pocket recommended stories
+
+    Header text for a section on the home screen.
+  -->
+  <string name="pocket_stories_header_2">القصص</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">مموّل</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
@@ -3274,6 +3298,30 @@
   <string name="a11y_links_available">الروابط المتاحة</string>
   <!-- Translations feature -->
 
+  <!--
+    Translation request dialog
+
+    Title for the translation dialog that allows a user to translate the webpage.
+  -->
+  <string name="translations_bottom_sheet_title">ترجمة هذه الصفحة؟</string>
+  <!--
+    Title for the translation dialog after a translation was completed successfully.
+    %1$s is the name of the language that the page was translated from, for example, "French".
+    %2$s is the name of the language that the page was translated to, for example, "English".
+  -->
+  <string name="translations_bottom_sheet_title_translation_completed">تمت ترجمة الصفحة من %1$s إلى %2$s</string>
+  <!-- Title for the translation dialog that allows a user to translate the webpage when a user uses the translation feature the first time. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="translations_bottom_sheet_title_first_time">جرب الترجمات الخاصة في %1$s</string>
+  <!-- Additional information on the translation dialog that appears when a user uses the translation feature the first time. %1$s is a link using translations_bottom_sheet_info_message_learn_more as text. -->
+  <string name="translations_bottom_sheet_info_message">لخصوصيتك، الترجمات لا تغادر جهازك أبدًا. لغات جديدة وتحسينات قادمة قريبًا! %1$s</string>
+  <!-- Text that links to additional information about the Firefox translations feature. -->
+  <string name="translations_bottom_sheet_info_message_learn_more">اطّلع على المزيد</string>
+  <!-- Label for the dropdown to select which language to translate from on the translations dialog. Usually the translate from language selected will be the same as the page language. -->
+  <string name="translations_bottom_sheet_translate_from">ترجم من</string>
+  <!-- Label for the dropdown to select which language to translate to on the translations dialog. Usually the translate to language selected will be the user's preferred language. -->
+  <string name="translations_bottom_sheet_translate_to">ترجم إلى</string>
+  <!-- Label for the dropdown to select which language to translate from on the translations dialog when the page language is not supported. This selection is to allow the user to select another language, in case we automatically detected the page language incorrectly. -->
+  <string name="translations_bottom_sheet_translate_from_unsupported_language">حاول استخدام لغة مصدر أخرى</string>
   <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
   <string name="translation_error_language_not_supported_warning_text">عذراً، لا ندعم %1$s بعد.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
@@ -3335,6 +3383,8 @@
     Title of the automatic translation preference screen that will appear on the toolbar.
   -->
   <string name="automatic_translation_toolbar_title_preference">الترجمة التلقائية</string>
+  <!-- Screen header presenting the automatic translation preference feature. It will appear under the toolbar. -->
+  <string name="automatic_translation_header_preference">اختر لغة لإدارة تفضيلات \"ترجم دائمًا\" و\"لا تترجمة أبدًا\".</string>
   <!--
     Automatic translation options preference screen
 
