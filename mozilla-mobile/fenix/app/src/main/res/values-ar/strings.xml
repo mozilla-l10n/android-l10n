@@ -820,7 +820,7 @@
   <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
   <string name="preferences_cookie_banner_reduction_private_mode">مانع ملفات تعريف الارتباط في التصفح الخاص</string>
   <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle -->
-  <string name="reduce_cookie_banner_off_for_site">عطله لهذا الموقع</string>
+  <string name="reduce_cookie_banner_off_for_site">أوقف التشغيل لهذا الموقع</string>
   <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
   <string name="cookie_banner_handling_details_site_is_not_supported_cancel_button">ألغِ</string>
   <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner details view. -->
@@ -830,7 +830,7 @@
   <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
   <string name="cookie_banner_handling_report_site_snack_bar_text_2">أُرسِل الطلب</string>
   <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle -->
-  <string name="reduce_cookie_banner_on_for_site">مفعلة لهذا الموقع</string>
+  <string name="reduce_cookie_banner_on_for_site">مفعّل لهذا الموقع</string>
   <!-- Text for indicating that a request for unsupported site was sent to Nimbus (it's a Mozilla library for experiments), this is shown as part of the protections panel with the tracking protection toggle -->
   <string name="reduce_cookie_banner_unsupported_site_request_submitted_2">أُرسِل طلب الدعم</string>
   <!-- Text for indicating cookie banner handling is currently not supported for this site, this is shown as part of the protections panel with the tracking protection toggle -->
@@ -1080,7 +1080,7 @@
   <!-- Description text for the artist series wallpapers. "Independent voices" is the name of the wallpaper collection -->
   <string name="wallpaper_artist_series_description">مجموعة الأصوات المستقلة.</string>
   <!-- Wallpaper onboarding dialog header text. -->
-  <string name="wallpapers_onboarding_dialog_title_text">جرب دفقة من الألوان</string>
+  <string name="wallpapers_onboarding_dialog_title_text">جرب إضافة لمسة من اللون</string>
   <!-- Wallpaper onboarding dialog body text. -->
   <string name="wallpapers_onboarding_dialog_body_text">اختر خلفية تتحدث إليك.</string>
   <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
@@ -3561,6 +3561,16 @@
   <string name="protection_panel_banner_protected_description">أنت محمي. إذا لاحظنا أي شيء، سنُعلمك.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">الحماية المحسّنة من التعقب</string>
+  <!-- Toggle if Enhanced Tracking Protection is turned on -->
+  <string name="protection_panel_etp_toggle_on">مفعّل</string>
+  <!-- Toggle if Enhanced Tracking Protection is turned off -->
+  <string name="protection_panel_etp_toggle_off">معطّل</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
+  <string name="protection_panel_etp_toggle_enabled_description_2">إذا بدا شيء ما معطلًا في هذا الموقع، فحاول إيقاف تشغيله.</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
+  <string name="protection_panel_etp_toggle_disabled_description_2">يُنصح بتفعيل خاصية حماية التعقّب.</string>
+  <!-- Link text to navigate to privacy and security settings from the protection panel. -->
+  <string name="protection_panel_privacy_and_security_settings_2">إعدادات الخصوصية</string>
   <!-- Text for the connection security panel when accessed from local PDF. -->
   <string name="connection_security_panel_local_pdf">هذه الصفحة مخزنة على جهازك</string>
   <!--
@@ -3665,6 +3675,8 @@
   <string name="microsurvey_close_handle_content_description">أغلق الاستطلاع</string>
   <!-- Content description for "X" button that is closing microsurvey. -->
   <string name="microsurvey_close_button_content_description">أغلق</string>
+  <!-- The title of the autofill tab in the Debug Drawer. -->
+  <string name="debug_drawer_autofill_title">أدوات الملء الآلي</string>
   <!--
     Debug drawer logins
 
@@ -3677,6 +3689,16 @@
   <string name="debug_drawer_logins_add_login_button">أضف تسجيل دخول وهمي لهذا المجال</string>
   <!-- Content description for delete button. %s is the username of the login. -->
   <string name="debug_drawer_logins_delete_login_button_content_description">حذف تسجيل الدخول باستخدام اسم المستخدم %s</string>
+  <!--
+    Debug drawer credit cards
+
+    The title of the credit cards feature in the Debug Drawer.
+  -->
+  <string name="debug_drawer_credit_cards_title">بطاقات الائتمان</string>
+  <!-- The title of the button in the debug drawer for adding a new credit card -->
+  <string name="debug_drawer_add_new_credit_card">إضافة بطاقة ائتمان جديدة</string>
+  <!-- The title of the button for deleting in the debug drawer all addresses. -->
+  <string name="debug_drawer_delete_all_credit_cards">حذف جميع بطاقات الائتمان</string>
   <!--
     Debug drawer "contextual feature recommendation" (CFR) tools
 
@@ -3691,6 +3713,14 @@
     The title of the glean debugging feature
   -->
   <string name="glean_debug_tools_title">أدوات تصحيح الأخطاء من Glean</string>
+  <!--
+    Add-ons debug tools
+
+    The description of the Add-ons Tools in the Debug Drawer
+  -->
+  <string name="debug_drawer_addons_tools_title">أدوات الإضافات</string>
+  <!-- The title of the button used to check for add-on updates. -->
+  <string name="addons_debug_tools_check_for_updates_button">تحقق من وجود تحديثات</string>
   <!--
     Messages explaining how to exit fullscreen mode
 
@@ -3733,8 +3763,38 @@
     Subtitle for a setup checklist with 6 steps initial state. %1$s is the name of the app (for example "Firefox").
   -->
   <string name="setup_checklist_subtitle_6_steps_initial_state">أكمل جميع الخطوات الـ 6 لإعداد %1$s للحصول على أفضل تجربة تصفح.</string>
+  <!-- Subtitle for a setup checklist with 6 steps when the first task is completed. -->
+  <string name="setup_checklist_subtitle_6_steps_first_step">بداية رائعة! لقد أكملت 1 خطوة من أصل 6 خطوات.</string>
+  <!-- Subtitle for the setup checklist when the second task is completed. -->
+  <string name="setup_checklist_subtitle_6_steps_second_step">لقد أكملت خطوتين من أصل 6 خطوات. تقدم جيد!</string>
+  <!-- Subtitle for a setup checklist with 6 steps when three of the tasks are completed. -->
+  <string name="setup_checklist_subtitle_6_steps_third_step">لقد قطعت نصف الطريق! ثلاث خطوات مكتملة و3 خطوات متبقية.</string>
+  <!-- Subtitle for a setup checklist with 6 steps when the fourth task is completed. -->
+  <string name="setup_checklist_subtitle_6_steps_fourth_step">لقد قطعت 4 خطوات. لم يتبق سوى خطوتين!</string>
+  <!-- Subtitle for a setup checklist with 6 steps when the fifth task is completed. -->
+  <string name="setup_checklist_subtitle_6_steps_fifth_step">أنت على وشك الانتهاء! إنك على بعد خطوة 1 من خط النهاية.</string>
+  <!-- Subtitle for a setup checklist with 6 steps completed state. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="setup_checklist_subtitle_6_steps_completed_state">لقد أكملت جميع خطوات التثبيت الـ 6. استمتع بالسرعة والخصوصية والأمان الذي يوفره %1$s.</string>
+  <!--
+    ===== Setup checklist feature: Subtitles for 5 steps (Large screen devices don't support toolbar placement) =====
+
+    Subtitle for a setup checklist with 5 steps initial state. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_subtitle_5_steps_initial_state">أكمل جميع الخطوات الـ 5 لتثبيت %1$s للحصول على أفضل تجربة تصفح.</string>
+  <!-- Subtitle for a setup checklist with 5 steps when the first task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_first_step">بداية رائعة! لقد أكملت 1 خطوة من أصل 5 خطوات.</string>
+  <!-- Subtitle for the setup checklist when the second task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_second_step">لقد أكملت خطوتين من أصل 5 خطوات. تقدم جيد!</string>
+  <!-- Subtitle for a setup checklist with 5 steps when three of the tasks are completed. -->
+  <string name="setup_checklist_subtitle_5_steps_third_step">لقد قطعت نصف الطريق! ثلاث خطوات مكتملة و2 خطوات متبقية.</string>
+  <!-- Subtitle for a setup checklist with 5 steps when the fifth task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_fourth_step">أنت على وشك الانتهاء! إنك على بعد خطوة 1 من خط النهاية.</string>
+  <!-- Subtitle for a setup checklist with 5 steps completed state. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="setup_checklist_subtitle_5_steps_completed_state">لقد أكملت جميع خطوات التثبيت الـ 5. استمتع بالسرعة والخصوصية والأمان الذي يوفره %1$s.</string>
   <!-- The title of the explore extensions task for the setup checklist -->
   <string name="setup_checklist_task_explore_extensions">استكشف الامتدادات</string>
+  <!-- The title of the search widget task for the setup checklist -->
+  <string name="setup_checklist_task_search_widget_2">اكتشف أداة البحث</string>
   <!--
     ===== Setup checklist feature: Group titles =====
 
@@ -3745,6 +3805,20 @@
   <string name="setup_checklist_group_customize">خصّص %1$s</string>
   <!-- The title of the 'helpful tools' group in the setup checklist -->
   <string name="setup_checklist_group_helpful_tools">أدوات مفيدة</string>
+  <!--
+    ===== Setup checklist feature: Button =====
+
+    Text for the 'remove' button for the setup checklist
+  -->
+  <string name="setup_checklist_button_remove">إزالة قائمة التحقق</string>
+  <!--
+    ===== Setup checklist feature: Accessibility =====
+
+    Accessibility description for a check mark on a completed task
+  -->
+  <string name="a11y_completed_task_description">مهمة مكتملة</string>
+  <!-- Accessibility description for the task icon -->
+  <string name="a11y_task_icon_description">أيقونة المهام</string>
   <!--
     Private browsing mode authentication screen
 
@@ -3763,10 +3837,44 @@
   <string name="pbm_authentication_lock_device_feature_disabled">إعداد قفل الشاشة لإخفاء التبويبات</string>
   <!-- Title text for the contextual feature recommendation (CFR) suggesting the user enable a screen lock to protect private tabs -->
   <string name="private_tab_cfr_title">اتستخدام قفل الشاشة لإخفاء التبويبات الخاصة؟</string>
+  <!-- Negative button text for the contextual feature recommendation (CFR) dismissing the screen lock suggestion -->
+  <string name="private_tab_cfr_negative">لا، شكرًا</string>
   <!-- Positive button text for the contextual feature recommendation (CFR) enabling screen lock for private tabs -->
   <string name="private_tab_cfr_positive">قفل التبويبات</string>
+  <!--
+    Review prompt
+
+    Title for a prompt asking the user about their experience using the app. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="review_prompt_pre_prompt_header">ما رأيك في %1$s؟</string>
+  <!-- Label for a button negatively rating the user's experience with the app -->
+  <string name="review_prompt_negative_button">أواجه بعض المشاكل</string>
+  <!-- Label for a button positively rating the user's experience with the app -->
+  <string name="review_prompt_positive_button">رائع!</string>
+  <!-- Title for a prompt asking the user to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="review_prompt_rate_header">نحن سعداء لأنه أعجبكم %1$s. هل لديكم لحظة لتشاركوا حبّكم هذا من خلال تقييم؟</string>
+  <!-- Label for a button proceeding to rate the app on Google Play Store. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="review_prompt_rate_button">تقييم %1$s على Play Store</string>
+  <!-- Title for a prompt asking the user send us feedback. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="review_prompt_feedback_header">نأسف لمواجهتكم بعض المشاكل. أخبرونا كيف يمكننا تحسين خدماتنا %1$s.</string>
+  <!-- Label for a button opening a feedback forum -->
+  <string name="review_prompt_feedback_button">أخبرونا بآرائكم</string>
   <!-- ==== Terms of use pop up prompt ==== -->
 
+  <!-- Title for the pop up prompt -->
+  <string name="terms_of_use_prompt_title">لدينا تحديث</string>
+  <!--
+    Message for the terms of use pop up prompt
+    %1$s is the product name "Firefox"
+    %2$s is the string terms_of_use_prompt_link_terms_of_use (Terms of Use) that is a link to the terms of use
+    %3$s is the string terms_of_use_prompt_link_privacy_notice (Privacy Notice) that is a link to the privacy notice
+  -->
+  <string name="terms_of_use_prompt_message_1">أضفنا %1$s %2$s وقمنا بتحديث %3$s.</string>
+  <!--
+    Second part of the terms of use pop up prompt
+    %1$s is the string terms_of_use_prompt_link_learn_more (Learn more) that is a link to a website with more information about the terms of use
+  -->
+  <string name="terms_of_use_prompt_message_2">نرجو أن تأخذو لحظة للمراجعة والموافقة. %1$s.</string>
   <!-- ==== Experiment strings. ==== -->
 
   <!-- ==== End of Terms of use popup prompt. ==== -->
