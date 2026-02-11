@@ -3369,6 +3369,14 @@
   <string name="translations_bottom_sheet_positive_button_error">أعِد المحاولة</string>
   <!-- Inactive button text on the translations dialog that indicates a translation is currently in progress. This button will be accompanied by a loading icon. -->
   <string name="translations_bottom_sheet_translating_in_progress">جارٍ الترجمة</string>
+  <!-- Button content description (not visible, for screen readers etc.) for the translations dialog translate button that indicates a translation is currently in progress. -->
+  <string name="translations_bottom_sheet_translating_in_progress_content_description">جارٍ الترجمة</string>
+  <!-- Default dropdown option when initially selecting a language from the translations dialog language selection dropdown. -->
+  <string name="translations_bottom_sheet_default_dropdown_selection">اختر لغة</string>
+  <!-- The title of the warning card informs the user that a translation could not be completed. -->
+  <string name="translation_error_could_not_translate_warning_text">حدثت مشكلة أثناء الترجمة. يُرجى المحاولة مرة أخرى.</string>
+  <!-- The title of the warning card informs the user that the list of languages cannot be loaded. -->
+  <string name="translation_error_could_not_load_languages_warning_text">تعذر تحميل اللغات. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.</string>
   <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
   <string name="translation_error_language_not_supported_warning_text">عذراً، لا ندعم %1$s بعد.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
@@ -3593,10 +3601,48 @@
   <string name="protection_panel_etp_toggle_enabled_description_2">إذا بدا شيء ما معطلًا في هذا الموقع، فحاول إيقاف تشغيله.</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
   <string name="protection_panel_etp_toggle_disabled_description_2">يُنصح بتفعيل خاصية حماية التعقّب.</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">المتعقّبات محجوبة: %d</string>
+  <!-- Text for when no trackers have been blocked. -->
+  <string name="protection_panel_no_trackers_blocked">لم يُعثر على أي متعقّبات</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings_2">إعدادات الخصوصية</string>
+  <!-- Title text for the protection panel permissions section. -->
+  <string name="protection_panel_permissions_title">التصاريح</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the trackers blocked panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_total_num_trackers_blocked">المتعقّبات محجوبة: %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
+  <!--
+    Description text for a dialog confirming whether the user wants to delete all data for current site.
+    %s is a placeholder for the base domain of website.
+  -->
+  <string name="clear_site_data_dialog_description"><![CDATA[قد يؤدي حذف ملفات تعريف الارتباط وبيانات الموقع لـ <b>%s</b> إلى تسجيل خروجك من المواقع وحذف محتويات سلال التسوق.]]></string>
+  <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
+  <string name="clear_site_data_dialog_positive_button_text">مسح</string>
+  <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
+  <string name="clear_site_data_dialog_negative_button_text">إلغاء</string>
+  <!-- Text for the connection security panel when the site is secure. -->
+  <string name="connection_security_panel_secure">اتصال آمن</string>
+  <!-- Text for the connection security panel when the site is not secure. -->
+  <string name="connection_security_panel_not_secure">الاتصال غير آمن</string>
   <!-- Text for the connection security panel when accessed from local PDF. -->
   <string name="connection_security_panel_local_pdf">هذه الصفحة مخزنة على جهازك</string>
+  <!--
+    Text for the connection security panel to indicate who the certificate was verified by.
+    %s is a placeholder for the name of the certificate authority that issued the certificate.
+  -->
+  <string name="connection_security_panel_verified_by">تثبّت منها %s</string>
   <!--
     Debug drawer
 
@@ -3687,6 +3733,18 @@
   <string name="likert_scale_option_8" tools:ignore="UnusedResources">أنا لا أستخدم المزامنة</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">ساعد في تحسين الطباعة في Firefox. لن يستغرق الأمر سوى ثواني</string>
+  <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_prompt_search_title" tools:ignore="BrandUsage,UnusedResources">ساعدنا في تحسين البحث في Firefox. لن يستغرق الأمر سوى دقيقة واحدة</string>
+  <!-- Text shown in prompt for sync microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_prompt_sync_title" tools:ignore="BrandUsage,UnusedResources">ساعد في تحسين مزامنة البيانات في Firefox. لن يستغرق الأمر دقيقة واحدة</string>
+  <!-- Text shown in the survey title for printing microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_survey_printing_title" tools:ignore="BrandUsage,UnusedResources">ما مدى رضاك عن الطباعة في متصفح Firefox؟</string>
+  <!-- Text shown in the survey title for homepage microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_homepage_title" tools:ignore="BrandUsage,UnusedResources">ما مدى رضاك عن صفحتك الرئيسية في Firefox؟</string>
+  <!-- Text shown in the survey title for search experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">ما مدى رضاك عن تجربة البحث في Firefox؟</string>
+  <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">ما مدى رضاك عن تجربة مزامنة البيانات في Firefox؟</string>
   <!--
     Accessibility
 
@@ -3713,6 +3771,12 @@
   <string name="debug_drawer_logins_add_login_button">أضف تسجيل دخول وهمي لهذا المجال</string>
   <!-- Content description for delete button. %s is the username of the login. -->
   <string name="debug_drawer_logins_delete_login_button_content_description">حذف تسجيل الدخول باستخدام اسم المستخدم %s</string>
+  <!--
+    Debug drawer addresses
+
+    The title of the Addresses feature in the Debug Drawer.
+  -->
+  <string name="debug_drawer_addresses_title">العناوين</string>
   <!--
     Debug drawer credit cards
 
