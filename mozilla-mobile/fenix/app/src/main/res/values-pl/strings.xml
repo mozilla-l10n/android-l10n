@@ -323,6 +323,8 @@
   <string name="browser_menu_save_as_pdf_2">Zapisz jako PDF</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Przetłumacz stronę</string>
+  <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
+  <string name="browser_menu_summarize_page">Streść stronę</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter" tools:ignore="UnusedResources" moz:removedIn="149">Zgłoś niepoprawnie działającą stronę…</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
@@ -434,6 +436,10 @@
     The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
   -->
   <string name="search_engine_selector_content_description">%s: wybór wyszukiwarki</string>
+  <!-- Text for the snackbar shown to confirm the deletion of a single browsing history item. %1$s is the shortened URL of the deleted history entry or the the actual deleted search term. Only one such item is deleted at a time. -->
+  <string name="search_suggestions_delete_history_item_snackbar">Usunięto witrynę %1$s z\u00a0historii</string>
+  <!-- Content description (not visible, for screen readers etc.): Button shown near a history search result allowing to delete it from browsing history. -->
+  <string name="mozac_browser_awesomebar_remove_suggestion" tools:ignore="UnusedResources">Usuń ten element z\u00a0historii</string>
   <!--
     Home onboarding
 
@@ -766,6 +772,8 @@
   <string name="preferences_search">Wyszukiwanie</string>
   <!-- Preference for settings related to Search engines -->
   <string name="preferences_search_engines">Wyszukiwarki</string>
+  <!-- Settings item to add a search widget on the device's homescreen. -->
+  <string name="preferences_add_search_widget_from_settings">Widżet ekranu głównego</string>
   <!-- Preference for settings related to Search engines suggestions -->
   <string name="preferences_search_engines_suggestions">Podpowiedzi wyszukiwarek</string>
   <!-- Preference Category for settings related to Search address bar -->
@@ -957,6 +965,15 @@
   <string name="preferences_open_links_in_apps_ask">Pytanie przed otwarciem</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Nigdy</string>
+  <!-- Preference category for file storage. -->
+  <string name="preferences_category_file_storage">Przechowywanie plików</string>
+  <!-- Preference title for downloads default location. -->
+  <string name="preferences_downloads_default_location_title">Domyślne położenia pobierania</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost">Brak uprawnienia do korzystania z\u00a0tego folderu. Spróbuj wybrać inny.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Zarządzanie pobieraniem za pomocą innej aplikacji</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
@@ -1489,10 +1506,26 @@
   <string name="studies_active">Aktywne</string>
   <!-- Description for studies -->
   <string name="studies_description_3" moz:removedIn="148" tools:ignore="UnusedResources">Wypróbuj funkcje i pomysły, zanim zostaną udostępnione wszystkim użytkownikom.</string>
+  <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
+  <string name="studies_description_4" tools:ignore="BrandUsage">Firefox losowo wybiera użytkowników do testowania funkcji, co poprawia jakość dla wszystkich.</string>
   <!-- Title of the Studies data preference -->
   <string name="studies_title" moz:removedIn="148" tools:ignore="UnusedResources">Instalowanie i przeprowadzanie badań</string>
+  <!-- Title of the Studies data preference -->
+  <string name="studies_title_2">Badanie korzystania z\u00a0funkcji</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Więcej informacji</string>
+  <!--
+    Remote Improvements (Rollouts)
+
+    Title of the Remote Improvements (rollouts) data preference
+  -->
+  <string name="remote_improvements_title">Zdalne ulepszenia</string>
+  <!-- Description for remote improvements. Note: The word "Firefox" should NOT be translated -->
+  <string name="remote_improvements_description" tools:ignore="BrandUsage">Firefox ulepszy funkcje oraz zwiększy wydajność i\u00a0stabilność pomiędzy aktualizacjami. Zmiany zostaną zastosowane zdalnie.</string>
+  <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
+  <string name="remote_improvements_learn_more">Więcej informacji</string>
+  <!-- Title for remote improvements preference in Advanced settings -->
+  <string name="preferences_remote_improvements">Zdalne ulepszenia</string>
   <!--
     Sessions
 
@@ -1710,7 +1743,7 @@
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Anuluj</string>
   <!-- Text for the header of in progress downloads -->
-  <string name="download_header_in_progress">W trakcie</string>
+  <string name="download_header_in_progress">W\u00a0trakcie</string>
   <!--
     Time period headers for downloads
 
@@ -1912,13 +1945,13 @@
   <!-- Bookmark overflow menu select all bookmarks -->
   <string name="bookmark_menu_select_all_bookmarks">Zaznacz wszystkie</string>
   <!-- Bookmark overflow menu open in new tab button -->
-  <string name="bookmark_menu_open_in_new_tab_button">Otwórz w nowej karcie</string>
+  <string name="bookmark_menu_open_in_new_tab_button">Otwórz w\u00a0nowej karcie</string>
   <!-- Bookmark overflow menu open in private tab button -->
-  <string name="bookmark_menu_open_in_private_tab_button">Otwórz w prywatnej karcie</string>
+  <string name="bookmark_menu_open_in_private_tab_button">Otwórz w\u00a0prywatnej karcie</string>
   <!-- Bookmark overflow menu open all in tabs button -->
-  <string name="bookmark_menu_open_all_in_tabs_button">Otwórz wszystkie w nowych kartach</string>
+  <string name="bookmark_menu_open_all_in_tabs_button">Otwórz wszystkie w\u00a0nowych kartach</string>
   <!-- Bookmark overflow menu open all in private tabs button -->
-  <string name="bookmark_menu_open_all_in_private_tabs_button">Otwórz wszystkie w prywatnych kartach</string>
+  <string name="bookmark_menu_open_all_in_private_tabs_button">Otwórz wszystkie w\u00a0prywatnych kartach</string>
   <!-- Bookmark overflow menu delete button -->
   <string name="bookmark_menu_delete_button">Usuń</string>
   <!-- Accessibility label for sorting options -->
