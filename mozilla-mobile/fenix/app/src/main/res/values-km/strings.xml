@@ -785,6 +785,10 @@
   <string name="preferences_sync_logins_2">ពាក្យ​សម្ងាត់</string>
   <!-- Preference for syncing tabs -->
   <string name="preferences_sync_tabs_2">បើក​ផ្ទាំង</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">របាយការណ៍​គាំង</string>
+  <string name="usage_data_category">ទិន្នន័យនៃការប្រើប្រាស់</string>
+  <string name="studies_data_category">ការសិក្សា</string>
   <string name="technical_data_category">ទិន្នន័យបច្ចេកទេស</string>
   <!-- Preference for removing FxA account -->
   <string name="preferences_sync_remove_account">លុបគណនី</string>
@@ -876,6 +880,12 @@
   <string name="opening_screen_homepage">ទំព័រដើម</string>
   <!-- Option for always opening the user's last-open tab when re-opening the app -->
   <string name="opening_screen_last_tab">ផ្ទាំងចុងក្រោយ</string>
+  <!-- Summary for tabs preference when auto closing tabs setting is set to manual close -->
+  <string name="close_tabs_manually_summary">បិទដោយដៃ</string>
+  <!-- Summary for tabs preference when auto closing tabs setting is set to auto close tabs after one day -->
+  <string name="close_tabs_after_one_day_summary">បិទបន្ទាប់ពីមួយថ្ងៃ</string>
+  <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
+  <string name="opening_screen_homepage_summary">បើកនៅទំព័រដើម</string>
   <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
   <string name="opening_screen_last_tab_summary">បើក​ផ្ទាំង​ចុងក្រោយ</string>
   <!--
@@ -894,8 +904,14 @@
   <string name="studies_active">សកម្ម</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">ស្វែងយល់​បន្ថែម</string>
+  <!-- Learn more link for remote improvements, links to an article for more information about rollouts. -->
+  <string name="remote_improvements_learn_more">ស្វែងយល់​បន្ថែម</string>
+  <!-- Text for the tabs header private tabs -->
+  <string name="tabs_header_private_tabs_title">ឯកជន</string>
   <!-- Text for the tabs header normal tabs -->
   <string name="tabs_header_normal_tabs_title">ផ្ទាំង</string>
+  <!-- Text for the tabs header synced tabs -->
+  <string name="tabs_header_synced_tabs_title">សមកាលកម្ម</string>
   <!-- Text for the new tab button in the Tab Manager to indicate opening a new normal tab -->
   <string name="tab_manager_floating_action_button_new_normal_tab">ផ្ទាំង​ថ្មី</string>
   <!-- Text for the new tab button in the Tab Manager to indicate opening a new private tab -->
@@ -993,10 +1009,18 @@
     %1$d is the number of items deleted.
   -->
   <string name="download_delete_multiple_items_snackbar_2">ធាតុត្រូវបានលុប៖ %1$d</string>
+  <!-- Title for the dialog that prompts the user to choose an app for downloading a file. -->
+  <string name="download_app_dialog_title">ទាញយកឯកសារជាមួយ៖</string>
   <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
   <string name="download_delete_single_item_snackbar_2">បានលុប “%1$s”</string>
   <!-- Text for the snackbar to confirm that a download has completed. -->
   <string name="download_completed_snackbar">ការទាញយកបានបញ្ចប់</string>
+  <!-- Text for the snackbar action button to open a completed download. -->
+  <string name="download_completed_snackbar_action_open">បើក</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">អាន់ឌូ</string>
+  <!-- Text shown when no download exists -->
+  <string name="download_empty_message_2">មិនទាន់ទាញយកនៅឡើយទេ</string>
   <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
@@ -1009,6 +1033,17 @@
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">បោះបង់</string>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">លុប</string>
+  <!--
+    Content description for the search bar clear text button on the downloads screen
+
+    Content description for pause action button on the downloads screen
+  -->
+  <string name="download_pause_action">ផ្អាក</string>
+  <!-- Content description for retry download action button on the downloads screen -->
+  <string name="download_retry_action">ព្យាយាម​ម្តង​ទៀត</string>
+  <string name="download_clear_search_description">ជម្រះ</string>
+  <!-- Text for the button to share the download file -->
+  <string name="download_share_file">ចែករំលែកឯកសារ</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">តើអ្នកពិតជាចង់លុបធាតុដែលបានជ្រើសរើសមែនទេ?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
@@ -1016,6 +1051,8 @@
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">បោះបង់</string>
   <string name="download_rename_dialog_cancel_button">បោះបង់</string>
+  <!-- Text for the header of in progress downloads -->
+  <string name="download_header_in_progress">កំពុងដំណើរការ</string>
   <!--
     Time period headers for downloads
 
@@ -1028,8 +1065,14 @@
   <string name="download_time_period_last_7_days">7 ថ្ងៃចុងក្រោយ</string>
   <!-- Text for the header that groups the downloads the past 30 days -->
   <string name="download_time_period_last_30_days">30 ថ្ងៃចុងក្រោយ</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">ចាស់ជាង</string>
   <!-- Text to indicate that a download has failed to download. -->
   <string name="download_item_status_failed">ការ​ទាញ​យក​បាន​បរាជ័យ</string>
+  <!-- Text for the snackbar action button to view failed download details. -->
+  <string name="download_failed_snackbar_action_details">ព័ត៌មានលម្អិត</string>
+  <!-- Text to indicate that no downloads match the search query. -->
+  <string name="download_search_no_results_found">រកមិនឃើញលទ្ធផល​ទេ</string>
   <!-- Text for the "Select all" button, which selects all downloaded items in the downloads list. -->
   <string name="download_select_all_items">ជ្រើសរើសទាំងអស់</string>
   <!--
@@ -1038,6 +1081,12 @@
     Text for the filter button to show all files in the downloads list
   -->
   <string name="download_content_type_filter_all">ទាំងអស់</string>
+  <!-- Text for the filter button to show only images in the downloads list -->
+  <string name="download_content_type_filter_image">រូបភាព</string>
+  <!-- Text for the filter button to show only video files in the downloads list -->
+  <string name="download_content_type_filter_video">វីដេអូ</string>
+  <!-- Text for the filter button to show all other file types in the downloads list -->
+  <string name="download_content_type_filter_other_1">ផ្សេងទៀត</string>
   <!--
     WebCompat Reporter
 
@@ -1054,6 +1103,12 @@
   <string name="tab_crash_close">បិទផ្ទាំង</string>
   <!-- Restore tab button text on the tab crash page -->
   <string name="tab_crash_restore">ស្ដារផ្ទាំងឡើងវិញ</string>
+  <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
+  <string name="unsubmitted_crash_dialog_checkbox_label">ផ្ញើរបាយការណ៍គាំងដោយស្វ័យប្រវត្តិ</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button">បិទ</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report -->
+  <string name="unsubmitted_crash_dialog_positive_button">ផ្ញើ​របាយការណ៍​ដែល​គាំង</string>
   <!--
     Bookmarks
 
@@ -1062,6 +1117,20 @@
   <string name="bookmark_delete_folders_confirmation_dialog">តើអ្នកពិតជាចង់លុបធាតុដែលបានជ្រើសរើសមែនទេ?</string>
   <!-- Text for the cancel button on delete bookmark dialog -->
   <string name="bookmark_delete_negative">បោះបង់</string>
+  <!-- Screen title for adding a bookmarks folder -->
+  <string name="bookmark_add_folder">បន្ថែមថត</string>
+  <!-- Snackbar title that confirms a bookmark was saved into a folder. %s is the name of the folder the bookmark was saved into. -->
+  <string name="bookmark_saved_in_folder_snackbar">រក្សាទុកនៅក្នុង “%s”</string>
+  <!-- Snackbar edit button shown after a bookmark has been created. -->
+  <string name="edit_bookmark_snackbar_action">កែសម្រួល</string>
+  <!-- Bookmark menu move button -->
+  <string name="bookmark_menu_move_button">ផ្លាស់ទី</string>
+  <!-- Bookmark overflow menu edit button -->
+  <string name="bookmark_menu_edit_button">កែសម្រួល</string>
+  <!-- Bookmark overflow menu copy button -->
+  <string name="bookmark_menu_copy_button">ចម្លង</string>
+  <!-- Bookmark overflow menu share button -->
+  <string name="bookmark_menu_share_button">ចែករំលែក</string>
   <!-- Bookmark overflow menu select all bookmarks -->
   <string name="bookmark_menu_select_all_bookmarks">ជ្រើសរើស​ទាំងអស់</string>
   <!-- Bookmark overflow menu open in new tab button -->
@@ -1074,17 +1143,42 @@
   <string name="bookmark_menu_open_all_in_private_tabs_button">បើកទាំងអស់នៅក្នុងផ្ទាំងឯកជន</string>
   <!-- Bookmark overflow menu delete button -->
   <string name="bookmark_menu_delete_button">លុប</string>
+  <!--
+    Bookmark multi select title in app bar
+    %1$d is the number of bookmarks selected
+  -->
+  <string name="bookmarks_multi_select_title">បានជ្រើសរើស %1$d</string>
   <!-- Bookmark editing screen title -->
   <string name="edit_bookmark_fragment_title">កែសម្រួល​ចំណាំ</string>
+  <!-- Bookmark folder editing screen title -->
+  <string name="edit_bookmark_folder_fragment_title">កែសម្រួលថត</string>
+  <!-- Bookmark URL editing field label -->
+  <string name="bookmark_url_label">URL</string>
+  <!-- Bookmark FOLDER editing field label -->
+  <string name="bookmark_folder_label">ថត</string>
+  <!-- Text indicating which folder a bookmark or folder will be saved in -->
+  <string name="bookmark_save_in_label">រក្សាទុកក្នុង</string>
+  <!-- Bookmark NAME editing field label -->
+  <string name="bookmark_name_label">ឈ្មោះ</string>
+  <!-- Label for a text input field for a bookmark or folder name -->
+  <string name="bookmark_name_label_normal_case">ឈ្មោះ</string>
+  <!-- Bookmark select folder screen title -->
+  <string name="bookmark_select_folder_fragment_label">ជ្រើសរើស​ថត</string>
+  <!-- Bookmark editing error missing or improper URL -->
+  <string name="bookmark_invalid_url_error">URL មិនត្រឹមត្រូវ</string>
   <!--
     Bookmark snackbar message on deletion
     %1$s is the host part of the URL of the bookmark deleted, if any
   -->
   <string name="bookmark_deletion_snackbar_message">បានលុប %1$s</string>
+  <!-- Bookmark undo button for deletion snackbar action -->
+  <string name="bookmark_undo_deletion">អាន់ឌូ</string>
   <!-- Bookmark snackbar message for deleting a single item. %s is the title of the item being deleted -->
   <string name="bookmark_delete_single_item">បានលុប %s</string>
   <!-- Bookmark snackbar message for deleting multiple items. %s is the number of items being deleted -->
   <string name="bookmark_delete_multiple_items">ធាតុដែលបានលុប៖ %s</string>
+  <!-- Content description for the bookmark list new folder navigation bar button -->
+  <string name="bookmark_add_new_folder_button_content_description">បន្ថែមថតថ្មី</string>
   <!-- Content description for the bookmark screen delete bookmark navigation bar button -->
   <string name="bookmark_delete_bookmark_content_description">លុបចំណាំ</string>
   <!-- Content description for the bookmark screen delete bookmark folder navigation bar button -->
@@ -1093,10 +1187,30 @@
   <string name="bookmark_search_button_content_description">ស្វែងរកចំណាំ</string>
   <!-- Description for the add new folder button when selecting a folder. -->
   <string name="bookmark_select_folder_new_folder_button_title">ថតឯកសារថ្មី</string>
+  <!--
+    Site Permissions
+
+    Button label that take the user to the Android App setting
+  -->
+  <string name="phone_feature_go_to_settings">ចូល​ទៅ​កាន់​ការ​កំណត់</string>
+  <!-- Button label for clearing all the information of site permissions -->
+  <string name="clear_permissions">ជម្រះការអនុញ្ញាត</string>
+  <!-- Text for the OK button on Clear permissions dialog -->
+  <string name="clear_permissions_positive">យល់ព្រម</string>
   <!-- Text for the cancel button on Clear permissions dialog -->
   <string name="clear_permissions_negative">បោះបង់</string>
+  <!-- Button label for clearing a site permission -->
+  <string name="clear_permission">ជម្រះការអនុញ្ញាត</string>
+  <!-- Text for the OK button on Clear permission dialog -->
+  <string name="clear_permission_positive">យល់ព្រម</string>
   <!-- Text for the cancel button on Clear permission dialog -->
   <string name="clear_permission_negative">បោះបង់</string>
+  <!-- Button label for clearing all the information on all sites -->
+  <string name="clear_permissions_on_all_sites">ជម្រះការអនុញ្ញាតនៅលើគេហទំព័រទាំងអស់</string>
+  <!-- Preference for altering the camera access for all websites -->
+  <string name="preference_phone_feature_camera">កាមេរ៉ា</string>
+  <!-- Preference for altering the microphone access for all websites -->
+  <string name="preference_phone_feature_microphone">ម៉ាយក្រូផូន</string>
   <!-- Summary of tracking protection preference if tracking protection is set to off -->
   <string name="tracking_protection_off">បិទ</string>
   <!-- Summary of delete browsing data on quit preference if it is set to off -->
@@ -1306,8 +1420,20 @@
   <string name="addressess_confirm_dialog_cancel_button">បោះបង់</string>
   <!-- The text for the "Delete address" menu item for deleting an address -->
   <string name="address_menu_delete_address">លុបអាសយដ្ឋាន</string>
+  <!-- Title of the Add search engine screen -->
+  <string name="search_engine_add_custom_search_engine_title">បន្ថែមអេនជីនស្វែងរក</string>
+  <!-- Content description (not visible, for screen readers etc.): Title for the button that navigates to add new engine screen -->
+  <string name="search_engine_add_custom_search_engine_button_content_description">បន្ថែមអេនជីនស្វែងរកថ្មី</string>
+  <!-- Title of the Edit search engine screen -->
+  <string name="search_engine_edit_custom_search_engine_title">កែសម្រួលអេនជីនស្វែងរក</string>
   <!-- Text for the menu button to delete a search engine -->
   <string name="search_engine_delete">លុប</string>
+  <!-- Placeholder text shown in the Search Engine Name text field before a user enters text -->
+  <string name="search_add_custom_engine_name_hint_2">ឈ្មោះអេនជីនស្វែងរក</string>
+  <!-- Accessibility description for the form in which details about the custom search engine are entered -->
+  <string name="search_add_custom_engine_form_description">ព័ត៌មានលម្អិតអំពីអេនជីនស្វែងរកផ្ទាល់ខ្លួន</string>
+  <!-- Text shown when a user leaves the name field empty -->
+  <string name="search_add_custom_engine_error_empty_name">បញ្ចូលឈ្មោះអេនជីនស្វែងរក</string>
   <!-- Login overflow menu delete button -->
   <string name="login_menu_delete_button" tools:ignore="UnusedResources" moz:removedIn="149">លុប</string>
   <!-- Message in delete confirmation dialog for password -->
