@@ -1640,6 +1640,14 @@
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">გახსენით ჩანართების ძიება</string>
   <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">ჩანართების ჯგუფის შექმნა</string>
+  <string name="create_tab_group_save_button">შენახვა</string>
+  <string name="edit_tab_group_bottom_sheet_close_content_description">ჩანართების ჯგუფის ჩასწორების დახურვა</string>
+  <!--
     History
 
     Text for the button to search all history
@@ -1721,6 +1729,8 @@
   <string name="download_delete_item">წაშლა</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">გადასვლა უკან</string>
+  <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
+  <string name="download_navigate_settings_description">გადასვლა ჩამოტვირთვების პარამეტრებში</string>
   <!-- Content description for the toolbar back button while searching the downloads -->
   <string name="download_close_search_description">უკან და ძიების დახურვა</string>
   <!--
@@ -1738,12 +1748,40 @@
   <string name="download_share_url">URL-ბმულის გაზიარება</string>
   <!-- Text for the button to share the download file -->
   <string name="download_share_file">ფაილის გაზიარება</string>
+  <!-- Text for the button to rename the download file -->
+  <string name="download_rename_file">ფაილის გადარქმევა</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">ნამდვილად გსურთ მონიშნული ერთეულების წაშლა?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
   <string name="download_delete_multi_select_dialog_confirm">წაშლა</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">გაუქმება</string>
+  <!-- Title for the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_title">ფაილის გადარქმევა</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">სახელი</string>
+  <string name="download_rename_dialog_confirm_button">შენახვა</string>
+  <string name="download_rename_dialog_cancel_button">გაუქმება</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">ფაილი დასახელებით „%s“ უკვე არსებობს ამ მისამართზე</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">ფაილის სახელში არ უნდა იყოს „/“</string>
+  <!-- Title for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_title">ფაილის გადარქმევა ვერ ხერხდება</string>
+  <!-- Description message for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_description">ამ ფაილის გადარქმევა ვერ ხერხდება სისტემის ან საცავის შეზღუდვების გამო.</string>
+  <string name="download_rename_error_dismiss_button">კარგი</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">მიეთითოს ფაილს სახეობად %s?</string>
+  <string name="change_file_extension_description">შედეგად შესაძლოა, ფაილი სხვა პროგრამაში გახსნას და თქვენი მოწყობილობისთვის სახიფათო აღმოჩნდეს.</string>
+  <string name="change_file_extension_cancel_button">გაუქმება</string>
+  <string name="change_file_extension_confirm_button">დიახ, შეიცვალოს</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">მიმდინარეობს</string>
   <!--
@@ -1936,6 +1974,8 @@
   <string name="bookmark_error_edit_bookmark">ვერ ჩასწორდა სანიშნი</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">ჩასწორება</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">არჩევა</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">გადატანა</string>
   <!-- Bookmark overflow menu edit button -->
@@ -2012,8 +2052,12 @@
   <string name="bookmark_delete_folder_content_description">საქაღალდის წაშლა</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">სანიშნების ძიება</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">ძიება საქაღალდეებში</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">ჩანაწერების მენიუ – %s</string>
+  <!-- Content description for the chevron that will close a folder on the select folder screen so that its children are no longer visible. %s is the title of the folder that will be closed -->
+  <string name="bookmark_select_folder_close_folder_content_description">საქაღალდის დახურვა: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">სანიშნების დახურვა</string>
   <!-- Title for the bookmark list empty state -->
@@ -2837,6 +2881,24 @@
   <string name="saved_logins_sort_strategy_last_used">ბოლოს გამოყენებული</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">პაროლების დალაგების მენიუ</string>
+  <!--
+    Email Masks
+
+    Title for the Email Masks in the settings menu
+  -->
+  <string name="preferences_email_masks">ელფოსტის ნიღბები</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">ელფოსტის ნიღბების შემოთავაზება</string>
+  <!-- Summary for the Suggest Email Masks toggle. -->
+  <string name="preferences_email_masks_suggest_summary">დაფარეთ თქვენი ნამდვილი ელფოსტა შემომავალი უსარგებლო წერილების ასარიდებლად. ზოგიერთ საიტზე მხარდაუჭერელია ელფოსტის ნიღბები.</string>
+  <!-- Text that links to additional information about the Email Masks -->
+  <string name="preferences_email_masks_suggest_learn_more">ვრცლად</string>
+  <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
+  <string name="preferences_email_masks_manage_title">ელფოსტის ნიღბების მართვა</string>
+  <!-- The message displayed when a user has used all of their free-tier email masks, so now the application will choose an existing one at random. -->
+  <string name="email_masks_max_free_tier_reached">თქვენ უკვე გამოყენებული გაქვთ ელფოსტის 5 უფასო ნიღაბი, ამიტომ მათგან შეირჩევა რომელიმე კვლავ გამოყენებისთვის.</string>
+  <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
+  <string name="email_masks_error_retrieving_masks">ელფოსტის ნიღბები ამჟამად მიუწვდომელია. სცადეთ ხელახლა რამდენიმე წუთში.</string>
   <!--
     Autofill
 
@@ -4016,6 +4078,8 @@
   <string name="settings_search_no_results_title">ვერაფერი მოინახა</string>
   <!-- Sub-message displayed when the search field is not empty but search results is empty. -->
   <string name="settings_search_no_results_message">იქნებ სხვანაირად მოინახოს?</string>
+  <!-- Content Description for the button to open Settings Search (to search through settings). -->
+  <string name="settings_search_button_content_description">პარამეტრებში ძიების ღილაკი</string>
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- Title for the pop up prompt -->
@@ -4044,6 +4108,20 @@
   <string name="terms_of_use_prompt_postpone">მოგვიანებით შეხსენება</string>
   <!-- ==== Experiment strings. ==== -->
 
+  <!-- A title for the popup prompt. -->
+  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">გამოყენების პირობები</string>
+  <!--
+    A title for the popup prompt.
+    %1$s is the product name "Firefox"
+  -->
+  <string name="terms_of_use_prompt_title_option_b" tools:ignore="UnusedResources">გაცნობებთ %1$s</string>
+  <!--
+    Copy for the Terms of Use popup prompt body line two.
+    %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
+  -->
+  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">ვრცლად იხილავთ %1$s.</string>
+  <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
+  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">აქ</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
