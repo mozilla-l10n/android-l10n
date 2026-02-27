@@ -1757,6 +1757,28 @@
   <string name="download_rename_dialog_title">Thoir ainm ùr air an fhaidhle</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_label">Ainm</string>
+  <string name="download_rename_dialog_confirm_button">Sàbhail</string>
+  <string name="download_rename_dialog_cancel_button">Sguir dheth</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">Tha faidhle eile air a bheil “%s” san ionad seo mar-thà</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">Chan fhaod “/” a bhith ann an ainmean fhaidhlichean</string>
+  <!-- Title for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_title">Chan urrainn dhuinn ainm ùr a thoirt air an fhaidhle</string>
+  <!-- Description message for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_description">Chan urrainn dhut ainm ùr a thoirt air an fhaidhle seo ri linn cuingeachadh an stòrais no an t-siostaim.</string>
+  <string name="download_rename_error_dismiss_button">Ceart ma-thà</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">A bheil thu airson faidhle %s a dhèanamh dheth?</string>
+  <string name="change_file_extension_description">Dh’fhaodte gum fosgail seo am faidhle ann an aplacaid eile agus gum bi seo cunnartach dhan uidheam agad.</string>
+  <string name="change_file_extension_cancel_button">Sguir dheth</string>
+  <string name="change_file_extension_confirm_button">Tha, atharraich e</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">Ga phròiseasadh</string>
   <!--
@@ -1866,6 +1888,10 @@
   <string name="webcompat_reporter_etp_checkbox_description">Dh’fhaodte gum bac gleus an dìon adhartaich o thracadh tracaichean agus sgriobtaichean a dh’fheumas cuid a làraichean-lìn mus obraich iad mar bu chòir.</string>
   <!-- The button text for the preview report button to view a preview of the report. -->
   <string name="webcompat_reporter_preview_report">Ro-seall an aithisg</string>
+  <!-- The title shown at the top of the WebCompat Report preview panel. This appears after the user taps the “Preview” button before sending a report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_header">Ro-shealladh na h-aithisge</string>
+  <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_send">Cuir</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
@@ -1900,14 +1926,29 @@
   <string name="tab_crash_close">Dùin an taba</string>
   <!-- Restore tab button text on the tab crash page -->
   <string name="tab_crash_restore">Aisig an taba</string>
+  <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_dialog_title_2">Tuislich %s. A bheil thu airson aithisg a chur?</string>
   <!-- Single unsubmitted crash matching remote settings. %1$s is the name of the app (for example "Firefox"). -->
   <string name="unsubmitted_crash_requested_by_devs_dialog_title">Tha aithisg tuislidh agad nach deach a chuir fhathast ach a tha co-cheangailte ri tuislidhean a tha sinn a’ sgrùdadh mar-thà. Ma chuireas tu thugainn e, bheir sin comas dhuinn %1$s a dhèanamh nas fheàrr. Ma dhùineas tu am brath seo, thèid an aithisg seo a leigeil seachad.</string>
+  <!-- Multiple unsubmitted crashes matching remote settings. %1$d is the number of unsent crash reports, %2$s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crashes_requested_by_devs_dialog_title">Tha aithisgean tuislidh agad, %1$d dhiubh, nach deach a chuir fhathast ach a tha co-cheangailte ri tuislidhean a tha sinn a’ sgrùdadh mar-thà. Ma chuireas tu thugainn iad, bheir sin comas dhuinn %2$s a dhèanamh nas fheàrr. Ma dhùineas tu am brath seo, thèid na h-aithisgean seo a leigeil seachad.</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">Cuir aithisgean tuislidh gu fèin-obrachail</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Dùin</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button_2">Dùin</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Na seall seo a-rithist</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report -->
+  <string name="unsubmitted_crash_dialog_positive_button_2">Cuir</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">Cuir a-steach aithisg tuislidh</string>
+  <!-- Body text for crash report dialog. %s is the link text in the annotated string (ie. "Learn More") -->
+  <string name="unsubmitted_crash_dialog_body">Ma chuireas tu aithisgean tuislidh thugainn, bidh e nas fhasa dhuinn diagnosachd a dhèanamh air duilgheasan sa bhrabhsair is an cur ceart. Dh’fhaoidte gum bi dàta pearsanta no dìomhair sna h-aithisgean seo. %s</string>
+  <string name="unsubmitted_crash_dialog_learn_more">Barrachd fiosrachaidh</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">Barrachd fiosrachaidh</string>
   <!--
     Bookmarks
 
@@ -1920,8 +1961,18 @@
   <string name="bookmark_add_folder">Cuir pasgan ris</string>
   <!-- Snackbar title that confirms a bookmark was saved into a folder. %s is the name of the folder the bookmark was saved into. -->
   <string name="bookmark_saved_in_folder_snackbar">Air a shàbhaladh an-seo: “%s”</string>
+  <!-- Snackbar title describing failure to add a new folder -->
+  <string name="bookmark_error_add_folder">Cha b’ urrainn dhuinn am pasgan a chur ris</string>
+  <!-- Snackbar title describing failure to edit an existing folder -->
+  <string name="bookmark_error_edit_folder">Cha b’ urrainn dhuinn am pasgan a dheasachadh</string>
+  <!-- Snackbar title describing failure to select a new parent folder for a bookmark or folder -->
+  <string name="bookmark_error_select_folder">Cha b’ urrainn dhuinn pàrant a’ phasgain atharrachadh</string>
+  <!-- Snackbar title describing failure to edit a bookmark -->
+  <string name="bookmark_error_edit_bookmark">Cha b’ urrainn dhuinn an comharra-lìn a dheasachadh</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">DEASAICH</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">Tagh</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">Gluais</string>
   <!-- Bookmark overflow menu edit button -->
@@ -1942,6 +1993,8 @@
   <string name="bookmark_menu_open_all_in_private_tabs_button">Fosgail anns gach taba prìobhaideach</string>
   <!-- Bookmark overflow menu delete button -->
   <string name="bookmark_menu_delete_button">Sguab às</string>
+  <!-- Accessibility label for sorting options -->
+  <string name="bookmark_sort_menu_content_desc">Roghainnean seòrsachaidh</string>
   <!-- Label for button to sort bookmarks by user-defined sort order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_custom">Seòrsaich ann an òrdugh gnàthaichte</string>
   <!-- Label for button to sort bookmarks by newest in the bookmark sorting overflow menu. -->
@@ -1996,10 +2049,16 @@
   <string name="bookmark_delete_folder_content_description">Sguab am pasgan às</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">Lorg sna comharran-lìn</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">Lorg sna pasganan</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">An clàr-taice aig %s</string>
+  <!-- Content description for the "close" button in bookmarks screen. -->
+  <string name="bookmark_close_button_content_description">Dùin na comharran-lìn</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Chan eil comharra-lìn sam bith agad fhathast</string>
+  <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
+  <string name="bookmarks_folder_description">Comharran-lìn sa phasgan: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
   <string name="bookmark_empty_list_guest_description">Sàbhail làraichean is tu ri brabhsadh. Clàraich a-steach is faigh greim air comharran-lìn a th’ agad air uidheaman sioncronaichte eile.</string>
   <!-- Text for the button to navigate to sync authentication -->
@@ -2010,6 +2069,8 @@
   <string name="bookmark_empty_list_folder_description">Cuir comharran-lìn ris fhad ’s a nì thu brabhsadh is faigh cothrom orra a-rithist gun duilgheadas.</string>
   <!-- Description for the add new folder button when selecting a folder. -->
   <string name="bookmark_select_folder_new_folder_button_title">Pasgan ùr</string>
+  <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
+  <string name="bookmark_moved_single_item">Chaidh %1$s a ghluasad dha %2$s</string>
   <!--
     Site Permissions
 
@@ -2040,6 +2101,10 @@
   <string name="clear_permissions_on_all_sites">Falamhaich na ceadan air gach làrach</string>
   <!-- Preference for altering video and audio autoplay for all websites -->
   <string name="preference_browser_feature_autoplay">Fèin-chluich</string>
+  <!-- Preference for local device access for all websites -->
+  <string name="preference_browser_feature_local_device_access">Aplacaidean is seirbheisean an uidheim</string>
+  <!-- Preference for local network access for all websites -->
+  <string name="preference_browser_feature_local_network_access">Uidheaman an lìonraidh ionadail</string>
   <!-- Preference for altering the camera access for all websites -->
   <string name="preference_phone_feature_camera">Camara</string>
   <!-- Preference for altering the microphone access for all websites -->
@@ -2096,6 +2161,10 @@
   <string name="studies_on">Air</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">Dheth</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">Air</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">Dheth</string>
   <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
   <string name="preferences_category_permissions">Ceadan</string>
   <!-- Category header of a preference that allows a user to alter settings related to web content. -->
@@ -2203,6 +2272,10 @@
   <string name="sync_add_new_device_learn_button">Fiosrachadh mu chur nan taba…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">Ceangail uidheam eile ris…</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nAir a chur o %2$s 🦊Feuch am brabhsair mobile: %3$s</string>
+  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nAir a chur o %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2367,6 +2440,12 @@
     text to display in the snackbar once account is signed-in
   -->
   <string name="onboarding_firefox_account_sync_is_on">Tha an sioncronachadh air</string>
+  <!--
+    Onboarding theme
+
+    Text shown in snackbar when multiple tabs have been sent to device
+  -->
+  <string name="sync_sent_tabs_snackbar_2">Chaidh na tabaichean a chur</string>
   <!-- Text shown in snackbar when sharing tabs failed -->
   <string name="sync_sent_tab_error_snackbar">Cha ghabh a chur</string>
   <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
@@ -2519,6 +2598,16 @@
     Enhanced tracking protection exception preference icon for ETP settings.
   -->
   <string name="preference_etp_exceptions_icon_description">Ìomhaigheag roghainn na h-eisgeachd o dhìon tracaidh leasaichte</string>
+  <!-- Add button text for provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_add">Cuir ris</string>
+  <!-- Preference to access list of login exceptions that we don't use DNS over HTTPS -->
+  <string name="preference_doh_exceptions">Eisgeachdan</string>
+  <!-- Description of "exceptions" for "DNS over HTTPS". %1$s is the name of the app (for example "Firefox"). -->
+  <string name="preference_doh_exceptions_summary">Cha chleachd %1$s DNS tèarainte air na làraichean seo ’s na fo-àrainnean aca.</string>
+  <!-- Text displayed that links to adding website domain for "DNS over HTTPS" exceptions. -->
+  <string name="preference_doh_exceptions_add">Cuir làrach ris</string>
+  <!-- Text displayed above the input field when adding exceptions for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_site">Làrach</string>
   <!-- About page link text to open support link -->
   <string name="about_support">Taic</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
