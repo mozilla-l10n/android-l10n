@@ -993,6 +993,8 @@
   <string name="preference_usage_data_learn_more_2">សស្វែងយល់បន្ថែមអំពីទិន្នន័យបច្ចេកទេស</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">ផ្ញើរាយការណ៍</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">ស្វែងយល់បន្ថែមអំពីរបាយការណ៍គាំង</string>
   <!-- Title Headers for data collection settings screen -->
   <string name="crash_reports_data_category">របាយការណ៍​គាំង</string>
   <string name="usage_data_category">ទិន្នន័យនៃការប្រើប្រាស់</string>
@@ -1155,6 +1157,8 @@
   <string name="opening_screen_homepage_summary">បើកនៅទំព័រដើម</string>
   <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
   <string name="opening_screen_last_tab_summary">បើក​ផ្ទាំង​ចុងក្រោយ</string>
+  <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
+  <string name="opening_screen_after_four_hours_of_inactivity_summary">បើកនៅលើទំព័រដើម បន្ទាប់ពីបួនម៉ោង</string>
   <!--
     Inactive tabs
 
@@ -1249,6 +1253,12 @@
   <string name="delete_from_history">លុបចេញពីប្រវត្តិ</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">បើកការស្វែងរកផ្ទាំង</string>
+  <!--
+    History
+
+    Text for the button to search all history
+  -->
+  <string name="history_search_1">បញ្ចូលពាក្យស្វែងរក</string>
   <!-- Text for the button to clear all history -->
   <string name="history_delete_all">លុបប្រវត្តិ</string>
   <!-- Text for the snackbar to confirm that multiple browsing history items has been deleted -->
@@ -1257,6 +1267,11 @@
   <string name="history_delete_single_item_snackbar">បានលុប %1$s</string>
   <!-- Context description text for the button to delete a single history item -->
   <string name="history_delete_item">លុប</string>
+  <!--
+    History multi select title in app bar
+    %1$d is the number of bookmarks selected
+  -->
+  <string name="history_multi_select_title">បានជ្រើសរើស %1$d</string>
   <!-- Text for the header that groups the history for today -->
   <string name="history_today">ថ្ងៃ​នេះ</string>
   <!-- Text for the header that groups the history for yesterday -->
@@ -1321,12 +1336,18 @@
   <string name="download_share_url">ចែករំលែក URL</string>
   <!-- Text for the button to share the download file -->
   <string name="download_share_file">ចែករំលែកឯកសារ</string>
+  <!-- Text for the button to rename the download file -->
+  <string name="download_rename_file">ប្ដូរឈ្មោះឯកសារ</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">តើអ្នកពិតជាចង់លុបធាតុដែលបានជ្រើសរើសមែនទេ?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
   <string name="download_delete_multi_select_dialog_confirm">លុប</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">បោះបង់</string>
+  <!-- Title for the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_title">ប្ដូរឈ្មោះឯកសារ</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">ឈ្មោះ</string>
   <string name="download_rename_dialog_cancel_button">បោះបង់</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">កំពុងដំណើរការ</string>
@@ -1378,6 +1399,14 @@
   <string name="webcompat_reporter_label_url">URL</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">បោះបង់</string>
+  <!-- The button text for the preview report button to view a preview of the report. -->
+  <string name="webcompat_reporter_preview_report">មើលមុនរាយការណ៍</string>
+  <!--
+    These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
+
+    Broken site reason text for site doesn’t load
+  -->
+  <string name="webcompat_reporter_reason_load">គេហទំព័រមិនផ្ទុកឡើយ</string>
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">គេហទំព័រត្រូវបានស្នើសុំឱ្យបិទកម្មវិធីទប់ស្កាត់ការផ្សាយពាណិជ្ជកម្ម</string>
   <!-- Close tab button text on the tab crash page -->
@@ -1474,6 +1503,8 @@
     Button label that take the user to the Android App setting
   -->
   <string name="phone_feature_go_to_settings">ចូល​ទៅ​កាន់​ការ​កំណត់</string>
+  <!-- Label that indicates that this option it the recommended one -->
+  <string name="phone_feature_recommended">បាន​ណែនាំ</string>
   <!-- Button label for clearing all the information of site permissions -->
   <string name="clear_permissions">ជម្រះការអនុញ្ញាត</string>
   <!-- Text for the OK button on Clear permissions dialog -->
@@ -1492,6 +1523,8 @@
   <string name="preference_phone_feature_camera">កាមេរ៉ា</string>
   <!-- Preference for altering the microphone access for all websites -->
   <string name="preference_phone_feature_microphone">ម៉ាយក្រូផូន</string>
+  <!-- Preference for altering the location access for all websites -->
+  <string name="preference_phone_feature_location">ទីតាំង</string>
   <!-- Summary of tracking protection preference if tracking protection is set to off -->
   <string name="tracking_protection_off">បិទ</string>
   <!-- Summary of delete browsing data on quit preference if it is set to off -->
