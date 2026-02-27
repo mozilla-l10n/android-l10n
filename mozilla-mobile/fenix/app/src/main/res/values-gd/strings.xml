@@ -2498,6 +2498,8 @@
   <string name="preference_enhanced_tracking_protection_strict_description_4">Dìon o thracadh agus dèanadas nas fheàrr ach bidh làraichean ann nach obraich buileach mar bu chòir.</string>
   <!-- Preference description for the checkbox setting for "baseline" exceptions (a set of content blocking exceptions applied to fix major website breakage). %1$s is the name of the application (e.g. Fenix). -->
   <string name="preference_enhanced_tracking_protection_allow_list_baseline" tools:ignore="UnusedResources" moz:removedIn="144">Leig le %1$s eisgeachdan a chur an sàs gu fèin-obrachail ma bhios feum orra airson duilgheadasan mòra air làrach-lìn a sheachnadh.</string>
+  <!-- Preference description for the checkbox setting for "convenience" exceptions (a set of content blocking exceptions applied to fix convenience site features). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience" tools:ignore="UnusedResources" moz:removedIn="144">Cuir eisgeachdan an sàs gu fèin-obrachail cuideachd ma bhios feum orra airson duilgheadasan beaga a chur ceart agus airson cothrom fhaighinn air gleusan a nì cùisean nas goireasaiche dhut.</string>
   <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
   <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">Càirich duilgheadasan mòra aig làraichean (mholamaid seo)</string>
   <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
@@ -2722,6 +2724,8 @@
   <string name="preferences_passwords_exceptions_remove_all">Sguab gach eisgeachd às</string>
   <!-- Hint for search box in passwords list -->
   <string name="preferences_passwords_saved_logins_search_2">Lorg sna faclan-faire</string>
+  <!-- Content description for the logins navigation bar back button -->
+  <string name="logins_navigate_back_button_content_description">Air ais</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">Làrach</string>
   <!-- The header for the username for a login -->
@@ -2742,6 +2746,26 @@
   <string name="saved_login_clear_username">Falamhaich an t-ainm-cleachdaiche</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">Falamhaich ainm an òstair</string>
+  <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
+  <string name="login_detail_menu_button_content_description">Clàr-taice mion-fhiosrachadh a’ chlàraidh a-steach</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
+  <string name="login_details_navigate_back_button_content_description">Air ais</string>
+  <!-- Edit text for the login detail menu edit button -->
+  <string name="login_detail_menu_edit_button">Deasaich</string>
+  <!-- Delete text for the login detail menu delete button -->
+  <string name="login_detail_menu_delete_button">Sguab às</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the add login view. -->
+  <string name="add_login_navigate_back_button_content_description">Air ais</string>
+  <!-- Content description, used by tools like screenreaders, to press on the save new login button. -->
+  <string name="add_login_save_new_login_button_content_description">Sàbhail login ùr</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the edit login view. -->
+  <string name="edit_login_navigate_back_button_content_description">Air ais</string>
+  <!-- Content description, used by tools like screenreaders, to press on the edit login button. -->
+  <string name="edit_login_button_content_description">Deasaich an login</string>
+  <!-- Content description, used by tools like screenreaders, to press on the add new login button. -->
+  <string name="saved_logins_add_new_login_button_content_description">Cuir login ùr ris</string>
+  <!-- Content description, used by tools like screenreaders, to press on the clear search text button. -->
+  <string name="saved_logins_clear_search_text_button_content_description">Falamhaich an teacsa a tha ri lorg</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">Fosgail an làrach sa bhrabhsair</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -2750,6 +2774,10 @@
   <string name="saved_login_hide_password">Falaich am facal-faire</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their passwords -->
   <string name="logins_biometric_prompt_message_2">Thoir a’ ghlas dheth a shealltainn nam faclan-faire a shàbhail thu</string>
+  <!-- Button for unlocking logins on the biometric lock screen -->
+  <string name="logins_biometric_unlock_button">Thoir a’ ghlas dheth</string>
+  <!-- Button for leaving logins on the biometric lock screen -->
+  <string name="logins_biometric_leave_button">Fàg an-seo</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
   <string name="logins_warning_dialog_title_2">Cùm na faclan-faire agad tèarainte</string>
   <!-- Message of warning dialog if users have no device authentication set up -->
@@ -2770,6 +2798,14 @@
   <string name="saved_logins_sort_strategy_last_used">Cleachdadh mu dheireadh</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Clàr-taice seòrsachadh nam faclan-faire</string>
+  <!--
+    Email Masks
+
+    Title for the Email Masks in the settings menu
+  -->
+  <string name="preferences_email_masks">Masgan puist-d</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">Mol masgan puist-d</string>
   <!--
     Autofill
 
@@ -2800,8 +2836,16 @@
   <string name="preferences_addresses_save_and_autofill_addresses_2">Sàbhail is lìon seòlaidhean</string>
   <!-- Preference summary for saving and filling address data -->
   <string name="preferences_addresses_save_and_autofill_addresses_summary_2">Gabhaidh seo a-staigh àireamhan-fòn is seòlaidhean puist-d</string>
+  <!-- Preference option for syncing addresses across devices. This is displayed when the user is not signed into sync -->
+  <string name="preferences_addresses_sync_addresses_across_devices">Sioncronaich seòlaidhean thar uidheaman</string>
+  <!-- Preference option for syncing addresses across devices. This is displayed when the user is signed into sync -->
+  <string name="preferences_addresses_sync_addresses">Sioncronaich seòlaidhean</string>
+  <!-- Content description navigating back from autofill settings screen. -->
+  <string name="autofill_settings_navigate_back_button_content_description">Air ais</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">Cuir cairt ris</string>
+  <!-- Content description for the "credit card feature" top bar back button -->
+  <string name="credit_cards_navigate_back_button_content_description">Air ais</string>
   <!-- Title of the "Edit card" screen -->
   <string name="credit_cards_edit_card">Deasaich a’ chairt</string>
   <!-- The header for the card number of a credit card -->
@@ -2854,6 +2898,8 @@
   <string name="addresses_manage_addresses">Stiùirich na seòlaidhean</string>
   <!-- The header for the name of an address. Name represents a person's full name, typically made up of a first, middle and last name, e.g. John Joe Doe. -->
   <string name="addresses_name">Ainm</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The organization's name related to the address helps in distinguishing addresses used for business or personal purposes. -->
+  <string name="addresses_organization" tools:ignore="UnusedResources">Buidheann</string>
   <!-- The header for the street address of an address -->
   <string name="addresses_street_address">Seòladh sràide</string>
   <!-- The header for the city of an address -->
@@ -2870,6 +2916,10 @@
   <string name="addresses_phone">Fòn</string>
   <!-- The header for the email of an address -->
   <string name="addresses_email">Post-d</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used for addresses in Iran, Mexico. -->
+  <string name="addresses_neighborhood" tools:ignore="UnusedResources">Coimhearsnachd</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Village or Township field, specific to Malaysia is crucial for addresses in rural areas. -->
+  <string name="addresses_village_township" tools:ignore="UnusedResources">Baile</string>
   <!-- The text for the "Save" button for saving an address -->
   <string name="addresses_save_button">Sàbhail</string>
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
@@ -2934,6 +2984,8 @@
   <string name="quick_settings_sheet_secure_connection_2">Tha an ceangal tèarainte</string>
   <!-- Label that indicates a site is using a insecure connection -->
   <string name="quick_settings_sheet_insecure_connection_2">Chan eil an ceangal tèarainte</string>
+  <!-- Label that indicates a site is displaying a local document -->
+  <string name="quick_settings_sheet_local_page">Tha an duilleag seo ga stòradh air an uidheam agad.</string>
   <!-- Label to clear site data -->
   <string name="clear_site_data">Falamhaich na briosgaidean is dàta na làraich</string>
   <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site. %s is the domain of the site. -->
@@ -3083,10 +3135,17 @@
     Search suggestions title for Firefox Suggest.
   -->
   <string name="firefox_suggest_header" tools:ignore="BrandUsage">Firefox Suggest</string>
+  <!--
+    Search suggestions title for trending search suggestions.
+    %s is a placeholder for the name of the search engine providing the trending search suggestions.
+  -->
+  <string name="trending_searches_header_2">A’ treandadh air %s</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Lorg le Google</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">Lorg le %s</string>
+  <!-- Title for recent search suggestions. -->
+  <string name="recent_searches_header">Luirg o chionn goirid</string>
   <!--
     Default browser experiment
 
