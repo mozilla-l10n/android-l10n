@@ -2748,6 +2748,8 @@
   <string name="google_search_engine_suggestion_header">Búsqueda de Google</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">Buscar con %s</string>
+  <!-- Title for recent search suggestions. -->
+  <string name="recent_searches_header">Búsquedas recientes</string>
   <!--
     Default browser experiment
 
@@ -2762,6 +2764,12 @@
   <string name="radio_preference_info_content_description">Clic para más detalles</string>
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">Navegar hacia arriba</string>
+  <!--
+    Pocket recommended stories
+
+    Header text for a section on the home screen.
+  -->
+  <string name="pocket_stories_header_2">Historias</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">Patrocinado</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
@@ -3069,6 +3077,8 @@
   <string name="protection_panel_num_trackers_blocked">Rastreadores bloqueados: %d</string>
   <!-- Text for when no trackers have been blocked. -->
   <string name="protection_panel_no_trackers_blocked">No se encontraron rastreadores</string>
+  <!-- Title text for the protection panel permissions section. -->
+  <string name="protection_panel_permissions_title">Permisos</string>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
@@ -3263,6 +3273,18 @@
   -->
   <string name="glean_debug_tools_title">Herramientas de depuración de Glean</string>
   <!--
+    Debug drawer region tools
+
+    Title of the Region tools in the Debug Drawer.
+    This tool allows temporarily overriding the home region (user's default locale)
+    and the current region (device's detected location) for testing purposes.
+  -->
+  <string name="debug_drawer_region_tools_title">Herramientas de región</string>
+  <!-- The description of the Region tools in the Debug Drawer -->
+  <string name="debug_drawer_regin_tools_description">Reemplazar temporalmente los valores de inicio y de región actual para realizar pruebas.</string>
+  <!-- The text label for displaying home region. -->
+  <string name="debug_drawer_home_region_label">Región de origen</string>
+  <!--
     Messages explaining how to exit fullscreen mode
 
     Message shown to explain how to exit fullscreen mode when gesture navigation is enabled.
@@ -3319,11 +3341,45 @@
   <!-- TextField Design System Component -->
 
   <!--
+    ===== Setup checklist feature: Subtitles for 5 steps (Large screen devices don't support toolbar placement) =====
+
+    Subtitle for a setup checklist with 5 steps initial state. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_subtitle_5_steps_initial_state">Completa los 5 pasos para configurar %1$s y disfrutar de la mejor experiencia de navegación.</string>
+  <!-- Subtitle for a setup checklist with 5 steps when the first task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_first_step">¡Buen comienzo! Has completado 1 de los 5 pasos.</string>
+  <!-- Subtitle for the setup checklist when the second task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_second_step">Has completado 2 de los 5 pasos. ¡Buen progreso!</string>
+  <!-- Subtitle for a setup checklist with 5 steps when three of the tasks are completed. -->
+  <string name="setup_checklist_subtitle_5_steps_third_step">¡Ya estás a medio camino! Tres pasos completados y 2 por completar.</string>
+  <!-- Subtitle for a setup checklist with 5 steps when the fifth task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_fourth_step">¡Ya casi está listo! Estás a 1 solo un paso de la meta.</string>
+  <!-- Subtitle for a setup checklist with 5 steps completed state. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="setup_checklist_subtitle_5_steps_completed_state">Has completado los 5 pasos de configuración. Disfruta de la velocidad, la privacidad y la seguridad de %1$s.</string>
+  <!--
+    ===== Setup checklist feature: Group titles =====
+
+    The title of the 'essentials' group in the setup checklist. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_group_essentials">%1$s elementos esenciales</string>
+  <!-- The title of the 'customize' group in the setup checklist. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="setup_checklist_group_customize">Personaliza tu %1$s</string>
+  <!-- The title of the 'helpful tools' group in the setup checklist -->
+  <string name="setup_checklist_group_helpful_tools">Herramientas útiles</string>
+  <!--
+    ===== Setup checklist feature: Button =====
+
+    Text for the 'remove' button for the setup checklist
+  -->
+  <string name="setup_checklist_button_remove">Eliminar lista de verificación</string>
+  <!--
     ===== Setup checklist feature: Accessibility =====
 
     Accessibility description for a check mark on a completed task
   -->
   <string name="a11y_completed_task_description">Tarea completada</string>
+  <!-- Title text for the contextual feature recommendation (CFR) suggesting the user enable a screen lock to protect private tabs -->
+  <string name="private_tab_cfr_title">¿Usar bloqueo de pantalla para ocultar pestañas privadas?</string>
   <!-- Negative button text for the contextual feature recommendation (CFR) dismissing the screen lock suggestion -->
   <string name="private_tab_cfr_negative">No, gracias</string>
   <!-- Positive button text for the contextual feature recommendation (CFR) enabling screen lock for private tabs -->
