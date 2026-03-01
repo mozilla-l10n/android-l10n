@@ -2377,6 +2377,8 @@
   <string name="preference_accessibility_text_size_summary">Dèan an teacsa air làraichean-lìn nas motha no nas lugha</string>
   <!-- Title for Accessibility Text Size Scaling Preference -->
   <string name="preference_accessibility_font_size_title">Meud a’ chrutha-chlò</string>
+  <!-- %d is the percentage of the slide bar for setting the text font size and %% will be announced as "percent". -->
+  <string name="a11y_preference_accessibility_font_size_percentage" tools:ignore="UnusedResources" moz:removedIn="148">%d %%.</string>
   <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
   <string name="preference_accessibility_auto_size_2">Ath-mheudachadh fèin-obrachail a’ chrutha-chlò</string>
   <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
@@ -2666,6 +2668,46 @@
   <string name="preference_doh_default_protection_info_3">Cleachd solaraiche ionadail, ma ghabhas sin a dhèanamh. %1$s</string>
   <!-- Bullet point 4 for "Default Protection" information page under "DNS over HTTPS" -->
   <string name="preference_doh_default_protection_info_4">Cuir dheth e nuair a bhios VPN, gleus smachd nam pàrant no poileasaidhean enterprise an gnìomh</string>
+  <!-- Bullet point 5 for "Default Protection" information page under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). %2$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_default_protection_info_5">Cuir dheth nuair a dh’innseas lìonra dha %1$s nach bu chòir dha DNS tèarainte a chleachdadh. %2$s</string>
+  <!-- Title displayed for "Increased Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection">Dìon leasaichte</string>
+  <!-- Summary displayed for "Increased Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_summary">’S ann agad-sa a tha smachd air cuin a thèid DNS tèarainte a chleachdadh agus is urrainn dhut fhèin solaraiche a thaghadh.</string>
+  <!-- Bullet point 1 for "Increased Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_info_1">Cleachd an solaraichte a thaghas tusa</string>
+  <!-- Bullet point 2 for "Increased Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_info_2">Na cleachd am fuasglaiche DNS bunaiteach agad-sa ach ma bhios duilgheadas le solaraiche an DNS tèarainte</string>
+  <!-- Title displayed for "Max Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection">An dìon as treasa</string>
+  <!-- Summary displayed for "Max Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_doh_max_protection_summary">Cleachdaidh %1$s DNS tèarainte an-còmhnaidh. Chì thu rabhadh tèaraineachd mus cleachd sinn DNS an t-siostaim agad.</string>
+  <!-- Bullet point 1 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_1">Na cleachd ach an solaraichte a thaghas tusa</string>
+  <!-- Bullet point 2 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_2">Thoir dhomh rabhadh an-còmhnaidh mur eil DNS tèarainte ri fhaighinn</string>
+  <!-- Bullet point 3 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_3">Mur eil DNS tèarainte ri fhaighinn, cha tèid làraichean a luchdadh no chan obraich iad mar bu chòir</string>
+  <!-- Title displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off">Dheth</string>
+  <!-- Summary displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off_summary">Cleachd am fuasglaiche DNS bunaiteach agad</string>
+  <!-- Text displayed above provider dropdown under "DNS over HTTPS" -->
+  <string name="preference_doh_choose_provider">Tagh solaraiche</string>
+  <!-- Text displayed for "Default provider" under "DNS over HTTPS" providers -->
+  <string name="preference_doh_provider_default">(a’ bhun-roghainn)</string>
+  <!-- Text displayed for "Custom" under "DNS over HTTPS" providers -->
+  <string name="preference_doh_provider_custom">Gnàthaichte</string>
+  <!-- Text displayed for "Custom provider" dialog under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_title">Solaraiche gnàthaichte</string>
+  <!-- Text displayed above provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_textfield">Solaraiche</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL does not start with "https://" or its scheme is not "https" -->
+  <string name="preference_doh_provider_custom_dialog_error_https">Feumaidh an URL tòiseachadh le “https://”</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL is invalid -->
+  <string name="preference_doh_provider_custom_dialog_error_invalid">URL mì-dhligheach</string>
+  <!-- Cancel button text for provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_cancel">Sguir dheth</string>
   <!-- Add button text for provider textfield under "DNS over HTTPS" -->
   <string name="preference_doh_provider_custom_dialog_add">Cuir ris</string>
   <!-- Preference to access list of login exceptions that we don't use DNS over HTTPS -->
@@ -2854,6 +2896,10 @@
   <string name="preferences_email_masks_suggest_learn_more">Barrachd fiosrachaidh</string>
   <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
   <string name="preferences_email_masks_manage_title">Stiùirich masgan puist-d</string>
+  <!-- The message displayed when a user has used all of their free-tier email masks, so now the application will choose an existing one at random. -->
+  <string name="email_masks_max_free_tier_reached">Chuir thu gu feum na 5 masgan puist-d an-asgaidh agad agus thagh sinn fear dhut airson ath-chleachdadh.</string>
+  <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
+  <string name="email_masks_error_retrieving_masks">Chan eil na masgan puist-d ri làimh an-dràsta fhèin. Feuch ris a-rithist an ceann beagan mhionaidean.</string>
   <!--
     Autofill
 
@@ -2998,6 +3044,10 @@
   <string name="addresses_pin" tools:ignore="UnusedResources">Prìnich</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The postal code field is universally used in address forms to specify the area code for mail sorting. -->
   <string name="addresses_postal_code" tools:ignore="UnusedResources">Còd-puist</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. the Eircode field, specific to Ireland is a unique postal code system that helps in precise location identification. -->
+  <string name="addresses_eircode" tools:ignore="UnusedResources">Éirchód</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in cases we want to only display the word "Country" over "Country or Region". -->
+  <string name="addresses_country_only" tools:ignore="UnusedResources">Dùthaich</string>
   <!-- The text for the "Save" button for saving an address -->
   <string name="addresses_save_button">Sàbhail</string>
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
@@ -3151,6 +3201,17 @@
   <string name="synced_tabs_expand_group">Leudaich buidheann nan tabaichean sioncronaichte</string>
   <!-- Content description for collapsing a group of synced tabs. -->
   <string name="synced_tabs_collapse_group">Co-theannaich buidheann nan tabaichean sioncronaichte</string>
+  <!--
+    Top Sites
+
+    Title text displayed for the shortcuts home screen section.
+  -->
+  <string name="homepage_shortcuts_title">Ath-ghoiridean</string>
+  <!--
+    Context description text for the "Show all" button in the shortcuts home screen section
+    which navigates the user to a screen displaying all the shortcuts.
+  -->
+  <string name="homepage_shortcuts_show_all_content_description">Seall a h-uile ath-ghoirid</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Tha uiread a dh’ath-ghoiridean agad ’s a tha ceadaichte</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3189,6 +3250,11 @@
     Title text displayed in the tabs tray when a tab has been unused for 14 days.
   -->
   <string name="inactive_tabs_title">Tabaichean neo-ghnìomhach</string>
+  <!--
+    Text displayed in the tabs tray, indicating the number of inactive tabs.
+    %d is the number of inactive tabs.
+  -->
+  <string name="inactive_tabs_num_items">Nithean: %d</string>
   <!-- Content description for closing all inactive tabs -->
   <string name="inactive_tabs_delete_all">Dùin gach taba neo-ghnìomhach</string>
   <!-- Content description for expanding the inactive tabs section. -->
@@ -3238,6 +3304,19 @@
   <string name="radio_preference_info_content_description">Briog an-seo airson mion-fhiosrachadh</string>
   <!-- Content description for the action bar "up" button -->
   <string name="action_bar_up_description">Seòl suas</string>
+  <!--
+    Pocket recommended stories
+
+    Header text for a section on the home screen.
+  -->
+  <string name="pocket_stories_header_2">Sgeulachdan</string>
+  <!--
+    Context description text for the "Discover more" button in the stories home screen section
+    which navigates the user to a screen displaying more stories.
+  -->
+  <string name="stories_discover_more_content_description">Fidir barrachd sgeulachdan</string>
+  <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
+  <string name="stories_back_button_content_description">Air ais</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">Sponsairichte</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
@@ -3515,6 +3594,68 @@
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
   <string name="download_language_file_dialog_negative_button_text">Sguir dheth</string>
   <!--
+    Unified Trust Panel
+
+    Title text for the protection panel banner when the site is not secure.
+  -->
+  <string name="protection_panel_banner_not_secure_title">Bi faiceallach air an làrach seo</string>
+  <!-- Description text for the protection panel banner when the site is not secure. -->
+  <string name="protection_panel_banner_not_secure_description">Chan eil an ceangal agad tèarainte.</string>
+  <!-- Title text for the protection panel banner when tracking protection is disabled. -->
+  <string name="protection_panel_banner_not_protected_title">Chuir thu an dìon dheth</string>
+  <!--
+    Description text for the protection panel banner when tracking protection is disabled.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="protection_panel_banner_not_protected_description">Chan eil %s ri caithris. Mholamaid dhut an dìon a chur air a-rithist.</string>
+  <!--
+    Title text for the protection panel banner when tracking protection is enabled.
+    %s is the name of the app (for example "Firefox").
+  -->
+  <string name="protection_panel_banner_protected_title">Tha %s ri caithris</string>
+  <!-- Description text for the protection panel banner when tracking protection is enabled. -->
+  <string name="protection_panel_banner_protected_description">Tha thu fo fìon. Ma mhothaicheas sinn do rud sam bith, innsidh sinn dhut.</string>
+  <!-- Label text for the Enhanced Tracking Protection toggle. -->
+  <string name="protection_panel_etp_toggle_label">Dìon adhartach o thracadh</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">Tracaichean air am bacadh: %d</string>
+  <!-- Text for when no trackers have been blocked. -->
+  <string name="protection_panel_no_trackers_blocked">Cha deach tracaiche a lorg</string>
+  <!-- Title text for the protection panel permissions section. -->
+  <string name="protection_panel_permissions_title">Ceadan</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the trackers blocked panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_total_num_trackers_blocked">Tracaichean air am bacadh: %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
+  <!--
+    Description text for a dialog confirming whether the user wants to delete all data for current site.
+    %s is a placeholder for the base domain of website.
+  -->
+  <string name="clear_site_data_dialog_description"><![CDATA[Ma bheir thu air falbh briosgaidean is dàta na làraich airson <b>%s</b>, dh’fhaoidte gun dèid do chlàradh a-mach à làraichean-lìn agus gun dèid cairtean seopadaireachd fhalamhachadh.]]></string>
+  <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
+  <string name="clear_site_data_dialog_positive_button_text">Falamhaich</string>
+  <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
+  <string name="clear_site_data_dialog_negative_button_text">Sguir dheth</string>
+  <!-- Text for the connection security panel when the site is secure. -->
+  <string name="connection_security_panel_secure">Ceangal tèarainte</string>
+  <!-- Text for the connection security panel when the site is not secure. -->
+  <string name="connection_security_panel_not_secure">Chan eil an ceangal tèarainte</string>
+  <!--
+    Text for the connection security panel to indicate who the certificate was verified by.
+    %s is a placeholder for the name of the certificate authority that issued the certificate.
+  -->
+  <string name="connection_security_panel_verified_by">Air a dhearbhadh le %s</string>
+  <!--
     Debug drawer
 
     The user-facing title of the Debug Drawer feature.
@@ -3641,6 +3782,14 @@
   <!-- Content description for delete button. %s is the username of the login. -->
   <string name="debug_drawer_logins_delete_login_button_content_description">Sguab às an clàradh a-steach aig an ainm-chleachdaiche %s</string>
   <!--
+    Debug drawer addresses
+
+    The title of the Addresses feature in the Debug Drawer.
+  -->
+  <string name="debug_drawer_addresses_title">Seòlaidhean</string>
+  <!-- The title of the header for the section for managing addresses. -->
+  <string name="debug_drawer_addresses_management_header">Stiùirich na seòlaidhean</string>
+  <!--
     Debug drawer "contextual feature recommendation" (CFR) tools
 
     The title of the CFR Tools feature in the Debug Drawer
@@ -3674,6 +3823,26 @@
     Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
   -->
   <string name="beta_feature">Beta</string>
+  <!--
+    Root certificate expiration warnings
+
+    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
+
+    Homepage card button to open Google Play Store. "Update" is a verb.
+  -->
+  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">Ùraich an-dràsta</string>
+  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">Ùraich am Firefox agad</string>
+  <!-- Homepage card message about old Firefox version -->
+  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">Tha teisteanas root agad a dh’fhalbhas an ùine air air a’ 14mh latha dhen Mhàrt agus chan obraich cuid a ghleusan tuilleadh ri linn sin.</string>
+  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
+  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">Ùraich ron 14mh latha dhen Mhàrt</string>
+  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">Tha teisteanas root agad a dh’fhalbhas an ùine air agus chan obraich an tionndadh agadsa dhe Firefox tuilleadh ri linn sin.</string>
+  <!-- Homepage card title about old Firefox version -->
+  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">Nas lugha na 7 làithean air fhàgail airson ùrachadh</string>
+  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hcw2_message" tools:ignore="BrandUsage,UnusedResources">Chan obraich tuilleadain is gleusan Firefox eile tuilleadh a-mach on 14mh latha dhen Mhàrt a chionn ’s gu bheil an ùine a’ falbh air teisteanas root.</string>
   <!-- TextField Design System Component -->
 
   <!-- ==== Terms of use pop up prompt ==== -->
