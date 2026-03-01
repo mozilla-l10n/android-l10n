@@ -3624,6 +3624,8 @@
   <string name="protection_panel_num_trackers_blocked">Tracaichean air am bacadh: %d</string>
   <!-- Text for when no trackers have been blocked. -->
   <string name="protection_panel_no_trackers_blocked">Cha deach tracaiche a lorg</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">Chan eil tracaichean air am bacadh</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">Ceadan</string>
   <!--
@@ -3808,6 +3810,28 @@
   -->
   <string name="glean_debug_tools_title">Innealan dì-bhugachadh Glean</string>
   <!--
+    Debug drawer region tools
+
+    Title of the Region tools in the Debug Drawer.
+    This tool allows temporarily overriding the home region (user's default locale)
+    and the current region (device's detected location) for testing purposes.
+  -->
+  <string name="debug_drawer_region_tools_title">Innealan na roinn-dùthcha</string>
+  <!-- The description of the Region tools in the Debug Drawer -->
+  <string name="debug_drawer_regin_tools_description">Tar-àithnidh seo an roinn-dachaigh agus an roinn-dùthcha làithreach rè seal airson probhadh.</string>
+  <!-- The text label for displaying home region. -->
+  <string name="debug_drawer_home_region_label">Roinn-dachaigh</string>
+  <!-- The text label for displaying current region. -->
+  <string name="debug_drawer_current_region_label">An roinn-dùthcha làithreach</string>
+  <!-- The text field label for overriding home region. -->
+  <string name="debug_drawer_override_home_region_label">Tar-àithn an roinn-dachaigh</string>
+  <!-- The text field label for overriding current region. -->
+  <string name="debug_drawer_override_current_region_label">Tar-àithn an roinn-dùthcha làithreach</string>
+  <!-- The title of the button for overriding home and current region. -->
+  <string name="debug_drawer_override_region">Tar-àithn an roinn-dachaigh is roinn-dùthcha làithreach</string>
+  <!-- The title of the button for overriding home region permanently. -->
+  <string name="debug_drawer_override_home_region_permanently">Tar-àithn an roinn-dachaigh gu buan</string>
+  <!--
     Messages explaining how to exit fullscreen mode
 
     Message shown to explain how to exit fullscreen mode when gesture navigation is enabled.
@@ -3851,12 +3875,88 @@
   <string name="certificate_warning_homepage_card_hcw3_title" tools:ignore="BrandUsage,UnusedResources">An cothrom mu dheireadh am Firefox agad ùrachadh</string>
   <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
   <string name="certificate_warning_homepage_card_hcw3_message" tools:ignore="BrandUsage,UnusedResources">Chan obraich an tionndadh agadsa dhe Firefox tuilleadh a-mach on 14mh latha dhen Mhàrt a chionn ’s gu bheil an ùine a’ falbh air teisteanas root.</string>
+  <!-- Push notification title about old Firefox version. "Update" is a noun. -->
+  <string name="certificate_warning_push_notification_update_recommended_title" tools:ignore="UnusedResources">Mholamaid dhut ùrachadh</string>
+  <!-- Push notification message about old Firefox version -->
+  <string name="certificate_warning_push_notification_pnr1_message" tools:ignore="UnusedResources">Chan obraich na tuilleadain agus cuid a ghleusan tuilleadh a-mach on 14mh latha dhen Mhàrt.</string>
+  <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">Tha thu a’ cleachdadh tionndadh seann-tionndadh dhe Firefox</string>
+  <!-- Push notification message about old Firefox version. "Update" is a verb. -->
+  <string name="certificate_warning_push_notification_pnw2_message" tools:ignore="UnusedResources">Ùraich ron 14mh latha dhen Mhàrt e airson ’s gun obraich na tuilleadain is gleusan eile fhathast.</string>
+  <!-- Push notification message about old Firefox version -->
+  <string name="certificate_warning_push_notification_pnw3_message" tools:ignore="UnusedResources">Chan obraich cuid a ghleusan tuilleadh o màireach.</string>
   <!-- TextField Design System Component -->
 
+  <!--
+    Setup checklist feature
+
+    ===== Setup checklist feature: Title =====
+
+    Title for the setup checklist feature when the state is 'incomplete'. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_title_state_incomplete">Coilean suidheachadh %1$s</string>
+  <!-- Title for the setup checklist feature when the state is 'completed' -->
+  <string name="setup_checklist_title_state_completed">Meal do naidheachd!</string>
+  <!--
+    ===== Setup checklist feature: Subtitles for 3 steps =====
+
+    Subtitle for a setup checklist with 3 steps initial step. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_subtitle_3_steps_initial_state">Coilean na 3 ceuman seo is suidhich %1$s airson brod a’ bhrabhsaidh.</string>
+  <!-- Subtitle for a setup checklist with 3 steps when the first task is completed. -->
+  <string name="setup_checklist_subtitle_3_steps_first_step">Deagh-thòiseachadh! Choilean thu ceum 1 à 3.</string>
+  <!-- Subtitle for a setup checklist with 3 steps when two of the tasks are completed. -->
+  <string name="setup_checklist_subtitle_3_steps_second_step">Cha mhòr! Rinn thu a’ chùis air dà cheum is chan eil ach aonan ri ghabhail.</string>
+  <!--
+    ===== Setup checklist feature: Task titles =====
+
+    The title of the default browser task for the setup checklist
+  -->
+  <string name="setup_checklist_task_default_browser">Suidhich mar am brabhsair bunaiteach</string>
+  <!-- The title of the sign-in task for the setup checklist -->
+  <string name="setup_checklist_task_account_sync">Clàraich a-steach dhan chunntas agad</string>
+  <!-- The title of the theme selection task for the setup checklist -->
+  <string name="setup_checklist_task_theme_selection">Tagh ùrlar</string>
+  <!-- The title of the toolbar selection task for the setup checklist -->
+  <string name="setup_checklist_task_toolbar_selection">Tagh àite dhan bhàr-inneal</string>
+  <!-- The title of the explore extensions task for the setup checklist -->
+  <string name="setup_checklist_task_explore_extensions">Rùraich na leudachain</string>
+  <!--
+    ===== Setup checklist feature: Group titles =====
+
+    The title of the 'essentials' group in the setup checklist. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_group_essentials">Stuthan riatanach airson %1$s</string>
+  <!--
+    Private browsing mode authentication screen
+
+    Label for the secondary action to exit private browsing mode
+  -->
+  <string name="pbm_authentication_leave_private_tabs">Fàg na tabaichean prìobhaideach</string>
+  <!-- Label for the primary action button to unlock private tabs -->
+  <string name="pbm_authentication_unlock">Thoir a’ ghlas dheth</string>
+  <!-- Title text instructing the user to unlock private tabs -->
+  <string name="pbm_authentication_unlock_private_tabs">Thoir a’ ghlas far nan tabaichean prìobhaideach</string>
+  <!-- Content Description for the button to open Settings Search (to search through settings). -->
+  <string name="settings_search_button_content_description">Putan lorg nan roghainnean</string>
   <!-- ==== Terms of use pop up prompt ==== -->
 
   <!-- ==== Experiment strings. ==== -->
 
+  <!-- A title for the popup prompt. -->
+  <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">Teirmichean a’ chleachdaidh</string>
+  <!--
+    A title for the popup prompt.
+    %1$s is the product name "Firefox"
+  -->
+  <string name="terms_of_use_prompt_title_option_b" tools:ignore="UnusedResources">Brath o %1$s</string>
+  <!--
+    Copy for the Terms of Use popup prompt body line two.
+    %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
+  -->
+  <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">Gheibh thu barrachd fiosrachaidh %1$s.</string>
+  <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
+  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">an-seo</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
