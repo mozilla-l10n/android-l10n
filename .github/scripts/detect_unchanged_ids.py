@@ -47,33 +47,43 @@ def main():
     )
     args = parser.parse_args()
 
+    def normalize_keys(strings, root_path):
+        """Return a copy of strings with file paths made relative to root_path."""
+        normalized = {}
+        for key, value in strings.items():
+            file_path, string_id = key.split(":", 1)
+            rel_path = os.path.relpath(file_path, root_path)
+            normalized[f"{rel_path}:{string_id}"] = value
+        return normalized
+
     toml_path = args.toml_path
     base = StringExtraction(os.path.join(args.base_path, toml_path))
     base.extractStrings()
-    base_strings = base.getTranslations()
+    base_strings = normalize_keys(base.getTranslations(), args.base_path)
 
     head = StringExtraction(os.path.join(args.head_path, toml_path))
     head.extractStrings()
-    head_strings = head.getTranslations()
+    head_strings = normalize_keys(head.getTranslations(), args.head_path)
 
     # Find differences
     errors = {
         key: {"previous": base_strings[key], "new": head_strings[key]}
         for key in base_strings.keys()
         if key in head_strings
-        and base_strings[key]["text"] != head_strings[key]["text"]
+        and base_strings[key]["value"] != head_strings[key]["value"]
     }
 
     errors_json = {toml_path: defaultdict(dict)}
     for string_id in errors.keys():
         filename, id = string_id.split(":")
-        error_msg = f"String was changed without a new ID. Previous value: `{errors[string_id]['previous']}`"
+        error_msg = f"String was changed without a new ID. Previous value: `{errors[string_id]['previous']['value']}`"
         if id in errors_json[toml_path].get(filename, {}):
             errors_json[toml_path][filename]["errors"][id].append(error_msg)
         else:
             errors_json[toml_path][filename][id] = {
                 "errors": [error_msg],
-                "text": errors[string_id]["new"],
+                "value": errors[string_id]["new"]["value"],
+                "comment": errors[string_id]["new"].get("comment", ""),
             }
 
     has_errors = False
