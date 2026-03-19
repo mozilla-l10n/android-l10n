@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 """
-Prune localization files after updates from Firefox branches.
+Prune localization files after updates from supported branches.
 
 Expects to find `_data/[project]/[branch]/.json` for each project,
 and removes any other JSON data files in `_data/`.
