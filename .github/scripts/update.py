@@ -51,9 +51,7 @@ def update(
     print(f"source: {branch} at {fx_root}")
     fx_root = abspath(fx_root)
 
-    source_dirs: set[str] = set()
     source_files: set[str] = set()
-
 
     for cfg_name in config_files:
         cfg_path = join(fx_root, cfg_name)
@@ -123,7 +121,7 @@ def update(
     with open(data_path, "w") as file:
         json.dump(messages, file, indent=2, sort_keys=True)
 
-    return new_files, updated_files, sorted(list(source_dirs))
+    return new_files, updated_files
 
 
 def write_commit_msg(args, new_files: int, updated_files: int):
@@ -176,17 +174,8 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    new_files, updated_files, source_dirs = update(
+    new_files, updated_files = update(
         cfg_automation, args.project, args.branch, args.firefox, args.configs
     )
-
-    if cfg_automation["paths"] != source_dirs:
-        # Write back updated configuration, making sure that the list of paths
-        # is a superset of the configuration across all branches.
-        cfg_automation["paths"] = sorted(
-            list(set(cfg_automation["paths"] + source_dirs))
-        )
-        with open(config_file, "w") as file:
-            json.dump(cfg_automation, file, indent=2, sort_keys=True)
 
     write_commit_msg(args, new_files, updated_files)
