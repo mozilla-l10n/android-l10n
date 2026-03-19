@@ -1,0 +1,122 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+name: Update android-components
+
+on:
+  schedule:
+    - cron: "5 15 * * 1,4"
+  workflow_dispatch:
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      branches: ${{ steps.config.outputs.branches }}
+      paths: ${{ steps.config.outputs.paths }}
+    steps:
+      - name: Checkout l10n repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+          path: l10n
+          ref: main
+
+      - name: Get list of branches & paths
+        id: config
+        run: |
+          echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
+          {
+            echo 'paths<<EOF'
+            jq -r ".paths[]" < l10n/.github/update-config.json
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+  update:
+    needs: prepare
+    strategy:
+      max-parallel: 1
+      matrix:
+        ref: ${{ fromJSON(needs.prepare.outputs.branches) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout android-l10n repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: l10n
+          persist-credentials: false
+          ref: main
+
+      - name: Checkout mobile-android repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          path: source
+          persist-credentials: false
+          repository: mozilla-firefox/firefox
+          ref: ${{ matrix.ref }}
+          sparse-checkout: |
+            ${{ needs.prepare.outputs.paths }}
+
+      - name: Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: l10n/.github/scripts/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r l10n/.github/scripts/requirements.txt
+
+      - name: Run update.py
+        run: >
+          python l10n/.github/scripts/update.py
+          --project android-components
+          --branch ${{ matrix.ref }}
+          --commit $(cd source && git rev-parse --short HEAD)
+          --firefox source
+          --configs mobile/android/android-components/l10n.toml
+        working-directory: l10n
+
+  cleanup:
+    needs: update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout android-l10n repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        with:
+          persist-credentials: false
+          path: l10n
+          ref: main
+
+      - name: Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: l10n/.github/scripts/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r l10n/.github/scripts/requirements.txt
+
+      - name: Run prune.py
+        run: python l10n/.github/scripts/prune.py
+        working-directory: l10n
+
+      - name: Run linter
+        run: >
+          python l10n/.github/scripts/update_config.py
+          --toml l10n/firefox.toml
+          --config l10n/.github/scripts/linter_config.json
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0
+        with:
+          token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
+          path: l10n
+          branch: ac_l10n_updates
+          author: l10n-bot <actions@users.noreply.github.com>
+          commit-message: "Update ac l10n from mobile-android branches"
+          title: "Update ac l10n from mobile-android branches"
+          body: "Automated update from mobile-android branches targeting ac"
+          labels: l10n-bot
