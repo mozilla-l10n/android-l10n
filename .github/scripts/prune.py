@@ -52,7 +52,7 @@ def prune_file(path: str, msg_refs: set[str]):
 def prune(project: str, branches: list[str]):
     cwd = getcwd()
 
-    project_path = join(cwd, f"mozilla-mobile-test/{project}")
+    project_path = join(cwd, f"mozilla-mobile/{project}")
     _data_path = f"_data/{project}"
 
     removed_data = []
