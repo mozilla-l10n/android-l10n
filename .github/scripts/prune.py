@@ -88,7 +88,8 @@ def prune(project: str, branches: list[str]):
     if expected:
         exit(f"Incomplete data! Not found: {expected}")
 
-    for ref_path in L10nDiscoverPaths(cwd, ref_root=project_path).ref_paths:
+    cfg_path = join(project_path, "l10n.toml")
+    for ref_path in L10nConfigPaths(cfg_path).ref_paths:
         path = relpath(ref_path, cwd)
         if path not in refs:
             print(f"remove {path}")
