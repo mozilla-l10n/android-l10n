@@ -177,7 +177,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     new_files, updated_files = update(
-        cfg_automation, args.project, args.branch, args.firefox, args.configs
+        cfg_automation, args.project, args.branch, args.source, args.configs
     )
 
     write_commit_msg(args, new_files, updated_files)
