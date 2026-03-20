@@ -163,7 +163,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--commit", help="A commit id for the branch.")
     parser.add_argument(
-        "--firefox", required=True, help="Path to the root of the Firefox source tree."
+        "--source", required=True, help="Path to the root of the Firefox source tree."
     )
     parser.add_argument(
         "--configs",
