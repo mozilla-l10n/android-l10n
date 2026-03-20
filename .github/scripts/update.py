@@ -66,7 +66,9 @@ def update(
     new_files = 0
     updated_files = 0
     for fx_path in source_files:
-        rel_path = "mozilla-mobile" + relpath(fx_path, fx_root).replace("mobile/android", "")
+        l10n_path = "mozilla-mobile"
+        rel_path = join(l10n_path, relpath(fx_path, fx_root).replace("mobile/android", ""))
+
         makedirs(dirname(rel_path), exist_ok=True)
 
         try:
