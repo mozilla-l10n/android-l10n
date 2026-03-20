@@ -65,7 +65,7 @@ def update(
     new_files = 0
     updated_files = 0
     for fx_path in source_files:
-        l10n_path = "mozilla-mobile"
+        l10n_path = "mozilla-mobile-test"
         rel_path = join(l10n_path, relpath(fx_path, fx_root).replace("mobile/android/", ""))
 
         makedirs(dirname(rel_path), exist_ok=True)
@@ -141,7 +141,10 @@ def write_commit_msg(args, new_files: int, updated_files: int):
 
 
 if __name__ == "__main__":
-    config_file = join(".github", "update-config.json")
+    curr_dir = dirname(abspath(__file__))
+    repo_root = abspath(join(curr_dir, "..", ".."))
+    config_file = join(repo_root, ".github", "update-config.json")
+
     with open(config_file) as f:
         cfg_automation = json.load(f)
 
