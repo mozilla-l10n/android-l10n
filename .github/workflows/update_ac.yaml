@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       branches: ${{ steps.config.outputs.branches }}
-      paths: ${{ steps.config.outputs.paths }}
+      path: ${{ steps.config.outputs.path }}
     steps:
       - name: Checkout l10n repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
@@ -23,15 +23,11 @@ jobs:
           path: l10n
           ref: main
 
-      - name: Get list of branches & paths
+      - name: Get list of branches & android-components path
         id: config
         run: |
           echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
-          {
-            echo 'paths<<EOF'
-            jq -r ".paths[]" < l10n/.github/update-config.json
-            echo EOF
-          } >> "$GITHUB_OUTPUT"
+          echo "path=$(jq -r ".paths.android-components" < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
 
   update:
     needs: prepare
@@ -56,7 +52,7 @@ jobs:
           repository: mozilla-firefox/firefox
           ref: ${{ matrix.ref }}
           sparse-checkout: |
-            ${{ needs.prepare.outputs.paths }}
+            ${{ needs.prepare.outputs.path }}
 
       - name: Python
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
