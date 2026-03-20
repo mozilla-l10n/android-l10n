@@ -39,7 +39,6 @@ def update(
     project: str,
     branch: str,
     fx_root: str,
-    config_files: list[str],
 ):
     if project not in ("android-components", "fenix", "focus-android"):
         exit(f"Unknown project: {project}")
@@ -53,13 +52,13 @@ def update(
 
     source_files: set[str] = set()
 
-    for cfg_name in config_files:
-        cfg_path = join(fx_root, cfg_name)
+    cfg_path = join(fx_root, cfg_automation["paths"][project], "l10n.toml")
 
-        if not exists(cfg_path):
-            exit(f"Config file not found: {cfg_path}")
-        paths = L10nConfigPaths(cfg_path)
-        source_files.update(fx_path for fx_path, _ in paths.all())
+    if not exists(cfg_path):
+        exit(f"Config file not found: {cfg_path}")
+
+    paths = L10nConfigPaths(cfg_path)
+    source_files.update(fx_path for fx_path, _ in paths.all())
 
 
     messages: dict[str, list[str]] = {}
@@ -67,7 +66,7 @@ def update(
     updated_files = 0
     for fx_path in source_files:
         l10n_path = "mozilla-mobile"
-        rel_path = join(l10n_path, relpath(fx_path, fx_root).replace("mobile/android", ""))
+        rel_path = join(l10n_path, relpath(fx_path, fx_root).replace("mobile/android/", ""))
 
         makedirs(dirname(rel_path), exist_ok=True)
 
@@ -167,17 +166,10 @@ if __name__ == "__main__":
     parser.add_argument(
         "--source", required=True, help="Path to the root of the Firefox source tree."
     )
-    parser.add_argument(
-        "--configs",
-        metavar="C",
-        nargs="+",
-        required=True,
-        help="Relative paths from the Firefox root to the l10n.toml files.",
-    )
     args = parser.parse_args()
 
     new_files, updated_files = update(
-        cfg_automation, args.project, args.branch, args.source, args.configs
+        cfg_automation, args.project, args.branch, args.source
     )
 
     write_commit_msg(args, new_files, updated_files)
