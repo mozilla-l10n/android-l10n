@@ -13,7 +13,7 @@ Writes a summary of the branch's localized files and message keys as
 import json
 from argparse import ArgumentParser
 from filecmp import cmp
-from os import makedirs
+from os import makedirs, pardir
 from os.path import abspath, dirname, exists, join, relpath
 from shutil import copy
 from sys import exit
@@ -142,7 +142,7 @@ def write_commit_msg(args, new_files: int, updated_files: int):
 
 if __name__ == "__main__":
     curr_dir = dirname(abspath(__file__))
-    repo_root = abspath(join(curr_dir, "..", ".."))
+    repo_root = abspath(join(curr_dir, pardir, pardir))
     config_file = join(repo_root, ".github", "update-config.json")
 
     with open(config_file) as f:
