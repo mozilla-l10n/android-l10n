@@ -1,0 +1,53 @@
+name: Cleanup L10n
+on:
+  workflow_call:
+    inputs:
+      project:
+        required: true
+        type: string
+      token:
+        required: true
+        type: string
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout android-l10n repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          path: l10n
+          ref: main
+
+      - name: Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: l10n/.github/scripts/requirements.txt
+
+      - name: Install Python dependencies
+        run: pip install -r l10n/.github/scripts/requirements.txt
+
+      - name: Run prune.py
+        run: python l10n/.github/scripts/prune.py --project ${{ inputs.project }}
+        working-directory: l10n
+
+      - name: Run linter
+        run: >
+          python l10n/.github/scripts/update_config.py
+          --toml l10n/firefox.toml
+          --config l10n/.github/scripts/linter_config.json
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
+        with:
+          token: ${{ inputs.token }}
+          path: l10n
+          branch: ${{ inputs.project }}_l10n_updates
+          author: l10n-bot <actions@users.noreply.github.com>
+          commit-message: "Import ${{ inputs.project }} quarantine"
+          title: "Import ${{ inputs.project }} quarantine"
+          body: "Update l10n content for ${{ inputs.project }}"
+          labels: l10n-bot

@@ -2,8 +2,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-name: Update fenix
-
+name: Update Fenix
 on:
   schedule:
     - cron: "5 15 * * 1,4"
@@ -11,107 +10,19 @@ on:
 
 jobs:
   prepare:
-    runs-on: ubuntu-latest
-    outputs:
-      branches: ${{ steps.config.outputs.branches }}
-      path: ${{ steps.config.outputs.path }}
-    steps:
-      - name: Checkout l10n repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          persist-credentials: false
-          path: l10n
-          ref: main
-
-      - name: Get list of branches & fenix path
-        id: config
-        run: |
-          echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
-          echo "path=$(jq -r ".paths.fenix" < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
+    uses: ./.github/workflows/_prepare.yaml
 
   update:
     needs: prepare
-    strategy:
-      max-parallel: 1
-      matrix:
-        ref: ${{ fromJSON(needs.prepare.outputs.branches) }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout android-l10n repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          path: l10n
-          persist-credentials: false
-          ref: main
-
-      - name: Checkout mobile-android repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          path: source
-          persist-credentials: false
-          repository: mozilla-firefox/firefox
-          ref: ${{ matrix.ref }}
-          sparse-checkout: |
-            ${{ needs.prepare.outputs.path }}
-
-      - name: Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: l10n/.github/scripts/requirements.txt
-
-      - name: Install Python dependencies
-        run: pip install -r l10n/.github/scripts/requirements.txt
-
-      - name: Run update.py
-        run: >
-          python l10n/.github/scripts/update.py
-          --project fenix
-          --branch ${{ matrix.ref }}
-          --commit $(cd source && git rev-parse --short HEAD)
-          --source source
-        working-directory: l10n
+    uses: ./.github/workflows/_update.yaml
+    with:
+      project: fenix
+      branches: ${{ needs.prepare.outputs.branches }}
+      path: ${{ needs.prepare.outputs.path }}
 
   cleanup:
     needs: update
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout android-l10n repository
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          persist-credentials: false
-          path: l10n
-          ref: main
-
-      - name: Python
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: l10n/.github/scripts/requirements.txt
-
-      - name: Install Python dependencies
-        run: pip install -r l10n/.github/scripts/requirements.txt
-
-      - name: Run prune.py
-        run: python l10n/.github/scripts/prune.py --project fenix
-        working-directory: l10n
-
-      - name: Run linter
-        run: >
-          python l10n/.github/scripts/update_config.py
-          --toml l10n/firefox.toml
-          --config l10n/.github/scripts/linter_config.json
-
-      - name: Create PR
-        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
-        with:
-          token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
-          path: l10n
-          branch: fenix_l10n_updates
-          author: l10n-bot <actions@users.noreply.github.com>
-          commit-message: "Import fenix quarantine"
-          title: "Import fenix quarantine"
-          body: "Update l10n content for fenix"
-          labels: l10n-bot
+    uses: ./.github/workflows/_cleanup.yaml
+    with:
+      project: fenix
+      token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
