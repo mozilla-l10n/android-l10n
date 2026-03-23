@@ -14,7 +14,6 @@ import json
 from argparse import ArgumentParser
 from filecmp import cmp
 from os import makedirs, pardir
-from os.path import abspath, dirname, exists, join, relpath
 from shutil import copy
 from sys import exit
 from typing import TypedDict
@@ -33,6 +32,16 @@ class AutomationConfig(TypedDict):
     branches: list[str]
     head: str
     paths: list[str]
+
+
+def copyTomlFile(toml_path, dest_path):
+    """Copy TOML file"""
+
+    # Copy the TOML file, assuming it goes in the root of the destination path
+    toml_name = basename(toml_path)
+    print(f"\nCopying {toml_name} to {dest_path}")
+    shutil.copy2(toml_path, join(dest_path, toml_name))
+
 
 def update(
     cfg_automation: AutomationConfig,
@@ -58,14 +67,16 @@ def update(
     if not exists(cfg_path):
         exit(f"Config file not found: {cfg_path}")
 
+    l10n_path = join(repo_root, "mozilla-mobile")
     paths = L10nConfigPaths(cfg_path)
     source_files.update(fx_path for fx_path, _ in paths.all())
+    if branch == cfg_automation["head"]:
+        copyTomlFile(cfg_path, join(l10n_path, project))
 
 
     messages: dict[str, list[str]] = {}
     new_files = 0
     updated_files = 0
-    l10n_path = join(repo_root, "mozilla-mobile")
     
     for fx_path in source_files:
         rel_path = join(l10n_path, relpath(fx_path, fx_root).replace("mobile/android/", ""))
