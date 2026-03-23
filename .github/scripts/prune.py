@@ -14,8 +14,8 @@ Writes a commit message summary as `.prune_msg`.
 
 import json
 from argparse import ArgumentParser
-from os import getcwd, remove, scandir
-from os.path import join, relpath, splitext, isdir
+from os import remove, scandir, pardir
+from os.path import join, relpath, splitext, isdir, abspath, dirname
 from sys import exit
 from moz.l10n.paths.config import L10nConfigPaths
 from moz.l10n.resource import parse_resource, serialize_resource
@@ -49,11 +49,9 @@ def prune_file(path: str, msg_refs: set[str]):
     return drop_count
 
 
-def prune(project: str, branches: list[str]):
-    cwd = getcwd()
-
-    project_path = join(cwd, f"mozilla-mobile/{project}")
-    _data_path = f"_data/{project}"
+def prune(project: str, branches: list[str], repo_root: str):
+    project_path = join(repo_root, "mozilla-mobile", project)
+    _data_path = join(repo_root, "_data", project)
 
     removed_data = []
     removed_files = 0
@@ -89,8 +87,8 @@ def prune(project: str, branches: list[str]):
         exit(f"Incomplete data! Not found: {expected}")
 
     cfg_path = join(project_path, "l10n.toml")
-    for ref_path in L10nConfigPaths(cfg_path).ref_paths:
-        if ref_path not in refs:
+    for path in L10nConfigPaths(cfg_path).ref_paths:
+        if path not in refs:
             print(f"remove {path}")
             remove(path)
             removed_files += 1
@@ -99,7 +97,7 @@ def prune(project: str, branches: list[str]):
     return removed_data, removed_files, removed_messages
 
 
-def write_commit_msg(data: list[str], files: int, messages: int):
+def write_commit_msg(data: list[str], files: int, messages: int, repo_root: str):
     summary = []
     for branch in data:
         summary.append(f"{branch} data")
@@ -109,11 +107,18 @@ def write_commit_msg(data: list[str], files: int, messages: int):
         summary.append(
             f"{messages} message" if messages == 1 else f"{messages} messages"
         )
-    with open(".prune_msg", "w") as file:
+    with open(join(repo_root, ".prune_msg"), "w") as file:
         file.write(f"Removed: {', '.join(summary)}" if summary else "no changes")
 
 
 if __name__ == "__main__":
+    curr_dir = dirname(abspath(__file__))
+    repo_root = abspath(join(curr_dir, pardir, pardir))
+    config_file = join(repo_root, ".github", "update-config.json")
+
+    with open(config_file) as f:
+        cfg_automation = json.load(f)
+
     prog = "python .github/scripts/prune.py"
     parser = ArgumentParser(prog=prog, description=__doc__)
     parser.add_argument(
@@ -123,9 +128,5 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    config_file = join(".github", "update-config.json")
-    with open(config_file) as f:
-        cfg_automation = json.load(f)
-
-    removed = prune(args.project, cfg_automation["branches"])
-    write_commit_msg(*removed)
+    removed = prune(args.project, cfg_automation["branches"], repo_root)
+    write_commit_msg(*removed, repo_root)
