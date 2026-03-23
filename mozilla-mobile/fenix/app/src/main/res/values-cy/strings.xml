@@ -19,6 +19,8 @@
   <string name="content_description_menu">Rhagor o ddewisiadau</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Pori preifat</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Pori arferol</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Chwilio neu gyfeiriad gwe</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -616,8 +618,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Parhau</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Parhewch i bori</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Nid nawr</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Hepgor</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Paratowch i redeg yn rhydd</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -692,6 +698,29 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Dechreuwch bob chwilio o sgrin gartref eich ffôn a gwybod bod diogeledd awtomatig Firefox yn eich cefnogi.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Ychwanegu teclyn Firefox</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Hawdd i\'w addasu ac yn fwy preifat gyda phob tap</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">Mae %1$s wedi rhwystro %2$,d traciwr wrth i chi grwydro\'r we.</item>
+    <item quantity="zero">Mae %1$s wedi rhwystro %2$,d o dracwyr tra roeddech chi\'n crwydro\'r we.</item>
+    <item quantity="two">Mae %1$s wedi rhwystro %2$,d o dracwyr tra roeddech chi\'n crwydro\'r we.</item>
+    <item quantity="few">Mae %1$s wedi rhwystro %2$,d o dracwyr tra roeddech chi\'n crwydro\'r we.</item>
+    <item quantity="many">Mae %1$s wedi rhwystro %2$,d o dracwyr tra roeddech chi\'n crwydro\'r we.</item>
+    <item quantity="other">Mae %1$s wedi rhwystro %2$,d o dracwyr tra roeddech chi\'n crwydro\'r we.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Cychwyn cyfaddasu</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Dewiswch eicon app wedi\'i deilwra</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Rhowch gyffyrddiad personol i\'ch sgrin gartref.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -1661,6 +1690,24 @@
   <string name="create_tab_group_name_label">Enw</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Enw</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Ychwanegu at</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Cau ychwanegu at grŵp tab</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Grŵp tab newydd</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d tab</item>
+    <item quantity="zero">%1$d tab</item>
+    <item quantity="two">%1$d tab</item>
+    <item quantity="few">%1$d tab</item>
+    <item quantity="many">%1$d tab</item>
+    <item quantity="other">%1$d tab</item>
+  </plurals>
   <!--
     History
 
@@ -3342,6 +3389,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">Straeon</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">Newyddion</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.

@@ -602,8 +602,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Nadaljuj</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Nadaljuj z brskanjem</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Ne zdaj</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Preskoči</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
   <string name="nova_onboarding_tou_subtitle">Hiter, varen in ne bo vas prodal.\nBrskanje je pravkar postalo še boljše.</string>
   <!--
@@ -920,6 +924,8 @@
   <string name="preferences_show_nonsponsored_suggestions">Predlogi aplikacije %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Prejemajte predloge s spleta, povezane z vašim iskanjem</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">Med tipkanjem prejemaj predloge Mozille</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">Deljenje povezav</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -1007,6 +1013,12 @@
   <string name="customize_addon_collection_user_hint">Lastnik zbirke (ID uporabnika)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Zbirka razširitev je spremenjena. Zapiranje aplikacije za uveljavitev sprememb …</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Poročilo o zasebnosti</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Skoči nazaj</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1612,12 +1624,28 @@
     Title for the create tab group bottom sheet
   -->
   <string name="create_tab_group_title">Ustvari skupino zavihkov</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">Uredi skupino</string>
   <string name="create_tab_group_save_button">Shrani</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Zapri urejanje skupine zavihkov</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Skupina</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="create_tab_group_name_label">Ime</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Ime</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Nova skupina zavihkov</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d zavihek</item>
+    <item quantity="two">%1$d zavihka</item>
+    <item quantity="few">%1$d zavihki</item>
+    <item quantity="other">%1$d zavihkov</item>
+  </plurals>
   <!--
     History
 
@@ -2468,6 +2496,8 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s vas ščiti pred številnimi najpogostejšimi sledilci, ki sledijo vašemu brskanju po spletu.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Več o tem</string>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Zaščiteni ste</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Običajno (privzeto)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -3278,6 +3308,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">Zgodbe</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">Novice</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
