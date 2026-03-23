@@ -39,6 +39,7 @@ def update(
     project: str,
     branch: str,
     fx_root: str,
+    repo_root: str
 ):
     if project not in ("android-components", "fenix", "focus-android"):
         exit(f"Unknown project: {project}")
@@ -64,8 +65,9 @@ def update(
     messages: dict[str, list[str]] = {}
     new_files = 0
     updated_files = 0
+    l10n_path = join(repo_root, "mozilla-mobile")
+    
     for fx_path in source_files:
-        l10n_path = "mozilla-mobile"
         rel_path = join(l10n_path, relpath(fx_path, fx_root).replace("mobile/android/", ""))
 
         makedirs(dirname(rel_path), exist_ok=True)
@@ -117,7 +119,7 @@ def update(
                     # print(f"unchanged {rel_path}")
                     pass
 
-    data_path = join(f"_data/{project}", f"{branch}.json")
+    data_path = join(repo_root, "_data", project, f"{branch}.json")
     makedirs(dirname(data_path), exist_ok=True)
     with open(data_path, "w") as file:
         json.dump(messages, file, indent=2, sort_keys=True)
@@ -125,7 +127,7 @@ def update(
     return new_files, updated_files
 
 
-def write_commit_msg(args, new_files: int, updated_files: int):
+def write_commit_msg(args, new_files: int, updated_files: int, repo_root: str):
     new_str = f"{new_files} new" if new_files else ""
     update_str = f"{updated_files} updated" if updated_files else ""
     summary = (
@@ -136,7 +138,7 @@ def write_commit_msg(args, new_files: int, updated_files: int):
     count = updated_files or new_files
     summary += " files" if count > 1 else " file" if count == 1 else ""
     head = f"{args.branch} ({args.commit})" if args.commit else args.branch
-    with open(".update_msg", "w") as file:
+    with open(join(repo_root, ".update_msg"), "w") as file:
         file.write(f"{head}: {summary}")
 
 
@@ -172,7 +174,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     new_files, updated_files = update(
-        cfg_automation, args.project, args.branch, args.source
+        cfg_automation, args.project, args.branch, args.source, repo_root
     )
 
-    write_commit_msg(args, new_files, updated_files)
+    write_commit_msg(args, new_files, updated_files, repo_root)
