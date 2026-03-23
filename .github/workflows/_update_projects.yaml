@@ -69,7 +69,7 @@ jobs:
           --project ${{ inputs.project }} \
           --branch ${{ matrix.ref }} \
           --commit $(cd ../firefox && git rev-parse --short HEAD) \
-          --firefox ../firefox
+          --source ../firefox
         working-directory: l10n
       - name: git config
         run: |
