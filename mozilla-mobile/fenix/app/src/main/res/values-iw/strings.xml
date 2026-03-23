@@ -19,6 +19,8 @@
   <string name="content_description_menu">אפשרויות נוספות</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">גלישה פרטית</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">גלישה רגילה</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">חיפוש או הכנסת כתובת</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -616,8 +618,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">המשך</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">המשך בגלישה</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">לא כעת</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">דילוג</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">התכוננו לרוץ חופשי</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -692,6 +698,26 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">ניתן להתחיל כל חיפוש ממסך הבית של הטלפון שלך ולהיות רגוע שההגנות האוטומטיות של Firefox עומדות מאחוריך.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">הוספת ווידג’ט של Firefox</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">קל להתאמה אישית ופרטי יותר עם כל נגיעה</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">‏%1$s חסם רכיב מעקב אחד בזמן שגלשת באינטרנט.</item>
+    <item quantity="two">‏%1$s חסם %2$,d רכיבי מעקב בזמן שגלשת באינטרנט.</item>
+    <item quantity="other">‏%1$s חסם %2$,d רכיבי מעקב בזמן שגלשת באינטרנט.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">להתחיל להתאים אישית</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">בחירת סמל יישומון מותאם אישית</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">לתת למסך הבית שלך מגע אישי.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -1661,6 +1687,21 @@
   <string name="create_tab_group_name_label">שם</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">שם</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">הוספה אל</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">סגירת החלונית של הוספה לקבוצת לשוניות</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">קבוצת לשוניות חדשה</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">לשונית אחת</item>
+    <item quantity="two">%1$d לשוניות</item>
+    <item quantity="other">%1$d לשוניות</item>
+  </plurals>
   <!--
     History
 
@@ -3337,6 +3378,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">סיפורים</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">חדשות</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.

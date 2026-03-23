@@ -19,6 +19,8 @@
   <string name="content_description_menu">옵션 더보기</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">사생활 보호 모드</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">일반 탐색</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">검색어 또는 주소 입력</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -448,7 +450,7 @@
 
     Description for learning more about our privacy notice.
   -->
-  <string name="juno_onboarding_privacy_notice_text" tools:ignore="BrandUsage">Firefox 개인정보 보호정책</string>
+  <string name="juno_onboarding_privacy_notice_text" tools:ignore="BrandUsage">Firefox 개인정보처리방침</string>
   <!-- Title for set firefox as default browser screen used by Nimbus experiments. -->
   <string name="juno_onboarding_default_browser_title_nimbus_2">우리는 사용자를 안전하게 지키는 것을 좋아합니다</string>
   <!-- Description for set firefox as default browser screen used by Nimbus experiments. -->
@@ -694,6 +696,24 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">모든 검색을 휴대폰의 홈 화면에서 시작하세요. Firefox의 자동 보호 기능이 여러분을 지켜줍니다.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Firefox 위젯 추가</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">터치할 때마다 더 쉬운 맞춤 설정 및 더 강력한 개인 정보 보호</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="other">웹 탐색 중에 %1$s가 %2$,d개의 추적기를 차단했습니다.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">맞춤 설정 시작</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">사용자 지정 앱 아이콘 선택</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">홈 화면에 나만의 개성을 더해보세요.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -1663,6 +1683,19 @@
   <string name="create_tab_group_name_label">이름</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">이름</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">추가</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">탭 그룹에 추가 닫기</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">새 탭 그룹</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="other">탭 %1$d개</item>
+  </plurals>
   <!--
     History
 
@@ -2760,7 +2793,7 @@
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
   <string name="about_crashes">충돌</string>
   <!-- About page link text to open privacy notice link -->
-  <string name="about_privacy_notice">개인정보 보호정책</string>
+  <string name="about_privacy_notice">개인정보처리방침</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">권리 읽기</string>
   <!-- About page link text to open terms of use link -->
@@ -3339,6 +3372,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">이야기</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">뉴스</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
@@ -3772,7 +3807,7 @@
   -->
   <string name="micro_survey_survey_header_2">설문 조사를 완료해 주세요</string>
   <!-- The privacy notice link -->
-  <string name="micro_survey_privacy_notice_2">개인정보 보호정책</string>
+  <string name="micro_survey_privacy_notice_2">개인정보처리방침</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">보내기</string>
   <!-- The survey completion header -->
