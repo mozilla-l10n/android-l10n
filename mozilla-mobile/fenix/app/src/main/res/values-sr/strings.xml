@@ -127,7 +127,7 @@
   <!-- Text for the negative action button to dismiss the Close Tabs Banner. -->
   <string name="tab_tray_close_tabs_banner_negative_button_text">Одбаци</string>
   <!-- Text for the banner message to tell users about our inactive tabs feature. -->
-  <string name="tab_tray_inactive_onboarding_message">Картице које нисте погледали више од две недеље су премештене овде.</string>
+  <string name="tab_tray_inactive_onboarding_message">Језичци које нисте погледали више од две недеље су премештени овде.</string>
   <!-- Text for the action link to go to Settings for inactive tabs. -->
   <string name="tab_tray_inactive_onboarding_button_text">Искључи у подешавањима</string>
   <!-- Text for title for the auto-close dialog of the inactive tabs. -->
@@ -162,9 +162,9 @@
   <!-- Content description for the button which navigates the user to show all recent tabs in the tabs tray. -->
   <string name="recent_tabs_show_all_content_description_2">Дугме за приказ свих недавних језичака</string>
   <!-- Text for button in synced tab card that opens synced tabs tray -->
-  <string name="recent_tabs_see_all_synced_tabs_button_text">Погледај све синхронизоване језичке</string>
+  <string name="recent_tabs_see_all_synced_tabs_button_text">Погледај све усклађене језичке</string>
   <!-- Accessibility description for device icon used for recent synced tab -->
-  <string name="recent_tabs_synced_device_icon_content_description">Синхронизовани уређај</string>
+  <string name="recent_tabs_synced_device_icon_content_description">Усклађени уређај</string>
   <!-- Text for the dropdown menu to remove a recent synced tab from the homescreen -->
   <string name="recent_synced_tab_menu_item_remove">Уклони</string>
   <!--
@@ -204,6 +204,8 @@
   <string name="browser_menu_disabled_extensions_banner_onboarding_header" tools:ignore="UnusedResources" moz:removedIn="149">Имате инсталиране додатке који нису омогућени</string>
   <!-- Browser menu button that opens the extensions manager -->
   <string name="browser_menu_manage_extensions">Управљај проширењима</string>
+  <!-- Browser menu group that contains additional settings in collapsed state -->
+  <string name="browser_menu_more_settings">Још</string>
   <!--
     Content description (not visible, for screen readers etc.): Label for plus icon used to add extension.
     %1$s is the name of the extension (for example: ClearURLs).
@@ -215,6 +217,8 @@
   <string name="browser_menu_extensions_disabled_description">Привремено онемогућено</string>
   <!-- The description of the browser menu appears when the user hasn't installed any extensions. -->
   <string name="browser_menu_no_extensions_installed_description">Нема омогућених додатака</string>
+  <!-- The description of the browser menu appears when the user hasn't installed any extensions and there are recommended extensions. -->
+  <string name="browser_menu_try_a_recommended_extension_description">Испробајте препоручено проширење</string>
   <!-- Browser menu button that opens account settings -->
   <string name="browser_menu_account_settings">Информације о налогу</string>
   <!-- Browser menu button that sends a user to help articles -->
@@ -236,7 +240,7 @@
   <!-- Text for notifying users that Xiaomi devices require additional permissions to add to home screen -->
   <string name="browser_menu_add_to_homescreen_xiaomi">Xiaomi уређаји могу да траже додатне дозволе за додавање пречица на почетни екран. Проверите подешавања.</string>
   <!-- Content description (not visible, for screen readers etc.) for the Resync tabs button -->
-  <string name="resync_button_content_description">Поново синхронизујте</string>
+  <string name="resync_button_content_description">Поново усклади</string>
   <!-- Browser menu button that opens the find in page menu -->
   <string name="browser_menu_find_in_page">Нађи на страници</string>
   <!-- Browser menu button that opens the translations dialog, which has options to translate the current browser page. -->
@@ -245,6 +249,8 @@
   <string name="browser_menu_save_to_collection_2">Сачувај у збирку</string>
   <!-- Browser menu button that open a share menu to share the current site -->
   <string name="browser_menu_share">Подели</string>
+  <!-- Browser menu button that goes to the homepage screen -->
+  <string name="browser_menu_homepage">Почетна страница</string>
   <!--
     Browser menu button shown in custom tabs that opens the current tab in Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -278,21 +284,66 @@
   <string name="browser_menu_customize_home_1" tools:ignore="UnusedResources" moz:removedIn="149">Прилагоди почетну страну</string>
   <!-- Browser menu label to sign in to sync on the device using Mozilla accounts -->
   <string name="browser_menu_sign_in">Пријави се</string>
+  <!-- Browser menu caption label for the "Sign in" browser menu item described in `browser_menu_sign_in` -->
+  <string name="browser_menu_sign_in_caption_3">Ускладите лозинке, обележиваче и још много тога</string>
   <!-- Browser menu label to sign back in to sync on the device when the user's account needs to be reauthenticated -->
-  <string name="browser_menu_sign_back_in_to_sync">Пријавите се поново ради синхронизације</string>
+  <string name="browser_menu_sign_back_in_to_sync">Пријавите се поново ради усклађивања</string>
   <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
-  <string name="browser_menu_syncing_paused_caption">Синхронизација је паузирана</string>
+  <string name="browser_menu_syncing_paused_caption">Усклађивање је паузирано</string>
+  <!-- Browser menu caption label for an authenticated user -->
+  <string name="browser_menu_signed_in_caption">Управљајте оним што копирате у резерву и усклађујете</string>
   <!-- Browser menu label that creates a private tab -->
-  <string name="browser_menu_new_private_tab">Нова приватна картица</string>
+  <string name="browser_menu_new_private_tab">Нови приватни језичак</string>
   <!-- Browser menu label that navigates to the Password screen -->
   <string name="browser_menu_passwords">Лозинке</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
+  <string name="browser_close_main_menu_handlebar_content_description">Затвори мени</string>
+  <!-- Content description (not visible, for screen readers etc.) for main menu navigation header. -->
+  <string name="browser_main_menu_content_description_navigation_header">Навигација</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar extensions menu. -->
+  <string name="browser_extensions_menu_handlebar_content_description" tools:ignore="UnusedResources" moz:removedIn="149">Затвори лист менија проширења</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar save menu. -->
+  <string name="browser_save_menu_handlebar_content_description" tools:ignore="UnusedResources" moz:removedIn="149">Затвори лист менија чувања</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar tools menu. -->
+  <string name="browser_tools_menu_handlebar_content_description" tools:ignore="UnusedResources" moz:removedIn="149">Затвори лист менија алата</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
+  <string name="browser_custom_tab_menu_handlebar_content_description">Затвори лист менија прилагођеног језичка</string>
+  <!-- Browser menu label that bookmarks the currently visited page -->
+  <string name="browser_menu_bookmark_this_page_2">Обележи страницу</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
   <string name="browser_menu_edit_bookmark">Уреди обележивач</string>
+  <!-- Browser menu label that the saves the currently visited page as a PDF -->
+  <string name="browser_menu_save_as_pdf_2">Сачувај као ПДФ</string>
+  <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
+  <string name="browser_menu_translate_page_2">Преведи страницу</string>
+  <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
+  <string name="browser_menu_summarize_page">Сажми страницу</string>
+  <!-- Browser menu badge text for summarization feature -->
+  <string name="browser_menu_summarize_page_badge">Ново</string>
+  <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
+  <string name="browser_menu_webcompat_reporter" tools:ignore="UnusedResources" moz:removedIn="149">Пријави неисправан сајт…</string>
+  <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
+  <string name="browser_menu_webcompat_reporter_2">Пријави неисправан сајт</string>
+  <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
+  <string name="browser_menu_translated">Преведено</string>
+  <!-- Browser menu label for the print feature -->
+  <string name="browser_menu_print_2">Штампај</string>
   <!--
     Browser menu label for the Delete browsing data on quit feature.
     %1$s is the name of the app (for example "Firefox").
   -->
   <string name="browser_menu_delete_browsing_data_on_quit">Затвори %1$s</string>
+  <!--
+    Content description for a banner within the menu which prompt the user to make this app their default browser.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="browser_menu_default_banner_title">Поставите %1$s као подразумевани прегледач</string>
+  <!-- Label text within the set as default banner -->
+  <string name="browser_menu_default_banner_subtitle_2">Брз, приватан и направљен за вас.</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button that dismisses the set as default banner in the menu -->
+  <string name="browser_menu_default_banner_dismiss_promotion">Одбаци промоцију</string>
+  <!-- Content description (not visible, for screen readers etc.) for recommended extensions in main menu -->
+  <string name="browser_menu_recommended_extensions_content_description">Још података</string>
   <!--
     Menu "contextual feature recommendation" (CFR)
 
@@ -321,6 +372,20 @@
     %2$s is the name of the language which the page was translated to. (For example: French)
   -->
   <string name="browser_toolbar_translated_successfully">Страница је преведена са %1$s на %2$s.</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">Протресите уређај да бисте сажели ову страницу за неколико секунди. ⚡️</string>
+  <!--
+    Translation Toolbar
+
+    Translation toolbar label that is displayed when the current page has been translated by the translation feature.
+    %1$s is the name of the language that is displayed in the original page. (For example: English)
+    %2$s is the name of the language which the page was translated to. (For example: French)
+  -->
+  <string name="translation_toolbar_translated_from_and_to" tools:ignore="UnusedResources">Преведено са језика %1$s на језик %2$s</string>
+  <!-- Content description for the translate toolbar action that opens the translations dialog. -->
+  <string name="translation_toolbar_expand_action">Отвори лист за превођење</string>
+  <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
+  <string name="translation_toolbar_close_action">Одбаци поруку</string>
   <!--
     Locale Settings Fragment
 
@@ -363,6 +428,16 @@
   -->
   <string name="search_engine_icon_content_description_1">Претраживач: %s</string>
   <!--
+    Content description (not visible, for screen readers etc.) of the search engine selector from the search toolbar.
+    %s is the search engine name (for example: DuckDuckGo).
+    The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
+  -->
+  <string name="search_engine_selector_content_description">%s: бирач претраживача</string>
+  <!-- Text for the snackbar shown to confirm the deletion of a single browsing history item. %1$s is the shortened URL of the deleted history entry or the the actual deleted search term. Only one such item is deleted at a time. -->
+  <string name="search_suggestions_delete_history_item_snackbar">Обрисао %1$s из историјата</string>
+  <!-- Content description (not visible, for screen readers etc.): Button shown near a history search result allowing to delete it from browsing history. -->
+  <string name="mozac_browser_awesomebar_remove_suggestion" tools:ignore="UnusedResources">Обриши овај унос из историјата</string>
+  <!--
     Home onboarding
 
     Content description (not visible, for screen readers etc.): Close button for the home onboarding dialog
@@ -388,7 +463,7 @@
     Description for sign in to sync screen. Nimbus experiments do not support string placeholders.
     Note: The word "Firefox" should NOT be translated
   -->
-  <string name="juno_onboarding_sign_in_description_3" tools:ignore="BrandUsage">Firefox шифрује ваше лозинке, обележиваче и остало када сте синхронизовани.</string>
+  <string name="juno_onboarding_sign_in_description_3" tools:ignore="BrandUsage">Firefox шифрује ваше лозинке, обележиваче и остало када сте усклађени.</string>
   <!-- Text for the button to sign in to sync on the device -->
   <string name="juno_onboarding_sign_in_positive_button" tools:ignore="UnusedResources">Пријави се</string>
   <!-- Text for the button dismiss the screen and move on with the flow -->
@@ -424,10 +499,242 @@
   <string name="juno_onboarding_add_search_widget_positive_button" tools:ignore="BrandUsage,UnusedResources">Додај Firefox виџет</string>
   <!-- Text for the button to dismiss the screen and move on with the flow -->
   <string name="juno_onboarding_add_search_widget_negative_button" tools:ignore="UnusedResources">Не сада</string>
+  <!-- Title for the privacy preferences dialog shown during onboarding. Note: The word "Firefox" should NOT be translated. -->
+  <string name="onboarding_preferences_dialog_title" tools:ignore="BrandUsage">Помозите нам да учинимо Firefox бољим</string>
+  <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="onboarding_preferences_dialog_crash_reporting_title">Самостално шаљи извештаје о рушењу</string>
+  <!-- Description for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="onboarding_preferences_dialog_crash_reporting_description">Извештаји о рушењу нам омогућавају да дијагностикујемо и исправимо проблеме са прегледачем. Извештаји могу да садрже личне или осетљиве податке.</string>
+  <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Сазнајте више</string>
+  <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_title">%s мора поново да се покрене</string>
+  <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_body">Дошло је до проблема при отварању апликације %s.\n\nСлање извештаја о рушењу нам помаже да дијагностикујемо и поправимо проблеме са прегледачем. Извештаји могу да садрже личне или осетљиве податке.</string>
+  <!-- Button text to submit a startup crash report -->
+  <string name="startup_crash_positive">Пошаљи извештај о рушењу</string>
+  <!-- Button text to continue and not send a startup crash report -->
+  <string name="startup_crash_negative">Не, хвала</string>
+  <!-- Button text to reopen firefox after the crash is processed %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_restart">Поново отвори %s</string>
+  <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
+  <string name="onboarding_preferences_dialog_usage_data_title">Шаљи техничке податке и податке о интеракцији компанији Mozilla</string>
+  <string name="onboarding_preferences_dialog_usage_data_description_2" tools:ignore="BrandUsage">Подаци о вашем уређају, хардверској конфигурацији и начину на који користите Firefox помажу у побољшању функција, перформанси и стабилности за све.</string>
+  <string name="onboarding_preferences_dialog_usage_data_learn_more_2">Сазнајте више</string>
+  <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
+  <string name="onboarding_preferences_dialog_positive_button">Готово</string>
+  <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
+  <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Добро дошли у Firefox</string>
+  <!-- Terms of service sub header label. -->
+  <string name="onboarding_terms_of_service_sub_header_2">Брзо и безбедно прегледање веба</string>
+  <!-- Terms of service onboarding page continue button label. -->
+  <string name="onboarding_term_of_service_agree_and_continue_button_label_2">Настави</string>
+  <!-- Line one of the terms of service onboarding page. %1$s is replaced by an active link, using onboarding_term_of_service_line_one_link_text_2 as text (“Firefox Terms of Use”). -->
+  <string name="onboarding_term_of_service_line_one_2">Настављањем се слажете са %1$s.</string>
+  <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
+  <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Firefox услови коришћења</string>
+  <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
+  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Firefox брине о вашој приватности. Сазнајте више на нашој страници %1$s.</string>
+  <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
+  <string name="onboarding_term_of_service_line_two_link_text">Обавештење о приватности</string>
+  <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
+  <string name="onboarding_term_of_service_line_three" tools:ignore="BrandUsage">Како би помогао у побољшању прегледача, Firefox шаље дијагностичке податке и податке о интеракцији компанији Mozilla. %1$s</string>
+  <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
+  <string name="onboarding_term_of_service_line_three_link_text">Управљај</string>
+  <!-- Terms of use (ToU) onboarding redesign title. -->
+  <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Покрените врхунски Android прегледач</string>
+  <!-- Terms of use (ToU) first subheader. -->
+  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Учитавајте сајтове муњевито брзо</string>
+  <!-- Terms of use (ToU) second subheader. -->
+  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Аутоматска заштита од праћења</string>
+  <!-- Terms of use (ToU) third subheader. -->
+  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Хиљаде прилагођавања</string>
+  <!--
+    Terms of use (ToU) first body text. %1$s is replaced by an active link,
+    using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
+  -->
+  <string name="onboarding_redesign_tou_body_one" tools:ignore="UnusedResources">Настављањем се слажете са %1$s.</string>
+  <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
+  <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">Условима коришћења Firefox-а</string>
+  <!--
+    Terms of use (ToU) second body text. 'Firefox' is intentionally hardcoded.
+    %1$s is replaced by an active link, using onboarding_redesign_tou_body_two_link_text as text (“Privacy Notice”).
+  -->
+  <string name="onboarding_redesign_tou_body_two" tools:ignore="BrandUsage,UnusedResources">Firefox брине о вашој приватности. Сазнајте више у нашем %1$s.</string>
+  <!-- Used as text for the link in onboarding_redesign_tou_body_two. -->
+  <string name="onboarding_redesign_tou_body_two_link_text" tools:ignore="UnusedResources">Обавештењу о приватности</string>
+  <!--
+    Terms of use (ToU) third body text. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    %1$s is replaced by an active link using onboarding_redesign_tou_body_three_link_text as text (“Manage Settings”).
+  -->
+  <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Да би помогао у побољшању прегледача, Firefox шаље дијагностичке податке и податке о интеракцији Mozilla-и. %1$s</string>
+  <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
+  <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Управљај подешавањима</string>
+  <!-- Terms of use (ToU) onboarding page continue button label. -->
+  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Настави</string>
+  <!-- Onboarding header for the toolbar selection card. -->
+  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">Где желите траку са адресом?</string>
+  <!-- Onboarding label for 'Continue' button. -->
+  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Настави</string>
+  <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_redesign_title" tools:ignore="BrandUsage,UnusedResources">Помозите нам да развијемо Firefox</string>
+  <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_redesign_opt_out_checkbox" tools:ignore="BrandUsage,UnusedResources">Поделите са Mozilla-иним маркетиншким партнерима како сте открили Firefox и да га користите. Ови подаци се никада не продају.</string>
+  <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
+  <string name="onboarding_marketing_redesign_learn_more" tools:ignore="UnusedResources">Како користимо податке</string>
+  <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
+  <string name="onboarding_marketing_redesign_positive_button" tools:ignore="UnusedResources">Потврди</string>
+  <!-- Set to default browser onboarding redesign title. -->
+  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Добијте аутоматску заштиту од праћења по подразумеваним подешавањима</string>
+  <!-- Set to default browser onboarding redesign body. -->
+  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Један додир помаже у спречавању компанија да шпијунирају ваше кликове.</string>
+  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Усагласите свуда где користите Firefox</string>
+  <!-- Sync onboarding redesign body. -->
+  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Преузмите обележиваче, језичке и лозинке на било ком уређају. Све је заштићено шифровањем.</string>
+  <!-- Sync onboarding redesign positive button text. -->
+  <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Започни усклађивање</string>
+  <!-- Sync onboarding redesign negative button text. -->
+  <string name="onboarding_redesign_sync_negative_button" tools:ignore="UnusedResources">Не сада</string>
+  <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_title" tools:ignore="BrandUsage,UnusedResources">Помозите нам да развијемо Firefox</string>
+  <!-- Marketing onboarding page body. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">Када поделите како сте открили Firefox и да га користите, помажете нам да представимо наш прегледач већем броју људи.</string>
+  <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_opt_out_checkbox">Делите податке са партнерима компаније Mozilla за маркетиншку технологију. Ови подаци се никада не продају нити користе за приказивање огласа.</string>
+  <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
+  <string name="onboarding_marketing_learn_more" tools:ignore="UnusedResources">Како користимо податке</string>
+  <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
+  <string name="onboarding_marketing_positive_button" tools:ignore="UnusedResources">Потврди и почни са прегледањем</string>
+  <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
+  <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">Још само једна ствар</string>
+  <!-- Marketing onboarding page body variant. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_body_1" tools:ignore="BrandUsage,UnusedResources">Поделите са Mozilla-иним маркетиншким партнерима како сте открили Firefox и да га користите. Ови подаци се никада не продају.</string>
+  <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
+  <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Прихвати и почни са прегледањем</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
+  <!-- "Continue" onboarding button. -->
+  <string name="nova_onboarding_continue_button">Настави</string>
+  <!-- "Not now" onboarding button. -->
+  <string name="nova_onboarding_negative_button">Не сада</string>
+  <!-- Terms of use (ToU) onboarding title. -->
+  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Спремите се за слободно сурфовање</string>
+  <!-- Terms of use (ToU) onboarding subtitle. -->
+  <string name="nova_onboarding_tou_subtitle">Брз, безбедан и неће вас изневерити.\nПрегледање је управо постало боље.</string>
+  <!--
+    Terms of use (ToU) onboarding body line one.
+    %1$s is replaced by an active link, using nova_onboarding_tou_body_line_1_link_text as text (“Firefox Terms of Use”).
+  -->
+  <string name="nova_onboarding_tou_body_line_1">Настављањем се слажете са %1$s.</string>
+  <!-- Terms of use (ToU) onboarding body line one link text for nova_onboarding_tou_body_line_1. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_tou_body_line_1_link_text" tools:ignore="BrandUsage">Firefox услови коришћења</string>
+  <!--
+    Terms of use (ToU) onboarding body line two. 'Firefox' is intentionally hardcoded.
+    %1$s is replaced by an active link, using nova_onboarding_tou_body_line_2_link_text as text (“Privacy Notice”).
+  -->
+  <string name="nova_onboarding_tou_body_line_2" tools:ignore="BrandUsage">Firefox брине о вашој приватности. Сазнајте више у нашем %1$s.</string>
+  <!-- Terms of use (ToU) onboarding body line two link text for nova_onboarding_tou_body_line_2. -->
+  <string name="nova_onboarding_tou_body_line_2_link_text">Обавештење о приватности</string>
+  <!--
+    Terms of use (ToU) onboarding body line three. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    %1$s is replaced by an active link, using nova_onboarding_tou_body_line_3_link_text as text (“Manage Settings”).
+  -->
+  <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">Како би помогао у побољшању прегледача, Firefox шаље дијагностичке податке и податке о интеракцији компанији Mozilla. %1$s</string>
+  <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
+  <string name="nova_onboarding_tou_body_line_3_link_text">Управљај подешавањима</string>
+  <!-- "Set to default" onboarding title. -->
+  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Реците збогом наметљивим пратиоцима</string>
+  <!-- "Set to default" onboarding title. -->
+  <string name="nova_onboarding_set_to_default_title_2">Отворите све ваше везе уз уграђену приватност</string>
+  <!-- "Set to default" onboarding subtitle. -->
+  <string name="nova_onboarding_set_to_default_subtitle">Штитимо ваше податке и аутоматски блокирамо компаније које шпијунирају ваше кликове.</string>
+  <!-- "Set to default" onboarding button. -->
+  <string name="nova_onboarding_set_to_default_button">Постави за подразумевани прегледач</string>
+  <!-- Toolbar selection onboarding title. -->
+  <string name="nova_onboarding_toolbar_selection_title">Изаберите своју траку са адресама</string>
+  <!-- Toolbar selection onboarding "top" option label. -->
+  <string name="nova_onboarding_toolbar_selection_top_label">Горе</string>
+  <!-- Toolbar selection onboarding "bottom" option label. -->
+  <string name="nova_onboarding_toolbar_selection_bottom_label">Доле</string>
+  <!-- Theme selection onboarding title. -->
+  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Изаберите своју тему</string>
+  <!-- Theme selection onboarding "automatic" option label. -->
+  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Самостално</string>
+  <!-- Theme selection onboarding "light" option label. -->
+  <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Светла</string>
+  <!-- Theme selection onboarding "dark" option label. -->
+  <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Тамна</string>
+  <!-- Sync onboarding title. -->
+  <string name="nova_onboarding_sync_title">Тренутно наставите тамо где сте стали</string>
+  <!-- Sync onboarding subtitle. -->
+  <string name="nova_onboarding_sync_subtitle">Преузмите обележиваче, лозинке и још много тога на било ком уређају у трену. Ваши лични подаци остају безбедни и сигурни уз шифровање.</string>
+  <!-- Sync onboarding button. -->
+  <string name="nova_onboarding_sync_button">Започни усклађивање</string>
+  <!-- Marketing onboarding title. -->
+  <string name="nova_onboarding_marketing_title">Помозите нам да изградимо бољи интернет</string>
+  <!--
+    Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
+  -->
+  <string name="nova_onboarding_marketing_body" tools:ignore="BrandUsage">Поделите са Мозилиним маркетиншким партнерима како сте открили Firefox и да га користите. Ови подаци се никада не продају. %1$s</string>
+  <!-- Marketing onboarding body link text. -->
+  <string name="nova_onboarding_marketing_body_link_text">Како користимо податке</string>
+  <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Обавештења вам помажу да останете безбеднији уз Firefox</string>
+  <!-- Notifications onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_notifications_subtitle" tools:ignore="BrandUsage,UnusedResources">Откријте најновије функције приватности у Firefox-у како бисте увек били у току са тим како да останете заштићени.</string>
+  <!-- Notifications onboarding button. -->
+  <string name="nova_onboarding_notifications_button">Укључи обавештења</string>
+  <!-- "Add search widget" onboarding title. -->
+  <string name="nova_onboarding_add_search_widget_title">Учините сваку претрагу приватнијом</string>
+  <!-- "Add search widget" onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Започните сваку претрагу са почетног екрана свог телефона и знајте да вам Фајерфоксова аутоматска заштита чува леђа.</string>
+  <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Додај Firefox елемент</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
+  <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
+  <string name="onboarding_customize_toolbar_title" tools:ignore="UnusedResources">Изаберите место за траку са алаткама</string>
+  <!-- Onboarding sub header for toolbar selection card, used by Nimbus experiments. -->
+  <string name="onboarding_customize_toolbar_description" tools:ignore="UnusedResources">Нека претраге буду надохват руке.</string>
+  <!-- Onboarding label for 'Save and continue' button, used by Nimbus experiments. -->
+  <string name="onboarding_save_and_continue_button">Сачувај и настави</string>
+  <!-- Onboarding toolbar selection card label for 'top' option, used by Nimbus experiments. -->
+  <string name="onboarding_customize_toolbar_top_option">Горе</string>
+  <!-- Onboarding toolbar selection card label for 'bottom' option, used by Nimbus experiments. -->
+  <string name="onboarding_customize_toolbar_bottom_option">Доле</string>
+  <!-- Onboarding toolbar selection card content description for the main image. -->
+  <string name="onboarding_customize_toolbar_main_image_content_description">Велика слика заглавља приказа за избор траке алата која приказује илустровану траку алата.</string>
+  <!-- Onboarding toolbar selection card content description for the toolbar placement image. -->
+  <string name="onboarding_customize_toolbar_placement_bottom_content_description">Слика доње траке алата</string>
+  <string name="onboarding_customize_toolbar_placement_top_content_description">Слика горње траке са алатима</string>
+  <!-- Action label for toolbar options that can be selected. Talkback will append this to say "Double tap to select". -->
+  <string name="onboarding_customize_toolbar_a11y_action_label_select">изабери</string>
+  <!-- Onboarding header for the theme selection card, used by Nimbus experiments. -->
+  <string name="onboarding_customize_theme_title" tools:ignore="UnusedResources">Изаберите тему</string>
+  <!-- Onboarding sub header for theme selection card, used by Nimbus experiments. -->
+  <string name="onboarding_customize_theme_description" tools:ignore="UnusedResources">Гледајте веб у најбољем светлу.</string>
+  <!-- Onboarding label for 'Save and start browsing' button, used by Nimbus experiments. -->
+  <string name="onboarding_save_and_start_button">Сачувај и почни прегледање</string>
+  <!-- Onboarding theme selection card label for 'dark' option, used by Nimbus experiments. -->
+  <string name="onboarding_customize_theme_dark_option">Тамна</string>
+  <!-- Onboarding theme selection card label for 'light' option, used by Nimbus experiments. -->
+  <string name="onboarding_customize_theme_light_option">Светла</string>
+  <!-- Onboarding theme selection card label for 'System auto' option, used by Nimbus experiments. -->
+  <string name="onboarding_customize_theme_system_option">Системски самостално</string>
+  <!-- Onboarding theme selection card content description for the main image. -->
+  <string name="onboarding_customize_theme_main_image_content_description">Велика слика заглавља приказа избора теме која приказује илустроване уметничке и градитељске алате.</string>
+  <!-- Onboarding theme selection card content description for the theme selection image. %1$s is placeholder for either 'system', 'light' or 'dark'. -->
+  <string name="onboarding_customize_theme_content_description">Слика %1$s теме</string>
+  <!-- Action label for options that can be selected. Talkback will append this to say "Double tap to select". -->
+  <string name="onboarding_customize_theme_a11y_action_label_select">изабери</string>
+  <!--
+    Widget Picker
+
+    Widget description for widget picker screen
+  -->
+  <string name="widget_picket_description">Започни брзу претрагу</string>
   <!--
     Search Widget
 
@@ -464,6 +771,8 @@
   <string name="preferences_search">Претрага</string>
   <!-- Preference for settings related to Search engines -->
   <string name="preferences_search_engines">Претраживачи</string>
+  <!-- Settings item to add a search widget on the device's homescreen. -->
+  <string name="preferences_add_search_widget_from_settings">Елемент почетног екрана</string>
   <!-- Preference for settings related to Search engines suggestions -->
   <string name="preferences_search_engines_suggestions">Предлози претраживача</string>
   <!-- Preference Category for settings related to Search address bar -->
@@ -499,6 +808,10 @@
   <string name="preferences_add_private_browsing_shortcut">Додајте пречицу за приватно прегледање</string>
   <!-- Preference for enabling "HTTPS-Only" mode -->
   <string name="preferences_https_only_title">Строги „Само HTTPS” режим</string>
+  <!-- Preference title for using the screen lock to hide tabs in private browsing -->
+  <string name="preferences_pbm_lock_screen_title">Користи закључавање екрана за скривање језичака у приватном прегледању</string>
+  <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
+  <string name="preferences_pbm_lock_screen_summary_3">Прегледајте језичке помоћу отиска прста, ПИН-а или откључавања лицем. Укључивање овога такође спречава снимање и дељење екрана.</string>
   <!-- Label for cookie banner section in quick settings panel. -->
   <string name="cookie_banner_blocker">Блокатор банера колачића</string>
   <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
@@ -538,15 +851,15 @@
   <!-- Summary of https only preference if https only is set to off -->
   <string name="preferences_https_only_off">Искључено</string>
   <!-- Summary of https only preference if https only is set to on in all tabs -->
-  <string name="preferences_https_only_on_all">На свим картицама</string>
+  <string name="preferences_https_only_on_all">На свим језичцима</string>
   <!-- Summary of https only preference if https only is set to on in private tabs only -->
-  <string name="preferences_https_only_on_private">На приватним картицама</string>
+  <string name="preferences_https_only_on_private">На приватним језичцима</string>
   <!-- Text displayed that links to website containing documentation about "HTTPS-Only" mode -->
   <string name="preferences_http_only_learn_more">Сазнај више</string>
   <!-- Option for the https only setting -->
-  <string name="preferences_https_only_in_all_tabs">Омогући у свим картицама</string>
+  <string name="preferences_https_only_in_all_tabs">Омогући у свим језичцима</string>
   <!-- Option for the https only setting -->
-  <string name="preferences_https_only_in_private_tabs">Омогући само у приватним картицама</string>
+  <string name="preferences_https_only_in_private_tabs">Омогући само у приватним језичцима</string>
   <!-- Title shown in the error page for when trying to access a http website while https only mode is enabled. -->
   <string name="errorpage_httpsonly_title">Безбедна страница није доступна</string>
   <!-- Message shown in the error page for when trying to access a http website while https only mode is enabled. The message has two paragraphs. This is the first. -->
@@ -563,18 +876,30 @@
   <string name="preferences_category_account">Налог</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Положај адресне траке</string>
+  <!-- Preference for changing toolbar layout -->
+  <string name="preferences_toolbar_layout">Распоред алатнице</string>
   <!-- Preference for changing default theme to dark or light mode -->
   <string name="preferences_theme">Тема</string>
   <!-- Preference for customizing the home screen -->
   <string name="preferences_home_2">Почетна страна</string>
+  <!-- Preference for customizing the app icon -->
+  <string name="preferences_app_icon">Иконица апликације</string>
+  <!-- Preference for showing the tab strip -->
+  <string name="preferences_tab_strip">Приказ траке са језичцима</string>
+  <!-- Preference for gestures based actions -->
+  <string name="preferences_toolbar_shortcut">Пречица алатнице</string>
+  <!-- Preference for gestures based actions -->
+  <string name="preferences_toolbar_select_shortcut">Изаберите пречицу</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Гестикулације</string>
   <!-- Preference for settings related to visual options -->
   <string name="preferences_customize">Прилагоди</string>
+  <!-- Preference description shown in the banner prompting the user to sign in for sync features -->
+  <string name="preferences_sign_in_description">Усагласите језичке, обележиваче, лозинке и још много тога.</string>
   <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
   <string name="preferences_account_default_name_2">Mozilla налог</string>
   <!-- Preference text for account title when there was an error syncing FxA -->
-  <string name="preferences_account_sync_error">Поново се повежите за наставак синхронизовања</string>
+  <string name="preferences_account_sync_error">Поново се повежите за наставак усклађивања</string>
   <!-- Preference for language -->
   <string name="preferences_language">Језик</string>
   <!-- Preference for translations -->
@@ -589,6 +914,10 @@
   <string name="preferences_show_voice_search">Прикажи гласовну претрагу</string>
   <!-- Preference title for switch preference to show search suggestions also in private mode -->
   <string name="preferences_show_search_suggestions_in_private">Прикажи у приватним сесијама</string>
+  <!-- Preference title for switch preference to show trending search suggestions -->
+  <string name="preferences_show_trending_search_suggestions">Прикажи популарне предлоге</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Прикажи недавне претраге</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Прикажи предлоге из привремене меморије</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
@@ -596,7 +925,7 @@
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">Претражи обележиваче</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
-  <string name="preferences_search_synced_tabs">Претражи синхронизоване језичке</string>
+  <string name="preferences_search_synced_tabs">Претражи усклађене језичке</string>
   <!-- Preference for account settings -->
   <string name="preferences_account_settings">Подешавања налога</string>
   <!-- Preference for enabling url autocomplete -->
@@ -615,6 +944,18 @@
   <string name="preferences_show_nonsponsored_suggestions">Предлози од %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Добијајте предлоге са интернета у вези са вашим претрагама</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">Преузимај предлоге од Mozilla-е док куцате</string>
+  <!-- Preference for link sharing -->
+  <string name="preferences_link_sharing">Дељење веза</string>
+  <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_title">Укључи везу за преузимање %1$s при дељењу на WhatsApp-у</string>
+  <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="link_sharing_toggle_body">Позовите пријатеље да испробају брже и безбедније прегледање уз %1$s сваки пут када делите везу на WhatsApp-у.</string>
+  <!-- Snackbar message shown when user shares a link -->
+  <string name="link_shared_snackbar_message">Веза је дељена</string>
+  <!-- Snackbar action label shown when user shares a link -->
+  <string name="link_shared_snackbar_action">Уреди подешавања</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">Отвори везе у апликацијама</string>
   <!-- Preference for open links in third party apps always open in apps option -->
@@ -623,6 +964,21 @@
   <string name="preferences_open_links_in_apps_ask">Питај пре отварања</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Никад</string>
+  <!-- Preference category for file storage. -->
+  <string name="preferences_category_file_storage">Складиште датотека</string>
+  <!-- Preference title for downloads default location. -->
+  <string name="preferences_downloads_default_location_title">Подразумевана локација преузимања</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Немате дозволу за коришћење ове фасцикле. Покушајте да изаберете другу.</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">Управљајте преузимањима помоћу друге апликације</string>
+  <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_downloads_settings_clean_up_files_title">Обриши из апликације %s и уређаја</string>
+  <!-- Summary for the setting to automatically clean up downloaded files -->
+  <string name="preferences_downloads_settings_clean_up_files_summary">Уклањање датотека из управљача преузимањима их такође уклања са вашег уређаја</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Омогућите Gecko евидентирање</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -647,6 +1003,18 @@
   <string name="addons_permissions_allow_for_all_sites_subtitle">Ако верујете овом додатку, можете му дату дозволу на свакој страници.</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">Овај додатак не захтева никакве дозволе.</string>
+  <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
+  <string name="addons_permissions_required_data_collection_description_2">Програмер каже да ово проширење прикупља: %1$s</string>
+  <!-- The description of the "none" data collection permission, when the extension doesn't collect anything according to the developer. -->
+  <string name="addons_permissions_none_required_data_collection_description">Програмер каже да ово проширење не захтева прикупљање података.</string>
+  <!-- The title of the required permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_permissions">Потребне дозволе:</string>
+  <!-- The title of the optional permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_permissions">Опционалне дозволе:</string>
+  <!-- The title of the required data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_data_collection">Потребно прикупљање података:</string>
+  <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_data_collection">Опционално прикупљање података:</string>
   <!--
     Add-on Preferences
 
@@ -663,6 +1031,12 @@
   <string name="customize_addon_collection_user_hint">Власник колекције (Кориснички ID)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Збирка додатака је измењена. Затварање апликације ради примене промена…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Извештај о приватности</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Скочи назад</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -672,6 +1046,8 @@
     a section where users see a list of tabs that they have visited in the past few days
   -->
   <string name="customize_toggle_recently_visited">Недавно посећено</string>
+  <!-- Title for the customize home screen section with Pocket. -->
+  <string name="customize_toggle_pocket_3">Приче</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
   <string name="customize_toggle_pocket_sponsored">Спонзорисане приче</string>
   <!-- Title for the opening wallpaper settings screen -->
@@ -707,6 +1083,56 @@
   <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
   <string name="wallpapers_onboarding_dialog_explore_more_button_text">Истражите још позадина</string>
   <!--
+    Icon picker
+
+    Title for the "Default" alternative app icon variant in the icon picker screen.
+  -->
+  <string name="alternative_app_icon_option_default">Подразумевано</string>
+  <!-- Title for the "Light" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_light">Светла</string>
+  <!-- Title for the "Dark" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_dark">Тамна</string>
+  <!-- Title for the "Red" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_red">Црвена</string>
+  <!-- Title for the "Green" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_green">Зелена</string>
+  <!-- Title for the "Blue" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_blue">Плава</string>
+  <!-- Title for the "Purple" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_purple">Љубичаста</string>
+  <!-- Title for the "Purple Dark" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_purple_dark">Тамнољубичаста</string>
+  <!-- Title for the "Sunrise" gradient alternative app icon variant in the icon picker screen. The app icon features a soft yellow-to-blue gradient background, resembling the colors of early morning light. -->
+  <string name="alternative_app_icon_option_gradient_sunrise">Рађање сунца</string>
+  <!-- Title for the "Golden Hour" gradient alternative app icon variant in the icon picker screen. The app icon features a warm golden-to-pink gradient background, resembling the colors of the sunlight shortly before sunset. -->
+  <string name="alternative_app_icon_option_gradient_golden_hour">Златни сат</string>
+  <!-- Title for the "Sunset" gradient alternative app icon variant in the icon picker screen. The app icon has a rich red-to-purple gradient background, resembling the tones of a sunset sky. -->
+  <string name="alternative_app_icon_option_gradient_sunset">Залазак сунца</string>
+  <!-- Title for the "Blue Hour" gradient alternative app icon variant in the icon picker screen. The app icon has a cool blue gradient background, resembling the sky color around the time just after sunset or before sunrise. -->
+  <string name="alternative_app_icon_option_gradient_blue_hour">Плави сат</string>
+  <!-- Title for the "Twilight" gradient alternative app icon variant in the icon picker screen. The app icon has a purple-toned gradient background, resembling the sky color during twilight. -->
+  <string name="alternative_app_icon_option_gradient_twilight">Сумрак</string>
+  <!-- Title for the "Midnight" gradient alternative app icon variant in the icon picker screen. The app icon features a dark gradient background, resembling the deep tones of the night sky. -->
+  <string name="alternative_app_icon_option_gradient_midnight">Поноћ</string>
+  <!-- Title for the "Northern Lights" gradient alternative app icon variant in the icon picker screen. The app icon has a dynamic green, blue, and purple gradient background, resembling the aurora borealis. -->
+  <string name="alternative_app_icon_option_gradient_northern_lights">Поларна светлост</string>
+  <!-- Title for the "Pixelated" themed alternative app icon variant in the icon picker screen. This app icon features a pixel-art style, resembling retro 8-bit graphics. -->
+  <string name="alternative_app_icon_option_pixelated">Пикселизовано</string>
+  <!-- Title for the "Minimal" themed alternative app icon variant in the icon picker screen. The app icon presents a simplified, flat and monochrome version of the Firefox logo. -->
+  <string name="alternative_app_icon_option_minimal">Минималистички</string>
+  <!-- Title for the "Pride" themed alternative app icon variant in the icon picker screen. The app icon incorporates a rainbow color scheme in support of the LGBTQ+ community. -->
+  <string name="alternative_app_icon_option_pride">Понос</string>
+  <!-- Title for the "Cuddling" themed alternative app icon variant in the icon picker screen. The app icon features a playful design with an adorable aesthetic. -->
+  <string name="alternative_app_icon_option_cuddling">Мажење</string>
+  <!-- Title for the "Flaming" themed alternative app icon variant in the icon picker screen. The app icon features a fiery design, with the Firefox logo surrounded by flames for a bold, energetic look. -->
+  <string name="alternative_app_icon_option_flaming">Пламена</string>
+  <!-- Title for the "Cool" themed alternative app icon variant in the icon picker screen. The app icon uses a warm orange-to-yellow gradient background with a sleek, modern twist on the Firefox logo, giving it a fresh and stylish appearance. -->
+  <string name="alternative_app_icon_option_cool">Кул</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_warning_dialog_body_2">Апликација се може затворити. Само додирните своју сјајну нову иконицу да бисте поново отворили %1$s.</string>
+  <!-- Dialog button text for confirming the possible app restart and new icon selection -->
+  <string name="restart_warning_dialog_button_positive_2">Промени иконицу</string>
+  <!--
     Add-ons general availability nimbus message
 
     Title of the Nimbus message for extension general availability
@@ -741,9 +1167,9 @@
   <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
   <string name="preferences_manage_account_summary">Промените лозинку, управљајте прикупљањем података или обришите налог</string>
   <!-- Preference for triggering sync -->
-  <string name="preferences_sync_now">Синхронизуј сада</string>
+  <string name="preferences_sync_now">Усклади сада</string>
   <!-- Preference category for sync -->
-  <string name="preferences_sync_category">Изаберите шта синхронизовати</string>
+  <string name="preferences_sync_category">Изаберите шта ускладити</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">Историја</string>
   <!-- Preference for syncing bookmarks -->
@@ -759,15 +1185,15 @@
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">Назив уређаја не може бити празан.</string>
   <!-- Label indicating that sync is in progress -->
-  <string name="sync_syncing_in_progress">Синхронизујем…</string>
+  <string name="sync_syncing_in_progress">Усклађујем…</string>
   <!-- Label summary indicating that sync failed. %s is the date stamp showing last time it succeeded. -->
-  <string name="sync_failed_summary">Синхронизација није успела. Последња успешна: %s</string>
+  <string name="sync_failed_summary">Усклађивање није успело. Последња успешна: %s</string>
   <!-- Label summary showing never synced -->
-  <string name="sync_failed_never_synced_summary">Синхронизација није успела. Последња успешна: никада</string>
+  <string name="sync_failed_never_synced_summary">Усклађивање није успело. Последња успешна: никада</string>
   <!-- Label summary the date we last synced. %s is date stamp showing last time sync was completed. -->
-  <string name="sync_last_synced_summary">Последња синхронизација: %s</string>
+  <string name="sync_last_synced_summary">Последње усклађивање: %s</string>
   <!-- Label summary showing never synced -->
-  <string name="sync_never_synced_summary">Последња синхронизација: никада</string>
+  <string name="sync_never_synced_summary">Последње усклађивање: никада</string>
   <!--
     Text for displaying the default device name.
     %1$s is the name of the app (for example "Firefox"). %2$s is the device manufacturer name
