@@ -10,20 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  prepare:
-    uses: ./.github/workflows/_prepare.yaml
-
   update:
-    needs: prepare
-    uses: ./.github/workflows/_update.yaml
+    uses: ./.github/workflows/_update_projects.yaml
     with:
       project: android-components
-      branches: ${{ needs.prepare.outputs.branches }}
-      path: ${{ needs.prepare.outputs.path }}
-
-  cleanup:
-    needs: update
-    uses: ./.github/workflows/_cleanup.yaml
-    with:
-      project: android-components
-      token: ${{ secrets.ANDROID_GITHUB_TOKEN }}

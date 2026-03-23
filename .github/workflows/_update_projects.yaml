@@ -1,0 +1,114 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+name: Update
+
+on:
+  workflow_call:
+    inputs:
+      project:
+        required: true
+        type: string
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      branches: ${{ steps.config.outputs.branches }}
+      path: ${{ steps.config.outputs.path }}
+    steps:
+      - name: Checkout l10n:main
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: main
+          path: l10n
+      - name: Set token
+        run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
+      - name: Refresh l10n:${{ inputs.project }}_update
+        run: git push origin HEAD:${{ inputs.project }}_update || true
+      - name: Get list of branches & path
+        id: config
+        run: |
+          echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
+          echo "path=$(jq -r --arg project "${{ inputs.project }}" '.paths[$project]' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
+
+  update:
+    needs: prepare
+    strategy:
+      max-parallel: 1
+      matrix:
+        ref: ${{ fromJSON(needs.prepare.outputs.branches) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout l10n:${{ inputs.project }}_update
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          path: l10n
+          persist-credentials: false
+          ref: ${{ inputs.project }}_update
+      - name: Checkout firefox:${{ matrix.ref }}
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          path: firefox
+          persist-credentials: false
+          ref: ${{ matrix.ref }}
+          repository: mozilla-firefox/firefox
+          sparse-checkout: |
+            ${{ needs.prepare.outputs.path }}
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: l10n/.github/scripts/requirements.txt
+      - run: pip install -r l10n/.github/scripts/requirements.txt
+      - run: >
+          python l10n/.github/scripts/update.py \
+          --project ${{ inputs.project }} \
+          --branch ${{ matrix.ref }} \
+          --commit $(cd ../firefox && git rev-parse --short HEAD) \
+          --firefox ../firefox
+        working-directory: l10n
+      - name: git config
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Set token
+        run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        working-directory: l10n
+      - run: git add .
+        working-directory: l10n
+      - name: git commit & push any changes
+        run: |
+          git diff-index --quiet HEAD || (git commit -F .update_msg && git push)
+        working-directory: l10n
+  cleanup:
+    needs: update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout l10n:${{ inputs.project }}_update
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+          ref: ${{ inputs.project }}_update
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: .github/scripts/requirements.txt
+      - run: pip install -r .github/scripts/requirements.txt
+      - run: python .github/scripts/prune.py --project ${{ inputs.project }}
+      - name: git config
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Set token
+        run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
+      - run: git add .
+      - name: git commit & push any changes
+        run: git diff-index --quiet HEAD || (git commit -F .prune_msg && git push)
+      - run: gh pr create --base main --head ${{ inputs.project }}_update --title "Update messages for ${{ inputs.project }}" --body "" || true
+        env:
+          GH_TOKEN: ${{ secrets.ANDROID_GITHUB_TOKEN }}

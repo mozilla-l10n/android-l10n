@@ -10,20 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  prepare:
-    uses: ./.github/workflows/_prepare.yaml
-
   update:
-    needs: prepare
-    uses: ./.github/workflows/_update.yaml
-    with:
-      project: focus-android
-      branches: ${{ needs.prepare.outputs.branches }}
-      path: ${{ needs.prepare.outputs.path }}
-
-  cleanup:
-    needs: update
-    uses: ./.github/workflows/_cleanup.yaml
+    uses: ./.github/workflows/_update_projects.yaml
     with:
       project: focus-android
       token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
