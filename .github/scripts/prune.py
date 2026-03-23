@@ -17,7 +17,7 @@ from argparse import ArgumentParser
 from os import getcwd, remove, scandir
 from os.path import join, relpath, splitext, isdir
 from sys import exit
-from moz.l10n.paths import L10nDiscoverPaths
+from moz.l10n.paths.config import L10nConfigPaths
 from moz.l10n.resource import parse_resource, serialize_resource
 from moz.l10n.model import Entry
 
