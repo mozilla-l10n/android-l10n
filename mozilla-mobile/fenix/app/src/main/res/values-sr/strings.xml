@@ -1963,6 +1963,8 @@
   <string name="bookmark_error_edit_bookmark">Не могу да уредим обележивач</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">УРЕДИ</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">Изабери</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">Премести</string>
   <!-- Bookmark overflow menu edit button -->
@@ -2039,10 +2041,20 @@
   <string name="bookmark_delete_folder_content_description">Обриши фасциклу</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">Претражи обележиваче</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">Претражи фасцикле</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">Мени ставки за %s</string>
+  <!-- Content description for the chevron that will open a folder on the select folder screen and display its children. %s is the title of the folder that will be opened -->
+  <string name="bookmark_select_folder_expand_folder_content_description">Прошири фасциклу: %s</string>
+  <!-- Content description for the chevron that will close a folder on the select folder screen so that its children are no longer visible. %s is the title of the folder that will be closed -->
+  <string name="bookmark_select_folder_close_folder_content_description">Затвори фасциклу: %s</string>
+  <!-- Content description for the "close" button in bookmarks screen. -->
+  <string name="bookmark_close_button_content_description">Затвори обележиваче</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Још нема обележивача</string>
+  <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
+  <string name="bookmarks_folder_description">Обележивачи у фасцикли: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
   <string name="bookmark_empty_list_guest_description">Чувајте сајтове док прегледате. Пријавите се да преузмете обележиваче са других усклађених уређаја.</string>
   <!-- Text for the button to navigate to sync authentication -->
@@ -2053,6 +2065,8 @@
   <string name="bookmark_empty_list_folder_description">Додајте обележиваче док прегледате да би касније нашли ваше омиљене сајтове.</string>
   <!-- Description for the add new folder button when selecting a folder. -->
   <string name="bookmark_select_folder_new_folder_button_title">Нова фасцикла</string>
+  <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
+  <string name="bookmark_moved_single_item">Премештено %1$s у %2$s</string>
   <!--
     Site Permissions
 
@@ -2083,6 +2097,10 @@
   <string name="clear_permissions_on_all_sites">Укини дозволе на свим страницама</string>
   <!-- Preference for altering video and audio autoplay for all websites -->
   <string name="preference_browser_feature_autoplay">Самостално покретање</string>
+  <!-- Preference for local device access for all websites -->
+  <string name="preference_browser_feature_local_device_access">Апликације и услуге уређаја</string>
+  <!-- Preference for local network access for all websites -->
+  <string name="preference_browser_feature_local_network_access">Уређаји у локалној мрежи</string>
   <!-- Preference for altering the camera access for all websites -->
   <string name="preference_phone_feature_camera">Камера</string>
   <!-- Preference for altering the microphone access for all websites -->
@@ -2139,6 +2157,10 @@
   <string name="studies_on">Укљ.</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">Искљ.</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">Укључено</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">Искључено</string>
   <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
   <string name="preferences_category_permissions">Дозволе</string>
   <!-- Category header of a preference that allows a user to alter settings related to web content. -->
@@ -2179,6 +2201,10 @@
     %d is a placeholder for the number of tabs selected.
   -->
   <string name="create_collection_save_to_collection_tab_selected">%d језичак изабран</string>
+  <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+  <string name="create_collection_tabs_saved_new_collection_2">Збирка је сачувана</string>
+  <!-- Text shown in snackbar when one tab has been saved in a collection -->
+  <string name="create_collection_tab_saved_2">Језичак је сачуван</string>
   <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
   <string name="create_collection_close">Затвори</string>
   <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator -->
@@ -2224,6 +2250,8 @@
   <string name="toast_copy_link_to_clipboard">Копирано у привременој меморији</string>
   <!-- An option from the share dialog to sign into sync -->
   <string name="sync_sign_in">Пријави се на Sync</string>
+  <!-- An option from the three dot menu to sign in -->
+  <string name="sync_menu_sign_in" tools:ignore="UnusedResources" moz:removedIn="149">Пријавите се</string>
   <!-- An option from the share dialog to send link to all other sync devices -->
   <string name="sync_send_to_all">Пошаљи на све уређаје</string>
   <!-- An option from the share dialog to reconnect to sync -->
@@ -2246,6 +2274,10 @@
   <string name="sync_add_new_device_learn_button">Сазнајте више о слању језичака…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">Повежи други уређај…</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nПослато из апликације %2$s 🦊 Испробајте мобилни прегледач: %3$s</string>
+  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nПослато из апликације %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2305,7 +2337,7 @@
   <!-- Text shown in snackbar when user closes all tabs -->
   <string name="snackbar_tabs_closed">Језичци затворени</string>
   <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
-  <string name="snackbar_num_tabs_closed">Затворених картица: %1$s</string>
+  <string name="snackbar_num_tabs_closed">Затворених језичака: %1$s</string>
   <!-- Text shown in snackbar when user adds a site to shortcuts -->
   <string name="snackbar_added_to_shortcuts">Додато у пречице!</string>
   <!-- Text shown in snackbar when user closes a private tab -->
@@ -2379,7 +2411,7 @@
   <!-- Title text of a delete browsing data dialog. -->
   <string name="delete_history_prompt_title">Временски распон за брисање</string>
   <!-- Body text of a delete browsing data dialog. -->
-  <string name="delete_history_prompt_body_2">Уклања историју (укључујући синхронизовану историју са других уређаја)</string>
+  <string name="delete_history_prompt_body_2">Уклања историју (укључујући усклађену историју са других уређаја)</string>
   <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
   <string name="delete_history_prompt_button_last_hour">Последњи сат</string>
   <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
@@ -2410,6 +2442,14 @@
     text to display in the snackbar once account is signed-in
   -->
   <string name="onboarding_firefox_account_sync_is_on">Sync је укључен</string>
+  <!--
+    Onboarding theme
+
+    Text shown in snackbar when multiple tabs have been sent to device
+  -->
+  <string name="sync_sent_tabs_snackbar_2">Језичци су послати</string>
+  <!-- Text shown in snackbar when one tab has been sent to device -->
+  <string name="sync_sent_tab_snackbar_2">Језичак је послат</string>
   <!-- Text shown in snackbar when sharing tabs failed -->
   <string name="sync_sent_tab_error_snackbar">Не могу да пошаљем</string>
   <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
@@ -2425,9 +2465,9 @@
   <!-- Text shown for settings option for sign with email -->
   <string name="sign_in_with_email">Користи адресу е-поште</string>
   <!-- Text shown for settings option for create new account text.'Firefox' intentionally hardcoded here. -->
-  <string name="sign_in_create_account_text" tools:ignore="BrandUsage"><![CDATA[Немате налог? <u>Направите га</u> за синхронизацију Firefox-а међу уређајима.]]></string>
+  <string name="sign_in_create_account_text" tools:ignore="BrandUsage"><![CDATA[Немате налог? <u>Направите га</u> за усклађивање Firefox-а међу уређајима.]]></string>
   <!-- Text shown in confirmation dialog to sign out of account. %s is the name of the app (for example "Firefox"). -->
-  <string name="sign_out_confirmation_message_2">%s ће престати са синхронизацијом вашег налога, али неће обрисати ваше податке прегледања на овом уређају.</string>
+  <string name="sign_out_confirmation_message_2">%s ће престати са усклађивањем вашег налога, али неће обрисати ваше податке прегледања на овом уређају.</string>
   <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
   <string name="sign_out_disconnect">Прекини везу</string>
   <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
@@ -2448,6 +2488,8 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s вас штити од многих честих елемената за праћење који надзиру шта радите на мрежи.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Сазнајте више</string>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Заштићени сте</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Стандардно (подразумевано)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2458,6 +2500,32 @@
   <string name="preference_enhanced_tracking_protection_strict">Строго</string>
   <!-- Preference description for enhanced tracking protection for the strict protection settings -->
   <string name="preference_enhanced_tracking_protection_strict_description_4">Јача заштита од праћења и брже перформансе, али неке странице можда неће радити исправно.</string>
+  <!-- Preference description for the checkbox setting for "baseline" exceptions (a set of content blocking exceptions applied to fix major website breakage). %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline" tools:ignore="UnusedResources" moz:removedIn="144">Дозволи апликацији %1$s да самостално примени изузетке потребне за избегавање већих проблема у раду веб сајтова.</string>
+  <!-- Preference description for the checkbox setting for "convenience" exceptions (a set of content blocking exceptions applied to fix convenience site features). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience" tools:ignore="UnusedResources" moz:removedIn="144">Такође самостално примени изузетке који су потребни само за решавање мањих проблема и омогућавање корисних функција.</string>
+  <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">Поправи веће проблеме са сајтом (препоручено)</string>
+  <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">Поправи мање проблеме са сајтом</string>
+  <!-- Preference description for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_description">Мора се користити са исправкама за веће проблеме.</string>
+  <!-- Preference sub header for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_subheader">Поправи проблеме са сајтом</string>
+  <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_learn_more">Сазнајте више</string>
+  <!--
+    Dialog that appears after user tries to uncheck the baseline exceptions preference under Strict or Custom tracking protection
+
+    Title for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection
+  -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_title">Да ли сте сигурни да желите да искључите исправке?</string>
+  <!-- Message for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_message">Ова поставка помаже у решавању најчешћих проблема са сајтовима. Ако је искључите, неки сајтови можда неће радити, а %1$s неће моћи да помогне у решавању тих проблема.</string>
+  <!-- Confirmation button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_confirm">Искључи исправке</string>
+  <!-- Cancel button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. This dismisses the dialog and re-enables the preference. -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_cancel">Задржи исправке укљученим</string>
   <!-- Accessibility text for the Strict protection information icon -->
   <string name="preference_enhanced_tracking_protection_strict_info_button">Шта се блокира строгом заштитом од праћења</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -2562,6 +2630,90 @@
     Enhanced tracking protection exception preference icon for ETP settings.
   -->
   <string name="preference_etp_exceptions_icon_description">Иконица за подешавање изузетака за побољшану заштиту од праћења</string>
+  <!--
+    DNS over HTTPS (DoH)
+
+    Preference title for DNS over HTTPS settings
+  -->
+  <string name="preference_doh_title">DNS преко HTTPS-а</string>
+  <!-- Description of the preference to enable "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_summary">Систем имена домена (DNS) преко HTTPS-а шаље ваш захтев за именом домена кроз шифровану везу, пружајући безбедан DNS и отежавајући другима да виде којој веб страници намеравате да приступите. %1$s</string>
+  <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
+  <string name="preference_doh_learn_more">Сазнајте више</string>
+  <!-- Content description for the "Exceptions" button -->
+  <string name="preference_doh_exceptions_description">Изузеци</string>
+  <!-- Content description for the "Info" button -->
+  <string name="preference_doh_info_description">Информације</string>
+  <!-- Content description for the "Add Site" button -->
+  <string name="preference_doh_add_site_description">Додај веб сајт</string>
+  <!-- Title displayed for "Default Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection">Подразумевана заштита</string>
+  <!-- Summary displayed for "Default Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_doh_default_protection_summary">%1$s одлучује када ће користити безбедан DNS како би заштитио вашу приватност.</string>
+  <!-- Bullet point 1 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_1">Користите добављача којег изаберете</string>
+  <!-- Bullet point 2 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_2">Користите свој подразумевани DNS разрешавач ако постоји проблем са добављачем безбедног DNS-а</string>
+  <!-- Bullet point 3 for "Default Protection" information page under "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_default_protection_info_3">Користите локалног добављача, ако је могуће. %1$s</string>
+  <!-- Bullet point 4 for "Default Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_default_protection_info_4">Искључите када су активни ВПН, родитељски надзор или смернице предузећа</string>
+  <!-- Bullet point 5 for "Default Protection" information page under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). %2$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_default_protection_info_5">Искључите када мрежа каже апликацији %1$s да не би требало да користи безбедни ДНС. %2$s</string>
+  <!-- Title displayed for "Increased Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection">Појачана заштита</string>
+  <!-- Summary displayed for "Increased Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_summary">Ви управљате тиме када ће се користити безбедни ДНС и бирате свог достављача.</string>
+  <!-- Bullet point 1 for "Increased Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_info_1">Користите достављача којег изаберете</string>
+  <!-- Bullet point 2 for "Increased Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection_info_2">Користите свој подразумевани ДНС разрешивач само ако постоји проблем са безбедним ДНС-ом</string>
+  <!-- Title displayed for "Max Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection">Максимална заштита</string>
+  <!-- Summary displayed for "Max Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_doh_max_protection_summary">%1$s ће увек користити безбедни ДНС. Видећете упозорење о безбедносном ризику пре него што употребимо ваш системски ДНС.</string>
+  <!-- Bullet point 1 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_1">Користите само достављача којег изаберете</string>
+  <!-- Bullet point 2 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_2">Увек упозори ако безбедни ДНС није доступан</string>
+  <!-- Bullet point 3 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_3">Ако безбедни ДНС није доступан, сајтови се неће учитавати или неће радити исправно</string>
+  <!-- Title displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off">Искључено</string>
+  <!-- Summary displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off_summary">Користите свој подразумевани ДНС разрешивач</string>
+  <!-- Text displayed above provider dropdown under "DNS over HTTPS" -->
+  <string name="preference_doh_choose_provider">Изаберите достављача</string>
+  <!-- Text displayed for "Default provider" under "DNS over HTTPS" providers -->
+  <string name="preference_doh_provider_default">(подразумевано)</string>
+  <!-- Text displayed for "Custom" under "DNS over HTTPS" providers -->
+  <string name="preference_doh_provider_custom">Произвољно</string>
+  <!-- Text displayed for "Custom provider" dialog under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_title">Произвољни достављач</string>
+  <!-- Text displayed above provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_textfield">Достављач</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL is invalid -->
+  <string name="preference_doh_provider_custom_dialog_error_invalid">Неисправна адреса</string>
+  <!-- Cancel button text for provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_cancel">Откажи</string>
+  <!-- Add button text for provider textfield under "DNS over HTTPS" -->
+  <string name="preference_doh_provider_custom_dialog_add">Додај</string>
+  <!-- Preference to access list of login exceptions that we don't use DNS over HTTPS -->
+  <string name="preference_doh_exceptions">Изузеци</string>
+  <!-- Description of "exceptions" for "DNS over HTTPS". %1$s is the name of the app (for example "Firefox"). -->
+  <string name="preference_doh_exceptions_summary">%1$s неће користити безбедни DNS на овим сајтовима и њиховим поддоменима.</string>
+  <!-- Text displayed that links to adding website domain for "DNS over HTTPS" exceptions. -->
+  <string name="preference_doh_exceptions_add">Додај сајт</string>
+  <!-- Text displayed above the input field when adding exceptions for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_site">Сајт</string>
+  <!-- Placeholder URL displayed in the input field when adding exceptions for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_placeholder">primer.rs</string>
+  <!-- Error displayed in the input field when adding invalid URLs for "DNS over HTTPS". -->
+  <string name="preference_doh_exceptions_add_error">Мора бити важећи домен</string>
+  <!-- Text displayed on the button within the input field for adding exceptions to "DNS over HTTPS" -->
+  <string name="preference_doh_exceptions_add_save">Сачувај</string>
+  <!-- Text displayed for removing all exceptions in "DNS over HTTPS" -->
+  <string name="preference_doh_exceptions_remove_all_exceptions">Уклони све изузетке</string>
   <!-- About page link text to open support link -->
   <string name="about_support">Подршка</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -2570,6 +2722,8 @@
   <string name="about_privacy_notice">Обавештење о приватности</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">Знајте своја права</string>
+  <!-- About page link text to open terms of use link -->
+  <string name="about_terms_of_use" tools:ignore="UnusedResources">Услови коришћења</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">Подаци о лиценцирању</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -2623,13 +2777,13 @@
   <!-- Preference option for adding a password -->
   <string name="preferences_logins_add_login_2">Додај лозинку</string>
   <!-- Preference for syncing saved passwords in Fenix -->
-  <string name="preferences_passwords_sync_logins_2">Синхронизуј лозинке</string>
+  <string name="preferences_passwords_sync_logins_2">Усклађуј лозинке</string>
   <!-- Preference for syncing saved passwords in Fenix, when not signed in -->
-  <string name="preferences_passwords_sync_logins_across_devices_2">Синхронизуј лозинке између уређаја</string>
+  <string name="preferences_passwords_sync_logins_across_devices_2">Усклађуј лозинке између уређаја</string>
   <!-- Preference to access list of saved passwords -->
   <string name="preferences_passwords_saved_logins_2">Сачуване лозинке</string>
   <!-- Description of empty list of saved passwords. %s is the name of the app (for example "Firefox"). -->
-  <string name="preferences_passwords_saved_logins_description_empty_text_2">Лозинке које сачувајте или синхронизујете у %s биће наведене овде. Све лозинке које чувате су шифроване.</string>
+  <string name="preferences_passwords_saved_logins_description_empty_text_2">Лозинке које чувате или усклађујете у %s биће наведене овде. Све лозинке које чувате су шифроване.</string>
   <!-- Clickable text for opening an external link for more information about Sync. -->
   <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">Сазнајте више о Sync-у</string>
   <!-- Preference to access list of login exceptions that we never save logins for -->
@@ -2642,6 +2796,8 @@
   <string name="preferences_passwords_exceptions_remove_all">Обрисати све изузетке</string>
   <!-- Hint for search box in passwords list -->
   <string name="preferences_passwords_saved_logins_search_2">Претражи лозинке</string>
+  <!-- Content description for the logins navigation bar back button -->
+  <string name="logins_navigate_back_button_content_description">Назад</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">Страница</string>
   <!-- The header for the username for a login -->
@@ -2662,6 +2818,26 @@
   <string name="saved_login_clear_username">Обриши корисничко име</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">Очисти име машине</string>
+  <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
+  <string name="login_detail_menu_button_content_description">Мени са детаљима пријаве</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
+  <string name="login_details_navigate_back_button_content_description">Иди назад</string>
+  <!-- Edit text for the login detail menu edit button -->
+  <string name="login_detail_menu_edit_button">Уреди</string>
+  <!-- Delete text for the login detail menu delete button -->
+  <string name="login_detail_menu_delete_button">Обриши</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the add login view. -->
+  <string name="add_login_navigate_back_button_content_description">Иди назад</string>
+  <!-- Content description, used by tools like screenreaders, to press on the save new login button. -->
+  <string name="add_login_save_new_login_button_content_description">Сачувај нову пријаву</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the edit login view. -->
+  <string name="edit_login_navigate_back_button_content_description">Иди назад</string>
+  <!-- Content description, used by tools like screenreaders, to press on the edit login button. -->
+  <string name="edit_login_button_content_description">Уреди пријаву</string>
+  <!-- Content description, used by tools like screenreaders, to press on the add new login button. -->
+  <string name="saved_logins_add_new_login_button_content_description">Додај нову пријаву</string>
+  <!-- Content description, used by tools like screenreaders, to press on the clear search text button. -->
+  <string name="saved_logins_clear_search_text_button_content_description">Обриши текст претраге</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">Отвори страницу у прегледачу</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -2670,6 +2846,10 @@
   <string name="saved_login_hide_password">Сакриј лозинку</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their passwords -->
   <string name="logins_biometric_prompt_message_2">Откључајте да видити сачуване лозинке</string>
+  <!-- Button for unlocking logins on the biometric lock screen -->
+  <string name="logins_biometric_unlock_button">Откључај</string>
+  <!-- Button for leaving logins on the biometric lock screen -->
+  <string name="logins_biometric_leave_button">Напусти</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
   <string name="logins_warning_dialog_title_2">Обезбедите ваше сачуване лозинке</string>
   <!-- Message of warning dialog if users have no device authentication set up -->
@@ -2691,6 +2871,14 @@
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Мени за сортирање лозинки</string>
   <!--
+    Email Masks
+
+    Title for the Email Masks in the settings menu
+  -->
+  <string name="preferences_email_masks">Маске е-поште</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">Предложи маске е-поште</string>
+  <!--
     Autofill
 
     Preference and title for managing the autofill settings
@@ -2705,9 +2893,9 @@
   <!-- Preference summary for saving and autofilling payment method data. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_credit_cards_save_and_autofill_cards_summary_2">%s шифрује све начине плаћање које сачувате</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
-  <string name="preferences_credit_cards_sync_cards_across_devices">Синхронизуј картице на уређајима</string>
+  <string name="preferences_credit_cards_sync_cards_across_devices">Усклади картице на уређајима</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
-  <string name="preferences_credit_cards_sync_cards">Синхронизуј картице</string>
+  <string name="preferences_credit_cards_sync_cards">Усклади картице</string>
   <!-- Preference option for adding a card -->
   <string name="preferences_credit_cards_add_credit_card_2">Додај картицу</string>
   <!-- Preference option for managing saved cards -->
@@ -2720,8 +2908,16 @@
   <string name="preferences_addresses_save_and_autofill_addresses_2">Сачувај и попуни адресе</string>
   <!-- Preference summary for saving and filling address data -->
   <string name="preferences_addresses_save_and_autofill_addresses_summary_2">Укључује телефонске бројеве и адресе е-поште</string>
+  <!-- Preference option for syncing addresses across devices. This is displayed when the user is not signed into sync -->
+  <string name="preferences_addresses_sync_addresses_across_devices">Усклађуј адресе на свим уређајима</string>
+  <!-- Preference option for syncing addresses across devices. This is displayed when the user is signed into sync -->
+  <string name="preferences_addresses_sync_addresses">Усклађуј адресе</string>
+  <!-- Content description navigating back from autofill settings screen. -->
+  <string name="autofill_settings_navigate_back_button_content_description">Назад</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">Додај картицу</string>
+  <!-- Content description for the "credit card feature" top bar back button -->
+  <string name="credit_cards_navigate_back_button_content_description">Иди назад</string>
   <!-- Title of the "Edit card" screen -->
   <string name="credit_cards_edit_card">Уреди картицу</string>
   <!-- The header for the card number of a credit card -->
@@ -2774,6 +2970,8 @@
   <string name="addresses_manage_addresses">Управљај адресама</string>
   <!-- The header for the name of an address. Name represents a person's full name, typically made up of a first, middle and last name, e.g. John Joe Doe. -->
   <string name="addresses_name">Име</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The organization's name related to the address helps in distinguishing addresses used for business or personal purposes. -->
+  <string name="addresses_organization" tools:ignore="UnusedResources">Организација</string>
   <!-- The header for the street address of an address -->
   <string name="addresses_street_address">Улица и број</string>
   <!-- The header for the city of an address -->
@@ -2790,6 +2988,10 @@
   <string name="addresses_phone">Телефон</string>
   <!-- The header for the email of an address -->
   <string name="addresses_email">Е-пошта</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used for addresses in Iran, Mexico. -->
+  <string name="addresses_neighborhood" tools:ignore="UnusedResources">Суседство</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Village or Township field, specific to Malaysia is crucial for addresses in rural areas. -->
+  <string name="addresses_village_township" tools:ignore="UnusedResources">Село или општина</string>
   <!-- The text for the "Save" button for saving an address -->
   <string name="addresses_save_button">Сачувај</string>
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
@@ -2854,6 +3056,8 @@
   <string name="quick_settings_sheet_secure_connection_2">Веза је безбедна</string>
   <!-- Label that indicates a site is using a insecure connection -->
   <string name="quick_settings_sheet_insecure_connection_2">Веза није безбедна</string>
+  <!-- Label that indicates a site is displaying a local document -->
+  <string name="quick_settings_sheet_local_page">Ова страница је сачувана на вашем уређају.</string>
   <!-- Label to clear site data -->
   <string name="clear_site_data">Обриши колачиће и податке сајта</string>
   <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site. %s is the domain of the site. -->
@@ -2928,7 +3132,7 @@
   <!-- Text displayed asking user to re-authenticate -->
   <string name="synced_tabs_reauth">Поново потврдите идентитет.</string>
   <!-- Text displayed when user has disabled tab syncing in Firefox Sync Account -->
-  <string name="synced_tabs_enable_tab_syncing">Омогућите синхронизацију језичака.</string>
+  <string name="synced_tabs_enable_tab_syncing">Омогућите усклађивање језичака.</string>
   <!-- Text displayed when user has no tabs that have been synced -->
   <string name="synced_tabs_no_tabs" tools:ignore="BrandUsage">Немате отворених Firefox језичака на вашим другим уређајима.</string>
   <!-- Text displayed in the synced tabs screen when a user is not signed in to Firefox Sync describing Synced Tabs -->
@@ -2938,9 +3142,9 @@
   <!-- The text displayed when a synced device has no tabs to show in the list of Synced Tabs. -->
   <string name="synced_tabs_no_open_tabs">Нема отворених језичака</string>
   <!-- Content description for expanding a group of synced tabs. -->
-  <string name="synced_tabs_expand_group">Проширите групу синхронизованих језичака</string>
+  <string name="synced_tabs_expand_group">Проширите групу усклађених језичака</string>
   <!-- Content description for collapsing a group of synced tabs. -->
-  <string name="synced_tabs_collapse_group">Скупите групу синхронизованих језичака</string>
+  <string name="synced_tabs_collapse_group">Скупите групу усклађених језичака</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Ограничење пречица достигнуто</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3003,10 +3207,17 @@
     Search suggestions title for Firefox Suggest.
   -->
   <string name="firefox_suggest_header" tools:ignore="BrandUsage">Firefox предлог</string>
+  <!--
+    Search suggestions title for trending search suggestions.
+    %s is a placeholder for the name of the search engine providing the trending search suggestions.
+  -->
+  <string name="trending_searches_header_2">У тренду на %s</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Google претрага</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">%s претрага</string>
+  <!-- Title for recent search suggestions. -->
+  <string name="recent_searches_header">Недавне претраге</string>
   <!--
     Default browser experiment
 
