@@ -10,6 +10,9 @@ on:
       project:
         required: true
         type: string
+      linter:
+        required: true
+        type: string
 
 jobs:
   prepare:
@@ -100,6 +103,11 @@ jobs:
           cache-dependency-path: .github/scripts/requirements.txt
       - run: pip install -r .github/scripts/requirements.txt
       - run: python .github/scripts/prune.py --project ${{ inputs.project }}
+      - name: Run linter
+        run: |
+          python l10n/.github/scripts/update_config.py
+          --toml l10n/${{ inputs.linter }}.toml
+          --config l10n/.github/scripts/linter_config.json
       - name: git config
         run: |
           git config --global user.name "github-actions[bot]"
