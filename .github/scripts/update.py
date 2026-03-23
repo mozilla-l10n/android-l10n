@@ -14,7 +14,9 @@ import json
 from argparse import ArgumentParser
 from filecmp import cmp
 from os import makedirs, pardir
+from os.path import abspath, dirname, exists, join, relpath, basename
 from shutil import copy
+import shutil
 from sys import exit
 from typing import TypedDict
 
