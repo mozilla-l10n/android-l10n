@@ -1776,10 +1776,18 @@
   <string name="download_rename_dialog_label">Назив</string>
   <string name="download_rename_dialog_confirm_button">Сачувај</string>
   <string name="download_rename_dialog_cancel_button">Откажи</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">Датотека под називом „%s“ већ постоји на овој локацији</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">Имена датотека не могу да користе „/“</string>
   <!-- Title for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_title">Не могу преименовати датотеку</string>
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_description">Ова датотека се не може преименовати због системских ограничења или ограничења складишта.</string>
+  <string name="download_rename_error_dismiss_button">У реду</string>
   <!--
     Title for the alert dialog to change file extension.
     %s is the file type to change to.
@@ -1806,6 +1814,13 @@
   <string name="download_time_period_older">Старије</string>
   <!-- Description of an in progress download item, displayed in the downloads list when the download has just started. -->
   <string name="download_item_in_progress_description_preparing">Припремам преузимање…</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the download time remaining is known.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description_2">%1$s / %2$s • преостало %3$s.</string>
   <!--
     Description of an in progress download item, displayed in the downloads list when the estimated download time remaining is still being calculated.
     %1$s is the current file size that has been downloaded.
@@ -1938,6 +1953,8 @@
   <string name="unsubmitted_crash_dialog_checkbox_label">Аутоматски шаљи извештаје о паду</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Затвори</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button_2">ЗАТВОРИ</string>
   <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
   <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Никада више не приказуј</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
@@ -2346,6 +2363,8 @@
   <string name="snackbar_tabs_closed">Језичци затворени</string>
   <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
   <string name="snackbar_num_tabs_closed">Затворених језичака: %1$s</string>
+  <!-- Text shown in snackbar when user bookmarks a list of tabs. %s is the name of the folder the bookmark was saved into. -->
+  <string name="snackbar_message_bookmarks_saved_in_2">Обележивачи сачувани у „%s“</string>
   <!-- Text shown in snackbar when user adds a site to shortcuts -->
   <string name="snackbar_added_to_shortcuts">Додато у пречице!</string>
   <!-- Text shown in snackbar when user closes a private tab -->
@@ -2375,6 +2394,8 @@
   <string name="preference_accessibility_text_size_summary">Чини текст на веб страницама већим или мањим</string>
   <!-- Title for Accessibility Text Size Scaling Preference -->
   <string name="preference_accessibility_font_size_title">Величина фонта</string>
+  <!-- %d is the percentage of the slide bar for setting the text font size and %% will be announced as "percent". -->
+  <string name="a11y_preference_accessibility_font_size_percentage" tools:ignore="UnusedResources" moz:removedIn="148">%d %%.</string>
   <!-- Title for Accessibility Text Automatic Size Scaling Preference -->
   <string name="preference_accessibility_auto_size_2">Аутоматско одређивање величине фонта</string>
   <!-- Summary for Accessibility Text Automatic Size Scaling Preference -->
@@ -2496,6 +2517,15 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s вас штити од многих честих елемената за праћење који надзиру шта радите на мрежи.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Сазнајте више</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d пратилац блокиран</item>
+    <item quantity="other">%d пратилаца блокирано</item>
+  </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">Заштићени сте</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
@@ -2700,6 +2730,8 @@
   <string name="preference_doh_provider_custom_dialog_title">Произвољни достављач</string>
   <!-- Text displayed above provider textfield under "DNS over HTTPS" -->
   <string name="preference_doh_provider_custom_dialog_textfield">Достављач</string>
+  <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL does not start with "https://" or its scheme is not "https" -->
+  <string name="preference_doh_provider_custom_dialog_error_https">Адреса мора почињати са „https://“</string>
   <!-- Error text displayed for provider textfield under "DNS over HTTPS" if the URL is invalid -->
   <string name="preference_doh_provider_custom_dialog_error_invalid">Неисправна адреса</string>
   <!-- Cancel button text for provider textfield under "DNS over HTTPS" -->
@@ -3036,8 +3068,12 @@
   <string name="addresses_emirate" tools:ignore="UnusedResources">Емират</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Relevant for addresses in countries like Russia and Ukraine. -->
   <string name="addresses_oblast" tools:ignore="UnusedResources">Област</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The PIN (Postal Index Number) field, used in India is a code representing a specific area. -->
+  <string name="addresses_pin" tools:ignore="UnusedResources">Pin</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The postal code field is universally used in address forms to specify the area code for mail sorting. -->
   <string name="addresses_postal_code" tools:ignore="UnusedResources">Поштански број</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. the Eircode field, specific to Ireland is a unique postal code system that helps in precise location identification. -->
+  <string name="addresses_eircode" tools:ignore="UnusedResources">Eircode</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in cases we want to only display the word "Country" over "Country or Region". -->
   <string name="addresses_country_only" tools:ignore="UnusedResources">Држава</string>
   <!-- The text for the "Save" button for saving an address -->
@@ -3609,6 +3645,10 @@
   <string name="protection_panel_banner_protected_description">Заштићени сте. Ако нешто приметимо, обавестићемо вас.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
   <string name="protection_panel_etp_toggle_label">Побољшана заштита од праћења</string>
+  <!-- Toggle if Enhanced Tracking Protection is turned on -->
+  <string name="protection_panel_etp_toggle_on">Укљ.</string>
+  <!-- Toggle if Enhanced Tracking Protection is turned off -->
+  <string name="protection_panel_etp_toggle_off">Искљ.</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
   <string name="protection_panel_etp_toggle_enabled_description_2">Ако нешто изгледа неисправно на овом сајту, покушајте да искључите ову опцију.</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
@@ -3631,6 +3671,12 @@
     %d is a placeholder for the number of trackers blocked.
   -->
   <string name="trackers_blocked_panel_total_num_trackers_blocked">Блокирано пратилаца: %d</string>
+  <!--
+    Text for displaying the number of trackers blocked for a specific tracker category in the trackers blocked panel.
+    %s is a placeholder for the name of the tracker category.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s: %d</string>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
