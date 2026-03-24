@@ -674,8 +674,14 @@
   <string name="nova_onboarding_notifications_button">Vklopi obvestila</string>
   <!-- "Add search widget" onboarding title. -->
   <string name="nova_onboarding_add_search_widget_title">Naj bo vsako iskanje zasebnejše</string>
+  <!-- "Add search widget" onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Začnite vsako iskanje z domače strani svojega telefona in vedite, da vam Firefox s svojimi zaščitami krije hrbet.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Dodaj pripomoček Firefox</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Izberite si ikono aplikacije</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Dodajte domačemu zaslonu osebno noto.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -794,6 +800,8 @@
   <string name="preferences_https_only_title">Način \"samo HTTPS\"</string>
   <!-- Preference title for using the screen lock to hide tabs in private browsing -->
   <string name="preferences_pbm_lock_screen_title">Uporabite zaklepanje zaslona za skrivanje zavihkov v zasebnem brskanju</string>
+  <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
+  <string name="preferences_pbm_lock_screen_summary_3">Odklenite zavihke s prstnim odtisom, kodo PIN ali s prepoznavo obraza. Ob vklopu bo preprečeno tudi zajemanje posnetkov zaslona in deljenje.</string>
   <!-- Label for cookie banner section in quick settings panel. -->
   <string name="cookie_banner_blocker">Zavračanje pasic s piškotki</string>
   <!-- Preference for removing cookie/consent banners from sites automatically in private mode. See reduce_cookie_banner_summary for additional context. -->
@@ -1580,6 +1588,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Deli</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Dodaj v zbirko</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Dodaj skupini</string>
   <!-- Content description for tabs tray multiselect share button -->
   <string name="tab_tray_multiselect_share_content_description" tools:ignore="UnusedResources" moz:removedIn="149">Deli izbrane zavihke</string>
   <!-- Content description for tabs tray multiselect menu -->
@@ -1632,10 +1642,19 @@
   <string name="edit_tab_group_bottom_sheet_close_content_description">Zapri urejanje skupine zavihkov</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Skupina</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Skupina %d</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="create_tab_group_name_label">Ime</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Ime</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Dodaj v</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Zapri dodajanje v skupino zavihkov</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Nova skupina zavihkov</string>
   <plurals name="tab_group_tabs_count_subtitle">
@@ -1775,6 +1794,12 @@
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_description">Te datoteke ni mogoče preimenovati zaradi sistemskih omejitev ali omejitev shrambe.</string>
   <string name="download_rename_error_dismiss_button">V redu</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">Želite spremeniti vrsto datoteke v %s?</string>
+  <string name="change_file_extension_description">Zaradi tega se bo datoteka morda odpirala v drugi aplikaciji. Lahko predstavlja tveganje za vašo napravo.</string>
   <string name="change_file_extension_cancel_button">Prekliči</string>
   <string name="change_file_extension_confirm_button">Da, spremeni</string>
   <!-- Text for the header of in progress downloads -->
@@ -2498,6 +2523,17 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s vas ščiti pred številnimi najpogostejšimi sledilci, ki sledijo vašemu brskanju po spletu.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Več o tem</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d zavrnjen sledilec</item>
+    <item quantity="two">%d zavrnjena sledilca</item>
+    <item quantity="few">%d zavrnjeni sledilci</item>
+    <item quantity="other">%d zavrnjenih sledilcev</item>
+  </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">Zaščiteni ste</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
@@ -3671,6 +3707,11 @@
     %s is a placeholder for the name of the certificate authority that issued the certificate.
   -->
   <string name="connection_security_panel_verified_by">Overil %s</string>
+  <!--
+    Text for the connection security panel when the site uses a QWAC.
+    %s is a placeholder for the organization for which the certificate was issued.
+  -->
+  <string name="connection_security_panel_issued_to">Imetnik: %s</string>
   <!-- Text for the connection security panel when the site uses a QWAC. -->
   <string name="connection_security_panel_qualified_certificate">Kvalificirano v skladu z Uredbo (EU) 2024/1183.</string>
   <!--
@@ -3763,6 +3804,16 @@
   <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">V Firefoxu ne uporabljam iskanja</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_8" tools:ignore="UnusedResources">Ne uporabljam sinhronizacije</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">Je počasen ali poln programskih napak</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Funkcije je težko najti ali jih ni</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Je begajoč, težko ga je uporabljati</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Je v redu, vendar ni boljši od drugih brskalnikov</string>
+  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
+  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Firefox nameravam še naprej uporabljati</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Pomagajte izboljšati tiskanje v Firefoxu. Vzelo vam bo samo sekundo</string>
   <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
@@ -3777,6 +3828,8 @@
   <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Kako zadovoljni ste z možnostjo iskanja v Firefoxu?</string>
   <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Kako zadovoljni ste s sinhronizacijo v Firefoxu?</string>
+  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Pomagajte nam izboljšati Firefox. Katero izmed naštetega najbolje opisuje vašo dosedanjo izkušnjo?</string>
   <!--
     Accessibility
 
