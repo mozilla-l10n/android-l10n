@@ -4,14 +4,32 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-
-from import_strings import getReferenceFilesToml
+from moz.l10n.paths import L10nConfigPaths, get_android_locale
 from functions import strip_html
 import argparse
 import json
 import os
 import sys
 import xml.etree.ElementTree as ET
+
+def getReferenceFilesToml(toml_path, reference_locale):
+    """Extract list of reference files from project configuration (TOML)"""
+
+    basedir = os.path.dirname(toml_path)
+    project_config_paths = L10nConfigPaths(
+        toml_path, locale_map={"android_locale": get_android_locale}
+    )
+
+    print(f"Getting list of files for reference locale ({reference_locale}).")
+    reference_files = [
+        {
+            "abs_path": os.path.abspath(ref_path),
+            "rel_path": os.path.relpath(ref_path, basedir),
+        }
+        for ref_path in project_config_paths.ref_paths
+    ]
+
+    return reference_files
 
 
 def check_string_quotes(text, rule):
