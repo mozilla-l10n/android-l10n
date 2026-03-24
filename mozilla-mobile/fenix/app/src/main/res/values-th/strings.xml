@@ -19,6 +19,8 @@
   <string name="content_description_menu">ตัวเลือกเพิ่มเติม</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">การเรียกดูแบบส่วนตัว</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">การเรียกดูตามปกติ</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">ค้นหาหรือป้อนที่อยู่</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -616,8 +618,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">ดำเนินการต่อ</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">เรียกดูต่อ</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">ไม่ใช่ตอนนี้</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">ข้าม</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">เตรียมพร้อมที่จะโลดแล่นอย่างอิสระ</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -692,6 +698,12 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">เริ่มการค้นหาทุกครั้งจากหน้าจอหลักของโทรศัพท์คุณ และมั่นใจได้ว่าการป้องกันอัตโนมัติของ Firefox คอยคุ้มครองคุณอยู่</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">เพิ่มวิดเจ็ต Firefox</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">ปรับแต่งได้ง่ายและมีความเป็นส่วนตัวมากขึ้นทุกครั้งที่แตะ</string>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">เริ่มปรับแต่ง</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">เลือกไอคอนแอปแบบกำหนดเอง</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -1661,6 +1673,17 @@
   <string name="create_tab_group_name_label">ชื่อกลุ่มแท็บ</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">ชื่อ</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">เพิ่มไปยัง</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">กลุ่มแท็บใหม่</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="other">%1$d แท็บ</item>
+  </plurals>
   <!--
     History
 
@@ -3337,6 +3360,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">เรื่องราว</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">ข่าว</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
