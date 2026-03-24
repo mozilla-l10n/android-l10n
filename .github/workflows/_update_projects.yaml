@@ -34,8 +34,8 @@ jobs:
         run: git push origin HEAD:${{ inputs.project }}_update || true
       - name: Get list of branches & path
         id: config
-        run: |
-          echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
+        run: >
+          echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT" \
           echo "path=$(jq -r --arg project "${{ inputs.project }}" '.paths[$project]' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
 
   update:
@@ -59,7 +59,7 @@ jobs:
           persist-credentials: false
           ref: ${{ matrix.ref }}
           repository: mozilla-firefox/firefox
-          sparse-checkout: |
+          sparse-checkout: >
             ${{ needs.prepare.outputs.path }}
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
@@ -75,8 +75,8 @@ jobs:
           --source ../firefox
         working-directory: l10n
       - name: git config
-        run: |
-          git config --global user.name "github-actions[bot]"
+        run: >
+          git config --global user.name "github-actions[bot]" \
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Set token
         run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
@@ -84,7 +84,7 @@ jobs:
       - run: git add .
         working-directory: l10n
       - name: git commit & push any changes
-        run: |
+        run: >
           git diff-index --quiet HEAD || (git commit -F .update_msg && git push)
         working-directory: l10n
   cleanup:
@@ -104,13 +104,13 @@ jobs:
       - run: pip install -r .github/scripts/requirements.txt
       - run: python .github/scripts/prune.py --project ${{ inputs.project }}
       - name: Run linter
-        run: |
-          python l10n/.github/scripts/update_config.py
-          --toml l10n/${{ inputs.linter }}.toml
+        run: >
+          python l10n/.github/scripts/update_config.py \
+          --toml l10n/${{ inputs.linter }}.toml \
           --config l10n/.github/scripts/linter_config.json
       - name: git config
-        run: |
-          git config --global user.name "github-actions[bot]"
+        run: >
+          git config --global user.name "github-actions[bot]" \
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Set token
         run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
