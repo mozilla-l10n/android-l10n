@@ -10,7 +10,7 @@ on:
       project:
         required: true
         type: string
-      linter:
+      linter_toml:
         required: true
         type: string
 
@@ -106,7 +106,7 @@ jobs:
       - name: Run linter
         run: >
           python l10n/.github/scripts/update_config.py \
-          --toml l10n/${{ inputs.linter }}.toml \
+          --toml l10n/${{ inputs.linter_toml }} \
           --config l10n/.github/scripts/linter_config.json
       - name: git config
         run: >
