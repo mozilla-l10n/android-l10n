@@ -15,7 +15,7 @@ from argparse import ArgumentParser
 from filecmp import cmp
 from os import makedirs, pardir
 from os.path import abspath, dirname, exists, join, relpath, basename
-from shutil import copy, copy2
+from shutil import copy
 from sys import exit
 from typing import TypedDict
 
@@ -41,7 +41,7 @@ def copyTomlFile(toml_path, dest_path):
     # Copy the TOML file, assuming it goes in the root of the destination path
     toml_name = basename(toml_path)
     print(f"\nCopying {toml_name} to {dest_path}")
-    copy2(toml_path, join(dest_path, toml_name))
+    copy(toml_path, join(dest_path, toml_name))
 
 
 def update(
