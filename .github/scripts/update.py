@@ -33,7 +33,7 @@ from moz.l10n.model import Entry
 class AutomationConfig(TypedDict):
     branches: list[str]
     head: str
-    paths: list[str]
+    paths: dict[str, str]
 
 
 def copyTomlFile(toml_path, dest_path):
