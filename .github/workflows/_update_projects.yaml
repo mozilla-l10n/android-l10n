@@ -13,6 +13,13 @@ on:
       linter_toml:
         required: true
         type: string
+    secrets:
+      ANDROID_GITHUB_TOKEN:
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   prepare:
@@ -24,7 +31,6 @@ jobs:
       - name: Checkout l10n:main
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          fetch-depth: 0
           persist-credentials: false
           ref: main
           path: l10n

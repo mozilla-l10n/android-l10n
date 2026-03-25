@@ -5,7 +5,7 @@
 """
 Prune localization files after updates from supported branches.
 
-Expects to find `_data/[project]/[branch]/.json` for each project,
+Expects to find `_data/[project]/[branch].json` for each project,
 and removes any other JSON data files in `_data/`.
 Removes any files and messages not used by any branch.
 
@@ -22,7 +22,7 @@ from moz.l10n.resource import parse_resource, serialize_resource
 from moz.l10n.model import Entry
 
 
-def prune_file(path: str, msg_refs: set[str]):
+def prune_file(path: str, msg_refs: set[str], repo_root: str) -> int:
     with open(path, "+rb") as file:
         resource = parse_resource(path, file.read())
         drop_count = 0
@@ -41,7 +41,7 @@ def prune_file(path: str, msg_refs: set[str]):
             section for section in resource.sections if section.entries
         ]
         if drop_count:
-            print(f"drop {drop_count} from {path}")
+            print(f"drop {drop_count} from {relpath(path, repo_root)}")
             file.seek(0)
             for line in serialize_resource(resource):
                 file.write(line.encode("utf-8"))
@@ -49,7 +49,9 @@ def prune_file(path: str, msg_refs: set[str]):
     return drop_count
 
 
-def prune(project: str, branches: list[str], repo_root: str):
+def prune(
+    project: str, branches: list[str], repo_root: str
+) -> tuple[list[str], int, int]:
     project_path = join(repo_root, "mozilla-mobile", project)
     _data_path = join(repo_root, "_data", project)
 
@@ -67,7 +69,6 @@ def prune(project: str, branches: list[str], repo_root: str):
 
         if entry.is_file() and ext == ".json":
             if branch in branches:
-
                 expected.remove(branch)
                 with open(entry.path, "r") as file:
                     data: dict[str, list[str]] = json.load(file)
@@ -78,9 +79,10 @@ def prune(project: str, branches: list[str], repo_root: str):
                     else:
                         refs[path] = set(keys)
             else:
-                print(f"remove {relpath(entry.path, project_path)}")
+                print(f"remove {relpath(entry.path, repo_root)}")
                 remove(entry.path)
                 removed_data.append(branch)
+
     if not refs:
         exit(f"No data found for: {branches}")
     if expected:
@@ -88,12 +90,13 @@ def prune(project: str, branches: list[str], repo_root: str):
 
     cfg_path = join(project_path, "l10n.toml")
     for path in L10nConfigPaths(cfg_path).ref_paths:
-        if path not in refs:
+        rel_path = relpath(path, repo_root)
+        if rel_path not in refs:
             print(f"remove {path}")
             remove(path)
             removed_files += 1
-        elif refs[path]:
-            removed_messages += prune_file(path, refs[path])
+        elif refs[rel_path]:
+            removed_messages += prune_file(path, refs[rel_path], repo_root)
     return removed_data, removed_files, removed_messages
 
 

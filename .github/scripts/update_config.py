@@ -12,6 +12,7 @@ import os
 import sys
 import xml.etree.ElementTree as ET
 
+
 def getReferenceFilesToml(toml_path, reference_locale):
     """Extract list of reference files from project configuration (TOML)"""
 

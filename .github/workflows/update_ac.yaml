@@ -12,6 +12,7 @@ on:
 jobs:
   update:
     uses: ./.github/workflows/_update_projects.yaml
+    secrets: inherit
     with:
       project: android-components
       linter_toml: firefox.toml
