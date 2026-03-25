@@ -35,20 +35,11 @@ class AutomationConfig(TypedDict):
     paths: dict[str, str]
 
 
-def copyTomlFile(toml_path, dest_path):
-    """Copy TOML file"""
-
-    # Copy the TOML file, assuming it goes in the root of the destination path
-    toml_name = basename(toml_path)
-    print(f"\nCopying {toml_name} to {dest_path}")
-    copy(toml_path, join(dest_path, toml_name))
-
-
 def update(
     cfg_automation: AutomationConfig,
     project: str,
     branch: str,
-    android_root: str,
+    fx_root: str,
     repo_root: str,
 ):
     if project not in ("android-components", "fenix", "focus-android"):
@@ -56,47 +47,49 @@ def update(
     if branch not in cfg_automation["branches"]:
         exit(f"Unknown branch: {branch}")
     is_head = branch == cfg_automation["head"]
-    if not exists(android_root):
-        exit(f"Firefox root not found: {android_root}")
-    print(f"source: {branch} at {android_root}")
-    android_root = abspath(android_root)
+    if not exists(fx_root):
+        exit(f"Firefox root not found: {fx_root}")
+    print(f"source: {branch} at {fx_root}")
+    fx_root = abspath(fx_root)
 
     source_files: set[str] = set()
 
-    cfg_path = join(android_root, cfg_automation["paths"][project], "l10n.toml")
+    cfg_path = join(fx_root, cfg_automation["paths"][project], "l10n.toml")
 
     if not exists(cfg_path):
         exit(f"Config file not found: {cfg_path}")
 
     project_base_path = join(repo_root, "mozilla-mobile")
     paths = L10nConfigPaths(cfg_path)
-    source_files.update(android_path for android_path, _ in paths.all())
     if branch == cfg_automation["head"]:
-        copyTomlFile(cfg_path, join(project_base_path, project))
+        dest_path = join(project_base_path, project)
+        print(f"\nCopying l10n.toml to {relpath(dest_path, repo_root)}")
+        copy(cfg_path, dest_path)
 
     messages: dict[str, list[str]] = {}
     new_files = 0
     updated_files = 0
 
+    source_files = (fx_path for fx_path, _ in paths.all())
     for android_path in source_files:
         dest_path = join(
             project_base_path,
-            relpath(android_path, android_root).replace("mobile/android/", ""),
+            relpath(android_path, fx_root).replace("mobile/android/", ""),
         )
-        messages_key = relpath(dest_path, repo_root)
+        rel_path = relpath(dest_path, repo_root)
 
         makedirs(dirname(dest_path), exist_ok=True)
 
         try:
             android_res = parse_resource(android_path)
         except UnsupportedFormat:
-            messages[messages_key] = []
+            messages[rel_path] = []
             if not exists(dest_path):
-                print(f"create {dest_path}")
+                print(f"create {rel_path}")
                 copy(android_path, dest_path)
                 new_files += 1
             elif branch == cfg_automation["head"] and not cmp(android_path, dest_path):
-                print(f"update {dest_path}")
+                print(f"update {rel_path}")
                 copy(android_path, dest_path)
                 updated_files += 1
             else:
@@ -104,7 +97,7 @@ def update(
                 pass
             continue
 
-        messages[messages_key] = [
+        messages[rel_path] = [
             ".".join(section.id + entry.id)
             for section in android_res.sections
             for entry in section.entries
@@ -112,7 +105,7 @@ def update(
         ]
 
         if not exists(dest_path):
-            print(f"create {dest_path}")
+            print(f"create {rel_path}")
             with open(dest_path, "+wb") as file:
                 for line in serialize_resource(android_res):
                     file.write(line.encode("utf-8"))
@@ -124,7 +117,7 @@ def update(
             with open(dest_path, "+rb") as file:
                 res = parse_resource(dest_path, file.read())
                 if add_entries(res, android_res, use_source_entries=is_head):
-                    print(f"update {dest_path}")
+                    print(f"update {rel_path}")
                     file.seek(0)
                     for line in serialize_resource(res):
                         file.write(line.encode("utf-8"))
@@ -169,7 +162,7 @@ if __name__ == "__main__":
     parser = ArgumentParser(
         prog=prog,
         description=__doc__.format(HEAD=cfg_automation["head"]),
-        epilog=f"""Example: {prog} --branch release --source ../firefox""",
+        epilog=f"""Example: {prog} --branch release --firefox ../firefox""",
     )
     parser.add_argument(
         "--project",
@@ -183,12 +176,12 @@ if __name__ == "__main__":
     )
     parser.add_argument("--commit", help="A commit id for the branch.")
     parser.add_argument(
-        "--source", required=True, help="Path to the root of the Firefox source tree."
+        "--firefox", required=True, help="Path to the root of the Firefox source tree."
     )
     args = parser.parse_args()
 
     new_files, updated_files = update(
-        cfg_automation, args.project, args.branch, args.source, repo_root
+        cfg_automation, args.project, args.branch, args.firefox, repo_root
     )
 
     write_commit_msg(args, new_files, updated_files, repo_root)

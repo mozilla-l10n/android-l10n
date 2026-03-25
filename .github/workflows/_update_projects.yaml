@@ -80,7 +80,7 @@ jobs:
           --project ${{ inputs.project }} \
           --branch ${{ matrix.ref }} \
           --commit $(cd firefox && git rev-parse --short HEAD) \
-          --source firefox
+          --firefox firefox
       - name: git config
         run: |
           git config --global user.name "github-actions[bot]"
