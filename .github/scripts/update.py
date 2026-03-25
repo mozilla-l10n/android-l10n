@@ -71,26 +71,26 @@ def update(
     updated_files = 0
 
     source_files = (fx_path for fx_path, _ in paths.all())
-    for android_path in source_files:
+    for fx_path in source_files:
         dest_path = join(
             project_base_path,
-            relpath(android_path, fx_root).replace("mobile/android/", ""),
+            relpath(fx_path, fx_root).replace("mobile/android/", ""),
         )
         rel_path = relpath(dest_path, repo_root)
 
         makedirs(dirname(dest_path), exist_ok=True)
 
         try:
-            android_res = parse_resource(android_path)
+            fx_res = parse_resource(fx_path)
         except UnsupportedFormat:
             messages[rel_path] = []
             if not exists(dest_path):
                 print(f"create {rel_path}")
-                copy(android_path, dest_path)
+                copy(fx_path, dest_path)
                 new_files += 1
-            elif branch == cfg_automation["head"] and not cmp(android_path, dest_path):
+            elif branch == cfg_automation["head"] and not cmp(fx_path, dest_path):
                 print(f"update {rel_path}")
-                copy(android_path, dest_path)
+                copy(fx_path, dest_path)
                 updated_files += 1
             else:
                 # print(f"skip {rel_path}")
@@ -99,7 +99,7 @@ def update(
 
         messages[rel_path] = [
             ".".join(section.id + entry.id)
-            for section in android_res.sections
+            for section in fx_res.sections
             for entry in section.entries
             if isinstance(entry, Entry)
         ]
@@ -107,16 +107,16 @@ def update(
         if not exists(dest_path):
             print(f"create {rel_path}")
             with open(dest_path, "+wb") as file:
-                for line in serialize_resource(android_res):
+                for line in serialize_resource(fx_res):
                     file.write(line.encode("utf-8"))
             new_files += 1
-        elif cmp(android_path, dest_path):
+        elif cmp(fx_path, dest_path):
             # print(f"equal {rel_path}")
             pass
         else:
             with open(dest_path, "+rb") as file:
                 res = parse_resource(dest_path, file.read())
-                if add_entries(res, android_res, use_source_entries=is_head):
+                if add_entries(res, fx_res, use_source_entries=is_head):
                     print(f"update {rel_path}")
                     file.seek(0)
                     for line in serialize_resource(res):
