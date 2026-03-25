@@ -19,6 +19,8 @@
   <string name="content_description_menu">Fleiri stillingar</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Huliðsvafur</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Venjulegt vafur</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Leitaðu eða settu inn vistfang</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -372,6 +374,8 @@
     %2$s is the name of the language which the page was translated to. (For example: French)
   -->
   <string name="browser_toolbar_translated_successfully">Síða þýdd úr %1$s yfir í %2$s.</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">Hristu tækið til að gera samantekt þessarar síðu á örfáum sekúndum. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -614,8 +618,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Halda áfram</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Halda áfram að vafra</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Ekki núna</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Sleppa</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Vertu tilbúin/n að hlaupa frjáls</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -1029,6 +1037,12 @@
   <string name="customize_addon_collection_user_hint">Eigandi safns (notandaauðkenni)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Forritsaukasafni þínu hefur verið breytt. Slekk á forritinu til að innleiða breytingar…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Persónuverndarskýrsla</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Hoppa aftur inn</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1588,6 +1602,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Deila</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Bæta í safn</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Bæta við hóp</string>
   <!-- Content description for tabs tray multiselect share button -->
   <string name="tab_tray_multiselect_share_content_description" tools:ignore="UnusedResources" moz:removedIn="149">Deila völdum flipum</string>
   <!-- Content description for tabs tray multiselect menu -->
@@ -1634,12 +1650,33 @@
     Title for the create tab group bottom sheet
   -->
   <string name="create_tab_group_title">Búa til flipahóp</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">Breyta hópi</string>
   <string name="create_tab_group_save_button">Vista</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Loka breytingum á flipahópi</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Hópur</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Hópur %d</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="create_tab_group_name_label">Heiti</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Heiti</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Bæta í</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Nýr flipahópur</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d flipi</item>
+    <item quantity="other">%1$d flipar</item>
+  </plurals>
   <!--
     History
 
@@ -2496,6 +2533,17 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s verndar þig fyrir mörgum algengustu rekjurum sem fylgjast með því sem þú gerir á netinu.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Fræðast meira</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">Lokað á %d rekjara</item>
+    <item quantity="other">Lokað á %d rekjara</item>
+  </plurals>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Þú ert varin/n</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Staðlað (sjálfgefið)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -3306,6 +3354,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">Sögur</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">Fréttir</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
