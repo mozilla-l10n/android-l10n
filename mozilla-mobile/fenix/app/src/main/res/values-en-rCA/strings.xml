@@ -19,6 +19,8 @@
   <string name="content_description_menu">More options</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Private browsing</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Normal browsing</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Search or enter address</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -316,6 +318,10 @@
   <string name="browser_menu_save_as_pdf_2">Save as PDF</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Translate page</string>
+  <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
+  <string name="browser_menu_summarize_page">Summarize page</string>
+  <!-- Browser menu badge text for summarization feature -->
+  <string name="browser_menu_summarize_page_badge">New</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter" tools:ignore="UnusedResources" moz:removedIn="149">Report broken site…</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
@@ -368,6 +374,8 @@
     %2$s is the name of the language which the page was translated to. (For example: French)
   -->
   <string name="browser_toolbar_translated_successfully">Page translated from %1$s to %2$s.</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">Shake your device to summarize this page in seconds. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -610,8 +618,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Continue</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Continue browsing</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Not now</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Skip</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Get ready to run free</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -686,6 +698,25 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Start every search from your phone’s home screen and know Firefox’s automatic protections have your back.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Add Firefox widget</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Easy to customize and more private with every tap</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">%1$s blocked %2$,d tracker while you roamed the web.</item>
+    <item quantity="other">%1$s blocked %2$,d trackers while you roamed the web.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Start customizing</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Pick a custom app icon</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Give your home screen a personal touch.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -938,6 +969,8 @@
   <string name="preferences_show_nonsponsored_suggestions">Suggestions from %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Get suggestions from the web related to your search</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">Retrieve suggestions from Mozilla as you type</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">Link sharing</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -1025,6 +1058,12 @@
   <string name="customize_addon_collection_user_hint">Collection owner (User ID)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Extension collection modified. Quitting the application to apply changes…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Privacy report</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Jump back in</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1584,6 +1623,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Share</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Add to collection</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Add to group</string>
   <!-- Content description for tabs tray multiselect share button -->
   <string name="tab_tray_multiselect_share_content_description" tools:ignore="UnusedResources" moz:removedIn="149">Share selected tabs</string>
   <!-- Content description for tabs tray multiselect menu -->
@@ -1624,6 +1665,41 @@
   <string name="pwa_site_controls_title_private">%1$s (Private Mode)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Open tab search</string>
+  <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">Create tab group</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">Edit group</string>
+  <string name="create_tab_group_save_button">Save</string>
+  <string name="edit_tab_group_bottom_sheet_close_content_description">Close Edit Tab Group</string>
+  <!-- Default tab group name when creating a tab group -->
+  <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Group</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Group %d</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">Name</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Name</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Add to</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Close add to tab group</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">New tab group</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d tab</item>
+    <item quantity="other">%1$d tabs</item>
+  </plurals>
   <!--
     History
 
@@ -1725,6 +1801,8 @@
   <string name="download_share_url">Share URL</string>
   <!-- Text for the button to share the download file -->
   <string name="download_share_file">Share file</string>
+  <!-- Text for the button to rename the download file -->
+  <string name="download_rename_file">Rename file</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">Are you sure you want to delete the selected items?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
@@ -1737,6 +1815,26 @@
   <string name="download_rename_dialog_label">Name</string>
   <string name="download_rename_dialog_confirm_button">Save</string>
   <string name="download_rename_dialog_cancel_button">Cancel</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">A file named “%s” already exists in this location</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">File names can’t use “/”</string>
+  <!-- Title for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_title">Can’t rename file</string>
+  <!-- Description message for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_description">This file can’t be renamed due to system or storage restrictions.</string>
+  <string name="download_rename_error_dismiss_button">OK</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">Change file type to %s?</string>
+  <string name="change_file_extension_description">This might open the file in a different app and be risky for your device.</string>
+  <string name="change_file_extension_cancel_button">Cancel</string>
+  <string name="change_file_extension_confirm_button">Yes, change it</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">In progress</string>
   <!--
@@ -2458,6 +2556,17 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s protects you from many of the most common trackers that follow what you do online.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Learn more</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d Tracker blocked</item>
+    <item quantity="other">%d Trackers blocked</item>
+  </plurals>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">You’re protected</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (default)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2854,6 +2963,10 @@
   <string name="preferences_email_masks_suggest_learn_more">Learn more</string>
   <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
   <string name="preferences_email_masks_manage_title">Manage email masks</string>
+  <!-- The message displayed when a user has used all of their free-tier email masks, so now the application will choose an existing one at random. -->
+  <string name="email_masks_max_free_tier_reached">You’ve used your 5 free email masks, so we picked one for you to reuse.</string>
+  <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
+  <string name="email_masks_error_retrieving_masks">Email masks aren’t available right now. Try again in a few minutes.</string>
   <!--
     Autofill
 
@@ -3264,6 +3377,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">Stories</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">News</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
@@ -3357,6 +3472,8 @@
   <string name="translation_error_could_not_load_languages_warning_text">Couldn’t load languages. Check your internet connection and try again.</string>
   <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
   <string name="translation_error_language_not_supported_warning_text" tools:ignore="UnusedResources" moz:removedIn="150">Sorry, we don’t support %1$s yet.</string>
+  <!-- The title of the warning card informs the user that translations from a language are not supported yet. %1$s is the name of the source language. -->
+  <string name="translation_error_language_not_supported_warning_text_2">Sorry, we don’t support translations from %1$s yet.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">Translating…</string>
   <!--
@@ -3624,6 +3741,13 @@
   -->
   <string name="connection_security_panel_verified_by">Verified by %s</string>
   <!--
+    Text for the connection security panel when the site uses a QWAC.
+    %s is a placeholder for the organization for which the certificate was issued.
+  -->
+  <string name="connection_security_panel_issued_to">Issued to %s</string>
+  <!-- Text for the connection security panel when the site uses a QWAC. -->
+  <string name="connection_security_panel_qualified_certificate">Qualified as specified in Regulation (EU) 2024/1183.</string>
+  <!--
     Debug drawer
 
     The user-facing title of the Debug Drawer feature.
@@ -3713,6 +3837,16 @@
   <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">I don’t use search on Firefox</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_8" tools:ignore="UnusedResources">I don’t use sync</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">It’s slow or buggy</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Features are hard to find or missing</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">It’s confusing or hard to use</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">It’s okay, but not better than other browsers</string>
+  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
+  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">I plan to keep using Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Help make printing in Firefox better. It only takes a sec</string>
   <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
@@ -3727,6 +3861,8 @@
   <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">How satisfied are you with the search experience in Firefox?</string>
   <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">How satisfied are you with the sync experience in Firefox?</string>
+  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Help us improve Firefox. Which best describes your experience so far?</string>
   <!--
     Accessibility
 
