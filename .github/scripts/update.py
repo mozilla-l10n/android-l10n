@@ -160,7 +160,8 @@ if __name__ == "__main__":
     parser = ArgumentParser(
         prog=prog,
         description=__doc__.format(HEAD=cfg_automation["head"]),
-        epilog=f"""Example: {prog} --branch release --firefox ../firefox""",
+        epilog=f"""Example: {prog} --project fenix --branch release
+        --commit $(cd firefox && git rev-parse --short HEAD) --firefox firefox""",
     )
     parser.add_argument(
         "--project",
