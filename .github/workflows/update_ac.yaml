@@ -1,0 +1,18 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+name: Update android-components
+
+on:
+  schedule:
+    - cron: "5 15 * * 1,4"
+  workflow_dispatch:
+
+jobs:
+  update:
+    uses: ./.github/workflows/_update_projects.yaml
+    secrets: inherit
+    with:
+      project: android-components
+      linter_toml: firefox.toml
