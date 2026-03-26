@@ -111,7 +111,7 @@ jobs:
           cache-dependency-path: l10n/.github/requirements.txt
       - run: pip install -r l10n/.github/requirements.txt
       - run: python l10n/.github/scripts/prune.py --project ${{ inputs.project }}
-      - name: Run linter
+      - name: Update linter config
         run: >
           python l10n/.github/scripts/update_config.py
           --toml l10n/${{ inputs.linter_toml }}
