@@ -127,6 +127,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--project",
         required=True,
+        choices=["fenix", "android-components", "focus-android"],
         help='The project identifier, e.g. "fenix", "android-components", or "focus-android".',
     )
     args = parser.parse_args()

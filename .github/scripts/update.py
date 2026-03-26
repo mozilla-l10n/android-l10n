@@ -42,8 +42,6 @@ def update(
     fx_root: str,
     repo_root: str,
 ):
-    if project not in ("android-components", "fenix", "focus-android"):
-        exit(f"Unknown project: {project}")
     if branch not in cfg_automation["branches"]:
         exit(f"Unknown branch: {branch}")
     is_head = branch == cfg_automation["head"]
@@ -167,6 +165,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--project",
         required=True,
+        choices=["fenix", "android-components", "focus-android"],
         help='The project identifier, e.g. "fenix", "android-components", or "focus-android".',
     )
     parser.add_argument(
