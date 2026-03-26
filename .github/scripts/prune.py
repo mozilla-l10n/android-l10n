@@ -53,7 +53,7 @@ def prune(
     project: str, branches: list[str], repo_root: str
 ) -> tuple[list[str], int, int]:
     project_path = join(repo_root, "mozilla-mobile", project)
-    _data_path = join(repo_root, "_data", project)
+    data_path = join(repo_root, "_data", project)
 
     removed_data = []
     removed_files = 0
@@ -61,10 +61,10 @@ def prune(
     refs: dict[str, set[str]] = {}
     expected = set(branches)
 
-    if not isdir(_data_path):
-        exit(f"_data directory does not exist: {_data_path}")
+    if not isdir(data_path):
+        exit(f"_data directory does not exist: {data_path}")
 
-    for entry in scandir(_data_path):
+    for entry in scandir(data_path):
         branch, ext = splitext(entry.name)
 
         if entry.is_file() and ext == ".json":
