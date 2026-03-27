@@ -11,7 +11,6 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          persist-credentials: false
           token: ${{ secrets.ANDROID_GITHUB_TOKEN }}
       - name: Set up Python 3
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
@@ -25,7 +24,6 @@ jobs:
         run : |
           git config user.name "l10n-bot"
           git config user.email "actions@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add .
           git diff-index --quiet HEAD || git commit -m "Update Spanish (es) localizations"
           git push
