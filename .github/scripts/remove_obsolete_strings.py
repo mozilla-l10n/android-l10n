@@ -38,7 +38,8 @@ def process_file(file_path, version_str):
             kept = []
             for entry in section.entries:
                 if isinstance(entry, Entry) and any(
-                    m.key == MOZ_REMOVED_IN and m.value == version_str for m in entry.meta
+                    m.key == MOZ_REMOVED_IN and m.value == version_str
+                    for m in entry.meta
                 ):
                     removed_ids.append(entry.id[0])
                 else:

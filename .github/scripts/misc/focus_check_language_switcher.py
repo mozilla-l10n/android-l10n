@@ -163,7 +163,6 @@ def cldr_name_for(cldr_languages: dict[str, str], code: str) -> str | None:
 
 def main() -> None:
     print("Fetching CLDR language names …")
-    cldr_languages = fetch_cldr_languages()
 
     print("Fetching Pontoon completion data …")
     all_pontoon = fetch_pontoon_locales()
@@ -204,9 +203,7 @@ def main() -> None:
 
     print()
     print("=" * 75)
-    print(
-        "LOCALES MISSING FROM fillLanguageCodeAndNameMap — no CLDR self-name found"
-    )
+    print("LOCALES MISSING FROM fillLanguageCodeAndNameMap — no CLDR self-name found")
     print("(Android ICU likely can't display these; consider adding them to the map)")
     print("=" * 75)
     if missing_no_cldr:
@@ -221,13 +218,13 @@ def main() -> None:
 
     print()
     print("=" * 75)
-    print(
-        "LOCALES MISSING FROM fillLanguageCodeAndNameMap — CLDR self-name available"
-    )
+    print("LOCALES MISSING FROM fillLanguageCodeAndNameMap — CLDR self-name available")
     print("(Android ICU fallback likely works; listed for reference)")
     print("=" * 75)
     if missing_has_cldr:
-        header = f"{'Code':<15} {'Pontoon name':<30} {'Missing strings':>15}  CLDR self-name"
+        header = (
+            f"{'Code':<15} {'Pontoon name':<30} {'Missing strings':>15}  CLDR self-name"
+        )
         print(header)
         print("-" * len(header))
         for code in missing_has_cldr:
