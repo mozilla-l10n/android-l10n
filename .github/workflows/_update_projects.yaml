@@ -31,12 +31,8 @@ jobs:
       - name: Checkout l10n:main
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
-          persist-credentials: false
           ref: main
           path: l10n
-      - name: Set token
-        run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        working-directory: l10n
       - name: Refresh l10n:${{ inputs.project }}_update
         run: git push origin HEAD:${{ inputs.project }}_update || true
         working-directory: l10n
@@ -58,7 +54,6 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           path: l10n
-          persist-credentials: false
           ref: ${{ inputs.project }}_update
       - name: Checkout firefox:${{ matrix.ref }}
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -85,9 +80,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - name: Set token
-        run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        working-directory: l10n
       - run: git add .
         working-directory: l10n
       - name: git commit & push any changes
@@ -102,7 +94,6 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           path: l10n
-          persist-credentials: false
           ref: ${{ inputs.project }}_update
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
@@ -120,9 +111,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - name: Set token
-        run: git remote set-url origin https://x-access-token:${{ secrets.ANDROID_GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        working-directory: l10n
       - run: git add .
         working-directory: l10n
       - name: git commit & push any changes
