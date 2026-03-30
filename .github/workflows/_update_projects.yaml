@@ -27,20 +27,22 @@ jobs:
     outputs:
       branches: ${{ steps.config.outputs.branches }}
       path: ${{ steps.config.outputs.path }}
+      branch_name: ${{ steps.config.outputs.branch_name }}
     steps:
       - name: Checkout l10n:main
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: main
           path: l10n
-      - name: Refresh l10n:${{ inputs.project }}_update
-        run: git push origin HEAD:${{ inputs.project }}_update || true
+      - name: Refresh l10n:${{ replace(inputs.project, '-', '_') }}_update
+        run: git push origin HEAD:${{ replace(inputs.project, '-', '_') }}_update || true
         working-directory: l10n
       - name: Get list of branches & path
         id: config
         run: |
           echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
           echo "path=$(jq -r --arg project "${{ inputs.project }}" '.paths[$project]' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
+          echo "branch_name=${{ replace(inputs.project, '-', '_') }}_update" >> "$GITHUB_OUTPUT"
 
   update:
     needs: prepare
@@ -50,11 +52,11 @@ jobs:
         ref: ${{ fromJSON(needs.prepare.outputs.branches) }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout l10n:${{ inputs.project }}_update
+      - name: Checkout l10n:${{ needs.prepare.outputs.branch_name }}
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           path: l10n
-          ref: ${{ inputs.project }}_update
+          ref: ${{ needs.prepare.outputs.branch_name }}
       - name: Checkout firefox:${{ matrix.ref }}
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -87,14 +89,14 @@ jobs:
           git diff-index --quiet HEAD || (git commit -F .update_msg && git push)
         working-directory: l10n
   cleanup:
-    needs: update
+    needs: [update, prepare]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout l10n:${{ inputs.project }}_update
+      - name: Checkout l10n:${{ needs.prepare.outputs.branch_name }}
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           path: l10n
-          ref: ${{ inputs.project }}_update
+          ref: ${{ needs.prepare.outputs.branch_name }}
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: "3.12"
@@ -116,7 +118,7 @@ jobs:
       - name: git commit & push any changes
         run: git diff-index --quiet HEAD || (git commit -F .prune_msg && git push)
         working-directory: l10n
-      - run: gh pr create --base main --head ${{ inputs.project }}_update --title "Update messages for ${{ inputs.project }}" --body "" || true
+      - run: gh pr create --base main --head ${{ needs.prepare.outputs.branch_name }} --title "Update messages for ${{ inputs.project }}" --body "" || true
         env:
           GH_TOKEN: ${{ secrets.ANDROID_GITHUB_TOKEN }}
         working-directory: l10n
