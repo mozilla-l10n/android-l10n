@@ -34,15 +34,15 @@ jobs:
         with:
           ref: main
           path: l10n
-      - name: Refresh l10n:${{ replace(inputs.project, '-', '_') }}_update
-        run: git push origin HEAD:${{ replace(inputs.project, '-', '_') }}_update || true
+      - name: Refresh l10n:${{ inputs.project }}_update
+        run: git push origin HEAD:$(echo "${{ inputs.project }}" | tr '-' '_')_update || true
         working-directory: l10n
       - name: Get list of branches & path
         id: config
         run: |
           echo "branches=$(jq -c '.branches' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
           echo "path=$(jq -r --arg project "${{ inputs.project }}" '.paths[$project]' < l10n/.github/update-config.json)" >> "$GITHUB_OUTPUT"
-          echo "branch_name=${{ replace(inputs.project, '-', '_') }}_update" >> "$GITHUB_OUTPUT"
+          echo "branch_name=$(echo "${{ inputs.project }}" | tr '-' '_')_update" >> "$GITHUB_OUTPUT"
 
   update:
     needs: prepare
