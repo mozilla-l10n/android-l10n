@@ -76,7 +76,6 @@ def update_data_json(repo_root, removed_ids_by_rel_path):
         if changed:
             with open(data_file, "w") as f:
                 json.dump(data, f, indent=2, sort_keys=True)
-                f.write("\n")
             print(f"  Updated _data: {os.path.relpath(data_file, repo_root)}")
 
 
