@@ -78,10 +78,6 @@ def update(
 
         makedirs(dirname(dest_path), exist_ok=True)
 
-        if not exists(fx_path):
-            # print(f"skip {rel_path} (source not found)")
-            continue
-
         try:
             fx_res = parse_resource(fx_path)
         except UnsupportedFormat:
