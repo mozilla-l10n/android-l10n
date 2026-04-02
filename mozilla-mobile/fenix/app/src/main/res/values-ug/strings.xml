@@ -715,6 +715,8 @@
   <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">خاسلاشتۇرۇشنى باشلا</string>
   <!-- App icon onboarding title. -->
   <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">ئىختىيارى ئەپ سىنبەلگىسى تاللىنىدۇ</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">باش ئېكرانىڭىزغا خاسلىق ئاتا قىلىدۇ.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -967,6 +969,8 @@
   <string name="preferences_show_nonsponsored_suggestions">%1$s نىڭ تەكلىپى</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">توردىن ئىزدىگىنىڭىزگە مۇناسىۋەتلىك تەكلىپكە ئېرىشىڭ</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">كىرگۈزۈۋاتقاندا Mozilla نىڭ تەۋسىيەسىگە ئېرىشەلەيسىز</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">ئۇلانما ھەمبەھىر</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -1054,6 +1058,12 @@
   <string name="customize_addon_collection_user_hint">توپلىغۇچى ئىگىسى (ئىشلەتكۈچى كىملىكى)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">كېڭەيتىلمە توپلىمى ئۆزگەردى. ئۆزگەرتىشنى قوللىنىش ئۈچۈن پىروگراممىدىن چېكىنىۋاتىدۇ…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">شەخسىيەت دوكلاتى</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">كەينىگە قايت</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1672,6 +1682,28 @@
   <string name="create_tab_group_name_label">ئىسمى</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">ئىسمى</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">قوش</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">گۇرۇپپا بەتكۈچكە قوشنى ياپىدۇ</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">يېڭى بەتكۈچ گۇرۇپپىسى</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d بەتكۈچ</item>
+    <item quantity="other">%1$d بەتكۈچ</item>
+  </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">بەتكۈچ گۇرۇپپا ئۆچۈرەمدۇ؟</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">بۇ مەشغۇلات گۇرۇپپىنى مەڭگۈلۈك ئۆچۈرىدۇ.</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">گۇرۇپپا ئۆچۈر</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">ۋاز كەچ</string>
   <!--
     History
 
@@ -2280,6 +2312,8 @@
   <string name="menu_print">باس</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">ئۈسكۈنىگە يوللا</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">«ئۈسكۈنىگە يوللا» نى ياپ</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">بارلىق مەشغۇلات</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -2530,6 +2564,17 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s سىزنى توردىكى ئىشلىرىڭىزغا ئەگىشىدىغان كۆپ ئۇچرايدىغان ئىزچىلاردىن قوغدايدۇ.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">تەپسىلاتى</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d ئىزلىغۇچ توسۇلدى</item>
+    <item quantity="other">%d ئىزلىغۇچ توسۇلدى</item>
+  </plurals>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">قوغدالدىڭىز</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">ئۆلچەملىك (كۆڭۈلدىكى)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -3340,6 +3385,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">ھېكايە</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">خەۋەرلەر</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
@@ -3433,6 +3480,8 @@
   <string name="translation_error_could_not_load_languages_warning_text">تىلنى يۈكلىيەلمىدى. تور باغلىنىشىڭىزنى تەكشۈرۈپ قايتا سىناڭ.</string>
   <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
   <string name="translation_error_language_not_supported_warning_text" tools:ignore="UnusedResources" moz:removedIn="150">كەچۈرۈڭ، بىز تېخى %1$s نى قوللىمايمىز.</string>
+  <!-- The title of the warning card informs the user that translations from a language are not supported yet. %1$s is the name of the source language. -->
+  <string name="translation_error_language_not_supported_warning_text_2">كەچۈرۈڭ، تېخى %1$s دىن تەرجىمە قىلىشنى قوللىمىدۇق.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">تەرجىمە قىلىۋاتىدۇ…</string>
   <!--
