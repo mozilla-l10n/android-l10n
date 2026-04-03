@@ -316,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">Rediger marcapagina</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Salva como PDF</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Mover a scheda non-private</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Traduce le pagina</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -1000,6 +1002,7 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Tu non ha permisso pro usar iste plica. Tenta eliger un differente.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Gere discargamentos con un altere app</string>
+  <string name="preferences_downloads_delete_from_device">Delete ab apparato</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Dele ab %s e ab le apparato</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1782,6 +1785,11 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Cancellar</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Deler file?</item>
+    <item quantity="other">Deler %d files?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Deler</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1813,6 +1821,12 @@
   <string name="download_delete_multi_select_dialog_confirm">Deler</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Cancellar</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Delete ab apparato</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">Cancellar</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Confirmar</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Renominar file</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
@@ -1910,6 +1924,16 @@
   <string name="download_content_type_filter_document">Documentos</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Altero</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">Discargar file?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">Discargar file?</string>
   <!--
     WebCompat Reporter
 
@@ -2314,6 +2338,16 @@
   <string name="share_device_subheader">Inviar a un apparato</string>
   <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
   <string name="send_to_devices_bottom_sheet_close_content_description">Clauder Inviar a apparato</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">Codice QR</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">Codice QR</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">Clauder</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Discargar</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Impossibile salvar codice QR</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Tote le actiones</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
