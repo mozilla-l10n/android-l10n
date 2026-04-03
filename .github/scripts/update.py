@@ -80,6 +80,9 @@ def update(
 
         try:
             fx_res = parse_resource(fx_path)
+        except FileNotFoundError:
+            print(f"source file not found: {fx_path}")
+            continue
         except UnsupportedFormat:
             messages[rel_path] = []
             if not exists(dest_path):
