@@ -994,7 +994,9 @@
   <!-- Preference category for deleting or removing downloads -->
   <string name="preferences_category_delete_or_remove_downloads">ਡਾਊਨਲੋਡ ਨੂੰ ਹਟਾਓ ਜਾਂ ਮਿਟਾਓ</string>
   <string name="preferences_downloads_delete_from_device">ਡਿਵਾਈਸ ਤੋਂ ਹਟਾਓ</string>
+  <string name="preferences_downloads_delete_from_device_description">ਫ਼ਾਈਲ ਨੂੰ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਤੋਂ ਹਟਾਇਆ ਅਤੇ ਡਾਊਨਲੋਡ ਅਤੀਤ ਤੋਂ ਮਿਟਾਇਆ ਗਿਆ</string>
   <string name="preferences_downloads_remove_from_download_history">ਡਾਊਨਲੋਡ ਅਤੀਤ ਵਿੱਚੋਂ ਹਟਾਓ</string>
+  <string name="preferences_downloads_remove_from_download_history_description">ਫ਼ਾਈਲ ਨੂੰ ਤੁਹਾਡੇ ਡਾਊਨਲੋਡ ਅਤੀਤ ਵਿੱਚੋਂ ਮਿਟਾਇਆ ਗਿਆ, ਪਰ ਇਹ ਹਾਲੇ ਵੀ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਉੱਤੇ ਮੌਜੂਦ ਹੈ</string>
   <string name="preferences_downloads_ask_when_to_delete_files">ਜਦੋਂ ਮੈ ਫਾਇਲਾਂ ਨੂੰ ਹਟਾਵਾਂ ਤਾਂ ਪੁੱਛੋ</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads_2">ਡਾਊਨਲੋਡ ਸੈਟਿੰਗਾਂ</string>
@@ -1682,6 +1684,8 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">ਨਾਂ</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">ਇਸ ਵਿੱਚ ਜੋੜੋ</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">ਟੈਗ ਗਰੁੱਪ ਵਿੱਚ ਜੋੜੋ ਨੂੰ ਬੰਦ ਕਰੋ</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">ਨਵਾਂ ਟੈਬ ਗਰੁੱਪ</string>
   <plurals name="tab_group_tabs_count_subtitle">
@@ -1694,6 +1698,12 @@
   </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">ਟੈਬ ਗਰੁੱਪ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">ਇਹ ਗਰੁੱਪ ਨੂੰ ਪੱਕੇ ਤੌਰ ਉੱਤੇ ਹਟਾਉਂਦਾ ਹੈ।</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">ਗਰੁੱਪ ਨੂੰ ਹਟਾਓ</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">ਰੱਦ ਕਰੋ</string>
   <!--
     History
 
@@ -1772,6 +1782,11 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">ਰੱਦ ਕਰੋ</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">ਫ਼ਾਈਲ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</item>
+    <item quantity="other">%d ਫ਼ਾਈਲਾਂ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">ਹਟਾਓ</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1803,6 +1818,14 @@
   <string name="download_delete_multi_select_dialog_confirm">ਹਟਾਓ</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">ਰੱਦ ਕਰੋ</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">ਡਿਵਾਈਸ ਤੋਂ ਹਟਾਓ</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">ਸਿਰਫ਼ ਡਾਊਨਲੋਡ ਅਤੀਤ ਵਿੱਚੋਂ ਹਟਾਓ</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">ਰੱਦ ਕਰੋ</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">ਤਸਦੀਕ</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">ਫ਼ਾਇਲ ਦਾ ਨਾਂ ਬਦਲੋ</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
@@ -1900,6 +1923,16 @@
   <string name="download_content_type_filter_document">ਦਸਤਾਵੇਜ</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">ਹੋਰ</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">ਫ਼ਾਈਲ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨਾ ਹੈ?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">ਫ਼ਾਈਲ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨਾ ਹੈ?</string>
   <!--
     WebCompat Reporter
 
@@ -2302,6 +2335,22 @@
   <string name="menu_print">ਪਰਿੰਟ ਕਰੋ</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">ਡਿਵਾਈਸ ‘ਤੇ ਭੇਜੋ</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">ਡਿਵਾਈਸ ਉੱਤੇ ਭੇਜੋ ਨੂੰ ਬੰਦ ਕਰੋ</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">QR ਕੋਡ</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">QR ਕੋਡ</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">ਬੰਦ ਕਰੋ</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">ਲਿੰਕ ਨੂੰ ਨੇੜਲਿਆਂ ਨਾਲ ਸਾਂਝਾ ਕਰੋ</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">ਡਾਊਨਲੋਡ</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">QR ਕੋਡ ਨੂੰ ਡਾਊਨਲੋਡ ਵਿੱਚ ਸੰਭਾਲਿਆ</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">QR ਕੋਡ ਨੂੰ ਸੰਭਾਲਣ ਲਈ ਅਸਫ਼ਲ ਹੈ</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">ਸਾਰੀਆਂ ਕਾਰਵਾਈਆਂ</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -3373,6 +3422,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">ਲੇਖ</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">ਖ਼ਬਰਾਂ</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
