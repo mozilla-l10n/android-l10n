@@ -19,6 +19,8 @@
   <string name="content_description_menu">Mai multe opțiuni</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Navigare privată</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Navigare normală</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Caută sau introdu adresa</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -314,10 +316,14 @@
   <string name="browser_menu_edit_bookmark">Editează marcajul</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Salvează ca PDF</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Mută la filă neprivată</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Tradu pagina</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
   <string name="browser_menu_summarize_page">Fă rezumatul paginii</string>
+  <!-- Browser menu badge text for summarization feature -->
+  <string name="browser_menu_summarize_page_badge">Nou</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter" tools:ignore="UnusedResources" moz:removedIn="149">Raportează site defect…</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
@@ -370,6 +376,8 @@
     %2$s is the name of the language which the page was translated to. (For example: French)
   -->
   <string name="browser_toolbar_translated_successfully">Pagină tradusă de la %1$s la %2$s.</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">Agită dispozitivul ca să rezumi pagina în câteva secunde. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -612,8 +620,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Continuă</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Continuă navigarea</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Nu acum</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Omite</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Pregătește-te să navighezi liber</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -688,6 +700,26 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Începi fiecare căutare din ecranul de pornire al telefonului și știi că protecțiile automate ale Firefox sunt de folos.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Adaugă widgetul Firefox</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Ușor de personalizat și mai privat cu fiecare atingere</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">\t%1$s a blocat %2$,d element de urmărire cât timp ai cutreierat pe net.</item>
+    <item quantity="few">\t%1$s a blocat %2$,d elemente de urmărire cât timp ai cutreierat pe net.</item>
+    <item quantity="other">\t%1$s a blocat %2$,d de elemente de urmărire cât timp ai cutreierat pe net.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Începe personalizarea</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Alege o pictogramă personalizată pentru aplicație</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Dă-i o notă personală ecranului de pornire.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -755,6 +787,10 @@
   <string name="preferences_category_about">Despre</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">Selectează una dintre opțiuni</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Motor de căutare implicit în navigările private</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Folosește același motor de căutare ca în navigarea normală</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Gestionează motoarele de căutare alternative</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -940,6 +976,8 @@
   <string name="preferences_show_nonsponsored_suggestions">Sugestii de la %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Primește sugestii de pe web legate de căutarea ta</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">Preia sugestii de la Mozilla pe măsură ce tastezi</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">Distribuirea linkurilor</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -969,6 +1007,15 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Nu ai permisiunea de a utiliza acest dosar. Încearcă să alegi altul.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Gestionează descărcările cu o altă aplicație</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">Șterge sau elimină descărcările</string>
+  <string name="preferences_downloads_delete_from_device">Șterge de pe dispozitiv</string>
+  <string name="preferences_downloads_delete_from_device_description">Fișierul este șters de pe dispozitiv și eliminat din istoricul descărcărilor</string>
+  <string name="preferences_downloads_remove_from_download_history">Elimină din istoricul descărcărilor</string>
+  <string name="preferences_downloads_remove_from_download_history_description">Fișierul este eliminat din istoricul descărcărilor, dar rămâne salvat pe dispozitiv</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Întreabă când să se șteargă fișierele</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">Setări pentru descărcări</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Șterge de pe %s și de pe dispozitiv</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1027,6 +1074,12 @@
   <string name="customize_addon_collection_user_hint">Proprietarul colecției (ID utilizator)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Colecția de extensii modificată. Se închide aplicația pentru a aplica modificările…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Raport de confidențialitate</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Revino la această filă</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1582,6 +1635,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Partajează</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Adaugă în colecție</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Adaugă în grup</string>
   <!-- Content description for tabs tray multiselect share button -->
   <string name="tab_tray_multiselect_share_content_description" tools:ignore="UnusedResources" moz:removedIn="149">Distribuie filele selectate</string>
   <!-- Content description for tabs tray multiselect menu -->
@@ -1622,6 +1677,50 @@
   <string name="pwa_site_controls_title_private">%1$s (mod privat)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Deschide căutarea de file</string>
+  <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">Creează un grup de file</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">Editează grupul</string>
+  <string name="create_tab_group_save_button">Salvează</string>
+  <string name="edit_tab_group_bottom_sheet_close_content_description">Închide Modifică grupul de file</string>
+  <!-- Default tab group name when creating a tab group -->
+  <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Grup</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Grup %d</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">Nume</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Nume</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Adaugă în</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Închide Adaugă în grupul de file</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Grup nou de file</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d filă</item>
+    <item quantity="few">%1$d file</item>
+    <item quantity="other">%1$d de file</item>
+  </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">Ștergi grupul de file?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">Grupul va fi șters permanent.</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">Șterge grupul</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">Anulează</string>
   <!--
     History
 
@@ -1700,6 +1799,12 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Anulează</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Ștergi fișierul?</item>
+    <item quantity="few">Ștergi %d fișiere?</item>
+    <item quantity="other">Ștergi %d de fișiere?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Șterge</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1731,17 +1836,40 @@
   <string name="download_delete_multi_select_dialog_confirm">Șterge</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Anulează</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Șterge de pe dispozitiv</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Doar elimină din istoricul descărcărilor</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">Anulează</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Confirmă</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Redenumește fișierul</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_label">Nume</string>
   <string name="download_rename_dialog_confirm_button">Salvează</string>
   <string name="download_rename_dialog_cancel_button">Anulează</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">Deja există un fișier denumit „%s” în această locație</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">Nu poți folosi „/” în denumirea fișierului</string>
   <!-- Title for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_title">Fișierul nu poate fi redenumit</string>
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_description">Fișierul nu poate fi redenumit din cauză de restricții de sistem sau de stocare.</string>
   <string name="download_rename_error_dismiss_button">OK</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">Schimbi tipul de fișier în %s?</string>
+  <string name="change_file_extension_description">Ar putea deschide fișierul într-o altă aplicație - ceea ce ar fi riscant pentru dispozitiv.</string>
+  <string name="change_file_extension_cancel_button">Anulează</string>
+  <string name="change_file_extension_confirm_button">Da, schimbă-l.</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">În desfășurare</string>
   <!--
@@ -3720,6 +3848,12 @@
   <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Nu folosesc căutarea pe Firefox</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_8" tools:ignore="UnusedResources">Nu folosesc sincronizarea</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">Este derutant sau greu de utilizat</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Este OK, dar nu mai bun decât alte browsere</string>
+  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
+  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Am de gând să folosesc în continuare Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">Ajută la îmbunătățirea imprimării în Firefox. Durează doar o secundă.</string>
   <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
@@ -3734,6 +3868,8 @@
   <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Cât de mulțumit/ă ești de experiența de căutare în Firefox?</string>
   <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Cât de mulțumit/ă ești de experiența de sincronizare în Firefox?</string>
+  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Ajută-ne să îmbunătățim Firefox. Ce afirmație îți descrie cel mai bine experiența de până acum?</string>
   <!--
     Accessibility
 
