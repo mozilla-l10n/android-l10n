@@ -316,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">تعديل العلامة</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">حفظ كملف PDF</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">انتقل إلى لسان غير خاص</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">ترجمة الصفحة</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -700,6 +702,8 @@
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">إضافة أداة Firefox</string>
   <!-- Customize prompt onboarding title. -->
   <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">سهل التخصيص وأكثر خصوصية مع كل نقرة</string>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">ابدأ بالتخصيص</string>
   <!-- App icon onboarding title. -->
   <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">اختر أيقونة مخصّصة للتطبيق</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
@@ -769,6 +773,10 @@
   <string name="preferences_category_about">عن</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">اختر واحدة</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">محرك بحث المبدئي للتصفح الخاص</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">استخدم محرك البحث نفسه الذي تستخدمه للتصفح العادي</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">أدر محركات البحث البديلة</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -954,6 +962,8 @@
   <string name="preferences_show_nonsponsored_suggestions">اقتراحات من %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">احصل على اقتراحات من الويب تتعلق ببحثك</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">احصل على اقتراحات من Mozilla أثناء الكتابة</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">مشاركة الروابط</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -983,6 +993,15 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">لا تملك صلاحية استخدام هذا المجلد. جرب اختيار مجلد آخر.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">إدارة التنزيلات باستخدام تطبيق آخر</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">احذف أو أزِل التنزيلات</string>
+  <string name="preferences_downloads_delete_from_device">احذف من الجهاز</string>
+  <string name="preferences_downloads_delete_from_device_description">حُذف الملف من جهازك وأُزيل من تأريخ التنزيلات</string>
+  <string name="preferences_downloads_remove_from_download_history">أزِل من تأريخ التنزيلات</string>
+  <string name="preferences_downloads_remove_from_download_history_description">أُزيل الملف من تأريخ تنزيلاتك، ولكنه لا يزال محفوظًا على جهازك</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">اسألني عندما احذف الملفات</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">إعدادات التنزيل</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">احذف من %s والجهاز</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1644,6 +1663,12 @@
   <string name="pwa_site_controls_title_private">‏%1$s (الوضع الخاص)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">فتح تبويب البحث</string>
+  <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">أنشئ مجموعة لسان</string>
   <string name="create_tab_group_save_button">احفظ</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">مجموعة</string>
@@ -2300,7 +2325,7 @@
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">صِلْ جهازًا آخر…</string>
   <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
-  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nتم الإرسال من %2$s 🦊 جرب متصفح الجوال: %3$s</string>
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nأُرسِل من %2$s 🦊 جرّب متصفح الجوّال: %3$s</string>
   <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nتم الإرسال من %2$s 🦊 %3$s</string>
   <!--
