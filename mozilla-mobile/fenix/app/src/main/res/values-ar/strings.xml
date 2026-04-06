@@ -19,6 +19,8 @@
   <string name="content_description_menu">خيارات إضافية</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">التصفح الخاص</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">التصفّح العادي</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">ابحث أو أدخِل عنوانا</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -318,6 +320,8 @@
   <string name="browser_menu_translate_page_2">ترجمة الصفحة</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
   <string name="browser_menu_summarize_page">تلخيص الصفحة</string>
+  <!-- Browser menu badge text for summarization feature -->
+  <string name="browser_menu_summarize_page_badge">جديد</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter" tools:ignore="UnusedResources" moz:removedIn="149">الإبلاغ عن موقع لا يعمل…</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
@@ -370,6 +374,8 @@
     %2$s is the name of the language which the page was translated to. (For example: French)
   -->
   <string name="browser_toolbar_translated_successfully">ترجمت الصفحة من %1$s إلى %2$s.</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">هزّ جهازك لتلخيص الصفحة في ثوانٍ معدودة. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -612,8 +618,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">متابعة</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">أكمل التصفّح</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">ليس الآن</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">تخطَّ</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">استعد للانطلاق بحرية</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -688,6 +698,10 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">بحث أسرع انطلاقًا من شاشتك الرئيسية، وحماية تلقائية مدمجة من فايرفوكس.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">إضافة أداة Firefox</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">سهل التخصيص وأكثر خصوصية مع كل نقرة</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">اختر أيقونة مخصّصة للتطبيق</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -1027,6 +1041,12 @@
   <string name="customize_addon_collection_user_hint">مالك التجميعة (معرّف المستخدم)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">عُدّلت مجموعة الإضافات. جارٍ إغلاق التطبيق لإجراء التغييرات…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">تقرير الخصوصية</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">عُد إلى حيث كنت</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1582,6 +1602,8 @@
   <string name="tab_manager_multiselect_menu_item_share">مشاركة</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">إضافة إلى المجموعة</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">أضِف إلى مجموعة</string>
   <!-- Content description for tabs tray multiselect share button -->
   <string name="tab_tray_multiselect_share_content_description" tools:ignore="UnusedResources" moz:removedIn="149">شارِك التبويبات المحددة</string>
   <!-- Content description for tabs tray multiselect menu -->
@@ -1622,6 +1644,17 @@
   <string name="pwa_site_controls_title_private">‏%1$s (الوضع الخاص)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">فتح تبويب البحث</string>
+  <string name="create_tab_group_save_button">احفظ</string>
+  <!-- Default tab group name when creating a tab group -->
+  <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">مجموعة</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">الاسم</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">الاسم</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">أضِف إلى</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">ألغِ</string>
   <!--
     History
 
@@ -2230,6 +2263,8 @@
   <string name="menu_print">اطبع</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">أرسل إلى جهاز</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">أغلِق أرسل إلى جهاز</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">كل الإجراءات</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -2480,6 +2515,8 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">تحميك %s من العديد من المتعقّبات المعروفة التي تتعقب أنشطتك على الإنترنت.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">اطّلع على المزيد</string>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">أنت محمي</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">القياسي (افتراضي)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -3290,6 +3327,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">القصص</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">الأخبار</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
@@ -3383,6 +3422,8 @@
   <string name="translation_error_could_not_load_languages_warning_text">تعذر تحميل اللغات. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.</string>
   <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
   <string name="translation_error_language_not_supported_warning_text" tools:ignore="UnusedResources" moz:removedIn="150">عذرًا، لا ندعم %1$s بعد.</string>
+  <!-- The title of the warning card informs the user that translations from a language are not supported yet. %1$s is the name of the source language. -->
+  <string name="translation_error_language_not_supported_warning_text_2">عذرًا، لا ندعم الترجمات من %1$s حتى الآن.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">جارٍ الترجمة…</string>
   <!--
@@ -3650,6 +3691,11 @@
   -->
   <string name="connection_security_panel_verified_by">تثبّت منها %s</string>
   <!--
+    Text for the connection security panel when the site uses a QWAC.
+    %s is a placeholder for the organization for which the certificate was issued.
+  -->
+  <string name="connection_security_panel_issued_to">مُصدَرة إلى %s</string>
+  <!--
     Debug drawer
 
     The user-facing title of the Debug Drawer feature.
@@ -3739,6 +3785,16 @@
   <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">لا أستخدم خاصية البحث على Firefox</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_8" tools:ignore="UnusedResources">أنا لا أستخدم المزامنة</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_slow_or_buggy" tools:ignore="UnusedResources">أنه بطيء أو مليء بالأخطاء</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">من الصعب العثور على المزايا أو أنها مفقودة</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">أنه مُربِك أو صعب الاستخدام</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">جيد، لكنه ليس أفضل من المتصفّحات الأخرى</string>
+  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
+  <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">أُخطط للاستمرار في استخدام Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_prompt_printing_title" tools:ignore="BrandUsage,UnusedResources">ساعد في تحسين الطباعة في Firefox. لن يستغرق الأمر سوى ثواني</string>
   <!-- Text shown in prompt for search microsurvey. Note: The word "Firefox" should NOT be translated. -->
@@ -3753,6 +3809,8 @@
   <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">ما مدى رضاك عن تجربة البحث في Firefox؟</string>
   <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">ما مدى رضاك عن تجربة مزامنة البيانات في Firefox؟</string>
+  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">ساعدنا في تحسين Firefox. ما الذي يوصف تجربتك حتى الآن؟</string>
   <!--
     Accessibility
 
