@@ -316,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">Уреди обележивач</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Сачувај као ПДФ</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Пребаци у неприватни језичак</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Преведи страницу</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -785,6 +787,10 @@
   <string name="preferences_category_about">О програму</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">Изаберите</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Подразумевани претраживач за приватно прегледање</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Користи исти претраживач као и за обично прегледање</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Управљајте другим претраживачима</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -1001,7 +1007,13 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Немате дозволу за коришћење ове фасцикле. Покушајте да изаберете другу.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Управљајте преузимањима помоћу друге апликације</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">Обришите или уклоните преузимања</string>
   <string name="preferences_downloads_delete_from_device">Обриши са уређаја</string>
+  <string name="preferences_downloads_delete_from_device_description">Датотека је обрисана са вашег уређаја и уклоњена из историје преузимања</string>
+  <string name="preferences_downloads_remove_from_download_history">Уклони из историје преузимања</string>
+  <string name="preferences_downloads_remove_from_download_history_description">Датотека је уклоњена из историје преузимања, али је и даље сачувана на вашем уређају</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Питај када обришем датотеке</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads_2">Подешавања преузимања</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
@@ -1787,6 +1799,12 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Откажи</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Обрисати датотеку?</item>
+    <item quantity="few">Обрисати %d датотеке?</item>
+    <item quantity="other">Обрисати %d датотека?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Обриши</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1818,6 +1836,10 @@
   <string name="download_delete_multi_select_dialog_confirm">Обриши</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Откажи</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Обриши са уређаја</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Уклони само из историје преузимања</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
   <string name="download_delete_dialog_cancel">Откажи</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
@@ -2339,6 +2361,10 @@
   <string name="qr_code_display_title">КР код</string>
   <!-- Content description for the close button in the QR code display screen -->
   <string name="qr_code_display_close">Затвори</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Дели везу у близини</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Да бисте поделили ову везу са људима у близини, нека скенирају КР код испод.</string>
   <!-- Label for the download button on the QR code display screen -->
   <string name="qr_code_display_download">Преузми</string>
   <!-- Toast shown when the QR code is successfully saved to Downloads -->
