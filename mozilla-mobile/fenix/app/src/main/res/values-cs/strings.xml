@@ -1692,6 +1692,28 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Název</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Přidat do</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Zavře panel pro přidání do skupiny</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Nová skupina panelů</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d panel</item>
+    <item quantity="few">%1$d panely</item>
+    <item quantity="many">%1$d panelů</item>
+    <item quantity="other">%1$d panelů</item>
+  </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">Smazat skupinu panelů?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">Tímto se skupina natrvalo odstraní.</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">Smazat skupinu</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">Zrušit</string>
   <!--
     History
 
@@ -1770,6 +1792,13 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Zrušit</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Smazat soubor?</item>
+    <item quantity="few">Smazat %d soubory?</item>
+    <item quantity="many">Smazat %d souborů?</item>
+    <item quantity="other">Smazat %d souborů?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Smazat</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1801,6 +1830,14 @@
   <string name="download_delete_multi_select_dialog_confirm">Smazat</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Zrušit</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Smazat ze zařízení</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Odstranit pouze z historie stahování</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">Zrušit</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Potvrdit</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Přejmenování souboru</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
@@ -1898,6 +1935,16 @@
   <string name="download_content_type_filter_document">Dokumenty</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Ostatní</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">Stáhnout soubor?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">Stáhnout soubor?</string>
   <!--
     WebCompat Reporter
 
@@ -2300,6 +2347,10 @@
   <string name="menu_print">Tisk</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Poslat do zařízení</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">QR kód</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">QR kód</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Všechny akce</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
