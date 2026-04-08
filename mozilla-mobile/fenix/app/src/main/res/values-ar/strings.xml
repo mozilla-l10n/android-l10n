@@ -702,6 +702,21 @@
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">إضافة أداة Firefox</string>
   <!-- Customize prompt onboarding title. -->
   <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">سهل التخصيص وأكثر خصوصية مع كل نقرة</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="zero">%1$s حظر %2$,d متعقّب بينما كنت تتصفح في الوِب.</item>
+    <item quantity="one">%1$s حظر %2$,d متعقّب بينما كنت تتصفح في الوِب.</item>
+    <item quantity="two">%1$s حظر متعقّبين بينما كنت تتصفح في الوِب.</item>
+    <item quantity="few">%1$s حظر %2$,d متعقّبات بينما كنت تتصفح في الوِب.</item>
+    <item quantity="many">%1$s حظر %2$,d متعقّبًا بينما كنت تتصفح في الوِب.</item>
+    <item quantity="other">%1$s حظر %2$,d متعقّب بينما كنت تتصفح في الوِب.</item>
+  </plurals>
   <!-- Customize prompt onboarding positive button. -->
   <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">ابدأ بالتخصيص</string>
   <!-- App icon onboarding title. -->
@@ -1794,6 +1809,15 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">إلغاء</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="zero">لا ملف للحذف</item>
+    <item quantity="one">حذف ملف؟</item>
+    <item quantity="two">حذف ملفين؟</item>
+    <item quantity="few">حذف %d ملفات؟</item>
+    <item quantity="many">حذف %d ملفًا؟</item>
+    <item quantity="other">حذف %d ملف؟</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">الحذف</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -2610,6 +2634,19 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">تحميك %s من العديد من المتعقّبات المعروفة التي تتعقب أنشطتك على الإنترنت.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">اطّلع على المزيد</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="zero">حُظر %d متعقّب</item>
+    <item quantity="one">حُظر %d متعقّب</item>
+    <item quantity="two">حُظر متعقّبين</item>
+    <item quantity="few">حُظر %d متعقّبات</item>
+    <item quantity="many">حُظر %d متعقّبًا</item>
+    <item quantity="other">حُظر %d متعقّب</item>
+  </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">أنت محمي</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
