@@ -604,6 +604,8 @@
   <string name="onboarding_marketing_title" tools:ignore="BrandUsage,UnusedResources">Ayúdanos a hacer crecer Firefox</string>
   <!-- Marketing onboarding page body. 'Firefox' is intentionally hardcoded. -->
   <string name="onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">Cuando compartes cómo descubriste Firefox y lo utilizas, nos ayudas a presentar nuestro navegador a más personas.</string>
+  <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_opt_out_checkbox">Comparte datos con los socios de tecnología de marketing de Mozilla. Estos datos nunca se venden ni se usan para mostrarte anuncios.</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <string name="onboarding_marketing_learn_more" tools:ignore="UnusedResources">Cómo utilizamos los datos</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
@@ -626,8 +628,37 @@
   <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Saltar</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Prepárate para correr con libertad</string>
+  <!-- Terms of use (ToU) onboarding subtitle. -->
+  <string name="nova_onboarding_tou_subtitle">Rápido, seguro y no te traiciona.\nNavegar ahora es mejor.</string>
+  <!--
+    Terms of use (ToU) onboarding body line one.
+    %1$s is replaced by an active link, using nova_onboarding_tou_body_line_1_link_text as text (“Firefox Terms of Use”).
+  -->
+  <string name="nova_onboarding_tou_body_line_1">Al continuar, aceptas los %1$s.</string>
+  <!-- Terms of use (ToU) onboarding body line one link text for nova_onboarding_tou_body_line_1. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_tou_body_line_1_link_text" tools:ignore="BrandUsage">Términos de uso de Firefox</string>
+  <!--
+    Terms of use (ToU) onboarding body line two. 'Firefox' is intentionally hardcoded.
+    %1$s is replaced by an active link, using nova_onboarding_tou_body_line_2_link_text as text (“Privacy Notice”).
+  -->
+  <string name="nova_onboarding_tou_body_line_2" tools:ignore="BrandUsage">Firefox se preocupa por tu privacidad. Obtén más información en nuestra %1$s.</string>
+  <!-- Terms of use (ToU) onboarding body line two link text for nova_onboarding_tou_body_line_2. -->
+  <string name="nova_onboarding_tou_body_line_2_link_text">Política de privacidad</string>
+  <!--
+    Terms of use (ToU) onboarding body line three. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    %1$s is replaced by an active link, using nova_onboarding_tou_body_line_3_link_text as text (“Manage Settings”).
+  -->
+  <string name="nova_onboarding_tou_body_line_3" tools:ignore="BrandUsage">Para ayudar a mejorar el navegador, Firefox envía datos de diagnóstico e interacción a Mozilla. %1$s</string>
+  <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
+  <string name="nova_onboarding_tou_body_line_3_link_text">Administrar ajustes</string>
+  <!-- "Set to default" onboarding title. -->
+  <string name="nova_onboarding_set_to_default_title" tools:ignore="UnusedResources">Dile adiós a los rastreadores molestos</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Abre todos tus enlaces con privacidad incorporada</string>
+  <!-- "Set to default" onboarding subtitle. -->
+  <string name="nova_onboarding_set_to_default_subtitle">Protegemos tus datos y bloqueamos automáticamente a las empresas que intentan espiar lo que haces.</string>
+  <!-- "Set to default" onboarding button. -->
+  <string name="nova_onboarding_set_to_default_button">Establecer como navegador predeterminado</string>
   <!-- Toolbar selection onboarding "top" option label. -->
   <string name="nova_onboarding_toolbar_selection_top_label">Superior</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
@@ -892,6 +923,15 @@
   <string name="preferences_open_links_in_apps_ask">Preguntar antes de abrir</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Nunca</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">Eliminar o borrar descargas</string>
+  <string name="preferences_downloads_delete_from_device">Eliminar del dispositivo</string>
+  <string name="preferences_downloads_delete_from_device_description">El archivo se eliminará de tu dispositivo y se quitará del historial de descargas</string>
+  <string name="preferences_downloads_remove_from_download_history">Quitar del historial de descargas</string>
+  <string name="preferences_downloads_remove_from_download_history_description">El archivo se quitó de tu historial de descargas, pero sigue guardado en tu dispositivo</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Preguntar antes de eliminar archivos</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">Ajustes de descargas</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads">Descargas</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -918,6 +958,8 @@
   <string name="addons_permissions_allow_for_all_sites_subtitle">Si confías en esta extensión, puedes autorizarla para todos los sitios web.</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">Esta extensión no requiere ningún permiso.</string>
+  <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_data_collection">Recolección de datos opcional:</string>
   <!--
     Add-on Preferences
 
@@ -934,6 +976,12 @@
   <string name="customize_addon_collection_user_hint">Dueño de la colección (ID de usuario)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Colección de extensiones modificada. Cerrando la aplicación para aplicar los cambios…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Reporte de privacidad</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Regresar hacía atrás</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1023,6 +1071,8 @@
   <string name="alternative_app_icon_option_pride">Orgullo</string>
   <!-- Title for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo">Momo</string>
+  <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
+  <string name="alternative_app_icon_option_momo_subtitle">Creado por @heyheymomodraws</string>
   <!-- Title for the "Cuddling" themed alternative app icon variant in the icon picker screen. The app icon features a playful design with an adorable aesthetic. -->
   <string name="alternative_app_icon_option_cuddling">Abrazos</string>
   <!-- Title for the "Flaming" themed alternative app icon variant in the icon picker screen. The app icon features a fiery design, with the Firefox logo surrounded by flames for a bold, energetic look. -->
@@ -1033,10 +1083,20 @@
   <string name="alternative_app_icon_group_solid_colors">Colores sólidos</string>
   <!-- Title for the "Gradients" group of alternative app icon variants in the icon picker screen. This group contains icons with gradient backgrounds inspired by natural light conditions. -->
   <string name="alternative_app_icon_group_gradients">Gradientes</string>
+  <!-- Title for the "Featured" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
+  <string name="alternative_app_icon_group_featured">Destacados</string>
+  <!-- Title to show in alert when user selects an alternative app icon -->
+  <string name="restart_warning_dialog_title">¿Cambiar el icono de la aplicación?</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_warning_dialog_body_2">Es posible que la aplicación se cierre. Solo toca tu brillante icono nuevo para volver a abrir %1$s.</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart and will remove existing shortcuts because of the OS limitations. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_and_shortcuts_removal_warning_dialog_body">Al cambiar el icono, se eliminarán los sitios y accesos directos que hayas guardado en tu pantalla de inicio.\n\nEs posible que %1$s se cierre; toca tu nuevo icono para volver a abrir.</string>
   <!-- Dialog button text for confirming the possible app restart and new icon selection -->
   <string name="restart_warning_dialog_button_positive_2">Cambiar icono</string>
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Cancelar</string>
+  <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
+  <string name="shortcuts_update_error">No se pudo actualizar el icono de la aplicación. Elimina los accesos directos existentes e inténtalo de nuevo.</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1145,6 +1205,8 @@
   <string name="exceptions_empty_message_learn_more_link">Más información</string>
   <!-- Preference switch for usage and technical data collection -->
   <string name="preference_usage_data_2">Enviar datos técnicos y de interacción</string>
+  <!-- Preference switch for usage and technical learn more link in new compose -->
+  <string name="preference_usage_data_learn_more_2">Más información sobre los datos técnicos</string>
   <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
   <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Los datos sobre tu dispositivo, la configuración del hardware y el uso nos ayudan a mejorar las funciones, el rendimiento y la estabilidad de Firefox.</string>
   <!-- Preference switch for daily usage ping data collection -->
@@ -1153,6 +1215,10 @@
   <string name="preferences_daily_usage_ping_learn_more">Obtén más información sobre el ping de uso diario</string>
   <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="crash_reporting_snack_bar_message">Reporte enviado</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">Más información sobre los reportes de fallas</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">Reportes de fallas</string>
   <string name="usage_data_category">Uso de datos</string>
   <string name="studies_data_category">Estudios</string>
   <string name="technical_data_category">Datos técnicos</string>
