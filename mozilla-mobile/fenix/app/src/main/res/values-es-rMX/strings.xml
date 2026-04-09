@@ -326,6 +326,8 @@
   <string name="browser_menu_summarize_page_badge">Nuevo</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter" tools:ignore="UnusedResources" moz:removedIn="149">Informar de problemas con un sitio…</string>
+  <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
+  <string name="browser_menu_webcompat_reporter_2">Reportar error en el sitio</string>
   <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
   <string name="browser_menu_translated">Traducido</string>
   <!-- Browser menu label for the print feature -->
@@ -335,6 +337,13 @@
     %1$s is the name of the app (for example "Firefox").
   -->
   <string name="browser_menu_delete_browsing_data_on_quit">Salir de %1$s</string>
+  <!--
+    Content description for a banner within the menu which prompt the user to make this app their default browser.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="browser_menu_default_banner_title">Elige %1$s como predeterminado</string>
+  <!-- Label text within the set as default banner -->
+  <string name="browser_menu_default_banner_subtitle_2">Rápido, privado y hecho a tu medida.</string>
   <!-- Content description (not visible, for screen readers etc.) for the button that dismisses the set as default banner in the menu -->
   <string name="browser_menu_default_banner_dismiss_promotion">Descartar promoción</string>
   <!-- Content description (not visible, for screen readers etc.) for recommended extensions in main menu -->
@@ -428,6 +437,10 @@
     The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
   -->
   <string name="search_engine_selector_content_description">%s: selector de motor de búsqueda</string>
+  <!-- Text for the snackbar shown to confirm the deletion of a single browsing history item. %1$s is the shortened URL of the deleted history entry or the the actual deleted search term. Only one such item is deleted at a time. -->
+  <string name="search_suggestions_delete_history_item_snackbar">Se eliminó %1$s del historial</string>
+  <!-- Content description (not visible, for screen readers etc.): Button shown near a history search result allowing to delete it from browsing history. -->
+  <string name="mozac_browser_awesomebar_remove_suggestion" tools:ignore="UnusedResources">Eliminar esta entrada del historial</string>
   <!--
     Home onboarding
 
@@ -498,12 +511,19 @@
   <string name="onboarding_preferences_dialog_crash_reporting_description">Los informes de fallos nos permiten diagnosticar y solucionar problemas con el navegador. Los informes pueden incluir datos personales o confidenciales.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Más información</string>
+  <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_title">%s necesita reiniciarse</string>
+  <!-- Body text for the startup crash page. %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_body">Hubo un problema al abrir %s.\n\nEnviar un informe de error nos ayuda a diagnosticar y solucionar fallas en el navegador. Los informes podrían incluir datos personales o confidenciales.</string>
+  <!-- Button text to submit a startup crash report -->
+  <string name="startup_crash_positive">Enviar reporte de fallo</string>
   <!-- Button text to continue and not send a startup crash report -->
   <string name="startup_crash_negative">No, gracias</string>
   <!-- Button text to reopen firefox after the crash is processed %s is the name of the app (for example "Firefox") -->
   <string name="startup_crash_restart">Reabrir %s</string>
   <!-- Title for the usage data option in the privacy preferences dialog shown during onboarding. Note: The word "Mozilla" should NOT be translated. -->
   <string name="onboarding_preferences_dialog_usage_data_title">Enviar datos técnicos y de interacción a Mozilla</string>
+  <string name="onboarding_preferences_dialog_usage_data_description_2" tools:ignore="BrandUsage">Los datos sobre tu dispositivo, la configuración de hardware y cómo usas Firefox ayudan a mejorar las funciones, el rendimiento y la estabilidad para todas las personas.</string>
   <string name="onboarding_preferences_dialog_usage_data_learn_more_2">Más información</string>
   <!-- Positive button label for the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_positive_button">Hecho</string>
@@ -527,18 +547,55 @@
   <string name="onboarding_term_of_service_line_three_link_text">Administrar</string>
   <!-- Terms of use (ToU) onboarding redesign title. -->
   <string name="onboarding_redesign_tou_title" tools:ignore="UnusedResources">Lanza el mejor navegador para Android</string>
+  <!-- Terms of use (ToU) first subheader. -->
+  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">Carga sitios a la velocidad del rayo</string>
+  <!-- Terms of use (ToU) second subheader. -->
+  <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">Protección automática contra rastreo</string>
+  <!-- Terms of use (ToU) third subheader. -->
+  <string name="onboarding_redesign_tou_subheader_three" tools:ignore="UnusedResources">Miles de opciones de personalización</string>
+  <!--
+    Terms of use (ToU) first body text. %1$s is replaced by an active link,
+    using onboarding_redesign_tou_body_one_link_text as text (“Firefox Terms of Use”).
+  -->
+  <string name="onboarding_redesign_tou_body_one" tools:ignore="UnusedResources">Al continuar, aceptas los %1$s.</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_one. -->
   <string name="onboarding_redesign_tou_body_one_link_text" tools:ignore="BrandUsage,UnusedResources">Términos de uso de Firefox</string>
+  <!--
+    Terms of use (ToU) second body text. 'Firefox' is intentionally hardcoded.
+    %1$s is replaced by an active link, using onboarding_redesign_tou_body_two_link_text as text (“Privacy Notice”).
+  -->
+  <string name="onboarding_redesign_tou_body_two" tools:ignore="BrandUsage,UnusedResources">Firefox se preocupa por tu privacidad. Obtén más información en nuestra %1$s.</string>
+  <!-- Used as text for the link in onboarding_redesign_tou_body_two. -->
+  <string name="onboarding_redesign_tou_body_two_link_text" tools:ignore="UnusedResources">Política de privacidad</string>
+  <!--
+    Terms of use (ToU) third body text. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    %1$s is replaced by an active link using onboarding_redesign_tou_body_three_link_text as text (“Manage Settings”).
+  -->
+  <string name="onboarding_redesign_tou_body_three" tools:ignore="BrandUsage,UnusedResources">Para ayudar a mejorar el navegador, Firefox envía datos de diagnóstico e interacción a Mozilla. %1$s</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_three. -->
   <string name="onboarding_redesign_tou_body_three_link_text" tools:ignore="UnusedResources">Administrar ajustes</string>
   <!-- Terms of use (ToU) onboarding page continue button label. -->
   <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Continuar</string>
+  <!-- Onboarding header for the toolbar selection card. -->
+  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">¿Dónde prefieres la barra de direcciones?</string>
   <!-- Onboarding label for 'Continue' button. -->
   <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Continuar</string>
+  <!-- Marketing onboarding page title. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_redesign_title" tools:ignore="BrandUsage,UnusedResources">Ayúdanos a hacer crecer Firefox</string>
+  <!-- Marketing onboarding page opt-out checkbox. Unchecking the box does not increase data collection. Our data practices remain the same. 'Mozilla' is intentionally hardcoded. -->
+  <string name="onboarding_marketing_redesign_opt_out_checkbox" tools:ignore="BrandUsage,UnusedResources">Comparte cómo descubriste Firefox y que lo usas con los socios de marketing de Mozilla. Estos datos nunca se venden.</string>
   <!-- Marketing onboarding page clickable link text to "learn more" on how data is used. -->
   <string name="onboarding_marketing_redesign_learn_more" tools:ignore="UnusedResources">Cómo utilizamos los datos</string>
   <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
   <string name="onboarding_marketing_redesign_positive_button" tools:ignore="UnusedResources">Confirmar</string>
+  <!-- Set to default browser onboarding redesign title. -->
+  <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Obtén protección automática contra rastreo de forma predeterminada</string>
+  <!-- Set to default browser onboarding redesign body. -->
+  <string name="onboarding_redesign_set_default_browser_body" tools:ignore="UnusedResources">Con un toque, evita que las empresas espíen lo que haces.</string>
+  <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
+  <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">Sincroniza Firefox en todos tus dispositivos</string>
+  <!-- Sync onboarding redesign body. -->
+  <string name="onboarding_redesign_sync_body" tools:ignore="UnusedResources">Lleva tus marcadores, pestañas y contraseñas a cualquier dispositivo. Todo protegido con cifrado.</string>
   <!-- Sync onboarding redesign positive button text. -->
   <string name="onboarding_redesign_sync_positive_button" tools:ignore="UnusedResources">Empezar a sincronizar</string>
   <!-- Sync onboarding redesign negative button text. -->
@@ -559,6 +616,16 @@
   <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Aceptar y comenzar a navegar</string>
   <!-- ==== Project "Nova" onboarding strings ==== -->
 
+  <!-- "Continue" onboarding button. -->
+  <string name="nova_onboarding_continue_button">Continuar</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Continuar navegando</string>
+  <!-- "Not now" onboarding button. -->
+  <string name="nova_onboarding_negative_button">Ahora no</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Saltar</string>
+  <!-- Terms of use (ToU) onboarding title. -->
+  <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Prepárate para correr con libertad</string>
   <!-- "Set to default" onboarding title. -->
   <string name="nova_onboarding_set_to_default_title_2">Abre todos tus enlaces con privacidad incorporada</string>
   <!-- Toolbar selection onboarding "top" option label. -->
