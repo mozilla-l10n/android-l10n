@@ -316,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">Editatu laster-marka</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Gorde PDF gisa</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Eraman fitxa ez-pribatura</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Itzuli orria</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -784,6 +786,12 @@
   <string name="preferences_category_about">Honi buruz</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">Hautatu bat</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">Nabigatze arrunteko bilaketa-motor lehenetsia</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Nabigatze pribatuko bilaketa-motor lehenetsia</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Erabili nabigatze arrunteko bilaketa-motor berbera</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Kudeatu ordezko bilaketa-motorrak</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -1000,6 +1008,15 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Ez daukazu karpeta hau erabiltzeko baimenik. Probatu beste bat aukeratzen.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Kudeatu deskargak beste aplikazio batekin</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">Ezabatu edo kendu deskargak</string>
+  <string name="preferences_downloads_delete_from_device">Ezabatu gailutik</string>
+  <string name="preferences_downloads_delete_from_device_description">Fitxategia zure gailutik ezabatu eta deskargen historiatik kenduko da</string>
+  <string name="preferences_downloads_remove_from_download_history">Kendu deskargen historiatik</string>
+  <string name="preferences_downloads_remove_from_download_history_description">Fitxategia zure deskargen historiatik kenduko da baina halere gailuan gordeta geldituko da</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Galdetu fitxategiak ezabatzean</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">Deskargen ezarpenak</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Ezabatu %s aplikaziotik eta gailutik</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1362,6 +1379,8 @@
   <string name="toolbar_customize_shortcut_homepage">Hasiera-orria</string>
   <!-- Back shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_back">Atzera</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Bat ere ez</string>
   <!--
     App icon Preferences
 
@@ -1782,6 +1801,11 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Utzi</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Ezabatu fitxategia?</item>
+    <item quantity="other">Ezabatu %d fitxategi?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Ezabatu</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1813,6 +1837,14 @@
   <string name="download_delete_multi_select_dialog_confirm">Ezabatu</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Utzi</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Ezabatu gailutik</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Kendu deskargen historiatik soilik</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">Utzi</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Berretsi</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Berrizendatu fitxategia</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
@@ -1910,6 +1942,16 @@
   <string name="download_content_type_filter_document">Dokumentuak</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Bestelakoak</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">Deskargatu fitxategia?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">Deskargatu fitxategia?</string>
   <!--
     WebCompat Reporter
 
@@ -2314,6 +2356,22 @@
   <string name="share_device_subheader">Bidali gailura</string>
   <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
   <string name="send_to_devices_bottom_sheet_close_content_description">Itxi \'Bidali gailura\'</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">QR kodea</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">QR kodea</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">Itxi</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Partekatu lotura inguruan</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Inguruko jendearekin lotura hau partekatzeko, eskanearaz iezaiezu azpiko QR kodea.</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Deskargatu</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">QR kodea deskargetan gorde da</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Huts egin du QR kodea gordetzean</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Ekintza guztiak</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -3287,6 +3345,8 @@
     which navigates the user to a screen displaying all the shortcuts.
   -->
   <string name="homepage_shortcuts_show_all_content_description">Erakutsi lasterbide guztiak</string>
+  <!-- Label for the "Add shortcut" button displayed as a tile. -->
+  <string name="homepage_shortcuts_add_shortcut">Gehitu lasterbidea</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Lasterbideen mugara iritsi da</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
