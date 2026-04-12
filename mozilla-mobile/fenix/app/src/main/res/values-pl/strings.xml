@@ -19,6 +19,8 @@
   <string name="content_description_menu">Więcej opcji</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Tryb prywatny</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Zwykłe przeglądanie</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Wpisz adres lub szukaj</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -314,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">Edytuj zakładkę</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Zapisz jako PDF</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Przenieś do karty nieprywatnej</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Przetłumacz stronę</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -616,8 +620,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Kontynuuj</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Kontynuuj przeglądanie</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Nie teraz</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Pomiń</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Przygotuj się na wolność</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -692,6 +700,26 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Wyszukuj z\u00a0ekranu głównego telefonu i\u00a0miej pewność, że automatyczna ochrona Firefoksa jest po Twojej stronie.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Dodaj widżet Firefoksa</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Łatwe dostosowywanie i\u00a0większa prywatność z\u00a0każdym stuknięciem</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">%1$s zablokował %2$,d element śledzący podczas przeglądania Internetu.</item>
+    <item quantity="few">%1$s zablokował %2$,d elementy śledzące podczas przeglądania Internetu.</item>
+    <item quantity="other">%1$s zablokował %2$,d elementów śledzących podczas przeglądania Internetu.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Dostosuj</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Wybierz własną ikonę aplikacji</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Nadaj swojemu ekranowi głównemu osobisty charakter.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -756,9 +784,15 @@
   <!-- Preference category for general settings -->
   <string name="preferences_category_general">Ogólne</string>
   <!-- Preference category for all links about Fenix -->
-  <string name="preferences_category_about">O programie</string>
+  <string name="preferences_category_about">O\u00a0programie</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">Wybierz jedną</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">Domyślna wyszukiwarka w\u00a0zwykłym trybie</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Domyślna wyszukiwarka w\u00a0trybie prywatnym</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Ta sama wyszukiwarka, co w\u00a0zwykłym trybie</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Zarządzaj alternatywnymi wyszukiwarkami</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -787,7 +821,7 @@
     Preference linking to about page for Fenix
     %1$s is the name of the app (for example "Firefox").
   -->
-  <string name="preferences_about">O programie %1$s</string>
+  <string name="preferences_about">O\u00a0programie %1$s</string>
   <!-- Preference for settings related to changing the default browser -->
   <string name="preferences_set_as_default_browser">Ustaw jako domyślną przeglądarkę</string>
   <!-- Preference category for advanced settings -->
@@ -975,6 +1009,9 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Brak uprawnienia do korzystania z\u00a0tego folderu. Spróbuj wybrać inny.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Zarządzanie pobieraniem za pomocą innej aplikacji</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">Usuwanie pobranych plików</string>
+  <string name="preferences_downloads_delete_from_device">Usuwanie z\u00a0urządzenia</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Usuwanie z\u00a0aplikacji %s i\u00a0z\u00a0urządzenia</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
