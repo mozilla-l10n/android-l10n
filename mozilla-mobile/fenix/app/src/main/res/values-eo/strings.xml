@@ -1015,6 +1015,8 @@
   <string name="preferences_downloads_remove_from_download_history">Viŝi el la historio de elŝutoj</string>
   <string name="preferences_downloads_remove_from_download_history_description">La dosiero estis forigita el la historio de elŝutoj, sed ĝi ankoraŭ troviĝas en via aparato</string>
   <string name="preferences_downloads_ask_when_to_delete_files">Demandi antaŭ ol forigi dosierojn</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">Agordoj de elŝutoj</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Forigi el %s kaj el aparato</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1377,6 +1379,8 @@
   <string name="toolbar_customize_shortcut_homepage">Eka paĝo</string>
   <!-- Back shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_back">Reen</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Neniu</string>
   <!--
     App icon Preferences
 
@@ -1697,6 +1701,28 @@
   <string name="create_tab_group_name_label">Nomo</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Nomo</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Aldoni al</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Fermi la aldonon al grupo de langetoj</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Nova grupo de langetoj</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d langeto</item>
+    <item quantity="other">%1$d langetoj</item>
+  </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">Ĉu forigi grupon de langetoj?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">Tio ĉi definitive forigas la grupon.</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">Forigi grupon</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">Nuligi</string>
   <!--
     History
 
@@ -1775,6 +1801,11 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Nuligi</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Ĉu forigi dosieron?</item>
+    <item quantity="other">Ĉu forigi %d dosierojn?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Forigi</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1806,6 +1837,14 @@
   <string name="download_delete_multi_select_dialog_confirm">Forigi</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Nuligi</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Forigi el aparato</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Viŝi nur el la historio de elŝutoj</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">Nuligi</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Konfirmi</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Renomi dosieron</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
@@ -1903,6 +1942,16 @@
   <string name="download_content_type_filter_document">Dokumentoj</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Aliaj</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">Ĉu elŝuti dosieron?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">Ĉu elŝuti dosieron?</string>
   <!--
     WebCompat Reporter
 
@@ -2305,6 +2354,24 @@
   <string name="menu_print">Presi</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Sendi al aparato</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">Fermi sendon al aparato</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">Kodo QR</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">Kodo QR</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">Fermi</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Dividi ligilon proksime</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Por dividi tiun ĉi ligilon kun personoj en la ĉirkaŭaĵo, igu ilin skani la suban kodon QR.</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Elŝuti</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">Kodo QR konservita en Elŝutoj</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Ne eblis konservi la kodon QR</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Ĉiuj agoj</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -3278,6 +3345,8 @@
     which navigates the user to a screen displaying all the shortcuts.
   -->
   <string name="homepage_shortcuts_show_all_content_description">Montri ĉiujn ŝparvojojn</string>
+  <!-- Label for the "Add shortcut" button displayed as a tile. -->
+  <string name="homepage_shortcuts_add_shortcut">Aldoni ŝparvojon</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Lima kvanto de ŝparvojoj atingita</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3376,6 +3445,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">Artikoloj</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">Novaĵoj</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
@@ -3469,6 +3540,8 @@
   <string name="translation_error_could_not_load_languages_warning_text">Ne eblis ŝargi lingvojn. Kontrolu vian retaliron kaj provu denove.</string>
   <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
   <string name="translation_error_language_not_supported_warning_text" tools:ignore="UnusedResources" moz:removedIn="150">Bedaŭrinde ni ankoraŭ ne subtenas %1$s.</string>
+  <!-- The title of the warning card informs the user that translations from a language are not supported yet. %1$s is the name of the source language. -->
+  <string name="translation_error_language_not_supported_warning_text_2">Bedaŭrinde ni ankoraŭ ne subtenas tradukojn el la %1$s.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">Traduko…</string>
   <!--
