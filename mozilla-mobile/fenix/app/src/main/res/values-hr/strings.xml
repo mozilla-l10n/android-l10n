@@ -19,6 +19,8 @@
   <string name="content_description_menu">Više opcija</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Privatno pregledavanje</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Normalno pregledavanje</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Traži ili upiši adresu</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -314,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">Uredi zabilješku</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Spremi kao PDF</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Premjesti u karticu koja nije privatna</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Prevedi stranicu</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -372,6 +376,8 @@
     %2$s is the name of the language which the page was translated to. (For example: French)
   -->
   <string name="browser_toolbar_translated_successfully">Stranica prevedena s jezika %1$s na %2$s.</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">Protresi uređaj za sažimanje ove stranice u nekoliko sekundi. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -614,8 +620,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Nastavi</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Nastavi pregledavati</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Ne sada</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Preskoči</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Spremi se za slobodu</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -690,6 +700,26 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Započni svaku pretragu s početnog ekrana svog telefona i znaj da te Firefoxove automatske zaštite uvijek štite.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Dodaj Firefoxov widget</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Jednostavno prilagođavanje i privatnije sa svakim dodirom</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">%1$s je blokirao %2$,d program za praćenje tijekom tvog lutanja webom.</item>
+    <item quantity="few">%1$s je blokirao %2$,d programa za praćenje tijekom tvog lutanja webom.</item>
+    <item quantity="other">%1$s je blokirao %2$,d programa za praćenje tijekom tvog lutanja webom.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Započni prilagođavanje</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Odaberi prilagođenu ikonu aplikacije</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Daj svojem početnom zaslonu svoj osobni štih.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -757,6 +787,12 @@
   <string name="preferences_category_about">Informacije</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">Odaberi jedan</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">Zadana tražilica normalnog pregledavanja</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Zadana tražilica privatnog pregledavanja</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Koristi istu tražilicu kao i u normalnom pregledavanju</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Upravljaj alternativnim tražilicama</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -942,6 +978,8 @@
   <string name="preferences_show_nonsponsored_suggestions">Prijedlozi od %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Dobij prijedloge s weba koji se odnose na tvoju pretragu</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">Dohvaćaj Mozilline prijedloge dok tipkaš</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">Dijeljenje poveznica</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -971,6 +1009,11 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Nemaš dozvole za korištenje ove mape. Odaberi jednu drugu mapu.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Upravljaj preuzimanjima pomoću jedne druge aplikacije</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">Izbriši ili ukloni preuzimanja</string>
+  <string name="preferences_downloads_delete_from_device">Izbriši s uređaja</string>
+  <string name="preferences_downloads_delete_from_device_description">Datoteka se briše s tvog uređaja i uklanja iz povijesti preuzimanja</string>
+  <string name="preferences_downloads_remove_from_download_history">Ukloni iz povijesti preuzimanja</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Izbriši iz %s aplikacije i s uređaja</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
