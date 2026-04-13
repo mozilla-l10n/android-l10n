@@ -19,6 +19,8 @@
   <string name="content_description_menu">Más opciones</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Navegación privada</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Navegación normal</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Buscar o escribir dirección</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
@@ -314,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">Editar marcador</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Guardar como PDF</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Mover a una pestaña no privada</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Traducir página</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -616,8 +620,12 @@
 
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">Continuar</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Continuar navegando</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Ahora no</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Saltar</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">Prepárate para navegar libremente</string>
   <!-- Terms of use (ToU) onboarding subtitle. -->
@@ -692,6 +700,25 @@
   <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Comienza cada búsqueda desde la pantalla de inicio de tu teléfono sabiendo que las protecciones automáticas de Firefox te respaldan.</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Añadir widget de Firefox</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Fácil de personalizar y más privado con cada toque</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">%1$s bloqueó %2$,d rastreador mientras navegabas por la web.</item>
+    <item quantity="other">%1$s bloqueó %2$,d rastreadores mientras navegabas por la web.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Empezar a personalizar</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">Selecciona un icono de aplicación personalizado</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">Dale a tu pantalla de inicio un toque personal.</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!-- Onboarding header for the toolbar selection card, used by Nimbus experiments. -->
@@ -759,6 +786,12 @@
   <string name="preferences_category_about">Acerca de</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">Selecciona uno</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">Buscador predeterminado para la navegación normal</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Buscador predeterminado para la navegación privada</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Usar el mismo buscador que la navegación normal</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Administrar buscadores alternativos</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -975,6 +1008,15 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">No tienes permiso para usar esta carpeta. Prueba a elegir otra.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Administrar descargas con otra aplicación</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">Eliminar o borrar descargas</string>
+  <string name="preferences_downloads_delete_from_device">Eliminar del dispositivo</string>
+  <string name="preferences_downloads_delete_from_device_description">El archivo se elimina de tu dispositivo y del historial de descargas</string>
+  <string name="preferences_downloads_remove_from_download_history">Eliminar del historial de descargas</string>
+  <string name="preferences_downloads_remove_from_download_history_description">El archivo se elimina de tu historial de descargas, pero sigue guardado en tu dispositivo</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Preguntar antes de eliminar archivos</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">Ajustes de descarga</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Eliminar de %s y del dispositivo</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1337,6 +1379,8 @@
   <string name="toolbar_customize_shortcut_homepage">Página de inicio</string>
   <!-- Back shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_back">Atrás</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Ninguno</string>
   <!--
     App icon Preferences
 
@@ -1657,6 +1701,28 @@
   <string name="create_tab_group_name_label">Nombre</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Nombre</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Añadir a</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Cerrar \"añadir al grupo de pestañas\"</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Nuevo grupo de pestañas</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d pestaña</item>
+    <item quantity="other">%1$d pestañas</item>
+  </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">¿Eliminar grupo de pestañas?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">Esto elimina el grupo de forma permanente.</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">Eliminar grupo</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">Cancelar</string>
   <!--
     History
 
@@ -1735,6 +1801,11 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Cancelar</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">¿Eliminar archivo?</item>
+    <item quantity="other">¿Eliminar %d archivos?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Eliminar</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1766,6 +1837,14 @@
   <string name="download_delete_multi_select_dialog_confirm">Eliminar</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Cancelar</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Eliminar del dispositivo</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Eliminar solo del historial de descargas</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">Cancelar</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Confirmar</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Renombrar archivo</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
@@ -1863,6 +1942,16 @@
   <string name="download_content_type_filter_document">Documentos</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Otro</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">¿Descargar archivo?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">¿Descargar archivo?</string>
   <!--
     WebCompat Reporter
 
@@ -2265,6 +2354,24 @@
   <string name="menu_print">Imprimir</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Enviar a dispositivo</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">Cerrar Enviar a dispositivo</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">Código QR</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">Código QR</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">Cerrar</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Compartir enlace cercano</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Para compartir este enlace con personas cercanas, pídeles que escaneen el código QR que aparece a continuación.</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Descargar</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">Código QR guardado en Descargas</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Error al guardar el código QR</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Todas las acciones</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -3238,6 +3345,8 @@
     which navigates the user to a screen displaying all the shortcuts.
   -->
   <string name="homepage_shortcuts_show_all_content_description">Mostrar todos los accesos directos</string>
+  <!-- Label for the "Add shortcut" button displayed as a tile. -->
+  <string name="homepage_shortcuts_add_shortcut">Añadir acceso directo</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Límite de accesos directos alcanzado</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3336,6 +3445,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">Historias</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">Noticias</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
@@ -3429,6 +3540,8 @@
   <string name="translation_error_could_not_load_languages_warning_text">No se han podido cargar los idiomas. Verifica tu conexión a Internet y prueba de nuevo.</string>
   <!-- The title of the warning card informs the user that a language is not supported. %1$s is the name of the language that is not supported. -->
   <string name="translation_error_language_not_supported_warning_text" tools:ignore="UnusedResources" moz:removedIn="150">Lo sentimos, todavía no soportamos %1$s.</string>
+  <!-- The title of the warning card informs the user that translations from a language are not supported yet. %1$s is the name of the source language. -->
+  <string name="translation_error_language_not_supported_warning_text_2">Lo sentimos, todavía no admitimos traducciones de %1$s.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">Traduciendo…</string>
   <!--
