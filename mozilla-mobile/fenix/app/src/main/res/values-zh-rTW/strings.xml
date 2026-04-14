@@ -391,6 +391,12 @@
   <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
   <string name="translation_toolbar_close_action">關閉訊息</string>
   <!--
+    Page summaries
+
+    Toolbar title for the Page summaries settings fragment
+  -->
+  <string name="preferences_page_summaries">頁面摘要</string>
+  <!--
     AI Controls settings
 
     Label for the secret settings preference to enable AI controls
@@ -422,6 +428,10 @@
   <string name="ai_controls_more_page_summary_settings">更多頁面摘要設定</string>
   <!-- Title for the voice search AI feature toggle -->
   <string name="ai_controls_voice_search_title">語音搜尋</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">要封鎖 AI 功能嗎？</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">您不會在 %1$s 看到目前已有，或新推出的 AI 擴充功能，或是任何有關這些功能的彈出提示。但之後還是可以解除封鎖任何想要使用的功能。\n\n封鎖 AI 功能也會影響使用到 %1$s 提供的 AI 的擴充套件的相關功能。</string>
   <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
   <string name="ai_controls_block_dialog_what_will_be_blocked">會封鎖哪些功能：</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
@@ -1455,6 +1465,8 @@
   <string name="preference_gestures_swipe_toolbar_show_tabs">向上滑動工具列來開新分頁</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">橫向滑動網址列來切換分頁</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">搖晃裝置進行摘要</string>
   <!--
     Library
 
@@ -1617,6 +1629,13 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">已開啟 %1$s 個隱私分頁，點擊即可切換分頁。</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="other">開啟了 %1$d 個分頁群組，點擊即可切換分頁。</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -3086,6 +3105,12 @@
   <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
   <string name="ip_protection_data_limit_label">每月流量限制</string>
   <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3").
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value">已用 %1$.1f GB，剩餘 %2$.1f GB</string>
+  <!--
     Text shown below the data usage bar describing when the monthly allowance resets.
     %1$.0f is the total monthly data allowance in GB (for example "50").
   -->
@@ -3094,6 +3119,8 @@
   <string name="ip_protection_location_section">位置</string>
   <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
   <string name="ip_protection_location_recommended_label">推薦</string>
+  <!-- Description for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_description">為您選擇最快的 VPN 連線地點。</string>
   <!-- Badge label shown in the menu item when the browser VPN is active -->
   <string name="preferences_ip_protection_on">開啟</string>
   <!-- Badge label shown in the menu item when the browser VPN is off -->
@@ -3106,6 +3133,10 @@
   <string name="ip_protection_menu_error">錯誤</string>
   <!-- Content description for the chevron button that opens the browser VPN settings screen -->
   <string name="ip_protection_navigate_settings">開啟 VPN 設定</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
+  <string name="ip_protection_toolbar_pill_label" tools:ignore="UnusedResources">VPN 開啟</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
+  <string name="ip_protection_toolbar_pill_description" tools:ignore="UnusedResources">已開啟 VPN。</string>
   <!--
     Autofill
 
