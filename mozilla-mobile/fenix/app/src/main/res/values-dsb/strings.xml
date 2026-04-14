@@ -391,6 +391,58 @@
   <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
   <string name="translation_toolbar_close_action">Powěsć zachyśiś</string>
   <!--
+    Page summaries
+
+    Toolbar title for the Page summaries settings fragment
+  -->
+  <string name="preferences_page_summaries">Zespominanja bokow</string>
+  <!--
+    AI Controls settings
+
+    Label for the secret settings preference to enable AI controls
+  -->
+  <string name="preferences_debug_settings_ai_controls">Wóźeńske elementy KI zmóžniś</string>
+  <!-- Title for the AI controls settings screen -->
+  <string name="preferences_ai_controls">Wóźeńske elementy KI</string>
+  <!-- Headline text for the AI controls banner. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_banner_headline">W %s maśo pśecej wólbu</string>
+  <!-- Supporting text for the AI controls banner -->
+  <string name="ai_controls_banner_supporting_text">To wopśimjejo, lěc se maju funkcije wužywaś, kótarež su pśez KI pólěpšone.</string>
+  <!-- Link text for learning more about AI controls -->
+  <string name="ai_controls_learn_more">Dalšne informacije</string>
+  <!-- Title for the block AI enhancements toggle -->
+  <string name="ai_controls_block_ai_title">Pólěpšenja KI blokěrowaś</string>
+  <!-- Description for the block AI enhancements toggle. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_ai_description">Blokěrowanje groni, až nowe abo aktualne pólěpšenja w %s abo wuskokujuce wokna wó nich njewiźiśo.</string>
+  <!-- Link text to see what AI enhancements are and aren’t included -->
+  <string name="ai_controls_see_whats_included">Glědajśo, co jo zapśimjone a co nic</string>
+  <!-- Banner text shown when AI enhancements are blocked -->
+  <string name="ai_controls_blocked_info_banner">Nowe a aktualne pólěpšenja KI se pó standarźe blokěruju. Wótpórajśo dołojce blokěrowanje za wěste funkcije.</string>
+  <!-- Section header for the AI-powered features list -->
+  <string name="ai_controls_ai_powered_features">Pśez KI pódprěte funkcije</string>
+  <!-- Title for the translations AI feature toggle -->
+  <string name="ai_controls_translations_title">Pśełožki</string>
+  <!-- Description for the translations AI feature toggle -->
+  <string name="ai_controls_translations_description">Wšykne pśełožki na wašom rěźe priwatne wóstawaju.</string>
+  <!-- Link text to navigate to more translations settings -->
+  <string name="ai_controls_more_translations_settings" tools:ignore="UnusedResources">Dalšne nastajenja pśełožowanja</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">Dalšne nastajenja za zespominanje bokow</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Głosowe pytanje</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">Awdio se pśez Google Speech Services do teksta pśetwórjuju.</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">Pólěpšenja KI blokěrowaś?</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">Njebuźośo nowe abo aktualne pólěpšenja KI w %1$s wiźeś, abo wuskokujuce wokna wó nich. Pón móžośo blokěrowanje za něco wótpóraś, kótarež cośo dalej wužywaś.\n\nBlokěrowanje teke rozšyrjenja wobwliwujo, kótarež KI wužywaju, kótaryž %1$s k dispoziciji staja.</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">Což se blokěrujo:</string>
+  <!-- Cancel button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_cancel">Pśetergnuś</string>
+  <!-- Block button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_block">Blokěrowaś</string>
+  <!--
     Locale Settings Fragment
 
     Content description for tick mark on selected language
@@ -1419,6 +1471,8 @@
   <string name="preference_gestures_swipe_toolbar_show_tabs">Trějśo symbolowu rědku górjej, aby rejtariki wócynił</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Trějśo adresowe pólo na bok, aby rejtariki pśešaltował</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Tśěsćo, aby zespominał</string>
   <!--
     Library
 
@@ -1581,6 +1635,16 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Priwatne wócynjone rejtariki: %1$s. Pótusniśo, aby rejtariki pśešaltował.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d kupka rejtarikow wócynjona. Pótusniśo, aby rejtariki změnił.</item>
+    <item quantity="two">%1$d kupce rejtarikow wócynjonej. Pótusniśo, aby rejtariki změnił.</item>
+    <item quantity="few">%1$d kupki rejtarikow wócynjone. Pótusniśo, aby rejtariki změnił.</item>
+    <item quantity="other">%1$d kupkow rejtarikow wócynjone. Pótusniśo, aby rejtariki změnił.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1682,6 +1746,8 @@
   <string name="pwa_site_controls_title_private">%1$s (priwatny modus)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Pytanje rejtarikow wócyniś</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Wopytajśo kupki rejtarikow, aby mjenjej kulał a wěcej cynił</string>
   <!--
     Tab Group
 
