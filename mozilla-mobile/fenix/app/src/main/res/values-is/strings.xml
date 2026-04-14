@@ -316,6 +316,8 @@
   <string name="browser_menu_edit_bookmark">Breyta bókamerki</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">Vista sem PDF</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Færa í ekki-huliðsflipa</string>
   <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
   <string name="browser_menu_translate_page_2">Þýða síðu</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
@@ -388,6 +390,18 @@
   <string name="translation_toolbar_expand_action">Opna þýðingarblað</string>
   <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
   <string name="translation_toolbar_close_action">Hunsa skilaboð</string>
+  <!--
+    Page summaries
+
+    Toolbar title for the Page summaries settings fragment
+  -->
+  <string name="preferences_page_summaries">Samantekt efnis á síðu</string>
+  <!-- Link text for learning more about AI controls -->
+  <string name="ai_controls_learn_more">Frekari upplýsingar</string>
+  <!-- Title for the translations AI feature toggle -->
+  <string name="ai_controls_translations_title">Þýðingar</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Raddleit</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_cancel">Hætta við</string>
   <!-- Block button text in the block AI enhancements confirmation dialog -->
@@ -983,6 +997,10 @@
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">Þú hefur ekki leyfi til að nota þessa möppu. Reyndu að velja einhverja aðra.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Stýra niðurhölum með öðru forriti</string>
+  <string name="preferences_downloads_delete_from_device">Eyða af tæki</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Spyrja þegar ég eyði skrám</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">Stillingar fyrir niðurhal</string>
   <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_downloads_settings_clean_up_files_title">Eyða úr %s og tæki</string>
   <!-- Summary for the setting to automatically clean up downloaded files -->
@@ -1345,6 +1363,8 @@
   <string name="toolbar_customize_shortcut_homepage">Heimasíða</string>
   <!-- Back shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_back">Til baka</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Ekkert</string>
   <!--
     App icon Preferences
 
@@ -1381,6 +1401,8 @@
   <string name="preference_gestures_swipe_toolbar_show_tabs">Strjúktu verkfærastikunni upp til að opna flipa</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Strjúktu veffangastikuna til hliðar til að skipta um flipa</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Hristu til að gera samantekt</string>
   <!--
     Library
 
@@ -1799,6 +1821,8 @@
   <string name="download_delete_dialog_from_device">Eyða af tæki</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
   <string name="download_delete_dialog_cancel">Hætta við</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Staðfesta</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Endurnefna skrá</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
@@ -1896,6 +1920,16 @@
   <string name="download_content_type_filter_document">Skjöl</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Annað</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">Sækja skrá?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">Sækja skrá?</string>
   <!--
     WebCompat Reporter
 
@@ -2298,6 +2332,12 @@
   <string name="menu_print">Prenta</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Senda til tækis</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Sækja</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">QR-kóði vistaður í Niðurhal/Sóttar skrár</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Mistókst að vista QR-kóða</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Allar aðgerðir</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -2959,6 +2999,35 @@
   <string name="email_masks_max_free_tier_reached">Þú hefur notað 5 ókeypis tölvupósthulur, svo við völdum eina fyrir þig til að endurnýta.</string>
   <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
   <string name="email_masks_error_retrieving_masks">Tölvupóstshulur eru ekki tiltækar eins og er. Reyndu aftur eftir nokkrar mínútur.</string>
+  <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title">VPN</string>
+  <!-- Label for the browser VPN toggle on the settings screen -->
+  <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">Innbyggt VPN í %s</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">Frekari upplýsingar</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">Mánaðarleg gagnatakmörk</string>
+  <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3").
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value">%1$.1f GB af %2$.1f GB eftir</string>
+  <!--
+    Text shown below the data usage bar describing when the monthly allowance resets.
+    %1$.0f is the total monthly data allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_reset_info">Núllstillist í %1$.0f GB fyrsta dag hvers mánaðar.</string>
+  <!-- Header for the browser VPN `location` section -->
+  <string name="ip_protection_location_section">Staðsetning</string>
+  <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_label">Ráðlagt</string>
   <!-- Badge label shown in the menu item while the browser VPN is connecting -->
   <string name="ip_protection_menu_connecting">Tengist…</string>
   <!-- Badge label shown in the menu item when the browser VPN is paused -->
