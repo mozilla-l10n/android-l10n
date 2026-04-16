@@ -1600,6 +1600,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">გახსნილი პირადი ჩანართი: %1$s. შეეხეთ გადასაცვლელად.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d ჩანართის ჯგუფია გახსნილი. შეეხეთ ჩანართების გადასართველად.</item>
+    <item quantity="other">%1$d ჩანართის ჯგუფია გახსნილი. შეეხეთ ჩანართების გადასართველად.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1689,6 +1697,10 @@
   <string name="pwa_site_controls_title_private">%1$s (პირადი რეჟიმი)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">გახსენით ჩანართების ძიება</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">მოსინჯეთ ჩანართების ჯგუფები ნაკლები მოძრაობებისა და მეტი შედეგიანობისთვის</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">შეარჩიეთ ჩანართები დასაჯგუფებლად. შეინახება აქვე, მზად იქნება, როცა დაგჭირდებათ.</string>
   <!--
     Tab Group
 
@@ -3035,6 +3047,55 @@
   <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
   <string name="email_masks_error_retrieving_masks">ელფოსტის ნიღბები ამჟამად მიუწვდომელია. სცადეთ ხელახლა რამდენიმე წუთში.</string>
   <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title">VPN</string>
+  <!-- Label for the browser VPN toggle on the settings screen -->
+  <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">%s ჩაშენებული VPN-ით</string>
+  <!-- Body text for the browser VPN promo card -->
+  <string name="ip_protection_promo_body">იმოგზაურეთ ინტერნეტში დამატებითი დაცვით, მდებარეობის დაფარვით, მათ შორის საჯარო WiFi-ქსელებში.</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">ვრცლად</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">ყოველთვიური მოცულობის ზღვარი</string>
+  <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3").
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value">დარჩა %1$.1f ᲒᲑ, სულ %2$.1f ᲒᲑ</string>
+  <!--
+    Text shown below the data usage bar describing when the monthly allowance resets.
+    %1$.0f is the total monthly data allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_reset_info">აღდგება %1$.0f ᲒᲑ ყოველი თვის პირველი რიცხვიდან.</string>
+  <!-- Header for the browser VPN `location` section -->
+  <string name="ip_protection_location_section">მდებარეობა</string>
+  <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_label">სასურველი</string>
+  <!-- Description for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_description">ირჩევს თქვენთვის უსწრაფეს VPN-მდებარეობას.</string>
+  <!-- Badge label shown in the menu item when the browser VPN is active -->
+  <string name="preferences_ip_protection_on">ჩართ.</string>
+  <!-- Badge label shown in the menu item when the browser VPN is off -->
+  <string name="preferences_ip_protection_off">გამორთ.</string>
+  <!-- Badge label shown in the menu item while the browser VPN is connecting -->
+  <string name="ip_protection_menu_connecting">უკავშირდება…</string>
+  <!-- Badge label shown in the menu item when the browser VPN is paused -->
+  <string name="ip_protection_menu_paused">შეჩერებულია</string>
+  <!-- Badge label shown in the menu item when the browser VPN has an error -->
+  <string name="ip_protection_menu_error">შეცდომა</string>
+  <!-- Content description for the chevron button that opens the browser VPN settings screen -->
+  <string name="ip_protection_navigate_settings">VPN-პარამეტრების გახსნა</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
+  <string name="ip_protection_toolbar_pill_label" tools:ignore="UnusedResources">VPN ჩართ.</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
+  <string name="ip_protection_toolbar_pill_description" tools:ignore="UnusedResources">VPN მოქმედია.</string>
+  <!--
     Autofill
 
     Preference and title for managing the autofill settings
@@ -3334,6 +3395,8 @@
   <string name="homepage_shortcuts_show_all_content_description">ყველა მალსახმობის ჩვენება</string>
   <!-- Label for the "Add shortcut" button displayed as a tile. -->
   <string name="homepage_shortcuts_add_shortcut">მალსახმობის დამატება</string>
+  <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
+  <string name="homepage_shortcuts_add_website_title">შეიყვანეთ ვებსაიტის ბმული</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">მალსახმობების ზღვარი მიღწეულია</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3572,6 +3635,12 @@
   <string name="translation_settings_automatic_never_translate_sites">არასდროს ითარგმნოს ეს საიტები</string>
   <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
   <string name="translation_settings_download_language">ენების ჩამოტვირთვა</string>
+  <!-- Toggle switch title and description for the translation settings control. -->
+  <string name="translation_settings_control_title">თარგმანები</string>
+  <!-- Description for the translation settings toggle switch. -->
+  <string name="translation_settings_control_description">თარგმნილი მასალა საიდუმლოდ რჩება მოწყობილობაზევე.</string>
+  <!-- Clickable text for the translations settings item that links to a website. -->
+  <string name="translation_settings_control_learn_more">ვრცლად</string>
   <!--
     Automatic translation preference screen
 
