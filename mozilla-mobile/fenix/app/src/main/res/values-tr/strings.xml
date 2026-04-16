@@ -358,6 +358,54 @@
   <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
   <string name="translation_toolbar_close_action">Mesajı kapat</string>
   <!--
+    Page summaries
+
+    Toolbar title for the Page summaries settings fragment
+  -->
+  <string name="preferences_page_summaries">Sayfa özetleri</string>
+  <!--
+    AI Controls settings
+
+    Label for the secret settings preference to enable AI controls
+  -->
+  <string name="preferences_debug_settings_ai_controls">Yapay zekâ kontrollerini etkinleştir</string>
+  <!-- Title for the AI controls settings screen -->
+  <string name="preferences_ai_controls">Yapay zekâ kontrolleri</string>
+  <!-- Headline text for the AI controls banner. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_banner_headline">%s ile tercih daima sizin</string>
+  <!-- Supporting text for the AI controls banner -->
+  <string name="ai_controls_banner_supporting_text">Yapay zekâ sayesinde çalışan özelliklerin kullanılması da dahildir.</string>
+  <!-- Link text for learning more about AI controls -->
+  <string name="ai_controls_learn_more">Daha fazla bilgi al</string>
+  <!-- Title for the block AI enhancements toggle -->
+  <string name="ai_controls_block_ai_title">Yapay zekâ geliştirmelerini engelle</string>
+  <!-- Description for the block AI enhancements toggle. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_ai_description">Engellerseniz %s uygulamasında yeni veya mevcut yapay zekâ geliştirmelerini ve bunlarla ilgili açılır tanıtımları görmeyeceksiniz.</string>
+  <!-- Link text to see what AI enhancements are and aren’t included -->
+  <string name="ai_controls_see_whats_included">Nelerin dahil olup nelerin olmadığını görün</string>
+  <!-- Banner text shown when AI enhancements are blocked -->
+  <string name="ai_controls_blocked_info_banner">Yeni ve mevcut yapay zekâ geliştirmeleri varsayılan olarak engelleniyor. İstediğiniz özelliklerin engelini aşağıdan kaldırabilirsiniz.</string>
+  <!-- Section header for the AI-powered features list -->
+  <string name="ai_controls_ai_powered_features">Yapay zekâ destekli özellikler</string>
+  <!-- Title for the translations AI feature toggle -->
+  <string name="ai_controls_translations_title">Çeviri</string>
+  <!-- Description for the translations AI feature toggle -->
+  <string name="ai_controls_translations_description">Tüm çeviriler gizli kalır ve cihazınızdan dışarı çıkmaz.</string>
+  <!-- Link text to navigate to more translations settings -->
+  <string name="ai_controls_more_translations_settings" tools:ignore="UnusedResources">Diğer çeviri ayarları</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">Diğer sayfa özeti ayarları</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Sesle arama</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">Sesler Google Speech Service tarafından metne dönüştürülür.</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">Yapay zekâ geliştirmeleri engellensin mi?</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">Neler engellenecek?</string>
+  <!-- Block button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_block">Engelle</string>
+  <!--
     Locale Settings Fragment
 
     Content description for tick mark on selected language
@@ -1546,6 +1594,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">%1$s açık gizli sekme. Sekme değiştirmek için dokunun.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d sekme grubu açık. Sekme değiştirmek için dokunun.</item>
+    <item quantity="other">%1$d sekme grubu açık. Sekme değiştirmek için dokunun.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1635,6 +1691,8 @@
   <string name="pwa_site_controls_title_private">%1$s (Gizli Mod)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Sekme aramayı aç</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Daha az kaydırarak daha çok iş yapmak için sekme gruplarını deneyin</string>
   <!--
     Tab Group
 
@@ -2981,6 +3039,42 @@
   <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
   <string name="email_masks_error_retrieving_masks">E-posta maskeleri şu anda kullanılamıyor. Birkaç dakika sonra yeniden deneyin.</string>
   <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title">VPN</string>
+  <!-- Label for the browser VPN toggle on the settings screen -->
+  <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Body text for the browser VPN promo card -->
+  <string name="ip_protection_promo_body">Konumunuzu gizleyin, halka açık Wi-Fi ağlarında bile ekstra korumayla gezinin.</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">Daha fazla bilgi alın</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">Aylık kota</string>
+  <!-- Header for the browser VPN `location` section -->
+  <string name="ip_protection_location_section">Konum</string>
+  <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_label">Önerilen</string>
+  <!-- Description for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_description">Sizin için en hızlı VPN konumunu seçer.</string>
+  <!-- Badge label shown in the menu item when the browser VPN is active -->
+  <string name="preferences_ip_protection_on">Açık</string>
+  <!-- Badge label shown in the menu item when the browser VPN is off -->
+  <string name="preferences_ip_protection_off">Kapalı</string>
+  <!-- Badge label shown in the menu item while the browser VPN is connecting -->
+  <string name="ip_protection_menu_connecting">Bağlanıyor…</string>
+  <!-- Badge label shown in the menu item when the browser VPN is paused -->
+  <string name="ip_protection_menu_paused">Duraklatıldı</string>
+  <!-- Badge label shown in the menu item when the browser VPN has an error -->
+  <string name="ip_protection_menu_error">Hata</string>
+  <!-- Content description for the chevron button that opens the browser VPN settings screen -->
+  <string name="ip_protection_navigate_settings">VPN ayarlarını aç</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
+  <string name="ip_protection_toolbar_pill_label" tools:ignore="UnusedResources">VPN açık</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
+  <string name="ip_protection_toolbar_pill_description" tools:ignore="UnusedResources">VPN etkin.</string>
+  <!--
     Autofill
 
     Preference and title for managing the autofill settings
@@ -3280,6 +3374,8 @@
   <string name="homepage_shortcuts_show_all_content_description">Tüm kısayolları göster</string>
   <!-- Label for the "Add shortcut" button displayed as a tile. -->
   <string name="homepage_shortcuts_add_shortcut">Kısayol ekle</string>
+  <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
+  <string name="homepage_shortcuts_add_website_title">Bir site adresi girin</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Kısayol sınırına ulaştınız</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3518,6 +3614,12 @@
   <string name="translation_settings_automatic_never_translate_sites">Bu siteleri asla çevirme</string>
   <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
   <string name="translation_settings_download_language">Dilleri indir</string>
+  <!-- Toggle switch title and description for the translation settings control. -->
+  <string name="translation_settings_control_title">Çeviri</string>
+  <!-- Description for the translation settings toggle switch. -->
+  <string name="translation_settings_control_description">Tüm çeviriler gizli kalır ve cihazınızdan dışarı çıkmaz.</string>
+  <!-- Clickable text for the translations settings item that links to a website. -->
+  <string name="translation_settings_control_learn_more">Daha fazla bilgi al</string>
   <!--
     Automatic translation preference screen
 
