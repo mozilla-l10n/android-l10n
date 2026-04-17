@@ -401,6 +401,8 @@
   <string name="ai_controls_voice_search_description">Audio zapis se pretvara u tekst pomoću Googleovih govornih usluga.</string>
   <!-- Title for the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_title">Blokirati poboljšanja umjetne inteligencije?</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">Nećeš vidjeti nova ili trenutna poboljšanja umjetne inteligencije u aplikaciji %1$s, niti skočne prozore o njima. Nakon toga možeš odblokirati sve što želiš nastaviti koristiti.\n\nBlokiranje također utječe na proširenja koja koriste umjetnu inteligenciju koju pruža %1$s.</string>
   <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
   <string name="ai_controls_block_dialog_what_will_be_blocked">Što će se blokirati:</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
@@ -1599,6 +1601,15 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Otvorene privatne kartice: %1$s. Dodirni za mijenjanje kartice.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d otvorena grupa. Dodirni za prebacivanje na kartice.</item>
+    <item quantity="few">%1$d otvorene grupe. Dodirni za prebacivanje na kartice.</item>
+    <item quantity="other">%1$d otvorenih grupa. Dodirni za prebacivanje na kartice.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1688,6 +1699,8 @@
   <string name="pwa_site_controls_title_private">%1$s (privatni modus)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Otvori pretraživanje kartica</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Isprobaj grupe kartica za manje pomicanja, više rada</string>
   <!-- The description displayed on the tab groups page when no tab groups are open -->
   <string name="tab_manager_empty_tab_groups_page_description">Odaberi kartice za stvaranje grupe. Spremaju se ovdje i spremne su kad god ih želiš koristiti.</string>
   <!--
@@ -1699,6 +1712,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Uredi grupu</string>
   <string name="create_tab_group_save_button">Spremi</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Nova grupa, sažmi ručku za povlačenje</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Zatvori uređivanje grupe kartica</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Grupa</string>
@@ -1713,6 +1728,8 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Ime</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Dodaj u</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Dodaj u grupu kartica, sažmi ručku za povlačenje</string>
   <!-- Content Description for "New tab group" panel. -->
   <string name="add_to_new_tab_group_content_description">Dodaj u novu grupu kartica</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
@@ -1747,6 +1764,8 @@
     <item quantity="few">Dijeli grupu kartica %1$s s %2$d kartice.</item>
     <item quantity="other">Dijeli grupu kartica %1$s s %2$d kartica.</item>
   </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Prikaži grupu kartica, sažmi ručku za povlačenje</string>
   <plurals name="expanded_tab_group_header_description">
     <!--
       Accessibility description for the header of an expanded tab group.
