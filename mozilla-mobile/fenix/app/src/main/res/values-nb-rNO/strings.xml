@@ -1594,6 +1594,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Private faner åpne: %1$s. Trykk for å bytte fane.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d fanegruppe er åpen. Trykk for å bytte fane.</item>
+    <item quantity="other">%1$d fanegrupper er åpne. Trykk for å bytte fane.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1683,6 +1691,8 @@
   <string name="pwa_site_controls_title_private">%1$s (privatmodus)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Åpne fanesøk</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Prøv fanegrupper for mindre scrolling og mer gjort</string>
   <!--
     Tab Group
 
@@ -1692,6 +1702,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Rediger gruppe</string>
   <string name="create_tab_group_save_button">Lagre</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Ny gruppe, skjul drahåndtak</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Lukk redigering av fanegruppe</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Gruppe</string>
@@ -1706,6 +1718,8 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Navn</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Legg til i</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Legg til i ny fanegruppe</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">Lukk legg til i fanegruppe</string>
   <!-- Label for adding to a new tab group. -->
@@ -1726,6 +1740,30 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">Slett gruppe</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Avbryt</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Gul</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Oransje</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Rød</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Rosa</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Lilla</string>
+  <!-- Tab group color: Violet -->
+  <string name="tab_group_color_violet">Fiolett</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">Blå</string>
+  <!-- Tab group color: Cyan -->
+  <string name="tab_group_color_cyan">Turkis</string>
+  <!-- Tab group color: Green -->
+  <string name="tab_group_color_green">Grønn</string>
+  <!-- Tab group color: Grey -->
+  <string name="tab_group_color_grey">Grå</string>
   <!--
     History
 
@@ -3028,16 +3066,37 @@
   <string name="email_masks_max_free_tier_reached">Du har brukt dine 5 gratis e-postaliaser, så vi valgte én du kan bruke om igjen.</string>
   <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
   <string name="email_masks_error_retrieving_masks">E-postalias er ikke tilgjengelige akkurat nå. Prøv igjen om noen minutter.</string>
+  <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title_2">Innebygd VPN</string>
+  <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
+  <string name="preferences_ip_protection_beta_badge_label">BETA</string>
   <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
   <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">Den innebygde VPN-en i %s</string>
+  <!-- Body text for the browser VPN promo card -->
+  <string name="ip_protection_promo_body">Surf med ekstra beskyttelse ved å skjule plasseringen din, også på offentlig Wi-Fi.</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">Les mer</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">Månedlig datagrense</string>
   <!--
     Data usage shown on the browser VPN settings screen.
     %1$.1f is the data remaining in GB (for example "8.3").
     %2$.1f is the total monthly allowance in GB (for example "50.0").
   -->
   <string name="ip_protection_data_limit_value">%1$.1f GB av %2$.1f GB igjen</string>
+  <!--
+    Text shown below the data usage bar describing when the monthly allowance resets.
+    %1$.0f is the total monthly data allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_reset_info">Nullstilles til %1$.0f GB den første i hver måned.</string>
   <!-- Header for the browser VPN `location` section -->
   <string name="ip_protection_location_section">Plassering</string>
   <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
