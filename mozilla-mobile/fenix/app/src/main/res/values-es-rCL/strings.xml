@@ -389,6 +389,26 @@
   <string name="ai_controls_ai_powered_features">Funcionalidades impulsadas por IA</string>
   <!-- Title for the translations AI feature toggle -->
   <string name="ai_controls_translations_title">Traducciones</string>
+  <!-- Description for the translations AI feature toggle -->
+  <string name="ai_controls_translations_description">Todas las traducciones permanecen privadas en tu dispositivo.</string>
+  <!-- Link text to navigate to more translations settings -->
+  <string name="ai_controls_more_translations_settings">Más ajustes de traducción</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">Más opciones de resumen de página</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Búsqueda por voz</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">El audio se convierte a texto mediante los Servicios de Voz de Google.</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">¿Bloquear las mejoras de la IA?</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">No verás mejoras de IA nuevas ni actuales en %1$s, ni ventanas emergentes sobre ellas. Después, puedes desbloquear lo que quieras seguir usando.\n\nBloquearlas también afecta a las extensiones que usan IA proporcionada por %1$s.</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">Qué se bloqueará:</string>
+  <!-- Cancel button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_cancel">Cancelar</string>
+  <!-- Block button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_block">Bloquear</string>
   <!--
     Locale Settings Fragment
 
@@ -1416,6 +1436,8 @@
   <string name="preference_gestures_swipe_toolbar_show_tabs">Cambiar de pestaña al deslizar hacia arriba sobre la barra de herramientas</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Desliza la barra de direcciones hacia los lados para cambiar de pestaña</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Agitar para resumir</string>
   <!--
     Library
 
@@ -1578,6 +1600,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Pestañas privadas abiertas: %1$s. Toca para cambiar de pestaña.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d grupo de pestañas abierta. Toca para cambiar de pestaña.</item>
+    <item quantity="other">%1$d grupos de pestañas abiertas. Toca para cambiar de pestaña.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1667,6 +1697,10 @@
   <string name="pwa_site_controls_title_private">%1$s (modo privado)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Abrir búsqueda de pestañas</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Prueba los grupos de pestañas para desplazarte menos y hacer más</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Selecciona las pestañas para crear un grupo. Se guardarán aquí, listas para cuando las necesites.</string>
   <!--
     Tab Group
 
@@ -1676,6 +1710,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Editar grupo</string>
   <string name="create_tab_group_save_button">Guardar</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Nuevo grupo, contraer mango de arrastre</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Cerrar edición del grupo de pestañas</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Grupo</string>
@@ -1691,6 +1727,10 @@
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Añadir a</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Añadir a un grupo de pestañas, contraer mango de arrastre</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Añadir a un nuevo grupo de pestañas</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">Cerrar adición al grupo de pestañas</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Nuevo grupo de pestañas</string>
@@ -1702,6 +1742,33 @@
     <item quantity="one">%1$d pestaña</item>
     <item quantity="other">%1$d pestañas</item>
   </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Añadir al grupo de pestañas %1$s, %2$d pestaña, color %3$s</item>
+    <item quantity="other">Añadir al grupo de pestañas %1$s, %2$d pestañas, color %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Compartir grupo de pestañas %1$s con %2$d pestaña.</item>
+    <item quantity="other">Compartir grupo de pestañas %1$s con %2$d pestañas.</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Ver grupo de pestañas, contraer mango de arrastre</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Grupo de pestañas %1$s con %2$d pestaña, color %3$s</item>
+    <item quantity="other">Grupo de pestañas %1$s con %2$d pestañas, color %3$s</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">¿Eliminar grupo de pestañas?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -1710,6 +1777,22 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">Eliminar grupo</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Cancelar</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Amarillo</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Naranjo</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Rojo</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Rosa</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Púrpura</string>
+  <!-- Tab group color: Violet -->
+  <string name="tab_group_color_violet">Violeta</string>
   <!-- Tab group color: Blue -->
   <string name="tab_group_color_blue">Azul</string>
   <!-- Tab group color: Cyan -->
