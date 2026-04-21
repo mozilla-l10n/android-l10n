@@ -389,6 +389,26 @@
   <string name="ai_controls_ai_powered_features">Արհեստական բանականությամբ աշխատող գործառույթներ</string>
   <!-- Title for the translations AI feature toggle -->
   <string name="ai_controls_translations_title">Թարգմանություններ</string>
+  <!-- Description for the translations AI feature toggle -->
+  <string name="ai_controls_translations_description">Բոլոր թարգմանությունները մնում են գաղտնի ձեր սարքում։</string>
+  <!-- Link text to navigate to more translations settings -->
+  <string name="ai_controls_more_translations_settings">Թարգմանության ավելի շատ կարգավորումներ</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">Էջի ամփոփման ավելի շատ կարգավորումներ</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Ձայնային որոնում</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">Ձայնը տեքստի է վերածվում Google Speech Services-ի կողմից։</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">Արգելափակե՞լ ԱԲ բարելավումները։</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">Դուք %1$s-ում չեք տեսնի արհեստական բանականության նոր կամ ընթացիկ բարելավումներ կամ դրանց մասին թռուցիկ պատուհաններ: Հետագայում կարող եք արգելափակել ցանկացած բան, որը ցանկանում եք շարունակել օգտագործել:\n\nԱրգելափակումն ազդում է նաև այն ընդլայնումների վրա, որոնք օգտագործում են %1$s-ի կողմից տրամադրված արհեստական բանականությունը:</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">Ինչը կարգելափակվի`</string>
+  <!-- Cancel button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_cancel">Չեղարկել</string>
+  <!-- Block button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_block">Արգելափակել</string>
   <!--
     Locale Settings Fragment
 
@@ -1413,9 +1433,13 @@
   <!-- Preference for using the dynamic toolbar -->
   <string name="preference_gestures_dynamic_toolbar">Ոլորել՝ գործիքագոտիի թաքցնման համար</string>
   <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs_2">Բաց ներդիրները տեսնելու համար գործիքագոտին սահեցրեք ուղղահայաց</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
   <string name="preference_gestures_swipe_toolbar_show_tabs">Սահարկել գործիքագոտին վերև՝ ներդիրների բացման համար</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Սահարկեք գործիքագոտին կողքից՝ ներդիրներին անցնելու համար</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Թափահարեք՝ ամփոփելու համար</string>
   <!--
     Library
 
@@ -1578,6 +1602,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Գաղտնի ներդիրներ են բաց՝ %1$s: Հպեք՝ ներդիրները փոխելու համար:</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d ներդիրների խումբ բաց է։ Հպեք՝ ներդիրները փոխելու համար։</item>
+    <item quantity="other">%1$d ներդիրների խմբեր բաց են։ Հպեք՝ ներդիրները փոխելու համար։</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1676,6 +1708,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Խմբագրել խումբը</string>
   <string name="create_tab_group_save_button">Պահել</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Նոր խումբ, կոծկել քաշելու բռնակը</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Փակել «Խմբագրել» ներդիրի խումբը</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Խումբ</string>
@@ -1690,6 +1724,8 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Անուն</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Ավելացնել՝</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Ավելացրեք ներդիրների խմբում, կոծկել քաշելու բռնակը</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">Փակել ներդիրների խմբում ավելացնելը</string>
   <!-- Label for adding to a new tab group. -->
