@@ -391,6 +391,8 @@
   <string name="ai_controls_more_page_summary_settings">Lisää sivujen yhteenvedon asetuksia</string>
   <!-- Title for the voice search AI feature toggle -->
   <string name="ai_controls_voice_search_title">Äänihaku</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">Estetäänkö tekoälytehostukset?</string>
   <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
   <string name="ai_controls_block_dialog_what_will_be_blocked">Mitä estetään:</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
@@ -1424,6 +1426,8 @@
   <string name="preference_gestures_swipe_toolbar_show_tabs">Pyyhkäise työkaluriviä ylös avataksesi välilehdet</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Vaihda välilehtiä pyyhkäisemällä osoitepalkkia sivuttain</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Ravista luodaksesi yhteenvedon</string>
   <!--
     Library
 
@@ -1586,6 +1590,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Yksityisiä välilehtiä avoinna: %1$s. Vaihda välilehteä napauttamalla.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d välilehtiryhmä avoinna. Vaihda välilehteä napauttamalla.</item>
+    <item quantity="other">%1$d välilehtiryhmää avoinna. Vaihda välilehteä napauttamalla.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1675,6 +1687,10 @@
   <string name="pwa_site_controls_title_private">%1$s (yksityinen tila)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Avaa välilehtihaku</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Kokeile välilehtiryhmiä – vähemmän vieritystä, enemmän tekemistä</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Valitse välilehdet luodaksesi ryhmän. Ne tallennetaan tänne, ja ne ovat valmiina, kun sinä olet valmis.</string>
   <!--
     Tab Group
 
@@ -3060,6 +3076,21 @@
   <string name="ip_protection_toggle_label">VPN</string>
   <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_promo_headline">%sin sisäänrakennettu VPN</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">Lue lisää</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">Kuukausittainen dataraja</string>
+  <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3").
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value">%1$.1f Gt/%2$.1f Gt jäljellä</string>
+  <!--
+    Text shown below the data usage bar describing when the monthly allowance resets.
+    %1$.0f is the total monthly data allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_reset_info">Nollautuu arvoon %1$.0f Gt jokaisen kuukauden ensimmäisenä päivänä.</string>
   <!-- Header for the browser VPN `location` section -->
   <string name="ip_protection_location_section">Sijainti</string>
   <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
@@ -3083,6 +3114,11 @@
     %1$d is the total monthly allowance in GB (for example "50").
   -->
   <string name="ip_protection_menu_limit_reached">%1$d gigatavun raja saavutettu</string>
+  <!--
+    Error message shown on the browser VPN settings screen when the monthly data allowance is exhausted.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_description">Olet käyttänyt kaiken VPN-datasi, %1$d Gt. Käyttöoikeus nollautuu ensi kuussa.</string>
   <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
   <string name="ip_protection_toolbar_pill_label" tools:ignore="UnusedResources">VPN päällä</string>
   <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
@@ -4355,6 +4391,8 @@
   <string name="sports_widget_final">Loppuottelu</string>
   <!-- Round name shown on the sports widget for the bronze final stage in the soccer tournament. -->
   <string name="sports_widget_bronze_final">Pronssiottelu</string>
+  <!-- Sports widget error card message shown when match data fails to load. -->
+  <string name="sports_widget_error_load_failed">Ottelutietoja ei ole saatavilla juuri nyt. Yritä päivittää muutaman minuutin kuluttua.</string>
   <!-- Sports widget error card message shown when the network connection is interrupted and live updates pause. -->
   <string name="sports_widget_error_connection_interrupted">Yhteys katkennut — reaaliaikaiset päivitykset keskeytetty.</string>
   <!-- Sports widget action label to refresh match data after an error. -->
@@ -4401,6 +4439,8 @@
     or tracking in a technical sense; the meaning is about staying informed.
   -->
   <string name="sports_widget_card_title" tools:ignore="UnusedResources">Pidä silmällä MM-kisoja</string>
+  <!-- Sports widget card description shown below the title on the homepage entry point. -->
+  <string name="sports_widget_card_description" tools:ignore="UnusedResources">Saat reaaliaikaiset päivitykset otteluista ja paljon muuta.</string>
   <!-- Sports widget menu item to change the selected team. -->
   <string name="sports_widget_change_team" tools:ignore="UnusedResources">Vaihda joukkuetta</string>
   <!-- Sports widget menu item to get a custom wallpaper for the widget. -->
@@ -4417,6 +4457,8 @@
   <string name="sports_widget_halftime" tools:ignore="UnusedResources">Puoliaika</string>
   <!-- Sports widget match status label shown during extra time of a match. -->
   <string name="sports_widget_extra_time" tools:ignore="UnusedResources">Jatkoaika</string>
+  <!-- Sports widget match status label shown during penalties of a match. -->
+  <string name="sports_widget_penalties" tools:ignore="UnusedResources">Rangaistuspotkut</string>
   <!--
     Sports widget countdown label for days. D is short for Day. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that (e.g. T for German).
