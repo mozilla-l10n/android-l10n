@@ -1125,6 +1125,8 @@
   <string name="customize_wallpapers">Achtergronden</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">Gesponsorde snelkoppelingen</string>
+  <!-- Title for the customize home screen section that toggles the Homepage sports widget. -->
+  <string name="customize_toggle_world_cup" tools:ignore="UnusedResources">Wereldkampioenschap</string>
   <!--
     Wallpapers
 
@@ -2197,6 +2199,10 @@
   <string name="bookmark_sort_menu_a_to_z">Sorteren van A tot Z</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">Sorteren van Z tot A</string>
+  <!-- Label for button to import bookmarks from file. -->
+  <string name="bookmark_import_menu_button">Uit bestand importeren</string>
+  <!-- Snackbar message shown when a bookmark import attempt fails. -->
+  <string name="bookmark_import_failure_snackbar">Kan bladwijzers niet importeren. Probeer het opnieuw.</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -2255,8 +2261,12 @@
   <string name="bookmark_select_folder_close_folder_content_description">Map sluiten: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Bladwijzers sluiten</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">Uit bestand importeren</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Nog geen bladwijzers</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">Houd al uw favoriete bladwijzers bij elkaar</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">Bladwijzers in map: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -4440,6 +4450,10 @@
   <string name="sports_widget_match_live" tools:ignore="UnusedResources">LIVE</string>
   <!-- Title shown on the sports widget champion scoreboard row celebrating the soccer tournament winner. -->
   <string name="sports_widget_champions_title" tools:ignore="UnusedResources">Wereldkampioen 2026</string>
+  <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament runners-up. Runners-up means second place. -->
+  <string name="sports_widget_runner_up_title" tools:ignore="UnusedResources">Tweede plaats</string>
+  <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament third place winners. -->
+  <string name="sports_widget_third_place_title" tools:ignore="UnusedResources">Derde plaats</string>
   <!-- Round name shown on the sports widget for the Round of 32 stage in the soccer tournament. -->
   <string name="sports_widget_round_of_32">Ronde van 32</string>
   <!-- Round name shown on the sports widget for the Round of 16 stage in the soccer tournament. -->
@@ -4490,6 +4504,12 @@
   <string name="sports_widget_previous_match" tools:ignore="UnusedResources">Vorige wedstrijd</string>
   <!-- Sports widget section header for related soccer matches in the same group. -->
   <string name="sports_widget_related_matches">Gerelateerde wedstrijden</string>
+  <!-- Sports widget section header for a list of upcoming soccer matches that have not yet started. -->
+  <string name="sports_widget_upcoming" tools:ignore="UnusedResources">Binnenkort</string>
+  <!-- Sports widget match status suffix appended to match scores (e.g., "3 - 2 (Full time)") to indicate the match has been completed. -->
+  <string name="sports_widget_match_full_time_suffix">(Wedstrijd afgelopen)</string>
+  <!-- Sports widget match status to indicate the match has been completed. -->
+  <string name="sports_widget_match_full_time_2" tools:ignore="UnusedResources">Wedstrijd afgelopen</string>
   <!--
     Sports widget card title encouraging the user to follow the soccer tournament. “Keep tabs on” is an informal expression
     meaning to stay updated on or regularly follow something (in this case, World Cup matches and updates).
@@ -4512,12 +4532,42 @@
   <string name="sports_widget_choose_another_team">Kies een ander team om het WK bij te houden.</string>
   <!-- Sports widget button label to follow another team after the current team is eliminated. -->
   <string name="sports_widget_follow_another_team">Een ander team volgen</string>
+  <!-- Sports widget card title shown before the soccer tournament begins on top of a timer that is counting down. -->
+  <string name="sports_widget_countdown_to_world_cup" tools:ignore="UnusedResources">Aftellen naar het WK</string>
+  <!-- Sports widget button label that navigates the user to the full soccer tournament match schedule. -->
+  <string name="sports_widget_view_schedule">Tijdschema bekijken</string>
+  <!-- Sports widget button label that dismisses the step of choosing a team to follow. -->
+  <string name="sports_widget_skip">Overslaan</string>
   <!-- Sports widget match status label shown during halftime of a match. -->
   <string name="sports_widget_halftime" tools:ignore="UnusedResources">Rust</string>
   <!-- Sports widget match status label shown during extra time of a match. -->
   <string name="sports_widget_extra_time" tools:ignore="UnusedResources">Verlenging</string>
   <!-- Sports widget match status label shown during penalties of a match. -->
   <string name="sports_widget_penalties" tools:ignore="UnusedResources">Strafschoppen</string>
+  <!--
+    Sports widget countdown label for days. D is short for Day. The layout only allows for 1–2 characters:
+    if there is an equivalent single character for your language, use that (e.g. T for German).
+    Your translation will be automatically truncated at 2 characters to avoid layout issues.
+  -->
+  <string name="sports_widget_countdown_days">D</string>
+  <!--
+    Sports widget countdown pill abbreviated label for hours. H is short for Hour. The layout only allows for 1–2 characters:
+    if there is an equivalent single character for your language, use that (e.g. S for German).
+    Your translation will be automatically truncated at 2 characters to avoid layout issues.
+  -->
+  <string name="sports_widget_countdown_hours">U</string>
+  <!--
+    Sports widget countdown pill abbreviated label for minutes. M is short for Minute. The layout only allows for 1–2 characters:
+    if there is an equivalent single character for your language, use that.
+    Your translation will be automatically truncated at 2 characters to avoid layout issues
+  -->
+  <string name="sports_widget_countdown_minutes">M</string>
+  <!-- Content description (for accessibility, not displayed) for the close button on the sports widget team / country selector. -->
+  <string name="sports_widget_close_team_selection_sheet_content_description" tools:ignore="UnusedResources">Teamselectieblad sluiten</string>
+  <!-- Content description (for accessibility, not displayed) for the close button on the sports widget card. -->
+  <string name="sports_widget_close_content_description" tools:ignore="UnusedResources">Sluiten</string>
+  <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
+  <string name="sports_widget_more_options_content_description" tools:ignore="UnusedResources">Meer opties</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
