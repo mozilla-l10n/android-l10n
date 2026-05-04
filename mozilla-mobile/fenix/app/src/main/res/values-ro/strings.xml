@@ -387,6 +387,36 @@
   <string name="ai_controls_learn_more">Află mai multe</string>
   <!-- Title for the block AI enhancements toggle -->
   <string name="ai_controls_block_ai_title">Blochează îmbunătățirile cu AI</string>
+  <!-- Description for the block AI enhancements toggle. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_ai_description">Blocare înseamnă că nu vei vedea îmbunătățiri AI noi sau actuale în %s, și nici pop-up-uri despre ele.</string>
+  <!-- Link text to see what AI enhancements are and aren’t included -->
+  <string name="ai_controls_see_whats_included">Vezi ce este și ce nu este inclus</string>
+  <!-- Banner text shown when AI enhancements are blocked -->
+  <string name="ai_controls_blocked_info_banner">Îmbunătățirile AI noi și actuale sunt blocate implicit. Deblochează funcționalități specifice mai jos.</string>
+  <!-- Section header for the AI-powered features list -->
+  <string name="ai_controls_ai_powered_features">Funcționalități pe bază de AI</string>
+  <!-- Title for the translations AI feature toggle -->
+  <string name="ai_controls_translations_title">Traduceri</string>
+  <!-- Description for the translations AI feature toggle -->
+  <string name="ai_controls_translations_description">Toate traducerile rămân private pe dispozitivul tău.</string>
+  <!-- Link text to navigate to more translations settings -->
+  <string name="ai_controls_more_translations_settings">Mai multe setări pentru traduceri</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">Mai multe setări pentru rezumatele paginilor</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Căutare vocală</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">Conținutul audio este convertit în text cu Serviciile Google Speech.</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">Blochezi îmbunătățirile cu AI?</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">Nu vei mai vedea îmbunătățiri noi sau actuale AI în %1$s, și nici pop-up-uri despre ele. După aceea, poți debloca orice vrei să folosești în continuare.\n\nBlocarea afectează și extensiile care folosesc AI de la %1$s.</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">Ce va fi blocat:</string>
+  <!-- Cancel button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_cancel">Anulează</string>
+  <!-- Block button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_block">Blochează</string>
   <!--
     Locale Settings Fragment
 
@@ -788,6 +818,8 @@
   <string name="preferences_category_about">Despre</string>
   <!-- Preference category for settings related to changing the default search engine -->
   <string name="preferences_category_select_default_search_engine">Selectează una dintre opțiuni</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">Motor de căutare implicit în navigările normale</string>
   <!-- Preference category for settings related to changing the private browsing search engine -->
   <string name="preferences_category_select_private_search_engine">Motor de căutare implicit în navigările private</string>
   <!-- Option to set the private browsing mode to use the normal default search engine -->
@@ -1098,6 +1130,8 @@
   <string name="customize_wallpapers">Imagini de fundal</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">Comenzi rapide sponsorizate</string>
+  <!-- Title for the customize home screen section that toggles the Homepage sports widget. -->
+  <string name="customize_toggle_world_cup" tools:ignore="UnusedResources">Cupa Mondială</string>
   <!--
     Wallpapers
 
@@ -1379,6 +1413,8 @@
   <string name="toolbar_customize_shortcut_homepage">Pagină de start</string>
   <!-- Back shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_back">Înapoi</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Niciuna</string>
   <!--
     App icon Preferences
 
@@ -1412,9 +1448,13 @@
   <!-- Preference for using the dynamic toolbar -->
   <string name="preference_gestures_dynamic_toolbar">Derulează pentru a ascunde bara de instrumente</string>
   <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs_2">Glisează bara de instrumente pe verticală ca să vezi filele deschise</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
   <string name="preference_gestures_swipe_toolbar_show_tabs">Glisează bara de instrumente în sus pentru a deschide filele</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Glisează bara de adrese în lateral ca să treci la altă filă</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Agită pentru un rezumat</string>
   <!--
     Library
 
@@ -1577,6 +1617,15 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">File private deschise: %1$s. Atinge pentru a schimba filele.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d grup de file deschis. Atinge ca să treci la altă filă.</item>
+    <item quantity="few">%1$d grupuri de file deschise. Atinge ca să treci la altă filă.</item>
+    <item quantity="other">%1$d de grupuri de file deschise. Atinge ca să treci la altă filă.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1666,6 +1715,10 @@
   <string name="pwa_site_controls_title_private">%1$s (mod privat)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Deschide căutarea de file</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Încearcă grupurile de file pentru mai puțină derulare și mai multă productivitate</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Selectează filele pentru crearea unui grup. Sunt salvate aici. Gata când ești și tu gata.</string>
   <!--
     Tab Group
 
@@ -1675,6 +1728,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Editează grupul</string>
   <string name="create_tab_group_save_button">Salvează</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Grup nou, repliază mânerul de tragere</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Închide Modifică grupul de file</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Grup</string>
@@ -1690,6 +1745,10 @@
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Adaugă în</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Adaugă la un grup de file, repliază mânerul de tragere</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Adaugă la un grup nou de file</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">Închide Adaugă în grupul de file</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Grup nou de file</string>
@@ -1702,6 +1761,36 @@
     <item quantity="few">%1$d file</item>
     <item quantity="other">%1$d de file</item>
   </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Adaugă la %1$s grup de file, %2$d filă, coloarea %3$s</item>
+    <item quantity="few">Adaugă la %1$s grupuri de file, %2$d file, culorile %3$s</item>
+    <item quantity="other">Adaugă la %1$s de grupuri de file, %2$d de file, culorile %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Partajează %1$s grup de file cu %2$d filă.</item>
+    <item quantity="few">Partajează %1$s grupuri de file cu %2$d file.</item>
+    <item quantity="other">Partajează %1$s de grupuri de file cu %2$d de file.</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Afișează grupul de file, repliază mânerul de tragere</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">%1$s grup de file cu %2$d filă, culoarea %3$s</item>
+    <item quantity="few">%1$s grupuri de file cu %2$d file, culoarea %3$s</item>
+    <item quantity="other">%1$s de grupuri de file cu %2$d de file, culoarea %3$s</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">Ștergi grupul de file?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -1710,6 +1799,28 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">Șterge grupul</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Anulează</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">Închizi fila și ștergi grupul?</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">Grupul va fi șters permanent.</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Șterge grupul</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Anulează</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Galben</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Portocaliu</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Roșu</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Roz</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Purpuriu</string>
   <!--
     History
 
