@@ -393,6 +393,28 @@
   <string name="ai_controls_see_whats_included">Consulta qué se incluye y qué no</string>
   <!-- Banner text shown when AI enhancements are blocked -->
   <string name="ai_controls_blocked_info_banner">Las mejoras de IA (nuevas y actuales) están bloqueadas de forma predeterminada. Desbloquea funciones específicas a continuación.</string>
+  <!-- Section header for the AI-powered features list -->
+  <string name="ai_controls_ai_powered_features">Funciones con IA</string>
+  <!-- Title for the translations AI feature toggle -->
+  <string name="ai_controls_translations_title">Traducciones</string>
+  <!-- Description for the translations AI feature toggle -->
+  <string name="ai_controls_translations_description">Todas las traducciones son privadas y permanecen en el dispositivo.</string>
+  <!-- Link text to navigate to more translations settings -->
+  <string name="ai_controls_more_translations_settings">Más configuraciones de traducción</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">Más ajustes de resúmenes de página</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Búsqueda por voz</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">Google Speech Services convierte el audio en texto.</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">¿Bloquear mejoras de IA?</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">No aparecerán las mejoras de IA (nuevas o actuales) en %1$s, ni avisos sobre ellas. Después, es posible desbloquear cualquier función que se desee seguir utilizando.\n\nEl bloqueo también afecta a las extensiones que utilizan la IA proporcionada por %1$s.</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">Elementos que se bloquearán:</string>
+  <!-- Cancel button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_cancel">Cancelar</string>
   <!-- Block button text in the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_block">Bloquear</string>
   <!--
@@ -986,6 +1008,8 @@
   <string name="preferences_show_nonsponsored_suggestions">Sugerencias de %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">Recibe sugerencias de la web relacionadas con tu búsqueda</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards">Recibir sugerencias de Mozilla al escribir</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">Compartir enlaces</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -1004,6 +1028,15 @@
   <string name="preferences_open_links_in_apps_ask">Preguntar antes de abrir</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Nunca</string>
+  <!-- Preference category for file storage. -->
+  <string name="preferences_category_file_storage">Almacenamiento de archivos</string>
+  <!-- Preference title for downloads default location. -->
+  <string name="preferences_downloads_default_location_title">Ubicación de descarga predeterminada</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">No hay permisos para usar esta carpeta. Intenta elegir una diferente.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Administra las descargas con otra aplicación</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -1015,6 +1048,10 @@
   <string name="preferences_downloads_ask_when_to_delete_files">Preguntar antes de eliminar archivos</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads_2">Ajustes de descargas</string>
+  <!-- Title for the setting to automatically clean up downloaded files. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_downloads_settings_clean_up_files_title">Eliminar de %s y del dispositivo</string>
+  <!-- Summary for the setting to automatically clean up downloaded files -->
+  <string name="preferences_downloads_settings_clean_up_files_summary">Al eliminar archivos de la administración de descargas, también se borrarán del dispositivo</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads">Descargas</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -1041,6 +1078,16 @@
   <string name="addons_permissions_allow_for_all_sites_subtitle">Si confías en esta extensión, puedes autorizarla para todos los sitios web.</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">Esta extensión no requiere ningún permiso.</string>
+  <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
+  <string name="addons_permissions_required_data_collection_description_2">La parte desarrolladora indica que esta extensión recopila: %1$s</string>
+  <!-- The description of the "none" data collection permission, when the extension doesn't collect anything according to the developer. -->
+  <string name="addons_permissions_none_required_data_collection_description">La parte desarrolladora indica que esta extensión no requiere la recopilación de datos.</string>
+  <!-- The title of the required permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_permissions">Permisos requeridos:</string>
+  <!-- The title of the optional permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_permissions">Permisos opcionales:</string>
+  <!-- The title of the required data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_data_collection">Recopilación de datos obligatoria:</string>
   <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
   <string name="addons_permissions_heading_optional_data_collection">Recolección de datos opcional:</string>
   <!--
@@ -1082,6 +1129,8 @@
   <string name="customize_wallpapers">Fondos de pantalla</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">Accesos directos patrocinados</string>
+  <!-- Title for the customize home screen section that toggles the Homepage sports widget. -->
+  <string name="customize_toggle_world_cup" tools:ignore="UnusedResources">Mundial</string>
   <!--
     Wallpapers
 
@@ -1398,9 +1447,13 @@
   <!-- Preference for using the dynamic toolbar -->
   <string name="preference_gestures_dynamic_toolbar">Desplazar para ocultar la barra</string>
   <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs_2">Desliza la barra de herramientas verticalmente para ver las pestañas abierta</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
   <string name="preference_gestures_swipe_toolbar_show_tabs">Deslizar la barra hacia arriba para abrir pestañas</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Deslizar la barra de direcciones hacia los costados para cambiar de pestaña</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Agita para resumir</string>
   <!--
     Library
 
@@ -1628,6 +1681,8 @@
   <string name="close_tab_title">Cerrar pestaña %s</string>
   <!-- Content description (not visible, for screen readers etc.): Opens the open tabs menu when pressed -->
   <string name="open_tabs_menu">Abrir menú de pestañas</string>
+  <!-- Content description (not visible, for screen readers etc.): Return to tab manager -->
+  <string name="tab_manager_search_bar_back_content_description">Regresar al administrador de pestañas</string>
   <!-- Open tabs menu item to save tabs to collection -->
   <string name="tabs_menu_save_to_collection1">Guardar pestañas en la colección</string>
   <!-- Text for the menu button to delete a collection -->
@@ -1644,6 +1699,8 @@
   <string name="delete_from_history">Eliminar del historial</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">%1$s (Modo Privado)</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
+  <string name="tab_manager_open_tab_search">Abrir búsqueda en pestañas</string>
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Editar grupo</string>
   <string name="create_tab_group_save_button">Guardar</string>
@@ -1801,6 +1858,12 @@
   <string name="download_rename_dialog_label">Nombre</string>
   <string name="download_rename_dialog_confirm_button">Guardar</string>
   <string name="download_rename_dialog_cancel_button">Cancelar</string>
+  <string name="download_rename_error_dismiss_button">Aceptar</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">¿Cambiar el tipo de archivo a %s?</string>
   <string name="change_file_extension_cancel_button">Cancelar</string>
   <string name="change_file_extension_confirm_button">Sí, cámbialo</string>
   <!-- Text for the header of in progress downloads -->
@@ -1914,6 +1977,8 @@
   <string name="tab_crash_close">Cerrar pestaña</string>
   <!-- Restore tab button text on the tab crash page -->
   <string name="tab_crash_restore">Restaurar pestaña</string>
+  <!-- Unsubmitted crash dialog title, %s is the name of the app (for example "Firefox"). -->
+  <string name="unsubmitted_crash_dialog_title_2">%s dejó de funcionar. ¿Enviar un informe?</string>
   <!-- Unsubmitted crash dialog checkbox label for automatically sending reports in the future -->
   <string name="unsubmitted_crash_dialog_checkbox_label">Enviar automáticamente informes de fallos</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
