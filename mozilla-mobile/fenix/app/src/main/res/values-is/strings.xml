@@ -1666,6 +1666,14 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">Eyða hópi</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Hætta við</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">Loka flipa og eyða hópi?</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">Þetta eyðir hópnum varanlega.</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Eyða hópi</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Hætta við</string>
   <!--
     Color labels for tab groups, used for accessibility and selection UI.
 
@@ -1806,6 +1814,8 @@
   <string name="download_delete_multi_select_dialog_cancel">Hætta við</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
   <string name="download_delete_dialog_from_device">Eyða af tæki</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Einungis fjarlægja úr niðurhalsferli</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
   <string name="download_delete_dialog_cancel">Hætta við</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
@@ -1823,6 +1833,8 @@
   <string name="download_rename_error_exists_error">Skrá sem heitir „%s“ er þegar til á þessum stað</string>
   <!-- Error message when renaming with an invalid file name. -->
   <string name="download_rename_error_invalid_name_error">Skráaheiti mega ekki nota „/“</string>
+  <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
+  <string name="download_rename_error_case_only_error">Heitið sem þú settir inn breytir aðeins hástöfum eða lágstöfum. Prófaðu annað skráarheiti.</string>
   <!-- Title for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_title">Ekki er hægt að endurnefna skrá</string>
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
@@ -2074,6 +2086,10 @@
   <string name="bookmark_sort_menu_z_to_a">Raða frá Ö til A</string>
   <!-- Label for button to import bookmarks from file. -->
   <string name="bookmark_import_menu_button">Flytja inn úr skrá</string>
+  <!-- Snackbar message shown when a bookmark import attempt fails. -->
+  <string name="bookmark_import_failure_snackbar">Ekki tókst að flytja inn bókamerki. Reyndu aftur.</string>
+  <!-- Default name for the folder created when importing bookmarks from a file. -->
+  <string name="bookmark_import_destination_default_name">Innflutt bókamerki</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -2132,8 +2148,12 @@
   <string name="bookmark_select_folder_close_folder_content_description">Loka möppu: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Loka bókamerkjum</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">Flytja inn úr skrá</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Engin bókamerki ennþá</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">Haltu öllum eftirlætis-bókamerkjunum þínum saman</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">Bókamerki í möppu: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -2321,12 +2341,18 @@
   <string name="menu_print">Prenta</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Senda til tækis</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">Loka að senda í tæki</string>
   <!-- Text for the QR code action in the native share sheet -->
   <string name="share_qr_code">QR-kóði</string>
   <!-- Title shown in the QR code display screen -->
   <string name="qr_code_display_title">QR-kóði</string>
   <!-- Content description for the close button in the QR code display screen -->
   <string name="qr_code_display_close">Loka</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Deila tengli í næsta nágrenni</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Til að deila þessum tengli með fólki nálægt þér,skaltu láta það skanna QR-kóðann hér fyrir neðan.</string>
   <!-- Label for the download button on the QR code display screen -->
   <string name="qr_code_display_download">Sækja</string>
   <!-- Toast shown when the QR code is successfully saved to Downloads -->
@@ -2590,6 +2616,8 @@
   </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">Þú ert varin/n</string>
+  <!-- Text shown below the trackers blocked card with typing animation -->
+  <string name="help_catch_trackers">Hjálpaðu til við að grípa rekjara</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Staðlað (sjálfgefið)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -3019,6 +3047,8 @@
   <string name="ip_protection_location_section">Staðsetning</string>
   <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
   <string name="ip_protection_location_recommended_label">Ráðlagt</string>
+  <!-- Description for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_description">Velur hröðustu VPN-staðsetninguna fyrir þig.</string>
   <!-- Badge label shown in the menu item when the browser VPN is active -->
   <string name="preferences_ip_protection_on">Kveikt</string>
   <!-- Badge label shown in the menu item when the browser VPN is off -->
@@ -3031,6 +3061,28 @@
   <string name="ip_protection_menu_error">Villa</string>
   <!-- Content description for the chevron button that opens the browser VPN settings screen -->
   <string name="ip_protection_navigate_settings">Opna VPN-stillingar</string>
+  <!--
+    Subtitle shown below the VPN label in menus when the monthly data allowance is exhausted.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_menu_limit_reached">%1$d GB takmörkum náð</string>
+  <!--
+    Error message shown on the browser VPN settings screen when the monthly data allowance is exhausted.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_description">Þú hefur notað öll %1$d GB af VPN-gögnunum þínum. Aðgangur endurstillist næsta mánuði.</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
+  <string name="ip_protection_toolbar_pill_label" tools:ignore="UnusedResources">VPN kveikt</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
+  <string name="ip_protection_toolbar_pill_description" tools:ignore="UnusedResources">VPN er virkt.</string>
+  <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
+  <string name="ip_protection_get_started">Hefjast handa</string>
+  <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_onboarding_card_headline">Prófaðu innbyggt VPN í %s</string>
+  <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
+  <string name="ip_protection_onboarding_body_link">Vafraðu með aukna vernd</string>
+  <!-- Label for the dismiss button on the onboarding bottom sheet. -->
+  <string name="ip_protection_onboarding_not_now_button">Ekki núna</string>
   <!--
     Autofill
 
