@@ -405,6 +405,8 @@
   <string name="ai_controls_voice_search_description">Hljóði er umbreytt í texta með Google Speech þjónustum.</string>
   <!-- Title for the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_title">Loka á AI-endurbætur?</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">Á hvað verður lokað:</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_cancel">Hætta við</string>
   <!-- Block button text in the block AI enhancements confirmation dialog -->
@@ -1032,6 +1034,7 @@
   <!-- Preference category for deleting or removing downloads -->
   <string name="preferences_category_delete_or_remove_downloads">Eyða eða fjarlægja sóttar skrár</string>
   <string name="preferences_downloads_delete_from_device">Eyða af tæki</string>
+  <string name="preferences_downloads_remove_from_download_history">Fjarlægja úr niðurhalsferli</string>
   <string name="preferences_downloads_ask_when_to_delete_files">Spyrja þegar ég eyði skrám</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads_2">Stillingar fyrir niðurhal</string>
@@ -1434,6 +1437,8 @@
   <!-- Preference for using the dynamic toolbar -->
   <string name="preference_gestures_dynamic_toolbar">Skrunaðu til að fela verkfærastikuna</string>
   <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs_2">Strjúktu verkfærastikunni lóðrétt til að sjá opna flipa</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
   <string name="preference_gestures_swipe_toolbar_show_tabs">Strjúktu verkfærastikunni upp til að opna flipa</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Strjúktu veffangastikuna til hliðar til að skipta um flipa</string>
@@ -1601,6 +1606,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Opnir huliðsflipar: %1$s. Ýttu til að skipta um flipa.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d opinn flipahópur. Ýttu til að skipta um flipa.</item>
+    <item quantity="other">%1$d opnir flipahópar. Ýttu til að skipta um flipa.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1713,6 +1726,10 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Heiti</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Bæta í</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Bæta við nýjan flipahóp</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_close_content_description">Loka að bæta við flipahópi</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Nýr flipahópur</string>
   <plurals name="tab_group_tabs_count_subtitle">
@@ -1723,6 +1740,10 @@
     <item quantity="one">%1$d flipi</item>
     <item quantity="other">%1$d flipar</item>
   </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">Eyða flipahópi?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">Þetta eyðir hópnum varanlega.</string>
   <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_confirm">Eyða hópi</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
@@ -4527,6 +4548,11 @@
   <string name="sports_widget_countdown_remaining_content_description">Eftirstandandi tími. Dagar: %1$d. Klukkustundir: %2$d. Mínútur: %3$d.</string>
   <!-- Content description (for accessibility, not displayed)  for the action that navigates to the World Cup website. -->
   <string name="sports_widget_go_to_world_cup_site_content_description" tools:ignore="UnusedResources">Fara á vefsvæði HM í fótbolta</string>
+  <!--
+    Content description (for accessibility, not displayed)  announcing an upcoming soccer match.
+    %1$s is the home team name, %2$s is the away team name, %3$s is the match date, %4$s is the kickoff time.
+  -->
+  <string name="sports_widget_upcoming_match_content_description" tools:ignore="UnusedResources">Væntanlegt: %1$s á móti %2$s, %3$s kl. %4$s</string>
   <!--
     Content description (for accessibility, not displayed) for a paginated item.
     %1$s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32),
