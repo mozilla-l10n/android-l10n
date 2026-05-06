@@ -1954,10 +1954,14 @@
     %s is the proposed file name.
   -->
   <string name="download_rename_error_exists_error">Un archivo llamado “%s” ya existe en esta ubicación</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">Los nombres de los archivos no pueden tener “/”</string>
   <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
   <string name="download_rename_error_case_only_error">El nombre ingresado solo cambia mayúsculas o minúsculas. Intenta con un nombre de archivo diferente.</string>
   <!-- Title for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_title">No se puede cambiar el nombre del archivo</string>
+  <!-- Description message for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_description">No se puede cambiar el nombre a este archivo debido a restricciones del sistema o del almacenamiento.</string>
   <string name="download_rename_error_dismiss_button">Aceptar</string>
   <!--
     Title for the alert dialog to change file extension.
@@ -2207,6 +2211,8 @@
   <string name="bookmark_import_menu_button">Importar desde un archivo</string>
   <!-- Snackbar message shown when a bookmark import attempt fails. -->
   <string name="bookmark_import_failure_snackbar">No se pudieron importar los marcadores. Intenta nuevamente.</string>
+  <!-- Default name for the folder created when importing bookmarks from a file. -->
+  <string name="bookmark_import_destination_default_name">Marcadores importados</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -2466,8 +2472,16 @@
   <string name="qr_code_display_title">Código QR</string>
   <!-- Content description for the close button in the QR code display screen -->
   <string name="qr_code_display_close">Cerrar</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Compartir enlace con dispositivos cercanos</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Para compartir este vínculo con personas cercanas, pídeles que escaneen el siguiente código QR.</string>
   <!-- Label for the download button on the QR code display screen -->
   <string name="qr_code_display_download">Descargar</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">Código QR guardado en Descargas</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Error al guardar el código QR</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Todas las acciones</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -2714,6 +2728,19 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s te protege de muchos de los rastreadores más comunes que rastrean lo que haces en línea.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Saber más</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d rastreador bloqueado</item>
+    <item quantity="other">%d rastreadores bloqueados</item>
+  </plurals>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Tu navegación es segura</string>
+  <!-- Text shown below the trackers blocked card with typing animation -->
+  <string name="help_catch_trackers">Ayuda a detectar rastreadores</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Estándar (predeterminado)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2724,8 +2751,26 @@
   <string name="preference_enhanced_tracking_protection_strict">Estricto</string>
   <!-- Preference description for enhanced tracking protection for the strict protection settings -->
   <string name="preference_enhanced_tracking_protection_strict_description_4">Protección contra rastreo mejorada y mayor rendimiento, pero puede que algunos sitios no funcionen correctamente.</string>
+  <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">Solucionar problemas importantes del sitio (recomendado)</string>
   <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
   <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">Solucionar problemas menores del sitio</string>
+  <!-- Preference description for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_description">Debe usarse con correcciones para problemas críticos.</string>
+  <!-- Preference sub header for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_subheader">Corregir problemas del sitio</string>
+  <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_learn_more">Más información</string>
+  <!--
+    Dialog that appears after user tries to uncheck the baseline exceptions preference under Strict or Custom tracking protection
+
+    Title for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection
+  -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_title">¿Confirmas que deseas desactivar las correcciones?</string>
+  <!-- Message for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_message">Este ajuste ayuda a corregir los problemas más comunes de los sitios. Si lo desactivas, es posible que algunos sitios no funcionen y %1$s no podrá ayudar a solucionar esos errores.</string>
+  <!-- Confirmation button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_confirm">Desactivar correcciones</string>
   <!-- Cancel button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. This dismisses the dialog and re-enables the preference. -->
   <string name="preference_enhanced_tracking_protection_allow_list_dialog_cancel">Mantener las correcciones activadas</string>
   <!-- Accessibility text for the Strict protection information icon -->
@@ -3022,6 +3067,10 @@
   <string name="saved_login_clear_username">Borrar nombre de usuario</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">Borrar nombre de servidor</string>
+  <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
+  <string name="login_detail_menu_button_content_description">Menú de datos de inicio de sesión</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
+  <string name="login_details_navigate_back_button_content_description">Regresar a la navegación</string>
   <!-- Edit text for the login detail menu edit button -->
   <string name="login_detail_menu_edit_button">Editar</string>
   <!-- Delete text for the login detail menu delete button -->
@@ -3303,6 +3352,8 @@
   <string name="quick_settings_sheet_secure_connection_2">Conexión segura</string>
   <!-- Label that indicates a site is using a insecure connection -->
   <string name="quick_settings_sheet_insecure_connection_2">La conexión no es segura</string>
+  <!-- Label that indicates a site is displaying a local document -->
+  <string name="quick_settings_sheet_local_page">Esta página se encuentra guardada en tu dispositivo.</string>
   <!-- Label to clear site data -->
   <string name="clear_site_data">Limpiar cookies y datos del sitio</string>
   <!-- Confirmation message for a dialog confirming if the user wants to delete all data for current site. %s is the domain of the site. -->
@@ -3975,6 +4026,14 @@
   <string name="debug_drawer_regin_tools_description">Reemplazar temporalmente los valores de inicio y de región actual para realizar pruebas.</string>
   <!-- The text label for displaying home region. -->
   <string name="debug_drawer_home_region_label">Región de origen</string>
+  <!-- The text field label for overriding home region. -->
+  <string name="debug_drawer_override_home_region_label">Reemplazar la región de origen</string>
+  <!-- The text field label for overriding current region. -->
+  <string name="debug_drawer_override_current_region_label">Reemplazar la región actual</string>
+  <!-- The title of the button for overriding home and current region. -->
+  <string name="debug_drawer_override_region">Reemplazar el inicio y la región actual</string>
+  <!-- The title of the button for overriding home region permanently. -->
+  <string name="debug_drawer_override_home_region_permanently">Reemplazar la región de origen de forma permanente</string>
   <!--
     Messages explaining how to exit fullscreen mode
 
@@ -4042,6 +4101,18 @@
   <!-- Title for the setup checklist feature when the state is 'completed' -->
   <string name="setup_checklist_title_state_completed">¡Felicidades!</string>
   <!--
+    ===== Setup checklist feature: Subtitles for 3 steps =====
+
+    Subtitle for a setup checklist with 3 steps initial step. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_subtitle_3_steps_initial_state">Sigue estos 3 pasos para configurar %1$s y obtener la mejor experiencia de navegación.</string>
+  <!-- Subtitle for a setup checklist with 3 steps when the first task is completed. -->
+  <string name="setup_checklist_subtitle_3_steps_first_step">¡Buen inicio! Completaste 1 de los 3 pasos.</string>
+  <!-- Subtitle for a setup checklist with 3 steps when two of the tasks are completed. -->
+  <string name="setup_checklist_subtitle_3_steps_second_step">¡Ya casi! Completaste dos pasos y solo falta 1.</string>
+  <!-- Subtitle for a setup checklist with 3 steps completed state. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="setup_checklist_subtitle_3_steps_completed_state">¡Listo! Completaste los 3 pasos. Disfruta la velocidad, privacidad y seguridad de %1$s.</string>
+  <!--
     ===== Setup checklist feature: Subtitles for 5 steps (Large screen devices don't support toolbar placement) =====
 
     Subtitle for a setup checklist with 5 steps initial state. %1$s is the name of the app (for example "Firefox").
@@ -4069,6 +4140,8 @@
   <string name="setup_checklist_task_theme_selection">Selecciona un tema</string>
   <!-- The title of the toolbar selection task for the setup checklist -->
   <string name="setup_checklist_task_toolbar_selection">Elegir ubicación de la barra de herramientas</string>
+  <!-- The title of the explore extensions task for the setup checklist -->
+  <string name="setup_checklist_task_explore_extensions">Explorar extensiones</string>
   <!--
     ===== Setup checklist feature: Group titles =====
 
@@ -4093,8 +4166,16 @@
   <string name="a11y_completed_task_description">Tarea completada</string>
   <!-- Accessibility description for the task icon -->
   <string name="a11y_task_icon_description">Ícono de tarea</string>
+  <!--
+    Private browsing mode authentication screen
+
+    Label for the secondary action to exit private browsing mode
+  -->
+  <string name="pbm_authentication_leave_private_tabs">Dejar pestañas privadas</string>
   <!-- Label for the primary action button to unlock private tabs -->
   <string name="pbm_authentication_unlock">Desbloquear</string>
+  <!-- Title text instructing the user to unlock private tabs -->
+  <string name="pbm_authentication_unlock_private_tabs">Desbloquear pestañas privadas</string>
   <!-- Authentication prompt title to enable the private tabs mode -->
   <string name="pbm_authentication_enable_lock">Habilitar el bloqueo de pantalla de pestañas privadas</string>
   <!-- Authentication prompt title to disable the private tabs mode -->
