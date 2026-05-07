@@ -1611,6 +1611,15 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Otwarte prywatne karty: %1$s. Stuknij, aby przełączyć karty.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d otwarta grupa kart. Stuknij, aby przełączyć karty.</item>
+    <item quantity="few">%1$d otwarte grupy kart. Stuknij, aby przełączyć karty.</item>
+    <item quantity="other">%1$d otwartych grup kart. Stuknij, aby przełączyć karty.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1700,6 +1709,8 @@
   <string name="pwa_site_controls_title_private">%1$s (tryb prywatny)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Szukaj w\u00a0otwartych kartach</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Wypróbuj grupy kart, aby mniej przewijać, a\u00a0więcej osiągnąć</string>
   <!--
     Tab Group
 
@@ -1709,6 +1720,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Edytuj grupę</string>
   <string name="create_tab_group_save_button">Zachowaj</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Nowa grupa, zwiń uchwyt przeciągania</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">Zamknij edycję grupy kart</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">Grupa</string>
@@ -1724,6 +1737,10 @@
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Dodaj do</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Dodaj do grupy kart, zwiń uchwyt przeciągania</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Dodaj do nowej grupy kart</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">Zamknij dodawanie kart do grupy</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Nowa grupa kart</string>
@@ -1735,6 +1752,36 @@
     <item quantity="one">%1$d karta</item>
     <item quantity="few">%1$d karty</item>
     <item quantity="other">%1$d kart</item>
+  </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Dodaj do grupy kart „%1$s”, %2$d karta, kolor %3$s</item>
+    <item quantity="few">Dodaj do grupy kart „%1$s”, %2$d karty, kolor %3$s</item>
+    <item quantity="other">Dodaj do grupy kart „%1$s”, %2$d kart, kolor %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Udostępnij grupę kart „%1$s”, mającą %2$d kartę.</item>
+    <item quantity="few">Udostępnij grupę kart „%1$s”, mającą %2$d karty.</item>
+    <item quantity="other">Udostępnij grupę kart „%1$s”, mającą %2$d kart.</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Wyświetl grupę kart, zwiń uchwyt przeciągania</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Grupa kart „%1$s”, mająca %2$d kartę, kolor %3$s</item>
+    <item quantity="few">Grupa kart „%1$s”, mająca %2$d karty, kolor %3$s</item>
+    <item quantity="other">Grupa kart „%1$s”, mająca %2$d kart, kolor %3$s</item>
   </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">Czy usunąć grupę kart?</string>
