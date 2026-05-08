@@ -3085,6 +3085,8 @@
   <string name="edit_login_button_content_description">Editar inicio de sesión</string>
   <!-- Content description, used by tools like screenreaders, to press on the add new login button. -->
   <string name="saved_logins_add_new_login_button_content_description">Agregar nuevo inicio de sesión</string>
+  <!-- Content description, used by tools like screenreaders, to press on the clear search text button. -->
+  <string name="saved_logins_clear_search_text_button_content_description">Limpiar búsqueda</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">Abrir sitio en el navegador</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -3123,8 +3125,38 @@
     Title for the Email Masks in the settings menu
   -->
   <string name="preferences_email_masks">Máscaras de correo electrónico</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">Sugerir máscaras de correo</string>
+  <!-- Summary for the Suggest Email Masks toggle. -->
+  <string name="preferences_email_masks_suggest_summary">Oculta tu correo real para proteger tu bandeja de entrada del spam. Algunos sitios no admiten máscaras de correo.</string>
+  <!-- Text that links to additional information about the Email Masks -->
+  <string name="preferences_email_masks_suggest_learn_more">Saber más</string>
   <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
   <string name="preferences_email_masks_manage_title">Administrar máscaras de correo electrónico</string>
+  <!-- The message displayed when a user has used all of their free-tier email masks, so now the application will choose an existing one at random. -->
+  <string name="email_masks_max_free_tier_reached">Ya usaste tus 5 máscaras de correo gratuitas, así que elegimos una para que la vuelvas a usar.</string>
+  <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
+  <string name="email_masks_error_retrieving_masks">Las máscaras de correo no están disponibles en este momento. Inténtalo de nuevo en unos minutos.</string>
+  <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title_2">VPN integrada</string>
+  <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
+  <string name="preferences_ip_protection_beta_badge_label">BETA</string>
+  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
+  <string name="ip_protection_title">VPN</string>
+  <!-- Label for the browser VPN toggle on the settings screen -->
+  <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">VPN integrada de %s</string>
+  <!-- Body text for the browser VPN promo card -->
+  <string name="ip_protection_promo_body">Navega con protección extra ocultando tu ubicación, incluso en redes Wi-Fi públicas.</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">Saber más</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">Límite de datos mensual</string>
   <!--
     Data usage shown on the browser VPN settings screen.
     %1$.1f is the data remaining in GB (for example "8.3").
@@ -3204,6 +3236,8 @@
   <string name="preferences_addresses_save_and_autofill_addresses_summary_2">Incluye números de teléfono y direcciones de correo</string>
   <!-- Preference option for syncing addresses across devices. This is displayed when the user is not signed into sync -->
   <string name="preferences_addresses_sync_addresses_across_devices">Sincronizar direcciones entre dispositivos</string>
+  <!-- Preference option for syncing addresses across devices. This is displayed when the user is signed into sync -->
+  <string name="preferences_addresses_sync_addresses">Sincronizar direcciones</string>
   <!-- Content description navigating back from autofill settings screen. -->
   <string name="autofill_settings_navigate_back_button_content_description">Atrás</string>
   <!-- Title of the "Add card" screen -->
@@ -3282,12 +3316,42 @@
   <string name="addresses_email">Correo electrónico</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used for addresses in Iran, Mexico. -->
   <string name="addresses_neighborhood" tools:ignore="UnusedResources">Vecindario</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Village or Township field, specific to Malaysia is crucial for addresses in rural areas. -->
+  <string name="addresses_village_township" tools:ignore="UnusedResources">Localidad o Municipio</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Island field, used in places like the Cayman Islands and the Bahamas if an address is located on a specific island. -->
   <string name="addresses_island" tools:ignore="UnusedResources">Isla</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Townland field, specific to Ireland is a specific type of land division used in rural areas. -->
   <string name="addresses_townland" tools:ignore="UnusedResources">Townland</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used as secondary address information (below the country level, e.g. county) in Honk Kong, Sudan, Syria, Türkiye, and as sublocality (civil entity below a locality, e.g. district) in Korea. -->
   <string name="addresses_district" tools:ignore="UnusedResources">Distrito</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in the United Kingdom, Norway and Sweden -->
+  <string name="addresses_post_town" tools:ignore="UnusedResources">Población</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used as a tertiary address information (below the state level, e.g. Tasmania in Australia -->
+  <string name="addresses_suburb" tools:ignore="UnusedResources">Colonia</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is crucial for addressing in regions where county lines play a key role in postal services. -->
+  <string name="addresses_county" tools:ignore="UnusedResources">Municipio o Alcaldía</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Significant in places where parishes are used for local administration and addressing. Ensures users can specify parish details for better autofill accuracy. Used in Barbados and Jamaica. -->
+  <string name="addresses_parish" tools:ignore="UnusedResources">Localidad</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Essential for addresses in countries like Japan where prefectures are a major administrative division. -->
+  <string name="addresses_prefecture" tools:ignore="UnusedResources">Estado</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Allowing users to specify a particular area within a city or region. Used in Hong Kong -->
+  <string name="addresses_area" tools:ignore="UnusedResources">Área</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The header for the Do/Si of the address. Do/Si refers to provincial level divisions, pertinent to addresses in South Korea. -->
+  <string name="addresses_do_si" tools:ignore="UnusedResources">Delegación / Barrio</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in countries like Nicaragua and Colombia where departments are a key administrative division. -->
+  <string name="addresses_department" tools:ignore="UnusedResources">Departamento</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Essential for addresses in the United Arab Emirates. -->
+  <string name="addresses_emirate" tools:ignore="UnusedResources">Emirato</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Relevant for addresses in countries like Russia and Ukraine. -->
+  <string name="addresses_oblast" tools:ignore="UnusedResources">Estado</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The PIN (Postal Index Number) field, used in India is a code representing a specific area. -->
+  <string name="addresses_pin" tools:ignore="UnusedResources">Pin</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The postal code field is universally used in address forms to specify the area code for mail sorting. -->
+  <string name="addresses_postal_code" tools:ignore="UnusedResources">Código postal</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. the Eircode field, specific to Ireland is a unique postal code system that helps in precise location identification. -->
+  <string name="addresses_eircode" tools:ignore="UnusedResources">Código Postal (Eircode)</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in cases we want to only display the word "Country" over "Country or Region". -->
+  <string name="addresses_country_only" tools:ignore="UnusedResources">País</string>
   <!-- The text for the "Save" button for saving an address -->
   <string name="addresses_save_button">Guardar</string>
   <!-- The text for the "Cancel" button for cancelling adding, updating or deleting an address -->
@@ -3427,6 +3491,17 @@
   <string name="synced_tabs_expand_group">Ampliar grupo de pestañas sincronizadas</string>
   <!-- Content description for collapsing a group of synced tabs. -->
   <string name="synced_tabs_collapse_group">Reducir grupo de pestañas sincronizadas</string>
+  <!--
+    Top Sites
+
+    Title text displayed for the shortcuts home screen section.
+  -->
+  <string name="homepage_shortcuts_title">Accesos directos</string>
+  <!--
+    Context description text for the "Show all" button in the shortcuts home screen section
+    which navigates the user to a screen displaying all the shortcuts.
+  -->
+  <string name="homepage_shortcuts_show_all_content_description">Mostrar todos los accesos directos</string>
   <!-- Label for the "Add shortcut" button displayed as a tile. -->
   <string name="homepage_shortcuts_add_shortcut">Agregar acceso directo</string>
   <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
@@ -3469,6 +3544,11 @@
     Title text displayed in the tabs tray when a tab has been unused for 14 days.
   -->
   <string name="inactive_tabs_title">Pestañas inactivas</string>
+  <!--
+    Text displayed in the tabs tray, indicating the number of inactive tabs.
+    %d is the number of inactive tabs.
+  -->
+  <string name="inactive_tabs_num_items">Elementos: %d</string>
   <!-- Content description for closing all inactive tabs -->
   <string name="inactive_tabs_delete_all">Cerrar todas las pestañas inactivas</string>
   <!-- Content description for expanding the inactive tabs section. -->
@@ -3526,6 +3606,13 @@
   <string name="pocket_stories_header_2">Historias</string>
   <!-- Header text for the Stories screen. -->
   <string name="stories_screen_text_news">Noticias</string>
+  <!--
+    Context description text for the "Discover more" button in the stories home screen section
+    which navigates the user to a screen displaying more stories.
+  -->
+  <string name="stories_discover_more_content_description">Descubre más historias</string>
+  <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
+  <string name="stories_back_button_content_description">Regresar a la navegación</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">Patrocinado</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
