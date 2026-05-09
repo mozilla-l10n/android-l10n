@@ -405,6 +405,14 @@
   <string name="ai_controls_voice_search_description">音声は Google 音声認識サービスによってテキストに変換されます。</string>
   <!-- Title for the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_title">AI 支援をブロックしますか？</string>
+  <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_dialog_body">%1$s の今後の AI 支援や AI についてのポップアップが表示されなくなります。引き続き使用したい機能はブロックを解除してください。\n\nブロックすると、%1$s が提供する AI を利用する拡張機能にも影響します。</string>
+  <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
+  <string name="ai_controls_block_dialog_what_will_be_blocked">ブロックされる機能:</string>
+  <!-- Cancel button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_cancel">キャンセル</string>
+  <!-- Block button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_block">ブロック</string>
   <!--
     Locale Settings Fragment
 
@@ -1116,6 +1124,8 @@
   <string name="customize_wallpapers">壁紙</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">広告ショートカット</string>
+  <!-- Title for the customize home screen section that toggles the Homepage sports widget. -->
+  <string name="customize_toggle_world_cup" tools:ignore="UnusedResources">ワールドカップ</string>
   <!--
     Wallpapers
 
@@ -1432,9 +1442,13 @@
   <!-- Preference for using the dynamic toolbar -->
   <string name="preference_gestures_dynamic_toolbar">スクロール時にツールバーを隠す</string>
   <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs_2">ツールバーを縦にスワイプしてタブを開く</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
   <string name="preference_gestures_swipe_toolbar_show_tabs">ツールバーの上スワイプでタブ表示</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">アドレスバーの横スワイプでタブを切り替える</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">振って要約</string>
   <!--
     Library
 
@@ -1597,6 +1611,13 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">開いているプライベートタブ: %1$s 個。タップしてタブを切り替えます。</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="other">開いているタブグループ %1$d 個。タップしてタブを切り替えます。</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1695,6 +1716,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">グループを編集</string>
   <string name="create_tab_group_save_button">保存</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">新しいグループ、ドラッグハンドルを折りたたむ</string>
   <string name="edit_tab_group_bottom_sheet_close_content_description">タブグループの編集を閉じる</string>
   <!-- Default tab group name when creating a tab group -->
   <string name="create_tab_group_default_name" tools:ignore="UnusedResources" moz:removedIn="150">グループ</string>
@@ -1710,6 +1733,10 @@
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">追加先</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">タブグループに追加、ドラッグハンドルを折りたたむ</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">新しいタブグループに追加</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">[タブグループに追加] を閉じる</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">新しいタブグループ</string>
@@ -1720,6 +1747,30 @@
     -->
     <item quantity="other">%1$d 個のタブ</item>
   </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="other">%1$s タブグループに追加、タブ %2$d 個、色 %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="other">%1$s タブグループを %2$d タブと共有します。</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">グループを表示、ドラッグハンドルを折りたたむ</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="other">%1$s タブグループ、タブ %2$d 個、色 %3$s</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">タブグループを削除しますか？</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -1728,6 +1779,32 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">グループを削除</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">キャンセル</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">タブを閉じてグループを削除しますか？</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">この操作はグループを完全に削除します。</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">グループを削除</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">キャンセル</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">黄</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">オレンジ</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">赤</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">ピンク</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">紫</string>
+  <!-- Tab group color: Violet -->
+  <string name="tab_group_color_violet">バイオレット</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">青</string>
   <!-- Tab group color: Cyan -->
   <string name="tab_group_color_cyan">シアン</string>
   <!-- Tab group color: Green -->
