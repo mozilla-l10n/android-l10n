@@ -1772,6 +1772,33 @@
     <item quantity="one">%1$d langeto</item>
     <item quantity="other">%1$d langetoj</item>
   </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Aldoni al la grupo de langetoj %1$s, %2$d langeto, koloro %3$s</item>
+    <item quantity="other">Aldoni al la grupo de langetoj %1$s, %2$d langetoj, koloro %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Dividi grupon de langetoj %1$s kun %2$d langeto.</item>
+    <item quantity="other">Dividi grupon de langetoj %1$s kun %2$d langetoj.</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Vidi grupon de langetoj, prenilo por treni kaj kuntiri</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Grupo de langetoj %1$s kun %2$d langeto, koloro %3$s</item>
+    <item quantity="other">Grupo de langetoj %1$s kun %2$d langetoj, koloro %3$s</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">Ĉu forigi grupon de langetoj?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -1780,6 +1807,38 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">Forigi grupon</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Nuligi</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">Ĉu fermi langeton kaj forigi grupon?</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">Tio ĉi definitive forigas la grupon.</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Forigi grupon</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Nuligi</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Flava</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Oranĝa</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Ruĝa</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Roza</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Purpura</string>
+  <!-- Tab group color: Violet -->
+  <string name="tab_group_color_violet">Viola</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">Blua</string>
+  <!-- Tab group color: Cyan -->
+  <string name="tab_group_color_cyan">Cejanblua</string>
+  <!-- Tab group color: Green -->
+  <string name="tab_group_color_green">Verda</string>
+  <!-- Tab group color: Grey -->
+  <string name="tab_group_color_grey">Griza</string>
   <!--
     History
 
@@ -1915,6 +1974,8 @@
   <string name="download_rename_error_exists_error">Jam ekzistas en tiu ejo dosiero kun la nomo “%s”</string>
   <!-- Error message when renaming with an invalid file name. -->
   <string name="download_rename_error_invalid_name_error">Nomoj de dosieroj ne povas enhavi “/”</string>
+  <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
+  <string name="download_rename_error_case_only_error">La nomo tajpita de vi nur ŝanĝas majusklajn aŭ minusklajn literojn. Provu alian nomon.</string>
   <!-- Title for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_title">Ne eblas renomi dosieron</string>
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
@@ -2164,6 +2225,12 @@
   <string name="bookmark_sort_menu_a_to_z">Ordigi alfabete el A al Z</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">Ordigi alfabete el Z al A</string>
+  <!-- Label for button to import bookmarks from file. -->
+  <string name="bookmark_import_menu_button">Importi el dosiero</string>
+  <!-- Snackbar message shown when a bookmark import attempt fails. -->
+  <string name="bookmark_import_failure_snackbar">Ne eblis importi legosignojn. Provu denove.</string>
+  <!-- Default name for the folder created when importing bookmarks from a file. -->
+  <string name="bookmark_import_destination_default_name">Importitaj legosignoj</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -2222,8 +2289,12 @@
   <string name="bookmark_select_folder_close_folder_content_description">Fermi dosierujon: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Fermi legosignojn</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">Importi el dosiero</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Ankoraŭ ne estas legosignoj</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">Tenu viajn plej ŝatatajn legosignojn kune</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">Legosignoj en dosierujo: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -2686,6 +2757,8 @@
   </plurals>
   <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
   <string name="trackers_blocked_empty">Vi estas protektata</string>
+  <!-- Text shown below the trackers blocked card with typing animation -->
+  <string name="help_catch_trackers">Helpi kapti spurilojn</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Norma</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -3082,6 +3155,16 @@
   <string name="email_masks_max_free_tier_reached">Vi jam uzis viajn 5 senpagajn retpoŝtajn maskojn, do ni elektis unu por ke vi reuzu ĝin.</string>
   <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
   <string name="email_masks_error_retrieving_masks">Retpoŝtaj maskoj ne haveblas en tiu ĉi momento. Provu denove post kelkaj minutoj.</string>
+  <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title_2">Integrita VPN</string>
+  <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
+  <string name="preferences_ip_protection_beta_badge_label">BETA</string>
+  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
+  <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
   <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
@@ -3119,12 +3202,28 @@
   <string name="ip_protection_menu_paused">Paŭzigita</string>
   <!-- Badge label shown in the menu item when the browser VPN has an error -->
   <string name="ip_protection_menu_error">Eraro</string>
+  <!-- Badge label shown in the menu item when the user is eligible to use the browser VPN but should authenticate or authorize it first. -->
+  <string name="ip_protection_menu_auth_required">Provi</string>
   <!-- Content description for the chevron button that opens the browser VPN settings screen -->
   <string name="ip_protection_navigate_settings">Malfermi agordojn de VPN</string>
+  <!--
+    Subtitle shown below the VPN label in menus when the monthly data allowance is exhausted.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_menu_limit_reached">Limo de %1$d GB atingita</string>
+  <!--
+    Error message shown on the browser VPN settings screen when the monthly data allowance is exhausted.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_description">Vi elĉerpis la %1$d GB de via datumoj en VPN. Venontmonate ili disponeblos denove.</string>
   <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
   <string name="ip_protection_toolbar_pill_label">VPN ŝaltita</string>
   <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
   <string name="ip_protection_toolbar_pill_description">VPN estas aktiva.</string>
+  <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
+  <string name="ip_protection_get_started">Unuaj paŝoj</string>
+  <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_onboarding_card_headline">Provu la integritan VPN de %s</string>
   <!--
     Autofill
 
