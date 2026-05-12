@@ -1614,6 +1614,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Abas privativas abertas: %1$s. Toque para mudar de aba.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d grupo de abas aberto. Toque para alternar abas.</item>
+    <item quantity="other">%1$d grupos de abas abertos. Toque para alternar abas.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1726,6 +1734,8 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">Nome</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Adicionar a</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Adicionar a novo grupo de abas</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">Fechar adicionar a grupo de abas</string>
   <!-- Label for adding to a new tab group. -->
@@ -1738,6 +1748,15 @@
     <item quantity="one">%1$d aba</item>
     <item quantity="other">%1$d abas</item>
   </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Compartilhar %1$s grupo de abas com %2$d aba.</item>
+    <item quantity="other">Compartilhar %1$s grupo de abas com %2$d abas.</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">Excluir grupo de abas?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -1746,6 +1765,38 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">Excluir grupo</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Cancelar</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">Fechar aba e excluir grupo?</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">Exclui o grupo permanentemente.</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Excluir grupo</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Cancelar</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Amarelo</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Laranja</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Vermelho</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Rosa</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Roxo</string>
+  <!-- Tab group color: Violet -->
+  <string name="tab_group_color_violet">Violeta</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">Azul</string>
+  <!-- Tab group color: Cyan -->
+  <string name="tab_group_color_cyan">Ciano</string>
+  <!-- Tab group color: Green -->
+  <string name="tab_group_color_green">Verde</string>
+  <!-- Tab group color: Grey -->
+  <string name="tab_group_color_grey">Cinza</string>
   <!--
     History
 
@@ -2130,6 +2181,10 @@
   <string name="bookmark_sort_menu_a_to_z">Ordenar de A a Z</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">Ordenar de Z a A</string>
+  <!-- Label for button to import bookmarks from file. -->
+  <string name="bookmark_import_menu_button">Importar de arquivo</string>
+  <!-- Default name for the folder created when importing bookmarks from a file. -->
+  <string name="bookmark_import_destination_default_name">Favoritos importados</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -2188,8 +2243,12 @@
   <string name="bookmark_select_folder_close_folder_content_description">Fechar pasta: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Fechar favoritos</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">Importar de arquivo</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Nenhum favorito ainda</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">Mantenha todos os seus favoritos juntos</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">Favoritos da pasta: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -4376,18 +4435,36 @@
   <string name="sports_widget_champions_title" tools:ignore="UnusedResources">Campeões da Copa do Mundo de 2026</string>
   <!-- Round name shown on the sports widget for the Round of 32 stage in the soccer tournament. -->
   <string name="sports_widget_round_of_32">Rodada de 32</string>
+  <!-- Round name shown on the sports widget for the Round of 16 stage in the soccer tournament. -->
+  <string name="sports_widget_round_of_16">Rodada de 16</string>
+  <!-- Round name shown on the sports widget for the quarter-finals stage in the soccer tournament. -->
+  <string name="sports_widget_quarter_final">Quartas de final</string>
+  <!-- Round name shown on the sports widget for the semi-finals stage in the soccer tournament. -->
+  <string name="sports_widget_semi_final">Semifinais</string>
+  <!-- Round name shown on the sports widget for the final stage in the soccer tournament. -->
+  <string name="sports_widget_final">Final</string>
+  <!-- Round name shown on the sports widget for the bronze final stage in the soccer tournament. -->
+  <string name="sports_widget_bronze_final">Final para terceiro lugar</string>
   <!-- Sports widget section header for a list of upcoming soccer matches that have not yet started. -->
   <string name="sports_widget_upcoming" tools:ignore="UnusedResources">Seguintes</string>
   <!-- Sports widget match status suffix appended to match scores (e.g., "3 - 2 (Full time)") to indicate the match has been completed. -->
   <string name="sports_widget_match_full_time_suffix">(tempo regulamentar)</string>
   <!-- Sports widget match status to indicate the match has been completed. -->
   <string name="sports_widget_match_full_time_2" tools:ignore="UnusedResources">Tempo regulamentar</string>
+  <!-- Sports widget button label to follow another team after the current team is eliminated. -->
+  <string name="sports_widget_follow_another_team">Seguir outro time</string>
   <!-- Sports widget card title shown before the soccer tournament begins on top of a timer that is counting down. -->
   <string name="sports_widget_countdown_to_world_cup" tools:ignore="UnusedResources">Contagem regressiva para a Copa do Mundo</string>
   <!-- Sports widget button label that navigates the user to the full soccer tournament match schedule. -->
   <string name="sports_widget_view_schedule">Ver calendário</string>
   <!-- Sports widget button label that dismisses the step of choosing a team to follow. -->
   <string name="sports_widget_skip">Pular</string>
+  <!-- Sports widget match status label shown during halftime of a match. -->
+  <string name="sports_widget_halftime" tools:ignore="UnusedResources">Intervalo</string>
+  <!-- Sports widget match status label shown during extra time of a match. -->
+  <string name="sports_widget_extra_time" tools:ignore="UnusedResources">Prorrogação</string>
+  <!-- Sports widget match status label shown during penalties of a match. -->
+  <string name="sports_widget_penalties" tools:ignore="UnusedResources">Pênaltis</string>
   <!--
     Sports widget countdown label for days. D is short for Day. The layout only allows for 1–2 characters:
     if there is an equivalent single character for your language, use that (e.g. T for German).
@@ -4417,6 +4494,8 @@
   <string name="sports_widget_countdown_remaining_content_description">Tempo restante. Dias: %1$d. Horas: %2$d. Minutos: %3$d.</string>
   <!-- Content description (for accessibility, not displayed)  for the action that navigates to the World Cup website. -->
   <string name="sports_widget_go_to_world_cup_site_content_description" tools:ignore="UnusedResources">Ir para o site da Copa do Mundo</string>
+  <!-- Title shown on the sports widget immediately after the user has followed a team. %s is the selected team (e.g., "USA"). -->
+  <string name="sports_widget_team_followed_title" tools:ignore="UnusedResources">Seguindo: \n%s</string>
   <!-- Sports widget match status label shown during first half of a match. -->
   <string name="sports_widget_first_half" tools:ignore="UnusedResources">Primeiro tempo</string>
   <!-- Sports widget match status label shown during second half of a match. -->
