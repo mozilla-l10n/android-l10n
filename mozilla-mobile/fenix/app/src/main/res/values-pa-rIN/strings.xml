@@ -1697,6 +1697,8 @@
   <string name="pwa_site_controls_title_private">%1$s (ਪ੍ਰਾਈਵੇਟ ਮੋਡ)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">ਟੈਬ ਖੋਜ ਨੂੰ ਖੋਲ੍ਹੋ</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">ਗਰੁੱਪ ਬਣਾਉਣ ਥਈ ਟੈਬ ਨੂੰ ਚੁਣੋ। ਉਹਨਾਂ ਨੂੰ ਇੱਥੇ ਸੰਭਾਲਿਆ ਜਾਂਦਾ ਹੈ, ਜਦੋਂ ਤੁਸੀਂ ਚਾਹੋ, ਤਿਆਰ ਲਵੋ।</string>
   <!--
     Tab Group
 
@@ -1720,6 +1722,8 @@
   <string name="tab_group_name_label" tools:ignore="UnusedResources" moz:removedIn="150">ਨਾਂ</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">ਇਸ ਵਿੱਚ ਜੋੜੋ</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">ਨਵੇਂ ਟੈਬ ਗਰੁੱਪ ਵਿੱਚ ਜੋੜੋ</string>
   <!-- Content Description for closing the "Add to Tab Group" panel. -->
   <string name="add_to_tab_group_bottom_sheet_close_content_description">ਟੈਗ ਗਰੁੱਪ ਵਿੱਚ ਜੋੜੋ ਨੂੰ ਬੰਦ ਕਰੋ</string>
   <!-- Label for adding to a new tab group. -->
@@ -1731,6 +1735,14 @@
     -->
     <item quantity="one">%1$d ਟੈਬ</item>
     <item quantity="other">%1$d ਟੈਬ</item>
+  </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">%1$s ਟੈਬ ਗਰੁੱਪ ਵਿੱਚ ਜੋੜੋ, %2$d ਟੈਬ, ਰੰਗ %3$s</item>
+    <item quantity="other">%1$s ਟੈਬ ਗਰੁੱਪ ਵਿੱਚ ਜੋੜੋ, %2$d ਟੈਬਾਂ, ਰੰਗ %3$s</item>
   </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">ਟੈਬ ਗਰੁੱਪ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</string>
@@ -1907,6 +1919,8 @@
   <string name="download_rename_error_exists_error">ਇਸ ਟਿਕਾਣੇ ਵਿੱਚ “%s” ਨਾਂ ਦੀ ਫਾਇਲ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ</string>
   <!-- Error message when renaming with an invalid file name. -->
   <string name="download_rename_error_invalid_name_error">ਫਾਇਲ ਨਾਂ ਵਿੱਚ “/” ਨਹੀਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ</string>
+  <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
+  <string name="download_rename_error_case_only_error">ਤੁਹਾਡੇ ਵਲੋਂ ਦਿੱਤੇ ਗਏ ਨਾਂ ਵਿੱਚ ਸਿਰਫ਼ ਵੱਡੇ ਅਤੇ ਛੋਟੇ ਅੱਖਰ ਹੀ ਹਨ। ਵੱਖਰੇ ਫ਼ਾਇਲ ਨਾਂ ਕੋਸ਼ਿਸ਼ ਕਰਕੇ ਵੇਖੋ।</string>
   <!-- Title for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_title">ਫ਼ਾਇਲ ਦਾ ਨਾਂ ਨਹੀਂ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ</string>
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
@@ -3133,6 +3147,8 @@
   <string name="ip_protection_menu_paused">ਵਿਰਾਮ ਹੈ</string>
   <!-- Badge label shown in the menu item when the browser VPN has an error -->
   <string name="ip_protection_menu_error">ਗਲਤੀ</string>
+  <!-- Badge label shown in the menu item when the user is eligible to use the browser VPN but should authenticate or authorize it first. -->
+  <string name="ip_protection_menu_auth_required">ਅਜ਼ਮਾਓ</string>
   <!-- Content description for the chevron button that opens the browser VPN settings screen -->
   <string name="ip_protection_navigate_settings">VPN ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹੋ</string>
   <!--
@@ -3153,10 +3169,18 @@
   <string name="ip_protection_get_started">ਸ਼ੁਰੂ ਕਰੀਏ</string>
   <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_onboarding_card_headline">%s ਦੇ ਵਿੱਚ ਮੌਜੂਦ VPN ਨੂੰ ਅਜ਼ਮਾਓ</string>
+  <!--
+    The body of the VPN onboarding card.
+    %1$s is a link using ip_protection_onboarding_body_link (“Browse with extra protection”) as text. It links to a support article about VPN on Firefox.
+    %2$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_onboarding_body">ਆਪਣੇ ਟਿਕਾਣੇ ਨੂੰ ਲੁਕਾ ਕੇ %1$s, ਪਬਲਿਕ Wi-Fi ਉੱਤੇ ਵੀ। ਹਰ ਮਹੀਨੇ %2$d GB ਮੁਫ਼ਤ ਲਵੋ।</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">ਵਧੀਕ ਸੁਰੱਖਿਆ ਨਾਲ ਬਰਾਊਜ਼ ਕਰੋ</string>
   <!-- Label for the dismiss button on the onboarding bottom sheet. -->
   <string name="ip_protection_onboarding_not_now_button">ਹੁਣੇ ਨਹੀਂ</string>
+  <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
+  <string name="ip_protection_connection_error_snackbar">VPN ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਕੁਝ ਕੁ ਮਿੰਟਾਂ \'ਚ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰਿਓ।</string>
   <!--
     Snackbar (in-app pop-up notification) text to signal the browser VPN has reached the monthly data limit.
     %1$d is the total monthly allowance in GB (for example "50").
@@ -4587,6 +4611,8 @@
   <string name="sports_widget_error_connection_offline_title" tools:ignore="UnusedResources">ਤੁਸੀਂ ਆਫਲਾਈਨ ਜਾਪਦੇ ਹੋ।</string>
   <!-- Sports widget error card description shown when the user is offline. -->
   <string name="sports_widget_error_connection_offline_description" tools:ignore="UnusedResources">ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰਕੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+  <!-- Sports widget general group stage label in the soccer tournament. -->
+  <string name="sports_widget_group_stage" tools:ignore="UnusedResources">ਗਰੁੱਪ ਸਟੇਜ</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
