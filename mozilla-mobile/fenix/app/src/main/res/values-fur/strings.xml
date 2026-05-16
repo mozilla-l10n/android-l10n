@@ -1850,6 +1850,8 @@
   <string name="download_delete_dialog_cancel">Anule</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
   <string name="download_delete_dialog_confirm">Conferme</string>
+  <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
+  <string name="download_rename_error_case_only_error">Il non che tu âs inserît al modifiche nole lis maiusculis o lis minusculis. Sielç un altri non pal file.</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">In cors</string>
   <!--
@@ -1921,6 +1923,16 @@
   <string name="download_content_type_filter_document">Documents</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Altri</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">Discjariâ il file?\n(%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">Discjariâ il file?</string>
   <!--
     WebCompat Reporter
 
@@ -2042,6 +2054,8 @@
   <string name="bookmark_error_edit_bookmark">Impussibil modificâ il segnelibri</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">MODIFICHE</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">Selezione</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">Sposte</string>
   <!-- Bookmark overflow menu edit button -->
@@ -2072,6 +2086,12 @@
   <string name="bookmark_sort_menu_a_to_z">Ordene de A ae Z</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">Ordene de Z ae A</string>
+  <!-- Label for button to import bookmarks from file. -->
+  <string name="bookmark_import_menu_button">Impuarte di file</string>
+  <!-- Snackbar message shown when a bookmark import attempt fails. -->
+  <string name="bookmark_import_failure_snackbar">Impussibil impuartâ i segnelibris. Torne prove.</string>
+  <!-- Default name for the folder created when importing bookmarks from a file. -->
+  <string name="bookmark_import_destination_default_name">Segnelibris impuartâts</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -2118,10 +2138,18 @@
   <string name="select_bookmark_search_button_content_description">Cîr tes cartelis</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">Menù par %s</string>
+  <!-- Content description for the chevron that will open a folder on the select folder screen and display its children. %s is the title of the folder that will be opened -->
+  <string name="bookmark_select_folder_expand_folder_content_description">Slargje cartele: %s</string>
+  <!-- Content description for the chevron that will close a folder on the select folder screen so that its children are no longer visible. %s is the title of the folder that will be closed -->
+  <string name="bookmark_select_folder_close_folder_content_description">Siere cartele: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Siere segnelibris</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">Impuarte di file</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Ancjemò nissun segnelibri</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">Met adun ducj i tiei segnelibris preferîts</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">Segnelibris te cartele: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -2309,6 +2337,24 @@
   <string name="menu_print">Stampe</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Invie a dispositîf</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">Siere e invie a dispositîf</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">Codiç QR</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">Codiç QR</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">Siere</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Condivît colegament tai contors</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Par condividi chest colegament cun cui che ti sta dongje, domandii di scansionâ il codiç QR chi sot.</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Discjame</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">Codiç QR salvât tai discjariâts</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Impussibil salvâ il codiç QR</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Dutis lis azions</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -2533,6 +2579,19 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s ti protêç des tantis e plui comunis spiis che a cirin di stâti daûr a ce che tu fasis in rêt.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Plui informazions</string>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d spie blocade</item>
+    <item quantity="other">%d spiis blocadis</item>
+  </plurals>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Protezion ative</string>
+  <!-- Text shown below the trackers blocked card with typing animation -->
+  <string name="help_catch_trackers">Jude a caturâ lis spiis</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (predefinide)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2911,6 +2970,50 @@
   <string name="saved_logins_sort_strategy_last_used">Ultime doprade</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Menù par ordenâ lis passwords</string>
+  <!--
+    Email Masks
+
+    Title for the Email Masks in the settings menu
+  -->
+  <string name="preferences_email_masks">Mascaris di e-mail</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">Sugjerìs mascaris di e-mail</string>
+  <!-- Summary for the Suggest Email Masks toggle. -->
+  <string name="preferences_email_masks_suggest_summary">Plate la tô vere direzion e-mail par protezi la tô casele di pueste dal spam. Cualchi sît nol supuarte lis mascaris di e-mail.</string>
+  <!-- Text that links to additional information about the Email Masks -->
+  <string name="preferences_email_masks_suggest_learn_more">Plui informazions</string>
+  <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
+  <string name="preferences_email_masks_manage_title">Gjestìs mascaris di e-mail</string>
+  <!-- The message displayed when a user has used all of their free-tier email masks, so now the application will choose an existing one at random. -->
+  <string name="email_masks_max_free_tier_reached">Tu âs za doprât lis tôs 5 mascaris di e-mail gratuitis, duncje o\'nt vint sielt une di tornâ a doprâ.</string>
+  <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
+  <string name="email_masks_error_retrieving_masks">In chest moment lis mascaris di e-mail no son disponibilis. Torne prove ca di cualchi minût.</string>
+  <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title_2">VPN integrade</string>
+  <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
+  <string name="preferences_ip_protection_beta_badge_label">BETA</string>
+  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
+  <string name="ip_protection_title">VPN</string>
+  <!-- Label for the browser VPN toggle on the settings screen -->
+  <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">La VPN integrade di %s</string>
+  <!-- Body text for the browser VPN promo card -->
+  <string name="ip_protection_promo_body">Navighe cuntune protezion in plui platant la tô posizion, ancje cuant che tu dopris il Wi-Fi public.</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">Plui informazions</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">Limit dâts mensîl</string>
+  <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3").
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value">A restin %1$.1f GB di %2$.1f GB</string>
   <!--
     Autofill
 
