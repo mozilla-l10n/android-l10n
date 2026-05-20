@@ -1705,6 +1705,10 @@
   <string name="pwa_site_controls_title_private">%1$s (modalitât privade)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Vierç ricercje tes schedis</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Prove i grups di schedis: mancul scoriments, plui produtivitât</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Selezione lis schedis di meti adun. A vignaran salvadis achì e a saran prontis cuant che ti coventaran.</string>
   <!--
     Tab Group
 
@@ -1714,6 +1718,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Modifiche grup</string>
   <string name="create_tab_group_save_button">Salve</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Gnûf grup, mantie di strissinament par platâ o viodi</string>
   <!--
     Default tab group name when creating a tab group
     %d is the number of existing tab groups + 1.
@@ -1723,6 +1729,10 @@
   <string name="create_tab_group_name_label">Non</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Zonte a</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Zonte un gnûf grup di schedis, mantie di strissinament par platâ o viodi</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Zonte un gnûf grup di schedis</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Gnûf grup di schedis</string>
   <plurals name="tab_group_tabs_count_subtitle">
@@ -1733,12 +1743,41 @@
     <item quantity="one">%1$d schede</item>
     <item quantity="other">%1$d schedis</item>
   </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Zonte al grup di schedis %1$s, %2$d schede, colôr %3$s</item>
+    <item quantity="other">Zonte al grup di schedis %1$s, %2$d schedis, colôr %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Condivît grup di schedis %1$s cun %2$d schede.</item>
+    <item quantity="other">Condivît grup di schedis %1$s cun %2$d schedis.</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Visualize grup di schedis, mantie di strissinament par platâ o viodi</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Grup di schedis %1$s cun %2$d schede, colôr %3$s</item>
+    <item quantity="other">Grup di schedis %1$s cun %2$d schedis, colôr %3$s</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">Eliminâ grup di schedis?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_body">Cheste operazion e eliminarà par simpri il grup.</string>
   <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_confirm">Elimine grup</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">Anule</string>
   <!--
     History
 
@@ -1821,6 +1860,8 @@
   <string name="download_delete_item">Elimine</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">Torne indaûr</string>
+  <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
+  <string name="download_navigate_settings_description">Va tes impostazions pai discjariâts</string>
   <!-- Content description for the toolbar back button while searching the downloads -->
   <string name="download_close_search_description">Torne indaûr e siere la ricercje</string>
   <!--
@@ -1838,6 +1879,8 @@
   <string name="download_share_url">Condivît URL</string>
   <!-- Text for the button to share the download file -->
   <string name="download_share_file">Condivît file</string>
+  <!-- Text for the button to rename the download file -->
+  <string name="download_rename_file">Cambie non al file</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">Pardabon vuelistu eliminâ i elements selezionâts?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
@@ -1850,8 +1893,23 @@
   <string name="download_delete_dialog_cancel">Anule</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
   <string name="download_delete_dialog_confirm">Conferme</string>
+  <!-- Title for the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_title">Cambie non al file</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">Non</string>
+  <string name="download_rename_dialog_confirm_button">Salve</string>
+  <string name="download_rename_dialog_cancel_button">Anule</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">Un file che si clame “%s” al esist bielzà in chest percors</string>
   <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
   <string name="download_rename_error_case_only_error">Il non che tu âs inserît al modifiche nole lis maiusculis o lis minusculis. Sielç un altri non pal file.</string>
+  <!-- Title for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_title">Impussibil cambiâ il non al file</string>
+  <!-- Description message for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_description">Nol è pussibil cambiâ non a chest file par vie di limitazions di sisteme o tal sisteme di archiviazion.</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">In cors</string>
   <!--
