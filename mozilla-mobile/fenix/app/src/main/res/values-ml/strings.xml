@@ -1529,6 +1529,10 @@
   <string name="delete_tab_group_confirmation_dialog_confirm">കൂട്ടം മായ്ക്കുക</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">റദ്ദാക്കുക</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">ടാബടച്ചു കൂട്ടം മായ്ക്കണോ?</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">ഈ നടപടി ടാബുകൂട്ടത്തെ എന്നെന്നേക്കുമായി മായ്ക്കും.</string>
   <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
   <string name="close_tab_and_delete_group_confirmation_dialog_confirm">കൂട്ടം മായ്ക്കുക</string>
   <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
@@ -1673,6 +1677,8 @@
   <string name="download_delete_multi_select_dialog_cancel">റദ്ദാക്കുക</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
   <string name="download_delete_dialog_from_device">ഉപകരണത്തിൽ നിന്നു മായ്ക്കുക</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">ഇറക്കിവയ്ക്കൽ നാൾവഴിയിൽ നിന്നു മാത്രം മായ്ക്കുക</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
   <string name="download_delete_dialog_cancel">റദ്ദാക്കുക</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
@@ -1771,6 +1777,11 @@
   <string name="download_content_type_filter_document">രേഖകളും</string>
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">മറ്റുള്ളവ</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">ഫയൽ ഇറക്കിവയ്ക്കണോ?\n(%s)</string>
   <!--
     Title for the alert dialog to rename a file and/or change its download location
     when the file size is not available before downloading it.
@@ -2388,6 +2399,26 @@
   <string name="preference_enhanced_tracking_protection">മെച്ചപ്പെട്ട പിന്തുടർച്ച പരിരക്ഷണം</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">കൂടുതല്‍ അറിയുക</string>
+  <plurals name="trackers_blocked_count_2">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d പിന്തുടൎച്ചയന്ത്രം തടഞ്ഞു</item>
+    <item quantity="other">%d പിന്തുടൎച്ചയന്ത്രങ്ങൾ തടഞ്ഞു</item>
+  </plurals>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d പിന്തുടൎച്ചയന്ത്രങ്ങൾ തടഞ്ഞു</item>
+    <item quantity="other">%d പിന്തുടൎച്ചയന്ത്രങ്ങൾ തടഞ്ഞു</item>
+  </plurals>
+  <!-- Text shown below the trackers blocked card with typing animation -->
+  <string name="help_catch_trackers">പിന്തുടൎച്ചയന്ത്രങ്ങളെ പിടികൂടാൻ ഞങ്ങളെ തുണയ്ക്കുക</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">സ്റ്റാൻഡേർഡ് (തനതായിട്ടുള്ളത്)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2504,6 +2535,8 @@
   <string name="etp_suspected_fingerprinters_title">സംശയിക്കപ്പെട്ട വിരലടയാളപ്പിന്തുടൎച്ചയന്ത്രങ്ങൾ</string>
   <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_known_fingerprinters_title">അറിയപ്പെട്ട വിരലടയാളപ്പിന്തുടൎച്ചയന്ത്രം</string>
+  <!-- Label for the fingerprinters category shown in the tracking protections dashboard breakdown -->
+  <string name="tracking_dashboard_fingerprinters_category_name">വിരലടയാളപ്പിന്തുടൎച്ചയന്ത്രങ്ങൾ</string>
   <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
   <string name="preference_etp_smartblock_learn_more">കൂടുതലറിയുക</string>
   <!--
@@ -2727,6 +2760,8 @@
   <string name="saved_logins_sort_strategy_last_used">അവസാനം ഉപയോഗിച്ചത്</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">ഒളിവാക്കു് കുറിപ്പടി അടുക്കുക</string>
+  <!-- Label for button to import passwords from file. -->
+  <string name="passwords_import_menu_button">ഫയലിൽ നിന്നു് ഇറക്കുമതിക്കുക</string>
   <!--
     Email Masks
 
