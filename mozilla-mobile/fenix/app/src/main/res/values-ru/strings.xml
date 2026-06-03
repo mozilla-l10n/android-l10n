@@ -2095,6 +2095,8 @@
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text">Что произошло? Что должно было произойти?</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
+  <string name="webcompat_reporter_etp_checkbox_text_2">Отправить список элементов, заблокированных защитой от отслеживания</string>
+  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text">URL отправки, заблокированные защитой от отслеживания</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
   <string name="webcompat_reporter_etp_checkbox_description">Улучшенная защита от отслеживания может блокировать трекеры и скрипты, которые необходимы для корректной работы некоторых веб-сайтов.</string>
@@ -3520,6 +3522,10 @@
   <string name="homepage_shortcuts_show_all_content_description">Показать все горячие клавиши</string>
   <!-- Label for the "Add shortcut" button displayed as a tile. -->
   <string name="homepage_shortcuts_add_shortcut">Добавить ярлык</string>
+  <!-- Title for the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_to_homepage">Добавить на домашнюю страницу</string>
+  <!-- Label for the "Add website" button in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_website">Добавить веб-сайт</string>
   <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
   <string name="homepage_shortcuts_add_website_title">Введите URL веб-сайта</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
@@ -3921,6 +3927,20 @@
     %s is the name of the app (for example "Firefox").
   -->
   <string name="protection_panel_banner_protected_title">%s на защите</string>
+  <plurals name="protection_panel_banner_protected_blocked_trackers_description">
+    <!--
+      Description text for the protection panel banner when privacy dashboard is enabled.
+      %1$d is the number of trackers blocked.
+    -->
+    <item quantity="one">На этом сайте заблокирован %1$d трекер.</item>
+    <item quantity="few">На этом сайте заблокировано %1$d трекера.</item>
+    <item quantity="other">На этом сайте заблокировано %1$d трекеров.</item>
+  </plurals>
+  <!--
+    Description text for the protection panel banner when privacy dashboard is enabled.
+    and there are no trackers blocked.
+  -->
+  <string name="protection_panel_banner_protected_no_blocked_trackers_description">Вы защищены.</string>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
   <string name="protection_panel_banner_protected_description">Вы защищены. Если мы что-то заметим, мы сообщим вам.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
