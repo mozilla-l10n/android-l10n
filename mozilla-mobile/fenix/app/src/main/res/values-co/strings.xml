@@ -2090,7 +2090,11 @@
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
   <string name="webcompat_reporter_success_snackbar_text_2">Raportu mandatu</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text_2">Cosa hè accadutu\u00a0? À cosa vi aspettavate\u00a0? Ci vole à indicà tutte e tappe per ripruduce u prublema.</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text">Cosa hè accadutu\u00a0? Cosa seria duvutu à accade\u00a0?</string>
+  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
+  <string name="webcompat_reporter_etp_checkbox_text_2">Mandate a lista di l’elementi bluccati da a prutezzione contr’à u spiunagiu</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text">Mandà l’indirizzi web bluccate da a prutezzione contr’à u spiunagiu</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
@@ -2705,6 +2709,15 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s vi prutege da a maiò parte di i perseguitatori i più cunnisciuti chì seguitanu ciò chì vo fate in linea.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Sapene di più</string>
+  <plurals name="trackers_blocked_count_2">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d perseguitatore bluccatu</item>
+    <item quantity="other">%d perseguitatori bluccati</item>
+  </plurals>
   <plurals name="trackers_blocked_count">
     <!--
       Trackers blocked card on homepage
@@ -2842,6 +2855,8 @@
   <string name="etp_suspected_fingerprinters_description">Attivà a prutezzione per bluccà i detettori d’impronta numerica suspettati.</string>
   <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_known_fingerprinters_title">Detettori d’impronta numerica cunnisciuti</string>
+  <!-- Label for the fingerprinters category shown in the tracking protections dashboard breakdown -->
+  <string name="tracking_dashboard_fingerprinters_category_name">Detettori d’impronta numerica</string>
   <!--
     Description of the SmartBlock Enhanced Tracking Protection feature. The * symbol is intentionally hardcoded here,
     as we use it on the UI to indicate which trackers have been partially unblocked.
@@ -3096,6 +3111,8 @@
   <string name="saved_logins_sort_strategy_last_used">Ultimu impiegu</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Listinu di classificazione di e parolle d’intesa</string>
+  <!-- Label for button to import passwords from file. -->
+  <string name="passwords_import_menu_button">Impurtà da un schedariu</string>
   <!--
     Email Masks
 
@@ -3126,8 +3143,12 @@
   <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Content description for the browser VPN settings screen top bar back button -->
+  <string name="ip_protection_navigate_back_button_content_description">Navigazione in daretu</string>
   <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_promo_headline">VPN integrata à %s</string>
+  <!-- Body text for the browser VPN promo card . %s is a learn more link using ip_protection_learn_more as text. -->
+  <string name="ip_protection_promo_body_2">Navigate cù una prutezzione addiziunale piattendu a vostra pusizione, ancu via un Wi-Fi publicu. %s</string>
   <!-- Body text for the browser VPN promo card -->
   <string name="ip_protection_promo_body">Navigate cù una prutezzione addiziunale piattendu a vostra pusizione, ancu via un Wi-Fi publicu.</string>
   <!-- Link text that opens additional information about the browser VPN -->
@@ -3181,6 +3202,8 @@
   <string name="ip_protection_toolbar_pill_description">A VPN hè attivata.</string>
   <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
   <string name="ip_protection_get_started">Principià</string>
+  <!-- Label for the "connecting" state of the button that starts the browser VPN authentication or authorization flow on the settings screen -->
+  <string name="ip_protection_connecting">Cunnessione…</string>
   <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_onboarding_card_headline">Pruvate a VPN integrata à %s</string>
   <!--
@@ -3500,6 +3523,10 @@
   <string name="homepage_shortcuts_show_all_content_description">Affissà tutti l’accurtatoghji</string>
   <!-- Label for the "Add shortcut" button displayed as a tile. -->
   <string name="homepage_shortcuts_add_shortcut">Aghjunghje un accurtatoghju</string>
+  <!-- Title for the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_to_homepage">Aghjunghje à a pagina d’accolta</string>
+  <!-- Label for the "Add website" button in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_website">Aghjunghje un situ web</string>
   <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
   <string name="homepage_shortcuts_add_website_title">Stampittate l’indirizzu d’un situ web</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
@@ -3901,6 +3928,19 @@
     %s is the name of the app (for example "Firefox").
   -->
   <string name="protection_panel_banner_protected_title">%s vi prutege</string>
+  <plurals name="protection_panel_banner_protected_blocked_trackers_description">
+    <!--
+      Description text for the protection panel banner when privacy dashboard is enabled.
+      %1$d is the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d perseguitatore bluccatu nant’à stu situ.</item>
+    <item quantity="other">%1$d perseguitatori bluccati nant’à stu situ.</item>
+  </plurals>
+  <!--
+    Description text for the protection panel banner when privacy dashboard is enabled.
+    and there are no trackers blocked.
+  -->
+  <string name="protection_panel_banner_protected_no_blocked_trackers_description">Site prutetti.</string>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
   <string name="protection_panel_banner_protected_description">Site prutetti. S’è no fighjemu qualcosa, a vi feremu sapè.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
