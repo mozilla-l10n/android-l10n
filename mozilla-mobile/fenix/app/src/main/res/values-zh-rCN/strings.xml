@@ -715,6 +715,24 @@
   <string name="nova_onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">与 Mozilla 的营销合作伙伴分享您发现 Firefox 的途径及使用方式。我们绝不会出售此数据。%1$s</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
   <string name="nova_onboarding_marketing_body_2" tools:ignore="BrandUsage">与 Mozilla 的营销合作伙伴分享您发现 Firefox 的途径及使用方式。我们绝不会出售此数据。</string>
+  <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
+  <string name="nova_onboarding_marketing_body_3" tools:ignore="BrandUsage">您可以通过允许 Mozilla 将您是 Firefox 用户这一信息告知我们推广 Firefox 的渠道，来帮助我们触达更多人。</string>
+  <!--
+    Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
+  -->
+  <string name="nova_onboarding_marketing_body_4" tools:ignore="BrandUsage">您可以通过允许 Mozilla 将您正在使用 Firefox 这一信息告知您来源的平台，来帮助我们触达更多人。</string>
+  <!--
+    Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
+  -->
+  <string name="nova_onboarding_marketing_body_5" tools:ignore="BrandUsage,UnusedResources">允许 Mozilla 将您正在使用 Firefox 这一信息告知您来源的平台，来帮助我们触达更多人。</string>
+  <!--
+    Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
+    %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
+  -->
+  <string name="nova_onboarding_marketing_body_6" tools:ignore="BrandUsage,UnusedResources">允许 Mozilla 将您正在使用 Firefox 这一信息告知您来源的平台，来帮助我们触达更多人。%1$s</string>
   <!-- Marketing onboarding body link text. -->
   <string name="nova_onboarding_marketing_body_link_text">我们如何使用您的数据</string>
   <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
@@ -1629,6 +1647,8 @@
   <string name="tab_manager_search_bar_placeholder">搜索标签页</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">最近关闭的标签页</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">全选</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">账户设置</string>
   <!-- Text shown in the menu to view tab settings -->
@@ -2066,6 +2086,8 @@
   <string name="webcompat_reporter_problem_description_placeholder_text_2">请描述出现的问题，说明期望的效果，并提供重现问题的步骤。</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text">请描述出现的问题，并说明期望的效果</string>
+  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
+  <string name="webcompat_reporter_etp_checkbox_text_2">发送被跟踪保护拦截的项目的列表</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text">发送被跟踪保护拦截的网址</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
@@ -3112,6 +3134,8 @@
   <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Content description for the browser VPN settings screen top bar back button -->
+  <string name="ip_protection_navigate_back_button_content_description">浏览上一页</string>
   <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_promo_headline">%s 的内置 VPN</string>
   <!-- Body text for the browser VPN promo card . %s is a learn more link using ip_protection_learn_more as text. -->
@@ -3944,6 +3968,11 @@
   -->
   <string name="trackers_blocked_panel_categorical_num_trackers_blocked">%s：%d</string>
   <!--
+    Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+    %d is a placeholder for the number of trackers blocked this week.
+  -->
+  <string name="trackers_blocked_panel_num_trackers_blocked_this_week">本周已拦截 %d 个跟踪器</string>
+  <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
   -->
@@ -4633,6 +4662,8 @@
   <string name="sports_widget_remove_content_description" tools:ignore="UnusedResources">从主页移除世界杯内容</string>
   <!-- Title shown on the sports widget immediately after the user has followed a team. %s is the selected team (e.g., "USA"). -->
   <string name="sports_widget_team_followed_title">正在关注：\n%s</string>
+  <!-- Description shown on the sports widget immediately after the user has followed a team -->
+  <string name="sports_widget_team_followed_description">赛事临近开幕时，可回来了解比赛信息。</string>
   <!-- Sports widget match status label shown during first half of a match. -->
   <string name="sports_widget_first_half" tools:ignore="UnusedResources">上半场</string>
   <!-- Sports widget match status label shown during second half of a match. -->
@@ -4695,6 +4726,10 @@
   <string name="firefox_labs_restore_defaults_dialog_title">需要重启</string>
   <!-- The description used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. %s is the name of the app (for example "Firefox Nightly") -->
   <string name="firefox_labs_restore_defaults_dialog_message">重启 %s 以恢复默认设置。</string>
+  <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "on" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
+  <string name="firefox_labs_feature_enable_dialog_message">请重启 %s 以开启此功能。</string>
+  <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
+  <string name="firefox_labs_feature_disable_dialog_message">请重启 %s 以关闭此功能。</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
   <string name="firefox_labs_no_labs_available_description">暂无可试用的实验性功能</string>
 </resources>
