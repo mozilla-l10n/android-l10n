@@ -45,6 +45,8 @@
   <string name="tab_tray_select_collection">Seleccionar una colleccion</string>
   <!-- Content description for close button while in multiselect mode in tab tray -->
   <string name="tab_tray_close_multiselect_content_description">Sortir del mòde seleccion multipla</string>
+  <!-- The header text displayed on the synced tabs page when the user is not logged into an account. -->
+  <string name="tab_manager_empty_synced_tabs_page_header">Trapatz vòstres onglets de quin que siá aparelh</string>
   <!-- The supplementary text displayed on the synced tabs page when the user is not logged into an account. -->
   <string name="tab_manager_empty_synced_tabs_page_description">Connectatz-vos per gerir los onglets sincronizats de totes los aparelhs.</string>
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
@@ -339,6 +341,10 @@
   <string name="ai_controls_learn_more">Ne saber mai</string>
   <!-- Title for the translations AI feature toggle -->
   <string name="ai_controls_translations_title">Traduccions</string>
+  <!-- Cancel button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_cancel">Anullar</string>
+  <!-- Block button text in the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_block">Blocar</string>
   <!--
     Locale Settings Fragment
 
@@ -388,6 +394,8 @@
     The colon character (in "%s:") is intended to have the screen reader make a small pause between the search engine name and the description of the button.
   -->
   <string name="search_engine_selector_content_description">%s : selector de motor de recèrca</string>
+  <!-- Button in the app links prompt that keeps the user in the browser instead of opening the external app. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="applinks_prompt_negative_button">Demorar dins %1$s</string>
   <!--
     Home onboarding
 
@@ -458,6 +466,8 @@
   <string name="onboarding_preferences_dialog_crash_reporting_description">Los rapòrts de plantatge nos permeton de diagnosticar e de corregir de problèmas amb lo navegador. Los rapòrts pòdon conténer de donadas personalas o sensiblas.</string>
   <!-- Learn more link for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
   <string name="onboarding_preferences_dialog_crash_reporting_learn_more_2">Ne saber mai</string>
+  <!-- Title for the startup crash page. %s is the name of the app (for example "Firefox") -->
+  <string name="startup_crash_title">%s deu reaviar</string>
   <!-- Button text to continue and not send a startup crash report -->
   <string name="startup_crash_negative">Non, mercé</string>
   <!-- Button text to reopen firefox after the crash is processed %s is the name of the app (for example "Firefox") -->
@@ -529,16 +539,24 @@
   <string name="nova_onboarding_continue_button">Contunhar</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">Pas ara</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">Passar</string>
   <!-- Terms of use (ToU) onboarding body line three link text for nova_onboarding_tou_body_line_3. -->
   <string name="nova_onboarding_tou_body_line_3_link_text">Gerir los paramètres</string>
   <!-- Toolbar selection onboarding "top" option label. -->
   <string name="nova_onboarding_toolbar_selection_top_label">Naut</string>
   <!-- Toolbar selection onboarding "bottom" option label. -->
   <string name="nova_onboarding_toolbar_selection_bottom_label">Bas</string>
+  <!-- Theme selection onboarding title. -->
+  <string name="nova_onboarding_theme_selection_title" tools:ignore="UnusedResources">Causissètz vòstre tèma</string>
+  <!-- Theme selection onboarding "automatic" option label. -->
+  <string name="nova_onboarding_theme_selection_automatic_label" tools:ignore="UnusedResources">Automatic</string>
   <!-- Theme selection onboarding "light" option label. -->
   <string name="nova_onboarding_theme_selection_light_label" tools:ignore="UnusedResources">Clar</string>
   <!-- Theme selection onboarding "dark" option label. -->
   <string name="nova_onboarding_theme_selection_dark_label" tools:ignore="UnusedResources">Escur</string>
+  <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage">Ajudar Firefox</string>
   <!-- Notifications onboarding button. -->
   <string name="nova_onboarding_notifications_button">Activar las notificacions</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
@@ -606,6 +624,8 @@
   <string name="preferences_category_general">General</string>
   <!-- Preference category for all links about Fenix -->
   <string name="preferences_category_about">A prepaus</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Motor de recèrca per defaut per la navegacion privada</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Gerir los motors de recèrcas alternatius</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -1374,6 +1394,32 @@
   <string name="create_tab_group_save_button">Enregistrar</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Anullar</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Anullar</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Jaune</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Irange</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Roge</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Ròse</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Violet</string>
+  <!-- Tab group color: Violet -->
+  <string name="tab_group_color_violet">Violet</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">Blau</string>
+  <!-- Tab group color: Cyan -->
+  <string name="tab_group_color_cyan">Cian</string>
+  <!-- Tab group color: Green -->
+  <string name="tab_group_color_green">Verd</string>
+  <!-- Tab group color: Grey -->
+  <string name="tab_group_color_grey">Gris</string>
   <!--
     History
 
@@ -1474,6 +1520,7 @@
   <string name="download_delete_multi_select_dialog_cancel">Anullar</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
   <string name="download_delete_dialog_confirm">Confirmar</string>
+  <string name="change_file_extension_cancel_button">Anullar</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">En cors</string>
   <!--
