@@ -464,6 +464,8 @@
   <string name="search_suggestions_delete_history_item_snackbar">تارىختىن %1$s ى ئۆچۈرۈلدى</string>
   <!-- Content description (not visible, for screen readers etc.): Button shown near a history search result allowing to delete it from browsing history. -->
   <string name="mozac_browser_awesomebar_remove_suggestion" tools:ignore="UnusedResources">بۇ تارىخىي تۈر ئۆچۈرۈلىدۇ</string>
+  <!-- Button in the app links prompt that keeps the user in the browser instead of opening the external app. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="applinks_prompt_negative_button">%1$s دا قال</string>
   <!--
     Home onboarding
 
@@ -2160,6 +2162,12 @@
   <string name="bookmark_sort_menu_a_to_z">A دىن Z غىچە تەرتىپلەيدۇ</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">Z دىن A غىچە تەرتىپلەيدۇ</string>
+  <!-- Label for button to import bookmarks from file. -->
+  <string name="bookmark_import_menu_button">ھۆججەتتىن ئەكىر</string>
+  <!-- Snackbar message shown when a bookmark import attempt fails. -->
+  <string name="bookmark_import_failure_snackbar">خەتكۈچنى ئەكىرەلمەيدۇ. قايتا سىناڭ.</string>
+  <!-- Default name for the folder created when importing bookmarks from a file. -->
+  <string name="bookmark_import_destination_default_name">ئەكىرگەن خەتكۈچ</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -2212,8 +2220,12 @@
   <string name="bookmark_select_folder_close_folder_content_description">قىسقۇچنى ياپ: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">خەتكۈچنى تاقا</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">ھۆججەتتىن ئەكىر</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">ھېچقانداق خەتكۈچ يوق</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">ئامراق خەتكۈچلىرىڭىزنى بىر جايدا ساقلاڭ</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">قىسقۇچتىكى خەتكۈچ: %s</string>
   <!-- Description for the bookmark list empty state when you're not signed into sync. -->
@@ -2403,8 +2415,14 @@
   <string name="share_device_subheader">ئۈسكۈنىگە يوللا</string>
   <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
   <string name="send_to_devices_bottom_sheet_close_content_description">«ئۈسكۈنىگە يوللا» نى ياپ</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">QR كودى</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">QR كودى</string>
   <!-- Content description for the close button in the QR code display screen -->
   <string name="qr_code_display_close">ياپ</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">ئۇلانمىنى يېقىن ئەتراپقا ھەمبەھىرلە</string>
   <!-- Label for the download button on the QR code display screen -->
   <string name="qr_code_display_download">چۈشۈر</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
@@ -4306,10 +4324,20 @@
   <string name="sports_widget_country_england">ئەنگلىيە</string>
   <!-- Title shown on the sports widget champion scoreboard row celebrating the soccer tournament winner. -->
   <string name="sports_widget_champions_title">2026-يىللىق دۇنيا لوڭقىسى چېمپىيونى</string>
+  <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament runners-up. Runners-up means second place. -->
+  <string name="sports_widget_runner_up_title" tools:ignore="UnusedResources">ئىككىنچىلەر</string>
+  <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament third place winners. -->
+  <string name="sports_widget_third_place_title">ئۈچىنچىلەر</string>
   <!-- Sports widget action label to refresh match data after an error. -->
   <string name="sports_widget_error_refresh">يېڭىلا</string>
   <!-- Sports widget group stage label for group A in the soccer tournament. -->
   <string name="sports_widget_group_a">A گۇرۇپپا</string>
+  <!-- Sports widget group stage label for group B in the soccer tournament. -->
+  <string name="sports_widget_group_b">B گۇرۇپپا</string>
+  <!-- Sports widget group stage label for group C in the soccer tournament. -->
+  <string name="sports_widget_group_c">C گۇرۇپپا</string>
+  <!-- Sports widget group stage label for group D in the soccer tournament. -->
+  <string name="sports_widget_group_d">D گۇرۇپپا</string>
   <!-- Sports widget group stage label for group E in the soccer tournament. -->
   <string name="sports_widget_group_e">E گۇرۇپپا</string>
   <!-- Sports widget group stage label for group F in the soccer tournament. -->
@@ -4354,6 +4382,16 @@
     Your translation will be automatically truncated at 2 characters to avoid layout issues.
   -->
   <string name="sports_widget_countdown_days">ك</string>
+  <!-- Content description (for accessibility, not displayed) for the close button on the sports widget card. -->
+  <string name="sports_widget_close_content_description">ياپ</string>
+  <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
+  <string name="sports_widget_more_options_content_description">تېخىمۇ كۆپ تاللانما</string>
+  <!-- Sports widget error card description shown when the user is offline. -->
+  <string name="sports_widget_error_connection_offline_description">ئىنتېرنېت باغلىنىشىڭىزنى تەكشۈرۈپ ئاندىن قايتا سىناڭ.</string>
+  <!-- Sports widget error card title shown when match data fails to load. -->
+  <string name="sports_widget_error_load_failed_title">ھازىرچە مۇسابىقە ئۇچۇرى يوق.</string>
+  <!-- Sports widget error card description shown when match data fails to load. -->
+  <string name="sports_widget_error_load_failed_description">بىر نەچچە مىنۇتتىن كېيىن يېڭىلاپ كۆرۈڭ.</string>
   <!-- ==== End of Terms of use popup prompt. ==== -->
 
   <!--
