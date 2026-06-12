@@ -618,6 +618,10 @@
   <string name="nova_onboarding_marketing_title">ഒരു മികച്ച ഇന്റെർനെറ്റ് പണിയാൻ ഞങ്ങളെ തുണയ്ക്കുക</string>
   <!-- Marketing onboarding body link text. -->
   <string name="nova_onboarding_marketing_body_link_text">എങ്ങനെയാണു ഞങ്ങൾ ദത്തയെ ഉപയോഗിക്കുന്നതു്</string>
+  <!-- Marketing onboarding primary button text. -->
+  <string name="nova_onboarding_marketing_primary_button_text_2">സമ്മതിച്ചു തുടരുക</string>
+  <!-- Marketing onboarding secondary button text. -->
+  <string name="nova_onboarding_marketing_secondary_button_text">വേണ്ട, നന്ദി</string>
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Firefox-ൽ സുരക്ഷിതമായി തുടരാൻ അറിയിപ്പുകൾ താങ്ങളെ സഹായിക്കുന്നു</string>
   <!-- Notifications onboarding button. -->
@@ -693,6 +697,8 @@
   <string name="preferences_category_general">പൊതുവായവ</string>
   <!-- Preference category for all links about Fenix -->
   <string name="preferences_category_about">വിവരം</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">സാധാരണ തിരയലിൽ ഉപയോഗിക്കുന്ന അതേ തിരച്ചിൽ യന്ത്രം ഉപയോഗിക്കുക</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">ഇതര തിരയൽ യന്ത്രങ്ങളെ നിയന്ത്രിക്കുക</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -954,6 +960,8 @@
   <string name="customize_toggle_pocket_sponsored">പണം കൊണ്ടു് പ്രസരിപ്പിച്ച കഥകൾ</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">ചുവർകടലാസുകൾ</string>
+  <!-- Label for the menu item that opens the wallpaper settings screen. -->
+  <string name="browser_menu_change_wallpaper">ചുവൎക്കടലാസു മാറ്റുക</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">പണം കൊണ്ടു് പ്രസരിപ്പിച്ച കുറുക്കുവഴികൾ</string>
   <!--
@@ -1400,6 +1408,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">തുറന്നിരിപ്പുണ്ട സ്വകാര്യ ടാബുകൾ: %1$s. ടാബുമാറാൻ അമൎത്തുക.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d ടാബുകൂട്ടം തുറന്നിരിക്കുന്നു. ടാബു മാറാൻ പ്രതലത്തിൽ ഞെക്കുക.</item>
+    <item quantity="other">%1$d ടാബുകൂട്ടം തുറന്നിരിക്കുന്നു. ടാബുകൾ മാറാൻ പ്രതലത്തിൽ ഞെക്കുക.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1413,6 +1429,8 @@
   <string name="tab_manager_search_bar_placeholder">ടാബുകൾക്കായി തിരയുക</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">അടുത്തിടെ അടച്ച ടാബുകൾ</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">എല്ലാം തെരഞ്ഞെടുക്കുക</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">അക്കൗണ്ട് ക്രമീകരണങ്ങള്‍</string>
   <!-- Text shown in the menu to view tab settings -->
@@ -1473,6 +1491,8 @@
   <string name="pwa_site_controls_title_private">%1$s (സ്വകാര്യ രീതി)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">ടാബുതിരയൽ തുറക്കുക</string>
+  <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
+  <string name="tab_group_onboarding_item_title">പുതിയ ടാബുകൂട്ടം ഉണ്ടാക്കുക</string>
   <!--
     Tab Group
 
@@ -1801,6 +1821,12 @@
   <string name="webcompat_reporter_preview_bottom_sheet_header">റിപ്പോർട്ട് മുൻകാഴ്ച</string>
   <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
   <string name="webcompat_reporter_preview_bottom_sheet_send">അയയ്ക്കുക</string>
+  <!-- Title for the Edit URL confirmation dialog in the WebCompatReporter -->
+  <string name="webcompat_reporter_edit_url_dialog_title">വെബ്ബിടക്കണ്ണി തിരുത്തുക</string>
+  <!-- Text shown on the save button for the Edit URL confirmation dialog in the WebCompatReporter. -->
+  <string name="webcompat_reporter_edit_url_dialog_save">കരുതിവയ്ക്കുക</string>
+  <!-- Text shown on the dismiss button for the Edit URL confirmation dialog in the WebCompatReporter. -->
+  <string name="webcompat_reporter_edit_url_dialog_dismiss">കളയുക</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
@@ -2141,6 +2167,8 @@
   <string name="menu_print">അച്ചടിപ്പിക്കുക</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">ഉപകരണത്തിലേക്ക് അയക്കു</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">അടുത്തുള്ള ഉപകരണത്തിലേക്കു് അയയ്ക്കുക</string>
   <!-- Text for the QR code action in the native share sheet -->
   <string name="share_qr_code">ക്യു.ആർ സങ്കേതം</string>
   <!-- Title shown in the QR code display screen -->
