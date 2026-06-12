@@ -3222,6 +3222,13 @@
   <string name="ip_protection_onboarding_body_link">Аз тамошобинӣ бо муҳофизати иловагӣ истифода баред</string>
   <!-- Label for the dismiss button on the onboarding bottom sheet. -->
   <string name="ip_protection_onboarding_not_now_button">Ҳоло не</string>
+  <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
+  <string name="ip_protection_connection_error_snackbar">Пайвастшавӣ ба «VPN» иҷро нашуд. Пас аз чанд дақиқа аз нав кӯшиш кунед.</string>
+  <!--
+    Snackbar (in-app pop-up notification) text to signal the browser VPN has reached the monthly data limit.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_snackbar">%1$d ГБ-и маълумоти «VPN» истифода шуд. Дастрасӣ дар моҳи оянда аз нав танзим карда мешавад.</string>
   <!--
     Autofill
 
@@ -3522,6 +3529,10 @@
   <string name="homepage_shortcuts_show_all_content_description">Намоиш додани ҳамаи миёнбурҳо</string>
   <!-- Label for the "Add shortcut" button displayed as a tile. -->
   <string name="homepage_shortcuts_add_shortcut">Илова кардани миёнбур</string>
+  <!-- Title for the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_to_homepage">Илова кардан ба саҳифаи асосӣ</string>
+  <!-- Label for the "Add website" button in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_website">Илова кардани сомона</string>
   <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
   <string name="homepage_shortcuts_add_website_title">Нишонии «URL»-и сомонаро ворид намоед</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
@@ -3923,6 +3934,14 @@
     %s is the name of the app (for example "Firefox").
   -->
   <string name="protection_panel_banner_protected_title">Муҳофизати «%s» фаъол аст</string>
+  <plurals name="protection_panel_banner_protected_blocked_trackers_description">
+    <!--
+      Description text for the protection panel banner when privacy dashboard is enabled.
+      %1$d is the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d воситаи пайгирӣ дар ин сомона манъ карда шудааст.</item>
+    <item quantity="other">%1$d воситаи пайгирӣ дар ин сомона манъ карда шудаанд.</item>
+  </plurals>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
   <string name="protection_panel_banner_protected_description">Мо шуморо муҳофизат кардем. Агар ягон чизеро пайдо кунем, мо ба шумо хабар медиҳем.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
@@ -4525,6 +4544,11 @@
   <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
   <string name="sports_widget_more_options_content_description">Имконоти бештар</string>
   <!--
+    Content description (for accessibility, not displayed) announcing the elapsed minutes of a live match.
+    %1$s is the clock value, which may be a plain number (e.g. "72") or include extra time (e.g. "90+3").
+  -->
+  <string name="sports_widget_match_elapsed_minutes">Вақти гузаштаи бозӣ: %1$s дақиқа</string>
+  <!--
     Content description (for accessibility, not displayed) for a paginated item.
     %1$s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32),
     %2$d is the current page number, and %3$d is the total number of pages.
@@ -4546,4 +4570,21 @@
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Огоҳномаи махфият</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Маълумоти бештар</string>
+  <!--
+    Firefox Labs
+
+    Firefox Labs is the name of a screen in Settings to allow users to learn about
+    experimental and in-development features, and turn those features on and off.
+    The "Labs" portion can be localized, "Firefox" must be treated as a brand and kept
+    in English.
+  -->
+  <string name="firefox_labs_title" tools:ignore="BrandUsage">Firefox Labs</string>
+  <!-- Banner title text on the Firefox Labs screen. -->
+  <string name="firefox_labs_banner_title_2">Хусусиятҳои таҷрибавии моро озмоед!</string>
+  <!-- The text on the dialog on the Firefox Labs screen for the positive button when toggling "on" and "off" experimental features. This prompts the user to confirm that they want to restart the app. -->
+  <string name="firefox_labs_dialog_restart_button">Аз нав оғоз кардан</string>
+  <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
+  <string name="firefox_labs_dialog_cancel_button">Бекор кардан</string>
+  <!-- The title used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. -->
+  <string name="firefox_labs_restore_defaults_dialog_title">Бозоғозӣ лозим аст</string>
 </resources>
