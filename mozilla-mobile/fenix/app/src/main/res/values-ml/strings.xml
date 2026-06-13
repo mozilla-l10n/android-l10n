@@ -2842,6 +2842,8 @@
   <string name="ip_protection_toolbar_pill_label">വി.പി.എൻ തുടങ്ങിവച്ചതു്</string>
   <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
   <string name="ip_protection_get_started">തുടങ്ങാം</string>
+  <!-- Label for the "connecting" state of the button that starts the browser VPN authentication or authorization flow on the settings screen -->
+  <string name="ip_protection_connecting">ബന്ധപ്പെടുന്നു…</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">ഇനിയും പരിരക്ഷണയോടെ തിരയുക</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
@@ -3146,6 +3148,10 @@
   <string name="homepage_shortcuts_show_all_content_description">എല്ലാ കുറുക്കുവഴികൾ കാണിക്കുക</string>
   <!-- Label for the "Add shortcut" button displayed as a tile. -->
   <string name="homepage_shortcuts_add_shortcut">കുറുക്കുവഴി ചേൎക്കുക</string>
+  <!-- Title for the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_to_homepage">ആമുഖത്താളിലേക്കു ചേൎക്കുക</string>
+  <!-- Label for the "Add website" button in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_website">വെബ്ബിടം ചേൎക്കുക</string>
   <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
   <string name="homepage_shortcuts_add_website_title">വെബ്ബിടവിലാസം നല്കുക</string>
   <!-- Title for the "Popular sites" section in the "Add to homepage" bottom sheet. -->
@@ -3312,6 +3318,8 @@
   <string name="translation_error_could_not_translate_warning_text">വിവർത്തനം ചെയ്യുമ്പോൾ ഒരു കുഴപ്പമുണ്ടായി. ദയവായി വീണ്ടും ശ്രമിച്ചു് നോക്കുക.</string>
   <!-- The title of the warning card informs the user that the list of languages cannot be loaded. -->
   <string name="translation_error_could_not_load_languages_warning_text">ഭാഷാകൾ ലഭ്യമാക്കാൻ കഴിഞ്ഞില്ല. താങ്ങളുടെ ഗോളാന്തരവല സമ്പർക്കം പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.</string>
+  <!-- The title of the warning card informs the user that translations from a language are not supported yet. %1$s is the name of the source language. -->
+  <string name="translation_error_language_not_supported_warning_text_2">%1$s-ൽ നിന്നുള്ള മൊഴിമാറ്റങ്ങൾ ഞങ്ങൾ നിലവിൽ പിന്താങ്ങുന്നില്ല.</string>
   <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
   <string name="translation_in_progress_snackbar">വിവർത്തനം ചെയ്യുന്നു…</string>
   <!--
@@ -3365,6 +3373,12 @@
   <string name="translation_settings_automatic_never_translate_sites">ഒരിക്കലും ഈ വെബ്സ്ഥാനങ്ങളുടെ വിവർത്തനം ചെയ്യരുതു്</string>
   <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
   <string name="translation_settings_download_language">ഭാഷാകൾ ഇറക്കിവയ്ക്കുക</string>
+  <!-- Toggle switch title and description for the translation settings control. -->
+  <string name="translation_settings_control_title">മൊഴിമാറ്റങ്ങൾ</string>
+  <!-- Description for the translation settings toggle switch. -->
+  <string name="translation_settings_control_description">എല്ലാ മൊഴിമാറ്റങ്ങളും താങ്ങളുടെ ഉപകരണത്തിൽ സ്വകാര്യമായി തുടരും.</string>
+  <!-- Clickable text for the translations settings item that links to a website. -->
+  <string name="translation_settings_control_learn_more">കൂടുതലറിയുക</string>
   <!--
     Automatic translation preference screen
 
@@ -3520,6 +3534,11 @@
     %s is the name of the app (for example "Firefox").
   -->
   <string name="protection_panel_banner_protected_title">%s കാവൽ നിൽക്കുന്നു</string>
+  <!--
+    Description text for the protection panel banner when privacy dashboard is enabled.
+    and there are no trackers blocked.
+  -->
+  <string name="protection_panel_banner_protected_no_blocked_trackers_description">നിങ്ങൾക്കു പരിരക്ഷയുണ്ടു്.</string>
   <!-- Description text for the protection panel banner when tracking protection is enabled. -->
   <string name="protection_panel_banner_protected_description">താങ്ങൾ സംരക്ഷിക്കപ്പെട്ടിരിക്കുന്നു. ഞങ്ങൾ എന്തെങ്കിലും കണ്ടെത്തിയാൽ താങ്ങളെ അറിയിക്കാം.</string>
   <!-- Label text for the Enhanced Tracking Protection toggle. -->
@@ -3545,6 +3564,14 @@
   <string name="protection_panel_privacy_and_security_settings_2">സ്വകാര്യത ക്രമീകരണങ്ങൾ</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">അനുമതികൾ</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d പിന്തുടൎച്ചയന്ത്രങ്ങൾ ഈ വെബ്ബിടത്തിൽ തടഞ്ഞു</item>
+    <item quantity="other">%1$d പിന്തുടൎച്ചയന്ത്രങ്ങൾ ഈ വെബ്ബിടത്തിൽ തടഞ്ഞു</item>
+  </plurals>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
