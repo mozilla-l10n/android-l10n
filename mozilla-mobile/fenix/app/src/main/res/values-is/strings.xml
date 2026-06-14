@@ -444,6 +444,8 @@
   <string name="search_suggestions_delete_history_item_snackbar">Eyddi %1$s úr vafurferli</string>
   <!-- Content description (not visible, for screen readers etc.): Button shown near a history search result allowing to delete it from browsing history. -->
   <string name="mozac_browser_awesomebar_remove_suggestion" tools:ignore="UnusedResources">Eyða þessari færslu vafurferils</string>
+  <!-- Button in the app links prompt that keeps the user in the browser instead of opening the external app. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="applinks_prompt_negative_button">Vera áfram í %1$s</string>
   <!--
     Home onboarding
 
@@ -1695,6 +1697,8 @@
   <string name="tab_group_onboarding_list_item_description">Veldu marga flipa til að búa til hóp.</string>
   <!-- The header text displayed on the tab groups page when no tab groups are open -->
   <string name="tab_manager_empty_tab_groups_page_header">Prófaðu flipahópa fyrir minna skrun og meiri einbeitingu</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Veldu flipa til að búa til hóp. Þeir eru vistaðir hér og eru tilbúnir þegar þú ert til.</string>
   <!--
     Tab Group
 
@@ -1704,6 +1708,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Breyta hópi</string>
   <string name="create_tab_group_save_button">Vista</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Nýr hópur, fella saman draghandfang</string>
   <!--
     Default tab group name when creating a tab group
     %d is the number of existing tab groups + 1.
@@ -2046,6 +2052,8 @@
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Veldu ástæðu</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_description_2">Lýstu vandamálinu í smáatriðum til að hjálpa okkur að rannsaka málið (valfrjálst)</string>
+  <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description">Lýstu vandamálinu (valfrjálst)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
   <string name="webcompat_reporter_add_more_info">Bæta við frekari upplýsingum</string>
@@ -2056,7 +2064,11 @@
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
   <string name="webcompat_reporter_success_snackbar_text_2">Skýrsla send</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text_2">Hvað gerðist? Hvað bjóstu við að myndi gerast? Gefðu upp nákvæm skref sem þarf til að endurgera vandamálið.</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text">Hvað gerðist? Hvað hefði átt að gerast?</string>
+  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
+  <string name="webcompat_reporter_etp_checkbox_text_2">Senda lista yfir atriði sem eru útilokuð af rakningarvörn</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text">Sendu vefslóðir sem eru útilokaðar af rakningarvörn</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
@@ -3103,6 +3115,8 @@
   <string name="ip_protection_navigate_back_button_content_description">Fara til baka</string>
   <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_promo_headline">Innbyggt VPN í %s</string>
+  <!-- Body text for the browser VPN promo card . %s is a learn more link using ip_protection_learn_more as text. -->
+  <string name="ip_protection_promo_body_2">Vafraðu með aukinni vernd með því að fela staðsetningu þína, jafnvel á opinberum Wi-Fi netum. %s</string>
   <!-- Link text that opens additional information about the browser VPN -->
   <string name="ip_protection_learn_more">Frekari upplýsingar</string>
   <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
@@ -3158,8 +3172,20 @@
   <string name="ip_protection_connecting">Tengist…</string>
   <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_onboarding_card_headline">Prófaðu innbyggt VPN í %s</string>
+  <!--
+    The body of the VPN onboarding card.
+    %1$s is a link using ip_protection_onboarding_body_link (“Browse with extra protection”) as text. It links to a support article about VPN on Firefox.
+    %2$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_onboarding_body">%1$s með því að fela staðsetningu þína, jafnvel á almennu Wi-Fi neti. Fáðu %2$d GB ókeypis í hverjum mánuði.</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">Vafraðu með aukna vernd</string>
+  <!--
+    The body of the VPN onboarding card for a promotion that provides unlimited data bandwidth for a certain time.
+    %1$s is a localized date (for example "Jun 9") indicating the end of the promotional period.
+    %2$s is a link using ip_protection_onboarding_body_link_promo (“Learn more”) as text. It links to a support article about VPN on Firefox.
+  -->
+  <string name="ip_protection_onboarding_body_promo">Kveiktu á þessu til að gera vafrið þitt persónulegra og erfiðara að rekja. Prófaðu það núna til að fá ótakmarkaða bandbreidd í gegnum %1$s. %2$s</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link_promo">Frekari upplýsingar</string>
   <!-- Label for the dismiss button on the onboarding bottom sheet. -->
