@@ -715,6 +715,8 @@
   <string name="nova_onboarding_marketing_body_6" tools:ignore="BrandUsage,UnusedResources">Βοηθήσετε μας να διευρύνουμε τη βάση των χρηστών μας επιτρέποντας στη Mozilla να ενημερώσει την πλατφόρμα από την οποία ήρθατε, ότι χρησιμοποιείτε το Firefox. %1$s</string>
   <!-- Marketing onboarding body link text. -->
   <string name="nova_onboarding_marketing_body_link_text">Πώς χρησιμοποιούμε τα δεδομένα</string>
+  <!-- Marketing onboarding body link text. -->
+  <string name="nova_onboarding_marketing_body_link_text_1">Μάθετε περισσότερα</string>
   <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage">Βοηθήστε το Firefox</string>
   <!-- Marketing onboarding primary button text. -->
@@ -2052,6 +2054,10 @@
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Εισαγάγετε ένα έγκυρο URL</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_label_whats_broken_3">Τι δεν λειτουργεί;</string>
+  <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
+  <string name="webcompat_reporter_clear_reason_content_description">Απαλοιφή επιλεγμένου λόγου</string>
+  <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Τι δεν λειτουργεί;</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_2">Επιλέξτε έναν λόγο</string>
@@ -2085,6 +2091,8 @@
   <string name="webcompat_reporter_preview_bottom_sheet_header">Προεπισκόπηση αναφοράς</string>
   <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
   <string name="webcompat_reporter_preview_bottom_sheet_send">Αποστολή</string>
+  <!-- Title for the Edit URL confirmation dialog in the WebCompatReporter -->
+  <string name="webcompat_reporter_edit_url_dialog_title">Επεξεργασία URL ιστοτόπου</string>
   <!-- Text shown on the save button for the Edit URL confirmation dialog in the WebCompatReporter. -->
   <string name="webcompat_reporter_edit_url_dialog_save">Αποθήκευση</string>
   <!-- Text shown on the dismiss button for the Edit URL confirmation dialog in the WebCompatReporter. -->
@@ -2107,6 +2115,10 @@
   <string name="webcompat_reporter_reason_account2">Αδυναμία σύνδεσης ή εγγραφής</string>
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">Ζητήθηκε απενεργοποίηση φραγής διαφημίσεων</string>
+  <!-- Broken site reason text for browser isn’t supported or blocked -->
+  <string name="webcompat_reporter_reason_notsupported_2">Το πρόγραμμα περιήγησης δεν υποστηρίζεται ή έχει αποκλειστεί</string>
+  <!-- Broken site reason text for the site being deceptive -->
+  <string name="webcompat_reporter_reason_site_is_deceptive">Ο ιστότοπος είναι παραπλανητικός</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
   <string name="webcompat_reporter_reason_notsupported">Το πρόγραμμα περιήγησης δεν υποστηρίζεται ή έχει αποκλειστεί</string>
   <!-- Broken site reason text for something else -->
@@ -3946,6 +3958,22 @@
     <item quantity="one">%1$d ιχνηλάτης κοινωνικής δικτύωσης</item>
     <item quantity="other">%1$d ιχνηλάτες κοινωνικής δικτύωσης</item>
   </plurals>
+  <plurals name="trackers_blocked_panel_num_cross_site_cookies">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cross-site tracking cookies.
+      %1$d is a placeholder for the number of cross-site tracking cookies blocked.
+    -->
+    <item quantity="one">%1$d cookie καταγραφής μεταξύ ιστοτόπων</item>
+    <item quantity="other">%1$d cookie καταγραφής μεταξύ ιστοτόπων</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cryptominers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cryptomining scripts.
+      %1$d is a placeholder for the number of cryptominers blocked.
+    -->
+    <item quantity="one">%1$d cryptominer</item>
+    <item quantity="other">%1$d cryptominer</item>
+  </plurals>
   <plurals name="trackers_blocked_panel_num_fingerprinters">
     <!--
       Text for displaying in the trackers blocked panel the total number of blocked fingerprinter scripts.
@@ -3961,6 +3989,14 @@
     -->
     <item quantity="one">%1$d περιεχόμενο καταγραφής</item>
     <item quantity="other">%1$d περιεχόμενα καταγραφής</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">%1$d αποκλεισμένος ιχνηλάτης αυτήν την εβδομάδα</item>
+    <item quantity="other">%1$d αποκλεισμένοι ιχνηλάτες αυτήν την εβδομάδα</item>
   </plurals>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
@@ -4695,10 +4731,18 @@
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Σημείωση απορρήτου</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Μάθετε περισσότερα</string>
+  <!-- Google Lens prototype related strings -->
+  <string name="preferences_debug_settings_google_lens_integration">Ενεργοποίηση της ενσωμάτωσης του Google Lens</string>
   <!-- Lens image search button content description -->
   <string name="lens_search_content_description">Αναζήτηση με εικόνα</string>
+  <!-- Content description for the gallery picker button in the Lens camera screen -->
+  <string name="content_description_gallery">Επιλογή από τη συλλογή για αποστολή στο Google Lens</string>
+  <!-- Content description for the shutter button in the Lens camera screen -->
+  <string name="content_description_take_photo">Λήψη φωτογραφίας και αποστολή στο Google Lens</string>
   <!-- Image context menu entry that sends the long-pressed image to Google Lens -->
   <string name="context_menu_open_image_with_google_lens">Αναζήτηση με Google Lens</string>
+  <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
+  <string name="lens_camera_permission_denied">Απαγορεύεται η πρόσβαση</string>
   <!-- Title for the Google Lens AI feature toggle -->
   <string name="ai_controls_google_lens_title">Google Lens</string>
   <!-- Content description for the Google Lens half of the camera mode toggle -->
