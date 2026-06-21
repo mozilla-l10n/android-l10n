@@ -719,6 +719,13 @@
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text_1 as text (“Learn More”).
   -->
   <string name="nova_onboarding_marketing_body_7" tools:ignore="BrandUsage">Mozilla-ға сіздің Firefox пайдаланушысы екеніңізді сіз келген платформаға хабарлауға рұқсат беру арқылы бізге көбірек адамға жетуге көмектесе аласыз. %1$s</string>
+  <!-- Marketing onboarding additional body text. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_marketing_body_line_two" tools:ignore="BrandUsage">Firefox — мақтанышпен тәуелсіз және ашық вебті технологиялық монополиялардан қорғауға арналған.</string>
+  <!--
+    Marketing onboarding additional body text. 'Firefox' is intentionally hardcoded.
+    “Allowing” refers to the main button “Allow and Continue”; the ask for the user is to allow communicating back to the platform.
+  -->
+  <string name="nova_onboarding_marketing_body_line_three" tools:ignore="BrandUsage">Firefox-қа жеңіске жетуге көмектесуді қарастырыңыз.</string>
   <!-- Marketing onboarding body link text. -->
   <string name="nova_onboarding_marketing_body_link_text">Біз деректерді қалай қолданамыз</string>
   <!-- Marketing onboarding body link text. -->
@@ -3202,6 +3209,12 @@
   <string name="ip_protection_onboarding_body">Тіпті қоғамдық Wi-Fi желісінде де орналасқан жеріңізді жасыру арқылы %1$s. Ай сайын %2$d ГБ тегін алыңыз.</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">қосымша қорғаныспен шолыңыз</string>
+  <!--
+    The body of the VPN onboarding card for a promotion that provides unlimited data bandwidth for a certain time.
+    %1$s is a localized date (for example "Jun 9") indicating the end of the promotional period.
+    %2$s is a link using ip_protection_onboarding_body_link_promo (“Learn more”) as text. It links to a support article about VPN on Firefox.
+  -->
+  <string name="ip_protection_onboarding_body_promo">Шолуыңызды жеке ету және бақылауды қиындату үшін оны іске қосыңыз. %1$s арқылы шексіз өткізу қабілеттілігін алу үшін қазір қолданып көріңіз. %2$s</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link_promo">Көбірек білу</string>
   <!-- Label for the dismiss button on the onboarding bottom sheet. -->
@@ -3521,6 +3534,8 @@
   <string name="homepage_shortcuts_add_website">Веб-сайтты қосу</string>
   <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
   <string name="homepage_shortcuts_add_website_title">Веб-сайт URL адресін енгізіңіз</string>
+  <!-- Title for the "Popular sites" section in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_popular_sites">Танымал сайттар</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Жарлықтар саны шегіне жетті</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3953,6 +3968,54 @@
     -->
     <item quantity="one">Бұл сайтта %1$d трекер бұғатталған</item>
     <item quantity="other">Бұл сайтта %1$d трекер бұғатталған</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_social_media_trackers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked social media trackers.
+      %1$d is a placeholder for the number of social media trackers blocked.
+    -->
+    <item quantity="one">%1$d әлеуметтік желі трекері</item>
+    <item quantity="other">%1$d әлеуметтік желі трекері</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cross_site_cookies">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cross-site tracking cookies.
+      %1$d is a placeholder for the number of cross-site tracking cookies blocked.
+    -->
+    <item quantity="one">%1$d сайтаралық бақылайтын cookie файлы</item>
+    <item quantity="other">%1$d сайтаралық бақылайтын cookie файлы</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cryptominers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cryptomining scripts.
+      %1$d is a placeholder for the number of cryptominers blocked.
+    -->
+    <item quantity="one">%1$d криптомайнер</item>
+    <item quantity="other">%1$d криптомайнер</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_fingerprinters">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked fingerprinter scripts.
+      %1$d is a placeholder for the number of fingerprinters blocked.
+    -->
+    <item quantity="one">%1$d цифрлық баспаны жинаушы</item>
+    <item quantity="other">%1$d цифрлық баспаны жинаушы</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_2">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked generic tracking scripts.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d бақылайтын мазмұн</item>
+    <item quantity="other">%1$d бақылайтын мазмұн</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">Осы аптада %1$d трекер бұғатталған</item>
+    <item quantity="other">Осы аптада %1$d трекер бұғатталған</item>
   </plurals>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
@@ -4687,8 +4750,28 @@
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Жекелік ескертуі</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Көбірек білу</string>
+  <!-- Google Lens prototype related strings -->
+  <string name="preferences_debug_settings_google_lens_integration">Google Lens интеграциясын іске қосу</string>
+  <!-- Lens image search button content description -->
+  <string name="lens_search_content_description">Сурет бойынша іздеу</string>
+  <!-- Content description for the gallery picker button in the Lens camera screen -->
+  <string name="content_description_gallery">Google Lens қызметіне жіберу үшін галереядан таңдаңыз</string>
+  <!-- Content description for the shutter button in the Lens camera screen -->
+  <string name="content_description_take_photo">Суретке түсіріп, Google Lens-ке жіберіңіз</string>
+  <!-- Image context menu entry that sends the long-pressed image to Google Lens -->
+  <string name="context_menu_open_image_with_google_lens">Google Lens арқылы іздеу</string>
+  <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
+  <string name="lens_camera_permission_denied">Рұқсат берілмеді</string>
   <!-- Title for the Google Lens AI feature toggle -->
   <string name="ai_controls_google_lens_title">Google Lens</string>
+  <!-- Description for the Google Lens AI feature toggle -->
+  <string name="ai_controls_google_lens_description">Визуалды іздеу үшін Google-ға суреттер мен фотосуреттер жібереді.</string>
+  <!-- Content description for the Google Lens half of the camera mode toggle -->
+  <string name="lens_camera_mode_lens">Google Lens</string>
+  <!-- Content description for the QR scanner half of the camera mode toggle -->
+  <string name="lens_camera_mode_qr">QR сканері</string>
+  <!-- Toast shown when the user picks an image from the gallery in QR mode but no QR code is found in it -->
+  <string name="lens_camera_qr_no_code_found">Суретте QR коды табылмады</string>
   <!--
     Firefox Labs
 
