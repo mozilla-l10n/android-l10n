@@ -713,8 +713,16 @@
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text as text (“How we use the data”).
   -->
   <string name="nova_onboarding_marketing_body_6" tools:ignore="BrandUsage,UnusedResources">Mozilla-ға сіздің Firefox пайдаланушысы екеніңізді сіз келген платформаға хабарлауға рұқсат беру арқылы бізге көбірек адамға жетуге көмектесіңіз. %1$s</string>
+  <!--
+    Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
+    %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text_1 as text (“Learn More”).
+  -->
+  <string name="nova_onboarding_marketing_body_7" tools:ignore="BrandUsage">Mozilla-ға сіздің Firefox пайдаланушысы екеніңізді сіз келген платформаға хабарлауға рұқсат беру арқылы бізге көбірек адамға жетуге көмектесе аласыз. %1$s</string>
   <!-- Marketing onboarding body link text. -->
   <string name="nova_onboarding_marketing_body_link_text">Біз деректерді қалай қолданамыз</string>
+  <!-- Marketing onboarding body link text. -->
+  <string name="nova_onboarding_marketing_body_link_text_1">Көбірек білу</string>
   <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage">Firefox-қа көмектесу</string>
   <!-- Marketing onboarding primary button text. -->
@@ -2052,11 +2060,17 @@
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Дұрыс URL енгізіңіз</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_label_whats_broken_3">Не жұмыс істемейді?</string>
+  <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
+  <string name="webcompat_reporter_clear_reason_content_description">Таңдалған себепті тазалау</string>
+  <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Не сынған?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_2">Себебін таңдау</string>
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Себебін таңдаңыз</string>
+  <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_description_2">Мәселені зерттеуге көмектесу үшін мәселені толықтай сипаттаңыз (міндетті емес)</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description">Мәселені сипаттаңыз (қосымша түрде)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
@@ -2067,6 +2081,8 @@
   <string name="webcompat_reporter_send">Жіберу</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
   <string name="webcompat_reporter_success_snackbar_text_2">Есептеме жіберілді</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text_2">Не болды? Не болады деп күттіңіз? Мәселені қайталау үшін керек қадамдарды сипаттаңыз.</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text">Не болды? Не болуы керек еді?</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
@@ -2081,6 +2097,8 @@
   <string name="webcompat_reporter_preview_bottom_sheet_header">Есептеменің алдын ала көрінісі</string>
   <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
   <string name="webcompat_reporter_preview_bottom_sheet_send">Жіберу</string>
+  <!-- Title for the Edit URL confirmation dialog in the WebCompatReporter -->
+  <string name="webcompat_reporter_edit_url_dialog_title">Веб-сайт URL адресін өңдеу</string>
   <!-- Text shown on the save button for the Edit URL confirmation dialog in the WebCompatReporter. -->
   <string name="webcompat_reporter_edit_url_dialog_save">Сақтау</string>
   <!-- Text shown on the dismiss button for the Edit URL confirmation dialog in the WebCompatReporter. -->
@@ -2103,6 +2121,10 @@
   <string name="webcompat_reporter_reason_account2">Жүйеге кіру немесе тіркелу мүмкін емес</string>
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">Сайт жарнама бұғаттаушысын өшіруді сұрады</string>
+  <!-- Broken site reason text for browser isn’t supported or blocked -->
+  <string name="webcompat_reporter_reason_notsupported_2">Браузерге блокталған немесе оған қолдау көрсетілмейді</string>
+  <!-- Broken site reason text for the site being deceptive -->
+  <string name="webcompat_reporter_reason_site_is_deceptive">Бұл сайт алдамшы</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
   <string name="webcompat_reporter_reason_notsupported">Браузерге қолдау көрсетілмейді немесе блокталған</string>
   <!-- Broken site reason text for something else -->
@@ -3924,6 +3946,14 @@
   <string name="protection_panel_privacy_and_security_settings_2">Жекелік баптаулары</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">Рұқсаттар</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">Бұл сайтта %1$d трекер бұғатталған</item>
+    <item quantity="other">Бұл сайтта %1$d трекер бұғатталған</item>
+  </plurals>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
