@@ -1373,6 +1373,8 @@
   <string name="add_private_tab">Afegeix una pestanya privada</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Pestanyes tancades recentment</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">Selecciona-ho tot</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">Paràmetres del compte</string>
   <!-- Text shown in the menu to view tab settings -->
@@ -1387,6 +1389,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Comparteix</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Afegeix a la col·lecció</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Afegeix a un grup</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">Menú de pestanyes seleccionades</string>
   <!-- Title text displayed for a homepage tab in the tabs tray. -->
@@ -1395,6 +1399,10 @@
   <string name="remove_tab_from_collection">Elimina la pestanya de la col·lecció</string>
   <!-- Text for button to enter multiselect mode in tabs tray -->
   <string name="tabs_tray_select_tabs">Selecciona pestanyes</string>
+  <!-- Text for tab manager search page when there are no results. -->
+  <string name="tab_manager_no_search_results">No s\'ha trobat cap coincidència.</string>
+  <!-- Additional text for tab manager search page when there are no results. -->
+  <string name="tab_manager_no_search_results_additional_text">Proveu una altra cerca</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
   <string name="close_tab">Tanca la pestanya</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. %s is the tab title -->
@@ -1419,6 +1427,46 @@
   <string name="delete_from_history">Suprimeix de l’historial</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">%1$s (mode privat)</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
+  <string name="tab_manager_open_tab_search">Obre la cerca de pestanyes</string>
+  <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
+  <string name="tab_group_onboarding_item_title">Crea un grup de pestanyes</string>
+  <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">Crea un grup de pestanyes</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">Edita el grup</string>
+  <string name="create_tab_group_save_button">Desa</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Grup %d</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">Nom</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Afegeix a</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Grup de pestanyes nou</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d pestanya</item>
+    <item quantity="other">%1$d pestanyes</item>
+  </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">Voleu suprimir el grup de pestanyes?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">Això elimina el grup permanentment.</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">Suprimeix el grup</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">Cancel·la</string>
   <!--
     History
 
@@ -1524,6 +1572,11 @@
   <string name="download_delete_multi_select_dialog_confirm">Suprimeix</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Cancel·la</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">Nom</string>
+  <string name="download_rename_dialog_confirm_button">Desa</string>
+  <string name="download_rename_dialog_cancel_button">Cancel·la</string>
+  <string name="download_rename_error_dismiss_button">D’acord</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">En curs</string>
   <!--
@@ -1628,9 +1681,23 @@
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text">Què ha passat? Què hauria d’haver passat?</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
+  <string name="webcompat_reporter_etp_checkbox_text_2">Envia la llista d’elements blocats per la protecció contra el seguiment</string>
+  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text">Envia els URL blocats per la protecció contra el seguiment</string>
   <!-- Description text for the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. It informs the user when checked, the report will include the list of URLs that were blocked by Enhanced Tracking Protection on the current page. -->
   <string name="webcompat_reporter_etp_checkbox_description">La protecció contra el seguiment millorada pot blocar elements de seguiment i scripts que alguns llocs web necessiten per a funcionar correctament.</string>
+  <!-- The button text for the preview report button to view a preview of the report. -->
+  <string name="webcompat_reporter_preview_report">Previsualitza l’informe</string>
+  <!-- The title shown at the top of the WebCompat Report preview panel. This appears after the user taps the “Preview” button before sending a report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_header">Previsualització de l’informe</string>
+  <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_send">Envia</string>
+  <!-- Title for the Edit URL confirmation dialog in the WebCompatReporter -->
+  <string name="webcompat_reporter_edit_url_dialog_title">Edita l’URL del lloc web</string>
+  <!-- Text shown on the save button for the Edit URL confirmation dialog in the WebCompatReporter. -->
+  <string name="webcompat_reporter_edit_url_dialog_save">Desa</string>
+  <!-- Text shown on the dismiss button for the Edit URL confirmation dialog in the WebCompatReporter. -->
+  <string name="webcompat_reporter_edit_url_dialog_dismiss">Descarta</string>
   <!--
     These reason strings are dropdown options on a WebCompat reporter form, indicating what is broken on the site.
 
@@ -1649,6 +1716,8 @@
   <string name="webcompat_reporter_reason_account2">No es pot iniciar la sessió o registrar-se</string>
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">El lloc demana que desactivi el blocador d’anuncis</string>
+  <!-- Broken site reason text for the site being deceptive -->
+  <string name="webcompat_reporter_reason_site_is_deceptive">Aquest lloc és enganyós</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
   <string name="webcompat_reporter_reason_notsupported">El navegador no és compatible o s’ha blocat</string>
   <!-- Broken site reason text for something else -->
@@ -1740,6 +1809,10 @@
   <string name="bookmark_sort_menu_a_to_z">Ordena d’A a Z</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">Ordena de Z a A</string>
+  <!-- Label for button to import bookmarks from file. -->
+  <string name="bookmark_import_menu_button">Importa d’un fitxer</string>
+  <!-- Default name for the folder created when importing bookmarks from a file. -->
+  <string name="bookmark_import_destination_default_name">Adreces d’interès importades</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -1782,6 +1855,8 @@
   <string name="bookmark_item_menu_button_content_description">Menú d’elements per a %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Tanca les adreces d’interès</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">Importa d’un fitxer</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Encara no hi ha cap adreça d’interès</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
@@ -1963,6 +2038,14 @@
   <string name="menu_print">Imprimeix</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Envia a un dispositiu</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">Codi QR</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">Codi QR</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">Tanca</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Baixa</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Totes les accions</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -2187,6 +2270,8 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">El %s us protegeix de molts dels elements de seguiment més habituals que recopilen dades sobre allò que feu a Internet.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Més informació</string>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Esteu protegit</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Estàndard (per defecte)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2197,6 +2282,12 @@
   <string name="preference_enhanced_tracking_protection_strict">Estricta</string>
   <!-- Preference description for enhanced tracking protection for the strict protection settings -->
   <string name="preference_enhanced_tracking_protection_strict_description_4">Més protecció i millor rendiment, però pot fer que alguns llocs no funcionin correctament.</string>
+  <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">Corregeix els problemes més greus dels llocs (recomanat)</string>
+  <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">Corregeix els problemes menors dels llocs</string>
+  <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_learn_more">Més informació</string>
   <!--
     Dialog that appears after user tries to uncheck the baseline exceptions preference under Strict or Custom tracking protection
 
@@ -2551,6 +2642,52 @@
   <string name="saved_logins_sort_strategy_last_used">Darrer ús</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Menú d’ordenar les contrasenyes</string>
+  <!-- Label for button to import passwords from file. -->
+  <string name="passwords_import_menu_button">Importa d’un fitxer</string>
+  <!--
+    Email Masks
+
+    Title for the Email Masks in the settings menu
+  -->
+  <string name="preferences_email_masks">Màscares d’adreça electrònica</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">Suggereix màscares d’adreça electrònica</string>
+  <!-- Summary for the Suggest Email Masks toggle. -->
+  <string name="preferences_email_masks_suggest_summary">Amagueu la vostra adreça electrònica real per a protegir la safata d’entrada del correu brossa. Alguns llocs web no admeten màscares d’adreça electrònica.</string>
+  <!-- Text that links to additional information about the Email Masks -->
+  <string name="preferences_email_masks_suggest_learn_more">Més informació</string>
+  <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
+  <string name="preferences_email_masks_manage_title">Gestiona les màscares d’adreça electrònica</string>
+  <!-- The message displayed when a user has used all of their free-tier email masks, so now the application will choose an existing one at random. -->
+  <string name="email_masks_max_free_tier_reached">Ja heu utilitzat les 5 màscares d’adreça electrònica gratuïtes, així que n’hem triat una perquè la reutilitzeu.</string>
+  <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
+  <string name="email_masks_error_retrieving_masks">Les màscares d’adreça electrònica no estan disponibles ara mateix. Torneu-ho a provar d’aquí a uns minuts.</string>
+  <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title_2">VPN integrada</string>
+  <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
+  <string name="preferences_ip_protection_beta_badge_label">BETA</string>
+  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
+  <string name="ip_protection_title">VPN</string>
+  <!-- Label for the browser VPN toggle on the settings screen -->
+  <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Content description for the browser VPN settings screen top bar back button -->
+  <string name="ip_protection_navigate_back_button_content_description">Navega cap enrere</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">La VPN integrada del %s</string>
+  <!-- Body text for the browser VPN promo card . %s is a learn more link using ip_protection_learn_more as text. -->
+  <string name="ip_protection_promo_body_2">Navegueu amb protecció addicional amagant la ubicació, fins i tot en xarxes Wi-Fi públiques. %s</string>
+  <!-- Badge label shown in the menu item when the user is eligible to use the browser VPN but should authenticate or authorize it first. -->
+  <string name="ip_protection_menu_auth_required">Proveu-ho</string>
+  <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_onboarding_card_headline">Proveu la VPN integrada del %s</string>
+  <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
+  <string name="ip_protection_onboarding_body_link">Navegueu amb protecció addicional</string>
+  <!-- Label for the dismiss button on the onboarding bottom sheet. -->
+  <string name="ip_protection_onboarding_not_now_button">Ara no</string>
   <!--
     Autofill
 
@@ -2585,8 +2722,12 @@
   <string name="preferences_addresses_sync_addresses_across_devices">Sincronitza les adreces entre dispositius</string>
   <!-- Preference option for syncing addresses across devices. This is displayed when the user is signed into sync -->
   <string name="preferences_addresses_sync_addresses">Sincronitza les adreces</string>
+  <!-- Content description navigating back from autofill settings screen. -->
+  <string name="autofill_settings_navigate_back_button_content_description">Enrere</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">Afegeix una targeta</string>
+  <!-- Content description for the "credit card feature" top bar back button -->
+  <string name="credit_cards_navigate_back_button_content_description">Navega cap enrere</string>
   <!-- Title of the "Edit card" screen -->
   <string name="credit_cards_edit_card">Edita la targeta</string>
   <!-- The header for the card number of a credit card -->
@@ -2845,6 +2986,16 @@
     which navigates the user to a screen displaying all the shortcuts.
   -->
   <string name="homepage_shortcuts_show_all_content_description">Mostra totes les dreceres</string>
+  <!-- Label for the "Add shortcut" button displayed as a tile. -->
+  <string name="homepage_shortcuts_add_shortcut">Afegeix una drecera</string>
+  <!-- Title for the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_to_homepage">Afegeix a la pàgina d’inici</string>
+  <!-- Label for the "Add website" button in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_add_website">Afegeix un lloc web</string>
+  <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
+  <string name="homepage_shortcuts_add_website_title">Escriviu l’URL d’un lloc web</string>
+  <!-- Title for the "Popular sites" section in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_popular_sites">Llocs populars</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">S’ha arribat al límit de dreceres</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -2941,6 +3092,8 @@
     Header text for a section on the home screen.
   -->
   <string name="pocket_stories_header_2">Articles</string>
+  <!-- Header text for the Stories screen. -->
+  <string name="stories_screen_text_news">Notícies</string>
   <!--
     Context description text for the "Discover more" button in the stories home screen section
     which navigates the user to a screen displaying more stories.
@@ -3065,6 +3218,12 @@
   <string name="translation_settings_automatic_never_translate_sites">No tradueixis mai aquests llocs</string>
   <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
   <string name="translation_settings_download_language">Baixa les llengües</string>
+  <!-- Toggle switch title and description for the translation settings control. -->
+  <string name="translation_settings_control_title">Traduccions</string>
+  <!-- Description for the translation settings toggle switch. -->
+  <string name="translation_settings_control_description">Totes les traduccions són privades i no surten del vostre dispositiu.</string>
+  <!-- Clickable text for the translations settings item that links to a website. -->
+  <string name="translation_settings_control_learn_more">Més informació</string>
   <!--
     Automatic translation preference screen
 
@@ -3279,6 +3438,13 @@
   -->
   <string name="connection_security_panel_verified_by">Verificat per %s</string>
   <!--
+    Text for the connection security panel when the site uses a QWAC.
+    %s is a placeholder for the organization for which the certificate was issued.
+  -->
+  <string name="connection_security_panel_issued_to">Emès per a %s</string>
+  <!-- Text for the connection security panel when the site uses a QWAC. -->
+  <string name="connection_security_panel_qualified_certificate">Qualificat segons l\'especificació del Reglament (UE) 2024/1183.</string>
+  <!--
     Debug drawer
 
     The user-facing title of the Debug Drawer feature.
@@ -3394,6 +3560,8 @@
   <string name="microsurvey_close_handle_content_description">Tanca l’enquesta</string>
   <!-- Content description for "X" button that is closing microsurvey. -->
   <string name="microsurvey_close_button_content_description">Tanca</string>
+  <!-- The title of the autofill tab in the Debug Drawer. -->
+  <string name="debug_drawer_autofill_title">Eines d’emplenament automàtic</string>
   <!--
     Debug drawer logins
 
