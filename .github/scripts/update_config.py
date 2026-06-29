@@ -84,7 +84,17 @@ def main():
         "BrandUsage": "brand",
         "PlaceholderComment": "placeables",
     }
+    managed_categories = set(xml_lint.values())
 
+    # Reference files covered by this TOML run. The same config file is shared
+    # across projects (e.g. firefox.toml and focus.toml), so only entries whose
+    # file is in scope here are regenerate; entries owned by other projects are
+    # preserved.
+    managed_paths = {ref_file["rel_path"] for ref_file in ref_files}
+
+    # Collect the exceptions currently expressed via tools:ignore in this run's
+    # reference files.
+    current = {category: set() for category in managed_categories}
     for ref_file in ref_files:
         try:
             tree = ET.parse(ref_file["abs_path"])
@@ -102,13 +112,23 @@ def main():
                     # For quotes, skip if it's just HTML markup
                     if "Quote" in rule and not check_string_quotes(string.text, rule):
                         continue
-                    list = config["exceptions"][xml_lint[rule]]
-                    if string_id not in list:
-                        list.append(string_id)
+                    current[xml_lint[rule]].add(string_id)
         except ET.ParseError as e:
             print(f"Error parsing XML file: {e}")
         except Exception as e:
             print(f"Unexpected error: {e}")
+
+    # Rebuild each managed list: keep entries outside this run's scope (other
+    # projects), replace in-scope entries with the new ones so obsolete strings
+    # are dropped, then sort.
+    for category in managed_categories:
+        existing = config["exceptions"].get(category, [])
+        out_of_scope = [
+            string_id
+            for string_id in existing
+            if string_id.split(":", 1)[0] not in managed_paths
+        ]
+        config["exceptions"][category] = sorted(set(out_of_scope) | current[category])
 
     with open(config_file, "w") as f:
         json.dump(config, f, indent=4, sort_keys=True)
