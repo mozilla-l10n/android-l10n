@@ -1382,6 +1382,10 @@
   <string name="studies_remove">Elimina</string>
   <!-- Title of the active section on the studies list -->
   <string name="studies_active">Actius</string>
+  <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
+  <string name="studies_description_4" tools:ignore="BrandUsage">El Firefox selecciona usuaris aleatòriament per a provar funcions i poder millorar-ne la qualitat per a tothom.</string>
+  <!-- Title of the Studies data preference -->
+  <string name="studies_title_2">Permet estudis de funcionalitat</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">Més informació</string>
   <!--
@@ -1408,6 +1412,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Pestanyes privades obertes: %1$s. Toqueu per canviar de pestanya.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d grup de pestanyes obert. Toqueu per canviar de pestanya.</item>
+    <item quantity="other">%1$d grups de pestanyes oberts. Toqueu per canviar de pestanya.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1485,6 +1497,12 @@
   <string name="tab_manager_open_tab_search">Obre la cerca de pestanyes</string>
   <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
   <string name="tab_group_onboarding_item_title">Crea un grup de pestanyes</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in grid view. -->
+  <string name="tab_group_onboarding_grid_item_description">Arrossegueu una pestanya a sobre d’una altra per a agrupar-les.</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
+  <string name="tab_group_onboarding_list_item_description">Seleccioneu diverses pestanyes per a crear un grup.</string>
+  <!-- Content description (accessibility label) for button to dismiss the tab group onboarding item. -->
+  <string name="tab_group_onboarding_item_dismiss_content_description">Descarta la introducció als grups de pestanyes</string>
   <!--
     Tab Group
 
@@ -1503,6 +1521,8 @@
   <string name="create_tab_group_name_label">Nom</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Afegeix a</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Afegeix a un grup de pestanyes nou</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Grup de pestanyes nou</string>
   <plurals name="tab_group_tabs_count_subtitle">
@@ -1633,6 +1653,8 @@
   <string name="download_delete_item">Suprimeix</string>
   <!-- Content description for the toolbar "Navigate back" button -->
   <string name="download_navigate_back_description">Navega cap enrere</string>
+  <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
+  <string name="download_navigate_settings_description">Navega a Paràmetres de les baixades</string>
   <!-- Content description for the toolbar back button while searching the downloads -->
   <string name="download_close_search_description">Enrere i tanca la cerca</string>
   <!--
@@ -1650,6 +1672,8 @@
   <string name="download_share_url">Comparteix l’URL</string>
   <!-- Text for the button to share the download file -->
   <string name="download_share_file">Comparteix el fitxer</string>
+  <!-- Text for the button to rename the download file -->
+  <string name="download_rename_file">Canvia el nom del fitxer</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">Segur que voleu suprimir els elements seleccionats?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
@@ -1660,6 +1684,8 @@
   <string name="download_delete_dialog_cancel">Cancel·la</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
   <string name="download_delete_dialog_confirm">Confirma</string>
+  <!-- Title for the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_title">Canvia el nom del fitxer</string>
   <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_label">Nom</string>
   <string name="download_rename_dialog_confirm_button">Desa</string>
@@ -3584,6 +3610,8 @@
     %s is a placeholder for the name of the certificate authority that issued the certificate.
   -->
   <string name="connection_security_panel_verified_by">Verificat per %s</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
+  <string name="tracker_protections_dashboard_close_handlebar_content_description">Tanca el tauler de control</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
@@ -3687,6 +3715,8 @@
   <string name="likert_scale_option_features_hard_to_find_or_missing" tools:ignore="UnusedResources">Falten funcions o són difícils de trobar</string>
   <!-- Option for likert scale -->
   <string name="likert_scale_option_confusing_or_hard_to_use" tools:ignore="UnusedResources">És confús o difícil d’utilitzar</string>
+  <!-- Option for likert scale -->
+  <string name="likert_scale_option_its_okay" tools:ignore="UnusedResources">Està bé, però no és millor que els altres navegadors</string>
   <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
   <string name="likert_scale_option_i_plan_to_keep_using" tools:ignore="BrandUsage,UnusedResources">Tinc previst seguir utilitzant el Firefox</string>
   <!-- Text shown in prompt for printing microsurvey. "sec" It's an abbreviation for "second". Note: The word "Firefox" should NOT be translated. -->
@@ -3703,6 +3733,8 @@
   <string name="microsurvey_search_title" tools:ignore="BrandUsage,UnusedResources">Esteu satisfet/a amb l’experiència de cerca en el Firefox?</string>
   <!-- Text shown in the survey title for sync experience microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Esteu satisfet/a amb l’experiència de sincronització en el Firefox?</string>
+  <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
+  <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Ajudeu-nos a millorar el Firefox. Quina opció descriu millor la vostra experiència fins ara?</string>
   <!--
     Accessibility
 
@@ -4005,6 +4037,8 @@
   <string name="settings_search_clear_recent_searches_message">Esborra-ho tot</string>
   <!-- Section header for recent search results -->
   <string name="settings_search_recent_searches_section_header">Resultats de cerca recents</string>
+  <!-- Message displayed when the search field is not empty but search results is empty. -->
+  <string name="settings_search_no_results_title">Cap resultat</string>
   <!-- Content Description for the button to open Settings Search (to search through settings). -->
   <string name="settings_search_button_content_description">Botó de cercar paràmetres</string>
   <!-- ==== Terms of use pop up prompt ==== -->
@@ -4077,12 +4111,36 @@
   <string name="sports_widget_match_live">EN DIRECTE</string>
   <!-- Title shown on the sports widget champion scoreboard row celebrating the soccer tournament winner. -->
   <string name="sports_widget_champions_title">Campions de la Copa del Món 2026</string>
+  <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament runners-up. Runners-up means second place. -->
+  <string name="sports_widget_runner_up_title" tools:ignore="UnusedResources">Subcampions</string>
+  <!-- Title shown on the sports widget champion scoreboard celebrating the soccer tournament third place winners. -->
+  <string name="sports_widget_third_place_title">Tercer lloc</string>
   <!-- Round name shown on the sports widget for the Round of 32 stage in the soccer tournament. -->
   <string name="sports_widget_round_of_32">Setzens de final</string>
   <!-- Round name shown on the sports widget for the Round of 16 stage in the soccer tournament. -->
   <string name="sports_widget_round_of_16">Vuitens de final</string>
   <!-- Round name shown on the sports widget for the quarter-finals stage in the soccer tournament. -->
   <string name="sports_widget_quarter_final">Quarts de final</string>
+  <!-- Round name shown on the sports widget for the semi-finals stage in the soccer tournament. -->
+  <string name="sports_widget_semi_final">Semifinals</string>
+  <!-- Round name shown on the sports widget for the final stage in the soccer tournament. -->
+  <string name="sports_widget_final">Final</string>
+  <!-- Round name shown on the sports widget for the bronze final stage in the soccer tournament. -->
+  <string name="sports_widget_bronze_final">Tercer lloc</string>
+  <!-- Sports widget error card message shown when match data fails to load. -->
+  <string name="sports_widget_error_load_failed" tools:ignore="UnusedResources">La informació del partit no està disponible ara mateix. Torneu-ho a provar d’aquí a uns minuts.</string>
+  <!-- Sports widget action label to refresh match data after an error. -->
+  <string name="sports_widget_error_refresh">Actualitza</string>
+  <!-- Sports widget group stage label for group A in the soccer tournament. -->
+  <string name="sports_widget_group_a">Grup A</string>
+  <!-- Sports widget group stage label for group B in the soccer tournament. -->
+  <string name="sports_widget_group_b">Grup B</string>
+  <!-- Sports widget group stage label for group C in the soccer tournament. -->
+  <string name="sports_widget_group_c">Grup C</string>
+  <!-- Sports widget group stage label for group D in the soccer tournament. -->
+  <string name="sports_widget_group_d">Grup D</string>
+  <!-- Sports widget group stage label for group E in the soccer tournament. -->
+  <string name="sports_widget_group_e">Grup E</string>
   <!-- Sports widget group stage label for group F in the soccer tournament. -->
   <string name="sports_widget_group_f">Grup F</string>
   <!-- Sports widget group stage label for group G in the soccer tournament. -->
@@ -4258,6 +4316,22 @@
   <string name="context_menu_open_image_with_google_lens">Cerca amb el Google Lens</string>
   <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
   <string name="lens_camera_permission_denied">Permís denegat</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the photo they capture will be sent to Google Lens for a visual search.
+  -->
+  <string name="lens_camera_title_lens">Google Lens</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the camera is being used to scan a QR code.
+  -->
+  <string name="lens_camera_title_qr">Codi QR</string>
+  <!-- Title for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_title">Activa la cerca amb el Google Lens</string>
+  <!-- Description for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_description">Envia imatges i fotos a Google per a fer cerques visuals.</string>
+  <!-- Caption shown under the Google Lens toggle clarifying when the feature is available -->
+  <string name="preferences_google_lens_availability_caption">Només està disponible si heu activat el Google més amunt i és el motor de cerca actiu mentre navegueu.</string>
   <!-- Title for the Google Lens AI feature toggle -->
   <string name="ai_controls_google_lens_title">Google Lens</string>
   <!-- Description for the Google Lens AI feature toggle -->
