@@ -3129,6 +3129,14 @@
   <string name="ip_protection_onboarding_body">%1$s, ukrywając swoje położenie, nawet w\u00a0publicznej sieci Wi-Fi. Bezpłatne %2$d\u00a0GB co miesiąc.</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">Przeglądaj Internet z\u00a0dodatkową ochroną</string>
+  <!--
+    The body of the VPN onboarding card for a promotion that provides unlimited data bandwidth for a certain time.
+    %1$s is a localized date (for example "Jun 9") indicating the end of the promotional period.
+    %2$s is a link using ip_protection_onboarding_body_link_promo (“Learn more”) as text. It links to a support article about VPN on Firefox.
+  -->
+  <string name="ip_protection_onboarding_body_promo">Włącz sieć VPN, aby zwiększyć prywatność przeglądania i utrudnić śledzenie. Wypróbuj ją teraz, aby uzyskać nieograniczoną przepustowość do %1$s. %2$s</string>
+  <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
+  <string name="ip_protection_onboarding_body_link_promo">Więcej informacji</string>
   <!-- Label for the dismiss button on the onboarding bottom sheet. -->
   <string name="ip_protection_onboarding_not_now_button">Nie teraz</string>
   <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
@@ -3138,6 +3146,8 @@
     %1$d is the total monthly allowance in GB (for example "50").
   -->
   <string name="ip_protection_data_limit_reached_snackbar">Wykorzystano %1$d\u00a0GB danych VPN. Dostęp zostanie przywrócony w\u00a0przyszłym miesiącu.</string>
+  <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
+  <string name="ip_protection_data_limit_reached_snackbar_action">Ustawienia</string>
   <!--
     Autofill
 
@@ -3870,6 +3880,69 @@
   <string name="protection_panel_privacy_and_security_settings_2">Ustawienia prywatności</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">Uprawnienia</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">Na tej witrynie zablokowano %1$d element śledzący</item>
+    <item quantity="few">Na tej witrynie zablokowano %1$d elementy śledzące</item>
+    <item quantity="other">Na tej witrynie zablokowano %1$d elementów śledzących</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_social_media_trackers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked social media trackers.
+      %1$d is a placeholder for the number of social media trackers blocked.
+    -->
+    <item quantity="one">%1$d element śledzący serwisu społecznościowego</item>
+    <item quantity="few">%1$d elementy śledzące serwisów społecznościowych</item>
+    <item quantity="other">%1$d elementów śledzących serwisów społecznościowych</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cross_site_cookies">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cross-site tracking cookies.
+      %1$d is a placeholder for the number of cross-site tracking cookies blocked.
+    -->
+    <item quantity="one">%1$d ciasteczko śledzące między witrynami</item>
+    <item quantity="few">%1$d ciasteczka śledzące między witrynami</item>
+    <item quantity="other">%1$d ciasteczek śledzących między witrynami</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cryptominers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cryptomining scripts.
+      %1$d is a placeholder for the number of cryptominers blocked.
+    -->
+    <item quantity="one">%1$d element używający urządzenia użytkownika do generowania kryptowalut</item>
+    <item quantity="few">%1$d elementy używające urządzenia użytkownika do generowania kryptowalut</item>
+    <item quantity="other">%1$d elementów używających urządzenia użytkownika do generowania kryptowalut</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_fingerprinters">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked fingerprinter scripts.
+      %1$d is a placeholder for the number of fingerprinters blocked.
+    -->
+    <item quantity="one">%1$d element śledzący przez zbieranie informacji o konfiguracji</item>
+    <item quantity="few">%1$d elementy śledzące przez zbieranie informacji o konfiguracji</item>
+    <item quantity="other">%1$d elementów śledzących przez zbieranie informacji o konfiguracji</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_2">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked generic tracking scripts.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d treść z elementami śledzącymi</item>
+    <item quantity="few">%1$d treści z elementami śledzącymi</item>
+    <item quantity="other">%1$d treści z elementami śledzącymi</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">W tym tygodniu zablokowano %1$d element śledzący</item>
+    <item quantity="few">W tym tygodniu zablokowano %1$d elementy śledzące</item>
+    <item quantity="other">W tym tygodniu zablokowano %1$d elementów śledzących</item>
+  </plurals>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
@@ -3901,6 +3974,8 @@
     %s is a placeholder for the name of the certificate authority that issued the certificate.
   -->
   <string name="connection_security_panel_verified_by">Zweryfikowane przez: %s</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
+  <string name="tracker_protections_dashboard_close_handlebar_content_description">Zamknij panel</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
@@ -4024,6 +4099,24 @@
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Jak określisz swoje zadowolenie z\u00a0synchronizacji w\u00a0Firefoksie?</string>
   <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Pomóż nam ulepszyć Firefoksa. Które z\u00a0poniższych najlepiej opisuje Twoje dotychczasowe wrażenia?</string>
+  <!--
+    Uninstall Survey
+
+    Title text for the uninstall survey dialog, asking the user for the reason they are removing the app
+  -->
+  <string name="microsurvey_uninstall_survey_title">Twoja opinia jest dla nas ważna. Dlaczego odinstalowujesz tę aplikację?</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_1_v2">Jest powolna lub zawodna</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_2_v2">Strony nie działają poprawnie</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_3_v2">Nie ma potrzebnych mi funkcji</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_4_v2">Filmy, pobieranie lub multimedia nie działają</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_5_v2">Jest trudna w użytku lub słabo zaprojektowana</string>
+  <!-- Button label shown at the bottom of the uninstall survey -->
+  <string name="uninstall_survey_button_label">Prześlij opinię i odinstaluj</string>
   <!--
     Accessibility
 
