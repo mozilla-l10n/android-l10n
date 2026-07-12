@@ -651,6 +651,8 @@
     %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text_1 as text (“Learn More”).
   -->
   <string name="nova_onboarding_marketing_body_7" tools:ignore="BrandUsage">Ens podeu ajudar a arribar a més gent permetent que Mozilla informi a la plataforma de la qual proveniu que feu servir el Firefox. %1$s</string>
+  <!-- Marketing onboarding additional body text. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_marketing_body_line_two" tools:ignore="BrandUsage">Mozilla s’enorgulleix de ser independent i d’estar dedicada a defensar el web obert davant els monopolis tecnològics.</string>
   <!--
     Marketing onboarding additional body text. 'Firefox' is intentionally hardcoded.
     “Allowing” refers to the main button “Allow and Continue”; the ask for the user is to allow communicating back to the platform.
@@ -731,6 +733,12 @@
   <string name="preferences_category_general">General</string>
   <!-- Preference category for all links about Fenix -->
   <string name="preferences_category_about">Quant a</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">Motor de cerca per defecte per a la navegació normal</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">Motor de cerca per defecte per a la navegació privada</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Utilitza el mateix motor de cerca que la navegació normal</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Gestiona els motors de cerca alternatius</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -940,6 +948,11 @@
   <string name="preferences_category_file_storage">Emmagatzematge de fitxers</string>
   <!-- Preference title for downloads default location. -->
   <string name="preferences_downloads_default_location_title">Ubicació de baixada per defecte</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">No teniu permís per a utilitzar aquesta carpeta. Trieu-ne una altra.</string>
   <!-- Preference title for choosing an app to handle downloads -->
   <string name="preferences_choose_app_for_downloads">Gestiona les baixades amb una altra aplicació</string>
   <!-- Preference category for deleting or removing downloads -->
@@ -948,6 +961,7 @@
   <string name="preferences_downloads_delete_from_device_description">El fitxer se suprimeix del dispositiu i s’elimina de l’historial de baixades</string>
   <string name="preferences_downloads_remove_from_download_history">Elimina de l’historial de baixades</string>
   <string name="preferences_downloads_remove_from_download_history_description">El fitxer s’elimina de l’historial de baixades, però segueix desat al dispositiu</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Demana-m’ho en suprimir fitxers</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads_2">Paràmetres de baixades</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -1119,10 +1133,14 @@
   <string name="restart_warning_dialog_title">Voleu canviar la icona de l’aplicació?</string>
   <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="restart_warning_dialog_body_2">És possible que l’aplicació es tanqui. Només cal que toqueu la icona nova per tornar a obrir el %1$s.</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart and will remove existing shortcuts because of the OS limitations. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_and_shortcuts_removal_warning_dialog_body">Si canvieu la icona, s’eliminaran tots els llocs web i les dreceres que hàgiu desat a la pantalla d’inici. És possible que el %1$s es tanqui. Toqueu la icona nova per tornar-lo a obrir.</string>
   <!-- Dialog button text for confirming the possible app restart and new icon selection -->
   <string name="restart_warning_dialog_button_positive_2">Canvia la icona</string>
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Cancel·la</string>
+  <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
+  <string name="shortcuts_update_error">No s’ha pogut actualitzar la icona de l’aplicació. Elimineu les dreceres existents i torneu-ho a provar.</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1306,6 +1324,8 @@
   <string name="toolbar_customize_shortcut_homepage">Pàgina d’inici</string>
   <!-- Back shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_back">Enrere</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Cap</string>
   <!--
     App icon Preferences
 
@@ -1599,6 +1619,8 @@
   <string name="tab_group_onboarding_item_dismiss_content_description">Descarta la introducció als grups de pestanyes</string>
   <!-- The header text displayed on the tab groups page when no tab groups are open -->
   <string name="tab_manager_empty_tab_groups_page_header">Proveu els grups de pestanyes per a reduir el desplaçament i anar per feina</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Seleccioneu pestanyes per a crear un grup. Es desen aquí, a punt per quan les necessiteu.</string>
   <!--
     Tab Group
 
@@ -4612,6 +4634,8 @@
   <string name="preferences_debug_settings_google_lens_integration">Activa la integració amb el Google Lens</string>
   <!-- Lens image search button content description -->
   <string name="lens_search_content_description">Cerca amb imatge</string>
+  <!-- Content description for the gallery picker button in the Lens camera screen -->
+  <string name="content_description_gallery">Tria de la galeria per a enviar al Google Lens</string>
   <!-- Content description for the shutter button in the Lens camera screen -->
   <string name="content_description_take_photo">Fes una foto i envia-la al Google Lens</string>
   <!-- Image context menu entry that sends the long-pressed image to Google Lens -->
@@ -4657,6 +4681,8 @@
   <string name="firefox_labs_banner_title_2">Proveu les nostres funcions experimentals!</string>
   <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
   <string name="firefox_labs_share_feedback">Comparteix els comentaris</string>
+  <!-- Content description for the share feedback link on a Firefox Labs feature. This text will be used by screen readers to provide more context on the feedback link. %s is the name of the Firefox Labs feature. -->
+  <string name="firefox_labs_share_feedback_content_description">Comparteix comentaris sobre %s.</string>
   <!-- Button text on the Firefox Labs screen for restoring all toggles back to the default settings. The button will turn off any experimental features. -->
   <string name="firefox_labs_restore_default_button_text">Restaura els valors per defecte</string>
   <!-- The title used in a confirmation dialog on the Firefox Labs screen when toggling "on" or "off" an experimental feature that requires a restart. -->
