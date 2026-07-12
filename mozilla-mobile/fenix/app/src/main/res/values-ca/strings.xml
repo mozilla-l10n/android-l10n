@@ -1533,6 +1533,25 @@
     <item quantity="one">%1$d pestanya</item>
     <item quantity="other">%1$d pestanyes</item>
   </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Afegeix al grup de pestanyes %1$s, %2$d pestanya, color %3$s</item>
+    <item quantity="other">Afegeix al grup de pestanyes %1$s, %2$d pestanyes, color %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Comparteix el grup de pestanyes %1$s amb %2$d pestanya.</item>
+    <item quantity="other">Comparteix el grup de pestanyes %1$s amb %2$d pestanyes.</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Mostra el grup de pestanyes, contrau el control d’arrossegament</string>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">Voleu suprimir el grup de pestanyes?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -1649,6 +1668,11 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Cancel·la</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Voleu suprimir el fitxer?</item>
+    <item quantity="other">Voleu suprimir %d fitxers?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Suprimeix</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1680,6 +1704,10 @@
   <string name="download_delete_multi_select_dialog_confirm">Suprimeix</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Cancel·la</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Suprimeix del dispositiu</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Només elimina-ho de l’historial de baixades</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
   <string name="download_delete_dialog_cancel">Cancel·la</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
@@ -1690,6 +1718,8 @@
   <string name="download_rename_dialog_label">Nom</string>
   <string name="download_rename_dialog_confirm_button">Desa</string>
   <string name="download_rename_dialog_cancel_button">Cancel·la</string>
+  <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
+  <string name="download_rename_error_case_only_error">El nom que heu introduït només canvia les lletres majúscules o minúscules. Escriviu un altre nom de fitxer.</string>
   <string name="download_rename_error_dismiss_button">D’acord</string>
   <string name="change_file_extension_cancel_button">Cancel·la</string>
   <string name="change_file_extension_confirm_button">Sí, canvia-ho.</string>
@@ -1765,6 +1795,16 @@
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Altres</string>
   <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">Voleu baixar el fitxer? (%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">Voleu baixar el fitxer?</string>
+  <!--
     WebCompat Reporter
 
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
@@ -1779,11 +1819,21 @@
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Introduïu un URL vàlid</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_label_whats_broken_3">Què no funciona?</string>
+  <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
+  <string name="webcompat_reporter_clear_reason_content_description">Esborra el motiu seleccionat</string>
+  <!-- The error message of the description when the user selects "Something else" as the reason, but left the description empty or too short. -->
+  <string name="webcompat_reporter_description_error">Escriviu un mínim de 10 caràcters</string>
+  <!-- The label/title of a mandatory field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_mandatory_description">Descriviu el problema detalladament per a ajudar-nos a investigar-lo</string>
+  <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Què no funciona?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_2">Trieu un motiu</string>
   <!-- The error message of the dropdown, prompting the user to select a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_choose_reason_error">Trieu un motiu</string>
+  <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_description_2">Descriviu el problema detalladament per a ajudar-nos a investigar-lo (opcional)</string>
   <!-- The label/title of an optional field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_description">Descriviu el problema (opcional)</string>
   <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
@@ -1791,9 +1841,13 @@
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Cancel·la</string>
   <!-- The button text for the send button to submit the provided form data. -->
+  <string name="webcompat_reporter_send_report">Envia l’informe</string>
+  <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Envia</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
   <string name="webcompat_reporter_success_snackbar_text_2">S’ha enviat l’informe</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text_2">Què ha passat? Què esperàveu que passés? Indiqueu els passos per a reproduir el problema.</string>
   <!-- Placeholder text for the description field to prompt the user on what they should type. -->
   <string name="webcompat_reporter_problem_description_placeholder_text">Què ha passat? Què hauria d’haver passat?</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
@@ -1832,6 +1886,8 @@
   <string name="webcompat_reporter_reason_account2">No es pot iniciar la sessió o registrar-se</string>
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">El lloc demana que desactivi el blocador d’anuncis</string>
+  <!-- Broken site reason text for browser isn’t supported or blocked -->
+  <string name="webcompat_reporter_reason_notsupported_2">El navegador està blocat o no és compatible</string>
   <!-- Broken site reason text for the site being deceptive -->
   <string name="webcompat_reporter_reason_site_is_deceptive">Aquest lloc és enganyós</string>
   <!-- Broken site reason text for browser isn’t supported or blocked -->
@@ -1895,6 +1951,8 @@
   <string name="bookmark_error_edit_bookmark">No s’ha pogut editar l’adreça d’interès</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">EDITA</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">Selecciona</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">Mou</string>
   <!-- Bookmark overflow menu edit button -->
@@ -1967,8 +2025,12 @@
   <string name="bookmark_delete_folder_content_description">Suprimeix la carpeta</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">Cerca en les adreces d’interès</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">Cerca en carpetes</string>
   <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
   <string name="bookmark_item_menu_button_content_description">Menú d’elements per a %s</string>
+  <!-- Content description for the chevron that will close a folder on the select folder screen so that its children are no longer visible. %s is the title of the folder that will be closed -->
+  <string name="bookmark_select_folder_close_folder_content_description">Tanca la carpeta: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Tanca les adreces d’interès</string>
   <!-- Content description for the Import bookmarks button in bookmarks screen. -->
@@ -1983,6 +2045,8 @@
   <string name="bookmark_empty_list_folder_description">Afegiu adreces d’interès mentre navegueu per a trobar fàcilment els vostres llocs preferits més tard.</string>
   <!-- Description for the add new folder button when selecting a folder. -->
   <string name="bookmark_select_folder_new_folder_button_title">Carpeta nova</string>
+  <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
+  <string name="bookmark_moved_single_item">%1$s s’ha mogut a %2$s</string>
   <!--
     Site Permissions
 
