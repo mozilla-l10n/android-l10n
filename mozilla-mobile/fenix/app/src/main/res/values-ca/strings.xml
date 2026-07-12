@@ -625,6 +625,19 @@
   <string name="nova_onboarding_marketing_body" tools:ignore="BrandUsage,UnusedResources">Compartiu amb els socis de màrqueting de Mozilla com vàreu descobrir el Firefox i que l’utilitzeu. Aquestes dades mai no es vendran. %1$s</string>
   <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
   <string name="nova_onboarding_marketing_body_2" tools:ignore="BrandUsage">Compartiu amb els socis de màrqueting de Mozilla com vàreu descobrir el Firefox i que l’utilitzeu. Aquestes dades mai no es vendran.</string>
+  <!-- Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded. -->
+  <string name="nova_onboarding_marketing_body_3" tools:ignore="BrandUsage,UnusedResources">Ens podeu ajudar a arribar a més gent permetent que Mozilla informi als canals on promocionem el Firefox que sou usuari del Firefox.</string>
+  <!--
+    Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
+  -->
+  <string name="nova_onboarding_marketing_body_4" tools:ignore="BrandUsage,UnusedResources">Ens podeu ajudar a arribar a més gent permetent que Mozilla informi a la plataforma de la qual proveniu que feu servir el Firefox.</string>
+  <!--
+    Marketing onboarding body. 'Firefox' and 'Mozilla' are intentionally hardcoded.
+    “Platform you came from” refers to the external app, website, store, campaign, or other source that directed the user to Firefox.
+    %1$s is replaced by an active link, using nova_onboarding_marketing_body_link_text_1 as text (“Learn More”).
+  -->
+  <string name="nova_onboarding_marketing_body_7" tools:ignore="BrandUsage">Ens podeu ajudar a arribar a més gent permetent que Mozilla informi a la plataforma de la qual proveniu que feu servir el Firefox. %1$s</string>
   <!-- Marketing onboarding body link text. -->
   <string name="nova_onboarding_marketing_body_link_text">Com utilitzem les dades</string>
   <!-- Marketing onboarding body link text. -->
@@ -643,6 +656,8 @@
   <string name="nova_onboarding_notifications_button">Activa les notificacions</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Afegeix el giny del Firefox</string>
+  <!-- Customize prompt onboarding title. -->
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">Fàcil de personalitzar i més privat amb cada toc</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -1287,8 +1302,12 @@
   <string name="preference_gestures_website_pull_to_refresh">Estira per actualitzar</string>
   <!-- Preference for using the dynamic toolbar -->
   <string name="preference_gestures_dynamic_toolbar">Amaga la barra d’eines en desplaçar-me</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs_2">Mostra les pestanyes obertes en fer lliscar la barra d’eines verticalment</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Canvia de pestanya en fer lliscar la barra d’adreces cap als costats</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Sacseja per a resumir</string>
   <!--
     Library
 
@@ -1466,6 +1485,8 @@
   <string name="add_tab">Afegeix una pestanya</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_private_tab">Afegeix una pestanya privada</string>
+  <!-- Text for the tab search bar placeholder -->
+  <string name="tab_manager_search_bar_placeholder">Cerca en les vostres pestanyes</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Pestanyes tancades recentment</string>
   <!-- Text shown in the menu to select all tabs. -->
@@ -1540,6 +1561,8 @@
   <string name="tab_group_onboarding_list_item_description">Seleccioneu diverses pestanyes per a crear un grup.</string>
   <!-- Content description (accessibility label) for button to dismiss the tab group onboarding item. -->
   <string name="tab_group_onboarding_item_dismiss_content_description">Descarta la introducció als grups de pestanyes</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Proveu els grups de pestanyes per a reduir el desplaçament i anar per feina</string>
   <!--
     Tab Group
 
@@ -1549,6 +1572,8 @@
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Edita el grup</string>
   <string name="create_tab_group_save_button">Desa</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Grup nou, contrau el control d’arrossegament</string>
   <!--
     Default tab group name when creating a tab group
     %d is the number of existing tab groups + 1.
@@ -1558,6 +1583,8 @@
   <string name="create_tab_group_name_label">Nom</string>
   <!-- Title for adding more tabs to a tab group. -->
   <string name="add_to_tab_group_title">Afegeix a</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Afegeix a un grup de pestanyes, contrau el control d’arrossegament</string>
   <!-- Content Description for "New tab group" panel. -->
   <string name="add_to_new_tab_group_content_description">Afegeix a un grup de pestanyes nou</string>
   <!-- Label for adding to a new tab group. -->
@@ -1589,6 +1616,14 @@
   </plurals>
   <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
   <string name="tab_group_sheet_dismiss_description">Mostra el grup de pestanyes, contrau el control d’arrossegament</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Grup de pestanyes %1$s amb %2$d pestanya, color %3$s</item>
+    <item quantity="other">Grup de pestanyes %1$s amb %2$d pestanyes, color %3$s</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">Voleu suprimir el grup de pestanyes?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -1757,8 +1792,17 @@
   <string name="download_rename_dialog_label">Nom</string>
   <string name="download_rename_dialog_confirm_button">Desa</string>
   <string name="download_rename_dialog_cancel_button">Cancel·la</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">Ja hi ha un fitxer amb el nom «%s» en aquesta ubicació</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">Els noms de fitxer no poden tenir «/»</string>
   <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
   <string name="download_rename_error_case_only_error">El nom que heu introduït només canvia les lletres majúscules o minúscules. Escriviu un altre nom de fitxer.</string>
+  <!-- Title for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_title">No es pot canviar el nom del fitxer</string>
   <string name="download_rename_error_dismiss_button">D’acord</string>
   <string name="change_file_extension_cancel_button">Cancel·la</string>
   <string name="change_file_extension_confirm_button">Sí, canvia-ho.</string>
