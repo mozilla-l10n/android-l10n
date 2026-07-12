@@ -19,8 +19,12 @@
   <string name="content_description_menu">Més opcions</string>
   <!-- Content description (not visible, for screen readers etc.): "Private Browsing" menu button. -->
   <string name="content_description_private_browsing">Navegació privada</string>
+  <!-- Content description (not visible, for screen readers etc.): "Normal Browsing" menu button. -->
+  <string name="content_description_normal_browsing">Navegació normal</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Escriviu una cerca o adreça</string>
+  <!-- Shorter placeholder text shown in the search bar when an additional action (voice search) is rendered alongside the hint. -->
+  <string name="search_hint_short">Cerca</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
   <string name="search_hint_general_engine">Cerca al web</string>
   <!-- Placeholder text shown in search bar when using history search -->
@@ -55,6 +59,8 @@
   <string name="tab_manager_empty_synced_tabs_page_description">Inicieu la sessió per gestionar les pestanyes sincronitzades de tots els vostres dispositius.</string>
   <!-- The action text displayed on the synced tabs page when the user is not logged into an account, prompting the user to sign into their account. When clicked, it takes the user to the account sign-in flow. -->
   <string name="tab_manager_empty_synced_tabs_page_sign_in_cta">Inicia la sessió</string>
+  <!-- Text for the button used to show all stories -->
+  <string name="homepage_all_stories">Tots els articles</string>
   <!--
     Home - Bookmarks
 
@@ -143,6 +149,8 @@
   <string name="home_screen_shortcut_open_new_private_tab_2">Pestanya privada nova</string>
   <!-- Shortcut action to open Passwords screen -->
   <string name="home_screen_shortcut_passwords">Contrasenyes</string>
+  <!-- Shortcut action to open uninstall survey -->
+  <string name="home_screen_shortcut_uninstall_survey">Desinstal·lar, per què?</string>
   <!--
     Recent Tabs
 
@@ -329,6 +337,8 @@
     Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred.
   -->
   <string name="browser_toolbar_translate">Tradueix la pàgina</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">Sacsegeu el dispositiu per a resumir aquesta pàgina en segons. ⚡️</string>
   <!--
     Translation Toolbar
 
@@ -341,6 +351,12 @@
   <string name="translation_toolbar_expand_action">Obre el full de traduccions</string>
   <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
   <string name="translation_toolbar_close_action">Descarta el missatge</string>
+  <!--
+    Page summaries
+
+    Toolbar title for the Page summaries settings fragment
+  -->
+  <string name="preferences_page_summaries">Resums de pàgines</string>
   <!--
     AI Controls settings
 
@@ -627,6 +643,19 @@
   <string name="nova_onboarding_notifications_button">Activa les notificacions</string>
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Afegeix el giny del Firefox</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">El %1$s ha blocat %2$,d element de seguiment mentre navegàveu per Internet.</item>
+    <item quantity="other">El %1$s ha blocat %2$,d elements de seguiment mentre navegàveu per Internet.</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">Comença a personalitzar</string>
   <!-- ==== End of Project "Nova" onboarding strings ==== -->
 
   <!--
