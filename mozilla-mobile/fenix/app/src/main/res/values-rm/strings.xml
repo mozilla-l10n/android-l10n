@@ -958,6 +958,12 @@
   <!-- Preference category for deleting or removing downloads -->
   <string name="preferences_category_delete_or_remove_downloads">Stizzar u allontanar telechargiadas</string>
   <string name="preferences_downloads_delete_from_device">Stizzar da l’apparat</string>
+  <string name="preferences_downloads_delete_from_device_description">La datoteca è vegnida stizzada da tes apparat ed allontanada da la cronologia da las telechargiadas</string>
+  <string name="preferences_downloads_remove_from_download_history">Allontanar da la cronologia da telechargiadas</string>
+  <string name="preferences_downloads_remove_from_download_history_description">La datoteca è vegnida allontanada da la cronologia da tias telechargiadas, ma ella è anc adina memorisada sin tes apparat</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Dumandar cura che jau stiz datotecas</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">Parameters telechargiadas</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Activar la protocollaziun da Gecko</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -1010,6 +1016,12 @@
   <string name="customize_addon_collection_user_hint">Possessur da la collecziun (ID da l\'utilisader)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Modifitgà la collecziun dad extensiuns. L’applicaziun vegn serrada per applitgar las midadas…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Rapport davart la protecziun da datas</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Cuntinuar qua</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -1025,8 +1037,12 @@
   <string name="customize_toggle_pocket_sponsored">Artitgels sponsurads</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Maletgs dal fund davos</string>
+  <!-- Label for the menu item that opens the wallpaper settings screen. -->
+  <string name="browser_menu_change_wallpaper">Midar il maletg da culissa</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">Scursanidas sponsuradas</string>
+  <!-- Title for the customize home screen section that toggles the Homepage sports widget. -->
+  <string name="customize_toggle_world_cup">Campiunadi mundial</string>
   <!--
     Wallpapers
 
@@ -1308,6 +1324,8 @@
   <string name="toolbar_customize_shortcut_homepage">Pagina da partenza</string>
   <!-- Back shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_back">Enavos</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Nagina</string>
   <!--
     App icon Preferences
 
@@ -1340,8 +1358,12 @@
   <string name="preference_gestures_website_pull_to_refresh">Trair per actualisar</string>
   <!-- Preference for using the dynamic toolbar -->
   <string name="preference_gestures_dynamic_toolbar">Scrollar per zuppentar la trav d\'utensils</string>
+  <!-- Preference for showing the opened tabs by swiping up on the toolbar -->
+  <string name="preference_gestures_swipe_toolbar_show_tabs_2">Stritgar verticalmain sur la trav d’utensils per vesair ils tabs averts</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">Stritgar da la vart la trav d’adressas per midar tabs</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">Scurlar per resumar</string>
   <!--
     Library
 
@@ -1502,6 +1524,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Tabs privats averts: %1$s. Tutgar per midar tab.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d gruppa da tabs averta. Tutgar per midar tab.</item>
+    <item quantity="other">%1$d gruppas da tabs avertas. Tutgar per midar tab.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1515,6 +1545,8 @@
   <string name="tab_manager_search_bar_placeholder">Tschertgar en tes tabs</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Tabs serrads dacurt</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">Selecziunar tut</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">Parameters dal conto</string>
   <!-- Text shown in the menu to view tab settings -->
@@ -1537,6 +1569,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Cundivider</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Agiuntar a la collecziun</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Agiuntar a la gruppa</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">Menu da tabs tschernids</string>
   <!-- Title text displayed for a homepage tab in the tabs tray. -->
@@ -1575,6 +1609,119 @@
   <string name="pwa_site_controls_title_private">%1$s (modus privat)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Avrir la tschertga da tabs</string>
+  <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
+  <string name="tab_group_onboarding_item_title">Crear ina gruppa da tabs</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in grid view. -->
+  <string name="tab_group_onboarding_grid_item_description">Tira e depona in tab sin in auter per als gruppar.</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
+  <string name="tab_group_onboarding_list_item_description">Tscherna plirs tabs per crear ina gruppa.</string>
+  <!-- Content description (accessibility label) for button to dismiss the tab group onboarding item. -->
+  <string name="tab_group_onboarding_item_dismiss_content_description">Serrar l’introducziun en las gruppas da tabs</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">Emprova las gruppas da tabs per main scrollar e dapli far</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Tscherna tabs per crear ina gruppa. Els vegnan memorisads qua ed èn pronts cura che ti als dovras.</string>
+  <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">Crear ina gruppa da tabs</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">Modifitgar la gruppa</string>
+  <string name="create_tab_group_save_button">Memorisar</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">Nova gruppa, manetsch da spustar per zuppentar l’element</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Gruppa %d</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">Num</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">Agiuntar a</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Agiuntar ad ina gruppa da tabs, manetsch da spustar per zuppentar l’element</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Agiuntar ad ina nova gruppa da tabs</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Nov gruppa da tabs</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d tab</item>
+    <item quantity="other">%1$d tabs</item>
+  </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Agiuntar a la gruppa da tabs %1$s, %2$d tab, colur %3$s</item>
+    <item quantity="other">Agiuntar a la gruppa da tabs %1$s, %2$d tabs, colur %3$s</item>
+  </plurals>
+  <plurals name="share_tab_group_button_content_description">
+    <!--
+      Content Description for share tab group button.
+      %1$s is the name of the tab group.
+      %2$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">Cundivider la gruppa da tabs %1$s cun %2$d tab.</item>
+    <item quantity="other">Cundivider la gruppa da tabs %1$s cun %2$d tabs.</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">Mussar la gruppa da tabs, manetsch da spustar per zuppentar</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">Gruppa da tabs %1$s cun %2$d tab, colur %3$s</item>
+    <item quantity="other">Gruppa da tabs %1$s cun %2$d tabs, colur %3$s</item>
+  </plurals>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">Stizzar la gruppa da tabs?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">Questa acziun stizza definitivamain la gruppa.</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">Stizzar la gruppa</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">Interrumper</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">Serrar il tab e stizzar la gruppa?</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">Questa acziun stizza definitivamain la gruppa.</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Stizzar la gruppa</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Interrumper</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Mellen</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Oransch</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Cotschen</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Rosa</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Lila</string>
+  <!-- Tab group color: Violet -->
+  <string name="tab_group_color_violet">Violet</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">Blau</string>
+  <!-- Tab group color: Cyan -->
+  <string name="tab_group_color_cyan">Cian</string>
+  <!-- Tab group color: Green -->
+  <string name="tab_group_color_green">Verd</string>
+  <!-- Tab group color: Grey -->
+  <string name="tab_group_color_grey">Grisch</string>
   <!--
     History
 
@@ -1653,6 +1800,11 @@
     This button will dismiss the dialog.
   -->
   <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Interrumper</string>
+  <plurals name="downloads_delete_dialog_title">
+    <!-- Title for the download deletion confirmation dialog. The message changes depending on how many files are selected. %d is the number of files to be deleted. -->
+    <item quantity="one">Stizzar la datoteca?</item>
+    <item quantity="other">Stizzar las %d datotecas?</item>
+  </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">Stizzar</string>
   <!-- Content description for the toolbar "Navigate back" button -->
@@ -1676,12 +1828,50 @@
   <string name="download_share_url">Parter l’URL</string>
   <!-- Text for the button to share the download file -->
   <string name="download_share_file">Cundivider la datoteca</string>
+  <!-- Text for the button to rename the download file -->
+  <string name="download_rename_file">Renumnar la datoteca</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">Vuls ti propi stizzar ils elements tschernids?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
   <string name="download_delete_multi_select_dialog_confirm">Stizzar</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Interrumper</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_device">Stizzar da l’apparat</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Mo allontanar da la cronologia da telechargiadas</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the negative action. -->
+  <string name="download_delete_dialog_cancel">Interrumper</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
+  <string name="download_delete_dialog_confirm">Confermar</string>
+  <!-- Title for the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_title">Renumnar la datoteca</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">Num</string>
+  <string name="download_rename_dialog_confirm_button">Memorisar</string>
+  <string name="download_rename_dialog_cancel_button">Interrumper</string>
+  <!--
+    Error message when renaming with a name that already exists.
+    %s is the proposed file name.
+  -->
+  <string name="download_rename_error_exists_error">Ina datoteca cun il num «%s» exista gia en quest lieu</string>
+  <!-- Error message when renaming with an invalid file name. -->
+  <string name="download_rename_error_invalid_name_error">Nums da datoteca na dastgan betg cuntegnair «/»</string>
+  <!-- Error message shown when a user tries to rename a downloaded file but only changes the casing (e.g., "file.txt" to "File.txt"). -->
+  <string name="download_rename_error_case_only_error">Il num che ti has endatà modifitgescha mo maiusclas u minusclas. Emprova cun in auter num da datoteca.</string>
+  <!-- Title for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_title">Impussibel da renumna la datoteca</string>
+  <!-- Description message for the alert dialog when the file cannot be renamed. -->
+  <string name="download_rename_error_cannot_rename_description">Impussibel da renumnar questa datoteca pervia da restricziuns dal sistem u da la memoria.</string>
+  <string name="download_rename_error_dismiss_button">OK</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">Midar il tip da datoteca a %s?</string>
+  <string name="change_file_extension_description">Quai avra eventualmain la datoteca en in’autra app e pudess esser ristgus per tes apparat.</string>
+  <string name="change_file_extension_cancel_button">Interrumper</string>
+  <string name="change_file_extension_confirm_button">Gea, modifitgar</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">En elavuraziun</string>
   <!--
@@ -1767,6 +1957,10 @@
   <string name="webcompat_reporter_label_url">URL</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Endatescha per plaschair in URL valid</string>
+  <!-- The error message of the description when the user selects "Something else" as the reason, but left the description empty or too short. -->
+  <string name="webcompat_reporter_description_error">Endatescha per plaschair almain 10 caracters</string>
+  <!-- The label/title of a mandatory field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_mandatory_description">Descriva il problem en detagl per ans gidar ad intercurir il problem</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Tge na funcziuna betg?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
@@ -1954,8 +2148,12 @@
   <string name="bookmark_select_folder_close_folder_content_description">Serrar l’ordinatur: %s</string>
   <!-- Content description for the "close" button in bookmarks screen. -->
   <string name="bookmark_close_button_content_description">Serrar ils segnapaginas</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">Importar dad ina datoteca</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Anc nagins segnapaginas</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">Tegna ensemen tut tes segnapaginas preferids</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">Segnapaginas en l’ordinatur: %s</string>
   <!-- Text for the button to navigate to sync authentication -->
@@ -2137,6 +2335,24 @@
   <string name="menu_print">Stampar</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">Trametter a l\'apparat</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">Serrar «Trametter ad in apparat»</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">Code QR</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">Code QR</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">Serrar</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">Parter la colliaziun cun insatgi dasperas</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">Per parter questa colliaziun cun insatgi dasper tai, al dumonda da scannar il code QR sutvart.</string>
+  <!-- Label for the download button on the QR code display screen -->
+  <string name="qr_code_display_download">Telechargiar</string>
+  <!-- Toast shown when the QR code is successfully saved to Downloads -->
+  <string name="qr_code_download_success">Code QR memorisà en Downloads</string>
+  <!-- Toast shown when saving the QR code to Downloads fails -->
+  <string name="qr_code_download_failure">Betg reussì da memorisar il code QR</string>
   <!-- Sub-header in the dialog to share a link to an app from the full list -->
   <string name="share_link_all_apps_subheader">Tuttas acziuns</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
@@ -2205,6 +2421,8 @@
   <string name="preferences_take_survey">Participar a l\'enquista</string>
   <!-- Preference for not taking the short survey. -->
   <string name="preferences_not_take_survey">Na, grazia</string>
+  <!-- Error message shown in a Toast when the system fails to trigger the device uninstallation prompt. -->
+  <string name="uninstall_survey_error_failed">Betg reussì d’avrir la dumonda da deinstallaziun dal sistem, utilisescha per plaschair directamain l’acziun da deinstallaziun dal sistem.</string>
   <!--
     Snackbar
 
@@ -2365,6 +2583,28 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s ta protegia da blers dals fastizaders ils pli frequents che registreschan tias activitads online.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Ulteriuras infurmaziuns</string>
+  <plurals name="trackers_blocked_count_2">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">Bloccà %d fastizader</item>
+    <item quantity="other">Bloccà %d fastizaders</item>
+  </plurals>
+  <plurals name="trackers_blocked_count">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">Bloccà %d fastizader</item>
+    <item quantity="other">Bloccà %d fastizaders</item>
+  </plurals>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Ti es protegì</string>
+  <!-- Text shown below the trackers blocked card with typing animation -->
+  <string name="help_catch_trackers">Gida a traplar fastizaders</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (predefinì)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2743,6 +2983,8 @@
   <string name="saved_logins_sort_strategy_last_used">Ultima utilisaziun</string>
   <!-- Content description (not visible, for screen readers etc.) -->
   <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">Menu per zavrar ils pleds-clav</string>
+  <!-- Label for button to import passwords from file. -->
+  <string name="passwords_import_menu_button">Importar dad ina datoteca</string>
   <!--
     Email Masks
 
@@ -2757,6 +2999,38 @@
   <string name="preferences_email_masks_suggest_learn_more">Ulteriuras infurmaziuns</string>
   <!-- Title for the Manage Email Masks links to Firefox Relay dashboard -->
   <string name="preferences_email_masks_manage_title">Administrar ils alias dad e-mail</string>
+  <!-- The message displayed when a user has used all of their free-tier email masks, so now the application will choose an existing one at random. -->
+  <string name="email_masks_max_free_tier_reached">Ti has utilisà tes 5 alias dad e-mail gratuits, nus avain perquai tschernì in che ti pos reutilisar.</string>
+  <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
+  <string name="email_masks_error_retrieving_masks">Ils alias dad e-mail na stattan per il mument betg a disposiziun. Emprova per plaschair en in pèr minutas anc ina giada.</string>
+  <!--
+    Firefox browser VPN (a browser-only proxy, distinct from the Mozilla VPN service)
+
+    Title for the browser VPN entry in the settings list
+  -->
+  <string name="preferences_ip_protection_title_2">VPN integrà</string>
+  <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
+  <string name="preferences_ip_protection_beta_badge_label">BETA</string>
+  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
+  <string name="ip_protection_title">VPN</string>
+  <!-- Label for the browser VPN toggle on the settings screen -->
+  <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Content description for the browser VPN settings screen top bar back button -->
+  <string name="ip_protection_navigate_back_button_content_description">Turnar enavos</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">VPN integrada da %s</string>
+  <!-- Body text for the browser VPN promo card . %s is a learn more link using ip_protection_learn_more as text. -->
+  <string name="ip_protection_promo_body_2">Navighescha a moda anc pli segira cun zuppentar tia posiziun, era sche ti ta chattas en ina rait WLAN publica. %s</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">Ulteriuras infurmaziuns</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">Limita da datas mensila</string>
+  <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3").
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value">I resta %1$.1f GB da %2$.1f GB</string>
   <!--
     Autofill
 
