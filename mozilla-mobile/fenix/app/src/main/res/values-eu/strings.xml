@@ -149,6 +149,8 @@
   <string name="home_screen_shortcut_open_new_private_tab_2">Fitxa pribatu berria</string>
   <!-- Shortcut action to open Passwords screen -->
   <string name="home_screen_shortcut_passwords">Pasahitzak</string>
+  <!-- Shortcut action to open uninstall survey -->
+  <string name="home_screen_shortcut_uninstall_survey">Desinstalatu, zergatik?</string>
   <!--
     Recent Tabs
 
@@ -663,9 +665,13 @@
   <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage,UnusedResources">Lagundu Firefox</string>
   <!-- Marketing onboarding primary button text. -->
+  <string name="nova_onboarding_marketing_primary_button_text_3">Bai</string>
+  <!-- Marketing onboarding primary button text. -->
   <string name="nova_onboarding_marketing_primary_button_text_2">Onartu eta jarraitu</string>
   <!-- Marketing onboarding secondary button text. -->
   <string name="nova_onboarding_marketing_secondary_button_text" tools:ignore="UnusedResources">Ez, eskerrik asko</string>
+  <!-- Marketing onboarding secondary button text. -->
+  <string name="nova_onboarding_marketing_secondary_button_text_2">Ez</string>
   <!-- Notifications onboarding title. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_notifications_title" tools:ignore="BrandUsage,UnusedResources">Jakinarazpenek Firefoxekin seguruago egoten laguntzen dizute</string>
   <!-- Notifications onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
@@ -1535,6 +1541,8 @@
   <string name="add_tab">Gehitu fitxa</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_private_tab">Gehitu fitxa pribatua</string>
+  <!-- Content description (not visible, for screen readers etc.): Create tab group button. Opens the create tab group sheet when pressed -->
+  <string name="create_tab_group_content_description">Sortu fitxa-taldea</string>
   <!-- Text for the tab search bar placeholder -->
   <string name="tab_manager_search_bar_placeholder">Bilatu zure fitxak</string>
   <!-- Text shown in the menu to view recently closed tabs -->
@@ -1965,6 +1973,10 @@
   <string name="webcompat_reporter_label_whats_broken_3">Zer ez dabil?</string>
   <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
   <string name="webcompat_reporter_clear_reason_content_description">Garbitu hautatutako arrazoia</string>
+  <!-- The error message of the description when the user selects "Something else" as the reason, but left the description empty or too short. -->
+  <string name="webcompat_reporter_description_error">Idatzi gutxienez 10 karaktere</string>
+  <!-- The label/title of a mandatory field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_mandatory_description">Azaldu arazoa xehetasunekin gaia ikertzen lagun gaitzan</string>
   <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
   <string name="webcompat_reporter_label_whats_broken_2">Zer dago hondatuta?</string>
   <!-- The placeholder text for the dropdown where a user selects a high-level reason why the site is broken. -->
@@ -1979,6 +1991,8 @@
   <string name="webcompat_reporter_add_more_info">Gehitu informazio gehiago</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Utzi</string>
+  <!-- The button text for the send button to submit the provided form data. -->
+  <string name="webcompat_reporter_send_report">Bidali txostena</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Bidali</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
@@ -2447,6 +2461,8 @@
   <string name="preferences_take_survey">Bete inkesta</string>
   <!-- Preference for not taking the short survey. -->
   <string name="preferences_not_take_survey">Ez, eskerrik asko</string>
+  <!-- Error message shown in a Toast when the system fails to trigger the device uninstallation prompt. -->
+  <string name="uninstall_survey_error_failed">Huts egin du sistemaren desinstalatzeko gonbita irekitzean, erabili zuzenean sistemaren desinstalatzeko ekintza.</string>
   <!--
     Snackbar
 
@@ -3947,6 +3963,8 @@
     %s is a placeholder for the name of the certificate authority that issued the certificate.
   -->
   <string name="connection_security_panel_verified_by">Egiaztatzailea: %s</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
+  <string name="tracker_protections_dashboard_close_handlebar_content_description">Itxi arbela</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
@@ -4070,6 +4088,26 @@
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Zenbateraino zaude gustura Firefoxen sinkronizatzeko esperientziarekin?</string>
   <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Lagun iezaguzu Firefox hobetzen. Zerk deskribatzen du ondoen zure orain arteko esperientzia?</string>
+  <!--
+    Uninstall Survey
+
+    Title text for the uninstall survey dialog, asking the user for the reason they are removing the app
+  -->
+  <string name="microsurvey_uninstall_survey_title">Zure iritzia garrantzitsua da. Zergatik ari zara desinstalatzen?</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_1_v2">Makala edo fidagaitza da</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_2_v2">Webguneak ez dabiltza ondo</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_3_v2">Behar ditudan eginbideak falta dira</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_4_v2">Bideoak, deskargak edo multimedia ez dabiltza</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_5_v2">Erabiltzeko zaila da edo eskas diseinatuta dago</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_6_v2">Pribatutasun edo segurtasunaren gaineko ardurak</string>
+  <!-- Button label shown at the bottom of the uninstall survey -->
+  <string name="uninstall_survey_button_label">Bidali iritzia eta desinstalatu</string>
   <!--
     Accessibility
 
@@ -4661,6 +4699,22 @@
   <string name="context_menu_open_image_with_google_lens">Bilatu Google Lens erabiliz</string>
   <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
   <string name="lens_camera_permission_denied">Baimena ukatuta</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the photo they capture will be sent to Google Lens for a visual search.
+  -->
+  <string name="lens_camera_title_lens">Google Lens</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the camera is being used to scan a QR code.
+  -->
+  <string name="lens_camera_title_qr">QR kodea</string>
+  <!-- Title for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_title">Gaitu Google Lens bidezko bilaketa</string>
+  <!-- Description for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_description">Irudi eta argazkiak Google-ra bidaltzen ditu bilaketa bisualerako.</string>
+  <!-- Caption shown under the Google Lens toggle clarifying when the feature is available -->
+  <string name="preferences_google_lens_availability_caption">Erabilgarri soilik Google goian gaituta dagoenean eta nabigatzean zure bilaketa-motor aktiboa denean.</string>
   <!-- Title for the Google Lens AI feature toggle -->
   <string name="ai_controls_google_lens_title">Google Lens</string>
   <!-- Description for the Google Lens AI feature toggle -->
@@ -4707,6 +4761,8 @@
   <string name="firefox_labs_feature_enable_dialog_message">Eginbide hau gaitzeko, berrabiarazi %s.</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
   <string name="firefox_labs_feature_disable_dialog_message">Eginbide hau desgaitzeko, berrabiarazi %s.</string>
+  <!-- Helper text shown beneath a Firefox Labs item when it is blocked from being turned on. -->
+  <string name="firefox_labs_feature_conflict">Eginbidea ez dago probatzeko erabilgarri.</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
   <string name="firefox_labs_no_labs_available_description">Probatzeko eginbide esperimentalik ez oraintxe bertan</string>
 </resources>
