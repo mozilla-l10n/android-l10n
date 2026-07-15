@@ -2461,6 +2461,8 @@
   <string name="preferences_take_survey">Respondi enketon</string>
   <!-- Preference for not taking the short survey. -->
   <string name="preferences_not_take_survey">Ne, dankon</string>
+  <!-- Error message shown in a Toast when the system fails to trigger the device uninstallation prompt. -->
+  <string name="uninstall_survey_error_failed">Ne eblis malfermi la sisteman malinstalan ordonlinion, bonvolu uzi la sisteman malinstalan programon rekte.</string>
   <!--
     Snackbar
 
@@ -3122,6 +3124,14 @@
   <string name="ip_protection_onboarding_body">%1$s, tio fareblas per kaŝo de via loko, eĉ en publikaj Wi-Fi. Ricevu %2$d GB da senpagaj datumoj ĉiumonate.</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">Retumi ekstre protektita</string>
+  <!--
+    The body of the VPN onboarding card for a promotion that provides unlimited data bandwidth for a certain time.
+    %1$s is a localized date (for example "Jun 9") indicating the end of the promotional period.
+    %2$s is a link using ip_protection_onboarding_body_link_promo (“Learn more”) as text. It links to a support article about VPN on Firefox.
+  -->
+  <string name="ip_protection_onboarding_body_promo">Ŝalti tion por igi vian retumon pli privatan kaj pli malfacile spurebla. Provu tion nun por havi senliman trafikon, ĝis %1$s. %2$s</string>
+  <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
+  <string name="ip_protection_onboarding_body_link_promo">Pli da informo</string>
   <!-- Label for the dismiss button on the onboarding bottom sheet. -->
   <string name="ip_protection_onboarding_not_now_button">Ne nun</string>
   <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
@@ -3131,6 +3141,8 @@
     %1$d is the total monthly allowance in GB (for example "50").
   -->
   <string name="ip_protection_data_limit_reached_snackbar">%1$d GB de datumoj VPN uzitaj. Venontmonate ili disponeblos denove.</string>
+  <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
+  <string name="ip_protection_data_limit_reached_snackbar_action">Agordoj</string>
   <!--
     Autofill
 
@@ -3437,6 +3449,8 @@
   <string name="homepage_shortcuts_add_website">Aldoni retejon</string>
   <!-- Title text for the "Enter a Website URL" dialog for adding a shortcut. -->
   <string name="homepage_shortcuts_add_website_title">Enigu validan retadreson</string>
+  <!-- Title for the "Popular sites" section in the "Add to homepage" bottom sheet. -->
+  <string name="homepage_shortcuts_popular_sites">Popularaj retejoj</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Lima kvanto de ŝparvojoj atingita</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -3862,6 +3876,62 @@
   <string name="protection_panel_privacy_and_security_settings_2">Privatecaj agordoj</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">Permesoj</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d spurilo blokita en tiu ĉi retejo</item>
+    <item quantity="other">%1$d spuriloj blokitaj en tiu ĉi retejo</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_social_media_trackers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked social media trackers.
+      %1$d is a placeholder for the number of social media trackers blocked.
+    -->
+    <item quantity="one">%1$d socimedia spurilo</item>
+    <item quantity="other">%1$d socimediaj spuriloj</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cross_site_cookies">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cross-site tracking cookies.
+      %1$d is a placeholder for the number of cross-site tracking cookies blocked.
+    -->
+    <item quantity="one">%1$d interreteja spurila kuketo</item>
+    <item quantity="other">%1$d interretejaj spurilaj kuketoj</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cryptominers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cryptomining scripts.
+      %1$d is a placeholder for the number of cryptominers blocked.
+    -->
+    <item quantity="one">%1$d minilo de ĉifromono</item>
+    <item quantity="other">%1$d miniloj de ĉifromono</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_fingerprinters">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked fingerprinter scripts.
+      %1$d is a placeholder for the number of fingerprinters blocked.
+    -->
+    <item quantity="one">%1$d identigilo de ciferecaj spuroj</item>
+    <item quantity="other">%1$d identigiloj de ciferecaj spuroj</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_2">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked generic tracking scripts.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d spurila enhavo</item>
+    <item quantity="other">%1$d spurilaj enhavoj</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">%1$d spurilo blokita ĉi semajne</item>
+    <item quantity="other">%1$d spuriloj blokitaj ĉi semajne</item>
+  </plurals>
   <!--
     Text for displaying the total number of trackers blocked in the trackers blocked panel.
     %d is a placeholder for the number of trackers blocked.
@@ -3893,6 +3963,8 @@
     %s is a placeholder for the name of the certificate authority that issued the certificate.
   -->
   <string name="connection_security_panel_verified_by">Kontrolita de %s</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
+  <string name="tracker_protections_dashboard_close_handlebar_content_description">Fermi panelon</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
@@ -4016,6 +4088,26 @@
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Kiel kontentiga estas por vi la spegula sperto en Firefox?</string>
   <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Helpu nin plibonigi Firefox. Kio plej bone priskribas vian ĝisnunan sperton?</string>
+  <!--
+    Uninstall Survey
+
+    Title text for the uninstall survey dialog, asking the user for the reason they are removing the app
+  -->
+  <string name="microsurvey_uninstall_survey_title">Viaj komentoj gravas. Kial vi malinstalas?</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_1_v2">Ĝi estas malrapida aŭ nestabila</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_2_v2">Retejoj ne bone funkciis</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_3_v2">Mankas trajtoj, kiujn mi bezonas</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_4_v2">Videaĵoj, elŝutoj aŭ aŭdvidaĵoj ne funkciis</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_5_v2">Ĝi estas malfacile uzebla aŭ ne bone farita</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_6_v2">Privatecaj aŭ sekurecaj zorgoj</string>
+  <!-- Button label shown at the bottom of the uninstall survey -->
+  <string name="uninstall_survey_button_label">Sendi komentojn kaj malinstali</string>
   <!--
     Accessibility
 
@@ -4595,6 +4687,20 @@
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">rimarkon pri privateco</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Pli da informo</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the photo they capture will be sent to Google Lens for a visual search.
+  -->
+  <string name="lens_camera_title_lens">Google Lens</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the camera is being used to scan a QR code.
+  -->
+  <string name="lens_camera_title_qr">Kodo QR</string>
+  <!-- Title for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_title">Aktivigi serĉon per Google Lens</string>
+  <!-- Description for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_description">Tio ĉi sendas bildojn kaj fotojn al Google, por vidi serĉi ilin.</string>
   <!--
     Firefox Labs
 
