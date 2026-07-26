@@ -3100,6 +3100,11 @@
   <string name="ip_protection_onboarding_not_now_button">ھازىر ئەمەس</string>
   <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
   <string name="ip_protection_connection_error_snackbar">مەۋھۇم شەخسىي تور يەنى VPN غا باغلىنالمىدى. بىر قانچە مىنۇتتىن كېيىن قايتا سىناڭ.</string>
+  <!--
+    Snackbar (in-app pop-up notification) text to signal the browser VPN has reached the monthly data limit.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_snackbar">مەۋھۇم شەخسىي تور ئېقىم سانلىق مەلۇماتىدىن %1$d GB ئىشلەتتى. زىيارەت ئىجازىتىڭىز كېيىنكى ئايدا ئەسلىگە قايتۇرۇلىدۇ.</string>
   <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
   <string name="ip_protection_data_limit_reached_snackbar_action">تەڭشەك</string>
   <!-- Description shown on the browser VPN settings screen prompting the user to turn the VPN on. -->
@@ -3853,6 +3858,62 @@
   <string name="protection_panel_privacy_and_security_settings_2">شەخسىيەت تەڭشىكى</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">ئىجازەت</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">بۇ تور بېكەتتە %1$d ئىزلىغۇچ توسۇلغان</item>
+    <item quantity="other">بۇ تور بېكەتتە %1$d ئىزلىغۇچ توسۇلغان</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_social_media_trackers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked social media trackers.
+      %1$d is a placeholder for the number of social media trackers blocked.
+    -->
+    <item quantity="one">%1$d ئىجتىمائىي تاراتقۇ ئىزلىغۇچ</item>
+    <item quantity="other">%1$d ئىجتىمائىي تاراتقۇ ئىزلىغۇچ</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cross_site_cookies">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cross-site tracking cookies.
+      %1$d is a placeholder for the number of cross-site tracking cookies blocked.
+    -->
+    <item quantity="one">%1$d بېكەت ھالقىغان ئىزلاش ساقلانمىسى</item>
+    <item quantity="other">%1$d بېكەت ھالقىغان ئىزلاش ساقلانمىسى</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cryptominers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cryptomining scripts.
+      %1$d is a placeholder for the number of cryptominers blocked.
+    -->
+    <item quantity="one">%1$d شىفىرلىق پۇل قازغۇچ</item>
+    <item quantity="other">%1$d شىفىرلىق پۇل قازغۇچ</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_fingerprinters">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked fingerprinter scripts.
+      %1$d is a placeholder for the number of fingerprinters blocked.
+    -->
+    <item quantity="one">%1$d بارماق ئىزى ئىزلىغۇچ</item>
+    <item quantity="other">%1$d بارماق ئىزى ئىزلىغۇچ</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_2">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked generic tracking scripts.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d ئىز قوغلاش مەزمۇنى</item>
+    <item quantity="other">%1$d ئىز قوغلاش مەزمۇنى</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">بۇ ھەپتە %1$d ئىزلىغۇچ توسۇلغان</item>
+    <item quantity="other">بۇ ھەپتە %1$d ئىزلىغۇچ توسۇلغان</item>
+  </plurals>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
@@ -3873,6 +3934,8 @@
     %s is a placeholder for the name of the certificate authority that issued the certificate.
   -->
   <string name="connection_security_panel_verified_by">دەلىللىگۈچى %s</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
+  <string name="tracker_protections_dashboard_close_handlebar_content_description">باشقۇرۇش تاختىسىنى تاقاش</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
