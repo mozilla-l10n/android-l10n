@@ -828,8 +828,22 @@
   <string name="preference_top_toolbar">Ajsik</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">Ikim</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">Relik</string>
   <!-- New tab shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_new_tab">Tijaq jun k\'ak\'a\' ruwi\'</string>
+  <!-- Share shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_share">Tikomonïx</string>
+  <!-- Add bookmark shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_add_bookmark">Ketz\'aqatisäx taq retal</string>
+  <!-- Translate shortcut in toolbar customization. "Translate" is a verb -->
+  <string name="toolbar_customize_shortcut_translate">Titzalq\'omïx</string>
+  <!-- Homepage shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_homepage">Ruxaq tikirib\'äl</string>
+  <!-- Back shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_back">Chi rij</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">Majun</string>
   <!--
     Theme Preferences
 
@@ -973,18 +987,28 @@
   <string name="add_private_tab">Titz\'aqatisäx ichinan ruwi\'</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Taq ruwi\' nimakol ketz\'apïx</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">Ticha\' ronojel</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">Kinuk\'ulem rub\'i\' taqoya\'l</string>
   <!-- Text shown in the menu to view tab settings -->
   <string name="tab_tray_menu_tab_settings">Kinuk\'ulem ruwi\'</string>
   <!-- Text shown in the menu for closing all tabs -->
   <string name="tab_tray_menu_item_close">Titz\'apïx ronojel ri taq ruwi\'</string>
+  <!-- Text shown as the title of the Close all tabs confirmation dialog in Tab Manager -->
+  <string name="tab_manager_close_all_tabs_dialog_title">¿La yetz\'apïx konojel ri taq ruwi\'?</string>
+  <!-- Text shown on the confirm button in the Close all tabs confirmation dialog -->
+  <string name="tab_manager_close_all_tabs_dialog_confirm">Ketz\'apïx Ruwi\'</string>
+  <!-- Text shown on the cancel button in the Close all tabs confirmation dialog -->
+  <string name="tab_manager_close_all_tabs_dialog_cancel">Tiq\'at</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">Cha\'on kik\'utsamaj ruwi\'</string>
   <!-- Content description (not visible, for screen readers etc.): Removes tab from collection button. Removes the selected tab from collection when pressed -->
   <string name="remove_tab_from_collection">Tiyuj ruwi\' pa molb\'äl</string>
   <!-- Text for button to enter multiselect mode in tabs tray -->
   <string name="tabs_tray_select_tabs">Kecha\' taq ruwi\'</string>
+  <!-- Text for tab manager search page when there are no results. -->
+  <string name="tab_manager_no_search_results">Majun taq rujunamil ye\'ilitäj.</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
   <string name="close_tab">Titz\'apïx ruwi\'</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. %s is the tab title -->
@@ -1007,6 +1031,9 @@
   <string name="delete_from_history">Tiyuj pa natab\'äl</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">%1$s (Ichinan Rub\'anikil)</string>
+  <string name="create_tab_group_save_button">Tiyak</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">B\'i\'aj</string>
   <!--
     History
 
@@ -1038,11 +1065,73 @@
   <string name="history_older">Ojer</string>
   <!-- Text shown when no history exists -->
   <string name="history_empty_message">Majun natab\'äl wawe\'</string>
+  <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
+  <string name="download_delete_single_item_snackbar_2">Xyuj “%1$s”</string>
+  <!-- Text for the snackbar action button to view in progress download details. -->
+  <string name="download_in_progress_snackbar_action_details">Taq b\'anikil</string>
+  <!-- Text for the snackbar to confirm that a download has completed. -->
+  <string name="download_completed_snackbar">Xtz\'aqät qasanïk</string>
+  <!-- Text for the snackbar action button to open a completed download. -->
+  <string name="download_completed_snackbar_action_open">Tijaq</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">Titzolïx</string>
   <!--
     History multi select title in app bar
     %1$d is the number of downloads selected
   -->
   <string name="download_multi_select_title">%1$d xcha\'</string>
+  <!--
+    Text for the cancel button in the dialog that is shown when there is not enough storage space to download a file.
+    This button will dismiss the dialog.
+  -->
+  <string name="download_file_has_not_enough_storage_dialog_cancel_button_text">Tiq\'at</string>
+  <!-- Text for the button to delete a single downloaded file item -->
+  <string name="download_delete_item">Tiyuj</string>
+  <!-- Content description for the toolbar "Navigate back" button -->
+  <string name="download_navigate_back_description">Katok pa k\'amaya\'l titzolin</string>
+  <string name="download_clear_search_description">Tijosq\'ïx</string>
+  <!--
+    Time period headers for downloads
+
+    Text for the header that groups the downloads for today
+  -->
+  <string name="download_time_period_today">Wakami</string>
+  <!-- Text for the header that groups the downloads for yesterday -->
+  <string name="download_time_period_yesterday">Iwir</string>
+  <!-- Text for the header that groups the downloads the past 7 days -->
+  <string name="download_time_period_last_7_days">Ruk\'isib\'äl 7 q\'ij</string>
+  <!-- Text for the header that groups the downloads the past 30 days -->
+  <string name="download_time_period_last_30_days">Ruk\'isib\'äl 30 q\'ij</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">Ojer</string>
+  <!--
+    Downloads Content Type Filters
+
+    Text for the filter button to show all files in the downloads list
+  -->
+  <string name="download_content_type_filter_all">Ronojel</string>
+  <!-- Text for the filter button to show only images in the downloads list -->
+  <string name="download_content_type_filter_image">Taq wachib\'äl</string>
+  <!-- Text for the filter button to show only video files in the downloads list -->
+  <string name="download_content_type_filter_video">Taq Silowäch</string>
+  <!-- Text for the filter button to show only documents in the downloads list -->
+  <string name="download_content_type_filter_document">Taq wuj</string>
+  <!--
+    WebCompat Reporter
+
+    The title of the Web Compat Reporter feature. This is displayed in the top app bar.
+  -->
+  <string name="webcompat_reporter_screen_title">Tiya\' rutzijol jun ruxaq man nisamäj ta</string>
+  <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
+  <string name="webcompat_reporter_label_url">URL</string>
+  <!-- The error message of the URL text field when an invalid URL has been entered. -->
+  <string name="webcompat_reporter_url_error_invalid">Tab\'ana\' utzil tatz\'ib\'aj jun URL</string>
+  <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
+  <string name="webcompat_reporter_cancel">Tiq\'at</string>
+  <!-- The button text for the send button to submit the provided form data. -->
+  <string name="webcompat_reporter_send">Titaq</string>
+  <!-- Broken site reason text for something else -->
+  <string name="webcompat_reporter_reason_other">Jun chik wachinäq</string>
   <!--
     Crashes
 
@@ -1055,6 +1144,10 @@
   <string name="tab_crash_close">Titz\'apïx ruwi\'</string>
   <!-- Restore tab button text on the tab crash page -->
   <string name="tab_crash_restore">Titzolïx ruwi\'</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button">Titz\'apïx</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report -->
+  <string name="unsubmitted_crash_dialog_positive_button">Titaq rutzijol sachoj</string>
   <!-- Text for the cancel button on delete bookmark dialog -->
   <string name="bookmark_delete_negative">Tiq\'at</string>
   <!-- Screen title for adding a bookmarks folder -->
@@ -1065,6 +1158,8 @@
   <string name="bookmark_menu_edit_button">Tinuk\'</string>
   <!-- Bookmark overflow menu share button -->
   <string name="bookmark_menu_share_button">Tikomonïx</string>
+  <!-- Bookmark overflow menu select all bookmarks -->
+  <string name="bookmark_menu_select_all_bookmarks">Ticha\' ronojel</string>
   <!-- Bookmark overflow menu open in new tab button -->
   <string name="bookmark_menu_open_in_new_tab_button">Tijaq pa jun k\'ak\'a\' ruwi\'</string>
   <!-- Bookmark overflow menu open in private tab button -->
@@ -1095,6 +1190,14 @@
     %1$s is the host part of the URL of the bookmark deleted, if any
   -->
   <string name="bookmark_deletion_snackbar_message">Xyuj %1$s</string>
+  <!-- Content description for the bookmark screen delete bookmark folder navigation bar button -->
+  <string name="bookmark_delete_folder_content_description">Tiyuj ri yakwuj</string>
+  <!-- Content description for bookmark search floating action button -->
+  <string name="bookmark_search_button_content_description">Kekanöx taq yaketal</string>
+  <!-- Text for the button to navigate to sync authentication -->
+  <string name="bookmark_empty_list_guest_cta">Tatikirisaj molojri\'ïl pa yaximon</string>
+  <!-- Description for the add new folder button when selecting a folder. -->
+  <string name="bookmark_select_folder_new_folder_button_title">K\'ak\'a\' yakwuj</string>
   <!--
     Site Permissions
 
