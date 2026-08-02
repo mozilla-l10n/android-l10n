@@ -228,6 +228,8 @@
   <string name="mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description">Tikomonïx samajel taq tzij chuqa\' samajinem rik\'in ri runuk\'samajel k\'amal</string>
   <!-- Long description for the websiteActivity data collection permission -->
   <string name="mozac_feature_addons_permissions_data_collection_websiteActivity_long_description">Tikomonïx rusamaj ajk\'am ruxaq rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the websiteContent data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_websiteContent_long_description">Tikomonïx rupam ajk\'am ruxaq rik\'in ri runuk\'samajel k\'amal</string>
   <!-- The version on of add-on. -->
   <string name="mozac_feature_addons_version">Ruwäch</string>
   <!-- The author of an add-on. -->
@@ -282,6 +284,8 @@
   <string name="mozac_feature_addons_permissions_dialog_heading_required_permissions">Taq ya\'oj q\'ij rajowaxik:</string>
   <!-- Heading for the data collection permissions section in the add-on install dialog. -->
   <string name="mozac_feature_addons_permissions_dialog_heading_required_data_collection">Rumolik taq tzij rajowaxik:</string>
+  <!-- Heading for the optional settings section in the add-on install dialog. -->
+  <string name="mozac_feature_addons_permissions_dialog_heading_optional_settings">Cha\'oj runuk\'ulem:</string>
   <!-- Heading for the permissions section in the optional permissions request dialog. -->
   <string name="mozac_feature_addons_permissions_dialog_heading_optional_permissions">K\'ak\'a\' taq ya\'oj tzij:</string>
   <!-- Heading for the data collection permissions section in the optional permissions request dialog. -->
@@ -294,6 +298,8 @@
   <string name="mozac_feature_addons_permissions_dialog_deny">Tixutüx</string>
   <!-- Text link to learn more about permission requests on the add-on permissions dialog . -->
   <string name="mozac_feature_addons_permissions_dialog_learn_more">Tetamäx ch\'aqa\' chik</string>
+  <!-- This is the text for the "technical and interaction" checkbox shown in the add-on permissions dialog. -->
+  <string name="mozac_feature_addons_permissions_dialog_technical_and_interaction_data">Tikomonïx samajel taq tzij chuqa\' samajinem rik\'in ri runuk\'samajel k\'amal</string>
   <!-- This is a button to cancel the add-on installation . -->
   <string name="mozac_feature_addons_permissions_dialog_cancel">Tiq\'at</string>
   <!-- Accessibility content description to install add-on button. %1$s is the add-on name. -->
@@ -322,8 +328,12 @@
   <string name="mozac_feature_addons_updater_notification_cancel_button">Tiq\'at</string>
   <!-- The title of the system notification shown to the user when an add-on has a new update that requires new permissions. %1$s is the name of the add-on. -->
   <string name="mozac_feature_addons_updater_notification_title_2">%1$s k\'o k\'exoj</string>
+  <!-- A short explanation shown in the notification displayed when an add-on has a new update that requires new permissions. -->
+  <string name="mozac_feature_addons_updater_notification_short_intro">Taxutuj richin nawichinaj ri ruwäch chuqa\' ri taq nuk\'ulem e k\'o wi.</string>
   <!-- The heading for the permissions section in the system notification shown when an add-on has an update that requires user confirmation. %1$s is a list of sentences. -->
   <string name="mozac_feature_addons_updater_notification_heading_permissions">K\'ak\'a\' taq ya\'oj q\'ij rajowaxik: %1$s</string>
+  <!-- The heading for the data collection permission section in the system notification shown when an add-on has an update that requires user confirmation. %1$s is a list of permissions. -->
+  <string name="mozac_feature_addons_updater_notification_heading_data_collection_permissions">Rajowaxik k\'ak\'a\' kimolik taq tzij: Ri nuk\'samajel nub\'ij chi ri k\'amal xkerumöl %1$s.</string>
   <!-- Name of the "notification channel" used for displaying a notification for updating an extension. See https://developer.android.com/training/notify-user/channels -->
   <string name="mozac_feature_addons_updater_notification_channel_2">Kik\'exoj k\'amal</string>
   <!-- Name of the "notification channel" used for displaying a notification for new supported add-ons. See https://developer.android.com/training/notify-user/channels -->
@@ -342,6 +352,8 @@
   <string name="mozac_feature_addons_not_yet_supported_caption2">Wakami niqanük\' tob\'äl kichin nab\'ey cha\'oj taq K\'amal Echilab\'en.</string>
   <!-- This is the caption for the extension installation progress overlay -->
   <string name="mozac_extension_install_progress_caption">Niqasäx chuqa\' ninik\'öx k\'amal…</string>
+  <!-- Error shown when extensions could not be loaded -->
+  <string name="mozac_feature_addons_failed_to_load_extensions">Man xesamajib\'ëx ta re taq k\'amal re\'. Tatojtob\'ej chik jub\'a\' chik na.</string>
   <!-- Error shown when unable to find a translation for an add-on field. %1$s is the locale of the user and %2$s is the default language of the add-on -->
   <string name="mozac_feature_addons_failed_to_translate">Man xilitäj ta ri tzalq\'omanïk richin ri %1$s chuqa\' ni xa ta ri %2$s ch\'ab\'äl k\'o</string>
   <!-- Text shown after successfully installed an add-on. %1$s is the add-on name. -->
@@ -362,6 +374,10 @@
   <string name="mozac_feature_addons_failed_to_install_incompatible_error">Man xyak ta ri %1$s ruma man nuk\'äm ta ri\' rik\'in %2$s %3$s.</string>
   <!-- Text shown when attempting to install a (hard) blocked add-on. %1$s is the add-on name. %2$s is the app name. -->
   <string name="mozac_feature_addons_blocklisted_2" tools:ignore="BrandUsage">%1$s ke\'atz\'ila\' ri taq runa\'ojil Mozilla ke ri man tiyak ta ri %2$s.</string>
+  <!-- Text shown when attempting to install an add-on that can only be install via Enterprise Policies, which is not supported on Android.  %1$s is the add-on name. -->
+  <string name="mozac_feature_addons_admin_install_only">%1$s man xyak ta ruma xa xe nitikïr nub\'än jun moloj nrokisaj ajk\'ayij taq na\'ojil, ruma ri\' toq man nuk\'äm ta ri\' rik\'in re k\'amab\'ey re\'.</string>
+  <!-- Text shown when attempting to install an add-on that is soft-blocked. %1$s is the add-on name. %2$s is the app name. -->
+  <string name="mozac_feature_addons_soft_blocked_2">%1$s q\'aton ruma ri\' man tikirel ta niyak pa %2$s.</string>
   <!-- Text shown after failed to enable an add-on. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_failed_to_enable">Xsach toq xtzij ri %1$s</string>
   <!-- Text shown after failed to disable an add-on. %1$s is the add-on name. -->
@@ -394,12 +410,22 @@
   <string name="mozac_feature_addons_updater_dialog_status">Rub\'anikil:</string>
   <!-- Text shown in the dialog when add-on installation is completed. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_installed_dialog_title_2">Xtz\'aqatisäx %1$s</string>
+  <!-- Used as text for the link in the description of the post-installation dialog. -->
+  <string name="mozac_feature_addons_installed_dialog_description_link_text">kinuk\'ulem k\'amal</string>
+  <!-- Text shown in the dialog when add-on installation is completed. %1$s is replaced by an active link, using mozac_feature_addons_installed_dialog_description_link_text as text ("extension settings"). -->
+  <string name="mozac_feature_addons_installed_dialog_description_3">Ke\'ak\'exa\' ri taq ya\'oj q\'ij chuqa\' ri taq rajowaxik tzij pa xab\'achike ramaj chupam %1$s.</string>
   <!-- Confirmation button text for the dialog when add-on installation is completed. -->
   <string name="mozac_feature_addons_installed_dialog_okay_button_2">ÜTZ</string>
   <!-- "Learn more" link displayed below an add-on status message. -->
   <string name="mozac_feature_addons_status_learn_more">Tetamäx ch\'aqa\' chik</string>
   <!-- "See details" link displayed below an add-on status message. -->
   <string name="mozac_feature_addons_status_see_details">Ketz\'et ri taq rub\'anikil</string>
+  <!-- Status message below an add-on in the add-ons manager when this add-on has been blocklisted. %1$s is the add-on name. -->
+  <string name="mozac_feature_addons_status_blocklisted_1" tools:ignore="BrandUsage">Re k\'amal re\' q\'aton ruma nutz\'ila\' ri runa\'ojil Mozilla chuqa\' xchup ruwäch.</string>
+  <!-- Status message below an add-on in the add-ons manager when this add-on has been soft-blocked. -->
+  <string name="mozac_feature_addons_status_softblocked_2">Re k\'amal re\' xq\'at chuqa\' chupun. Yatikïr natzïj, po rik\'in jub\'a\' nuk\'äm pe k\'ayewal.</string>
+  <!-- Status message below an add-on in the add-ons manager when this add-on has been soft-blocked but the user re-enabled it. -->
+  <string name="mozac_feature_addons_status_softblocked_re_enabled_2">Re k\'amal re\' xq\'at. Ri rokisaxik ruk\'amon pe k\'ayewal.</string>
   <!-- Status message below an add-on in the add-ons manager when this add-on hasn't been signed correctly. %1$s is the add-on name. -->
   <string name="mozac_feature_addons_status_unsigned">Man xjikib\'äx ri %1$s chi jikil ruma ri\' toq xchup.</string>
   <!-- Status message below an add-on in the add-ons manager when this add-on isn't compatible with the application version. %1$s is the add-on name, %2$s is the app name and %3$s is the app version. -->
