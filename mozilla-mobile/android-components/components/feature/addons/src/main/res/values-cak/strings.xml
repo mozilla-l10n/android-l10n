@@ -173,11 +173,17 @@
   <!-- The text shown when an extension requests the userScripts permission, near the usual description of the userScripts permission -->
   <string name="mozac_feature_addons_permissions_user_scripts_extra_warning">Ri taq xkrip man ejikib\'an ta tikirel kik\'amon pe k\'ayewal chi rij jikomal chuqa\' ichinanem. Xa xe xkesamajïx taq kiskript taq k\'amal o taq xe\'el, ri kuqul ak\'u\'x chi kij.</string>
   <!-- The sentence used when the extension has data collection permissions. %1$s is a formatted list of permissions. -->
-  <string name="mozac_feature_addons_permissions_required_data_collection_description_2">Ri nuk\'samaje nub\'ij chi re k\'ama re\' yerumöl: %1$s</string>
+  <string name="mozac_feature_addons_permissions_required_data_collection_description_2">Ri nuk\'samaje nub\'ij chi re k\'amal re\' yerumöl: %1$s</string>
+  <!-- The sentence used when the developer of an extension has explicitly stated that they do not collect any data collection. -->
+  <string name="mozac_feature_addons_permissions_none_required_data_collection_description">Ri nuk\'samajel nub\'ij chi re k\'amal re\' man rajowaxik ta yerumöl taq tzij.</string>
+  <!-- The sentence used when the extension requests new data collection permissions. %1$s is a formatted list of permissions. -->
+  <string name="mozac_feature_addons_permissions_data_collection_optional_description">Ri nuk\'samajel nub\'ij chi re k\'amal re\' nrajo\' yerumöl: %1$s</string>
   <!-- Description for text button that expands the list of domain permissions -->
   <string name="mozac_feature_addons_permissions_show_all_sites">Kek\'ut ronojel ruxaq</string>
   <!-- Description for text button that hides the majority of the list of domain permissions -->
   <string name="mozac_feature_addons_permissions_show_fewer_sites">Kek\'ut jub\'a\' taq ruxaq</string>
+  <!-- Short description for the authenticationInfo data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_authenticationInfo_short_description">rutzijol jikib\'anem</string>
   <!-- Short description for the bookmarksInfo data collection permission -->
   <string name="mozac_feature_addons_permissions_data_collection_bookmarksInfo_short_description">taq yaketal</string>
   <!-- Short description for the browsingActivity data collection permission -->
@@ -194,10 +200,34 @@
   <string name="mozac_feature_addons_permissions_data_collection_personallyIdentifyingInfo_short_description">rutzijol ichinan tzijol</string>
   <!-- Short description for the searchTerms data collection permission -->
   <string name="mozac_feature_addons_permissions_data_collection_searchTerms_short_description">tzij yekanöx</string>
+  <!-- Short description for the technicalAndInteraction data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_technicalAndInteraction_short_description">samajel taq tzij chuqa\' richin samajinem</string>
   <!-- Short description for the websiteActivity data collection permission -->
   <string name="mozac_feature_addons_permissions_data_collection_websiteActivity_short_description">rusamaj ajk\'amaya\'l ruxaq</string>
   <!-- Short description for the websiteContent data collection permission -->
   <string name="mozac_feature_addons_permissions_data_collection_websiteContent_short_description">rupam ruxaq</string>
+  <!-- Long description for the authenticationInfo data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_authenticationInfo_long_description">Tikomonïx retamab\'al jikib\'anem rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the bookmarksInfo data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_bookmarksInfo_long_description">Tikomonïx retamab\'al yaketal rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the browsingActivity data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_browsingActivity_long_description">Tikomonïx rusamajixik okem rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the financialAndPaymentInfo data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_financialAndPaymentInfo_long_description">Tikomonïx retamab\'al pwaqil chuqa\' tojïk rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the healthInfo data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_healthInfo_long_description">Tikomonïx retamab\'al raxnaqil rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the locationInfo data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_locationInfo_long_description">Tikomonïx retamab\'al k\'ojlib\'äl rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the personalCommunications data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_personalCommunications_long_description">Tikomonïx ichinam tzijonem rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the personallyIdentifyingInfo data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_personallyIdentifyingInfo_long_description">Tikomonïx retamab\'al richinanem winäq rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the searchTerms data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_searchTerms_long_description">Tikomonïx taq tzij ekanon rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the technicalAndInteraction data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_technicalAndInteraction_long_description">Tikomonïx samajel taq tzij chuqa\' samajinem rik\'in ri runuk\'samajel k\'amal</string>
+  <!-- Long description for the websiteActivity data collection permission -->
+  <string name="mozac_feature_addons_permissions_data_collection_websiteActivity_long_description">Tikomonïx rusamaj ajk\'am ruxaq rik\'in ri runuk\'samajel k\'amal</string>
   <!-- The version on of add-on. -->
   <string name="mozac_feature_addons_version">Ruwäch</string>
   <!-- The author of an add-on. -->
@@ -216,6 +246,8 @@
   <string name="mozac_feature_addons_settings">Taq nuk\'ulem</string>
   <!-- Indicates the add-on is enabled. -->
   <string name="mozac_feature_addons_settings_on">Tzijïl</string>
+  <!-- Indicates the add-on is allowed in private browsing mode. -->
+  <string name="mozac_feature_addons_settings_allow_in_private_browsing_2">Tiya\' q\'ij chi re k\'amal richin nisamajïx pan ichinan okem pa k\'amaya\'l</string>
   <!-- Indicates the add-on is allowed in private browsing mode. -->
   <string name="mozac_feature_addons_settings_run_in_private_browsing">Tisamajïx pa ichinan okem pa k\'amaya\'l</string>
   <!-- This is displayed when the add-on is not allowed to run in private browsing. -->
