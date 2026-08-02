@@ -1221,6 +1221,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Tikomonïx</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Titz\'aqatisäx pa mol</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Titz\'aqatisäx pa molaj</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">Cha\'on kik\'utsamaj ruwi\'</string>
   <!-- Title text displayed for a homepage tab in the tabs tray. -->
@@ -1253,9 +1255,44 @@
   <string name="delete_from_history">Tiyuj pa natab\'äl</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">%1$s (Ichinan Rub\'anikil)</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
+  <string name="tab_manager_open_tab_search">Tijay kanoxik pa ruwi\'</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">Tinuk\' molaj</string>
   <string name="create_tab_group_save_button">Tiyak</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Molaj %d</string>
   <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
   <string name="create_tab_group_name_label">B\'i\'aj</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">¿Ketz\'apïx taq ruwi\' chuqa\' tiyuj molaj?</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Tiyuj molaj</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Tiq\'at</string>
+  <!-- Content description for the three dot button next to a tab group" -->
+  <string name="tab_group_three_dot_button_content_description">Ch\'aqa\' taq cha\'oj</string>
+  <!-- Text shown on the cancel button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_cancel">Tiq\'at</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">Q\'än</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">Kaqköj</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">Käq</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">Ronqs</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">Purpura\'</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">Xar</string>
   <!--
     History
 
@@ -1326,12 +1363,23 @@
   <string name="download_share_url">Tikomonïx URL</string>
   <!-- Text for the button to share the download file -->
   <string name="download_share_file">Tikomonïx yakb\'äl</string>
+  <!-- Text for the button to rename the download file -->
+  <string name="download_rename_file">Tisik\'ïx chik ri ruwäch b\'i\'aj</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the title. -->
   <string name="download_delete_multi_select_dialog_confirmation">¿La kan nawajo\' ye\'ayüj el re taq wachinäq echa\'on?</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the positive action. -->
   <string name="download_delete_multi_select_dialog_confirm">Tiyuj</string>
   <!-- Alert dialog confirmation before deleting multiple download items, this is the negative action. -->
   <string name="download_delete_multi_select_dialog_cancel">Tiq\'at</string>
+  <!-- Title for the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_title">Tisik\'ïx chik ri ruwäch b\'i\'aj</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">B\'i\'aj</string>
+  <string name="download_rename_dialog_confirm_button">Tiyak</string>
+  <string name="download_rename_dialog_cancel_button">Tiq\'at</string>
+  <string name="download_rename_error_dismiss_button">ÜTZ</string>
+  <string name="change_file_extension_cancel_button">Tiq\'at</string>
+  <string name="change_file_extension_confirm_button">Ja\', tijal</string>
   <!-- Text for the header of in progress downloads -->
   <string name="download_header_in_progress">Nitajin</string>
   <!--
@@ -1367,6 +1415,11 @@
     %2$s is the total size of the downloaded file.
   -->
   <string name="download_item_paused_description">%1$s / %2$s • q\'aton</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • xq\'at</string>
   <!-- Text to indicate that a download has failed to download. -->
   <string name="download_item_status_failed">Man xtikïr ta xuqasaj</string>
   <!-- Text for the snackbar action button to view failed download details. -->
@@ -1397,14 +1450,20 @@
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
   -->
   <string name="webcompat_reporter_screen_title">Tiya\' rutzijol jun ruxaq man nisamäj ta</string>
+  <!-- The button text for navigating to the SUMO link to learn more about reporting a broken site. -->
+  <string name="webcompat_reporter_learn_more">Tetamäx ch\'aqa\' chik</string>
   <!-- The text field label of the URL text field. This is displayed above the user-inputted URL. -->
   <string name="webcompat_reporter_label_url">URL</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">Tab\'ana\' utzil tatz\'ib\'aj jun URL</string>
+  <!-- The button text for navigating away from the feature to provide more information on the broken site's bug report. -->
+  <string name="webcompat_reporter_add_more_info">Titz\'aqatisäx ch\'aq\' etamab\'äl</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Tiq\'at</string>
   <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Titaq</string>
+  <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_send">Titaq</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">Jun chik wachinäq</string>
   <!--
@@ -1421,8 +1480,16 @@
   <string name="tab_crash_restore">Titzolïx ruwi\'</string>
   <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
   <string name="unsubmitted_crash_dialog_negative_button">Titz\'apïx</string>
+  <!-- Unsubmitted crash dialog negative button to dismiss the dialog -->
+  <string name="unsubmitted_crash_dialog_negative_button_2">TITZ\'APÏX</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">Majub\'ey tik\'ut chik pe</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report -->
+  <string name="unsubmitted_crash_dialog_positive_button_2">TITAQ</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">Titaq rutzijol sachoj</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more">Tetamäx ch\'aqa\' chik</string>
   <!--
     Bookmarks
 
@@ -1493,6 +1560,8 @@
   <string name="bookmark_delete_folder_content_description">Tiyuj ri yakwuj</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">Kekanöx taq yaketal</string>
+  <!-- Title for the bookmark list empty state -->
+  <string name="bookmark_empty_list_title">K\'a majun yaketal</string>
   <!-- Text for the button to navigate to sync authentication -->
   <string name="bookmark_empty_list_guest_cta">Tatikirisaj molojri\'ïl pa yaximon</string>
   <!-- Description for the add new folder button when selecting a folder. -->
