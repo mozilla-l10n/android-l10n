@@ -1445,6 +1445,16 @@
   <!-- Text for the filter button to show all other file types in the downloads list -->
   <string name="download_content_type_filter_other_1">Juley chik</string>
   <!--
+    Title for the alert dialog to rename a file and/or change its download location before downloading it.
+    %s is the formatted size of the file (e.g., "12.5 MB").
+  -->
+  <string name="download_rename_and_change_location_dialog_title">¿La niqasäx yakb\'äl? (%s)</string>
+  <!--
+    Title for the alert dialog to rename a file and/or change its download location
+    when the file size is not available before downloading it.
+  -->
+  <string name="download_rename_and_change_location_dialog_title_with_unknown_size">¿La niqasäx ri yakb\'äl?</string>
+  <!--
     WebCompat Reporter
 
     The title of the Web Compat Reporter feature. This is displayed in the top app bar.
@@ -1461,9 +1471,15 @@
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Tiq\'at</string>
   <!-- The button text for the send button to submit the provided form data. -->
+  <string name="webcompat_reporter_send_report">Titaq rutzijol</string>
+  <!-- The button text for the send button to submit the provided form data. -->
   <string name="webcompat_reporter_send">Titaq</string>
   <!-- Label for the “Send” button shown in the WebCompat Report preview panel, which the user taps to submit the report. -->
   <string name="webcompat_reporter_preview_bottom_sheet_send">Titaq</string>
+  <!-- Text shown on the save button for the Edit URL confirmation dialog in the WebCompatReporter. -->
+  <string name="webcompat_reporter_edit_url_dialog_save">Tiyak</string>
+  <!-- Text shown on the dismiss button for the Edit URL confirmation dialog in the WebCompatReporter. -->
+  <string name="webcompat_reporter_edit_url_dialog_dismiss">Tichup ruwäch</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">Jun chik wachinäq</string>
   <!--
@@ -1504,6 +1520,8 @@
   <string name="bookmark_saved_in_folder_snackbar">Xyak pa “%s”</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">TINUK\'</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">Ticha\'</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">Tijech\'ëx</string>
   <!-- Bookmark overflow menu edit button -->
@@ -1522,6 +1540,8 @@
   <string name="bookmark_menu_open_all_in_private_tabs_button">Tijaq ronojel pan ichinan ruwi\'</string>
   <!-- Bookmark overflow menu delete button -->
   <string name="bookmark_menu_delete_button">Tiyuj</string>
+  <!-- Label for button to import bookmarks from file. -->
+  <string name="bookmark_import_menu_button">Tijik\' pa jun yakb\'äl:</string>
   <!--
     Bookmark multi select title in app bar
     %1$d is the number of bookmarks selected
@@ -1560,12 +1580,20 @@
   <string name="bookmark_delete_folder_content_description">Tiyuj ri yakwuj</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">Kekanöx taq yaketal</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">Tikanöx yakwuj</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">K\'a majun yaketal</string>
   <!-- Text for the button to navigate to sync authentication -->
   <string name="bookmark_empty_list_guest_cta">Tatikirisaj molojri\'ïl pa yaximon</string>
   <!-- Description for the add new folder button when selecting a folder. -->
   <string name="bookmark_select_folder_new_folder_button_title">K\'ak\'a\' yakwuj</string>
+  <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
+  <string name="bookmark_moved_single_item">Tisilöx %1$s pa %2$s</string>
+  <!-- Text for bookmark search page when there are no results. -->
+  <string name="bookmark_no_search_results">Majun taq rujunamil ye\'ilitäj.</string>
+  <!-- Additional text for bookmark search page when there are no results. -->
+  <string name="bookmark_no_search_results_additional_text">¿La natojtob\'ej jun chik kanoxïk?</string>
   <!--
     Site Permissions
 
@@ -1652,6 +1680,10 @@
   <string name="studies_on">Titzij</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">Tichup</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">Titzij</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">Tichup</string>
   <!--
     Collections
 
@@ -1684,6 +1716,10 @@
     %d is a placeholder for the number of tabs selected.
   -->
   <string name="create_collection_save_to_collection_tab_selected">%d ruwi\' cha\'on</string>
+  <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+  <string name="create_collection_tabs_saved_new_collection_2">¡Xyak ri mol!</string>
+  <!-- Text shown in snackbar when one tab has been saved in a collection -->
+  <string name="create_collection_tab_saved_2">¡Ruwi\' xyak!</string>
   <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
   <string name="create_collection_close">Titz\'apïx</string>
   <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator -->
@@ -1788,6 +1824,8 @@
     Text shown in snackbar when user closes a tab
   -->
   <string name="snackbar_tab_closed">Ruwi\' xtz\'apïx</string>
+  <!-- Text shown in snackbar when user bookmarks a list of tabs. %s is the name of the folder the bookmark was saved into. -->
+  <string name="snackbar_message_bookmarks_saved_in_2">Taq yaketal eyakon pa “%s”</string>
   <!-- Text shown in snackbar when user adds a site to shortcuts -->
   <string name="snackbar_added_to_shortcuts">¡Xtz\'aqatisäx pa ruq\'a\'!</string>
   <!-- Text shown in snackbar when user closes a private tab -->
@@ -1988,6 +2026,8 @@
   <string name="etp_cryptominers_title">Taq kriptominer</string>
   <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cryptominers_description">Man nikiya\' ta q\'ij chi ri itzel taq skrip yetikïr ye\'ok pan awokisab\'al richin nikik\'äm kematz\'ib\'il pwäq.</string>
+  <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_known_fingerprinters_description">Tachajij awi\' richin chi kekimöl taq atzij pan awokisab\'al, ri ye\'okisäx richin yatoqäx.</string>
   <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_tracking_content_title">Rupam Ojqanem</string>
   <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
@@ -2021,6 +2061,18 @@
   <string name="preference_etp_smartblock_description">Jujun ojqanela\' ya\'on ketal man eq\'aton ta chik pa re ruxaq re\' ruma xe\'asamajij *.</string>
   <!-- Text displayed that links to website about enhanced tracking protection SmartBlock -->
   <string name="preference_etp_smartblock_learn_more">Tetamäx ch\'aqa\' chik</string>
+  <!--
+    DNS over HTTPS (DoH)
+
+    Preference title for DNS over HTTPS settings
+  -->
+  <string name="preference_doh_title">DNS chi rij HTTPS</string>
+  <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
+  <string name="preference_doh_learn_more">Tetamäx ch\'aqa\' chik</string>
+  <!-- Content description for the "Exceptions" button -->
+  <string name="preference_doh_exceptions_description">Taq man relik ta</string>
+  <!-- Bullet point 1 for "Max Protection" information page under "DNS over HTTPS" -->
+  <string name="preference_doh_max_protection_info_1">Xa xe tawokisaj ri ya\'öl samaj xacha\'</string>
   <!-- About page link text to open support link -->
   <string name="about_support">Tob\'äl</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
