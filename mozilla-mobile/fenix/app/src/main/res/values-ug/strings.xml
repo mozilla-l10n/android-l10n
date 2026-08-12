@@ -870,6 +870,8 @@
   <string name="preferences_toolbar_shortcut">قورال بالداق تېزلەتمىسى</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_toolbar_select_shortcut">تېزلەتمە تاللىنىدۇ</string>
+  <!-- Title of a menu option allowing to change the shortcut button shown in the toolbar -->
+  <string name="toolbar_shortcut_menu_edit_option">تېزلەتمە تەھرىر</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">قول ئىشارىسى</string>
   <!-- Preference for settings related to visual options -->
@@ -1494,6 +1496,14 @@
   <string name="preferences_inactive_tabs">كونا بەتكۈچنى ئاكتىپسىز ھالەتكە يۆتكەيدۇ</string>
   <!-- Title of inactive tabs preference -->
   <string name="preferences_inactive_tabs_title">سىز ئىككى ھەپتە كۆرمىگەن بەتكۈچلەر ئاكتىپسىز بۆلەككە يۆتكىلىدۇ.</string>
+  <!--
+    Privacy report
+
+    Category header of a preference that allows a user to enable or disable the privacy report feature
+  -->
+  <string name="preferences_privacy_report">شەخسىيەت دوكلاتى</string>
+  <!-- Title of the privacy report preference that allows a user to enable or disable the feature -->
+  <string name="preferences_privacy_report_title">شەخسىيەت دوكلاتىنى قوزغات</string>
   <!--
     Studies
 
@@ -4723,6 +4733,12 @@
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">شەخسىيەت ئۇقتۇرۇشى</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">مول بىلىم</string>
+  <!--
+    Collections migration homepage card
+
+    Title shown on the collections to tab groups migration card on the homepage.
+  -->
+  <string name="collections_migration_homepage_banner_title">ھازىر توپلام گۇرۇپپىغا ئۆزگەردى</string>
   <!-- Google Lens prototype related strings -->
   <string name="preferences_debug_settings_google_lens_integration">Google Lens توپلاشتۇرۇشنى قوزغات</string>
   <!-- Lens image search button content description -->
@@ -4767,8 +4783,48 @@
   <string name="lens_opt_out_description">Google Lens دىن نەتىجىگە ئېرىشىش ئۈچۈن بىر سۈرەت تاللاڭ ياكى كامېرايىڭىزنى ئىشلىڭ.</string>
   <!-- Text of the link in the first-run Google Lens bottom sheet that opens the Search settings page -->
   <string name="lens_opt_out_settings_link">Google Lens تەڭشىكى</string>
+  <!-- Button in the first-run Google Lens bottom sheet that dismisses it and starts the camera -->
+  <string name="lens_opt_out_try_it_now_button">ھازىر سىنا</string>
+  <!-- Button in the first-run Google Lens bottom sheet that leaves Google Lens without using it -->
+  <string name="lens_opt_out_not_now_button">ھازىر ئەمەس</string>
+  <!--
+    Firefox Labs
+
+    Firefox Labs is the name of a screen in Settings to allow users to learn about
+    experimental and in-development features, and turn those features on and off.
+    The "Labs" portion can be localized, "Firefox" must be treated as a brand and kept
+    in English.
+  -->
+  <string name="firefox_labs_title" tools:ignore="BrandUsage">Firefox تەجرىبەخانىسى</string>
+  <!-- Banner title text on the Firefox Labs screen. -->
+  <string name="firefox_labs_banner_title_2">تەجرىبە خاراكتېرلىك ئىقتىدارنى سىناڭ!</string>
+  <!--
+    Banner description text on the Firefox Labs screen. Provides information on what Firefox Labs does. %s is the name of the app (for example "Firefox Nightly").
+    Text will appear under the Firefox Labs banner title.
+  -->
+  <string name="firefox_labs_experimental_description">بۇ ئىقتىدار ئىجادىيەت باسقۇچىدا ۋە ياخشىلىنىۋاتىدۇ، %s ئىشلىشىگە تەسىر كۆرسىتىشى مۇمكىن.</string>
   <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
   <string name="firefox_labs_share_feedback">قايتۇرما ئىنكاس ھەمبەھىر</string>
+  <!-- Content description for the share feedback link on a Firefox Labs feature. This text will be used by screen readers to provide more context on the feedback link. %s is the name of the Firefox Labs feature. -->
+  <string name="firefox_labs_share_feedback_content_description">«%s» نىڭ قايتۇرما ئىنكاسىنى ھەمبەھىرلەيدۇ.</string>
+  <!-- Button text on the Firefox Labs screen for restoring all toggles back to the default settings. The button will turn off any experimental features. -->
+  <string name="firefox_labs_restore_default_button_text">كۆڭۈلدىكىگە ئەسلىگە كەلتۈر</string>
+  <!-- The title used in a confirmation dialog on the Firefox Labs screen when toggling "on" or "off" an experimental feature that requires a restart. -->
+  <string name="firefox_labs_feature_dialog_title">قايتا قوزغىتىش زۆرۈر</string>
+  <!-- The text on the dialog on the Firefox Labs screen for the positive button when toggling "on" and "off" experimental features. This prompts the user to confirm that they want to restart the app. -->
+  <string name="firefox_labs_dialog_restart_button">قايتا قوزغات</string>
   <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
   <string name="firefox_labs_dialog_cancel_button">ۋاز كەچ</string>
+  <!-- The title used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. -->
+  <string name="firefox_labs_restore_defaults_dialog_title">قايتا قوزغىتىش زۆرۈر</string>
+  <!-- The description used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. %s is the name of the app (for example "Firefox Nightly") -->
+  <string name="firefox_labs_restore_defaults_dialog_message">كۆڭۈلدىكىگە ئەسلىگە كەلتۈرۈش ئۈچۈن %s نى قايتا قوزغىتىش كېرەك.</string>
+  <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "on" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
+  <string name="firefox_labs_feature_enable_dialog_message">بۇ ئىقتىدارنى قوزغىتىش ئۈچۈن، %s نى قايتا قوزغىتىش كېرەك.</string>
+  <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "off" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
+  <string name="firefox_labs_feature_disable_dialog_message">بۇ ئىقتىدارنى تاقاش ئۈچۈن، %s نى قايتا قوزغىتىش كېرەك.</string>
+  <!-- Helper text shown beneath a Firefox Labs item when it is blocked from being turned on. -->
+  <string name="firefox_labs_feature_conflict">بۇ ئىقتىدارنى سىنىغىلى بولمايدۇ.</string>
+  <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
+  <string name="firefox_labs_no_labs_available_description">ھازىرچە سىنايدىغان سىناق خاراكتېرلىك ئىقتىدارى يوق</string>
 </resources>
