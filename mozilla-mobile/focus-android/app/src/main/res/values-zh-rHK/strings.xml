@@ -289,6 +289,13 @@
   <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
   <string name="preference_security_biometric">用指紋去解鎖個 app</string>
   <!--
+    Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
+    open when the app was last run to ensure that only the phone's owner can view a previous session.
+    %s is the name of the app (for example "Firefox Focus" or "Firefox Klar")
+    Shortcuts is a feature that allows the user to pin his favorite websites to Focus home screen so he can quickly access them.
+  -->
+  <string name="preference_security_biometric_summary2">喺用咗 %s 嚟開啟網站或者加入咗捷徑嘅時候，可以直接用指紋解鎖。</string>
+  <!--
     Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
     and prevents the user from taking screenshots or casting the app to other displays.
   -->
@@ -321,9 +328,18 @@
   <string name="preference_mozilla_telemetry_summary">想知多啲</string>
   <!-- %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
   <string name="preference_mozilla_telemetry_summary2" tools:ignore="BrandUsage">Mozilla 致力只收集大家足以提供並改進 %1$s所需嘅資料。</string>
+  <!-- Preference switch for daily usage ping data collection -->
+  <string name="preference_daily_usage_ping_title">每日使用率上報</string>
+  <string name="preference_daily_usage_ping_description" tools:ignore="BrandUsage">噉樣做會幫 Mozilla 估計活躍用戶嘅數目。</string>
   <string name="preference_daily_usage_ping_learn_more">想知多啲</string>
   <!-- In-app link (in settings) to Focus privacy notice. -->
   <string name="preference_privacy_notice">私隱權告示</string>
+  <!-- In-app link (in settings) to Focus licensing information. -->
+  <string name="preference_licensing_info">版權資料</string>
+  <!-- Link to Focus licensing information from other libraries that we use. -->
+  <string name="preference_libraries_we_use">我哋用咗嘅 libraries</string>
+  <!-- Link to Focus Crash reports list. -->
+  <string name="preference_crashes">單機事故</string>
   <!-- Open Source Licenses page title. %s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
   <string name="open_source_licenses_title">%s | 開放原始碼嘅軟件庫</string>
   <!-- Item in Preferences that shows the about page. %1$s is the name of the app (for example "Firefox Focus" or "Firefox Klar"). -->
@@ -356,6 +372,7 @@
   <string name="search_add_error_empty_name">輸入搜尋引擎名稱</string>
   <string name="search_add_error_duplicate_name">有一個已安裝嘅搜尋引擎已經用咗呢個名。</string>
   <string name="search_add_error_empty_search">輸入搜尋字串</string>
+  <string name="search_add_error_format">請檢查搜尋字串符合範例格式</string>
   <!-- Content description (not visible, for screen readers etc.): Clear text in URL bar -->
   <string name="content_description_clear_input">清除輸入</string>
   <!--
@@ -441,6 +458,12 @@
   <string name="onboarding_first_screen_title">歡迎使用 %1$s</string>
   <!-- New Onboarding flow first screen subtitle the one that appears under title -->
   <string name="onboarding_first_screen_subtitle">快速、私隱、簡潔。</string>
+  <!-- Text for the link used in onboarding_first_screen_privacy_notice_text -->
+  <string name="onboarding_first_screen_privacy_notice_link_2">私隱聲明</string>
+  <!-- New Onboarding flow first screen button label -->
+  <string name="onboarding_first_screen_button_agree_and_continue_2">繼續</string>
+  <!-- In the first screen of new onboarding flow, additional accessibility description for content that contain urls. -->
+  <string name="a11y_link_available">鏈結可用</string>
   <!--
     Onboarding second screen: Title
 
@@ -461,12 +484,16 @@
   <string name="onboarding_second_screen_skip_button_text">略過</string>
   <!-- First run tour (Default browser): Title -->
   <string name="firstrun_defaultbrowser_title">升級你嘅個人私隱</string>
+  <!-- First run tour (Default browser): Text. -->
+  <string name="firstrun_defaultbrowser_text2">私隱瀏覽再創新境界。阻擋廣告以及其他內容，費事佢哋追蹤你去過咩網站，又拖慢網頁載入嘅時間。</string>
   <!-- First run tour (Search): Title -->
   <string name="firstrun_search_title">你想點搜尋，就點搜尋</string>
   <!-- First run tour (Search): Text -->
   <string name="firstrun_search_text">想搜尋吓啲唔同嘅嘢？喺設定度揀選另一個預設嘅搜尋引擎啦。</string>
   <!-- First run tour (Shortcut): Title -->
   <string name="firstrun_shortcut_title">喺你嘅主頁加入捷徑</string>
+  <!-- First run tour (Shortcut): Text. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
+  <string name="firstrun_shortcut_text">快速返回你喺 %1$s 嘅喜愛網站。只需喺 %1$s 功能表揀選「加入去主畫面」。</string>
   <!-- First run tour (Privacy): Title -->
   <string name="firstrun_privacy_title">私隱就習以為常</string>
   <!-- First run tour (Privacy): Text. %1$s will be replaced with the name of the app (e.g. Firefox Focus) -->
