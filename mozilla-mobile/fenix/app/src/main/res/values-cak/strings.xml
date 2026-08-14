@@ -2465,6 +2465,10 @@
   <string name="sync_add_new_device_learn_button">Tetamäx chi rij ri Kitaqik taq Ruwi\'…</string>
   <!-- Text for the button to connect another device -->
   <string name="sync_add_new_device_connect_button">Tokisäx Jun Chik Okisab\'äl…</string>
+  <!-- A message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s Taqon pe pa %2$s 🦊Tatojtob\'ej re oyonib\'äl okik\'amaya\'l: %3$s</string>
+  <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
+  <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s Taqon pe pa %2$s 🦊 %3$s</string>
   <!--
     Notifications
 
@@ -2473,6 +2477,7 @@
   <string name="notification_pbm_delete_text_2">Ketz\'apïx ichinan taq ruwi\'</string>
   <!-- Text shown in the notification that pops up to remind the user that a private browsing session is active for Android 14+ -->
   <string name="notification_erase_title_android_14">La yetz\'apïx ichinan taq ruwi\'?</string>
+  <string name="notification_erase_text_android_14">Tachapa\' o tarik\'a\' re rutzijol re\' richin ye\'atz\'apij re ichinan taq ruwi\'.</string>
   <!-- Name of the marketing notification channel. Displayed in the "App notifications" system settings for the app -->
   <string name="notification_marketing_channel_name">Markentin</string>
   <!--
@@ -2496,12 +2501,16 @@
   <string name="preferences_take_survey">Tinojisäx nojwuj</string>
   <!-- Preference for not taking the short survey. -->
   <string name="preferences_not_take_survey">Mani matyox</string>
+  <!-- Error message shown in a Toast when the system fails to trigger the device uninstallation prompt. -->
+  <string name="uninstall_survey_error_failed">Man tikirel ta xjaq ri ruwäch rumeyakoj q\'inoj. Jumul tawokisaj ri rusamaj rumeyakoj q\'inoj.</string>
   <!--
     Snackbar
 
     Text shown in snackbar when user closes a tab
   -->
   <string name="snackbar_tab_closed">Ruwi\' xtz\'apïx</string>
+  <!-- Text shown in snackbar when user closes multiple inactive tabs. %1$s will be replaced with the number of tabs closed. -->
+  <string name="snackbar_num_tabs_closed">Tz\'apäl taq ruwi\': %1$s</string>
   <!-- Text shown in snackbar when user bookmarks a list of tabs. %s is the name of the folder the bookmark was saved into. -->
   <string name="snackbar_message_bookmarks_saved_in_2">Taq yaketal eyakon pa “%s”</string>
   <!-- Text shown in snackbar when user adds a site to shortcuts -->
@@ -2572,6 +2581,8 @@
   <string name="preference_summary_delete_browsing_data_on_quit_2">Keyuj ri taq tzij okem pa k\'amaya\'l pa ruyonil toq xtacha\' \"Tel\" pa ri nïm k\'utsamajib\'äl</string>
   <!-- Title text of a delete browsing data dialog. -->
   <string name="delete_history_prompt_title">Rupajb\'al ramaj richin niyuj</string>
+  <!-- Body text of a delete browsing data dialog. -->
+  <string name="delete_history_prompt_body_2">Tayuju\' ri natab\'äl (chuqa\' ri ximon natab\'äl k\'o chupam ch\'aqa\' chik okisaxel)</string>
   <!-- Radio button in the delete browsing data dialog to delete history items for the last hour. -->
   <string name="delete_history_prompt_button_last_hour">Ruk\'isib\'äl ramaj</string>
   <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
@@ -2646,10 +2657,25 @@
     Preference title for enhanced tracking protection settings
   -->
   <string name="preference_enhanced_tracking_protection">Utzirisan Chajinïk chuwäch Ojqanem</string>
+  <!-- Preference summary for enhanced tracking protection settings on/off switch -->
+  <string name="preference_enhanced_tracking_protection_summary">Wakami rik\'in kichajixik ronojel taq kuki, ri kowiläj qapokob\' k\'o wakami chi kiwäch ri rojqanela\' xalq\'atin taq ruxaq.</string>
   <!-- Description of enhanced tracking protection. %s is the name of the app (for example "Firefox"). -->
   <string name="preference_enhanced_tracking_protection_explanation_2">%s yaruchajij chi kiwäch relik ojqanela\', ri nikoqaj ri nab\'än pa k\'amab\'ey.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Tetamäx ch\'aqa\' chik</string>
+  <plurals name="trackers_blocked_count_2">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">%d q\'aton ojqanel</item>
+    <item quantity="other">%d eq\'aton ojqanela\'</item>
+  </plurals>
+  <!-- Text shown on the trackers blocked card when no trackers have been blocked yet -->
+  <string name="trackers_blocked_empty">Atchajin</string>
+  <!-- Text shown below the trackers blocked card with typing animation -->
+  <string name="help_catch_trackers">Kato\'on chi kichapik ri ojqanela\'</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Junaman (k\'o wi)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -2660,6 +2686,10 @@
   <string name="preference_enhanced_tracking_protection_strict">Nimaläj</string>
   <!-- Preference description for enhanced tracking protection for the strict protection settings -->
   <string name="preference_enhanced_tracking_protection_strict_description_4">K\'ïy chajinïk chuwäch ojqanem chuqa\' ütz rub\'eyal nisamäj, xa xe chi jujun taq ruxaq rik\'in jub\'a\' man xkesamäj ta ütz.</string>
+  <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">Kenuk\' nima\'q taq ruk\'ayewal ruxaq (chilab\'en)</string>
+  <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">Kenuk\' koköj taq ruk\'ayewal ruxaq</string>
   <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
   <string name="preference_enhanced_tracking_protection_allow_list_learn_more">Tetamäx ch\'aqa\' chik</string>
   <!-- Accessibility text for the Strict protection information icon -->
