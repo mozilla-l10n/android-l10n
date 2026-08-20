@@ -4533,8 +4533,16 @@
   <string name="sports_widget_still_want_to_follow">¿La k\'a nawajo\' nawojqaj?</string>
   <!-- Sports widget card description shown after a team is eliminated, suggesting to choose another team. -->
   <string name="sports_widget_choose_another_team">Tacha\' jun chik molaj etz\'enala\' richin nawojqaj ri Aj Ruwach\'ulew Etz\'anem.</string>
+  <!-- Sports widget button label to follow another team after the current team is eliminated. -->
+  <string name="sports_widget_follow_another_team">Tojqäx jun chik molaj</string>
+  <!-- Sports widget card title shown before the soccer tournament begins on top of a timer that is counting down. -->
+  <string name="sports_widget_countdown_to_world_cup">Rajlab\'al q\'ij Aj Ruwach\'ulew Etz\'anem</string>
+  <!-- Sports widget button label that navigates the user to the full soccer tournament match schedule. -->
+  <string name="sports_widget_view_schedule">Titz\'et ruq\'ijul etz\'anem</string>
   <!-- Sports widget button label that dismisses the step of choosing a team to follow. -->
   <string name="sports_widget_skip">Tik\'o\'</string>
+  <!-- Sports widget match status label shown during halftime of a match. -->
+  <string name="sports_widget_halftime" tools:ignore="UnusedResources">Nik\'aj ramaj</string>
   <!-- Sports widget match status label shown during extra time of a match. -->
   <string name="sports_widget_extra_time">Ruwi\' ramaj</string>
   <!-- Sports widget match status label shown during penalties of a match. -->
@@ -4557,10 +4565,24 @@
     Your translation will be automatically truncated at 2 characters to avoid layout issues
   -->
   <string name="sports_widget_countdown_minutes">M</string>
+  <!-- Content description (for accessibility, not displayed) for the close button on the sports widget team / country selector. -->
+  <string name="sports_widget_close_team_selection_sheet_content_description">Titz\'apïx ruxaq kicha\'ik molaj</string>
   <!-- Content description (for accessibility, not displayed) for the close button on the sports widget card. -->
   <string name="sports_widget_close_content_description">Titz\'apïx</string>
   <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
   <string name="sports_widget_more_options_content_description">Ch\'aqa\' chik taq cha\'oj</string>
+  <!--
+    Content description (for accessibility, not displayed) announcing the time remaining until the soccer tournament kickoff.
+    %1$d is the number of days, %2$d is the number of hours, and %3$d is the number of minutes.
+  -->
+  <string name="sports_widget_countdown_remaining_content_description">Ramaj nrajo\' na. Taq q\'ij: %1$d. Taq ramaj: %2$d. Taq ch\'utiramaj: %3$d.</string>
+  <!-- Content description (for accessibility, not displayed)  for the action that navigates to the World Cup website. -->
+  <string name="sports_widget_go_to_world_cup_site_content_description" tools:ignore="UnusedResources">Tib\'an b\'enam pa ruxaq Aj Ruwach\'ulew</string>
+  <!--
+    Content description (for accessibility, not displayed)  announcing an upcoming soccer match.
+    %1$s is the home team name, %2$s is the away team name, %3$s is the match date, %4$s is the kickoff time.
+  -->
+  <string name="sports_widget_upcoming_match_content_description">Petenäq: %1$s rik\'in %2$s, %3$s pa %4$s</string>
   <!--
     Content description (for accessibility, not displayed) announcing a soccer match.
     %1$s is the home team name, %2$s is the away team name, %3$s is trailing context
@@ -4569,17 +4591,39 @@
   -->
   <string name="sports_widget_match_content_description">%1$s chuwäch %2$s, %3$s</string>
   <!--
+    Content description (for accessibility, not displayed)  used for the sports widget card header announcing a live match for a group or stage.
+    %s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32,
+    or Final represented by sports_widget_final).
+  -->
+  <string name="sports_widget_live_game_content_description">%s, etz\'anem tajin</string>
+  <!--
     Content description (for accessibility, not displayed) announcing a live score.
     %1$s is the home team name, %2$d is the home team score, %3$s is the away team name, %4$d is the away team score,
     and %5$s is the match elapsed time (e.g. 72 minutes).
   -->
   <string name="sports_widget_live_score_content_description">%1$s %2$d, %3$s %4$d, %5$s, pa k\'aslïk</string>
   <!--
+    Content description (for accessibility, not displayed) announcing the elapsed minutes of a live match.
+    %1$s is the clock value, which may be a plain number (e.g. "72") or include extra time (e.g. "90+3").
+  -->
+  <string name="sports_widget_match_elapsed_minutes">Ramaj b\'enäq pa ch\'utiramaj: %1$s</string>
+  <!--
     Content description (for accessibility, not displayed) for a paginated item.
     %1$s is the soccer tournament group name or stage (e.g. Group A represented by sports_widget_group_a, Round of 32 represented by sports_widget_round_of_32),
     %2$d is the current page number, and %3$d is the total number of pages.
   -->
   <string name="sports_widget_page_position_content_description">%1$s, ruxaq %2$d richin %3$d</string>
+  <!--
+    Content description (for accessibility, not displayed) for a page within the World Cup final results carousel.
+    %1$d is the current page number, and %2$d is the total number of pages.
+  -->
+  <string name="sports_widget_final_results_page_content_description" tools:ignore="UnusedResources">Ruk\'isib\'äl taq etz\'anem pa Ri Ch\'akob\'äl Ruwach\'ulew, ruxaq %1$d richin %2$d</string>
+  <!-- Content description (for accessibility, not displayed) for the World Cup final results page. -->
+  <string name="sports_widget_final_results_content_description">Ruk\'isib\'äl taq q\'i\'oj pa ri Aj Ruwach\'ulew</string>
+  <!-- Content description (for accessibility, not displayed) for the remove button that removes the sports widget from the homepage. -->
+  <string name="sports_widget_remove_content_description" tools:ignore="UnusedResources">Tiyuj Ruch\'akob\'al Aj Ruwach\'ulew pa rutikirib\'al</string>
+  <!-- Title shown on the sports widget immediately after the user has followed a team. %s is the selected team (e.g., "USA"). -->
+  <string name="sports_widget_team_followed_title">Nojqäx: %s</string>
   <!-- Sports widget error card description shown when the user is offline. -->
   <string name="sports_widget_error_connection_offline_description">Tanik\'oj ri awokem pan internet k\'a ri tatojb\'ej chik.</string>
   <!-- Sports widget general group stage label in the soccer tournament. -->
