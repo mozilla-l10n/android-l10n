@@ -59,7 +59,7 @@
   <!-- Description for the "declarativeNetRequest" WebExtensions API permission. -->
   <string name="mozac_feature_addons_permissions_declarative_net_request_description">किसी भी पेज पर कंटेंट ब्लॉक करें</string>
   <!-- Description for the "declarativeNetRequestFeedback" WebExtensions API permission. -->
-  <string name="mozac_feature_addons_permissions_declarative_net_request_feedback_description">अपनी ब्राउज़िंग हिस्ट्री पढ़ें</string>
+  <string name="mozac_feature_addons_permissions_declarative_net_request_feedback_description">अपनी ब्राउज़िंग हिस्ट्री देखें</string>
   <!-- Description for the "downloads" WebExtensions API permission. -->
   <string name="mozac_feature_addons_permissions_downloads_description">फाइलों को डाउनलोड करें और ब्राउज़र के डाउनलोड इतिहास को देखें और संशोधित करें</string>
   <!-- Description for the "downloads.open" WebExtensions API permission. -->
@@ -94,6 +94,8 @@
   <string name="mozac_feature_addons_permissions_devtools_description">अपने डेटा को खुले टैबों में उपयोग करने के लिए डेवलपर उपकरण को विस्तृत करें</string>
   <!-- Description for the "privacy" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
   <string name="mozac_feature_addons_permissions_privacy_description_for_update">गोपनीयता से जुड़ी सेटिंग देखें और उनमें बदलाव करें।</string>
+  <!-- Description for the "<all_urls>" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
+  <string name="mozac_feature_addons_permissions_all_urls_description_for_update">सभी वेबसाइटों से संबंधित अपना डेटा एक्सेस करें।</string>
   <!-- Description for the "tabs" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
   <string name="mozac_feature_addons_permissions_tabs_description_for_update">ब्राउज़र के टैब एक्सेस करें।</string>
   <!-- Description for the "webNavigation" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
@@ -110,6 +112,8 @@
   <string name="mozac_feature_addons_permissions_clipboard_write_description_for_update">क्लिपबोर्ड में डेटा इनपुट करें।</string>
   <!-- Description for the "declarativeNetRequest" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
   <string name="mozac_feature_addons_permissions_declarative_net_request_description_for_update">किसी भी पेज पर कंटेंट ब्लॉक करें।</string>
+  <!-- Description for the "declarativeNetRequestFeedback" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
+  <string name="mozac_feature_addons_permissions_declarative_net_request_feedback_description_for_update">अपनी ब्राउज़िंग हिस्ट्री देखें।</string>
   <!-- Description for the "downloads" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
   <string name="mozac_feature_addons_permissions_downloads_description_for_update">फ़ाइलें डाउनलोड करें और ब्राउज़र की डाउनलोड हिस्ट्री को पढ़ें और मॉडिफ़ाई करें।</string>
   <!-- Description for the "downloads.open" WebExtensions API permission for the update notification. Multiple permissions may be simply appended one after the other, and separated with a space, which is why the period is important. -->
@@ -144,6 +148,30 @@
   <string name="mozac_feature_addons_permissions_one_site_description_for_update">%1$s का अपना डेटा एक्सेस करें।</string>
   <!-- Description for giving an add-on access to users's data in multiple sites in the domain %1$s. %1$s will be replaced by the DNS domain for which a web extension is requesting access (e.g., mozilla.org). -->
   <string name="mozac_feature_addons_permissions_sites_in_domain_description_for_update">%1$s डोमेन वाली साइटों से जुड़ा अपना डेटा एक्सेस करें।</string>
+  <!--
+    When an add-on requires access to more than 2 domains, for example the add-on requires access for 3 domains. We will show the first 2 domains in individual entries, as in mozac_feature_addons_permissions_sites_in_domain_description_for_update,
+    then we will show another collapsed entry saying "Access your data on another domain.".
+  -->
+  <string name="mozac_feature_addons_permissions_one_extra_domain_description_for_update">किसी दूसरे डोमेन वाला अपना डेटा एक्सेस करें।</string>
+  <!--
+    When an add-on requires access to more than 2 domains, for example the add-on requires access for 4 domains. We will show the first 2 domains in individual entries, as in mozac_feature_addons_permissions_sites_in_domain_description_for_update,
+    then we will show another collapsed entry saying "Access your data on other domains.".
+  -->
+  <string name="mozac_feature_addons_permissions_extra_domains_description_plural_for_update">अन्य डोमेन वाला अपना डेटा एक्सेस करें।</string>
+  <!--
+    When an add-on requires access to more than 2 sites, for example the add-on requires access for 3 sites. We will show the first 2 sites in individual entries, as in mozac_feature_addons_permissions_one_site_description_for_update,
+    then we will show another collapsed entry saying "Access your data on another site.".
+  -->
+  <string name="mozac_feature_addons_permissions_one_extra_site_description_for_update">दूसरी साइट वाला अपना डेटा एक्सेस करें।</string>
+  <!--
+    When an add-on requires access to more than 2 sites, for example the add-on requires access for 4 sites. We will show the first 2 sites in individual entries, as in mozac_feature_addons_permissions_one_site_description_for_update,
+    then we will show another collapsed entry saying "Access your data on other sites.".
+  -->
+  <string name="mozac_feature_addons_permissions_extra_sites_description_for_update">दूसरी साइटों वाला अपना डेटा एक्सेस करें।</string>
+  <!-- The text shown when an extension requests the userScripts permission, near the usual description of the userScripts permission -->
+  <string name="mozac_feature_addons_permissions_user_scripts_extra_warning">जो स्क्रिप्ट वेरिफ़ाई नहीं हुई हैं, वे सुरक्षा और गोपनीयता से जुड़े जोखिम पैदा कर सकती हैं। सिर्फ़ उन्हीं एक्सटेंशन या सोर्स वाली स्क्रिप्ट चलाएं, जिन पर आप भरोसा करते हैं।</string>
+  <!-- The sentence used when the developer of an extension has explicitly stated that they do not collect any data collection. -->
+  <string name="mozac_feature_addons_permissions_none_required_data_collection_description">डेवलपर का कहना है कि इस एक्सटेंशन को डेटा इकट्ठा करने की ज़रूरत नहीं होती है।</string>
   <!-- Description for text button that expands the list of domain permissions -->
   <string name="mozac_feature_addons_permissions_show_all_sites">सभी साइटें दिखाएं</string>
   <!-- Description for text button that hides the majority of the list of domain permissions -->
