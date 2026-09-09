@@ -407,6 +407,23 @@
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Firefox विजेट जोड़ें</string>
   <!-- Customize prompt onboarding title. -->
   <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">हर टैप के साथ, कस्टमाइज़ करना और भी आसान और कहीं ज़्यादा गोपनीय है</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">आपके वेब ब्राउज़ करते समय %1$s ने %2$,d ट्रैकर ब्लॉक किया।</item>
+    <item quantity="other">आपके वेब ब्राउज़ करते समय %1$s ने %2$,d ट्रैकर ब्लॉक किए।</item>
+  </plurals>
+  <!-- Customize prompt onboarding positive button. -->
+  <string name="nova_onboarding_customize_prompt_positive_button" tools:ignore="UnusedResources">कस्टमाइज़ करना शुरू करें</string>
+  <!-- App icon onboarding title. -->
+  <string name="nova_onboarding_app_icon_prompt_title" tools:ignore="UnusedResources">कोई कस्टम ऐप आइकन चुनें</string>
+  <!-- App icon onboarding body. -->
+  <string name="nova_onboarding_app_icon_prompt_body" tools:ignore="UnusedResources">अपनी होम स्क्रीन को, अपने हिसाब से एक खास लुक दें।</string>
   <!-- Text preview for smaller sized widgets -->
   <string name="search_widget_text_short">खोजें</string>
   <!-- Text preview for larger sized widgets -->
@@ -423,10 +440,32 @@
   <string name="preferences_category_general">सामान्य</string>
   <!-- Preference category for all links about Fenix -->
   <string name="preferences_category_about">परिचय</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">नॉर्मल ब्राउज़िंग में डिफ़ॉल्ट सर्च इंजन</string>
+  <!-- Preference category for settings related to changing the private browsing search engine -->
+  <string name="preferences_category_select_private_search_engine">प्राइवेट ब्राउज़िंग में डिफ़ॉल्ट सर्च इंजन</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">नॉर्मल ब्राउज़िंग वाला ही सर्च इंजन इस्तेमाल करें</string>
+  <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
+  <string name="preferences_manage_search_shortcuts_2">वैकल्पिक सर्च इंजन मैनेज करें</string>
+  <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
+  <string name="preferences_manage_search_shortcuts_summary">सर्च मेन्यू में दिखाई देने वाले इंजन एडिट करें</string>
+  <!-- Preference category for settings related to managing search shortcuts for the quick search menu -->
+  <string name="preferences_category_engines_in_search_menu">सर्च मेन्यू में दिखाई देने वाले इंजन</string>
   <!-- Preference for settings related to changing the default search engine -->
   <string name="preferences_default_search_engine">डिफ़ॉल्ट खोज इंजन</string>
   <!-- Preference for settings related to Search -->
   <string name="preferences_search">खोजें</string>
+  <!-- Preference for settings related to Search engines -->
+  <string name="preferences_search_engines">सर्च इंजन</string>
+  <!-- Settings item to add a search widget on the device's homescreen. -->
+  <string name="preferences_add_search_widget_from_settings">होम स्क्रीन विजेट</string>
+  <!-- Preference for settings related to Search engines suggestions -->
+  <string name="preferences_search_engines_suggestions">सर्च इंजन से सुझाव पाएं</string>
+  <!-- Preference Category for settings related to Search address bar -->
+  <string name="preferences_settings_address_bar">एड्रेस बार से जुड़ी प्राथमिकताएं</string>
+  <!-- Preference link to Learn more about Firefox Suggest -->
+  <string name="preference_search_learn_about_fx_suggest" tools:ignore="BrandUsage">Firefox Suggest के बारे में और जानें</string>
   <!-- Preference link to rating Fenix on the Play Store -->
   <string name="preferences_rate">Google Play पर रेट करें</string>
   <!--
@@ -440,14 +479,22 @@
   <string name="preferences_category_advanced">उन्नत</string>
   <!-- Preference category for privacy and security settings -->
   <string name="preferences_category_privacy_security">गोपनीयता और सुरक्षा</string>
+  <!-- Preference for advanced site settings -->
+  <string name="preferences_site_settings">साइट की सेटिंग</string>
   <!-- Preference for private browsing options -->
   <string name="preferences_private_browsing_options">निजी ब्राउज़िंग</string>
   <!-- Preference for opening links in a private tab -->
   <string name="preferences_open_links_in_a_private_tab">एक निजी टैब में लिंक खोलें</string>
   <!-- Preference for allowing screenshots to be taken while in a private tab -->
   <string name="preferences_allow_screenshots_in_private_mode">निजी ब्राउज़िंग में स्क्रीनशॉट की अनुमति दें</string>
+  <!-- Will inform the user of the risk of activating Allow screenshots in private browsing option -->
+  <string name="preferences_screenshots_in_private_mode_disclaimer">अगर अनुमति दी गई है, तो प्राइवेट टैब एक से ज़्यादा ऐप खुले होने पर भी दिखाई देंगे</string>
   <!-- Preference for adding private browsing shortcut -->
   <string name="preferences_add_private_browsing_shortcut">निजी ब्राउज़िंग शॉर्टकट जोड़ें</string>
+  <!-- Preference title for using the screen lock to hide tabs in private browsing -->
+  <string name="preferences_pbm_lock_screen_title">प्राइवेट ब्राउज़िंग में, टैब छिपाने के लिए स्क्रीन लॉक का इस्तेमाल करें।</string>
+  <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
+  <string name="preferences_pbm_lock_screen_summary_3">अपने फ़िंगरप्रिंट, पिन या फ़ेस-अनलॉक सुविधा का इस्तेमाल करके टैब देखें। इसे चालू करने से, स्क्रीन कैप्चर और शेयरिंग से भी बचा जा सकता है।</string>
   <!-- Preference for accessibility -->
   <string name="preferences_accessibility">अभिगम्यता</string>
   <!-- Preference to override the Sync token server -->
