@@ -1807,6 +1807,8 @@
   <string name="preference_doh_exceptions_add_placeholder">example.com</string>
   <!-- Error displayed in the input field when adding invalid URLs for "DNS over HTTPS". -->
   <string name="preference_doh_exceptions_add_error">डोमेन सही होना होना चाहिए</string>
+  <!-- Text displayed on the button within the input field for adding exceptions to "DNS over HTTPS" -->
+  <string name="preference_doh_exceptions_add_save">सेव करें</string>
   <!-- About page link text to open support link -->
   <string name="about_support">समर्थन</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -1815,6 +1817,8 @@
   <string name="about_privacy_notice">गोपनीयता सूचना</string>
   <!-- About page link text to open know your rights link -->
   <string name="about_know_your_rights">अपने अधिकारों को जानें</string>
+  <!-- About page link text to open terms of use link -->
+  <string name="about_terms_of_use" tools:ignore="UnusedResources">उपयोग की शर्तें</string>
   <!-- About page link text to open licensing information link -->
   <string name="about_licensing_information">लाइसेंसिंग सूचना</string>
   <!-- About page link text to open a screen with libraries that are used -->
@@ -1845,14 +1849,44 @@
   <string name="add_to_homescreen_add">जोड़ें</string>
   <!-- Placeholder text for the TextView in the Add to Homescreen dialog -->
   <string name="add_to_homescreen_text_placeholder">शॉर्टकट नाम</string>
+  <!-- Preference for managing the settings for logins and passwords in Fenix -->
+  <string name="preferences_passwords_logins_and_passwords_2">पासवर्ड</string>
+  <!-- Preference for managing the saving of logins and passwords in Fenix -->
+  <string name="preferences_passwords_save_logins_2">पासवर्ड सेव करें</string>
   <!-- Preference option for asking to save passwords in Fenix -->
   <string name="preferences_passwords_save_logins_ask_to_save">सहेजने के लिए पूछें</string>
   <!-- Preference option for never saving passwords in Fenix -->
   <string name="preferences_passwords_save_logins_never_save">कभी नहीं सहेजें</string>
+  <!-- Preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+  <string name="preferences_passwords_autofill2">%1$s में ऑटोफ़िल करें</string>
+  <!-- Description for the preference for autofilling saved logins in Firefox (in web content), %1$s will be replaced with the app name -->
+  <string name="preferences_passwords_autofill_description">%1$s इस्तेमाल करने के दौरान, वेबसाइटों में यूज़रनेम और पासवर्ड भरें और सेव करें।</string>
+  <!-- Preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+  <string name="preferences_android_autofill">अन्य ऐप में ऑटोफ़िल करें</string>
+  <!-- Description for the preference for autofilling logins from Fenix in other apps (e.g. autofilling the Twitter app) -->
+  <string name="preferences_android_autofill_description">आपके डिवाइस पर मौजूद अन्य ऐप्स में यूज़रनेम और पासवर्ड भरें।</string>
+  <!-- Preference option for adding a password -->
+  <string name="preferences_logins_add_login_2">पासवर्ड जोड़ें</string>
+  <!-- Preference for syncing saved passwords in Fenix -->
+  <string name="preferences_passwords_sync_logins_2">पासवर्ड सिंक करें</string>
+  <!-- Preference for syncing saved passwords in Fenix, when not signed in -->
+  <string name="preferences_passwords_sync_logins_across_devices_2">अलग-अलग डिवाइसों पर पासवर्ड सिंक करें</string>
+  <!-- Preference to access list of saved passwords -->
+  <string name="preferences_passwords_saved_logins_2">सेव किए गए पासवर्ड</string>
+  <!-- Description of empty list of saved passwords. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_saved_logins_description_empty_text_2">%s में आपके सेव या सिंक किए गए पासवर्ड, यहां दिखाई देंगे। आपके सेव किए गए सभी पासवर्ड एन्क्रिप्टेड होते हैं।</string>
+  <!-- Clickable text for opening an external link for more information about Sync. -->
+  <string name="preferences_passwords_saved_logins_description_empty_learn_more_link_2">सिंक के बारे में और जानें</string>
   <!-- Preference to access list of login exceptions that we never save logins for -->
   <string name="preferences_passwords_exceptions">अपवाद</string>
+  <!-- Empty description of list of login exceptions that we never save passwords for. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_exceptions_description_empty_2">%s यहां दी गई साइटों के लिए पासवर्ड सेव नहीं करेगा।</string>
+  <!-- Description of list of login exceptions that we never save passwords for. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_passwords_exceptions_description_2">%s इन साइटों के लिए पासवर्ड सेव नहीं करेगा।</string>
   <!-- Text on button to remove all saved login exceptions -->
   <string name="preferences_passwords_exceptions_remove_all">सभी अपवादों को मिटाएं</string>
+  <!-- Hint for search box in passwords list -->
+  <string name="preferences_passwords_saved_logins_search_2">पासवर्ड सर्च करें</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">साइट</string>
   <!-- The header for the username for a login -->
@@ -1871,12 +1905,34 @@
   <string name="saved_login_copy_username">उपयोगकर्ता नाम कॉपी करे</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
   <string name="saved_login_clear_username">उपयोगकर्ता नाम हटाएँ</string>
+  <!-- Edit text for the login detail menu edit button -->
+  <string name="login_detail_menu_edit_button">एडिट करें</string>
+  <!-- Delete text for the login detail menu delete button -->
+  <string name="login_detail_menu_delete_button">डिलीट करें</string>
+  <!-- Content description, used by tools like screenreaders, to press on the save new login button. -->
+  <string name="add_login_save_new_login_button_content_description">नया लॉग इन सेव करें</string>
+  <!-- Content description, used by tools like screenreaders, to press on the edit login button. -->
+  <string name="edit_login_button_content_description">लॉग इन एडिट करें</string>
+  <!-- Content description, used by tools like screenreaders, to press on the add new login button. -->
+  <string name="saved_logins_add_new_login_button_content_description">नया लॉग इन जोड़ें</string>
+  <!-- Content description, used by tools like screenreaders, to press on the clear search text button. -->
+  <string name="saved_logins_clear_search_text_button_content_description">सर्च टेक्स्ट को साफ़ करें</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">ब्राउज़र में साइट खोलें</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
   <string name="saved_login_reveal_password">पासवर्ड दिखाएं</string>
   <!-- Content Description (for screenreaders etc) read for the button to hide a password in logins -->
   <string name="saved_login_hide_password">पासवर्ड छिपाएं</string>
+  <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their passwords -->
+  <string name="logins_biometric_prompt_message_2">आपके सेव किए गए पासवर्ड देखने के लिए अनलॉक करें</string>
+  <!-- Button for unlocking logins on the biometric lock screen -->
+  <string name="logins_biometric_unlock_button">अनलॉक करें</string>
+  <!-- Button for leaving logins on the biometric lock screen -->
+  <string name="logins_biometric_leave_button">छोड़ें</string>
+  <!-- Title of warning dialog if users have no device authentication set up -->
+  <string name="logins_warning_dialog_title_2">अपने सेव किए गए पासवर्ड सुरक्षित रखें</string>
+  <!-- Message of warning dialog if users have no device authentication set up -->
+  <string name="logins_warning_dialog_message_2">कोई डिवाइस लॉक पैटर्न, पिन या पासवर्ड सेट करें, ताकि आपका डिवाइस किसी और के पास होने पर, वे आपके सेव किए गए पासवर्ड एक्सेस न कर पाएं।</string>
   <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
   <string name="logins_warning_dialog_later">बाद में</string>
   <!-- Positive button to send users to set up a pin of warning dialog if users have no device authentication set up -->
@@ -1891,10 +1947,31 @@
   <string name="saved_logins_sort_strategy_alphabetically">नाम (A-Z)</string>
   <!-- Saved logins sorting strategy menu item -by last used- (if selected, it will sort saved logins by last used) -->
   <string name="saved_logins_sort_strategy_last_used">अंतिम प्रयुक्त</string>
+  <!-- Content description (not visible, for screen readers etc.) -->
+  <string name="saved_logins_menu_dropdown_chevron_icon_content_description_2">पासवर्ड मेन्यू सॉर्ट करें</string>
+  <!-- Label for button to import passwords from file. -->
+  <string name="passwords_import_menu_button">फ़ाइल से इंपोर्ट करें</string>
+  <!--
+    Email Masks
+
+    Title for the Email Masks in the settings menu
+  -->
+  <string name="preferences_email_masks">ईमेल मास्क</string>
   <!-- The message displayed when there was an error with the email mask or Firefox Account services. -->
   <string name="email_masks_error_retrieving_masks">ईमेल मास्क फिलहाल उपलब्ध नहीं हैं। कुछ मिनटों में फिर से कोशिश करें।</string>
   <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
   <string name="ip_protection_connection_error_snackbar">VPN से कनेक्ट नहीं किया जा सका। कुछ मिनटों में फिर से कोशिश करें।</string>
+  <!--
+    Snackbar (in-app pop-up notification) text to signal the browser VPN has reached the monthly data limit.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_snackbar">%1$d GB VPN डेटा इस्तेमाल हो चुका है। अगले महीने एक्सेस रीसेट हो जाएगा।</string>
+  <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
+  <string name="ip_protection_data_limit_reached_snackbar_action">सेटिंग</string>
+  <!-- Description shown on the browser VPN settings screen prompting the user to turn the VPN on. -->
+  <string name="ip_protection_settings_description" tools:ignore="UnusedResources">अपनी ब्राउज़िंग को और ज़्यादा प्राइवेट बनाने और उसे ट्रेस करना और कठिन बनाने के लिए, VPN चालू करें।</string>
+  <!-- Title shown on the browser VPN settings screen for location selection section. -->
+  <string name="ip_protection_location_title" tools:ignore="UnusedResources">लोकेशन</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">कार्ड जोड़ें</string>
   <!-- Title of the "Edit card" screen -->
