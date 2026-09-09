@@ -2330,10 +2330,14 @@
   <string name="search_add_custom_engine_name_hint_2">सर्च इंजन का नाम</string>
   <!-- Label for the TextField in which user enters custom search engine URL -->
   <string name="search_add_custom_engine_url_label">सर्च स्ट्रिंग का URL</string>
+  <!-- Placeholder text shown in the Search String TextField before a user enters text -->
+  <string name="search_add_custom_engine_search_string_hint_2">सर्च के लिए इस्तेमाल किया जाने वाला URL</string>
   <!-- Description text for the Search String TextField. The %s is part of the string -->
   <string name="search_add_custom_engine_search_string_example" formatted="false">“%s” से प्रश्न बदले। उदाहरण:\nhttps://www.google.com/search?q=%s</string>
   <!-- Accessibility description for the form in which details about the custom search engine are entered -->
   <string name="search_add_custom_engine_form_description">अनुकूल खोज इंजन विवरण</string>
+  <!-- The text for the "Save" button for saving a custom search engine -->
+  <string name="search_custom_engine_save_button">सेव करें</string>
   <!-- Text shown when a user leaves the name field empty -->
   <string name="search_add_custom_engine_error_empty_name">खोज इंजन नाम दर्ज करें</string>
   <!-- Text shown when a user leaves the search string field empty -->
@@ -2358,6 +2362,12 @@
   <string name="confirm_clear_permission_site">क्या आप वाकई इस साइट पर इस अनुमति को हटाना चाहते हैं?</string>
   <!-- label shown when there are not site exceptions to show in the site exception settings -->
   <string name="no_site_exceptions">कोई साइट अपवाद नहीं है</string>
+  <!-- Browser menu button that adds a shortcut to the home fragment -->
+  <string name="browser_menu_add_to_shortcuts">शॉर्टकट में जोड़ें</string>
+  <!-- Browser menu button that removes a shortcut from the home fragment -->
+  <string name="browser_menu_remove_from_shortcuts">शॉर्टकट से हटाएं</string>
+  <!-- Message in delete confirmation dialog for password -->
+  <string name="login_deletion_confirmation_2">यह पासवर्ड वाकई डिलीट करना है?</string>
   <!-- Positive action of a dialog asking to delete -->
   <string name="dialog_delete_positive">हटाएं</string>
   <!-- Negative action of a dialog asking to delete login -->
@@ -2453,6 +2463,10 @@
   <string name="top_sites_rename_dialog_cancel">रद्द करें</string>
   <!-- Text for the menu button to open the homepage settings. -->
   <string name="top_sites_menu_settings">सेटिंग</string>
+  <!-- Text for the menu button to navigate to sponsors and privacy support articles. '&amp;' is replaced with the ampersand symbol: & -->
+  <string name="top_sites_menu_sponsor_privacy">हमारे स्पॉन्सर और आपकी प्राइवेसी</string>
+  <!-- Label text displayed for a sponsored top site. -->
+  <string name="top_sites_sponsored_label">स्पॉन्सर्ड</string>
   <!-- Text for the menu item to edit a top site. -->
   <string name="top_sites_edit_top_site">एडिट करें</string>
   <!-- Text for the dialog title to edit a top site. -->
@@ -2525,6 +2539,24 @@
   <string name="translation_error_could_not_translate_warning_text">अनुवाद करने में कुछ समस्या आई। कृपया फिर से कोशिश करें।</string>
   <!-- The title of the warning card informs the user that the list of languages cannot be loaded. -->
   <string name="translation_error_could_not_load_languages_warning_text">भाषाएं लोड नहीं की जा सकीं। कृपया अपना इंटरनेट कनेक्शन देखें और फिर से कोशिश करें।</string>
+  <!-- Button text for the button that will take the user to the translation settings dialog. -->
+  <string name="translation_option_bottom_sheet_translation_settings">अनुवाद से जुड़ी सेटिंग</string>
+  <!--
+    Translation settings dialog
+
+    Title of the translation settings dialog that allows a user to set their preferred translation settings.
+  -->
+  <string name="translation_settings_toolbar_title">अनुवाद</string>
+  <!-- Toggle switch label that indicates that the browser should signal or indicate when a translation is possible for any page. -->
+  <string name="translation_settings_offer_to_translate">संभव होने पर अनुवाद करने की पेशकश करें</string>
+  <!-- Toggle switch label that indicates that downloading files required for translating is permitted when using data saver mode in Android. -->
+  <string name="translation_settings_always_download">भाषाओं को हमेशा डेटा सेविंग मोड में डाउनलोड करें</string>
+  <!-- Section header text that begins the section of a list of different options the user may select to adjust their translation preferences. -->
+  <string name="translation_settings_translation_preference">अनुवाद की प्राथमिकताएं</string>
+  <!-- Button text for the button that will take the user to the automatic translations settings dialog. On the automatic translations settings dialog, the user can set if translations should occur automatically for a given language. -->
+  <string name="translation_settings_automatic_translation">ऑटोमैटिक अनुवाद</string>
+  <!-- Button text for the button that will take the user to the never translate these sites dialog. On the never translate these sites dialog, the user can set if translations should never occur on certain websites. -->
+  <string name="translation_settings_automatic_never_translate_sites">इन साइटों का कभी अनुवाद न करें</string>
   <!-- Button text for the button that will take the user to the download languages dialog. On the download languages dialog, the user can manage which languages they would like to download for translations. -->
   <string name="translation_settings_download_language">भाषाएं डाउनलोड करें</string>
   <!-- Toggle switch title and description for the translation settings control. -->
@@ -2653,8 +2685,17 @@
   <string name="delete_language_file_dialog_positive_button_text">डिलीट करें</string>
   <!-- Button text on the dialog used by the translations feature to cancel deleting a language. -->
   <string name="delete_language_file_dialog_negative_button_text">कैंसिल करें</string>
+  <!--
+    Title for the data saving mode warning dialog used by the translations feature.
+    This dialog will be presented when the user attempts to download a language or perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    %1$s is the size in kilobytes or megabytes of the language file.
+  -->
+  <string name="download_language_file_dialog_title">डेटा सेविंग मोड में रहते हुए डाउनलोड करें (%1$s)?</string>
   <!-- Additional information for the data saving mode warning dialog used by the translations feature. This text explains the reason a download is required for a translation. -->
   <string name="download_language_file_dialog_message_all_languages">हम अनुवादों को गोपनीय बनाए रखने के लिए, कुछ आधी-अधूरी भाषाओं को आपके कैशे में डाउनलोड करते हैं।</string>
+  <!-- Checkbox label text on the data saving mode warning dialog used by the translations feature. This checkbox allows users to ignore the data usage warnings. -->
+  <string name="download_language_file_dialog_checkbox_text">हमेशा डेटा सेविंग मोड में डाउनलोड करें</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file. -->
   <string name="download_language_file_dialog_positive_button_text">डाउनलोड करें</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to confirm they wish to continue and download the language file and perform a translation. -->
@@ -2676,6 +2717,116 @@
     %s is the name of the app (for example "Firefox").
   -->
   <string name="protection_panel_banner_not_protected_description">%s चालू नहीं है। हमारा सुझाव है कि आप सुरक्षा सेटिंग फिर से चालू कर दें।</string>
+  <plurals name="protection_panel_banner_protected_blocked_trackers_description">
+    <!--
+      Description text for the protection panel banner when privacy dashboard is enabled.
+      %1$d is the number of trackers blocked.
+    -->
+    <item quantity="one">इस साइट पर %1$d ट्रैकर ब्लॉक किया।</item>
+    <item quantity="other">इस साइट पर %1$d ट्रैकर्स ब्लॉक किए।</item>
+  </plurals>
+  <!--
+    Description text for the protection panel banner when privacy dashboard is enabled.
+    and there are no trackers blocked.
+  -->
+  <string name="protection_panel_banner_protected_no_blocked_trackers_description">आप सुरक्षित हैं।</string>
+  <!-- Toggle if Enhanced Tracking Protection is turned on -->
+  <string name="protection_panel_etp_toggle_on">ऑन</string>
+  <!-- Toggle if Enhanced Tracking Protection is turned off -->
+  <string name="protection_panel_etp_toggle_off">ऑफ़</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
+  <string name="protection_panel_etp_toggle_enabled_description_2">अगर इस साइट में कुछ गड़बड़ दिखाई देती है, तो इसे बंद करके देखें।</string>
+  <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is disabled. -->
+  <string name="protection_panel_etp_toggle_disabled_description_2">ट्रैकिंग सुरक्षा चालू करने की सलाह दी जाती है।</string>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">ब्लॉक किए गए ट्रैकर: %d</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">ट्रैकर ब्लॉक नहीं किए गए हैं</string>
+  <!-- Link text to navigate to privacy and security settings from the protection panel. -->
+  <string name="protection_panel_privacy_and_security_settings_2">प्राइवेसी सेटिंग</string>
+  <!-- Title text for the protection panel permissions section. -->
+  <string name="protection_panel_permissions_title">अनुमति‌यां</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">इस साइट पर %1$d ट्रैकर ब्लॉक किया गया है</item>
+    <item quantity="other">इस साइट पर %1$d ट्रैकर्स ब्लॉक किए गए हैं</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_social_media_trackers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked social media trackers.
+      %1$d is a placeholder for the number of social media trackers blocked.
+    -->
+    <item quantity="one">%1$d सोशल मीडिया ट्रैकर</item>
+    <item quantity="other">%1$d सोशल मीडिया ट्रैकर्स</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cross_site_cookies">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cross-site tracking cookies.
+      %1$d is a placeholder for the number of cross-site tracking cookies blocked.
+    -->
+    <item quantity="one">%1$d क्रॉस-साइट ट्रैकिंग कुकी</item>
+    <item quantity="other">%1$d क्रॉस-साइट ट्रैकिंग कुकीज़</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_cryptominers">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked cryptomining scripts.
+      %1$d is a placeholder for the number of cryptominers blocked.
+    -->
+    <item quantity="one">%1$d क्रिप्टोमाइनर</item>
+    <item quantity="other">%1$d क्रिप्टोमाइनर्स</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_fingerprinters">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked fingerprinter scripts.
+      %1$d is a placeholder for the number of fingerprinters blocked.
+    -->
+    <item quantity="one">%1$d फिंगरप्रिंटर</item>
+    <item quantity="other">%1$d फिंगरप्रिंटर्स</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_2">
+    <!--
+      Text for displaying in the trackers blocked panel the total number of blocked generic tracking scripts.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">%1$d ट्रैकिंग कंटेंट</item>
+    <item quantity="other">%1$d ट्रैकिंग कंटेंट</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">इस हफ़्ते %1$d ट्रैकर ब्लॉक किया</item>
+    <item quantity="other">इस हफ़्ते %1$d ट्रैकर्स ब्लॉक किए</item>
+  </plurals>
+  <!--
+    Description text for a dialog confirming whether the user wants to delete all data for current site.
+    %s is a placeholder for the base domain of website.
+  -->
+  <string name="clear_site_data_dialog_description"><![CDATA[<b>%s</b> के लिए कुकीज़ और साइट डेटा हटाने से, आप वेबसाइटों से लॉग आउट हो सकते हैं और शॉपिंग कार्ट खाली हो सकती हैं।]]></string>
+  <!-- Button text on the clear site data dialog to allow users to confirm they wish to clear the site data. -->
+  <string name="clear_site_data_dialog_positive_button_text">मिटाएं</string>
+  <!-- Button text on the clear site data dialog to allow users to cancel the action and not clear the site data. -->
+  <string name="clear_site_data_dialog_negative_button_text">कैंसिल करें</string>
+  <!-- Text for the connection security panel when the site is secure. -->
+  <string name="connection_security_panel_secure">सुरक्षित कनेक्शन</string>
+  <!-- Text for the connection security panel when the site is not secure. -->
+  <string name="connection_security_panel_not_secure">कनेक्शन सुरक्षित नहीं है</string>
+  <!-- Text for the connection security panel when accessed from local PDF. -->
+  <string name="connection_security_panel_local_pdf">यह पेज आपके डिवाइस पर स्टोर किया गया है</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
+  <string name="tracker_protections_dashboard_close_handlebar_content_description">डैशबोर्ड बंद करें</string>
+  <!--
+    Text for the connection security panel when the site uses a QWAC.
+    %s is a placeholder for the organization for which the certificate was issued.
+  -->
+  <string name="connection_security_panel_issued_to">%s को जारी किया गया था</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">जारी रखें</string>
   <!--
