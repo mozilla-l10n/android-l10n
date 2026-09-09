@@ -2607,12 +2607,53 @@
   <string name="translations_bottom_sheet_negative_button">अभी नहीं</string>
   <!-- Button text on the translations dialog to restore the translated website back to the original untranslated version. -->
   <string name="translations_bottom_sheet_negative_button_restore">ओरिजिनल दिखाएं</string>
+  <!-- Accessibility announcement (not visible, for screen readers etc.) for the translations dialog after restore button was pressed that indicates the original untranslated page was loaded. -->
+  <string name="translations_bottom_sheet_restore_accessibility_announcement">बगैर अनुवाद वाला, ओरिजिनल पेज लोड किया</string>
+  <!-- Button text on the translations dialog when a translation error appears, used to dismiss the dialog and return to the browser. -->
+  <string name="translations_bottom_sheet_negative_button_error">हो गया</string>
+  <!-- Button text on the translations dialog to begin a translation of the website. -->
+  <string name="translations_bottom_sheet_positive_button">अनुवाद करें</string>
   <!-- Button text on the translations dialog when a translation error appears. -->
   <string name="translations_bottom_sheet_positive_button_error">फिर से कोशिश करें</string>
+  <!-- Inactive button text on the translations dialog that indicates a translation is currently in progress. This button will be accompanied by a loading icon. -->
+  <string name="translations_bottom_sheet_translating_in_progress">अनुवाद किया जा रहा है</string>
+  <!-- Button content description (not visible, for screen readers etc.) for the translations dialog translate button that indicates a translation is currently in progress. -->
+  <string name="translations_bottom_sheet_translating_in_progress_content_description">अनुवाद जारी है</string>
+  <!-- Default dropdown option when initially selecting a language from the translations dialog language selection dropdown. -->
+  <string name="translations_bottom_sheet_default_dropdown_selection">भाषा चुनें</string>
   <!-- The title of the warning card informs the user that a translation could not be completed. -->
   <string name="translation_error_could_not_translate_warning_text">अनुवाद करने में कुछ समस्या आई। कृपया फिर से कोशिश करें।</string>
   <!-- The title of the warning card informs the user that the list of languages cannot be loaded. -->
   <string name="translation_error_could_not_load_languages_warning_text">भाषाएं लोड नहीं की जा सकीं। कृपया अपना इंटरनेट कनेक्शन देखें और फिर से कोशिश करें।</string>
+  <!-- The title of the warning card informs the user that translations from a language are not supported yet. %1$s is the name of the source language. -->
+  <string name="translation_error_language_not_supported_warning_text_2">माफ़ करें, हम फ़िलहाल %1$s से अनुवाद करना सपोर्ट नहीं करते।</string>
+  <!-- Snackbar title shown if the user closes the Translation Request dialogue and a translation is in progress. -->
+  <string name="translation_in_progress_snackbar">अनुवाद किया जा रहा है...</string>
+  <!--
+    Title for the data saving mode warning dialog used in the translation request dialog.
+    This dialog will be presented when the user attempts to perform
+    a translation without the necessary language files downloaded first when Android's data saver mode is enabled and the user is not using WiFi.
+    %1$s is the size in kilobytes or megabytes of the language file.
+  -->
+  <string name="translations_download_language_file_dialog_title">डेटा सेविंग मोड में रहते हुए भाषा डाउनलोड करें (%1$s)?</string>
+  <!--
+    Translations options dialog
+
+    Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on.
+  -->
+  <string name="translation_option_bottom_sheet_title_heading">अनुवाद के विकल्प</string>
+  <!-- Toggle switch label that allows a user to set the setting if they would like the browser to always offer or suggest translations when available. -->
+  <string name="translation_option_bottom_sheet_always_translate">हमेशा अनुवाद की पेशकश करें</string>
+  <!-- Toggle switch label that allows a user to set if they would like a given language to automatically translate or not. %1$s is the language name, for example, "Spanish". -->
+  <string name="translation_option_bottom_sheet_always_translate_in_language">%1$s का हमेशा अनुवाद करें</string>
+  <!-- Toggle switch label that allows a user to set if they would like to never be offered a translation of the given language. %1$s is the language name, for example, "Spanish". -->
+  <string name="translation_option_bottom_sheet_never_translate_in_language">%1$s का कभी अनुवाद न करें</string>
+  <!-- Toggle switch label that allows a user to set the setting if they would like the browser to never translate the site the user is currently visiting. -->
+  <string name="translation_option_bottom_sheet_never_translate_site">इस साइट का कभी अनुवाद न करें</string>
+  <!-- Toggle switch description that will appear under the "Never translate these sites" settings toggle switch to provide more information on how this setting interacts with other settings. -->
+  <string name="translation_option_bottom_sheet_switch_never_translate_site_description">अन्य सभी सेटिंग को ओवर-राइड करता है</string>
+  <!-- Toggle switch description that will appear under the "Never translate" and "Always translate" toggle switch settings to provide more information on how these  settings interacts with other settings. -->
+  <string name="translation_option_bottom_sheet_switch_description">अनुवाद करने की पेशकश को ओवर-राइड करता है</string>
   <!-- Button text for the button that will take the user to the translation settings dialog. -->
   <string name="translation_option_bottom_sheet_translation_settings">अनुवाद से जुड़ी सेटिंग</string>
   <!--
@@ -2929,6 +2970,8 @@
     The survey header
   -->
   <string name="micro_survey_survey_header_2">कृपया सर्वे पूरा करें</string>
+  <!-- The privacy notice link -->
+  <string name="micro_survey_privacy_notice_2">प्राइवेसी नोटिस</string>
   <!-- The submit button label text -->
   <string name="micro_survey_submit_button_label">सबमिट करें</string>
   <!-- The survey completion header -->
@@ -3043,6 +3086,10 @@
     The title of the credit cards feature in the Debug Drawer.
   -->
   <string name="debug_drawer_credit_cards_title">क्रेडिट कार्ड</string>
+  <!-- The title of the button in the debug drawer for adding a new credit card -->
+  <string name="debug_drawer_add_new_credit_card">नया क्रेडिट कार्ड जोड़ें</string>
+  <!-- The title of the button for deleting in the debug drawer all addresses. -->
+  <string name="debug_drawer_delete_all_credit_cards">सभी क्रेडिट कार्ड डिलीट करें</string>
   <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
   <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">आप Firefox का पुराना वर्ज़न इस्तेमाल कर रहे हैं</string>
   <!-- Push notification message about old Firefox version. "Update" is a verb. -->
@@ -3059,6 +3106,12 @@
   <string name="setup_checklist_title_state_incomplete">%1$s का सेट अप पूरा करें</string>
   <!-- Title for the setup checklist feature when the state is 'completed' -->
   <string name="setup_checklist_title_state_completed">बधाइयां!</string>
+  <!--
+    ===== Setup checklist feature: Subtitles for 3 steps =====
+
+    Subtitle for a setup checklist with 3 steps initial step. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_subtitle_3_steps_initial_state">%1$s को सेट करके बेहतरीन ब्राउज़िंग अनुभव पाने के लिए, ये 3 चरण पूरे करें।</string>
   <!-- Subtitle for a setup checklist with 3 steps when the first task is completed. -->
   <string name="setup_checklist_subtitle_3_steps_first_step">शुरुआत अच्छी है! आपने 3 में से 1 चरण पूरा कर लिया है।</string>
   <!-- Subtitle for a setup checklist with 3 steps when two of the tasks are completed. -->
@@ -3081,6 +3134,16 @@
   <string name="setup_checklist_subtitle_6_steps_fourth_step">4 चरण तक पहुंच गए हैं। बस 2 और बाकी हैं!</string>
   <!-- Subtitle for a setup checklist with 6 steps when the fifth task is completed. -->
   <string name="setup_checklist_subtitle_6_steps_fifth_step">बस, पूरा होने ही वाला है! आप फ़िनिश लाइन से सिर्फ़ 1 कदम दूर हैं।</string>
+  <!-- Subtitle for a setup checklist with 6 steps completed state. %1$s is the name of the app (for example "Firefox"). -->
+  <string name="setup_checklist_subtitle_6_steps_completed_state">आपने सेटअप के सभी 6 चरण पूरे कर लिए हैं। अब %1$s की स्पीड, प्राइवेसी और सुरक्षा का आनंद लें।</string>
+  <!--
+    ===== Setup checklist feature: Subtitles for 5 steps (Large screen devices don't support toolbar placement) =====
+
+    Subtitle for a setup checklist with 5 steps initial state. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_subtitle_5_steps_initial_state">%1$s सेट अप करके बेहतरीन ब्राउज़िंग अनुभव पाने के लिए, सभी 5 चरणों को पूरा करें।</string>
+  <!-- Subtitle for a setup checklist with 5 steps when the first task is completed. -->
+  <string name="setup_checklist_subtitle_5_steps_first_step">शुरुआत अच्छी है! आपने 5 में से 1 चरण पूरा कर लिया है।</string>
   <!-- Subtitle for the setup checklist when the second task is completed. -->
   <string name="setup_checklist_subtitle_5_steps_second_step">आपने 5 में से 2 चरण पूरे कर लिए हैं। बहुत बढ़िया!</string>
   <!-- Subtitle for a setup checklist with 5 steps when three of the tasks are completed. -->
@@ -3199,6 +3262,42 @@
   <string name="terms_of_use_prompt_postpone">बाद में याद दिलाएं</string>
   <!-- A title for the popup prompt. -->
   <string name="terms_of_use_prompt_title_option_a" tools:ignore="UnusedResources">उपयोग की शर्तें</string>
+  <!-- The first active link used in privacy_notice_updated_homepage_message -->
+  <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">प्राइवेसी नोटिस</string>
+  <!-- The second active link used in privacy_notice_updated_homepage_message -->
+  <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">और जानें</string>
+  <!-- Message shown on the collections to tab groups migration card on the homepage. -->
+  <string name="collections_migration_homepage_card_message">अपने टैब व्यवस्थित रखने का एक आसान तरीका है</string>
+  <!-- Link text shown on the collections to tab groups migration card that opens the tab groups page in the tab manager. -->
+  <string name="collections_migration_homepage_card_link">मेरे टैब वाले ग्रुप देखें</string>
+  <!-- Google Lens prototype related strings -->
+  <string name="preferences_debug_settings_google_lens_integration">Google Lens का इंटीग्रेशन चालू करें</string>
+  <!-- Lens image search button content description -->
+  <string name="lens_search_content_description">इमेज से सर्च करें</string>
+  <!-- Content description for the gallery picker button in the Lens camera screen -->
+  <string name="content_description_gallery">Google Lens पर भेजने के लिए गैलरी से चुनें</string>
+  <!-- Content description for the shutter button in the Lens camera screen -->
+  <string name="content_description_take_photo">फ़ोटो लें और Google Lens पर भेजें</string>
+  <!-- Image context menu entry that sends the long-pressed image to Google Lens -->
+  <string name="context_menu_open_image_with_google_lens">Google Lens से सर्च करें</string>
+  <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
+  <string name="lens_camera_permission_denied">अनुमति नामंज़ूर की</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the photo they capture will be sent to Google Lens for a visual search.
+  -->
+  <string name="lens_camera_title_lens">Google Lens</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the camera is being used to scan a QR code.
+  -->
+  <string name="lens_camera_title_qr">QR कोड</string>
+  <!-- Title for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_title">Google Lens सर्च चालू करें</string>
+  <!-- Description for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_description">विज़ुअल सर्च के लिए, Google को इमेज और फ़ोटो भेजें।</string>
+  <!-- Caption shown under the Google Lens toggle clarifying when the feature is available -->
+  <string name="preferences_google_lens_availability_caption">फ़ीचर तभी उपलब्ध होगा जब ऊपर Google को चालू किया गया हो और ब्राउज़ करते समय यह आपका एक्टिव सर्च इंजन हो।</string>
   <!-- Content description for accessibility (used by screen readers): Description of the button that downloads the PDF displayed on the screen to the user's device. -->
   <string name="pdf_tools_download_content_description">PDF डाउनलोड करें</string>
   <!-- Content description for accessibility (used by screen readers): Description for the button that opens the printing dialogue window for the PDF displayed on the screen. -->
