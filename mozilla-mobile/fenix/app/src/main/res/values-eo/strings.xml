@@ -1971,6 +1971,8 @@
   <string name="webcompat_reporter_description_error">Bonvolu tajpi minimume 10 signojn</string>
   <!-- The label/title of a mandatory field in the Web Compat Reporter feature for adding additional information. -->
   <string name="webcompat_reporter_label_mandatory_description">Detale priskribu la problemon por helpi nin esplori ĝin</string>
+  <!-- The label/title of a optional field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_optional_description">Detale priskribu la problemon por helpi nin esplori ĝin (nedevige)</string>
   <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
   <string name="webcompat_reporter_cancel">Nuligi</string>
   <!-- The button text for the send button to submit the provided form data. -->
@@ -2174,6 +2176,10 @@
   <string name="bookmark_select_folder_new_folder_button_title">Nova dosierujo</string>
   <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
   <string name="bookmark_moved_single_item">%1$s movita al %2$s</string>
+  <!-- Text for bookmark search page when there are no results. -->
+  <string name="bookmark_no_search_results">Neniu legosigno trovita.</string>
+  <!-- Additional text for bookmark search page when there are no results. -->
+  <string name="bookmark_no_search_results_additional_text">Provu alian serĉon!</string>
   <!--
     Site Permissions
 
@@ -2369,6 +2375,10 @@
   <string name="sync_sign_in">Komenci seancon en Speguli</string>
   <!-- An option from the share dialog to send link to all other sync devices -->
   <string name="sync_send_to_all">Sendi al ĉiuj aparatoj</string>
+  <!-- Text displayed when no other sync devices are available for link sharing -->
+  <string name="sync_no_devices_available">Neniu aparato trovita</string>
+  <!-- Text displayed when no other sync devices are available for link sharing. -->
+  <string name="sync_no_devices_available_description">Ĉiuj aparatoj kun komencitaj seancoj, kiuj spegulas al tiu ĉi konto, aperos ĉi tie.</string>
   <!-- An option from the share dialog to reconnect to sync -->
   <string name="sync_reconnect">Rekonekti al Spegulado</string>
   <!-- Text displayed when sync is offline and cannot be accessed -->
@@ -2393,6 +2403,20 @@
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nSendita el %2$s 🦊 Provu la poŝaparatan retumilon: %3$s</string>
   <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nSendita el %2$s 🦊 %3$s</string>
+  <!-- Send tab to synced devices: Authentication error title - Message asking the user to re-authenticate -->
+  <string name="sync_send_tab_error_auth_title">Rekomencu seancon por sendi langetojn inter aparatoj</string>
+  <!-- Send tab to synced devices: Authentication error button - Allows user to re-authenticate -->
+  <string name="sync_send_tab_error_auth_button">Komenci seancon</string>
+  <!-- Send tab to synced devices: Authentication error button - Allows user to remove the currently connected account -->
+  <string name="sync_send_tab_error_auth_remove_account">Forigi konton</string>
+  <!-- Send tab to synced devices: Empty state title - Displayed when the user has no synced devices -->
+  <string name="sync_send_tab_empty_state_title">Nenio aparato konektita</string>
+  <!-- Send tab to synced devices: Empty state message - Displayed when the user has no synced devices -->
+  <string name="sync_send_tab_empty_state_description" tools:ignore="BrandUsage">Por sendi langeton, komencu seancon en Firefox en almenaŭ unu alia aparato.</string>
+  <!-- Send tab to synced devices: Connectivity Error title -->
+  <string name="sync_send_tab_error_connection_title">Kontrolu vian retaliron</string>
+  <!-- Send tab to synced devices: Connectivity Error message - Suggested user action after internet connection has been established -->
+  <string name="sync_send_tab_error_connection_text">Kaj poste provu resendi vian langeton.</string>
   <!--
     Notifications
 
@@ -2414,6 +2438,18 @@
     The app name is in the text, due to limitations with localizing Nimbus experiments
   -->
   <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Igu Firefox via norma retumilo</string>
+  <!--
+    Privacy report notification
+
+    Name of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app.
+  -->
+  <string name="notification_privacy_report_channel_name">Raporto pri privateco</string>
+  <!-- Description of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app. %1$s is the app name (e.g. Firefox) -->
+  <string name="notification_privacy_report_channel_description">%1$s montas la nombron de spuriloj kiuj estis blokitaj dum via retumo.</string>
+  <!-- Body text for the weekly privacy report notification for when trackers have been blocked. %1$s is the app name (e.g. Firefox) -->
+  <string name="notification_privacy_report_body_has_trackers">Plu retumu. %1$s plu blokos.</string>
+  <!-- Headline text of the weekly privacy report notification for when no trackers have been blocked. %1$s is the app name (e.g. Firefox) -->
+  <string name="notification_privacy_report_headline_no_trackers">%1$s blokas spurilojn dum vi retumas. Vi vidos ilin ĉi tie.</string>
   <!--
     Survey
 
@@ -3020,6 +3056,8 @@
   <string name="ip_protection_menu_paused">Paŭzigita</string>
   <!-- Badge label shown in the menu item when the browser VPN has an error -->
   <string name="ip_protection_menu_error">Eraro</string>
+  <!-- Badge label shown in the VPN menu item when the user is eligible for the feature but needs to authenticate / authorize to enable it -->
+  <string name="ip_protection_menu_try_vpn_cta">Provu tion senpage</string>
   <!-- Badge label shown in the menu item when the user is eligible to use the browser VPN but should authenticate or authorize it first. -->
   <string name="ip_protection_menu_auth_required">Provi</string>
   <!-- Content description for the chevron button that opens the browser VPN settings screen -->
@@ -3038,6 +3076,10 @@
   <string name="ip_protection_toolbar_pill_label">VPN ŝaltita</string>
   <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
   <string name="ip_protection_toolbar_pill_description">VPN estas aktiva.</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN turns off -->
+  <string name="ip_protection_toolbar_pill_label_off">VPN malŝaltita</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has turned off -->
+  <string name="ip_protection_toolbar_pill_description_off">La VPN estas malŝaltita.</string>
   <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
   <string name="ip_protection_get_started">Unuaj paŝoj</string>
   <!-- Label for the "connecting" state of the button that starts the browser VPN authentication or authorization flow on the settings screen -->
@@ -3064,6 +3106,8 @@
   <string name="ip_protection_onboarding_not_now_button">Ne nun</string>
   <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
   <string name="ip_protection_connection_error_snackbar">Ne eblis konektiĝi al VPN. Provu denove post kelkaj minutoj.</string>
+  <!-- Snackbar (in-app pop-up notification) text to signal the VPN location has been reset due to the previously selected VPN location being no longer available. -->
+  <string name="ip_protection_location_selection_reset_snackbar">La elektita loko por VPN ne disponeblas. La konekto iri al la rekomendita loko.</string>
   <!--
     Snackbar (in-app pop-up notification) text to signal the browser VPN has reached the monthly data limit.
     %1$d is the total monthly allowance in GB (for example "50").
@@ -3071,6 +3115,10 @@
   <string name="ip_protection_data_limit_reached_snackbar">%1$d GB de datumoj VPN uzitaj. Venontmonate ili disponeblos denove.</string>
   <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
   <string name="ip_protection_data_limit_reached_snackbar_action">Agordoj</string>
+  <!-- Description shown on the browser VPN settings screen prompting the user to turn the VPN on. -->
+  <string name="ip_protection_settings_description" tools:ignore="UnusedResources">Ŝaltu la VPN por igi vian retumon pli privata kaj pli malfacile spurebla.</string>
+  <!-- Title shown on the browser VPN settings screen for location selection section. -->
+  <string name="ip_protection_location_title" tools:ignore="UnusedResources">Loko</string>
   <!--
     Autofill
 
