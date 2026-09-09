@@ -1224,8 +1224,24 @@
   <string name="webcompat_reporter_label_url">URL</string>
   <!-- The error message of the URL text field when an invalid URL has been entered. -->
   <string name="webcompat_reporter_url_error_invalid">सही URL डालें</string>
+  <!-- The label/title of a field in the Web Compat Reporter feature for explaining a high-level reason why the site is broken. -->
+  <string name="webcompat_reporter_label_whats_broken_3">क्या चीज़ काम नहीं कर रही है?</string>
   <!-- Content description for the icon button that clears the selected broken site reason in the WebCompat Reporter. -->
   <string name="webcompat_reporter_clear_reason_content_description">चुना गया कारण मिटाएं</string>
+  <!-- The error message of the description when the user selects "Something else" as the reason, but left the description empty or too short. -->
+  <string name="webcompat_reporter_description_error">कम से कम 10 कैरेक्टर में बताएं</string>
+  <!-- The label/title of a mandatory field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_mandatory_description">समस्या का खुलकर ब्यौरा दें ताकि हम समस्या की जांच कर सकें</string>
+  <!-- The label/title of a optional field in the Web Compat Reporter feature for adding additional information. -->
+  <string name="webcompat_reporter_label_optional_description">समस्या का खुलकर ब्यौरा दें ताकि हम समस्या की जांच कर सकें (अगर चाहें तो)</string>
+  <!-- The button text for the cancel button to leave the Web Compat Reporter feature. -->
+  <string name="webcompat_reporter_cancel">कैंसिल करें</string>
+  <!-- The button text for the send button to submit the provided form data. -->
+  <string name="webcompat_reporter_send_report">रिपोर्ट भेजें</string>
+  <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
+  <string name="webcompat_reporter_success_snackbar_text_2">रिपोर्ट भेजी</string>
+  <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
+  <string name="webcompat_reporter_etp_checkbox_text_2">ट्रैकिंग सुरक्षा ने जो आइटम ब्लॉक किए हैं, उनकी सूची भेजें</string>
   <!-- Title for the Edit URL confirmation dialog in the WebCompatReporter -->
   <string name="webcompat_reporter_edit_url_dialog_title">वेबसाइट URL एडिट करें</string>
   <!-- Text shown on the save button for the Edit URL confirmation dialog in the WebCompatReporter. -->
@@ -1377,6 +1393,40 @@
   <string name="bookmark_add_new_folder_button_content_description">नया फ़ोल्डर जोड़ें</string>
   <!-- Content description for the bookmark screen delete bookmark navigation bar button -->
   <string name="bookmark_delete_bookmark_content_description">बुकमार्क डिलीट करें</string>
+  <!-- Content description for the bookmark screen delete bookmark folder navigation bar button -->
+  <string name="bookmark_delete_folder_content_description">फ़ोल्डर डिलीट करें</string>
+  <!-- Content description for bookmark search floating action button -->
+  <string name="bookmark_search_button_content_description">बुकमार्क सर्च करें</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">फ़ोल्डर सर्च करें</string>
+  <!-- Content description for the overflow menu for a bookmark item. %s is a folder name or bookmark title. -->
+  <string name="bookmark_item_menu_button_content_description">%s के लिए आइटम मेन्यू</string>
+  <!-- Content description for the chevron that will open a folder on the select folder screen and display its children. %s is the title of the folder that will be opened -->
+  <string name="bookmark_select_folder_expand_folder_content_description">फ़ोल्डर फैलाएं: %s</string>
+  <!-- Content description for the chevron that will close a folder on the select folder screen so that its children are no longer visible. %s is the title of the folder that will be closed -->
+  <string name="bookmark_select_folder_close_folder_content_description">फ़ोल्डर बंद करें: %s</string>
+  <!-- Content description for the "close" button in bookmarks screen. -->
+  <string name="bookmark_close_button_content_description">बुकमार्क बंद करें</string>
+  <!-- Content description for the Import bookmarks button in bookmarks screen. -->
+  <string name="bookmark_import_bookmarks_button_content_description">फ़ाइल से इंपोर्ट करें</string>
+  <!-- Title for the bookmark list empty state -->
+  <string name="bookmark_empty_list_title">अभी तक कोई बुकमार्क नहीं है</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">अपने सभी पसंदीदा बुकमार्क एक साथ रखें</string>
+  <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
+  <string name="bookmarks_folder_description">फ़ोल्डर में मौजूद बुकमार्क: %s</string>
+  <!-- Text for the button to navigate to sync authentication -->
+  <string name="bookmark_empty_list_guest_cta">सिंक करने के लिए साइन इन करें</string>
+  <!-- Description for the bookmark list empty state when you're in an empty folder. -->
+  <string name="bookmark_empty_list_folder_description">ब्राउज़ करते समय बुकमार्क जोड़ें, ताकि आप अपनी पसंदीदा साइटों को बाद में आसानी से ढूंढ सकें।</string>
+  <!-- Description for the add new folder button when selecting a folder. -->
+  <string name="bookmark_select_folder_new_folder_button_title">नया फ़ोल्डर</string>
+  <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
+  <string name="bookmark_moved_single_item">%1$s को %2$s में मूव किया</string>
+  <!-- Text for bookmark search page when there are no results. -->
+  <string name="bookmark_no_search_results">कोई मैच नहीं मिला।</string>
+  <!-- Additional text for bookmark search page when there are no results. -->
+  <string name="bookmark_no_search_results_additional_text">कुछ और सर्च करके देखें!</string>
   <!--
     Site Permissions
 
@@ -1387,12 +1437,24 @@
   <string name="phone_feature_recommended">अनुशंसित</string>
   <!-- Button label for clearing all the information of site permissions -->
   <string name="clear_permissions">अनुमतियां हटाएं</string>
+  <!-- Text for the OK button on Clear permissions dialog -->
+  <string name="clear_permissions_positive">ओके</string>
+  <!-- Text for the cancel button on Clear permissions dialog -->
+  <string name="clear_permissions_negative">कैंसिल करें</string>
   <!-- Button label for clearing a site permission -->
   <string name="clear_permission">अनुमति हटाएं</string>
+  <!-- Text for the OK button on Clear permission dialog -->
+  <string name="clear_permission_positive">ओके</string>
+  <!-- Text for the cancel button on Clear permission dialog -->
+  <string name="clear_permission_negative">कैंसिल करें</string>
   <!-- Button label for clearing all the information on all sites -->
   <string name="clear_permissions_on_all_sites">सभी साइटों पर अनुमतियों को हटाएं</string>
   <!-- Preference for altering video and audio autoplay for all websites -->
   <string name="preference_browser_feature_autoplay">ऑटोप्ले</string>
+  <!-- Preference for local device access for all websites -->
+  <string name="preference_browser_feature_local_device_access">डिवाइस के ऐप और सेवाएं</string>
+  <!-- Preference for local network access for all websites -->
+  <string name="preference_browser_feature_local_network_access">लोकल नेटवर्क डिवाइस</string>
   <!-- Preference for altering the camera access for all websites -->
   <string name="preference_phone_feature_camera">कैमरा</string>
   <!-- Preference for altering the microphone access for all websites -->
@@ -1403,6 +1465,8 @@
   <string name="preference_phone_feature_notification">अधिसूचना</string>
   <!-- Preference for altering the persistent storage access for all websites -->
   <string name="preference_phone_feature_persistent_storage">लगातार भंडारण</string>
+  <!-- Preference for altering the storage access setting for all websites -->
+  <string name="preference_phone_feature_cross_origin_storage_access">क्रॉस-साइट कुकीज़</string>
   <!-- Preference for altering the EME access for all websites -->
   <string name="preference_phone_feature_media_key_system_access">डीआरएम-नियंत्रित सामग्री</string>
   <!-- Label that indicates that a permission must be asked always -->
