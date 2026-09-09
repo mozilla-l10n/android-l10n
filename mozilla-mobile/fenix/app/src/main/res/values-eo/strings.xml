@@ -31,6 +31,8 @@
   <string name="history_search_hint">Serĉi en historio</string>
   <!-- Placeholder text shown in search bar when using bookmarks search -->
   <string name="bookmark_search_hint">Serĉi legosignojn</string>
+  <!-- Content description for the toolbar back button while searching bookmarks -->
+  <string name="bookmark_close_search_description">Iri reen kaj fermi serĉon</string>
   <!-- Placeholder text shown in search bar when using tabs search -->
   <string name="tab_search_hint">Serĉi langetojn</string>
   <!-- Placeholder text shown in the search bar when using application search engines -->
@@ -143,6 +145,12 @@
   <string name="home_screen_shortcut_passwords">Pasvortoj</string>
   <!-- Shortcut action to open uninstall survey -->
   <string name="home_screen_shortcut_uninstall_survey">Malinstali, kial?</string>
+  <!--
+    Recent Tabs
+
+    Header text on the homescreen for continuing to browse the most recent browser tab
+  -->
+  <string name="recent_tabs_header_2">Daŭrigi</string>
   <!--
     Recent Tabs
 
@@ -814,6 +822,8 @@
   <string name="preferences_toolbar_shortcut">Ŝparvojo al ilaro</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_toolbar_select_shortcut">Elekti ŝparvojon</string>
+  <!-- Title of a menu option allowing to change the shortcut button shown in the toolbar -->
+  <string name="toolbar_shortcut_menu_edit_option">Modifi ŝparvojon</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">Gestoj</string>
   <!-- Preference for settings related to visual options -->
@@ -922,6 +932,12 @@
   <string name="notifications_allowed_summary">Permesita</string>
   <!-- Summary for notification preference indicating notifications are not allowed -->
   <string name="notifications_not_allowed_summary">Ne permesita</string>
+  <!-- Preference for local network access / nearby devices in Android 17 -->
+  <string name="preferences_local_network_access">Aliro al loka reto / Proksimaj aparatoj</string>
+  <!-- Summary for local network access preference indicating access is allowed -->
+  <string name="local_network_access_allowed_summary">Permesita</string>
+  <!-- Summary for local network access preference indicating access is not allowed -->
+  <string name="local_network_access_not_allowed_summary">Ne permesita</string>
   <!--
     Add-on Permissions
 
@@ -966,6 +982,8 @@
     Title for the customize home screen section with privacy report.
   -->
   <string name="customize_toggle_privacy_report">Privateca raporto</string>
+  <!-- Title for a customize home screen section. Continue is a section that displays the most recent browser tab, so users can continue browsing where they left off. -->
+  <string name="customize_toggle_continue">Daŭrigi</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
   <string name="customize_toggle_jump_back_in">Reiri</string>
   <!-- Title for the customize home screen section with bookmarks. -->
@@ -981,6 +999,8 @@
   <string name="customize_toggle_pocket_sponsored">Patronitaj artikoloj</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">Ekranfonoj</string>
+  <!-- Label for the menu item that opens the customize homepage settings screen. -->
+  <string name="browser_menu_customize_homepage">Personecigi ekan paĝon</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">Patronitaj ligiloj</string>
   <!--
@@ -1107,6 +1127,8 @@
   <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Provi restartigi etendaĵojn</string>
   <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
   <string name="extension_process_crash_dialog_disable_extensions_button_text">Daŭrigi kun etendaĵoj malaktivigitaj</string>
+  <!-- Text shown in the snackbar action button that lets the user retry an add-on operation that just failed. -->
+  <string name="addon_failure_retry_action">Provi denove</string>
   <!--
     Account Preferences
 
@@ -1280,6 +1302,11 @@
   <string name="preference_light_theme">Hela</string>
   <!-- Preference for using dark theme -->
   <string name="preference_dark_theme">Malhela</string>
+  <!--
+    Preference for using the OLED theme. For localization, this can be translated as "True Black", "Maximum Darkness",
+    or "Full dark" if needed.
+  -->
+  <string name="preference_oled_theme">Plej malhela</string>
   <!-- Preference for using using dark or light theme automatically set by battery -->
   <string name="preference_auto_battery_theme">Difinita de la ŝparado de energio</string>
   <!-- Preference for using following device theme -->
@@ -1426,6 +1453,16 @@
   <string name="preferences_inactive_tabs">Igi malnovajn langetojn neaktivaj</string>
   <!-- Title of inactive tabs preference -->
   <string name="preferences_inactive_tabs_title">Langetoj ne vizititaj dum la lastaj du semajnoj iras al la neaktiva sekcio.</string>
+  <!-- Title for the preference to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_feature">Aktivigi grupojn de langetoj</string>
+  <!--
+    Privacy report
+
+    Category header of a preference that allows a user to enable or disable the privacy report feature
+  -->
+  <string name="preferences_privacy_report">Raporto pri privateco</string>
+  <!-- Title of the privacy report preference that allows a user to enable or disable the feature -->
+  <string name="preferences_privacy_report_title">Aktivigi raporton pri privateco</string>
   <!--
     Studies
 
@@ -1631,6 +1668,36 @@
   <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Forigi grupon</string>
   <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
   <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Nuligi</string>
+  <!-- Content description for the three dot button next to a tab group" -->
+  <string name="tab_group_three_dot_button_content_description">Pli da ebloj</string>
+  <!-- Text shown on the edit button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_edit">Modifi</string>
+  <!-- Text shown on the ungroup button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_ungroup">Malgrupigi</string>
+  <!-- Text shown on the delete button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_delete">Forigi</string>
+  <!-- Text shown on the share button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_share">Dividi</string>
+  <!-- Text shown on the close button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_close">Fermi</string>
+  <!-- Title for the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_title">Ĉu malgrupigi langetojn?</string>
+  <!-- Text shown in the body of the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_body">La langetoj restos malfermitaj en tiu ĉi aparato, sed la grupo estos forigita.</string>
+  <!-- Text shown on the Don't Ask Again checkbox button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_dont_ask_again">Ne demandi denove</string>
+  <!-- Text shown on the confirm button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_confirm">Malgrupigi</string>
+  <!-- Text shown on the cancel button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_cancel">Nuligi</string>
+  <!-- Custom accessibility action to reorder a tab up rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_up">Movi langeton supren</string>
+  <!-- Custom accessibility action to reorder a tab left rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_left">Movi langeton maldekstren</string>
+  <!-- Custom accessibility action to reorder a tab right rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_right">Movi langeton dekstren</string>
+  <!-- Custom accessibility action to reorder a tab down rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_down">Movi langeton malsupren</string>
   <!--
     Color labels for tab groups, used for accessibility and selection UI.
 
