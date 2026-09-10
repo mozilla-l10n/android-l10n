@@ -2660,6 +2660,8 @@
   <string name="preference_enhanced_tracking_protection_allow_list_dialog_title">समस्या ठीक करने की सुविधा वाकई बंद करनी है?</string>
   <!-- Message for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. %1$s is the name of the application (e.g. Fenix). -->
   <string name="preference_enhanced_tracking_protection_allow_list_dialog_message">यह सेटिंग वेबसाइट की आम समस्याओं को हल करने में मदद करती है। इसे बंद करने पर, कुछ साइटें शायद काम न करें और %1$s उन समस्याओं को दूर करने में आपकी मदद नहीं कर पाएगा।</string>
+  <!-- Confirmation button text for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_confirm">फ़िक्स बंद करें</string>
   <!-- Accessibility text for the Strict protection information icon -->
   <string name="preference_enhanced_tracking_protection_strict_info_button">सख्त ट्रैकिंग सुरक्षा द्वारा क्या ब्लॉक किया गया</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -2755,8 +2757,12 @@
     Preference title for DNS over HTTPS settings
   -->
   <string name="preference_doh_title">HTTPS के बजाय DNS</string>
+  <!-- Description of the preference to enable "DNS over HTTPS". %1$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
+  <string name="preference_doh_summary">HTTPS के बजाय डोमेन नेम सिस्टम (DNS), आपके डोमेन नाम की रिक्वेस्ट को एक एन्क्रिप्टेड कनेक्शन के माध्यम से भेजता है और एक सुरक्षित DNS मुहैया करवाता है, जिससे दूसरों के लिए यह देखना मुश्किल हो जाता है कि आप कौन-सी वेबसाइट एक्सेस करने वाले हैं। %1$s</string>
   <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
   <string name="preference_doh_learn_more">और जानें</string>
+  <!-- Content description for the "Exceptions" button -->
+  <string name="preference_doh_exceptions_description">अपवाद</string>
   <!-- Content description for the "Info" button -->
   <string name="preference_doh_info_description">जानकारी</string>
   <!-- Content description for the "Add Site" button -->
@@ -2775,6 +2781,8 @@
   <string name="preference_doh_default_protection_info_4">VPN, पैरेंटल कंट्रोल या एंटरप्राइज पॉलिसी के चालू होने पर इसे बंद कर दें</string>
   <!-- Bullet point 5 for "Default Protection" information page under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). %2$s is replaced by a link using `preference_doh_learn_more` at text ("Learn More"). -->
   <string name="preference_doh_default_protection_info_5">जब कोई नेटवर्क %1$s को बताए कि उसे सुरक्षित DNS का इस्तेमाल नहीं करना चाहिए, तब इसे बंद कर दें। %2$s</string>
+  <!-- Title displayed for "Increased Protection" option under "DNS over HTTPS" -->
+  <string name="preference_doh_increased_protection">बढ़ी हुई सुरक्षा</string>
   <!-- Summary displayed for "Increased Protection" option under "DNS over HTTPS" -->
   <string name="preference_doh_increased_protection_summary">आप तय कर सकते हैं कि सुरक्षित DNS का इस्तेमाल कब करना है और अपना प्रोवाइडर चुन सकते हैं।</string>
   <!-- Bullet point 1 for "Increased Protection" information page under "DNS over HTTPS" -->
@@ -2791,6 +2799,8 @@
   <string name="preference_doh_max_protection_info_2">अगर सुरक्षित DNS उपलब्ध नहीं है तो हमेशा चेतावनी दें</string>
   <!-- Bullet point 3 for "Max Protection" information page under "DNS over HTTPS" -->
   <string name="preference_doh_max_protection_info_3">अगर सुरक्षित DNS उपलब्ध नहीं है, तो वेबसाइटें ठीक से लोड नहीं होंगी या काम नहीं करेंगी</string>
+  <!-- Title displayed for "Off" option under "DNS over HTTPS" -->
+  <string name="preference_doh_off">ऑफ़</string>
   <!-- Summary displayed for "Off" option under "DNS over HTTPS" -->
   <string name="preference_doh_off_summary">अपना डिफ़ॉल्ट DNS रिज़ॉल्वर इस्तेमाल करें</string>
   <!-- Text displayed above provider dropdown under "DNS over HTTPS" -->
@@ -2811,6 +2821,8 @@
   <string name="preference_doh_provider_custom_dialog_cancel">कैंसिल करें</string>
   <!-- Add button text for provider textfield under "DNS over HTTPS" -->
   <string name="preference_doh_provider_custom_dialog_add">‌जोड़ें</string>
+  <!-- Preference to access list of login exceptions that we don't use DNS over HTTPS -->
+  <string name="preference_doh_exceptions">अपवाद</string>
   <!-- Description of "exceptions" for "DNS over HTTPS". %1$s is the name of the app (for example "Firefox"). -->
   <string name="preference_doh_exceptions_summary">%1$s इन साइटों और उनके सब-डोमेन पर सुरक्षित DNS का इस्तेमाल नहीं करेगा।</string>
   <!-- Text displayed that links to adding website domain for "DNS over HTTPS" exceptions. -->
@@ -2823,6 +2835,8 @@
   <string name="preference_doh_exceptions_add_error">डोमेन सही होना होना चाहिए</string>
   <!-- Text displayed on the button within the input field for adding exceptions to "DNS over HTTPS" -->
   <string name="preference_doh_exceptions_add_save">सेव करें</string>
+  <!-- Text displayed for removing all exceptions in "DNS over HTTPS" -->
+  <string name="preference_doh_exceptions_remove_all_exceptions">सभी अपवाद हटाएं</string>
   <!-- About page link text to open support link -->
   <string name="about_support">समर्थन</string>
   <!-- About page link text to list of past crashes (like about:crashes on desktop) -->
@@ -2901,6 +2915,8 @@
   <string name="preferences_passwords_exceptions_remove_all">सभी अपवादों को मिटाएं</string>
   <!-- Hint for search box in passwords list -->
   <string name="preferences_passwords_saved_logins_search_2">पासवर्ड सर्च करें</string>
+  <!-- Content description for the logins navigation bar back button -->
+  <string name="logins_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">साइट</string>
   <!-- The header for the username for a login -->
@@ -2919,14 +2935,22 @@
   <string name="saved_login_copy_username">उपयोगकर्ता नाम कॉपी करे</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear a username while editing a login -->
   <string name="saved_login_clear_username">उपयोगकर्ता नाम हटाएँ</string>
+  <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
+  <string name="saved_login_clear_hostname">होस्टनेम मिटाएं</string>
   <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
   <string name="login_detail_menu_button_content_description">लॉग इन जानकारी वाला मेन्यू</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
+  <string name="login_details_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- Edit text for the login detail menu edit button -->
   <string name="login_detail_menu_edit_button">एडिट करें</string>
   <!-- Delete text for the login detail menu delete button -->
   <string name="login_detail_menu_delete_button">डिलीट करें</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the add login view. -->
+  <string name="add_login_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- Content description, used by tools like screenreaders, to press on the save new login button. -->
   <string name="add_login_save_new_login_button_content_description">नया लॉग इन सेव करें</string>
+  <!-- Content description, used by tools like screenreaders, to go back and exit the edit login view. -->
+  <string name="edit_login_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- Content description, used by tools like screenreaders, to press on the edit login button. -->
   <string name="edit_login_button_content_description">लॉग इन एडिट करें</string>
   <!-- Content description, used by tools like screenreaders, to press on the add new login button. -->
@@ -2973,6 +2997,8 @@
     Title for the Email Masks in the settings menu
   -->
   <string name="preferences_email_masks">ईमेल मास्क</string>
+  <!-- Title for the Suggest Email Masks toggle -->
+  <string name="preferences_email_masks_suggest_title">ईमेल मास्क सुझाएं</string>
   <!-- Summary for the Suggest Email Masks toggle. -->
   <string name="preferences_email_masks_suggest_summary">अपने इनबॉक्स को स्पैम से बचाने के लिए, अपना असली ईमेल छिपाएं। कुछ साइटें ईमेल मास्क को सपोर्ट नहीं करती हैं।</string>
   <!-- Text that links to additional information about the Email Masks -->
@@ -2995,6 +3021,22 @@
   <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
+  <!-- Content description for the browser VPN settings screen top bar back button -->
+  <string name="ip_protection_navigate_back_button_content_description">पीछे जाएं</string>
+  <!-- Headline for the browser VPN promo card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_promo_headline">%s का बिल्ट-इन VPN</string>
+  <!-- Body text for the browser VPN promo card . %s is a learn more link using ip_protection_learn_more as text. -->
+  <string name="ip_protection_promo_body_2">सार्वजनिक वाई-फ़ाई पर भी अपनी लोकेशन छुपाकर अतिरिक्त सुरक्षा के साथ ब्राउज़ करें। %s</string>
+  <!-- Link text that opens additional information about the browser VPN -->
+  <string name="ip_protection_learn_more">और जानें</string>
+  <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
+  <string name="ip_protection_data_limit_label">मासिक डेटा लिमिट</string>
+  <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3").
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value">%2$.1f GB में से %1$.1f GB बाकी</string>
   <!--
     Text shown below the data usage bar describing when the monthly allowance resets.
     %1$.0f is the total monthly data allowance in GB (for example "50").
@@ -3010,6 +3052,10 @@
   <string name="preferences_ip_protection_off">ऑफ़</string>
   <!-- Badge label shown in the menu item while the browser VPN is connecting -->
   <string name="ip_protection_menu_connecting">कनेक्ट किया जा रहा है…</string>
+  <!-- Badge label shown in the menu item when the browser VPN is paused -->
+  <string name="ip_protection_menu_paused">पॉज़ किया</string>
+  <!-- Badge label shown in the menu item when the browser VPN has an error -->
+  <string name="ip_protection_menu_error">ऐरर</string>
   <!-- Badge label shown in the VPN menu item when the user is eligible for the feature but needs to authenticate / authorize to enable it -->
   <string name="ip_protection_menu_try_vpn_cta">मुफ़्त में आज़माएं</string>
   <!-- Badge label shown in the menu item when the user is eligible to use the browser VPN but should authenticate or authorize it first. -->
@@ -3075,6 +3121,8 @@
   <string name="ip_protection_settings_description" tools:ignore="UnusedResources">अपनी ब्राउज़िंग को और ज़्यादा प्राइवेट बनाने और उसे ट्रेस करना और कठिन बनाने के लिए, VPN चालू करें।</string>
   <!-- Title shown on the browser VPN settings screen for location selection section. -->
   <string name="ip_protection_location_title" tools:ignore="UnusedResources">लोकेशन</string>
+  <!-- Label for the Recommended server location option which is automatically selected by the browser. -->
+  <string name="ip_protection_recommended_location" tools:ignore="UnusedResources">सुझाया गया</string>
   <!-- Headline for the card that promotes the standalone Mozilla VPN product. -->
   <string name="ip_protection_mozilla_vpn_upsell_headline" tools:ignore="UnusedResources,BrandUsage">Mozilla VPN के साथ और ज़्यादा सुरक्षा पाएं</string>
   <!-- Body for the card that promotes the standalone Mozilla VPN product. -->
@@ -3097,6 +3145,8 @@
   <string name="ip_protection_locations_unavailable_description">सुझाई गई लोकेशन पर स्विच कर दिया गया है।</string>
   <!-- Title for the browser VPN location selection screen (displayed in the app bar) -->
   <string name="ip_protection_locations_title">VPN लोकेशन चुनें</string>
+  <!-- Content description for the browser VPN location selection screen top bar back button -->
+  <string name="ip_protection_locations_navigate_back_button_content_description">पीछे जाएं</string>
   <!--
     Autofill
 
@@ -3131,8 +3181,12 @@
   <string name="preferences_addresses_sync_addresses_across_devices">एड्रेस को सभी डिवाइसों में सिंक करें</string>
   <!-- Preference option for syncing addresses across devices. This is displayed when the user is signed into sync -->
   <string name="preferences_addresses_sync_addresses">एड्रेस सिंक करें</string>
+  <!-- Content description navigating back from autofill settings screen. -->
+  <string name="autofill_settings_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- Title of the "Add card" screen -->
   <string name="credit_cards_add_card">कार्ड जोड़ें</string>
+  <!-- Content description for the "credit card feature" top bar back button -->
+  <string name="credit_cards_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- Title of the "Edit card" screen -->
   <string name="credit_cards_edit_card">कार्ड संपादित करें</string>
   <!-- The header for the card number of a credit card -->
@@ -3187,6 +3241,8 @@
   <string name="addresses_name">नाम</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The organization's name related to the address helps in distinguishing addresses used for business or personal purposes. -->
   <string name="addresses_organization" tools:ignore="UnusedResources">ऑर्गनाइज़ेशन</string>
+  <!-- The header for the street address of an address -->
+  <string name="addresses_street_address">गली का एड्रेस</string>
   <!-- The header for the city of an address -->
   <string name="addresses_city">शहर</string>
   <!-- The header for the subregion of an address when "state" should be used -->
@@ -3207,14 +3263,36 @@
   <string name="addresses_village_township" tools:ignore="UnusedResources">गांव या शहर</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Island field, used in places like the Cayman Islands and the Bahamas if an address is located on a specific island. -->
   <string name="addresses_island" tools:ignore="UnusedResources">द्वीप</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The Townland field, specific to Ireland is a specific type of land division used in rural areas. -->
+  <string name="addresses_townland" tools:ignore="UnusedResources">टाउनलैंड</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used as secondary address information (below the country level, e.g. county) in Honk Kong, Sudan, Syria, Türkiye, and as sublocality (civil entity below a locality, e.g. district) in Korea. -->
   <string name="addresses_district" tools:ignore="UnusedResources">ज़िला</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in the United Kingdom, Norway and Sweden -->
+  <string name="addresses_post_town" tools:ignore="UnusedResources">पोस्ट सिटी</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is used as a tertiary address information (below the state level, e.g. Tasmania in Australia -->
+  <string name="addresses_suburb" tools:ignore="UnusedResources">उपनगर</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. This specific field is crucial for addressing in regions where county lines play a key role in postal services. -->
+  <string name="addresses_county" tools:ignore="UnusedResources">काउंटी</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Significant in places where parishes are used for local administration and addressing. Ensures users can specify parish details for better autofill accuracy. Used in Barbados and Jamaica. -->
+  <string name="addresses_parish" tools:ignore="UnusedResources">पैरिश</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Essential for addresses in countries like Japan where prefectures are a major administrative division. -->
+  <string name="addresses_prefecture" tools:ignore="UnusedResources">प्रांत</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Allowing users to specify a particular area within a city or region. Used in Hong Kong -->
   <string name="addresses_area" tools:ignore="UnusedResources">एरिया</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The header for the Do/Si of the address. Do/Si refers to provincial level divisions, pertinent to addresses in South Korea. -->
+  <string name="addresses_do_si" tools:ignore="UnusedResources">डो/सी</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in countries like Nicaragua and Colombia where departments are a key administrative division. -->
   <string name="addresses_department" tools:ignore="UnusedResources">डिपार्टमेंट</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Essential for addresses in the United Arab Emirates. -->
   <string name="addresses_emirate" tools:ignore="UnusedResources">एमिरेट</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Relevant for addresses in countries like Russia and Ukraine. -->
+  <string name="addresses_oblast" tools:ignore="UnusedResources">ओब्लास्त</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The PIN (Postal Index Number) field, used in India is a code representing a specific area. -->
+  <string name="addresses_pin" tools:ignore="UnusedResources">पिन</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. The postal code field is universally used in address forms to specify the area code for mail sorting. -->
+  <string name="addresses_postal_code" tools:ignore="UnusedResources">पोस्टल कोड</string>
+  <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. the Eircode field, specific to Ireland is a unique postal code system that helps in precise location identification. -->
+  <string name="addresses_eircode" tools:ignore="UnusedResources">Eircode</string>
   <!-- Label for an address field (e.g. mailing address) used as part of the form autofill feature. Used in cases we want to only display the word "Country" over "Country or Region". -->
   <string name="addresses_country_only" tools:ignore="UnusedResources">देश</string>
   <!-- The text for the "Save" button for saving an address -->
@@ -3253,6 +3331,10 @@
   <string name="search_add_custom_engine_search_string_example" formatted="false">“%s” से प्रश्न बदले। उदाहरण:\nhttps://www.google.com/search?q=%s</string>
   <!-- Accessibility description for the form in which details about the custom search engine are entered -->
   <string name="search_add_custom_engine_form_description">अनुकूल खोज इंजन विवरण</string>
+  <!-- Label for the TextField in which user enters custom search engine suggestion URL -->
+  <string name="search_add_custom_engine_suggest_url_label">सर्च सजेशन API (वैकल्पिक)</string>
+  <!-- Placeholder text shown in the Search Suggestion String TextField before a user enters text -->
+  <string name="search_add_custom_engine_suggest_string_hint">सर्च सजेशन API URL</string>
   <!-- The text for the "Save" button for saving a custom search engine -->
   <string name="search_custom_engine_save_button">सेव करें</string>
   <!-- Text shown when a user leaves the name field empty -->
@@ -4226,6 +4308,12 @@
   <string name="setup_checklist_task_explore_extensions">एक्सटेंशन एक्सप्लोर करें</string>
   <!-- The title of the search widget task for the setup checklist -->
   <string name="setup_checklist_task_search_widget_2">सर्च विजेट एक्सप्लोर करें</string>
+  <!--
+    ===== Setup checklist feature: Group titles =====
+
+    The title of the 'essentials' group in the setup checklist. %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="setup_checklist_group_essentials">%1$s की अहम चीज़ें</string>
   <!-- The title of the 'customize' group in the setup checklist. %1$s is the name of the app (for example "Firefox"). -->
   <string name="setup_checklist_group_customize">अपना %1$s कस्टमाइज़ करें</string>
   <!-- The title of the 'helpful tools' group in the setup checklist -->
@@ -4342,10 +4430,26 @@
     %1$s is the string terms_of_use_prompt_body_line_two_alternative_link ("here") that is a link to the Terms of Use
   -->
   <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">आप %1$s के बारे में और जान सकते हैं।</string>
+  <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
+  <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">यहां</string>
+  <!--
+    Privacy notice homepage banner
+
+    A message we show the user on the homepage when there is a new version of the privacy notice. 'Firefox' is intentionally hardcoded.
+    %1$s is replaced by an active link using privacy_notice_updated_homepage_message_privacy_notice as text (Privacy Notice)
+    %2$s is replaced by an active link using privacy_notice_updated_homepage_message_learn_more as text (Learn more)
+  -->
+  <string name="privacy_notice_updated_homepage_message" tools:ignore="BrandUsage,UnusedResources">हमने Firefox के ताज़ा फ़ीचर्स दर्शाने के लिए अपनी %1$s को अपडेट कर दिया है। %2$s</string>
   <!-- The first active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">प्राइवेसी नोटिस</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">और जानें</string>
+  <!--
+    Collections migration homepage card
+
+    Title shown on the collections to tab groups migration card on the homepage.
+  -->
+  <string name="collections_migration_homepage_banner_title">कलेक्शन अब ग्रुप्स का हिस्सा हैं</string>
   <!-- Message shown on the collections to tab groups migration card on the homepage. -->
   <string name="collections_migration_homepage_card_message">अपने टैब व्यवस्थित रखने का एक आसान तरीका है</string>
   <!-- Link text shown on the collections to tab groups migration card that opens the tab groups page in the tab manager. -->
