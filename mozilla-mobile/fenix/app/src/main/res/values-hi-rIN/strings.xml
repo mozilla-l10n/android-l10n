@@ -1452,6 +1452,22 @@
   <string name="custom_accessibility_action_reorder_tab_right">टैब को दाएं ले जाएं</string>
   <!-- Custom accessibility action to reorder a tab down rather than dragging. -->
   <string name="custom_accessibility_action_reorder_tab_down">टैब को नीचे ले जाएं</string>
+  <!--
+    Color labels for tab groups, used for accessibility and selection UI.
+
+    Tab group color: Yellow
+  -->
+  <string name="tab_group_color_yellow">यैलो</string>
+  <!-- Tab group color: Orange -->
+  <string name="tab_group_color_orange">ऑरेंज</string>
+  <!-- Tab group color: Red -->
+  <string name="tab_group_color_red">रेड</string>
+  <!-- Tab group color: Pink -->
+  <string name="tab_group_color_pink">पिंक</string>
+  <!-- Tab group color: Purple -->
+  <string name="tab_group_color_purple">पर्पल</string>
+  <!-- Tab group color: Blue -->
+  <string name="tab_group_color_blue">ब्लू</string>
   <!-- Tab group color: Cyan -->
   <string name="tab_group_color_cyan">सियान</string>
   <!-- Tab group color: Green -->
@@ -1506,6 +1522,8 @@
   <string name="download_completed_snackbar">डाउनलोड पूरा हुआ</string>
   <!-- Text for the snackbar action button to open a completed download. -->
   <string name="download_completed_snackbar_action_open">खोलें</string>
+  <!-- Text for the snackbar action button to undo deleting a download. -->
+  <string name="download_undo_delete_snackbar_action">पहले जैसा करें</string>
   <!-- Text shown when no download exists -->
   <string name="download_empty_message_2">अभी तक कोई डाउनलोड नहीं</string>
   <!-- Text description shown when no download exists -->
@@ -1539,8 +1557,20 @@
   </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">डिलीट करें</string>
+  <!-- Content description for the toolbar "Navigate back" button -->
+  <string name="download_navigate_back_description">पीछे जाएं</string>
   <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
   <string name="download_navigate_settings_description">डाउनलोड सेटिंग पर जाएं</string>
+  <!-- Content description for the toolbar back button while searching the downloads -->
+  <string name="download_close_search_description">पीछे जाएं और सर्च बंद करें</string>
+  <!--
+    Content description for the search bar clear text button on the downloads screen
+
+    Content description for pause action button on the downloads screen
+  -->
+  <string name="download_pause_action">पॉज़ करें</string>
+  <!-- Content description for resume action button on the downloads screen -->
+  <string name="download_resume_action">वहीं से शुरू करें</string>
   <!-- Content description for retry download action button on the downloads screen -->
   <string name="download_retry_action">फिर कोशिश‌ करें</string>
   <string name="download_clear_search_description">मिटाएं</string>
@@ -1628,6 +1658,17 @@
     %1$s is the current file size that has been downloaded.
   -->
   <string name="download_item_in_progress_description_unknown_total_size">%1$s • पता नहीं कितना समय लगेगा</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_paused_description">%1$s / %2$s • पॉज़ किया</string>
+  <!--
+    Description of a paused download item, displayed in the downloads list when the total download size is unknown.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_paused_description_unknown_total_size">%1$s • पॉज़ किया</string>
   <!-- Text to indicate that a download has failed to download. -->
   <string name="download_item_status_failed">डाउनलोड विफल</string>
   <!-- Text for the snackbar action button to view failed download details. -->
@@ -1789,6 +1830,8 @@
   <string name="edit_bookmark_snackbar_action">संपादित</string>
   <!-- Bookmark menu select button -->
   <string name="bookmark_menu_select_button">चुनें</string>
+  <!-- Bookmark menu move button -->
+  <string name="bookmark_menu_move_button">मूव करें</string>
   <!-- Bookmark overflow menu edit button -->
   <string name="bookmark_menu_edit_button">संपादन</string>
   <!-- Bookmark overflow menu share button -->
@@ -1847,6 +1890,12 @@
     %1$s is the host part of the URL of the bookmark deleted, if any
   -->
   <string name="bookmark_deletion_snackbar_message">%1$s मिटाया गया</string>
+  <!--
+    Bookmark undo button for deletion snackbar action
+
+    Content description for the bookmark navigation bar back button
+  -->
+  <string name="bookmark_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- Content description for the bookmark list new folder navigation bar button -->
   <string name="bookmark_add_new_folder_button_content_description">नया फ़ोल्डर जोड़ें</string>
   <!-- Content description for the bookmark screen delete bookmark navigation bar button -->
@@ -1967,6 +2016,10 @@
   <string name="studies_on">चालू</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">बंद</string>
+  <!-- Toggle if desktop site is turned on -->
+  <string name="browser_feature_desktop_site_on">ऑन</string>
+  <!-- Toggle if desktop site is turned off -->
+  <string name="browser_feature_desktop_site_off">ऑफ़</string>
   <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
   <string name="preferences_category_permissions">अनुमति‌यां</string>
   <!-- Category header of a preference that allows a user to alter settings related to web content. -->
@@ -2331,10 +2384,30 @@
   <string name="help_catch_trackers">ट्रैकर्स को पकड़ने में मदद करें</string>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">मानक (तयशुदा)</string>
+  <!-- Preference description for enhanced tracking protection for the standard protection settings -->
+  <string name="preference_enhanced_tracking_protection_standard_description_5">पेज सामान्य रूप से लोड होंगे, लेकिन कम ट्रैकर्स को ब्लॉक करेंगे।</string>
   <!-- Accessibility text for the Standard protection information icon -->
   <string name="preference_enhanced_tracking_protection_standard_info_button">मानक ट्रैकिंग सुरक्षा द्वारा क्या ब्लॉक किया गया</string>
   <!-- Preference for enhanced tracking protection for the strict protection settings -->
   <string name="preference_enhanced_tracking_protection_strict">सख़्त</string>
+  <!-- Preference description for enhanced tracking protection for the strict protection settings -->
+  <string name="preference_enhanced_tracking_protection_strict_description_4">बेहतर ट्रैकिंग सुरक्षा और तेज़ प्रदर्शन, लेकिन हो सकता है कि कुछ साइटें ठीक से काम न करें।</string>
+  <!-- Preference label for the enhanced tracking protection option to fix major site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">साइट से जुड़ी प्रमुख समस्याओं का समाधान करें (इसका सुझाव दिया जाता है)</string>
+  <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">साइट से जुड़ी छोटी-मोटी समस्याओं को ठीक करें</string>
+  <!-- Preference sub header for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_subheader">साइट की समस्याएं दूर करें</string>
+  <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_learn_more">और जानें</string>
+  <!--
+    Dialog that appears after user tries to uncheck the baseline exceptions preference under Strict or Custom tracking protection
+
+    Title for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection
+  -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_title">समस्या ठीक करने की सुविधा वाकई बंद करनी है?</string>
+  <!-- Message for the dialog that appears after disabling the baseline exceptions preference under Strict or Custom tracking protection. %1$s is the name of the application (e.g. Fenix). -->
+  <string name="preference_enhanced_tracking_protection_allow_list_dialog_message">यह सेटिंग वेबसाइट की आम समस्याओं को हल करने में मदद करती है। इसे बंद करने पर, कुछ साइटें शायद काम न करें और %1$s उन समस्याओं को दूर करने में आपकी मदद नहीं कर पाएगा।</string>
   <!-- Accessibility text for the Strict protection information icon -->
   <string name="preference_enhanced_tracking_protection_strict_info_button">सख्त ट्रैकिंग सुरक्षा द्वारा क्या ब्लॉक किया गया</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
@@ -2357,6 +2430,10 @@
   <string name="preference_enhanced_tracking_protection_custom_cookies_3">सभी तृतीय-पक्ष कुकीज़ (वेबसाइटों को तोड़ने का कारण हो सकते हैं)</string>
   <!-- Option for enhanced tracking protection for the custom protection settings for cookies -->
   <string name="preference_enhanced_tracking_protection_custom_cookies_4">सभी कुकीज़ (वेबसाइटों को तोड़ने के कारण होंगे)</string>
+  <!-- Option for enhanced tracking protection for the custom protection settings for cookies -->
+  <string name="preference_enhanced_tracking_protection_custom_cookies_5">क्रॉस-साइट कुकीज़ को आइसोलेट करें</string>
+  <!-- Preference for Global Privacy Control for the custom privacy settings for Global Privacy Control. '&amp;' is replaced with the ampersand symbol: & -->
+  <string name="preference_enhanced_tracking_protection_custom_global_privacy_control">वेबसाइटों को डेटा शेयर करने और बेचने से मना करें</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings for tracking content -->
   <string name="preference_enhanced_tracking_protection_custom_tracking_content">ट्रैकिंग सामग्री</string>
   <!-- Option for enhanced tracking protection for the custom protection settings for tracking content -->
@@ -2365,6 +2442,8 @@
   <string name="preference_enhanced_tracking_protection_custom_tracking_content_2">केवल निजी टैब में</string>
   <!-- Preference for enhanced tracking protection for the custom protection settings -->
   <string name="preference_enhanced_tracking_protection_custom_cryptominers">क्रिप्टोमाइनर</string>
+  <!-- Preference for enhanced tracking protection for the custom protection settings -->
+  <string name="preference_enhanced_tracking_protection_custom_known_fingerprinters">जाने-पहचाने फ़िंगरप्रिंटर</string>
   <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
   <string name="enhanced_tracking_protection_blocked">अवरूद्ध</string>
   <!-- Category of trackers (social media trackers) that can be blocked by Enhanced Tracking Protection -->
@@ -2948,6 +3027,8 @@
   <!-- The error message in add login view when username field is blank. -->
   <string name="saved_login_username_required_2">यूज़रनेम डालें</string>
   <!-- The error message in add login view when hostname field is blank. -->
+  <string name="saved_login_hostname_required" tools:ignore="UnusedResources">होस्टनेम ज़रूरी है</string>
+  <!-- The error message in add login view when hostname field is blank. -->
   <string name="saved_login_hostname_required_2" tools:ignore="UnusedResources">वेब एड्रेस डालें</string>
   <!-- Voice search button content description -->
   <string name="voice_search_content_description">आवाज़ द्वारा खोज</string>
@@ -2959,6 +3040,8 @@
   <string name="add_login_hostname_hint_text">https://www.example.com</string>
   <!-- This is an error message shown below the hostname field of the add login page when a hostname does not contain http or https. -->
   <string name="add_login_hostname_invalid_text_3">वेब पते में \"https://\" या \"http://\" होना चाहिए</string>
+  <!-- This is an error message shown below the hostname field of the add login page when a hostname is invalid. -->
+  <string name="add_login_hostname_invalid_text_2">सही होस्टनेम ज़रूरी है</string>
   <!--
     Synced Tabs
 
