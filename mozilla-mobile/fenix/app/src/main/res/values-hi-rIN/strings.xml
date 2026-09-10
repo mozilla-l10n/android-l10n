@@ -3140,6 +3140,10 @@
   <string name="inactive_tabs_num_items">आइटम: %d</string>
   <!-- Content description for closing all inactive tabs -->
   <string name="inactive_tabs_delete_all">सभी निष्क्रिय टैब बंद करें</string>
+  <!-- Content description for expanding the inactive tabs section. -->
+  <string name="inactive_tabs_expand_content_description">\'एक्टिव नहीं\' वाले टैब फैलाएं</string>
+  <!-- Content description for collapsing the inactive tabs section. -->
+  <string name="inactive_tabs_collapse_content_description">\'एक्टिव नहीं\' वाले टैब सिकोड़ें</string>
   <!--
     Inactive tabs auto-close message in the tabs tray
 
@@ -3152,6 +3156,17 @@
   <string name="inactive_tabs_auto_close_message_action" tools:ignore="UnusedResources">अपने आप बंद करने की सुविधा चालू करें</string>
   <!-- Text for the snackbar to confirm auto-close is enabled for inactive tabs -->
   <string name="inactive_tabs_auto_close_message_snackbar">स्वत: बंद सक्षम हैं</string>
+  <!--
+    Awesome bar suggestion's headers
+
+    Search suggestions title for Firefox Suggest.
+  -->
+  <string name="firefox_suggest_header" tools:ignore="BrandUsage">Firefox Suggest</string>
+  <!--
+    Search suggestions title for trending search suggestions.
+    %s is a placeholder for the name of the search engine providing the trending search suggestions.
+  -->
+  <string name="trending_searches_header_2">%s पर ट्रेंडिंग</string>
   <!-- Title for search suggestions when Google is the default search suggestion engine. -->
   <string name="google_search_engine_suggestion_header">Google सर्च</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
@@ -3183,6 +3198,8 @@
     which navigates the user to a screen displaying more stories.
   -->
   <string name="stories_discover_more_content_description">और स्टोरीज़ देखें</string>
+  <!-- Content description for the "Navigate back" button on the top app bar of the Stories screen. -->
+  <string name="stories_back_button_content_description">पीछे जाएं</string>
   <!-- Text indicating that the Pocket story that also displays this text is a sponsored story by other 3rd party entity. -->
   <string name="pocket_stories_sponsor_indication">स्पॉन्सर्ड</string>
   <!-- Snackbar message for enrolling in a Nimbus experiment from the secret settings when Studies preference is Off. -->
@@ -3476,6 +3493,8 @@
     and there are no trackers blocked.
   -->
   <string name="protection_panel_banner_protected_no_blocked_trackers_description">आप सुरक्षित हैं।</string>
+  <!-- Label text for the Enhanced Tracking Protection toggle. -->
+  <string name="protection_panel_etp_toggle_label">एन्हांस्ड ट्रैकिंग सुरक्षा</string>
   <!-- Toggle if Enhanced Tracking Protection is turned on -->
   <string name="protection_panel_etp_toggle_on">ऑन</string>
   <!-- Toggle if Enhanced Tracking Protection is turned off -->
@@ -3588,6 +3607,8 @@
   <string name="debug_drawer_title">डीबग टूल्स</string>
   <!-- Content description (not visible, for screen readers etc.): Navigate back within the debug drawer. -->
   <string name="debug_drawer_back_button_content_description">पीछे जाएं</string>
+  <!-- Content description (not visible, for screen readers etc.): Open debug drawer. -->
+  <string name="debug_drawer_fab_content_description">डीबग ड्रॉअर खोलें</string>
   <!--
     Debug drawer tabs tools
 
@@ -3598,10 +3619,44 @@
   <string name="debug_drawer_tab_tools_tab_count_title">टैब संख्या</string>
   <!-- The active tab count category in the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_active">एक्टिव</string>
+  <!-- The inactive tab count category in the tab count section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_count_inactive">एक्टिव नहीं</string>
   <!-- The private tab count category in the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_private">प्राइवेट</string>
   <!-- The total tab count category in the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_total">कुल</string>
+  <!-- The title of the tab creation tool section in Tab Tools. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_title">टैब क्रिएशन टूल</string>
+  <!-- The label of the text field in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_text_field_label">बनाने के लिए टैब की संख्या</string>
+  <!-- The error message of the text field in the tab creation tool when the text field is empty -->
+  <string name="debug_drawer_tab_tools_tab_quantity_empty_error">टेक्स्ट फ़ील्ड खाली है</string>
+  <!-- The error message of the text field in the tab creation tool when the text field has characters other than digits -->
+  <string name="debug_drawer_tab_tools_tab_quantity_non_digits_error">कृपया नंबर दर्ज करें (डेसिमल या नेगेटिव में न हों)</string>
+  <!-- The error message of the text field in the tab creation tool when the text field is a zero -->
+  <string name="debug_drawer_tab_tools_tab_quantity_non_zero_error">कृपया 0 से बड़ा कोई नंबर डालें</string>
+  <!--
+    The error message of the text field in the tab creation tool when the text field is a
+    quantity greater than the max tabs. %1$s is the maximum number of tabs
+    that can be generated in one operation.
+  -->
+  <string name="debug_drawer_tab_tools_tab_quantity_exceed_max_error">एक ऑपरेशन में जनरेट की जा सकने वाली, टैब की अधिकतम संख्या (%1$s) पार हो गई है</string>
+  <!-- The button text to add tabs to the active tab group in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_active">एक्टिव टैब में जोड़ें</string>
+  <!-- The button text to add tabs to the inactive tab group in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_inactive">एक्टिव नहीं वाले टैब में जोड़ें</string>
+  <!-- The button text to add tabs to the private tab group in the tab creation tool. -->
+  <string name="debug_drawer_tab_tools_tab_creation_tool_button_text_private">प्राइवेट टैब में जोड़ें</string>
+  <!--
+    Microsurvey
+    Note: Some strings are marked as unused as they are referenced via the Nimbus experimentation
+    platform and have no persistent reference in code
+
+    Prompt view
+
+    The microsurvey prompt title. Note: The word "Firefox" should NOT be translated
+  -->
+  <string name="micro_survey_prompt_title" tools:ignore="BrandUsage,UnusedResources">Firefox को बेहतर बनाने में हमारी मदद करें। इसमें बस एक सेकंड लगेगा।</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">जारी रखें</string>
   <!--
@@ -3730,8 +3785,42 @@
   <string name="debug_drawer_add_new_credit_card">नया क्रेडिट कार्ड जोड़ें</string>
   <!-- The title of the button for deleting in the debug drawer all addresses. -->
   <string name="debug_drawer_delete_all_credit_cards">सभी क्रेडिट कार्ड डिलीट करें</string>
+  <!--
+    Debug drawer "contextual feature recommendation" (CFR) tools
+
+    The title of the CFR Tools feature in the Debug Drawer
+  -->
+  <string name="debug_drawer_cfr_tools_title">CFR टूल्स</string>
+  <!-- The title of the reset CFR section in CFR Tools -->
+  <string name="debug_drawer_cfr_tools_reset_cfr_title">CFR रीसेट करें</string>
+  <!--
+    Glean debug tools
+
+    The title of the glean debugging feature
+  -->
+  <string name="glean_debug_tools_title">ग्लीन डीबग टूल्स</string>
+  <!--
+    Debug drawer region tools
+
+    Title of the Region tools in the Debug Drawer.
+    This tool allows temporarily overriding the home region (user's default locale)
+    and the current region (device's detected location) for testing purposes.
+  -->
+  <string name="debug_drawer_region_tools_title">रीजन टूल्स</string>
+  <!-- The description of the Region tools in the Debug Drawer -->
+  <string name="debug_drawer_regin_tools_description">टेस्टिंग के लिए, होम और मौजूदा क्षेत्र वाली वैल्यू को कुछ समय के लिए ओवर-राइड करता है।</string>
+  <!-- The text label for displaying home region. -->
+  <string name="debug_drawer_home_region_label">होम वाला क्षेत्र</string>
   <!-- The text label for displaying current region. -->
   <string name="debug_drawer_current_region_label">मौजूदा क्षेत्र</string>
+  <!-- The text field label for overriding home region. -->
+  <string name="debug_drawer_override_home_region_label">होम वाले क्षेत्र को ओवर-राइड करें</string>
+  <!-- The text field label for overriding current region. -->
+  <string name="debug_drawer_override_current_region_label">मौजूदा क्षेत्र को ओवर-राइड करें</string>
+  <!-- The title of the button for overriding home and current region. -->
+  <string name="debug_drawer_override_region">होम और मौजूदा क्षेत्र को ओवर-राइड करें</string>
+  <!-- The title of the button for overriding home region permanently. -->
+  <string name="debug_drawer_override_home_region_permanently">होम क्षेत्र को हमेशा के लिए ओवर-राइड करें</string>
   <!--
     Add-ons debug tools
 
@@ -3754,6 +3843,30 @@
     Localisation note: this text should be as short as possible, max 68 chars
   -->
   <string name="exit_fullscreen_with_back_button_short">ऊपर से नीचे ड्रैग करें और बाहर निकलने के लिए \'वापस जाएं\' बटन दबाएं</string>
+  <!--
+    Beta Label Component !
+
+    Text shown as a label or tag to indicate a feature or area is still undergoing active development. Note that here "Beta" should not be translated, as it is used as an icon styled element.
+  -->
+  <string name="beta_feature">बीटा</string>
+  <!--
+    Root certificate expiration warnings
+
+    These strings for homepage cards and push notifications to be pushed to users running outdated versions of Firefox. We want to encourage these users to update to the latest version so their extensions and other features don't stop working when Firefox's old root certificate expires on 2025-03-14. For more information, see this SUMO article: https://support.mozilla.org/kb/root-certificate-expiration !
+
+    Homepage card button to open Google Play Store. "Update" is a verb.
+  -->
+  <string name="certificate_warning_homepage_card_update_now_button" tools:ignore="UnusedResources">अभी अपडेट करें</string>
+  <!-- Homepage card title about old Firefox version. "Update" is a verb. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hca1_title" tools:ignore="BrandUsage,UnusedResources">अपना Firefox ब्राउज़र अपडेट करें</string>
+  <!-- Homepage card message about old Firefox version -->
+  <string name="certificate_warning_homepage_card_hca1_message" tools:ignore="UnusedResources">रूट सर्टिफ़िकेट एक्सपायर हो जाएगा, जिसके कारण 14 मार्च को कुछ फ़ीचर काम करना बंद कर देंगे।</string>
+  <!-- Homepage card title about old Firefox version. "Update" is a verb. -->
+  <string name="certificate_warning_homepage_card_hcr1_title" tools:ignore="UnusedResources">14 मार्च से पहले अपडेट करें</string>
+  <!-- Homepage card message about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
+  <string name="certificate_warning_homepage_card_hcr1_message" tools:ignore="BrandUsage,UnusedResources">रूट सर्टिफ़िकेट एक्सपायर हो जाएगा, जिसके कारण Firefox का आपका वर्ज़न काम करना बंद कर देगा।</string>
+  <!-- Homepage card title about old Firefox version -->
+  <string name="certificate_warning_homepage_card_hcw2_title" tools:ignore="UnusedResources">अपडेट करने के लिए 7 दिन से कम समय बाकी है</string>
   <!-- Push notification title about old Firefox version. Note: The word "Firefox" should NOT be translated. -->
   <string name="certificate_warning_push_notification_pnw2_title" tools:ignore="BrandUsage,UnusedResources">आप Firefox का पुराना वर्ज़न इस्तेमाल कर रहे हैं</string>
   <!-- Push notification message about old Firefox version. "Update" is a verb. -->
