@@ -1045,6 +1045,20 @@
   <string name="preference_toolbar_pref_disabled_explanation">टैब बार दिखाए जाते समय, एड्रेस बार सबसे ऊपर होना चाहिए।</string>
   <!-- New tab shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_new_tab">नया टैब खोलें</string>
+  <!-- Share shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_share">शेयर करें</string>
+  <!-- Add bookmark shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_add_bookmark">बुकमार्क जोड़ें</string>
+  <!-- Translate shortcut in toolbar customization. "Translate" is a verb -->
+  <string name="toolbar_customize_shortcut_translate">अनुवाद करें</string>
+  <!-- Homepage shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_homepage">होमपेज</string>
+  <!--
+    App icon Preferences
+
+    Title for the preference that lets the user pick a new app icon
+  -->
+  <string name="preference_select_app_icon_title">ऐप आइकन चुनें</string>
   <!--
     Theme Preferences
 
@@ -1053,10 +1067,21 @@
   <string name="preference_light_theme">हल्का</string>
   <!-- Preference for using dark theme -->
   <string name="preference_dark_theme">अंधेरा</string>
+  <!--
+    Preference for using the OLED theme. For localization, this can be translated as "True Black", "Maximum Darkness",
+    or "Full dark" if needed.
+  -->
+  <string name="preference_oled_theme">एकदम डार्क</string>
   <!-- Preference for using using dark or light theme automatically set by battery -->
   <string name="preference_auto_battery_theme">बैटरी सेवर द्वारा सेट करें</string>
   <!-- Preference for using following device theme -->
   <string name="preference_follow_device_theme">डिवाइस थीम का पालन करें</string>
+  <!--
+    Tab Strip Preferences
+
+    Preferences for showing tab strip
+  -->
+  <string name="preference_tab_strip_show">टैब बार दिखाएं</string>
   <!--
     Gestures Preferences
 
@@ -1179,6 +1204,8 @@
   <string name="close_tabs_after_one_month_summary">एक महीने के बाद बंद करें</string>
   <!-- Summary for homepage preference indicating always opening the homepage when re-opening the app -->
   <string name="opening_screen_homepage_summary">होमपेज पर खोलें</string>
+  <!-- Summary for homepage preference indicating always opening the last-open tab when re-opening the app -->
+  <string name="opening_screen_last_tab_summary">आखिरी टैब में खोलें</string>
   <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
   <string name="opening_screen_after_four_hours_of_inactivity_summary">4 घंटे बाद होमपेज पर खोलें</string>
   <!--
@@ -1407,6 +1434,11 @@
   </plurals>
   <!-- Text for the button to delete a single downloaded file item -->
   <string name="download_delete_item">डिलीट करें</string>
+  <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
+  <string name="download_navigate_settings_description">डाउनलोड सेटिंग पर जाएं</string>
+  <!-- Content description for retry download action button on the downloads screen -->
+  <string name="download_retry_action">फिर कोशिश‌ करें</string>
+  <string name="download_clear_search_description">मिटाएं</string>
   <!-- Text for the button to share the download URL -->
   <string name="download_share_url">URL शेयर करें</string>
   <!-- Text for the button to share the download file -->
@@ -1447,8 +1479,56 @@
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_description">सिस्टम या स्टोरेज से जुड़े प्रतिबंधों के कारण, इस फ़ाइल का नाम नहीं बदला जा सकता।</string>
   <string name="download_rename_error_dismiss_button">ओके</string>
+  <!--
+    Title for the alert dialog to change file extension.
+    %s is the file type to change to.
+  -->
+  <string name="change_file_extension_title">फ़ाइल प्रकार को %s में बदलें?</string>
   <string name="change_file_extension_description">हो सकता है कि ऐसा करने से फ़ाइल किसी दूसरे ऐप में खुल जाए और यह आपके डिवाइस के लिए जोखिम-भरा हो सकता है।</string>
   <string name="change_file_extension_cancel_button">कैंसिल करें</string>
+  <string name="change_file_extension_confirm_button">जी हां</string>
+  <!-- Text for the header of in progress downloads -->
+  <string name="download_header_in_progress">प्रगति में</string>
+  <!--
+    Time period headers for downloads
+
+    Text for the header that groups the downloads for today
+  -->
+  <string name="download_time_period_today">आज</string>
+  <!-- Text for the header that groups the downloads for yesterday -->
+  <string name="download_time_period_yesterday">बीता कल</string>
+  <!-- Text for the header that groups the downloads the past 7 days -->
+  <string name="download_time_period_last_7_days">पिछले 7 दिन</string>
+  <!-- Text for the header that groups the downloads the past 30 days -->
+  <string name="download_time_period_last_30_days">पिछले 30 दिन</string>
+  <!-- Text for the header that groups the downloads older than other groups -->
+  <string name="download_time_period_older">पुराना</string>
+  <!-- Description of an in progress download item, displayed in the downloads list when the download has just started. -->
+  <string name="download_item_in_progress_description_preparing">डाउनलोड की तैयारी हो रही है…</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the download time remaining is known.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+    %3$s is the amount of time remaining to complete the download.
+  -->
+  <string name="download_item_in_progress_description_2">%1$s / %2$s • %3$s में।</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the estimated download time remaining is still being calculated.
+    %1$s is the current file size that has been downloaded.
+    %2$s is the total size of the downloaded file.
+  -->
+  <string name="download_item_in_progress_description_pending">%1$s / %2$s • पेंडिंग</string>
+  <!--
+    Description of an in progress download item, displayed in the downloads list when the total download size is unknown. This results in the estimated download time remaining to be unknown also.
+    %1$s is the current file size that has been downloaded.
+  -->
+  <string name="download_item_in_progress_description_unknown_total_size">%1$s • पता नहीं कितना समय लगेगा</string>
+  <!-- Text to indicate that a download has failed to download. -->
+  <string name="download_item_status_failed">डाउनलोड विफल</string>
+  <!-- Text for the snackbar action button to view failed download details. -->
+  <string name="download_failed_snackbar_action_details">ज़्यादा जानकारी</string>
+  <!-- Placeholder text to indicate that users can use the search bar to search for a download. -->
+  <string name="download_search_placeholder">डाउनलोड सर्च करें</string>
   <!-- Text to indicate that no downloads match the search query. -->
   <string name="download_search_no_results_found">कोई नतीजा नहीं मिला</string>
   <!-- Text for the "Select all" button, which selects all downloaded items in the downloads list. -->
@@ -1507,8 +1587,14 @@
   <string name="webcompat_reporter_send_report">रिपोर्ट भेजें</string>
   <!-- Text for a snackbar to confirm the successful submission of a WebCompat report. -->
   <string name="webcompat_reporter_success_snackbar_text_2">रिपोर्ट भेजी</string>
+  <!-- Placeholder text for the description field to prompt the user on what they should type. -->
+  <string name="webcompat_reporter_problem_description_placeholder_text_2">क्या समस्या आई? होना क्या चाहिए था? कृपया सिलसिलेवार ढंग से एक-एक चरण की जानकारी दें, ताकि समझा जा सके कि समस्या कहां पर आई।</string>
   <!-- Label of the checkbox on the “Report broken site” screen for sending URLS blocked by Enhanced Tracking Protection. -->
   <string name="webcompat_reporter_etp_checkbox_text_2">ट्रैकिंग सुरक्षा ने जो आइटम ब्लॉक किए हैं, उनकी सूची भेजें</string>
+  <!-- The button text for the preview report button to view a preview of the report. -->
+  <string name="webcompat_reporter_preview_report">रिपोर्ट का प्रीव्यू देखें</string>
+  <!-- The title shown at the top of the WebCompat Report preview panel. This appears after the user taps the “Preview” button before sending a report. -->
+  <string name="webcompat_reporter_preview_bottom_sheet_header">रिपोर्ट का प्रीव्यू</string>
   <!-- Title for the Edit URL confirmation dialog in the WebCompatReporter -->
   <string name="webcompat_reporter_edit_url_dialog_title">वेबसाइट URL एडिट करें</string>
   <!-- Text shown on the save button for the Edit URL confirmation dialog in the WebCompatReporter. -->
@@ -1776,6 +1862,12 @@
   <string name="studies_on">चालू</string>
   <!-- Summary of studies data on quit preference if it is set to off -->
   <string name="studies_off">बंद</string>
+  <!-- Category header of a preference that allows a user to alter settings related to web permissions. -->
+  <string name="preferences_category_permissions">अनुमति‌यां</string>
+  <!-- Category header of a preference that allows a user to alter settings related to web content. -->
+  <string name="preferences_category_content">कंटेंट</string>
+  <!-- Preference for altering the default browsing mode. When enabled, the desktop site will always be requested. -->
+  <string name="preference_feature_desktop_mode_default">हमेशा डेस्कटॉप साइट की रिक्वेस्ट करें</string>
   <!--
     Collections
 
@@ -1808,12 +1900,20 @@
     %d is a placeholder for the number of tabs selected.
   -->
   <string name="create_collection_save_to_collection_tab_selected">%d टैब चुना गया</string>
+  <!-- Text shown in snackbar when one or multiple tabs have been saved in a new collection -->
+  <string name="create_collection_tabs_saved_new_collection_2">कलेक्शन सेव किया</string>
+  <!-- Text shown in snackbar when one tab has been saved in a collection -->
+  <string name="create_collection_tab_saved_2">टैब सेव किया</string>
   <!-- Content description (not visible, for screen readers etc.): button to close the collection creator -->
   <string name="create_collection_close">बंद करें</string>
   <!-- Button to save currently selected tabs in the "select tabs" step of the collection creator -->
   <string name="create_collection_save">सहेजें</string>
   <!-- Snackbar action to view the collection the user just created or updated -->
   <string name="create_collection_view">देखें</string>
+  <!-- Text for the OK button from collection dialogs -->
+  <string name="create_collection_positive">ओके</string>
+  <!-- Text for the cancel button from collection dialogs -->
+  <string name="create_collection_negative">कैंसिल करें</string>
   <!-- Default name for a new collection in "name new collection" step of the collection creator. %d is a placeholder for the number of collections -->
   <string name="create_collection_default_name">संग्रह %d</string>
   <!--
