@@ -1927,8 +1927,30 @@
     "Share" button. Opens the share menu when pressed.
   -->
   <string name="share_button_content_description">साझा करें</string>
+  <!-- Text for the Save to PDF feature in the share menu -->
+  <string name="share_save_to_pdf">बतौर PDF सेव करें</string>
+  <!-- Text for error message when generating a PDF file Text. -->
+  <string name="unable_to_save_to_pdf_error">PDF जनरेट नहीं किया जा सकता</string>
+  <!-- Text for standard error snackbar dismiss button. -->
+  <string name="standard_snackbar_error_dismiss">ख़ारिज करें</string>
+  <!-- Text for error message when printing a page and it fails. -->
+  <string name="unable_to_print_page_error">यह पेज प्रिंट नहीं किया जा सकता</string>
+  <!-- Text for the print feature in the share and browser menu -->
+  <string name="menu_print">प्रिंट करें</string>
   <!-- Sub-header in the dialog to share a link to another sync device -->
   <string name="share_device_subheader">उपकरण को भेजें</string>
+  <!-- Content description for the drag handle that dismisses the Send to Device bottom sheet -->
+  <string name="send_to_devices_bottom_sheet_close_content_description">\'डिवाइस पर भेजें\' को बंद करें</string>
+  <!-- Text for the QR code action in the native share sheet -->
+  <string name="share_qr_code">QR कोड</string>
+  <!-- Title shown in the QR code display screen -->
+  <string name="qr_code_display_title">QR कोड</string>
+  <!-- Content description for the close button in the QR code display screen -->
+  <string name="qr_code_display_close">बंद करें</string>
+  <!-- Heading on the QR code display screen -->
+  <string name="qr_code_display_share_nearby">आस-पास लिंक शेयर करें</string>
+  <!-- Body text on the QR code display screen instructing the user to have others scan the code -->
+  <string name="qr_code_display_instructions">यह लिंक आस-पास के लोगों के साथ शेयर करने के लिए, उन्हें नीचे दिया गया QR कोड स्कैन करने के लिए कहें।</string>
   <!-- Label for the download button on the QR code display screen -->
   <string name="qr_code_display_download">डाउनलोड करें</string>
   <!-- Toast shown when the QR code is successfully saved to Downloads -->
@@ -2010,6 +2032,12 @@
     The app name is in the text, due to limitations with localizing Nimbus experiments
   -->
   <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Firefox को अपना डिफ़ॉल्ट ब्राउज़र बनाएं</string>
+  <!--
+    Privacy report notification
+
+    Name of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app.
+  -->
+  <string name="notification_privacy_report_channel_name">प्राइवेसी रिपोर्ट</string>
   <!-- Description of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app. %1$s is the app name (e.g. Firefox) -->
   <string name="notification_privacy_report_channel_description">%1$s दिखाता है कि आपकी ब्राउज़िंग के दौरान कितने ट्रैकर्स ब्लॉक किए गए।</string>
   <!-- Body text for the weekly privacy report notification for when trackers have been blocked. %1$s is the app name (e.g. Firefox) -->
@@ -2512,6 +2540,21 @@
   <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
+  <!--
+    Text shown below the data usage bar describing when the monthly allowance resets.
+    %1$.0f is the total monthly data allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_reset_info">हर महीने की पहली तारीख को %1$.0f GB पर रीसेट हो जाता है।</string>
+  <!-- Header for the browser VPN `location` section -->
+  <string name="ip_protection_location_section">लोकेशन</string>
+  <!-- Label for the recommended automatic location option on the browser VPN settings screen -->
+  <string name="ip_protection_location_recommended_label">सुझाव</string>
+  <!-- Badge label shown in the menu item when the browser VPN is active -->
+  <string name="preferences_ip_protection_on">ऑन</string>
+  <!-- Badge label shown in the menu item when the browser VPN is off -->
+  <string name="preferences_ip_protection_off">ऑफ़</string>
+  <!-- Badge label shown in the menu item while the browser VPN is connecting -->
+  <string name="ip_protection_menu_connecting">कनेक्ट किया जा रहा है…</string>
   <!-- Badge label shown in the VPN menu item when the user is eligible for the feature but needs to authenticate / authorize to enable it -->
   <string name="ip_protection_menu_try_vpn_cta">मुफ़्त में आज़माएं</string>
   <!-- Badge label shown in the menu item when the user is eligible to use the browser VPN but should authenticate or authorize it first. -->
@@ -2523,6 +2566,11 @@
     %1$d is the total monthly allowance in GB (for example "50").
   -->
   <string name="ip_protection_menu_limit_reached">%1$d GB की लिमिट पूरी हुई</string>
+  <!--
+    Error message shown on the browser VPN settings screen when the monthly data allowance is exhausted.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_description">आपने अपना %1$d GB VPN डेटा, पूरा इस्तेमाल कर लिया है। अगले महीने एक्सेस रीसेट हो जाएगा।</string>
   <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
   <string name="ip_protection_toolbar_pill_label">VPN ऑन</string>
   <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
@@ -2558,6 +2606,8 @@
     %1$d is the total monthly allowance in GB (for example "50").
   -->
   <string name="ip_protection_data_limit_reached_snackbar">%1$d GB VPN डेटा इस्तेमाल हो चुका है। अगले महीने एक्सेस रीसेट हो जाएगा।</string>
+  <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
+  <string name="ip_protection_open_settings_snackbar_action">सेटिंग</string>
   <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
   <string name="ip_protection_data_limit_reached_snackbar_action">सेटिंग</string>
   <!-- Description shown on the browser VPN settings screen prompting the user to turn the VPN on. -->
