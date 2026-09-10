@@ -479,7 +479,7 @@
   <!-- Used as text for the link in onboarding_term_of_service_line_one_2. -->
   <string name="onboarding_term_of_service_line_one_link_text_2" tools:ignore="BrandUsage">Firefox उपयोग की शर्तें</string>
   <!-- Line two of the terms of service onboarding page. 'Firefox' is intentionally hardcoded. %1$s is replaced by an active link, using onboarding_term_of_service_line_two_link_text as text (“Privacy Notice”). -->
-  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Firefox आपकी गोपनीयता का ख्याल रखता है। हमारे %1$s में जाकर और जानें।</string>
+  <string name="onboarding_term_of_service_line_two_2" tools:ignore="BrandUsage">Firefox आपकी प्राइवेसी का ख्याल रखता है। हमारे %1$s में जाकर और जानें।</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_two. -->
   <string name="onboarding_term_of_service_line_two_link_text">प्राइवेसी नोटिस</string>
   <!-- Line three of the terms of service onboarding page. 'Firefox' and 'Mozilla' are intentionally hardcoded. %1$s is replaced by an active link using onboarding_term_of_service_line_three_link_text as text (“Manage”). -->
@@ -505,7 +505,7 @@
     Terms of use (ToU) second body text. 'Firefox' is intentionally hardcoded.
     %1$s is replaced by an active link, using onboarding_redesign_tou_body_two_link_text as text (“Privacy Notice”).
   -->
-  <string name="onboarding_redesign_tou_body_two" tools:ignore="BrandUsage,UnusedResources">Firefox आपकी गोपनीयता का ख्याल रखता है। हमारे %1$s में जाकर और जानें।</string>
+  <string name="onboarding_redesign_tou_body_two" tools:ignore="BrandUsage,UnusedResources">Firefox आपकी प्राइवेसी का ख्याल रखता है। हमारे %1$s में जाकर और जानें।</string>
   <!-- Used as text for the link in onboarding_redesign_tou_body_two. -->
   <string name="onboarding_redesign_tou_body_two_link_text" tools:ignore="UnusedResources">प्राइवेसी नोटिस</string>
   <!--
@@ -673,7 +673,7 @@
   <!-- "Add search widget" onboarding button. 'Firefox' is intentionally hardcoded. -->
   <string name="nova_onboarding_add_search_widget_button" tools:ignore="BrandUsage">Firefox विजेट जोड़ें</string>
   <!-- Customize prompt onboarding title. -->
-  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">हर टैप के साथ, कस्टमाइज़ करना और भी आसान और कहीं ज़्यादा गोपनीय है</string>
+  <string name="nova_onboarding_customize_prompt_title" tools:ignore="UnusedResources">हर टैप के साथ, कस्टमाइज़ करना और भी आसान और कहीं ज़्यादा प्राइवेट है</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -2934,6 +2934,8 @@
   <string name="saved_login_clear_username">यूज़रनेम मिटाएं</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">होस्टनेम मिटाएं</string>
+  <!-- Content description, used by tools like screenreaders, for the 3 dots button that shows commands related to the currently displayed login (edit, delete). -->
+  <string name="login_detail_menu_button_content_description">लॉगिन जानकारी वाला मेन्यू</string>
   <!-- Content description, used by tools like screenreaders, to go back and exit the login detail view. -->
   <string name="login_details_navigate_back_button_content_description">पीछे जाएं</string>
   <!-- Edit text for the login detail menu edit button -->
@@ -2942,8 +2944,14 @@
   <string name="login_detail_menu_delete_button">डिलीट करें</string>
   <!-- Content description, used by tools like screenreaders, to go back and exit the add login view. -->
   <string name="add_login_navigate_back_button_content_description">पीछे जाएं</string>
+  <!-- Content description, used by tools like screenreaders, to press on the save new login button. -->
+  <string name="add_login_save_new_login_button_content_description">नया लॉगिन सेव करें</string>
   <!-- Content description, used by tools like screenreaders, to go back and exit the edit login view. -->
   <string name="edit_login_navigate_back_button_content_description">पीछे जाएं</string>
+  <!-- Content description, used by tools like screenreaders, to press on the edit login button. -->
+  <string name="edit_login_button_content_description">लॉगिन एडिट करें</string>
+  <!-- Content description, used by tools like screenreaders, to press on the add new login button. -->
+  <string name="saved_logins_add_new_login_button_content_description">नया लॉगिन जोड़ें</string>
   <!-- Content description, used by tools like screenreaders, to press on the clear search text button. -->
   <string name="saved_logins_clear_search_text_button_content_description">सर्च टेक्स्ट को साफ़ करें</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
@@ -4091,8 +4099,18 @@
   <string name="microsurvey_close_button_content_description">बंद करें</string>
   <!-- The title of the autofill tab in the Debug Drawer. -->
   <string name="debug_drawer_autofill_title">ऑटोफ़िल टूल्स</string>
+  <!--
+    Debug drawer logins
+
+    The title of the Logins feature in the Debug Drawer.
+  -->
+  <string name="debug_drawer_logins_title">लॉगिन</string>
   <!-- The title of the logins section in the Logins feature. %s is the site domain. -->
   <string name="debug_drawer_logins_current_domain_label">मौजूदा डोमेन: %s</string>
+  <!-- The label for a button to add a new fake login for the current domain in the Logins feature. -->
+  <string name="debug_drawer_logins_add_login_button">इस डोमेन के लिए एक नकली लॉगिन जोड़ें</string>
+  <!-- Content description for delete button. %s is the username of the login. -->
+  <string name="debug_drawer_logins_delete_login_button_content_description">%s यूज़रनेम वाला लॉगिन डिलीट करें</string>
   <!--
     Debug drawer addresses
 
