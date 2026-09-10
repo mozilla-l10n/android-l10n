@@ -886,6 +886,26 @@
     Title of the extension crash dialog shown to the user when enough errors have occurred with extensions and they need to be temporarily disabled
   -->
   <string name="extension_process_crash_dialog_title">एक्सटेंशन कुछ समय के लिए बंद किए गए हैं</string>
+  <!--
+    This is a message shown to the user when too many errors have occurred with the extensions process and they have been disabled.
+    The user can decide if they would like to continue trying to start extensions or if they'd rather continue without them.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="extension_process_crash_dialog_message">एक या ज़्यादा एक्सटेंशन ने काम करना बंद कर दिया है, जिससे आपका सिस्टम अस्थिर हो गया है। %1$s ने एक्सटेंशन रीस्टार्ट करने की कोशिश की मगर असफल रहा। आपके मौजूदा सेशन के दौरान एक्सटेंशन रीस्टार्ट नहीं हो पाएंगे। एक्सटेंशन को हटाने या बंद करने से यह समस्या हल हो सकती है।</string>
+  <!-- Button text on the extension crash dialog to prompt the user to try restarting the extensions but the dialog will reappear if it is unsuccessful again -->
+  <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">एक्सटेंशन रीस्टार्ट करने की कोशिश करें</string>
+  <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
+  <string name="extension_process_crash_dialog_disable_extensions_button_text">एक्सटेंशन बंद करके जारी रखें</string>
+  <!-- Text shown in the snackbar action button that lets the user retry an add-on operation that just failed. -->
+  <string name="addon_failure_retry_action">फिर कोशिश‌ करें</string>
+  <!--
+    Account Preferences
+
+    Preference for managing your account via accounts.firefox.com
+  -->
+  <string name="preferences_manage_account">अकाउंट मैनेज करें</string>
+  <!-- Summary of the preference for managing your account via accounts.firefox.com. -->
+  <string name="preferences_manage_account_summary">अपना पासवर्ड बदलें, डेटा इकट्ठा करने को मैनेज करें या अपना अकाउंट डिलीट करें</string>
   <!-- Preference for triggering sync -->
   <string name="preferences_sync_now">अब सिंक करें</string>
   <!-- Preference category for sync -->
@@ -894,6 +914,8 @@
   <string name="preferences_sync_history">इतिहास</string>
   <!-- Preference for syncing bookmarks -->
   <string name="preferences_sync_bookmarks">बुकमार्क</string>
+  <!-- Preference for syncing passwords -->
+  <string name="preferences_sync_logins_2">पासवर्ड</string>
   <!-- Preference for syncing tabs -->
   <string name="preferences_sync_tabs_2">टैब खोलें</string>
   <!-- Preference for signing out -->
@@ -918,6 +940,8 @@
     and %3$s is the device model.
   -->
   <string name="default_device_name_2">%2$s %3$s पर %1$s</string>
+  <!-- Preference for syncing payment methods -->
+  <string name="preferences_sync_credit_cards_2">पेमेंट के तरीके</string>
   <!-- Preference for syncing addresses -->
   <string name="preferences_sync_address">पते</string>
   <!--
@@ -933,6 +957,16 @@
   <!-- %s is the device name -->
   <string name="fxa_tab_received_from_notification_name">%s से टैब</string>
   <!--
+    Close Synced Tabs
+
+    The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.
+  -->
+  <string name="fxa_tabs_closed_notification_title">%1$s के बंद किए गए टैब: %2$d</string>
+  <!-- The body for a "closed synced tabs" notification. -->
+  <string name="fxa_tabs_closed_text">हाल ही में बंद किए गए टैब देखें</string>
+  <!--
     Advanced Preferences
 
     Preference for tracking protection exceptions
@@ -944,10 +978,47 @@
   <string name="exceptions_empty_message_description">अपवाद आपको चयनित साइटों के लिए ट्रैकिंग सुरक्षा अक्षम करते हैं।</string>
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">अधिक जानें</string>
+  <!-- Preference switch for usage and technical data collection -->
+  <string name="preference_usage_data_2">टेक्निकल और इंटरैक्शन डेटा भेजें</string>
+  <!-- Preference switch for usage and technical learn more link in new compose -->
+  <string name="preference_usage_data_learn_more_2">टेक्निकल डेटा के बारे में और जानें</string>
+  <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
+  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">आपके डिवाइस, हार्डवेयर कॉन्फ़िगरेशन और उपयोग से जुड़ा डेटा हमें Firefox के फ़ीचर्स, प्रदर्शन और स्थिरता को बेहतर बनाने में मदद करता है।</string>
+  <!-- Preference switch for daily usage ping data collection -->
+  <string name="preferences_daily_usage_ping_title">दैनिक उपयोग वाली पिंग</string>
+  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">इससे Mozilla को एक्टिव यूज़र्स का अनुमान लगाने में मदद मिलती है।</string>
+  <string name="preferences_daily_usage_ping_learn_more">दैनिक उपयोग वाली पिंग के बारे में और जानें</string>
+  <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="crash_reporting_snack_bar_message">रिपोर्ट भेजी</string>
+  <!-- Text for sumo link to learn more about crash reports in data collection screen -->
+  <string name="preferences_crashes_learn_more">क्रैश रिपोर्ट के बारे में और जानें</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">क्रैश रिपोर्ट</string>
+  <string name="usage_data_category">उपयोग संबंधी डेटा</string>
+  <string name="studies_data_category">अध्ययन</string>
+  <string name="technical_data_category">टेक्निकल डेटा</string>
+  <string name="crash_reporting_description">क्रैश रिपोर्ट हमें ब्राउज़र से जुड़ी समस्याओं का पता लगाने और उन्हें ठीक करने में मदद करती हैं। रिपोर्ट में व्यक्तिगत या संवेदनशील जानकारी शामिल हो सकती है।</string>
+  <!-- Section title for campaign measurement in data collections screen -->
+  <string name="preferences_marketing_data_title">कैंपेन मेज़रमेंट</string>
+  <!-- Preference switch for campaign measurement data (marketing data) collection -->
+  <string name="preferences_marketing_data_2">कैंपेन मेज़रमेंट डेटा</string>
+  <!--
+    Preference description for marketing data collection.
+    Note: The words "Firefox" and "Mozilla" should NOT be translated. “That you use it” is to mean that the user is opting in to sharing that they are continuing to use Firefox after installing it; not that Firefox is tracking their “usage” or what they’re using it for.
+  -->
+  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">आपने Firefox के बारे में कैसे जाना और आप इसका इस्तेमाल कैसे करते हैं, यह जानकारी Mozilla के मार्केटिंग टेक्नोलॉजी पार्टनर्स के साथ शेयर करें। इस डेटा को कभी बेचा नहीं जाता है।</string>
+  <!-- Learn more link for marketing data preference -->
+  <string name="preferences_marketing_data_learn_more">मार्केटिंग डेटा के बारे में और जानें</string>
   <!-- Title for studies preferences -->
   <string name="preference_experiments_2">अध्ययन</string>
   <!-- Summary for studies preferences -->
   <string name="preference_experiments_summary_2" tools:ignore="BrandUsage">Mozilla को संस्थापित करने और अध्ययन चलाने की अनुमति देता है</string>
+  <!--
+    Turn On Sync Preferences
+
+    Header of the Sign in preference view
+  -->
+  <string name="preferences_sign_in">साइन इन करें</string>
   <!-- Preference for reconnecting to FxA sync -->
   <string name="preferences_sync_sign_in_to_reconnect">दोबारा कनेक्ट करने के लिए साइन इन करें</string>
   <!-- Preference for removing FxA account -->
@@ -966,6 +1037,14 @@
   <string name="preference_top_toolbar">शीर्ष</string>
   <!-- Preference for using bottom toolbar -->
   <string name="preference_bottom_toolbar">नीचे</string>
+  <!-- Preference for using simple toolbar -->
+  <string name="preference_simple_toolbar">सिंपल</string>
+  <!-- Preference for using expanded toolbar -->
+  <string name="preference_expanded_toolbar">फैला हुआ</string>
+  <!-- Preference description indicating the toolbar location preference is disabled when the tab strip is enabled -->
+  <string name="preference_toolbar_pref_disabled_explanation">टैब बार दिखाए जाते समय, एड्रेस बार सबसे ऊपर होना चाहिए।</string>
+  <!-- New tab shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_new_tab">नया टैब खोलें</string>
   <!--
     Theme Preferences
 
