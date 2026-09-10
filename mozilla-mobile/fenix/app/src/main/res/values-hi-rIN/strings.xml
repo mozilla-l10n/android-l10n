@@ -867,6 +867,14 @@
   <string name="customize_addon_collection_hint">संग्रह का नाम</string>
   <!-- Hint displayed on input field for custom collection user ID -->
   <string name="customize_addon_collection_user_hint">कलेक्शन ओनर (यूज़र आईडी)</string>
+  <!-- Toast shown after confirming the custom extension collection configuration -->
+  <string name="toast_customize_extension_collection_done">एक्सटेंशन के कलेक्शन में बदलाव किया गया है। बदलावों को लागू करने के लिए ऐप्लिकेशन बंद किया जा रहा है…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">प्राइवेसी रिपोर्ट</string>
   <!-- Title for a customize home screen section. Continue is a section that displays the most recent browser tab, so users can continue browsing where they left off. -->
   <string name="customize_toggle_continue">जारी रखें</string>
   <!-- Header text for jumping back into the recent tab in customize the home screen -->
@@ -974,6 +982,10 @@
   <string name="alternative_app_icon_group_gradients">ग्रेडिएंट</string>
   <!-- Title for the "Featured" group of alternative app icon variants in the icon picker screen. This group includes retro, pixel art, themed, and artist-created icons. -->
   <string name="alternative_app_icon_group_featured">फ़ीचर किए गए</string>
+  <!-- Title to show in alert when user selects an alternative app icon -->
+  <string name="restart_warning_dialog_title">ऐप आइकन बदलें?</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_warning_dialog_body_2">ऐप बंद हो सकता है। %1$s को फिर से खोलने के लिए, बस अपने नए आइकन पर टैप करें।</string>
   <!-- Message to warn users that applying an alternative app icon may require an app restart and will remove existing shortcuts because of the OS limitations. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="restart_and_shortcuts_removal_warning_dialog_body">आइकन बदलने से, आपकी होम स्क्रीन पर सेव की गई सभी साइटें और शॉर्टकट हट जाएंगे। हो सकता है कि %1$s बंद हो जाए। फिर से खोलने के लिए, अपने नए आइकन पर टैप करें।</string>
   <!-- Dialog button text for confirming the possible app restart and new icon selection -->
@@ -1165,6 +1177,10 @@
   <string name="toolbar_customize_shortcut_translate">अनुवाद करें</string>
   <!-- Homepage shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_homepage">होमपेज</string>
+  <!-- Back shortcut in toolbar customization -->
+  <string name="toolbar_customize_shortcut_back">वापस जाएं</string>
+  <!-- Label for choosing in toolbar customization settings to not use any custom shortcut button. -->
+  <string name="toolbar_customize_shortcut_none">कोई नहीं</string>
   <!--
     App icon Preferences
 
@@ -1206,6 +1222,8 @@
   <string name="preference_gestures_swipe_toolbar_show_tabs_2">खुले हुए टैब देखने के लिए, टूलबार में ऊपर की ओर स्वाइप करें</string>
   <!-- Preference for switching tabs by swiping horizontally on the addressbar -->
   <string name="preference_gestures_swipe_toolbar_switch_tabs_2">टैब स्विच करने के लिए, एड्रेस बार पर दाएं-बाएं स्वाइप करें।</string>
+  <!-- Preference for switching for the shake to summarize toggle in page summaries and customize settings -->
+  <string name="preferences_shake_to_summarize">सारांश बनाने के लिए डिवाइस हिलाएं</string>
   <!--
     Library
 
@@ -1331,6 +1349,14 @@
   <!-- Title for the preference to enable or disable the tab groups feature -->
   <string name="preferences_tab_groups_feature">टैब ग्रुप की सुविधा चालू करें</string>
   <!--
+    Privacy report
+
+    Category header of a preference that allows a user to enable or disable the privacy report feature
+  -->
+  <string name="preferences_privacy_report">प्राइवेसी रिपोर्ट</string>
+  <!-- Title of the privacy report preference that allows a user to enable or disable the feature -->
+  <string name="preferences_privacy_report_title">प्राइवेसी रिपोर्ट चालू करें</string>
+  <!--
     Studies
 
     Title of the remove studies button
@@ -1340,6 +1366,8 @@
   <string name="studies_active">सक्रिय</string>
   <!-- Description for studies. Note: The word "Firefox" should NOT be translated -->
   <string name="studies_description_4" tools:ignore="BrandUsage">Firefox बेतरतीब ढंग से यूज़र चुनकर फ़ीचर्स की टेस्टिंग करता है, जिससे सभी के लिए क्वालिटी बेहतर बनती है।</string>
+  <!-- Title of the Studies data preference -->
+  <string name="studies_title_2">फ़ीचर के अध्ययन की अनुमति दें</string>
   <!-- Learn more link for studies, links to an article for more information about studies. -->
   <string name="studies_learn_more">अधिक जानें</string>
   <!--
@@ -1459,6 +1487,64 @@
   <string name="tab_group_onboarding_grid_item_description">टैब को एक-साथ ग्रुप करने के लिए, एक टैब को दूसरे पर ड्रैग करें।</string>
   <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
   <string name="tab_group_onboarding_list_item_description">ग्रुप बनाने के लिए एक से ज़्यादा टैब चुनें।</string>
+  <!-- Content description (accessibility label) for button to dismiss the tab group onboarding item. -->
+  <string name="tab_group_onboarding_item_dismiss_content_description">टैब ग्रुप ऑनबोर्डिंग ख़ारिज करें</string>
+  <!-- The header text displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_header">स्क्रॉल कम और काम ज़्यादा करने के लिए टैब ग्रुप आज़माएं</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">ग्रुप बनाने के लिए टैब चुनें। वे यहां सेव हो जाएंगे, और आपकी ज़रूरत पर उपलब्ध रहेंगे।</string>
+  <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">टैब ग्रुप बनाएं</string>
+  <!-- Title for the edit tab group bottom sheet -->
+  <string name="edit_tab_group_title">ग्रुप एडिट करें</string>
+  <string name="create_tab_group_save_button">सेव करें</string>
+  <!-- Description for the handle at the top of a bottom sheet, used to drag the sheet up or down. -->
+  <string name="edit_tab_group_bottom_sheet_grabber_content_description">नया ग्रुप, ड्रैग करने वाला हैंडल सिकोड़ें</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">ग्रुप %d</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">नाम</string>
+  <!-- Title for adding more tabs to a tab group. -->
+  <string name="add_to_tab_group_title">इसमें जोड़ें</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">टैब ग्रुप में जोड़ें, ड्रैग हैंडल को सिकोड़ें</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">नए टैब ग्रुप में जोड़ें</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">नया टैब ग्रुप</string>
+  <plurals name="tab_group_tabs_count_subtitle">
+    <!--
+      Subtitle for the number of tabs in a tab group.
+      %1$d is the number of tabs in a tab group.
+    -->
+    <item quantity="one">%1$d टैब</item>
+    <item quantity="other">%1$d टैब</item>
+  </plurals>
+  <plurals name="add_to_exiting_tab_group_content_description">
+    <!--
+      Accessibility description for add to existing tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">%1$s टैब ग्रुप, %2$d टैब, %3$s कलर में जोड़ें</item>
+    <item quantity="other">%1$s टैब ग्रुप, %2$d टैब, %3$s कलर में जोड़ें</item>
+  </plurals>
+  <!-- Content description for the grabber/handle of the tab group bottom sheet. -->
+  <string name="tab_group_sheet_dismiss_description">टैब ग्रुप देखें, ड्रैग करने वाला हैंडल सिकोड़ें</string>
+  <plurals name="expanded_tab_group_header_description">
+    <!--
+      Accessibility description for the header of an expanded tab group.
+      %1$s is the group name, %2$d is the number of tabs, %3$s is the color name.
+    -->
+    <item quantity="one">%1$s टैब ग्रुप जिसमें %2$d टैब है, कलर %3$s है</item>
+    <item quantity="other">%1$s टैब ग्रुप जिसमें %2$d टैब हैं, कलर %3$s है</item>
+  </plurals>
   <!-- Title for the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_title">टैब ग्रुप डिलीट करें?</string>
   <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
@@ -2043,6 +2129,8 @@
   <string name="tracking_protection_off">बंद करें</string>
   <!-- Summary of tracking protection preference if tracking protection is set to standard -->
   <string name="tracking_protection_standard">स्टैंडर्ड</string>
+  <!-- Summary of tracking protection preference if tracking protection is set to strict -->
+  <string name="tracking_protection_strict">सख़्त</string>
   <!-- Summary of tracking protection preference if tracking protection is set to custom -->
   <string name="tracking_protection_custom">कस्टम</string>
   <!-- Label for global setting that indicates that all video and audio autoplay is allowed -->
@@ -2449,6 +2537,8 @@
   <string name="preference_enhanced_tracking_protection_allow_list_baseline_2">साइट से जुड़ी प्रमुख समस्याओं का समाधान करें (इसका सुझाव दिया जाता है)</string>
   <!-- Preference label for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
   <string name="preference_enhanced_tracking_protection_allow_list_convenience_label">साइट से जुड़ी छोटी-मोटी समस्याओं को ठीक करें</string>
+  <!-- Preference description for the enhanced tracking protection option to fix minor site issues caused by tracker blocking -->
+  <string name="preference_enhanced_tracking_protection_allow_list_convenience_description">प्रमुख समस्याओं के लिए, समाधान के साथ इस्तेमाल किया जाना चाहिए।</string>
   <!-- Preference sub header for the enhanced tracking protection options to fix issues caused by tracker blocking -->
   <string name="preference_enhanced_tracking_protection_allow_list_subheader">साइट की समस्याएं दूर करें</string>
   <!-- Learn more text for the enhanced tracking protection options to fix issues caused by tracker blocking -->
@@ -2505,6 +2595,8 @@
   <string name="etp_social_media_trackers_description">वेब के आसपास अपनी ब्राउज़िंग गतिविधि को ट्रैक करने के लिए सामाजिक नेटवर्क की क्षमता को सीमित करता है।</string>
   <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cookies_title">क्रॉस-साइट ट्रैकिंग कुकीज़</string>
+  <!-- Category of trackers (cross-site tracking cookies) that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_cookies_title_2">क्रॉस-साइट कुकीज़</string>
   <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cookies_description">विज्ञापन नेटवर्क और एनालिटिक्स कंपनियों द्वारा कई साइटों पर आपके ब्राउज़िंग डेटा को संकलित करने के लिए उपयोग करने वाले कुकीज़ को ब्लॉक करता हैं।</string>
   <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
@@ -4185,6 +4277,8 @@
     in English.
   -->
   <string name="firefox_labs_title" tools:ignore="BrandUsage">Firefox Labs</string>
+  <!-- Banner title text on the Firefox Labs screen. -->
+  <string name="firefox_labs_banner_title_2">हमारे एक्सपेरिमेंटल फ़ीचर आज़माएं!</string>
   <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
   <string name="firefox_labs_share_feedback">फ़ीडबैक दें</string>
   <!-- Content description for the share feedback link on a Firefox Labs feature. This text will be used by screen readers to provide more context on the feedback link. %s is the name of the Firefox Labs feature. -->
