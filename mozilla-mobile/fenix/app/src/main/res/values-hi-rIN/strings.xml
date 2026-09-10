@@ -772,6 +772,8 @@
   <string name="preferences_screenshots_in_private_mode_disclaimer">अगर अनुमति दी गई है, तो प्राइवेट टैब एक से ज़्यादा ऐप खुले होने पर भी दिखाई देंगे</string>
   <!-- Preference for adding private browsing shortcut -->
   <string name="preferences_add_private_browsing_shortcut">निजी ब्राउज़िंग शॉर्टकट जोड़ें</string>
+  <!-- Preference for enabling "HTTPS-Only" mode -->
+  <string name="preferences_https_only_title">HTTPS-Only मोड</string>
   <!-- Preference title for using the screen lock to hide tabs in private browsing -->
   <string name="preferences_pbm_lock_screen_title">प्राइवेट ब्राउज़िंग में, टैब छिपाने के लिए स्क्रीन लॉक का इस्तेमाल करें।</string>
   <!-- Informs the user how to access the tabs when "Use screen lock to hide tabs in private browsing" is enabled -->
@@ -874,6 +876,10 @@
     %1$s is the name of the app (for example "Firefox").
   -->
   <string name="preferences_show_nonsponsored_suggestions">%1$s के सुझाव</string>
+  <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+  <string name="preferences_show_nonsponsored_suggestions_summary">वेब से, आपकी सर्च से संबंधित सुझाव पाएं</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards" tools:ignore="BrandUsage">टाइप करते समय Mozilla से सुझाव पाएं</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">लिंक शेयरिंग</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -901,6 +907,10 @@
     app has lost the permission to access a previously selected custom folder.
   -->
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">आपके पास यह फ़ोल्डर इस्तेमाल करने की अनुमति नहीं है। कृपया कोई फ़ोल्डर चुनें।</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">किसी दूसरे ऐप से डाउनलोड मैनेज करें</string>
+  <!-- Message shown when no app is available to let the user pick a download folder. -->
+  <string name="preferences_downloads_no_folder_picker_available">इस डिवाइस पर फ़ोल्डर पिकर नहीं खोला जा सकता।</string>
   <!-- Preference category for deleting or removing downloads -->
   <string name="preferences_category_delete_or_remove_downloads">डाउनलोड डिलीट करें या हटाएं</string>
   <string name="preferences_downloads_delete_from_device">डिवाइस से डिलीट करें</string>
@@ -2698,10 +2708,14 @@
   <string name="etp_cookies_title_2">क्रॉस-साइट कुकीज़</string>
   <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cookies_description">विज्ञापन नेटवर्क और एनालिटिक्स कंपनियों द्वारा कई साइटों पर आपके ब्राउज़िंग डेटा को संकलित करने के लिए उपयोग करने वाले कुकीज़ को ब्लॉक करता हैं।</string>
+  <!-- Description of cross-site tracking cookies that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_cookies_description_2">टोटल कुकी प्रोटेक्शन, कुकीज़ को केवल उसी साइट तक सीमित रखता है जिस पर आप मौजूद हैं, ताकि विज्ञापन नेटवर्क जैसे ट्रैकर्स उनका इस्तेमाल करके आपको अन्य साइटों पर ट्रैक न कर सकें।</string>
   <!-- Category of trackers (cryptominers) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cryptominers_title">क्रिप्टोमाइनर</string>
   <!-- Description of cryptominers that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_cryptominers_description">डिजिटल मुद्रा का पता लगाने में दुर्भावनापूर्ण लिपियों को आपके डिवाइस के ऐक्सेस से रोकता हैं</string>
+  <!-- Description of fingerprinters that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_known_fingerprinters_description">आपके डिवाइस से जुड़ा, यूनीक आइडेंटिफ़िकेशन वाला वह डेटा इकट्ठा करने से रोकता है जिसका ट्रैकिंग के लिए इस्तेमाल किया जा सकता है।</string>
   <!-- Category of trackers (tracking content) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_tracking_content_title">ट्रैकिंग सामग्री</string>
   <!-- Description of tracking content that can be blocked by Enhanced Tracking Protection -->
@@ -2722,12 +2736,25 @@
   <string name="open_source_licenses_title">%s | OSS लाइब्रेरी</string>
   <!-- Category of trackers (redirect trackers) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_redirect_trackers_title">रीडायरेक्ट ट्रैकर्स</string>
+  <!-- Description of redirect tracker cookies that can be blocked by Enhanced Tracking Protection -->
+  <string name="etp_redirect_trackers_description">जानी-पहचानी ट्रैकिंग वेबसाइटों के रीडायरेक्ट द्वारा सेट की गई कुकीज़ को मिटाता है।</string>
   <!-- Preference for fingerprinting protection for the custom protection settings -->
   <string name="etp_suspected_fingerprinters_title">संदिग्ध फ़िंगरप्रिंटर</string>
   <!-- Description of fingerprinters that can be blocked by fingerprinting protection -->
   <string name="etp_suspected_fingerprinters_description">संदिग्ध फ़िंगरप्रिंटर को रोकने के लिए फ़िंगरप्रिंटिंग सुरक्षा चालू करता है।</string>
   <!-- Category of trackers (fingerprinters) that can be blocked by Enhanced Tracking Protection -->
   <string name="etp_known_fingerprinters_title">जाने-पहचाने फ़िंगरप्रिंटर</string>
+  <!--
+    Content description (not visible, for screen readers etc.):
+    Enhanced tracking protection exception preference icon for ETP settings.
+  -->
+  <string name="preference_etp_exceptions_icon_description">एन्हांस्ड ट्रैकिंग सुरक्षा के अपवाद की प्राथमिकता वाला आइकन</string>
+  <!--
+    DNS over HTTPS (DoH)
+
+    Preference title for DNS over HTTPS settings
+  -->
+  <string name="preference_doh_title">HTTPS के बजाय DNS</string>
   <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
   <string name="preference_doh_learn_more">और जानें</string>
   <!-- Content description for the "Info" button -->
