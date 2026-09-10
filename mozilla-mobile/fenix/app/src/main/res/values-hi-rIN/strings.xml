@@ -265,6 +265,10 @@
   <string name="browser_menu_sign_in">साइन इन करें</string>
   <!-- Browser menu caption label for the "Sign in" browser menu item described in `browser_menu_sign_in` -->
   <string name="browser_menu_sign_in_caption_3">पासवर्ड, बुकमार्क और अन्य जानकारी सिंक करें</string>
+  <!-- Browser menu label to sign back in to sync on the device when the user's account needs to be reauthenticated -->
+  <string name="browser_menu_sign_back_in_to_sync">सिंक करने के लिए वापस साइन इन करें</string>
+  <!-- Browser menu caption label for the "Sign back in to sync" browser menu item described in `browser_menu_sign_back_in_to_sync` when there is an error in syncing -->
+  <string name="browser_menu_syncing_paused_caption">सिंक करना पॉज़ किया</string>
   <!-- Browser menu caption label for an authenticated user -->
   <string name="browser_menu_signed_in_caption">बैकअप और सिंक की जा रही चीज़ें मैनेज करें</string>
   <!-- Browser menu label that creates a private tab -->
@@ -273,16 +277,35 @@
   <string name="browser_menu_passwords">पासवर्ड</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
   <string name="browser_close_main_menu_handlebar_content_description">मेन्यू बंद करें</string>
+  <!-- Content description (not visible, for screen readers etc.) for main menu navigation header. -->
+  <string name="browser_main_menu_content_description_navigation_header">नेविगेशन</string>
+  <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
+  <string name="browser_custom_tab_menu_handlebar_content_description">कस्टम टैब मेन्यू शीट को बंद करें</string>
   <!-- Browser menu label that bookmarks the currently visited page -->
   <string name="browser_menu_bookmark_this_page_2">पेज बुकमार्क करें</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
   <string name="browser_menu_edit_bookmark">बुकमार्क एडिट करें</string>
   <!-- Browser menu label that the saves the currently visited page as a PDF -->
   <string name="browser_menu_save_as_pdf_2">बतौर PDF सेव करें</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">नॉन-प्राइवेट टैब में मूव करें</string>
+  <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
+  <string name="browser_menu_translate_page_2">पेज का अनुवाद करें</string>
+  <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
+  <string name="browser_menu_summarize_page">पेज का सारांश बनाएं</string>
   <!-- Browser menu badge text for summarization feature -->
   <string name="browser_menu_summarize_page_badge">नया</string>
+  <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
+  <string name="browser_menu_webcompat_reporter_2">साइट खराब होने की रिपोर्ट करें</string>
+  <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
+  <string name="browser_menu_translated">अनुवाद हुआ है</string>
   <!-- Browser menu label for the print feature -->
   <string name="browser_menu_print_2">प्रिंट करें</string>
+  <!--
+    Browser menu label for the Delete browsing data on quit feature.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="browser_menu_delete_browsing_data_on_quit">%1$s से बाहर निकलें</string>
   <!--
     Content description for a banner within the menu which prompt the user to make this app their default browser.
     %1$s is the name of the app (for example "Firefox").
@@ -306,6 +329,26 @@
     Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred.
   -->
   <string name="browser_toolbar_translate">पेज का अनुवाद करें</string>
+  <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
+  <string name="browser_toolbar_summarize_cfr_description">चंद सेकंड में इस पेज का सारांश देखने के लिए, अपना डिवाइस हिलाएं। ⚡️</string>
+  <!--
+    Translation Toolbar
+
+    Translation toolbar label that is displayed when the current page has been translated by the translation feature.
+    %1$s is the name of the language that is displayed in the original page. (For example: English)
+    %2$s is the name of the language which the page was translated to. (For example: French)
+  -->
+  <string name="translation_toolbar_translated_from_and_to" tools:ignore="UnusedResources">%1$s से %2$s में अनुवाद किया</string>
+  <!-- Content description for the translate toolbar action that opens the translations dialog. -->
+  <string name="translation_toolbar_expand_action">अनुवाद शीट खोलें</string>
+  <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
+  <string name="translation_toolbar_close_action">मैसेज ख़ारिज करें</string>
+  <!--
+    Page summaries
+
+    Toolbar title for the Page summaries settings fragment
+  -->
+  <string name="preferences_page_summaries">पेज के सारांश</string>
   <!--
     AI Controls settings
 
@@ -318,14 +361,30 @@
   <string name="ai_controls_banner_supporting_text_2">AI से बेहतर किए गए फ़ीचर्स का इस्तेमाल करना है या नहीं, इसमें यह भी शामिल है। %s</string>
   <!-- Link text for learning more about AI controls -->
   <string name="ai_controls_learn_more">और जानें</string>
+  <!-- Title for the block AI enhancements toggle -->
+  <string name="ai_controls_block_ai_title">AI एन्हांसमेंट ब्लॉक करें</string>
+  <!-- Description for the block AI enhancements toggle. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_ai_description">ब्लॉक करने का मतलब है कि आपको %s में नए या मौजूदा AI एन्हांसमेंट या उनसे जुड़े पॉप-अप नहीं दिखाई देंगे।</string>
+  <!-- Link text to see what AI enhancements are and aren’t included -->
+  <string name="ai_controls_see_whats_included">देखें कि क्या शामिल है और क्या नहीं</string>
+  <!-- Banner text shown when AI enhancements are blocked -->
+  <string name="ai_controls_blocked_info_banner">नए और मौजूदा AI एन्हांसमेंट, डिफ़ॉल्ट रूप से ब्लॉक किए गए हैं। नीचे खास फ़ीचर्स अनब्लॉक करें।</string>
+  <!-- Section header for the AI-powered features list -->
+  <string name="ai_controls_ai_powered_features">AI-संचालित फ़ीचर्स</string>
   <!-- Title for the translations AI feature toggle -->
   <string name="ai_controls_translations_title">अनुवाद</string>
   <!-- Description for the translations AI feature toggle -->
   <string name="ai_controls_translations_description">सभी अनुवाद आपके डिवाइस में प्राइवेट बने रहते हैं।</string>
   <!-- Link text to navigate to more translations settings -->
   <string name="ai_controls_more_translations_settings">अनुवाद की और सेटिंग</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">पेज के सारांश से जुड़ी और सेटिंग</string>
   <!-- Title for the voice search AI feature toggle -->
   <string name="ai_controls_voice_search_title">वॉइस सर्च</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">Google स्पीच सर्विसेज़ के ज़रिए, ऑडियो को टेक्स्ट में बदला जाता है।</string>
+  <!-- Title for the block AI enhancements confirmation dialog -->
+  <string name="ai_controls_block_dialog_title">AI एन्हांसमेंट ब्लॉक करें?</string>
   <!-- Label shown above the list of features that will be blocked in the block AI dialog -->
   <string name="ai_controls_block_dialog_what_will_be_blocked">क्या-क्या ब्लॉक किया जाएगा:</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
@@ -1347,6 +1406,52 @@
   <string name="tab_group_onboarding_grid_item_description">टैब को एक-साथ ग्रुप करने के लिए, एक टैब को दूसरे पर ड्रैग करें।</string>
   <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
   <string name="tab_group_onboarding_list_item_description">ग्रुप बनाने के लिए एक से ज़्यादा टैब चुनें।</string>
+  <!-- Title for the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_title">टैब ग्रुप डिलीट करें?</string>
+  <!-- Text shown in the body of the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_body">इससे ग्रुप हमेशा के लिए डिलीट हो जाएगा।</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">ग्रुप डिलीट करें</string>
+  <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_cancel">कैंसिल करें</string>
+  <!-- Title for the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_title">टैब बंद करें और ग्रुप डिलीट करें?</string>
+  <!-- Text shown in the body of the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_body">इससे ग्रुप हमेशा के लिए डिलीट हो जाएगा।</string>
+  <!-- Text shown on the confirm button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_confirm">ग्रुप डिलीट करें</string>
+  <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
+  <string name="close_tab_and_delete_group_confirmation_dialog_cancel">कैंसिल करें</string>
+  <!-- Content description for the three dot button next to a tab group" -->
+  <string name="tab_group_three_dot_button_content_description">और विकल्प</string>
+  <!-- Text shown on the edit button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_edit">एडिट करें</string>
+  <!-- Text shown on the ungroup button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_ungroup">अनग्रुप करें</string>
+  <!-- Text shown on the delete button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_delete">डिलीट करें</string>
+  <!-- Text shown on the share button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_share">शेयर करें</string>
+  <!-- Text shown on the close button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_close">बंद करें</string>
+  <!-- Title for the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_title">टैब ग्रुप को अनग्रुप करें?</string>
+  <!-- Text shown in the body of the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_body">टैब इस डिवाइस पर खुले रहेंगे, मगर ग्रुप डिलीट कर दिया जाएगा।</string>
+  <!-- Text shown on the Don't Ask Again checkbox button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_dont_ask_again">दोबारा न पूछें</string>
+  <!-- Text shown on the confirm button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_confirm">अनग्रुप करें</string>
+  <!-- Text shown on the cancel button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_cancel">कैंसिल करें</string>
+  <!-- Custom accessibility action to reorder a tab up rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_up">टैब को ऊपर ले जाएं</string>
+  <!-- Custom accessibility action to reorder a tab left rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_left">टैब को बाएं ले जाएं</string>
+  <!-- Custom accessibility action to reorder a tab right rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_right">टैब को दाएं ले जाएं</string>
+  <!-- Custom accessibility action to reorder a tab down rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_down">टैब को नीचे ले जाएं</string>
   <!-- Tab group color: Cyan -->
   <string name="tab_group_color_cyan">सियान</string>
   <!-- Tab group color: Green -->
