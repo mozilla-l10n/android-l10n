@@ -37,6 +37,8 @@
   <string name="tab_manager_empty_private_tabs_page_description">%1$s gardarà pas d\'istoric nimai de cookies, pasmens los marcapaginas novèls seràn servats.</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">%1$d seleccionats</string>
+  <!-- Tab tray multi select title in app bar when no tabs are selected -->
+  <string name="tab_tray_multi_select_title_empty">Seleccionar d’onglets</string>
   <!-- Label of button in create collection dialog for creating a new collection -->
   <string name="tab_tray_add_new_collection">Ajustar una colleccion nòva</string>
   <!-- Label of editable text in create collection dialog for naming a new collection -->
@@ -307,10 +309,18 @@
   <string name="translation_toolbar_expand_action">Dobrir lo fuèlh de traduccion</string>
   <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
   <string name="translation_toolbar_close_action">Ignorar lo messatge</string>
+  <!--
+    Page summaries
+
+    Toolbar title for the Page summaries settings fragment
+  -->
+  <string name="preferences_page_summaries">Resumits de paginas</string>
   <!-- Link text for learning more about AI controls -->
   <string name="ai_controls_learn_more">Ne saber mai</string>
   <!-- Title for the translations AI feature toggle -->
   <string name="ai_controls_translations_title">Traduccions</string>
+  <!-- Description for the translations AI feature toggle -->
+  <string name="ai_controls_translations_description">Totas las traduccions son privadas e non sortisson pas de l’aparelh.</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_cancel">Anullar</string>
   <!-- Block button text in the block AI enhancements confirmation dialog -->
@@ -659,6 +669,8 @@
   <string name="preferences_downloads_delete_from_device">Suprimir de l’aparelh</string>
   <string name="preferences_downloads_delete_from_device_description">Lo fichièr es suprimit de vòstre aparelh e levat de l\'istoric dels telecargaments</string>
   <string name="preferences_downloads_remove_from_download_history">Tirar de l’istoric dels telecargaments</string>
+  <string name="preferences_downloads_remove_from_download_history_description">Lo fichièr es suprimit de l’istoric dels telecargaments, mas es totjorn salvat sus vòstre aparelh</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">Me demandar en suprimissent de fichièrs</string>
   <!-- Preference for downloads -->
   <string name="preferences_downloads_2">Paramètres de telecargament</string>
   <!-- Preference for enabling gecko engine logs -->
@@ -701,6 +713,12 @@
   <string name="customize_addon_collection_user_hint">Proprietari de la colleccion (ID utilizaire)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Colleccion d’extensions modificada. Tampadura de l’aplicacion per aplicar las modificacions…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">Rapòrt de confidencialitat</string>
   <!-- Title for the customize home screen section with bookmarks. -->
   <string name="customize_toggle_bookmarks">Marcapaginas</string>
   <!--
@@ -1126,6 +1144,14 @@
   <!-- Title of inactive tabs preference -->
   <string name="preferences_inactive_tabs_title">Los onglets qu’avètz pas consultats fa doas setmanas aniràn a la seccion dels inactius.</string>
   <!--
+    Privacy report
+
+    Category header of a preference that allows a user to enable or disable the privacy report feature
+  -->
+  <string name="preferences_privacy_report">Rapòrt de confidencialitat</string>
+  <!-- Title of the privacy report preference that allows a user to enable or disable the feature -->
+  <string name="preferences_privacy_report_title">Activar lo rapòrt de confidencialitat</string>
+  <!--
     Studies
 
     Title of the remove studies button
@@ -1167,6 +1193,8 @@
   <string name="add_private_tab">Dobrir onglet privat</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Onglets tampats recentament</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">Tot seleccionar</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">Paramètres del compte</string>
   <!-- Text shown in the menu to view tab settings -->
@@ -1346,6 +1374,8 @@
   <string name="download_delete_multi_select_dialog_cancel">Anullar</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
   <string name="download_delete_dialog_from_device">Suprimir de l’aparelh</string>
+  <!-- Alert dialog confirmation before deleting a single download item or many download items, this is one of the radio buttons within the dialog box for the user to select. -->
+  <string name="download_delete_dialog_from_history">Sonque tirar de l’istoric dels telecargaments</string>
   <!-- Alert dialog confirmation before deleting a single download item or many download items, this is the positive action. -->
   <string name="download_delete_dialog_confirm">Confirmar</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
@@ -1507,6 +1537,8 @@
   <string name="bookmark_error_edit_bookmark">Modificacion del marcapagina impossibla</string>
   <!-- Snackbar edit button shown after a bookmark has been created. -->
   <string name="edit_bookmark_snackbar_action">MODIFICAR</string>
+  <!-- Bookmark menu select button -->
+  <string name="bookmark_menu_select_button">Seleccionar</string>
   <!-- Bookmark menu move button -->
   <string name="bookmark_menu_move_button">Desplaçar</string>
   <!-- Bookmark overflow menu edit button -->
@@ -1811,6 +1843,12 @@
     The app name is in the text, due to limitations with localizing Nimbus experiments
   -->
   <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Far que Firefox siá lo navegador per defaut</string>
+  <!--
+    Privacy report notification
+
+    Name of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app.
+  -->
+  <string name="notification_privacy_report_channel_name">Rapòrt de confidencialitat</string>
   <!--
     Survey
 
@@ -2820,6 +2858,8 @@
   <string name="translation_settings_download_language">Telecargar de lengas</string>
   <!-- Toggle switch title and description for the translation settings control. -->
   <string name="translation_settings_control_title">Traduccions</string>
+  <!-- Description for the translation settings toggle switch. -->
+  <string name="translation_settings_control_description">Totas las traduccions son privadas e non sortisson pas de l’aparelh.</string>
   <!-- Clickable text for the translations settings item that links to a website. -->
   <string name="translation_settings_control_learn_more">Ne saber mai</string>
   <!--
