@@ -907,6 +907,8 @@
   <string name="notifications_allowed_summary">Leyft</string>
   <!-- Summary for notification preference indicating notifications are not allowed -->
   <string name="notifications_not_allowed_summary">Ekki leyft</string>
+  <!-- Preference for local network access / nearby devices in Android 17 -->
+  <string name="preferences_local_network_access">Aðgangur að staðbundnu neti / Tæki í nágrenninu</string>
   <!-- Summary for local network access preference indicating access is allowed -->
   <string name="local_network_access_allowed_summary">Leyft</string>
   <!-- Summary for local network access preference indicating access is not allowed -->
@@ -1390,6 +1392,8 @@
   <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Loka opnum flipum sjálfvirkt</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Loka</string>
+  <!-- Content description for the media playback indicator in the tabs tray. -->
+  <string name="tab_indicator_media_playing">Spila margmiðlunarefni</string>
   <!--
     Opening screen
 
@@ -1424,6 +1428,8 @@
   <string name="preferences_inactive_tabs">Færa gamla flipa í óvirka</string>
   <!-- Title of inactive tabs preference -->
   <string name="preferences_inactive_tabs_title">Flipar sem þú hefur ekki skoðað í tvær vikur verða færðir í óvirka hlutann.</string>
+  <!-- Title for the preference to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_feature">Virkja flipahópa</string>
   <!--
     Privacy report
 
@@ -1639,14 +1645,22 @@
   <string name="tab_group_three_dot_button_content_description">Fleiri valkostir</string>
   <!-- Text shown on the edit button for a tab group on the three dot menu -->
   <string name="tab_group_three_dot_menu_edit">Breyta</string>
+  <!-- Text shown on the ungroup button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_ungroup">Aðskilja hóp</string>
   <!-- Text shown on the delete button for a tab group on the three dot menu -->
   <string name="tab_group_three_dot_menu_delete">Eyða</string>
   <!-- Text shown on the share button for a tab group on the three dot menu -->
   <string name="tab_group_three_dot_menu_share">Deila</string>
   <!-- Text shown on the close button for a tab group on the three dot menu -->
   <string name="tab_group_three_dot_menu_close">Loka</string>
+  <!-- Title for the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_title">Aðskilja flipahóp?</string>
+  <!-- Text shown in the body of the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_body">Fliparnir verða áfram opnir á þessu tæki en hópnum verður eytt.</string>
   <!-- Text shown on the Don't Ask Again checkbox button in the Ungroup tab group confirmation dialog. -->
   <string name="ungroup_tab_group_confirmation_dialog_dont_ask_again">Ekki spyrja aftur</string>
+  <!-- Text shown on the confirm button in the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_confirm">Aðskilja hóp</string>
   <!-- Text shown on the cancel button in the Ungroup tab group confirmation dialog. -->
   <string name="ungroup_tab_group_confirmation_dialog_cancel">Hætta við</string>
   <!-- Custom accessibility action to reorder a tab up rather than dragging. -->
@@ -2336,6 +2350,8 @@
   <string name="sync_send_to_all">Senda í öll tæki</string>
   <!-- Text displayed when no other sync devices are available for link sharing -->
   <string name="sync_no_devices_available">Engin tæki tiltæk</string>
+  <!-- Text displayed when no other sync devices are available for link sharing. -->
+  <string name="sync_no_devices_available_description">Öll tæki sem eru innskráð og samstilla við þennan reikning birtast hér.</string>
   <!-- An option from the share dialog to reconnect to sync -->
   <string name="sync_reconnect">Tengdu aftur til að samstilla</string>
   <!-- Text displayed when sync is offline and cannot be accessed -->
@@ -2401,6 +2417,8 @@
     Name of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app.
   -->
   <string name="notification_privacy_report_channel_name">Persónuverndarskýrsla</string>
+  <!-- Headline text of the weekly privacy report notification for when no trackers have been blocked. %1$s is the app name (e.g. Firefox) -->
+  <string name="notification_privacy_report_headline_no_trackers">%1$s lokar á rekjara um leið og þú vafrar, þú munt sjá þá hér.</string>
   <!--
     Survey
 
@@ -2967,6 +2985,8 @@
   <!-- Label for the BETA badge for the browser VPN entry in the settings list -->
   <string name="preferences_ip_protection_beta_badge_label">BETA-prófun</string>
   <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
+  <string name="ip_protection_settings_title">Innbyggt VPN</string>
+  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
   <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
@@ -3005,6 +3025,8 @@
   <string name="ip_protection_menu_paused">Í bið</string>
   <!-- Badge label shown in the menu item when the browser VPN has an error -->
   <string name="ip_protection_menu_error">Villa</string>
+  <!-- Badge label shown in the VPN menu item when the user is eligible for the feature but needs to authenticate / authorize to enable it -->
+  <string name="ip_protection_menu_try_vpn_cta">Prófaðu það ókeypis</string>
   <!-- Content description for the chevron button that opens the browser VPN settings screen -->
   <string name="ip_protection_navigate_settings">Opna VPN-stillingar</string>
   <!--
@@ -3021,6 +3043,10 @@
   <string name="ip_protection_toolbar_pill_label">VPN kveikt</string>
   <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
   <string name="ip_protection_toolbar_pill_description">VPN er virkt.</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN turns off -->
+  <string name="ip_protection_toolbar_pill_label_off">VPN slökkt</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has turned off -->
+  <string name="ip_protection_toolbar_pill_description_off">Slökkt er á VPN.</string>
   <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
   <string name="ip_protection_get_started">Hefjast handa</string>
   <!-- Label for the "connecting" state of the button that starts the browser VPN authentication or authorization flow on the settings screen -->
@@ -3047,13 +3073,19 @@
   <string name="ip_protection_onboarding_not_now_button">Ekki núna</string>
   <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
   <string name="ip_protection_connection_error_snackbar">Ekki tókst að tengjast VPN. Reyndu aftur eftir nokkrar mínútur.</string>
+  <!-- Snackbar (in-app pop-up notification) text to signal the VPN location has been reset due to the previously selected VPN location being no longer available. -->
+  <string name="ip_protection_location_selection_reset_snackbar">Valin VPN staðsetning ekki tiltæk. Tengist við ráðlagða staðsetningu.</string>
   <!--
     Snackbar (in-app pop-up notification) text to signal the browser VPN has reached the monthly data limit.
     %1$d is the total monthly allowance in GB (for example "50").
   -->
   <string name="ip_protection_data_limit_reached_snackbar">%1$d GB af VPN-gögnum notað. Aðgangur verður endurstilltur í næsta mánuði.</string>
   <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
+  <string name="ip_protection_open_settings_snackbar_action">Stillingar</string>
+  <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
   <string name="ip_protection_data_limit_reached_snackbar_action">Stillingar</string>
+  <!-- Title shown on the browser VPN settings screen for location selection section. -->
+  <string name="ip_protection_location_title" tools:ignore="UnusedResources">Staðsetning</string>
   <!-- Label for the Recommended server location option which is automatically selected by the browser. -->
   <string name="ip_protection_recommended_location" tools:ignore="UnusedResources">Ráðlagt</string>
   <!-- Headline for the card that promotes the standalone Mozilla VPN product. -->
@@ -4427,6 +4459,12 @@
   <string name="lens_opt_out_title">Finndu það með Google Lens</string>
   <!-- Description of the bottom sheet shown the first time the user opens the Google Lens camera screen -->
   <string name="lens_opt_out_description">Veldu mynd eða notaðu myndavélina þína til að fá niðurstöður með Google Lens.</string>
+  <!-- Text of the link in the first-run Google Lens bottom sheet that opens the Search settings page -->
+  <string name="lens_opt_out_settings_link">Stillingar Google Lens</string>
+  <!-- Button in the first-run Google Lens bottom sheet that dismisses it and starts the camera -->
+  <string name="lens_opt_out_try_it_now_button">Prófa það núna</string>
+  <!-- Button in the first-run Google Lens bottom sheet that leaves Google Lens without using it -->
+  <string name="lens_opt_out_not_now_button">Ekki núna</string>
   <!--
     Firefox Labs
 
@@ -4467,4 +4505,32 @@
   <string name="firefox_labs_feature_conflict">Ekki er hægt að prófa eiginleikann.</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
   <string name="firefox_labs_no_labs_available_description">Engir tilraunaeiginleikar til að prófa núna</string>
+  <!-- Title of the Firefox Labs Sandboxing experiment. -->
+  <string name="firefox_labs_website_isolation_title" tools:ignore="UnusedResources">Einangrun vefsvæðis</string>
+  <!--
+    PDF viewer toolbar and buttons
+
+    Content description for accessibility (used by screen readers): Description for the button that triggers the start of a signature workflow on the PDF displayed on the screen.
+  -->
+  <string name="pdf_tools_sign_content_description">Undirrita PDF</string>
+  <!-- Content description for accessibility (used by screen readers): Description of the button that downloads the PDF displayed on the screen to the user's device. -->
+  <string name="pdf_tools_download_content_description">Sækja PDF</string>
+  <!-- Content description for accessibility (used by screen readers): Description for the button that opens the printing dialogue window for the PDF displayed on the screen. -->
+  <string name="pdf_tools_print_content_description">Prenta PDF</string>
+  <!-- Content description for accessibility (used by screen readers): Description for the button that opens the sharing options for the PDF being displayed on the screen. -->
+  <string name="pdf_tools_share_content_description">Deila PDF</string>
+  <!--
+    PDF viewer add a signature dialog
+
+    The title of the dialog for adding a signature to a PDF.
+  -->
+  <string name="pdf_tools_signature_title">Bæta við undirritun</string>
+  <!-- Content description for accessibility (used by screen readers): Description for the button that closes the dialog for adding a signature to a PDF. -->
+  <string name="pdf_tools_signature_close_content_description">Loka PDF undirritunarspjaldinu</string>
+  <!-- The placeholder text shown in the empty text input field where users can enter the signature they wish to add to a PDF. -->
+  <string name="pdf_tools_signature_placeholder">Skrifaðu undirritun</string>
+  <!-- The text for the button that erases the text the user entered in the "add a signature" field. -->
+  <string name="pdf_tools_signature_clear_button">Hreinsa</string>
+  <!-- The text for the button that adds the signature the user has typed to the PDF. -->
+  <string name="pdf_tools_signature_add_button">Bæta við</string>
 </resources>
