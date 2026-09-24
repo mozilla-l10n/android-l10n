@@ -61,13 +61,14 @@ jobs:
           fi
 
           if [[ $pr != "none" ]]; then
-            python src/.github/scripts/comment_errors.py --token ${{ secrets.ANDROID_GITHUB_TOKEN }} --repo ${{ github.event.repository.name }} --owner ${{ github.repository_owner }} --pr $pr --run ${{ github.run_id }}
+            python src/.github/scripts/comment_errors.py --token ${{ secrets.ANDROID_GITHUB_TOKEN }} --repo ${GITHUB_EVENT_REPOSITORY_NAME} --owner ${{ github.repository_owner }} --pr $pr --run ${{ github.run_id }}
             if [ -f "comment.txt" ]; then
               gh pr comment ${{ github.event.number }} --repo ${{ github.repository }} --body-file comment.txt
             fi
           fi
         env:
           GH_TOKEN: ${{ secrets.ANDROID_GITHUB_TOKEN }}
+          GITHUB_EVENT_REPOSITORY_NAME: ${{ github.event.repository.name }}
       - name: Output errors
         run: |
           if [ -f "errors.json" ]; then
