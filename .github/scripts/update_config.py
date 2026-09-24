@@ -6,11 +6,12 @@
 
 from moz.l10n.paths import L10nConfigPaths, get_android_locale
 from functions import strip_html
+from defusedxml import DefusedXmlException
 import argparse
 import json
 import os
 import sys
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as ET
 
 
 def getReferenceFilesToml(toml_path, reference_locale):
@@ -115,6 +116,8 @@ def main():
                     current[xml_lint[rule]].add(string_id)
         except ET.ParseError as e:
             print(f"Error parsing XML file: {e}")
+        except DefusedXmlException as e:
+            print(f"Unsafe XML rejected: {e}")
         except Exception as e:
             print(f"Unexpected error: {e}")
 
