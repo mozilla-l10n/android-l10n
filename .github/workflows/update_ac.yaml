@@ -12,7 +12,8 @@ on:
 jobs:
   update:
     uses: ./.github/workflows/_update_projects.yaml
-    secrets: inherit
+    secrets:
+      ANDROID_GITHUB_TOKEN: ${{ secrets.ANDROID_GITHUB_TOKEN }}
     with:
       project: android-components
       linter_toml: firefox.toml
