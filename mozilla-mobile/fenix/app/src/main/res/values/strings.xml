@@ -812,6 +812,8 @@
   <string name="preferences_override_sync_tokenserver">Custom Sync server</string>
   <!-- Preference category for account information -->
   <string name="preferences_category_account">Account</string>
+  <!-- Preference category for sync controls. Sync can be translated, it's just short for ”Synchronization” in English. -->
+  <string name="preferences_category_sync_controls">Sync</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Address bar location</string>
   <!-- Preference for changing toolbar layout -->
@@ -868,6 +870,8 @@
   <string name="preferences_search_synced_tabs">Search synced tabs</string>
   <!-- Preference for account settings -->
   <string name="preferences_account_settings">Account settings</string>
+  <!-- Preference for account and sync settings -->
+  <string name="preferences_account_and_sync_settings">Account and sync</string>
   <!-- Preference for enabling url autocomplete -->
   <string name="preferences_enable_autocomplete_urls">Autocomplete URLs</string>
   <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
@@ -1147,6 +1151,12 @@
   <string name="preferences_sync_now">Sync now</string>
   <!-- Preference category for sync -->
   <string name="preferences_sync_category">Choose what to sync</string>
+  <!-- Preference category for sync controls -->
+  <string name="preferences_category_sync">Synced data</string>
+  <!-- Summary for the sync preference category. -->
+  <string name="preferences_sync_category_summary">Manage what syncs on all your connected devices</string>
+  <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
+  <string name="preferences_sync_category_no_engine_selected_summary">You aren’t syncing anything. Choose what to keep synced across your devices.</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">History</string>
   <!-- Preference for syncing bookmarks -->
@@ -1159,6 +1169,10 @@
   <string name="preferences_sign_out">Sign out</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">Device name</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">Device name</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">Change device name</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">Device name cannot be empty.</string>
   <!-- Label indicating that sync is in progress -->
@@ -1411,6 +1425,8 @@
     Title of preference for tabs management
   -->
   <string name="preferences_tabs">Tabs</string>
+  <!-- Title of preference that allows a user to specify the tab layout -->
+  <string name="preferences_tab_layout">Tab layout</string>
   <!-- Title of preference that allows a user to specify the tab view -->
   <string name="preferences_tab_view">Tab view</string>
   <!-- Option for a list tab view -->
@@ -1460,13 +1476,25 @@
   <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
   <string name="opening_screen_after_four_hours_of_inactivity_summary">Open on homepage after four hours</string>
   <!--
+    Tab organization
+
+    Category header for the preferences that control how tabs are organized
+  -->
+  <string name="preferences_tab_organization">Tab organization</string>
+  <!-- Title of the preference that allows a user to enable or disable the inactive tabs feature -->
+  <string name="preferences_inactive_tabs_toggle_title">Inactive tabs</string>
+  <!--
     Inactive tabs
 
     Category header of a preference that allows a user to enable or disable the inactive tabs feature
   -->
   <string name="preferences_inactive_tabs">Move old tabs to inactive</string>
-  <!-- Title of inactive tabs preference -->
+  <!-- Summary of the preference that allows a user to enable or disable the inactive tabs feature. -->
   <string name="preferences_inactive_tabs_title">Tabs you haven’t viewed for two weeks get moved to the inactive section.</string>
+  <!-- Title of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_title">Tab groups</string>
+  <!-- Summary of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_description">Organize your tabs into groups you can name and save.</string>
   <!-- Title for the preference to enable or disable the tab groups feature -->
   <string name="preferences_tab_groups_feature">Enable Tab Groups</string>
   <!--
@@ -1751,16 +1779,6 @@
     %1$d is the number of bookmarks selected
   -->
   <string name="history_multi_select_title">%1$d selected</string>
-  <!-- Text for the header that groups the history for today -->
-  <string name="history_today">Today</string>
-  <!-- Text for the header that groups the history for yesterday -->
-  <string name="history_yesterday">Yesterday</string>
-  <!-- Text for the header that groups the history the past 7 days -->
-  <string name="history_7_days">Last 7 days</string>
-  <!-- Text for the header that groups the history the past 30 days -->
-  <string name="history_30_days">Last 30 days</string>
-  <!-- Text for the header that groups the history older than the last month -->
-  <string name="history_older">Older</string>
   <!-- Text shown when no history exists -->
   <string name="history_empty_message">No history here</string>
   <!--
@@ -2389,12 +2407,12 @@
   <string name="sync_sign_in">Sign in to Sync</string>
   <!-- An option from the share dialog to send link to all other sync devices -->
   <string name="sync_send_to_all">Send to all devices</string>
-  <!-- Text displayed when no other sync devices are available for link sharing -->
-  <string name="sync_no_devices_available">No devices available</string>
-  <!-- Text displayed when no other sync devices are available for link sharing. -->
-  <string name="sync_no_devices_available_description">Any devices signed in and syncing to this account will appear here.</string>
   <!-- An option from the share dialog to reconnect to sync -->
   <string name="sync_reconnect">Reconnect to Sync</string>
+  <!-- Label for the button in the share dialog that sends the tab to the selected sync devices -->
+  <string name="sync_send_to_selected_devices">Send</string>
+  <!-- Content description announced when a device is selected in the share dialog -->
+  <string name="send_to_devices_device_selected_content_description">Selected</string>
   <!-- Text displayed when sync is offline and cannot be accessed -->
   <string name="sync_offline">Offline</string>
   <!-- An option to connect additional devices -->
@@ -3033,8 +3051,6 @@
   <string name="preferences_ip_protection_beta_badge_label">BETA</string>
   <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
   <string name="ip_protection_settings_title">Built-in VPN</string>
-  <!-- Title for the browser VPN settings screen (displayed in the app bar) -->
-  <string name="ip_protection_title">VPN</string>
   <!-- Label for the browser VPN toggle on the settings screen -->
   <string name="ip_protection_toggle_label">VPN</string>
   <!-- Content description for the browser VPN settings screen top bar back button -->
@@ -3129,8 +3145,6 @@
   <string name="ip_protection_data_limit_reached_snackbar">%1$d GB of VPN data used. Access will reset next month.</string>
   <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
   <string name="ip_protection_open_settings_snackbar_action">Settings</string>
-  <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
-  <string name="ip_protection_data_limit_reached_snackbar_action">Settings</string>
   <!-- Description shown on the browser VPN settings screen prompting the user to turn the VPN on. -->
   <string name="ip_protection_settings_description" tools:ignore="UnusedResources">Turn VPN on to make your browsing more private and harder to trace.</string>
   <!-- Title shown on the browser VPN settings screen for location selection section. -->
@@ -4602,4 +4616,6 @@
   <string name="reader_mode_panel_content_description">Reader Mode Options</string>
   <!-- Content description for the button in reader mode panel that turns on the read aloud feature (playback of content begins when button is pressed) -->
   <string name="reader_mode_panel_listen_content_description">Read Aloud</string>
+  <!-- Content description for media player displayed in Reader Mode when the Listen to Page (Read Aloud) feature is selected -->
+  <string name="reader_mode_panel_media_player_content_description">Media Player</string>
 </resources>
