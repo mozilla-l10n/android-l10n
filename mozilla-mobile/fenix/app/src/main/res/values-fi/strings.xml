@@ -273,6 +273,10 @@
   <string name="browser_main_menu_content_description_navigation_header">Navigointi</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
   <string name="browser_custom_tab_menu_handlebar_content_description">Sulje mukautetun välilehden valikko</string>
+  <!-- URL bar indicator shown on a cached version of the website, when the tab is reloading, but the content is not live yet -->
+  <string name="browser_toolbar_cached_page_indicator">Välimuistissa</string>
+  <!-- Message shown when a cached website has finished reloading and the tab is now showing the live version of the page -->
+  <string name="browser_toolbar_live_page_toast">Ajantasainen sivu</string>
   <!-- Browser menu label that bookmarks the currently visited page -->
   <string name="browser_menu_bookmark_this_page_2">Lisää sivu kirjanmerkkeihin</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
@@ -802,6 +806,8 @@
   <string name="preferences_override_sync_tokenserver">Mukautettu synkronointipalvelin</string>
   <!-- Preference category for account information -->
   <string name="preferences_category_account">Tili</string>
+  <!-- Preference category for sync controls. Sync can be translated, it's just short for ”Synchronization” in English. -->
+  <string name="preferences_category_sync_controls">Synkronointi</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">Osoitepalkin sijainti</string>
   <!-- Preference for changing toolbar layout -->
@@ -858,6 +864,8 @@
   <string name="preferences_search_synced_tabs">Etsi synkronoiduista välilehdistä</string>
   <!-- Preference for account settings -->
   <string name="preferences_account_settings">Tilin asetukset</string>
+  <!-- Preference for account and sync settings -->
+  <string name="preferences_account_and_sync_settings">Tili ja synkronointi</string>
   <!-- Preference for enabling url autocomplete -->
   <string name="preferences_enable_autocomplete_urls">Täydennä osoitteet automaattisesti</string>
   <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
@@ -1137,6 +1145,12 @@
   <string name="preferences_sync_now">Synkronoi nyt</string>
   <!-- Preference category for sync -->
   <string name="preferences_sync_category">Valitse mitä synkronoidaan</string>
+  <!-- Preference category for sync controls -->
+  <string name="preferences_category_sync">Synkronoidut tiedot</string>
+  <!-- Summary for the sync preference category. -->
+  <string name="preferences_sync_category_summary">Hallitse mitä kaikille yhdistetyille laitteillesi synkronoidaan</string>
+  <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
+  <string name="preferences_sync_category_no_engine_selected_summary">Mitään ei synkronoida. Valitse, mitä haluat synkronoida laitteidesi välillä.</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">Historia</string>
   <!-- Preference for syncing bookmarks -->
@@ -1149,6 +1163,10 @@
   <string name="preferences_sign_out">Kirjaudu ulos</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">Laitteen nimi</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">Laitteen nimi</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">Muuta laitteen nimi</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">Laitteen nimi ei voi olla tyhjä.</string>
   <!-- Label indicating that sync is in progress -->
@@ -1401,6 +1419,8 @@
     Title of preference for tabs management
   -->
   <string name="preferences_tabs">Välilehdet</string>
+  <!-- Title of preference that allows a user to specify the tab layout -->
+  <string name="preferences_tab_layout">Välilehtien asettelu</string>
   <!-- Title of preference that allows a user to specify the tab view -->
   <string name="preferences_tab_view">Välilehtinäkymä</string>
   <!-- Option for a list tab view -->
@@ -1450,6 +1470,14 @@
   <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
   <string name="opening_screen_after_four_hours_of_inactivity_summary">Avaa etusivu neljän tunnin kuluttua</string>
   <!--
+    Tab organization
+
+    Category header for the preferences that control how tabs are organized
+  -->
+  <string name="preferences_tab_organization">Välilehtien järjestely</string>
+  <!-- Title of the preference that allows a user to enable or disable the inactive tabs feature -->
+  <string name="preferences_inactive_tabs_toggle_title">Passiiviset välilehdet</string>
+  <!--
     Inactive tabs
 
     Category header of a preference that allows a user to enable or disable the inactive tabs feature
@@ -1457,6 +1485,10 @@
   <string name="preferences_inactive_tabs">Siirrä vanhat välilehdet passiivisiksi</string>
   <!-- Summary of the preference that allows a user to enable or disable the inactive tabs feature. -->
   <string name="preferences_inactive_tabs_title">Välilehdet, joita et ole katsonut kahteen viikkoon, siirretään passiivisten osioon.</string>
+  <!-- Title of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_title">Välilehtiryhmät</string>
+  <!-- Summary of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_description">Järjestä välilehdet ryhmiin, jotka voit nimetä ja tallentaa.</string>
   <!-- Title for the preference to enable or disable the tab groups feature -->
   <string name="preferences_tab_groups_feature">Ota välilehtiryhmät käyttöön</string>
   <!--
@@ -2371,6 +2403,10 @@
   <string name="sync_send_to_all">Lähetä kaikkiin laitteisiin</string>
   <!-- An option from the share dialog to reconnect to sync -->
   <string name="sync_reconnect">Yhdistä uudelleen Synciin</string>
+  <!-- Label for the button in the share dialog that sends the tab to the selected sync devices -->
+  <string name="sync_send_to_selected_devices">Lähetä</string>
+  <!-- Content description announced when a device is selected in the share dialog -->
+  <string name="send_to_devices_device_selected_content_description">Valittu</string>
   <!-- Text displayed when sync is offline and cannot be accessed -->
   <string name="sync_offline">Ei yhteydessä</string>
   <!-- An option to connect additional devices -->
@@ -4556,4 +4592,14 @@
   <string name="pdf_tools_signature_clear_button">Tyhjennä</string>
   <!-- The text for the button that adds the signature the user has typed to the PDF. -->
   <string name="pdf_tools_signature_add_button">Lisää</string>
+  <!--
+    Listen to page
+
+    Content description for the reader mode panel: a group of buttons floating over the content
+  -->
+  <string name="reader_mode_panel_content_description">Lukutilan valinnat</string>
+  <!-- Content description for the button in reader mode panel that turns on the read aloud feature (playback of content begins when button is pressed) -->
+  <string name="reader_mode_panel_listen_content_description">Lue ääneen</string>
+  <!-- Content description for media player displayed in Reader Mode when the Listen to Page (Read Aloud) feature is selected -->
+  <string name="reader_mode_panel_media_player_content_description">Mediasoitin</string>
 </resources>
