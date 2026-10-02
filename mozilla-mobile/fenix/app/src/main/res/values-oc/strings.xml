@@ -269,6 +269,8 @@
   <string name="browser_menu_summarize_page_badge">Nòu</string>
   <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
   <string name="browser_menu_webcompat_reporter_2">Senhalar un site copat</string>
+  <!-- Browser menu label for adding a tab to a tab group -->
+  <string name="browser_menu_add_to_tab_group">Apondre al grop</string>
   <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
   <string name="browser_menu_translated">Traducha</string>
   <!-- Browser menu label for the print feature -->
@@ -331,10 +333,22 @@
   <string name="ai_controls_learn_more">Ne saber mai</string>
   <!-- Title for the block AI enhancements toggle -->
   <string name="ai_controls_block_ai_title">Blocar los melhoraments IA</string>
+  <!-- Description for the block AI enhancements toggle. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_block_ai_description">Activar lo blocatge implica que veiretz pas los melhoraments basats sus l’IA (novèls o existents) dins %s, ni las fenèstras sorgissentas que i son associadas.</string>
+  <!-- Section header for the AI-powered features list -->
+  <string name="ai_controls_ai_powered_features">Foncionalitats basadas sus l’IA</string>
   <!-- Title for the translations AI feature toggle -->
   <string name="ai_controls_translations_title">Traduccions</string>
   <!-- Description for the translations AI feature toggle -->
   <string name="ai_controls_translations_description">Totas las traduccions son privadas e non sortisson pas de l’aparelh.</string>
+  <!-- Link text to navigate to more translations settings -->
+  <string name="ai_controls_more_translations_settings">Mai de paramètres de traduccion</string>
+  <!-- Link text to navigate to more page summary settings -->
+  <string name="ai_controls_more_page_summary_settings">Mai de paramètres de resumits de paginas</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Recèrca a la votz</string>
+  <!-- Description for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_description">L’àudio es convertit en tèxt per Google Speech Services.</string>
   <!-- Cancel button text in the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_cancel">Anullar</string>
   <!-- Block button text in the block AI enhancements confirmation dialog -->
@@ -878,6 +892,10 @@
   <string name="preferences_sign_out">Desconnexion</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">Nom del periferic</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">Nom del periferic</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">Cambiar lo nom del periferic</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">Lo nom del periferic pòt pas èsser void.</string>
   <!-- Label indicating that sync is in progress -->
@@ -1167,6 +1185,8 @@
   <string name="preferences_inactive_tabs">Passar los onglets ancians a inactius</string>
   <!-- Summary of the preference that allows a user to enable or disable the inactive tabs feature. -->
   <string name="preferences_inactive_tabs_title">Los onglets qu’avètz pas consultats fa doas setmanas aniràn a la seccion dels inactius.</string>
+  <!-- Title of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_title">Grops d’onglets</string>
   <!-- Title for the preference to enable or disable the tab groups feature -->
   <string name="preferences_tab_groups_feature">Activar los grops d’onglets</string>
   <!--
@@ -1217,6 +1237,8 @@
   <string name="add_tab">Apondre un onglet</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_private_tab">Dobrir onglet privat</string>
+  <!-- Content description (not visible, for screen readers etc.): Create tab group button. Opens the create tab group sheet when pressed -->
+  <string name="create_tab_group_content_description">Crear un grop d’onglets</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Onglets tampats recentament</string>
   <!-- Text shown in the menu to select all tabs. -->
@@ -1241,6 +1263,8 @@
   <string name="tab_manager_multiselect_menu_item_share">Partejar</string>
   <!-- Text shown in the multiselect menu for adding selected tabs to collections. -->
   <string name="tab_manager_multiselect_menu_item_add_to_collection">Apondre a la colleccion</string>
+  <!-- Text shown in the multiselect menu for adding selected tabs to a tab group. -->
+  <string name="tab_manager_multiselect_menu_item_add_to_tab_group">Apondre al grop</string>
   <!-- Content description for tabs tray multiselect menu -->
   <string name="tab_tray_multiselect_menu_content_description">Menú dels onglets seleccionats</string>
   <!-- Title text displayed for a homepage tab in the tabs tray. -->
@@ -1271,9 +1295,36 @@
   <string name="delete_from_history">Suprimir de l’istoric</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">%1$s (mòde privat)</string>
+  <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
+  <string name="tab_group_onboarding_item_title">Crear un grop d’onglets</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
+  <string name="tab_group_onboarding_list_item_description">Seleccionatz mantun onglet per crear un grop.</string>
+  <!-- The description displayed on the tab groups page when no tab groups are open -->
+  <string name="tab_manager_empty_tab_groups_page_description">Seleccionatz d\'onglets per crear un grop. Son enregistrats aquí, prèstes a èsser utilizats quand o volètz.</string>
+  <!--
+    Tab Group
+
+    Title for the create tab group bottom sheet
+  -->
+  <string name="create_tab_group_title">Crear un grop d’onglets</string>
   <!-- Title for the edit tab group bottom sheet -->
   <string name="edit_tab_group_title">Modificar lo grop</string>
   <string name="create_tab_group_save_button">Enregistrar</string>
+  <!--
+    Default tab group name when creating a tab group
+    %d is the number of existing tab groups + 1.
+  -->
+  <string name="create_tab_group_form_default_name">Grop %d</string>
+  <!-- Label for the tab group name field in the bottom sheet to create or edit a tab group. -->
+  <string name="create_tab_group_name_label">Nom</string>
+  <!-- Content Description for closing the "Add to Tab Group" panel. -->
+  <string name="add_to_tab_group_bottom_sheet_grabber_content_description">Apondre a un grop d’onglets, replegar la ponhada de desplaçament</string>
+  <!-- Content Description for "New tab group" panel. -->
+  <string name="add_to_new_tab_group_content_description">Apondre a un grop d’onglets nòu</string>
+  <!-- Label for adding to a new tab group. -->
+  <string name="add_to_new_tab_group_title">Grop d’onglets nòu</string>
+  <!-- Text shown on the confirm button in the Delete tab group confirmation dialog. -->
+  <string name="delete_tab_group_confirmation_dialog_confirm">Suprimir lo grop</string>
   <!-- Text shown on the cancel button in the Delete tab group confirmation dialog. -->
   <string name="delete_tab_group_confirmation_dialog_cancel">Anullar</string>
   <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
@@ -1396,6 +1447,8 @@
   <string name="download_delete_dialog_confirm">Confirmar</string>
   <!-- Title for the alert dialog confirmation before renaming a download item. -->
   <string name="download_rename_dialog_title">Renomenar lo fichièr</string>
+  <!-- Label for the name field in the alert dialog confirmation before renaming a download item. -->
+  <string name="download_rename_dialog_label">Nom</string>
   <!-- Title for the alert dialog when the file cannot be renamed. -->
   <string name="download_rename_error_cannot_rename_title">Impossible de renomenar lo fichièr</string>
   <!-- Description message for the alert dialog when the file cannot be renamed. -->
@@ -3524,4 +3577,18 @@
   <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">aicí</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Ne saber mai</string>
+  <!-- Banner title text on the Firefox Labs screen. -->
+  <string name="firefox_labs_banner_title_2">Ensajatz nòstras foncions experimentalas\u00a0!</string>
+  <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
+  <string name="firefox_labs_share_feedback">Donar vòstre vejaire</string>
+  <!-- Content description for the share feedback link on a Firefox Labs feature. This text will be used by screen readers to provide more context on the feedback link. %s is the name of the Firefox Labs feature. -->
+  <string name="firefox_labs_share_feedback_content_description">Donar vòstre vejaire per %s.</string>
+  <!-- Button text on the Firefox Labs screen for restoring all toggles back to the default settings. The button will turn off any experimental features. -->
+  <string name="firefox_labs_restore_default_button_text">Restablir los paramètres per defaut</string>
+  <!-- The description used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. %s is the name of the app (for example "Firefox Nightly") -->
+  <string name="firefox_labs_restore_defaults_dialog_message">Per restablir los paramètres per defaut, reaviatz %s.</string>
+  <!-- Title of the Firefox Labs Sandboxing experiment. -->
+  <string name="firefox_labs_website_isolation_title" tools:ignore="UnusedResources">Isolacion de site</string>
+  <!-- Description of the Firefox Labs Sandboxing experiment. -->
+  <string name="firefox_labs_website_isolation_description" tools:ignore="UnusedResources">Una barrièra suplementària entre los sites web que contribuís a protegir vòstras donadas entre los onglets. Pòt afectar las performanças, l\'estabilitat, la compatibilitat dels sites web e la salvagarda de l\'istoric de navegacion.</string>
 </resources>
