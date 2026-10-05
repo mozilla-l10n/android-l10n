@@ -1148,6 +1148,10 @@
   <string name="preferences_sync_category">Wybierz, co synchronizować</string>
   <!-- Preference category for sync controls -->
   <string name="preferences_category_sync">Synchronizowane dane</string>
+  <!-- Summary for the sync preference category. -->
+  <string name="preferences_sync_category_summary">Wybierz, co ma być synchronizowane na wszystkich połączonych urządzeniach</string>
+  <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
+  <string name="preferences_sync_category_no_engine_selected_summary">Nic nie jest synchronizowane. Wybierz, co ma być synchronizowane między urządzeniami.</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">Historia</string>
   <!-- Preference for syncing bookmarks -->
@@ -1160,6 +1164,10 @@
   <string name="preferences_sign_out">Wyloguj się</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">Nazwa urządzenia</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">Nazwa urządzenia</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">Zmień nazwę urządzenia</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">Nazwa urządzenia nie może być pusta.</string>
   <!-- Label indicating that sync is in progress -->
@@ -1412,6 +1420,8 @@
     Title of preference for tabs management
   -->
   <string name="preferences_tabs">Karty</string>
+  <!-- Title of preference that allows a user to specify the tab layout -->
+  <string name="preferences_tab_layout">Układ kart</string>
   <!-- Title of preference that allows a user to specify the tab view -->
   <string name="preferences_tab_view">Wygląd kart</string>
   <!-- Option for a list tab view -->
@@ -1461,6 +1471,14 @@
   <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
   <string name="opening_screen_after_four_hours_of_inactivity_summary">Otwieranie na stronie startowej po czterech godzinach</string>
   <!--
+    Tab organization
+
+    Category header for the preferences that control how tabs are organized
+  -->
+  <string name="preferences_tab_organization">Organizacja kart</string>
+  <!-- Title of the preference that allows a user to enable or disable the inactive tabs feature -->
+  <string name="preferences_inactive_tabs_toggle_title">Nieaktywne karty</string>
+  <!--
     Inactive tabs
 
     Category header of a preference that allows a user to enable or disable the inactive tabs feature
@@ -1468,6 +1486,10 @@
   <string name="preferences_inactive_tabs">Przenoszenie starych kart do nieaktywnych</string>
   <!-- Summary of the preference that allows a user to enable or disable the inactive tabs feature. -->
   <string name="preferences_inactive_tabs_title">Karty, których nie odwiedzono od dwóch tygodni są przenoszone do sekcji nieaktywnych.</string>
+  <!-- Title of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_title">Grupy kart</string>
+  <!-- Summary of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_description">Porządkowanie karty w\u00a0grupach, które można nazywać i\u00a0zachowywać.</string>
   <!-- Title for the preference to enable or disable the tab groups feature -->
   <string name="preferences_tab_groups_feature">Grupy kart</string>
   <!--
@@ -2387,6 +2409,10 @@
   <string name="sync_send_to_all">Wyślij na wszystkie urządzenia</string>
   <!-- An option from the share dialog to reconnect to sync -->
   <string name="sync_reconnect">Ponownie połącz z\u00a0synchronizacją</string>
+  <!-- Label for the button in the share dialog that sends the tab to the selected sync devices -->
+  <string name="sync_send_to_selected_devices">Wyślij</string>
+  <!-- Content description announced when a device is selected in the share dialog -->
+  <string name="send_to_devices_device_selected_content_description">Wybrane</string>
   <!-- Text displayed when sync is offline and cannot be accessed -->
   <string name="sync_offline">Rozłączono</string>
   <!-- An option to connect additional devices -->
@@ -2423,6 +2449,8 @@
   <string name="sync_send_tab_error_connection_title">Sprawdź połączenie z\u00a0Internetem</string>
   <!-- Send tab to synced devices: Connectivity Error message - Suggested user action after internet connection has been established -->
   <string name="sync_send_tab_error_connection_text">Następnie ponownie spróbuj wysłać kartę.</string>
+  <!-- Send tab to synced devices: Connectivity Error button - When tapped, refreshes the list of connected devices. -->
+  <string name="sync_send_tab_error_connection_button">Spróbuj ponownie</string>
   <!--
     Notifications
 
@@ -2590,7 +2618,7 @@
   <!-- Text shown in snackbar when sharing tabs failed -->
   <string name="sync_sent_tab_error_snackbar">Nie można wysłać</string>
   <!-- Text shown in snackbar for the "retry" action that the user has after sharing tabs failed -->
-  <string name="sync_sent_tab_error_snackbar_action">Ponów</string>
+  <string name="sync_sent_tab_error_snackbar_action">Spróbuj ponownie</string>
   <!-- Title of QR Pairing Fragment -->
   <string name="sync_scan_code">Zeskanuj kod</string>
   <!-- Instructions on how to access pairing -->
@@ -2605,6 +2633,12 @@
   <string name="sign_in_create_account_text" tools:ignore="BrandUsage"><![CDATA[Nie masz konta? <u>Utwórz je</u>, aby synchronizować Firefoksa między urządzeniami.]]></string>
   <!-- Text shown in confirmation dialog to sign out of account. %s is the name of the app (for example "Firefox"). -->
   <string name="sign_out_confirmation_message_2">%s zatrzyma synchronizację z\u00a0tym kontem, ale nie usunie danych przeglądania na tym urządzeniu.</string>
+  <!-- Title of the confirmation dialog shown when the user signs out of their account -->
+  <string name="sign_out_dialog_title">Czy wylogować z\u00a0konta?</string>
+  <!-- Body of the confirmation dialog shown when the user signs out of their account -->
+  <string name="sign_out_dialog_message">Zsynchronizowane dane pozostają zachowane na koncie.</string>
+  <!-- Text for the primary action button of the confirmation dialog shown when the user signs out of their account -->
+  <string name="sign_out_dialog_confirm_button">Wyloguj się</string>
   <!-- Option to continue signing out of account shown in confirmation dialog to sign out of account -->
   <string name="sign_out_disconnect">Rozłącz</string>
   <!-- Option to cancel signing out shown in confirmation dialog to sign out of account -->
@@ -3760,7 +3794,7 @@
   <!-- Content description (not visible, for screen readers etc.): For a language list item that was downloaded, the user can now delete it. -->
   <string name="download_languages_item_content_description_downloaded_state">Usuń</string>
   <!-- Content description (not visible, for screen readers etc.): For a language list item, deleting is in progress. -->
-  <string name="download_languages_item_content_description_delete_in_progress_state">W trakcie</string>
+  <string name="download_languages_item_content_description_delete_in_progress_state">W\u00a0trakcie</string>
   <!--
     Content description (not visible, for screen readers etc.): For a language list item, downloading is in progress.
     %1$s is the language name, for example, "Spanish".
