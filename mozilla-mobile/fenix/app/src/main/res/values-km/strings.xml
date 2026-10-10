@@ -437,6 +437,8 @@
   <string name="onboarding_term_of_service_line_two_link_text">ការជូនដំណឹង​អំពី​ឯកជនភាព</string>
   <!-- Used as text for the link in onboarding_term_of_service_line_three. -->
   <string name="onboarding_term_of_service_line_three_link_text">គ្រប់គ្រង</string>
+  <!-- Terms of use (ToU) first subheader. -->
+  <string name="onboarding_redesign_tou_subheader_one" tools:ignore="UnusedResources">បើកវេបសាយលឿនដូចផ្លេកបន្ទារ</string>
   <!-- Terms of use (ToU) second subheader. -->
   <string name="onboarding_redesign_tou_subheader_two" tools:ignore="UnusedResources">ការការពារការតាមដានដោយស្វ័យប្រវត្តិ</string>
   <!--
@@ -480,6 +482,8 @@
   <string name="nova_onboarding_continue_button">បន្ត</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">មិន​មែន​ឥឡូវ</string>
+  <!-- "Skip" onboarding button. -->
+  <string name="nova_onboarding_skip_button" tools:ignore="UnusedResources">រំលង</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">ត្រៀមខ្លួនរុករកដោយសេរី</string>
   <!--
@@ -622,6 +626,8 @@
   <string name="preferences_override_sync_tokenserver">សេវូបករណ៍សមកាលកម្មផ្ទាល់ខ្លួន</string>
   <!-- Preference category for account information -->
   <string name="preferences_category_account">គណនី</string>
+  <!-- Preference category for sync controls. Sync can be translated, it's just short for ”Synchronization” in English. -->
+  <string name="preferences_category_sync_controls">​សមកាលកម្ម</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">ទីតាំងរបារអាសយដ្ឋាន</string>
   <!-- Preference for changing toolbar layout -->
@@ -638,6 +644,8 @@
   <string name="preferences_toolbar_shortcut">ផ្លូវកាត់របារឧបករណ៍</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_toolbar_select_shortcut">ជ្រើសរើសផ្លូវកាត់</string>
+  <!-- Title of a menu option allowing to change the shortcut button shown in the toolbar -->
+  <string name="toolbar_shortcut_menu_edit_option">កែសម្រួលផ្លូវកាត់</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">កាយវិការ</string>
   <!-- Preference for settings related to visual options -->
@@ -646,6 +654,8 @@
   <string name="preferences_sign_in_description">ធ្វើសមកាលកម្មផ្ទាំង ចំណាំ ពាក្យសម្ងាត់ និងច្រើនទៀត។</string>
   <!-- Preference shown instead of account display name while account profile information isn't available yet. -->
   <string name="preferences_account_default_name_2" tools:ignore="BrandUsage">គណនី Mozilla</string>
+  <!-- Preference text for account title when there was an error syncing FxA -->
+  <string name="preferences_account_sync_error">តភ្ជាប់ឡើងវិញ ដើម្បីបន្តការសមកាលកម្ម</string>
   <!-- Preference for language -->
   <string name="preferences_language">ភាសា</string>
   <!-- Preference for translations -->
@@ -671,9 +681,11 @@
   <!-- Preference title for switch preference to suggest bookmarks when searching -->
   <string name="preferences_search_bookmarks">ស្វែងរកចំណាំ</string>
   <!-- Preference title for switch preference to suggest synced tabs when searching -->
-  <string name="preferences_search_synced_tabs">សស្វែងរកផ្ទាំងដែលបានសមកាលកម្ម</string>
+  <string name="preferences_search_synced_tabs">ស្វែងរកផ្ទាំងដែលបានសមកាលកម្ម</string>
   <!-- Preference for account settings -->
   <string name="preferences_account_settings">ការកំណត់គណនី</string>
+  <!-- Preference for account and sync settings -->
+  <string name="preferences_account_and_sync_settings">គណនី និង​សមកាលកម្ម</string>
   <!-- Preference for enabling url autocomplete -->
   <string name="preferences_enable_autocomplete_urls">ស្វ័យបំពេញ URLs</string>
   <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
@@ -690,6 +702,8 @@
   <string name="preferences_show_nonsponsored_suggestions">ការណែនាំពី %1$s</string>
   <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
   <string name="preferences_show_nonsponsored_suggestions_summary">ទទួលបានការណែនាំពីគេហទំព័រជាប់ទាក់ទងនឹងការស្វែងរករបស់អ្នក</string>
+  <!-- Preference title for switch preference to show search optimization cards -->
+  <string name="preferences_show_search_optimization_cards" tools:ignore="BrandUsage">ទទួលបានការណែនាំពី Mozilla ពេលអ្នកវាយបញ្ចូល</string>
   <!-- Preference for link sharing -->
   <string name="preferences_link_sharing">ការចែករំលែកបញ្ជាប់</string>
   <!-- Title for the link sharing toggle. %1$s is replaced by the brand name (e.g. Firefox). -->
@@ -715,8 +729,11 @@
     app has lost the permission to access a previously selected custom folder.
   -->
   <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">អ្នកមិនមានសិទ្ធិប្រើថតនេះទេ។ សូមសាកល្បងជ្រើសយកថតផ្សេង។</string>
+  <string name="preferences_downloads_delete_from_device">លុបចេញពីឧបករណ៍</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">ភ្ជាប់កំណត់ត្រា Gecko</string>
+  <!-- Message to indicate users that we are quitting the application to apply the changes -->
+  <string name="quit_application">កំពុង​បិទ​កម្មវិធី​ដើម្បី​អនុវត្ត​ការ​ផ្លាស់ប្ដូរ…</string>
   <!-- Preference for extensions -->
   <string name="preferences_extensions">ផ្នែក​បន្ថែម</string>
   <!-- Preference for installing a local extension -->
@@ -727,6 +744,10 @@
   <string name="notifications_allowed_summary">បាន​អនុញ្ញាត</string>
   <!-- Summary for notification preference indicating notifications are not allowed -->
   <string name="notifications_not_allowed_summary">មិនអនុញ្ញាត</string>
+  <!-- Summary for local network access preference indicating access is allowed -->
+  <string name="local_network_access_allowed_summary">បាន​អនុញ្ញាត</string>
+  <!-- Summary for local network access preference indicating access is not allowed -->
+  <string name="local_network_access_not_allowed_summary">មិនបានអនុញ្ញាត</string>
   <!--
     Add-on Permissions
 
@@ -741,6 +762,12 @@
   <string name="customize_addon_collection_ok">យល់ព្រម</string>
   <!-- Button caption to abort the add-on collection configuration -->
   <string name="customize_addon_collection_cancel">បោះបង់</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">របាយការណ៍​ឯកជនភាព</string>
   <!-- Title for the customize home screen section with bookmarks. -->
   <string name="customize_toggle_bookmarks">ចំណាំ</string>
   <!--
