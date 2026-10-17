@@ -354,6 +354,18 @@
     %1$s will be replaced by the app short name(Focus)
   -->
   <string name="onboarding_second_screen_title">%1$s অন্যান্য ব্রাউজারের মতো নয়</string>
+  <!-- New Onboarding flow second screen subtitle the one that appears under title -->
+  <string name="onboarding_second_screen_subtitle_one">অতিরিক্ত গোপনীয়তার জন্য যখন আপনি অ্যাপটি বন্ধ করেন, তখন আমরা আপনার ইতিহাস মুছে ফেলি।</string>
+  <!--
+    New Onboarding flow second screen subtitle two the one that appears under subtitle one
+
+    %1$s will be replaced by the app short name(Focus)
+  -->
+  <string name="onboarding_second_screen_subtitle_two">আপনার প্রতিটি লিঙ্ক খোলার সময় আপনার ডেটা সুরক্ষিত রাখতে %1$s-কে ডিফল্ট করুন।</string>
+  <!-- New Onboarding flow second screen make Focus default browser button label -->
+  <string name="onboarding_second_screen_default_browser_button_text">ডিফল্ট ব্রাউজার হিসাবে নির্ধারণ করুন</string>
+  <!-- New Onboarding flow second screen skip onboarding button label -->
+  <string name="onboarding_second_screen_skip_button_text">এড়িয়ে যান</string>
   <!-- First run tour (Default browser): Title -->
   <string name="firstrun_defaultbrowser_title">আপনার গোপনীয়তা কঠোর করুন</string>
   <!-- First run tour (Search): Title -->
@@ -366,6 +378,11 @@
   <string name="dialog_addtohomescreen_action_add">যোগ</string>
   <!-- Label of the action that will close the dialog and not add anything to the home screen (shown in the confirmation dialog). -->
   <string name="dialog_addtohomescreen_action_cancel">বাতিল</string>
+  <!--
+    When enhanced tracking protection is disabled for the current session then we will show this warning in the "Add to home screen" dialog to
+    let the user know that the shortcut will always be opened with enhanced tracking protection disabled.
+  -->
+  <string name="dialog_addtohomescreen_tracking_protection2">এনহ্যান্সড ট্র্যাকিং প্রোটেকশন নিষ্ক্রিয় থাকা অবস্থায় শর্টকাট চালু হবে</string>
   <!--
     The user visible name of the "notification channel" (Android 8+ feature) for the ongoing notification shown while a browsing session is active.
     The recommended maximum length is 40 characters; the value may be truncated if it is too long.
@@ -382,20 +399,49 @@
     * To see how this string will look like in Android's UI, see: https://github.com/mozilla-mobile/focus-android/issues/863#issuecomment-324105723
   -->
   <string name="notification_browsing_session_channel_description">নোাটফিকেশন ট্যাপ করে আপনার %1$s সেশন মুছে ফেলা যাবে। আপনাকে অ্যাপ্লিকেশন খুলতে বা ব্রাউজারে কি চলছে তা দেখার প্রয়োজন হবে না।</string>
+  <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+  <string name="tabs_tray_action_erase_other">অন্যান্য ট্যাবগুলো বন্ধ করুন</string>
+  <!-- Label for the option in the Focus "tabs tray" to add a new tab. -->
+  <string name="tabs_tray_action_add_new_tab">নতুন ট্যাব যোগ করুন</string>
   <!--
     If the user decides to open the current page in another browser and if Firefox is not installed then we show this
     item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play).
   -->
   <string name="download_firefox" tools:ignore="BrandUsage">Firefox ডাউনলোড করুন</string>
+  <!--
+    Text shown in Security Information Popup
+
+    %1$s will be replaced with the organization for which the certificate
+    used by the site was issued. For example, the certificate in use by
+    the site https://eidas.ec.europa.eu/ was issued to "The European
+    Commission".
+  -->
+  <string name="qualified_identity">%1$s-কে ইস্যুকৃত সার্টিফিকেট</string>
+  <!--
+    The European Union eIDAS Regulation specifies a type of certificate
+    called a "qualified website authentication certificate" (QWAC) and
+    requires that browsers identify and indicate such certificates. This
+    text was paraphrased from ETSI TS 119 411-5 V2.1.1 section 6.3 and
+    indicates that the website uses a QWAC.
+  -->
+  <string name="qualified_text">রেগুলেশন (ইইউ) ২০২৪/১১৮৩ অনুযায়ী যোগ্য।</string>
   <string name="preference_autocomplete_duplicate_url_error">URL ইতোমধ্যেই আছে</string>
   <!-- Label for the Find in page button -->
   <string name="find_in_page">পাতায় অনুসন্ধান</string>
+  <!-- Checkbox menu item text to request desktop site -->
+  <string name="preference_performance_request_desktop_site2">ডেস্কটপ সাইট</string>
   <!-- Displayed after a user long presses on the URL in a custom tab to copy the URL -->
-  <string name="custom_tab_copy_url_action">URL কপি হয়েছে</string>
+  <string name="custom_tab_copy_url_action">ইউআরএল কপি হয়েছে</string>
   <!-- Description of what a user may find in the Advanced Setting category, used for debugging -->
   <string name="preference_advanced_summary">ডেভেলপার টুল</string>
+  <!-- Preference for open links in third party apps -->
+  <string name="preferences_open_links_in_apps">অ্যাপসে লিংকগুলি খুলুন</string>
   <!-- Title of Advanced Setting category -->
   <string name="preference_category_advanced">বিস্তৃত</string>
+  <!-- Preference for site permissions -->
+  <string name="preference_site_permissions">সাইটের অনুমতিসমূহ</string>
+  <!-- Preference for autoplay -->
+  <string name="preference_autoplay">অটোপ্লে</string>
   <!-- Preference to enable remote debugging of the app via USB or Wi-Fi -->
   <string name="preference_remote_debugging">ইউএসবি/ওয়াইফাই এর মাধ্যমে রিমোট ডিবাগিং</string>
   <!-- Description for the fingerprint authentication image. Used for accessibility purposes. -->
