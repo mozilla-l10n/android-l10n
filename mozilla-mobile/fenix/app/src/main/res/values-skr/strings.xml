@@ -898,6 +898,10 @@
   <string name="link_sharing_toggle_title">%1$s ڈاؤن لوڈ لنک WhatsApp شیئر تے شامل کرو</string>
   <!-- Body for the link sharing toggle.  %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="link_sharing_toggle_body">اپݨے دوستاں کوں دعوت ݙیو جو %1$s نال تیز، محفوظ براؤزنگ آزماوݨ، جݙاں وی تساں WhatsApp تے لنک شیئر کریندے وے۔</string>
+  <!-- Snackbar message shown when user shares a link -->
+  <string name="link_shared_snackbar_message">لنک شیئر تھی ڳیا</string>
+  <!-- Snackbar action label shown when user shares a link -->
+  <string name="link_shared_snackbar_action">ترتیباں منظم کرو</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">لنک ایپاں وچ کھولو</string>
   <!-- Preference for open links in third party apps always open in apps option -->
@@ -906,6 +910,28 @@
   <string name="preferences_open_links_in_apps_ask">کھولݨ کنوں پہلے پچھو</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">کݙاہیں نہ</string>
+  <!-- Preference category for file storage. -->
+  <string name="preferences_category_file_storage">فائل سٹوریج</string>
+  <!-- Preference title for downloads default location. -->
+  <string name="preferences_downloads_default_location_title">ڈیفالٹ ڈاؤن لوڈ لوکیشن</string>
+  <!--
+    Message shown as the summary of the download location preference when the
+    app has lost the permission to access a previously selected custom folder.
+  -->
+  <string name="preference_downloads_folder_permission_lost" tools:ignore="UnusedResources">تہاݙے کول ایں فولڈر کوں استعمال کرݨ دی اجازت کائناں۔ ٻیا فولڈر چݨݨ دی کوشش کرو۔</string>
+  <!-- Preference title for choosing an app to handle downloads -->
+  <string name="preferences_choose_app_for_downloads">ٻئی ایپ نال ڈاؤن لوڈ منظم کرو</string>
+  <!-- Message shown when no app is available to let the user pick a download folder. -->
+  <string name="preferences_downloads_no_folder_picker_available">ایں ڈیوائس تے فولڈر پکر نئیں کھل سڳیا۔</string>
+  <!-- Preference category for deleting or removing downloads -->
+  <string name="preferences_category_delete_or_remove_downloads">ڈاؤن لوڈ مٹاؤ یا ہٹاؤ</string>
+  <string name="preferences_downloads_delete_from_device">ڈیوائس توں مٹاؤ</string>
+  <string name="preferences_downloads_delete_from_device_description">فائل تہاݙے ڈیوائس توں مٹا ݙتی ویندی اے تے ڈاؤن لوڈ ہسٹری توں ہٹا ݙتی ویندی اے۔</string>
+  <string name="preferences_downloads_remove_from_download_history">ڈاؤن لوڈ ہسٹری توں ہٹاؤ</string>
+  <string name="preferences_downloads_remove_from_download_history_description">فائل تہاݙی ڈاؤن لوڈ ہسٹری توں ہٹا ݙتی ڳئی اے، پر اوہ تہاݙے ڈیوائس تے ہالی وی محفوظ اے۔</string>
+  <string name="preferences_downloads_ask_when_to_delete_files">جݙاں میں فائلاں مٹاواں تاں پچھو۔</string>
+  <!-- Preference for downloads -->
+  <string name="preferences_downloads_2">ڈاؤن لوڈ ترتیباں</string>
   <!-- Preference for enabling gecko engine logs -->
   <string name="preferences_enable_gecko_logs">Gecko لاگ فعال کرو</string>
   <!-- Message to indicate users that we are quitting the application to apply the changes -->
@@ -920,6 +946,12 @@
   <string name="notifications_allowed_summary">اجازت ݙتے ہوئے</string>
   <!-- Summary for notification preference indicating notifications are not allowed -->
   <string name="notifications_not_allowed_summary">اجازت کائنی</string>
+  <!-- Preference for local network access / nearby devices in Android 17 -->
+  <string name="preferences_local_network_access">لوکل نیٹ ورک رسائی / نیرے ڈیوائسز</string>
+  <!-- Summary for local network access preference indicating access is allowed -->
+  <string name="local_network_access_allowed_summary">اجازت ݙتے ہووے</string>
+  <!-- Summary for local network access preference indicating access is not allowed -->
+  <string name="local_network_access_not_allowed_summary">اجازت کائنی</string>
   <!--
     Add-on Permissions
 
@@ -930,6 +962,18 @@
   <string name="addons_permissions_allow_for_all_sites_subtitle">ڄیکر تُہاکوں اِیں ایکسٹنشن اُتّے بھرواسہ ہِے، تاں تُساں اِیکوں ہر ویب سائٹ اُتّے اجازت ݙے سڳدے ہِیوے۔</string>
   <!-- The text shown when an extension does not require permissions -->
   <string name="addons_does_not_require_permissions">ایں توسیع کوں کہیں اجازت دی لوڑ کائنی۔</string>
+  <!-- The description of data collection permissions listed in the addon's permissions screen.  %1$s is a formatted list of permissions. -->
+  <string name="addons_permissions_required_data_collection_description_2">ڈویلپر آہدے اے جو ایں ایکسٹینشن ایہہ ڈیٹا جمع کریندے: %1$s</string>
+  <!-- The description of the "none" data collection permission, when the extension doesn't collect anything according to the developer. -->
+  <string name="addons_permissions_none_required_data_collection_description">ڈویلپر آہدے اے جو ایں ایکسٹینشن کوں ڈیٹا جمع کرݨ دی لوڑ کینی۔</string>
+  <!-- The title of the required permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_permissions">لازمی اجازتاں:</string>
+  <!-- The title of the optional permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_permissions">اختیاری اجازتاں:</string>
+  <!-- The title of the required data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_required_data_collection">لازمی ݙتیا جمع کرݨ:</string>
+  <!-- The title of the optional data collection permissions section from addon's permissions screen. -->
+  <string name="addons_permissions_heading_optional_data_collection">اختیاری ݙتیا جمع کرݨ:</string>
   <!--
     Add-on Preferences
 
@@ -946,6 +990,14 @@
   <string name="customize_addon_collection_user_hint">مجموعہ مالک (ورتݨ آئی ڈی)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">ایکسٹنشن مجموعے وِچ ترمیم کِیتی ڳئی۔ بَدلیاں دا اطلاق کرݨ کِیتے عرضی چھوڑݨ…</string>
+  <!--
+    Customize Home
+
+    Title for the customize home screen section with privacy report.
+  -->
+  <string name="customize_toggle_privacy_report">رازداری رپورٹ</string>
+  <!-- Title for a customize home screen section. Continue is a section that displays the most recent browser tab, so users can continue browsing where they left off. -->
+  <string name="customize_toggle_continue">جاری</string>
   <!-- Title for the customize home screen section with bookmarks. -->
   <string name="customize_toggle_bookmarks">نشانیاں</string>
   <!--
@@ -953,10 +1005,14 @@
     a section where users see a list of tabs that they have visited in the past few days
   -->
   <string name="customize_toggle_recently_visited">حالیہ ݙٹھے</string>
+  <!-- Title for the customize home screen section with Pocket. -->
+  <string name="customize_toggle_pocket_3">کہاݨیاں</string>
   <!-- Title for the customize home screen section with sponsored Pocket stories. -->
   <string name="customize_toggle_pocket_sponsored">سپانسر تھیاں کہاݨیاں</string>
   <!-- Title for the opening wallpaper settings screen -->
   <string name="customize_wallpapers">وال پیپرز</string>
+  <!-- Label for the menu item that opens the customize homepage settings screen. -->
+  <string name="browser_menu_customize_homepage">مکھ پنے کوں من پسند بݨاؤ</string>
   <!-- Title for the customize home screen section with sponsored shortcuts. -->
   <string name="customize_toggle_contile">سپانسر تھئے شارٹ کٹ</string>
   <!--
@@ -987,6 +1043,38 @@
   <string name="wallpapers_onboarding_dialog_body_text">ہک وال پیپر چُݨو جہڑا تہاݙے نال الاوے۔</string>
   <!-- Wallpaper onboarding dialog learn more button text. The button navigates to the wallpaper settings screen. -->
   <string name="wallpapers_onboarding_dialog_explore_more_button_text">ٻئے وال پیپر پھلورو</string>
+  <!--
+    Icon picker
+
+    Title for the "Default" alternative app icon variant in the icon picker screen.
+  -->
+  <string name="alternative_app_icon_option_default">ڈیفالٹ</string>
+  <!-- Title for the "Light" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_light">ہلکا</string>
+  <!-- Title for the "Dark" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_dark">گوڑھا</string>
+  <!-- Title for the "Red" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_red">لال</string>
+  <!-- Title for the "Green" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_green">ساوا</string>
+  <!-- Title for the "Blue" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_blue">نیلا</string>
+  <!-- Title for the "Purple" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_purple">جامنی</string>
+  <!-- Title for the "Purple Dark" alternative app icon variant in the icon picker screen. -->
+  <string name="alternative_app_icon_option_purple_dark">گوڑھا جامݨی</string>
+  <!-- Title for the "Sunrise" gradient alternative app icon variant in the icon picker screen. The app icon features a soft yellow-to-blue gradient background, resembling the colors of early morning light. -->
+  <string name="alternative_app_icon_option_gradient_sunrise">سجھ چڑھݨ</string>
+  <!-- Title for the "Golden Hour" gradient alternative app icon variant in the icon picker screen. The app icon features a warm golden-to-pink gradient background, resembling the colors of the sunlight shortly before sunset. -->
+  <string name="alternative_app_icon_option_gradient_golden_hour">سنہری گھنٹہ</string>
+  <!-- Title for the "Sunset" gradient alternative app icon variant in the icon picker screen. The app icon has a rich red-to-purple gradient background, resembling the tones of a sunset sky. -->
+  <string name="alternative_app_icon_option_gradient_sunset">سجھ ڈبݨ</string>
+  <!-- Title for the "Blue Hour" gradient alternative app icon variant in the icon picker screen. The app icon has a cool blue gradient background, resembling the sky color around the time just after sunset or before sunrise. -->
+  <string name="alternative_app_icon_option_gradient_blue_hour">نیلا گھنٹہ</string>
+  <!-- Title for the "Twilight" gradient alternative app icon variant in the icon picker screen. The app icon has a purple-toned gradient background, resembling the sky color during twilight. -->
+  <string name="alternative_app_icon_option_gradient_twilight">شفق</string>
+  <!-- Title for the "Midnight" gradient alternative app icon variant in the icon picker screen. The app icon features a dark gradient background, resembling the deep tones of the night sky. -->
+  <string name="alternative_app_icon_option_gradient_midnight">ادھی رات</string>
   <!--
     Add-ons general availability nimbus message
 
