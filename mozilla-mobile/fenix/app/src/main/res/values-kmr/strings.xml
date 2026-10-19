@@ -21,18 +21,24 @@
   <string name="content_description_private_browsing">Gera nepen</string>
   <!-- Placeholder text shown in the search bar before a user enters text for the default engine -->
   <string name="search_hint">Lêgerîn an jî navnîşan</string>
+  <!-- Shorter placeholder text shown in the search bar when an additional action (voice search) is rendered alongside the hint. -->
+  <string name="search_hint_short">Lêgerîn</string>
   <!-- Placeholder text shown in the search bar before a user enters text for a general engine -->
   <string name="search_hint_general_engine">Di webê de bigere</string>
   <!-- Placeholder text shown in search bar when using history search -->
   <string name="history_search_hint">Raboriya lêgerînê</string>
   <!-- Placeholder text shown in search bar when using bookmarks search -->
   <string name="bookmark_search_hint">Di bijareyan de bigere</string>
+  <!-- Content description for the toolbar back button while searching bookmarks -->
+  <string name="bookmark_close_search_description">Vegere û lêgerînê bigire</string>
   <!-- Placeholder text shown in search bar when using tabs search -->
   <string name="tab_search_hint">Di hilpekînan de bigere</string>
   <!-- Placeholder text shown in the search bar when using application search engines -->
   <string name="application_search_hint">Peyvên lêgerînê binivîse</string>
   <!-- The header text displayed on the private tabs page when no private tabs are open -->
   <string name="tab_manager_empty_private_tabs_page_header">Gera nepen</string>
+  <!-- The header text displayed on the normal tabs page when no normal tabs are open -->
+  <string name="tab_manager_empty_normal_tabs_page_header">Ji bo destpêkirina lêgerînê hilpekîneke nû biafirnîne</string>
   <!-- Tab tray multi select title in app bar. %1$d is the number of tabs selected -->
   <string name="tab_tray_multi_select_title">%1$d hilpekîn hatin bijartin</string>
   <!-- Tab tray multi select title in app bar when no tabs are selected -->
@@ -120,6 +126,12 @@
   <string name="home_screen_shortcut_open_new_private_tab_2">Hilpekîna veşartî ya nû</string>
   <!-- Shortcut action to open Passwords screen -->
   <string name="home_screen_shortcut_passwords">Şîfre</string>
+  <!--
+    Recent Tabs
+
+    Header text on the homescreen for continuing to browse the most recent browser tab
+  -->
+  <string name="recent_tabs_header_2">Bidomîne</string>
   <!-- Button text for showing all the tabs in the tabs tray -->
   <string name="recent_tabs_show_all">Gişî nîşan bide</string>
   <!-- Text for button in synced tab card that opens synced tabs tray -->
@@ -265,6 +277,8 @@
     Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred.
   -->
   <string name="browser_toolbar_translate">Rûpelê wergerîne</string>
+  <!-- Title for the voice search AI feature toggle -->
+  <string name="ai_controls_voice_search_title">Lêgerîna dengî</string>
   <!--
     Locale Settings Fragment
 
@@ -340,12 +354,24 @@
     %1$s is replaced by an active link, using onboarding_redesign_tou_body_two_link_text as text (“Privacy Notice”).
   -->
   <string name="onboarding_redesign_tou_body_two" tools:ignore="BrandUsage,UnusedResources">Firefox girîngiyê dide nepeniya te. Di %1$s-ên me de bêtir fêr bibe.</string>
+  <!-- Terms of use (ToU) onboarding page continue button label. -->
+  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">Bidomîne</string>
+  <!-- Onboarding label for 'Continue' button. -->
+  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">Bidomîne</string>
   <!-- Set to default browser onboarding redesign title. -->
   <string name="onboarding_redesign_set_default_browser_title" tools:ignore="UnusedResources">Parastina şopandina otomatîk bi awayê standard bistîne</string>
   <!-- Marketing onboarding page title variant. “One last thing” refers to the final step or action in the onboarding process that we’re asking users to take before they can start using the browser. -->
   <string name="onboarding_marketing_title_1" tools:ignore="UnusedResources">Tiştekî dawî</string>
   <!-- Marketing onboarding page button label variant. Button to confirm choice and start browsing. -->
   <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">Piştrast bike û dest bi gerê bike</string>
+  <!-- "Continue" onboarding button. -->
+  <string name="nova_onboarding_continue_button">Bidomîne</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">Gerê bidomîne</string>
+  <!-- "Add search widget" onboarding title. -->
+  <string name="nova_onboarding_add_search_widget_title">Hemû lêgerînan nepentir bike</string>
+  <!-- "Add search widget" onboarding subtitle. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_add_search_widget_subtitle" tools:ignore="BrandUsage">Hemû lêgerînan ji ekrana sereke ya telefona xwe bide destpêkirin û bizane ku parastinên otomatîkî yên Firefoxê li pişta te ne.</string>
   <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
     <!--
       Customize prompt onboarding body.
@@ -375,6 +401,8 @@
   <string name="search_widget_text_long">Di web’ê de bigere</string>
   <!-- Content description (not visible, for screen readers etc.): Voice search -->
   <string name="search_widget_voice">Lêgerîna dengî</string>
+  <!-- Content description (not visible, for screen readers etc.): Button in the search widget that starts a search in a private tab -->
+  <string name="search_widget_private_search">Lêgerîna nepenî</string>
   <!--
     Preferences
 
@@ -530,6 +558,8 @@
   <string name="customize_addon_collection_hint">Navê koleksiyonê</string>
   <!-- Hint displayed on input field for custom collection user ID -->
   <string name="customize_addon_collection_user_hint">Xwediyê koleksiyonê (nasnameya bikarhêner)</string>
+  <!-- Title for a customize home screen section. Continue is a section that displays the most recent browser tab, so users can continue browsing where they left off. -->
+  <string name="customize_toggle_continue">Bidomîne</string>
   <!-- Title for the customize home screen section with bookmarks. -->
   <string name="customize_toggle_bookmarks">Favorî</string>
   <!--
@@ -615,8 +645,12 @@
   <string name="alternative_app_icon_option_momo">Momo</string>
   <!-- Subtitle for the "Momo" themed alternative app icon variant in the icon picker screen. The app icon was created by artist @heyheymomodraws and features a unique hand-drawn style with a friendly fox. -->
   <string name="alternative_app_icon_option_momo_subtitle">Ji hêla @heyheymomodraws ve hatiye afirandin</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart and will remove existing shortcuts because of the OS limitations. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_and_shortcuts_removal_warning_dialog_body">Guhertina îkonê dê hemû malper û kurtebirên ku te li ser ekrana xwe ya sereke tomar kirine jê bibe. \n\nDibe ku %1$s bê girtin. Ji bo ji nû ve vekî, îkona xwe ya nû bikirtîne.</string>
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Betal</string>
+  <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
+  <string name="shortcuts_update_error">Nûvekirina îkona sepanê bi ser neket. Kurtebirên heyî jê bibe û dîsa biceribîne.</string>
   <!--
     Add-ons general availability nimbus message
 
@@ -1283,6 +1317,8 @@
     The app name is in the text, due to limitations with localizing Nimbus experiments
   -->
   <string name="nimbus_notification_default_browser_text" tools:ignore="BrandUsage,UnusedResources">Firefoxê bike geroka xwe ya standard</string>
+  <!-- Description of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app. %1$s is the app name (e.g. Firefox) -->
+  <string name="notification_privacy_report_channel_description">%1$s nîşan dide ka dema tu di webê de digeriyayî çend şopîner asteng kirine.</string>
   <!--
     Survey
 
@@ -1434,6 +1470,15 @@
   <string name="preference_enhanced_tracking_protection_explanation_2">%s te li hemberî piraniya şopgerên naskirî yên tevgerên te yên li ser înternetê dişopînin, diparêze.</string>
   <!-- Text displayed that links to website about enhanced tracking protection -->
   <string name="preference_enhanced_tracking_protection_explanation_learn_more">Zêdetir bizane</string>
+  <plurals name="trackers_blocked_count_2">
+    <!--
+      Trackers blocked card on homepage
+
+      Text shown on the trackers blocked card. %d is the number of trackers blocked.
+    -->
+    <item quantity="one">Şopînerek hate astengkirin</item>
+    <item quantity="other">%d şopîner hatin astengkirin</item>
+  </plurals>
   <!-- Preference for enhanced tracking protection for the standard protection settings -->
   <string name="preference_enhanced_tracking_protection_standard_default_1">Standard (heyî)</string>
   <!-- Preference description for enhanced tracking protection for the standard protection settings -->
@@ -1829,6 +1874,17 @@
   <string name="synced_tabs_expand_group">Koma hilpekînan ya senkronîzekirî berfireh bike</string>
   <!-- Content description for collapsing a group of synced tabs. -->
   <string name="synced_tabs_collapse_group">Koma hilpekînan ya senkronîzekirî berteng bike</string>
+  <!--
+    Top Sites
+
+    Title text displayed for the shortcuts home screen section.
+  -->
+  <string name="homepage_shortcuts_title">Kurtebir</string>
+  <!--
+    Context description text for the "Show all" button in the shortcuts home screen section
+    which navigates the user to a screen displaying all the shortcuts.
+  -->
+  <string name="homepage_shortcuts_show_all_content_description">Hemû kurtebiran nîşan bide</string>
   <!-- Title text displayed in the dialog when shortcuts limit is reached. -->
   <string name="shortcut_max_limit_title">Tu gihîştî sînorê kurteriyan</string>
   <!-- Content description text displayed in the dialog when shortcut limit is reached. -->
@@ -2141,6 +2197,37 @@
   <string name="download_language_file_dialog_positive_button_text_all_languages">Jêbar bike û wergerîne</string>
   <!-- Button text on the data saving mode warning dialog used by the translations feature to allow users to cancel the action and not perform a download of the language file. -->
   <string name="download_language_file_dialog_negative_button_text">Betal bike</string>
+  <plurals name="protection_panel_banner_protected_blocked_trackers_description">
+    <!--
+      Description text for the protection panel banner when privacy dashboard is enabled.
+      %1$d is the number of trackers blocked.
+    -->
+    <item quantity="one">Şopînerek li ser vê malperê hate astengkirin.</item>
+    <item quantity="other">%1$d şopîner li ser vê malperê hatine astengkirin.</item>
+  </plurals>
+  <!--
+    Text for displaying the total number of trackers blocked in the protection panel.
+    %d is a placeholder for the number of trackers blocked.
+  -->
+  <string name="protection_panel_num_trackers_blocked">Şopînerên hatine astengkirin: %d</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">Şopînerên nehatine astengkirin</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">Şopînerek li ser vê malperê hate astengkirin</item>
+    <item quantity="other">%1$d şopîner li ser vê malperê hatine astengkirin</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">Şopînerek vê hefteyê hate astengkirin</item>
+    <item quantity="other">%1$d şopîner vê hefteyê hatin astengkirin</item>
+  </plurals>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
@@ -2168,6 +2255,8 @@
   <string name="debug_drawer_tab_tools_tab_count_active">Çalak</string>
   <!-- The inactive tab count category in the tab count section in Tab Tools. -->
   <string name="debug_drawer_tab_tools_tab_count_inactive">Neçalak</string>
+  <!-- The continue button label -->
+  <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Bidomîne</string>
   <!--
     Beta Label Component !
 
