@@ -76,6 +76,11 @@
   -->
   <string name="felt_privacy_desc_card_title">Li ser vê cîhazê tu şop nehêle</string>
   <!--
+    Description of private browsing mode displayed to users on the homepage when they enable private mode.
+    %1$s is the name of the app (for example "Firefox").
+  -->
+  <string name="felt_privacy_info_card_subtitle_3">Dema ku tu hemû hilpekînên xwe yên nepen digirî, %1$s çerez, raborî û daneyên malpera te jê dibe.</string>
+  <!--
     Clickable portion of the explanation for private browsing that links the user to our
     about privacy page.
     This string is used in felt_privacy_info_card_subtitle as the text for the link.
@@ -128,6 +133,8 @@
   <string name="home_screen_shortcut_open_new_private_tab_2">Hilpekîna veşartî ya nû</string>
   <!-- Shortcut action to open Passwords screen -->
   <string name="home_screen_shortcut_passwords">Şîfre</string>
+  <!-- Shortcut action to open uninstall survey -->
+  <string name="home_screen_shortcut_uninstall_survey">Jê rakî, lê çima?</string>
   <!--
     Recent Tabs
 
@@ -190,6 +197,8 @@
   <string name="browser_menu_extensions_disabled_description">Demkî hatiye neçalakkirin</string>
   <!-- The description of the browser menu appears when the user hasn't installed any extensions. -->
   <string name="browser_menu_no_extensions_installed_description">Tu pêvek nehatine çalakkirin</string>
+  <!-- The description of the browser menu appears when the user hasn't installed any extensions and there are recommended extensions. -->
+  <string name="browser_menu_try_a_recommended_extension_description">Pêvekeke pêşniyarkirî biceribîne</string>
   <!-- Browser menu button that opens account settings -->
   <string name="browser_menu_account_settings">Agahiyên hesêb</string>
   <!-- Browser menu button that opens the settings menu -->
@@ -214,6 +223,8 @@
   <string name="browser_menu_save_to_collection_2">Li koleksiyonê tomar bike</string>
   <!-- Browser menu button that open a share menu to share the current site -->
   <string name="browser_menu_share">Parve bike</string>
+  <!-- Browser menu button that goes to the homepage screen -->
+  <string name="browser_menu_homepage">Serrûpel</string>
   <!--
     Browser menu button shown in custom tabs that opens the current tab in Fenix
     %1$s is the name of the app (for example "Firefox").
@@ -252,14 +263,34 @@
   <string name="browser_main_menu_content_description_navigation_header">Navîgasyon</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
   <string name="browser_custom_tab_menu_handlebar_content_description">Menuya hilpekîna taybet bigire</string>
+  <!-- URL bar indicator shown on a cached version of the website, when the tab is reloading, but the content is not live yet -->
+  <string name="browser_toolbar_cached_page_indicator">Di pêşbîrê de qeydkirî</string>
+  <!-- Message shown when a cached website has finished reloading and the tab is now showing the live version of the page -->
+  <string name="browser_toolbar_live_page_toast">Rûpela zindî</string>
   <!-- Browser menu label that bookmarks the currently visited page -->
   <string name="browser_menu_bookmark_this_page_2">Têxe nav favoriyan</string>
   <!-- Browser menu label that navigates to the edit bookmark screen for the current bookmarked page -->
   <string name="browser_menu_edit_bookmark">Favoriyan serast bike</string>
+  <!-- Browser menu label that the saves the currently visited page as a PDF -->
+  <string name="browser_menu_save_as_pdf_2">Wekî PDF qeyd bike</string>
+  <!-- Browser menu label for moving the current private tab to a non-private tab -->
+  <string name="browser_menu_move_to_non_private_tab">Bibe nav hilpekîna nenepen</string>
+  <!-- Browser menu label for navigating to the translation feature, which provides language translation options the current visited page -->
+  <string name="browser_menu_translate_page_2">Rûpelê wergerîne</string>
   <!-- Browser menu label for navigating to the summarization feature, which provides site summarization for the current visited page -->
   <string name="browser_menu_summarize_page">Kurteya rûpelê çêke</string>
   <!-- Browser menu badge text for summarization feature -->
   <string name="browser_menu_summarize_page_badge">Nû</string>
+  <!-- Browser menu badge text for new, highlighted feature -->
+  <string name="browser_menu_page_badge_text">Nû</string>
+  <!-- Browser menu label for navigating to the Web Compat Reporter feature, which provides users the ability to send bug reports for broken sites. -->
+  <string name="browser_menu_webcompat_reporter_2">Malpera şikestî rapor bike</string>
+  <!-- Browser menu label for adding a tab to a tab group -->
+  <string name="browser_menu_add_to_tab_group">Li komê zêde bike</string>
+  <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
+  <string name="browser_menu_translated">Wergerandî</string>
+  <!-- Browser menu label for the print feature -->
+  <string name="browser_menu_print_2">Çap bike</string>
   <!--
     Browser menu label for the Delete browsing data on quit feature.
     %1$s is the name of the app (for example "Firefox").
@@ -272,6 +303,8 @@
   <string name="browser_menu_default_banner_title">%1$sê bike geroka xwe ya standard</string>
   <!-- Label text within the set as default banner -->
   <string name="browser_menu_default_banner_subtitle_2">Bilez, nepen, û ji bo te hatiye çêkirin.</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button that dismisses the set as default banner in the menu -->
+  <string name="browser_menu_default_banner_dismiss_promotion">Pêşniyarkirinê bigire</string>
   <!-- Content description (not visible, for screen readers etc.) for recommended extensions in main menu -->
   <string name="browser_menu_recommended_extensions_content_description">Agahiyên zêdetir</string>
   <!--
@@ -289,6 +322,18 @@
   <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
   <string name="browser_toolbar_summarize_cfr_description">Ji bo di çend çirkeyan de kurteya vê rûpelê çêkî, cîhaza xwe bihejîne. ⚡️</string>
   <!--
+    Translation Toolbar
+
+    Translation toolbar label that is displayed when the current page has been translated by the translation feature.
+    %1$s is the name of the language that is displayed in the original page. (For example: English)
+    %2$s is the name of the language which the page was translated to. (For example: French)
+  -->
+  <string name="translation_toolbar_translated_from_and_to" tools:ignore="UnusedResources">Ji %1$s bo %2$s hat wergerandin</string>
+  <!-- Content description for the translate toolbar action that opens the translations dialog. -->
+  <string name="translation_toolbar_expand_action">Rûpela wergerandinê veke</string>
+  <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
+  <string name="translation_toolbar_close_action">Peyamê bigire</string>
+  <!--
     Page summaries
 
     Toolbar title for the Page summaries settings fragment
@@ -300,8 +345,14 @@
     Title for the AI controls settings screen
   -->
   <string name="preferences_ai_controls">Kontrolên ZÇ</string>
+  <!-- Headline text for the AI controls banner. %s is the name of the app (for example "Firefox"). -->
+  <string name="ai_controls_banner_headline">Di %s`ê de her tim vebijarkeke te heye</string>
+  <!-- Supporting text for the AI controls banner. %s is a learn more link using ai_controls_learn_more as text. -->
+  <string name="ai_controls_banner_supporting_text_2">Tu dikarî hilbijêrî ka tu yê taybetiyên bi ZÇ dixebitin bi kar bînî yan ne. %s</string>
   <!-- Link text for learning more about AI controls -->
   <string name="ai_controls_learn_more">Zêdetir bizane</string>
+  <!-- Title for the block AI enhancements toggle -->
+  <string name="ai_controls_block_ai_title">Pêşvebirinên ZÇ asteng bike</string>
   <!-- Link text to navigate to more translations settings -->
   <string name="ai_controls_more_translations_settings">Eyarên wergerandinê yên din</string>
   <!-- Link text to navigate to more page summary settings -->
