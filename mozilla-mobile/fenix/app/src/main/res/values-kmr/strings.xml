@@ -403,6 +403,12 @@
   <string name="search_widget_voice">Lêgerîna dengî</string>
   <!-- Content description (not visible, for screen readers etc.): Button in the search widget that starts a search in a private tab -->
   <string name="search_widget_private_search">Lêgerîna nepenî</string>
+  <!-- Widget description in the widget picker screen for the search bar widget that includes buttons for private search and for voice search -->
+  <string name="search_bar_widget_description">Darikê lêgerînê yê bi lêgerîna nepenî û dengî</string>
+  <!-- Widget description in the widget picker screen for the search bar widget that includes buttons for image search, private search and voice search -->
+  <string name="search_bar_with_lens_widget_description">Darikê lêgerînê bi wêne, nepen û dengî</string>
+  <!-- Widget description in the widget picker screen for the compact search bar widget -->
+  <string name="compact_search_bar_widget_description">Darikê lêgerînê yê kompakt</string>
   <!--
     Preferences
 
@@ -413,8 +419,12 @@
   <string name="preferences_category_general">Giştî</string>
   <!-- Preference category for all links about Fenix -->
   <string name="preferences_category_about">Derbar</string>
+  <!-- Preference category for settings related to changing the default search engine -->
+  <string name="preferences_category_select_default_search_engine_2">Motora lêgerînê ya satndard ji bo gera normal</string>
   <!-- Preference category for settings related to changing the private browsing search engine -->
   <string name="preferences_category_select_private_search_engine">Motora lêgerînê ya gera nepen</string>
+  <!-- Option to set the private browsing mode to use the normal default search engine -->
+  <string name="search_engine_use_default">Heman motora lêgerînê ya wekî gera normal bi kar bîne</string>
   <!-- Preference for settings related to managing search shortcuts for the quick search menu -->
   <string name="preferences_manage_search_shortcuts_2">Motorên lêgerînê yên alternatîv birêve bibin</string>
   <!-- Summary for preference for settings related to managing search shortcuts for the quick search menu -->
@@ -516,6 +526,8 @@
   <string name="preferences_show_search_suggestions_in_private">Di rûniştinên veşartî de nîşan bide</string>
   <!-- Preference title for switch preference to show trending search suggestions -->
   <string name="preferences_show_trending_search_suggestions">Pêşniyarên rojevî nîşan bide</string>
+  <!-- Preference title for switch preference to show recent search suggestions -->
+  <string name="preferences_show_recent_search_suggestions">Lêgerînên borî bibîne</string>
   <!-- Preference title for switch preference to show a clipboard suggestion when searching -->
   <string name="preferences_show_clipboard_suggestions">Pêşniyarên panoyê nîşan bide</string>
   <!-- Preference title for switch preference to suggest browsing history when searching -->
@@ -530,6 +542,8 @@
   <string name="preferences_enable_autocomplete_urls">Navnîşanan bixweber dagire</string>
   <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
   <string name="preferences_show_sponsored_suggestions">Pêşniyarên ji sponsoran</string>
+  <!-- Summary for preference to show Firefox Suggest search suggestions for web content -->
+  <string name="preferences_show_nonsponsored_suggestions_summary">Ji webê pşniyarên têkildarî lêgerîna xwe bistîne</string>
   <!-- Preference for open links in third party apps -->
   <string name="preferences_open_links_in_apps">Girêdanan di sepanan de veke</string>
   <!-- Preference for open links in third party apps always open in apps option -->
@@ -915,6 +929,8 @@
   <string name="add_tab">Hilpekînê tevlî bike</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_private_tab">Hilpekîna veşartî tevlî bike</string>
+  <!-- Text for the tab search bar placeholder -->
+  <string name="tab_manager_search_bar_placeholder">Li hilpekînên xwe bigere</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Hilpekînên herî dawî hatine girtin</string>
   <!-- Text shown in the menu to view account settings -->
@@ -929,6 +945,8 @@
   <string name="remove_tab_from_collection">Hilpekînê ji koleksiyê rake</string>
   <!-- Text for button to enter multiselect mode in tabs tray -->
   <string name="tabs_tray_select_tabs">Hilpekînan hilbijêre</string>
+  <!-- Additional text for tab manager search page when there are no results. -->
+  <string name="tab_manager_no_search_results_additional_text">Lêgerîneke din bi kar bîne!</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button. Closes the current session when pressed -->
   <string name="close_tab">Hilpekînê bigire</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. %s is the tab title -->
@@ -951,6 +969,8 @@
   <string name="delete_from_history">Ji raboriyê rake</string>
   <!-- Postfix for private WebApp titles. %1$s is the name of the app (for example "Firefox"). -->
   <string name="pwa_site_controls_title_private">%1$s (Moda Veşartî)</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
+  <string name="tab_manager_open_tab_search">Lêgerîna hilpekînan veke</string>
   <!--
     History
 
@@ -987,6 +1007,8 @@
   <string name="download_delete_item">Jê bibe</string>
   <!-- Content description for the toolbar "Navigate to Downloads Settings" button -->
   <string name="download_navigate_settings_description">Here Sazkariyên Jêbarkirinan</string>
+  <!-- Content description for the toolbar back button while searching the downloads -->
+  <string name="download_close_search_description">Vegere û lêgerînê bigire</string>
   <string name="download_clear_search_description">Paqij bike</string>
   <!-- Text for the button to share the download URL -->
   <string name="download_share_url">URL`ê parve bike</string>
@@ -1120,10 +1142,14 @@
   <string name="bookmark_delete_folder_content_description">Peldankê hilbijêre</string>
   <!-- Content description for bookmark search floating action button -->
   <string name="bookmark_search_button_content_description">Li favoriyan bigere</string>
+  <!-- Content description for select folder screen search action button ("search" is a verb) -->
+  <string name="select_bookmark_search_button_content_description">Peldankên lêgerînê</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Hê favorî nîn in</string>
   <!-- Description for the bookmark list empty state when you're in an empty folder. -->
   <string name="bookmark_empty_list_folder_description">Malperan di dema vekirinê de têxe favoriyan da dikaribî paşê xwe bigihînî wan.</string>
+  <!-- Additional text for bookmark search page when there are no results. -->
+  <string name="bookmark_no_search_results_additional_text">Lêgerîneke din bi kar bîne!</string>
   <!--
     Site Permissions
 
@@ -1642,6 +1668,8 @@
   <string name="preferences_passwords_exceptions">Istisna</string>
   <!-- Text on button to remove all saved login exceptions -->
   <string name="preferences_passwords_exceptions_remove_all">Hemû istisnayan jê bibe</string>
+  <!-- Hint for search box in passwords list -->
+  <string name="preferences_passwords_saved_logins_search_2">Li şîfreyan bigere</string>
   <!-- The header for the site that a login is for -->
   <string name="preferences_passwords_saved_logins_site">Malper</string>
   <!-- The header for the username for a login -->
@@ -1662,6 +1690,8 @@
   <string name="saved_login_clear_username">Navê bikarhêner paqij bike</string>
   <!-- Content Description (for screenreaders etc) read for the button to clear the hostname field while creating a login -->
   <string name="saved_login_clear_hostname">Hewangehê paqiij bike</string>
+  <!-- Content description, used by tools like screenreaders, to press on the clear search text button. -->
+  <string name="saved_logins_clear_search_text_button_content_description">Nivîsa lêgerînê jê bibe</string>
   <!-- Content Description (for screenreaders etc) read for the button to open a site in logins -->
   <string name="saved_login_open_site">Malperê di gerokê de veke</string>
   <!-- Content Description (for screenreaders etc) read for the button to reveal a password in logins -->
@@ -1800,10 +1830,20 @@
   <string name="search_add_custom_engine_name_label">Nav</string>
   <!-- Placeholder text shown in the Search Engine Name text field before a user enters text -->
   <string name="search_add_custom_engine_name_hint_2">Navê motora lêgerînê</string>
+  <!-- Label for the TextField in which user enters custom search engine URL -->
+  <string name="search_add_custom_engine_url_label">URLa rêza lêgerînê</string>
+  <!-- Placeholder text shown in the Search String TextField before a user enters text -->
+  <string name="search_add_custom_engine_search_string_hint_2">URLa ji bo lêgerînê bê bikaranîn</string>
   <!-- Description text for the Search String TextField. The %s is part of the string -->
   <string name="search_add_custom_engine_search_string_example" formatted="false">Lêpirsînê bi “%s”ê pev biguherîne. Mînak:\nhttps://www.google.com/search?q=%s</string>
   <!-- Accessibility description for the form in which details about the custom search engine are entered -->
   <string name="search_add_custom_engine_form_description">Hûrgiliyên motora lêgerînê ya taybet</string>
+  <!-- Label for the TextField in which user enters custom search engine suggestion URL -->
+  <string name="search_add_custom_engine_suggest_url_label">APIya pêşniyara lêgerînê (vebijarkî)</string>
+  <!-- Placeholder text shown in the Search Suggestion String TextField before a user enters text -->
+  <string name="search_add_custom_engine_suggest_string_hint">URLa APIya pêşniyara lêgerînê</string>
+  <!-- Description text for the Search Suggestion String TextField. The %s is part of the string -->
+  <string name="search_add_custom_engine_suggest_string_example_2" formatted="false">Lêpirsînê bi “%s” biguherîne. Mînak:\nhttps://suggestqueries.google.com/complete/search?client=firefox&amp;q=%s</string>
   <!-- The text for the "Save" button for saving a custom search engine -->
   <string name="search_custom_engine_save_button">Qeyd bike</string>
   <!-- Text shown when a user leaves the name field empty -->
@@ -1939,6 +1979,8 @@
   <string name="google_search_engine_suggestion_header">Lêgerîna Googleê</string>
   <!-- Title for search suggestions when the default search suggestion engine is anything other than Google. %s is default search engine name. -->
   <string name="other_default_search_engine_suggestion_header">Lêgerîna %sê</string>
+  <!-- Title for recent search suggestions. -->
+  <string name="recent_searches_header">Lêgerînên borî</string>
   <!-- Default browser card text -->
   <string name="default_browser_experiment_card_text" tools:ignore="BrandUsage">Bila lînkên ji malperan, e-posteyan û peyaman xweber di Firefoxê de bên vekirin.</string>
   <!-- Content description radio buttons with a link to more information -->
@@ -2257,6 +2299,8 @@
   <string name="debug_drawer_tab_tools_tab_count_inactive">Neçalak</string>
   <!-- The continue button label -->
   <string name="micro_survey_continue_button_label" tools:ignore="UnusedResources">Bidomîne</string>
+  <!-- Option for likert scale. Note: The word "Firefox" should NOT be translated. -->
+  <string name="likert_scale_option_7" tools:ignore="BrandUsage,UnusedResources">Ez li ser Firefoxê lêgerînê bi kar naynim</string>
   <!--
     Beta Label Component !
 
