@@ -1451,6 +1451,14 @@
     The %1$s will be replaced by the number of opened private tabs
   -->
   <string name="tabs_header_private_tabs_counter_title">Skeda Private të Hapura: %1$s. Prekeni që të ndërroni skeda.</string>
+  <plurals name="tabs_header_tab_group_counter_title">
+    <!--
+      Title for the list of tab groups used by a11y services
+      The %1$d will be replaced by the number of opened tab groups
+    -->
+    <item quantity="one">%1$d grup skedash hapur. Që të këmbeni skeda, prekeni.</item>
+    <item quantity="other">%1$d grupe skedash hapur. Që të këmbeni skeda, prekeni.</item>
+  </plurals>
   <!--
     Title for the list of tabs in the synced tabs used by a11y services
     The %1$s will be replaced by the number of opened synced tabs
@@ -1460,10 +1468,14 @@
   <string name="add_tab">Shtoni skedë</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_private_tab">Shtoni skedë private</string>
+  <!-- Content description (not visible, for screen readers etc.): Create tab group button. Opens the create tab group sheet when pressed -->
+  <string name="create_tab_group_content_description">Krijoni grup skedash</string>
   <!-- Text for the tab search bar placeholder -->
   <string name="tab_manager_search_bar_placeholder">Kërkoni te skedat tuaja</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Skeda të mbyllura së fundi</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">Përzgjidhe krejt</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">Rregullime llogarie</string>
   <!-- Text shown in the menu to view tab settings -->
@@ -1526,6 +1538,12 @@
   <string name="pwa_site_controls_title_private">%1$s (Mënyrë Private)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Hap kërkim skedash</string>
+  <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
+  <string name="tab_group_onboarding_item_title">Krijoni një grup skedash</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in grid view. -->
+  <string name="tab_group_onboarding_grid_item_description">Që të grupohen, tërhiqni një skedë deri te një tjetër.</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
+  <string name="tab_group_onboarding_list_item_description">Që të krijohet një grup, përzgjidhni skeda të shumta.</string>
   <!--
     Tab Group
 
@@ -1877,6 +1895,8 @@
   <string name="webcompat_reporter_reason_account2">S’bëj dot hyrjen, ose regjistrimin</string>
   <!-- Broken site reason text for site asked to turn off ad blocker -->
   <string name="webcompat_reporter_reason_turn_off_adblocker">Sajti kërkoi të aktivizohet bllokuesi i reklamave</string>
+  <!-- Broken site reason text for the site being deceptive -->
+  <string name="webcompat_reporter_reason_site_is_deceptive">Ky sajt është i rrejshëm</string>
   <!-- Broken site reason text for something else -->
   <string name="webcompat_reporter_reason_other">Diçka tjetër</string>
   <!--
@@ -2026,6 +2046,8 @@
   <string name="bookmark_import_bookmarks_button_content_description">Importoje prej kartele</string>
   <!-- Title for the bookmark list empty state -->
   <string name="bookmark_empty_list_title">Ende pa faqerojtës</string>
+  <!-- Title for the bookmark list empty state at the root level. -->
+  <string name="bookmark_empty_list_root_title">Mbajini tok krejt faqerojtësit tuaj të parapëlqyer</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">Faqerojtës në dosje: %s</string>
   <!-- Text for the button to navigate to sync authentication -->
@@ -2876,10 +2898,20 @@
   <string name="ip_protection_menu_try_vpn_cta">Provojeni falas</string>
   <!-- Content description for the chevron button that opens the browser VPN settings screen -->
   <string name="ip_protection_navigate_settings">Hap rregullime VPN-je</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
+  <string name="ip_protection_toolbar_pill_label">VPN on</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
+  <string name="ip_protection_toolbar_pill_description">VPN-ja është aktive.</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN turns off -->
+  <string name="ip_protection_toolbar_pill_label_off">VPN off</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has turned off -->
+  <string name="ip_protection_toolbar_pill_description_off">VPN-ja s’është aktive.</string>
   <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
   <string name="ip_protection_get_started">Fillojani</string>
   <!-- Label for the "connecting" state of the button that starts the browser VPN authentication or authorization flow on the settings screen -->
   <string name="ip_protection_connecting">Po lidhet…</string>
+  <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
+  <string name="ip_protection_onboarding_card_headline">Provoni VPN-në e brendshme të %s-it</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">Shfletoni me mbrojtje ekstra</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
@@ -2894,6 +2926,10 @@
   <string name="ip_protection_recommended_location" tools:ignore="UnusedResources">E rekomanduar</string>
   <!-- Label for the button that takes the user to get the standalone Mozilla VPN product. -->
   <string name="ip_protection_mozilla_vpn_upsell_button" tools:ignore="UnusedResources,BrandUsage">Merrni Mozilla VPN</string>
+  <!-- Title for the browser VPN location selection screen (displayed in the app bar) -->
+  <string name="ip_protection_locations_title">Zgjidhni vendndodhje VPN-je</string>
+  <!-- Content description for the browser VPN location selection screen top bar back button -->
+  <string name="ip_protection_locations_navigate_back_button_content_description">Shko mbrapsht</string>
   <!--
     Autofill
 
