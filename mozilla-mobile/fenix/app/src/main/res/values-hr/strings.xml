@@ -1346,6 +1346,12 @@
     Preferences for showing tab strip
   -->
   <string name="preference_tab_strip_show">Prikaži traku s karticama</string>
+  <!-- Preference for tab bar placement (top or bottom of the screen) -->
+  <string name="preference_tab_strip_location_header">Položaj trake kartica</string>
+  <!-- Preference for using top tab strip -->
+  <string name="preference_top_tab_strip">Gore</string>
+  <!-- Preference for using bottom tab strip -->
+  <string name="preference_bottom_tab_strip">Dolje</string>
   <!--
     Gestures Preferences
 
@@ -1378,6 +1384,8 @@
   <string name="library_desktop_bookmarks_unfiled">Druge zabilješke</string>
   <!-- Option in Library to open History page -->
   <string name="library_history">Povijest</string>
+  <!-- Content description (not visible, for screen readers etc.) for the check mark that replaces a site's icon in History and Recently closed tabs when the item is selected -->
+  <string name="library_item_selected_content_description">Odabrano</string>
   <!-- Settings Page Title -->
   <string name="settings_title">Postavke</string>
   <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
@@ -1428,6 +1436,8 @@
     Title of preference for tabs management
   -->
   <string name="preferences_tabs">Kartice</string>
+  <!-- Title of preference that allows a user to specify the tab layout -->
+  <string name="preferences_tab_layout">Raspored kartica</string>
   <!-- Option for a list tab view -->
   <string name="tab_view_list">Popis</string>
   <!-- Option for a grid tab view -->
@@ -1446,6 +1456,8 @@
   <string name="preference_auto_close_tabs" tools:ignore="UnusedResources">Automatski zatvaraj otvorene kartice</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab button -->
   <string name="tab_manager_close_tabs">Zatvori</string>
+  <!-- Content description for the media playback indicator in the tabs tray. -->
+  <string name="tab_indicator_media_playing">Reprodukcija medija</string>
   <!--
     Opening screen
 
@@ -1472,8 +1484,28 @@
   <string name="opening_screen_last_tab_summary">Otvori u zadnjoj kartici</string>
   <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
   <string name="opening_screen_after_four_hours_of_inactivity_summary">Otvori na početnoj stranici nakon četiri sata</string>
+  <!--
+    Tab organization
+
+    Category header for the preferences that control how tabs are organized
+  -->
+  <string name="preferences_tab_organization">Organizacija kartica</string>
+  <!-- Title of the preference that allows a user to enable or disable the inactive tabs feature -->
+  <string name="preferences_inactive_tabs_toggle_title">Neaktivne kartice</string>
   <!-- Summary of the preference that allows a user to enable or disable the inactive tabs feature. -->
   <string name="preferences_inactive_tabs_title">Kartice koje nisu pregledavane dva tjedna premještaju su u odjeljak neaktivnih.</string>
+  <!-- Title of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_title">Grupe kartica</string>
+  <!-- Summary of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_description">Organiziraj svoje kartice u grupe koje možeš imenovati i spremiti.</string>
+  <!--
+    Privacy report
+
+    Category header of a preference that allows a user to enable or disable the privacy report feature
+  -->
+  <string name="preferences_privacy_report">Izvještaj o privatnosti</string>
+  <!-- Title of the privacy report preference that allows a user to enable or disable the feature -->
+  <string name="preferences_privacy_report_title">Omogući izvještaj o privatnosti</string>
   <!--
     Studies
 
@@ -1530,10 +1562,14 @@
   <string name="add_tab">Dodaj karticu</string>
   <!-- Content description (not visible, for screen readers etc.): Add tab button. Adds a news tab when pressed -->
   <string name="add_private_tab">Dodaj privatnu karticu</string>
+  <!-- Content description (not visible, for screen readers etc.): Create tab group button. Opens the create tab group sheet when pressed -->
+  <string name="create_tab_group_content_description">Stvori grupu kartica</string>
   <!-- Text for the tab search bar placeholder -->
   <string name="tab_manager_search_bar_placeholder">Pretraži svoje kartice</string>
   <!-- Text shown in the menu to view recently closed tabs -->
   <string name="tab_tray_menu_recently_closed">Nedavno zatvorene kartice</string>
+  <!-- Text shown in the menu to select all tabs. -->
+  <string name="tab_tray_menu_select_all_tabs">Označi sve</string>
   <!-- Text shown in the menu to view account settings -->
   <string name="tab_tray_menu_account_settings">Postavke računa</string>
   <!-- Text shown in the menu to view tab settings -->
@@ -1596,6 +1632,14 @@
   <string name="pwa_site_controls_title_private">%1$s (privatni modus)</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to open the Tab Search feature to search through tabs. -->
   <string name="tab_manager_open_tab_search">Otvori pretraživanje kartica</string>
+  <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
+  <string name="tab_group_onboarding_item_title">Stvori grupu kartica</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in grid view. -->
+  <string name="tab_group_onboarding_grid_item_description">Povuci jednu karticu na drugu da ih grupiraš.</string>
+  <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
+  <string name="tab_group_onboarding_list_item_description">Odaberi više kartica za stvaranje grupe.</string>
+  <!-- Content description (accessibility label) for button to dismiss the tab group onboarding item. -->
+  <string name="tab_group_onboarding_item_dismiss_content_description">Odbaci upute za grupe kartica</string>
   <!-- The header text displayed on the tab groups page when no tab groups are open -->
   <string name="tab_manager_empty_tab_groups_page_header">Isprobaj grupe kartica za manje pomicanja, više rada</string>
   <!-- The description displayed on the tab groups page when no tab groups are open -->
@@ -1671,6 +1715,27 @@
   <string name="close_tab_and_delete_group_confirmation_dialog_confirm">Izbriši grupu</string>
   <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
   <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Odustani</string>
+  <!-- Content description for the three dot button next to a tab group" -->
+  <string name="tab_group_three_dot_button_content_description">Više opcija</string>
+  <!--
+    Content description for the Expand button on the contracted menu for a tab group:
+    when tapped, tabs are displayed in an expanded grid or list view, taking up the full screen.
+  -->
+  <string name="tab_groups_strip_expand_group_content_description">Proširi za prikaz kartica preko cijelog zaslona</string>
+  <!-- Text shown on the edit button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_edit">Uredi</string>
+  <!-- Text shown on the ungroup button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_ungroup">Razgrupiraj</string>
+  <!-- Text shown on the delete button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_delete">Izbriši</string>
+  <!-- Text shown on the share button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_share">Dijeli</string>
+  <!-- Text shown on the close button for a tab group on the three dot menu -->
+  <string name="tab_group_three_dot_menu_close">Zatvori</string>
+  <!-- Title for the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_title">Razgrupirati grupu kartica?</string>
+  <!-- Text shown in the body of the Ungroup tab group confirmation dialog. -->
+  <string name="ungroup_tab_group_confirmation_dialog_body">Kartice će ostati otvorene na ovom uređaju, ali će grupa biti izbrisana.</string>
   <!-- Text shown on the Don't Ask Again checkbox button in the Ungroup tab group confirmation dialog. -->
   <string name="ungroup_tab_group_confirmation_dialog_dont_ask_again">Ne pitaj ponovo</string>
   <!-- Text shown on the confirm button in the Ungroup tab group confirmation dialog. -->
@@ -2355,6 +2420,10 @@
   <string name="sync_send_to_all">Pošalji na sve uređaje</string>
   <!-- An option from the share dialog to reconnect to sync -->
   <string name="sync_reconnect">Ponovo se poveži za sinkronizaciju</string>
+  <!-- Label for the button in the share dialog that sends the tab to the selected sync devices -->
+  <string name="sync_send_to_selected_devices">Pošalji</string>
+  <!-- Content description announced when a device is selected in the share dialog -->
+  <string name="send_to_devices_device_selected_content_description">Odabrano</string>
   <!-- Text displayed when sync is offline and cannot be accessed -->
   <string name="sync_offline">Izvanmrežno</string>
   <!-- An option to connect additional devices -->
@@ -2387,10 +2456,14 @@
   <string name="sync_send_tab_empty_state_title">Niti jedan uređaj nije povezan</string>
   <!-- Send tab to synced devices: Empty state message - Displayed when the user has no synced devices -->
   <string name="sync_send_tab_empty_state_description" tools:ignore="BrandUsage">Za slanje kartice, prijavi se na Firefox na barem jednom drugom uređaju.</string>
+  <!-- Send tab to synced devices: Empty state link - Displayed when the user has no synced devices -->
+  <string name="sync_send_tab_empty_state_link">Saznaj kako spojiti uređaj</string>
   <!-- Send tab to synced devices: Connectivity Error title -->
   <string name="sync_send_tab_error_connection_title">Provjeri internetsku vezu</string>
   <!-- Send tab to synced devices: Connectivity Error message - Suggested user action after internet connection has been established -->
   <string name="sync_send_tab_error_connection_text">Zatim pokušaj ponovo poslati tvoju karticu.</string>
+  <!-- Send tab to synced devices: Connectivity Error button - When tapped, refreshes the list of connected devices. -->
+  <string name="sync_send_tab_error_connection_button">Pokušaj ponovno</string>
   <!--
     Notifications
 
@@ -2573,6 +2646,8 @@
   <string name="sign_in_create_account_text" tools:ignore="BrandUsage"><![CDATA[Nemaš račun? <u>Stvori ga</u> i sinkroniziraj Firefox među uređajima.]]></string>
   <!-- Text shown in confirmation dialog to sign out of account. %s is the name of the app (for example "Firefox"). -->
   <string name="sign_out_confirmation_message_2">%s će prestati sinkroniziranje s tvojim računom, ali neće izbrisati podatke o tvom pregledavanju na ovom uređaju.</string>
+  <!-- Title of the confirmation dialog shown when the user signs out of their account -->
+  <string name="sign_out_dialog_title">Odjaviti se iz računa?</string>
   <!-- Body of the confirmation dialog shown when the user signs out of their account -->
   <string name="sign_out_dialog_message">Sinkronizirani podaci ostat će pohranjeni na tvom računu.</string>
   <!-- Text for the primary action button of the confirmation dialog shown when the user signs out of their account -->
@@ -4473,6 +4548,56 @@
   <string name="lens_camera_mode_qr">QR skener</string>
   <!-- Toast shown when the user picks an image from the gallery in QR mode but no QR code is found in it -->
   <string name="lens_camera_qr_no_code_found">Na slici nije pronađen QR kod</string>
+  <!-- Status shown under an image picked from the gallery while it is being sent to Google Lens for a visual search -->
+  <string name="lens_camera_loading_status">Pretražuje se ovo</string>
+  <!-- Button shown under an image picked from the gallery while it is being sent to Google Lens. Tapping it stops the search and returns to the camera. -->
+  <string name="lens_camera_loading_cancel_button">Odustani</string>
+  <!-- Snackbar message shown when an image picked from the gallery could not be opened or read, so it was never sent to Google Lens. Shown after returning to the camera. -->
+  <string name="lens_camera_image_load_failed">Ovu sliku nije bilo moguće učitati. Pokušaj s drugom.</string>
+  <!-- Snackbar message shown when an image picked from the gallery could not be searched because of a network problem or an error from Google Lens. Shown after returning to the camera, next to the lens_camera_upload_failed_retry_button action. -->
+  <string name="lens_camera_upload_failed">Nije bilo moguće dohvatiti rezultate iz Google Lensa</string>
+  <!-- Action in the snackbar shown when an image picked from the gallery could not be searched with Google Lens. Tapping it searches the same image again. -->
+  <string name="lens_camera_upload_failed_retry_button">Pokušaj ponovo</string>
+  <!-- Title of the bottom sheet shown the first time the user opens the Google Lens camera screen -->
+  <string name="lens_opt_out_title">Pronađi uz Google Lens</string>
+  <!-- Description of the bottom sheet shown the first time the user opens the Google Lens camera screen -->
+  <string name="lens_opt_out_description">Odaberi sliku ili koristi kameru da dobiješ rezultate pomoću Google Lensa.</string>
+  <!-- Text of the link in the first-run Google Lens bottom sheet that opens the Search settings page -->
+  <string name="lens_opt_out_settings_link">Postavke Google Lensa</string>
+  <!-- Button in the first-run Google Lens bottom sheet that dismisses it and starts the camera -->
+  <string name="lens_opt_out_try_it_now_button">Isprobaj sada</string>
+  <!-- Button in the first-run Google Lens bottom sheet that leaves Google Lens without using it -->
+  <string name="lens_opt_out_not_now_button">Ne sada</string>
+  <!--
+    Firefox Labs
+
+    Firefox Labs is the name of a screen in Settings to allow users to learn about
+    experimental and in-development features, and turn those features on and off.
+    The "Labs" portion can be localized, "Firefox" must be treated as a brand and kept
+    in English.
+  -->
+  <string name="firefox_labs_title" tools:ignore="BrandUsage">Firefox Labs</string>
+  <!-- Banner title text on the Firefox Labs screen. -->
+  <string name="firefox_labs_banner_title_2">Isprobaj naše eksperimentalne značajke!</string>
+  <!--
+    Banner description text on the Firefox Labs screen. Provides information on what Firefox Labs does. %s is the name of the app (for example "Firefox Nightly").
+    Text will appear under the Firefox Labs banner title.
+  -->
+  <string name="firefox_labs_experimental_description">One su u razvoju, što bi moglo utjecati na izvođenje %s.</string>
+  <!-- The link text shown when a feedback URL for a Firefox Labs feature is available. The feedback URL page will allow users to provide opinions and suggestions. -->
+  <string name="firefox_labs_share_feedback">Pošalji povratne informacije</string>
+  <!-- Content description for the share feedback link on a Firefox Labs feature. This text will be used by screen readers to provide more context on the feedback link. %s is the name of the Firefox Labs feature. -->
+  <string name="firefox_labs_share_feedback_content_description">Podijeli povratne informacije za %s.</string>
+  <!-- Button text on the Firefox Labs screen for restoring all toggles back to the default settings. The button will turn off any experimental features. -->
+  <string name="firefox_labs_restore_default_button_text">Obnovi zadane postavke</string>
+  <!-- The title used in a confirmation dialog on the Firefox Labs screen when toggling "on" or "off" an experimental feature that requires a restart. -->
+  <string name="firefox_labs_feature_dialog_title">Potrebno je ponovno pokretanje</string>
+  <!-- The text on the dialog on the Firefox Labs screen for the positive button when toggling "on" and "off" experimental features. This prompts the user to confirm that they want to restart the app. -->
+  <string name="firefox_labs_dialog_restart_button">Ponovno pokreni</string>
+  <!-- The text on the dialog on the Firefox Labs screen for the negative button when toggling "on" and "off" experimental features. This is used to cancel the action and return to the previous screen. -->
+  <string name="firefox_labs_dialog_cancel_button">Odustani</string>
+  <!-- The title used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. -->
+  <string name="firefox_labs_restore_defaults_dialog_title">Potrebno je ponovno pokretanje</string>
   <!-- The description used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. %s is the name of the app (for example "Firefox Nightly") -->
   <string name="firefox_labs_restore_defaults_dialog_message">Za vraćanje standardnih postavi ponovo pokreni %s.</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "on" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
@@ -4487,6 +4612,12 @@
   <string name="firefox_labs_website_isolation_title" tools:ignore="UnusedResources">Izolacija web-stranice</string>
   <!-- Description of the Firefox Labs Sandboxing experiment. -->
   <string name="firefox_labs_website_isolation_description" tools:ignore="UnusedResources">Dodatna barijera među web-stranicama koja pomaže u zaštiti tvojih podataka među karticama. Može utjecati na performansu, stabilnost, kompatibilnost web-stranica i način na koji se sprema povijest pregledavanja.</string>
+  <!--
+    PDF viewer toolbar and buttons
+
+    Content description for accessibility (used by screen readers): Description for the button that triggers the start of a signature workflow on the PDF displayed on the screen.
+  -->
+  <string name="pdf_tools_sign_content_description_2">Dodaj potpis</string>
   <!--
     PDF viewer toolbar and buttons
 
@@ -4513,4 +4644,14 @@
   <string name="pdf_tools_signature_clear_button">Izbriši</string>
   <!-- The text for the button that adds the signature the user has typed to the PDF. -->
   <string name="pdf_tools_signature_add_button">Dodaj</string>
+  <!--
+    Listen to page
+
+    Content description for the reader mode panel: a group of buttons floating over the content
+  -->
+  <string name="reader_mode_panel_content_description">Opcije načina čitanja</string>
+  <!-- Content description for the button in reader mode panel that turns on the read aloud feature (playback of content begins when button is pressed) -->
+  <string name="reader_mode_panel_listen_content_description">Pročitaj naglas</string>
+  <!-- Content description for media player displayed in Reader Mode when the Listen to Page (Read Aloud) feature is selected -->
+  <string name="reader_mode_panel_media_player_content_description">Reproduktor medija</string>
 </resources>
