@@ -1111,8 +1111,12 @@
   <string name="alternative_app_icon_group_featured">Pêşkêşkirî</string>
   <!-- Title to show in alert when user selects an alternative app icon -->
   <string name="restart_warning_dialog_title">Sembola sepanê biguherînî?</string>
+  <!-- Message to warn users that applying an alternative app icon may require an app restart. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
+  <string name="restart_warning_dialog_body_2">Dibe ku sepan bê girtin. Tenê li îkona xwe ya nû ya geş bitikîne da ku %1$s ji nû ve vekî.</string>
   <!-- Message to warn users that applying an alternative app icon may require an app restart and will remove existing shortcuts because of the OS limitations. Whether or not the app closes depends on what version of Android it is, so we use the word "may" instead of "will". %1$s is replaced by the brand name (e.g. Firefox). -->
   <string name="restart_and_shortcuts_removal_warning_dialog_body">Guhertina îkonê dê hemû malper û kurtebirên ku te li ser ekrana xwe ya sereke tomar kirine jê bibe. \n\nDibe ku %1$s bê girtin. Ji bo ji nû ve vekî, îkona xwe ya nû bikirtîne.</string>
+  <!-- Dialog button text for confirming the possible app restart and new icon selection -->
+  <string name="restart_warning_dialog_button_positive_2">Îkonê biguherîne</string>
   <!-- Dialog button text for cancelling app icon change -->
   <string name="restart_warning_dialog_button_negative">Betal</string>
   <!-- Error message snackbar shown after the user tried to apply the new icon but the Android OS threw an error while updating existing app shortcuts (e.g. private mode shortcut) -->
@@ -1143,6 +1147,8 @@
   <string name="extension_process_crash_dialog_retry_button_text" tools:ignore="UnusedResources">Dîsdestpêkirina pêvekan biceribîne</string>
   <!-- Button text on the extension crash dialog to prompt the user to continue with all extensions disabled. -->
   <string name="extension_process_crash_dialog_disable_extensions_button_text">Pêvekan neîalak bike û wisa dewam bike</string>
+  <!-- Text shown in the snackbar action button that lets the user retry an add-on operation that just failed. -->
+  <string name="addon_failure_retry_action">Dîsa biceribîne</string>
   <!--
     Account Preferences
 
@@ -1155,6 +1161,12 @@
   <string name="preferences_sync_now">Aniha senkronîze bike</string>
   <!-- Preference category for sync -->
   <string name="preferences_sync_category">Bila çi bên senkronîzekirin, hilbijêre</string>
+  <!-- Preference category for sync controls -->
+  <string name="preferences_category_sync">Daneyên senkronîzekirî</string>
+  <!-- Summary for the sync preference category. -->
+  <string name="preferences_sync_category_summary">Tiştên ku li ser hemû cîhazên xwe yên girêdayî têne senkronîzekirin bi rê ve bibe</string>
+  <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
+  <string name="preferences_sync_category_no_engine_selected_summary">Tu tiştek senkronîze nekiriye. Hilbijêre ka çi li ser cîhazên te senkronîze bimînin.</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">Raborî</string>
   <!-- Preference for syncing bookmarks -->
@@ -1167,6 +1179,10 @@
   <string name="preferences_sign_out">Derkeve</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">Navê cîhazê</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">Navê cîhazê</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">Navê cîhazê biguherîne</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">Navê cîhazê nabe vala bimîne.</string>
   <!-- Label indicating that sync is in progress -->
@@ -1202,6 +1218,16 @@
   <!-- %s is the device name -->
   <string name="fxa_tab_received_from_notification_name">Hilpekîna ji %s ve hat</string>
   <!--
+    Close Synced Tabs
+
+    The title for a notification shown when the user closes tabs that are currently
+    open on this device from another device that's signed in to the same Mozilla account.
+    %1$s is a placeholder for the app name; %2$d is the number of tabs closed.
+  -->
+  <string name="fxa_tabs_closed_notification_title">%1$s hilpekînên girtî: %2$d</string>
+  <!-- The body for a "closed synced tabs" notification. -->
+  <string name="fxa_tabs_closed_text">Hilpekînên dawiyê hatine girtin bibîne</string>
+  <!--
     Advanced Preferences
 
     Preference for tracking protection exceptions
@@ -1213,11 +1239,35 @@
   <string name="exceptions_empty_message_description">Istisna dihêlin ku tu bikaribî ji bo malperên hilbijartî parastina ji şopandinê bigirî.</string>
   <!-- Text displayed when there are no exceptions, with learn more link that brings users to a tracking protection SUMO page -->
   <string name="exceptions_empty_message_learn_more_link">Zêdetir bizane</string>
+  <!-- Preference switch for usage and technical data collection -->
+  <string name="preference_usage_data_2">Daneyên teknîkî û danûstandinê bişîne</string>
   <!-- Preference switch for usage and technical learn more link in new compose -->
   <string name="preference_usage_data_learn_more_2">Derbarê daneyên teknîkî de zêdetir bizane</string>
+  <!-- Preference description for marketing data collection. Note: The words "Firefox" should NOT be translated -->
+  <string name="preferences_usage_data_description_1" tools:ignore="BrandUsage">Daneyên têkildarî cîhaza te, avaniha reqalavê û şêwaza bikaranîna te ya Firefoxê alîkariya me dikin ku em taybetiyan, performansê û biryardariyê ji bo her kesî çêtir bikin.</string>
+  <!-- Preference switch for daily usage ping data collection -->
+  <string name="preferences_daily_usage_ping_title">Pinga bikaranîna rojane</string>
+  <string name="preferences_daily_usage_ping_description" tools:ignore="BrandUsage">Ev alîkariya Mozillayê dike ku bikarhênerên çalak texmîn bike.</string>
   <string name="preferences_daily_usage_ping_learn_more">Derbarê pinga bikarnîna rojane de zêdetir bizane</string>
+  <!-- Title for the crash reporting option in the privacy preferences dialog shown during onboarding. -->
+  <string name="crash_reporting_snack_bar_message">Raport hat şandin</string>
   <!-- Text for sumo link to learn more about crash reports in data collection screen -->
   <string name="preferences_crashes_learn_more">Derbarê raporên têkçûnê de zêdetir bizane</string>
+  <!-- Title Headers for data collection settings screen -->
+  <string name="crash_reports_data_category">Raporên Têkçûnê</string>
+  <string name="usage_data_category">Daneyên bikaranînê</string>
+  <string name="studies_data_category">Lêkolîn</string>
+  <string name="technical_data_category">Daneyên Teknîkî</string>
+  <string name="crash_reporting_description">Raporên têkçûnê dihêlin ku em pirsgirêkên gerokê teşhîs bikin û çareser bikin. Dibe ku daneyên kesane yan hesas bikevin nav raporan.</string>
+  <!-- Section title for campaign measurement in data collections screen -->
+  <string name="preferences_marketing_data_title">Pîvana kampanyayê</string>
+  <!-- Preference switch for campaign measurement data (marketing data) collection -->
+  <string name="preferences_marketing_data_2">Daneyên pîvandina kampanyayê</string>
+  <!--
+    Preference description for marketing data collection.
+    Note: The words "Firefox" and "Mozilla" should NOT be translated. “That you use it” is to mean that the user is opting in to sharing that they are continuing to use Firefox after installing it; not that Firefox is tracking their “usage” or what they’re using it for.
+  -->
+  <string name="preferences_marketing_data_description_4" tools:ignore="BrandUsage">Bi hevkarên bazargeriyê yên Mozillayê re parve bike ka te Firefox çawa keşf kir û wê çawa bi kar tînî.</string>
   <!-- Learn more link for marketing data preference -->
   <string name="preferences_marketing_data_learn_more">Derbarên daneyên bazirganiyê de zêdetir bizane</string>
   <!-- Title for studies preferences -->
