@@ -1162,6 +1162,12 @@
   <string name="preferences_sync_now">Sinkroniziraj sada</string>
   <!-- Preference category for sync -->
   <string name="preferences_sync_category">Odaberi što će se sinkronizirati</string>
+  <!-- Preference category for sync controls -->
+  <string name="preferences_category_sync">Sinkronizirani podaci</string>
+  <!-- Summary for the sync preference category. -->
+  <string name="preferences_sync_category_summary">Upravljaj svime što se sinkronizira na svim tvojim povezanim uređajima</string>
+  <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
+  <string name="preferences_sync_category_no_engine_selected_summary">Ne sinkroniziraš ništa. Odaberi što želiš sinkronizirati među svojim uređajima.</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">Povijest</string>
   <!-- Preference for syncing bookmarks -->
@@ -1174,6 +1180,10 @@
   <string name="preferences_sign_out">Odjavi se</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">Naziv uređaja</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">Naziv uređaja</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">Promijeni naziv uređaja</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">Naziv uređaja ne može biti prazan.</string>
   <!-- Label indicating that sync is in progress -->
@@ -1321,6 +1331,11 @@
   <string name="preference_light_theme">Svijetla</string>
   <!-- Preference for using dark theme -->
   <string name="preference_dark_theme">Tamna</string>
+  <!--
+    Preference for using the OLED theme. For localization, this can be translated as "True Black", "Maximum Darkness",
+    or "Full dark" if needed.
+  -->
+  <string name="preference_oled_theme">Najtamnije</string>
   <!-- Preference for using using dark or light theme automatically set by battery -->
   <string name="preference_auto_battery_theme">Postavljeno u postavkama za štednju baterije</string>
   <!-- Preference for using following device theme -->
@@ -3884,6 +3899,15 @@
     <item quantity="few">%1$d sadržaja za praćenje</item>
     <item quantity="other">%1$d sadržaja za praćenje</item>
   </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">Ovaj tjedan je blokiran %1$d program za praćenje</item>
+    <item quantity="few">Ovaj tjedan su blokirana %1$d programa za praćenje</item>
+    <item quantity="other">Ovaj tjedan je blokirano %1$d programa za praćenje</item>
+  </plurals>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
@@ -3904,6 +3928,8 @@
     %s is a placeholder for the name of the certificate authority that issued the certificate.
   -->
   <string name="connection_security_panel_verified_by">Potvrđuje %s</string>
+  <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the protections dashboard to the bottom of the screen and close it. -->
+  <string name="tracker_protections_dashboard_close_handlebar_content_description">Zatvori nadzornu ploču</string>
   <!--
     Text for the connection security panel when the site uses a QWAC.
     %s is a placeholder for the organization for which the certificate was issued.
@@ -4027,6 +4053,26 @@
   <string name="microsurvey_sync_title" tools:ignore="BrandUsage,UnusedResources">Koliko si zadovoljan/na sa sinkronizacijom u Firefoxu?</string>
   <!-- Text shown in the survey title for 'describe your experience so far' microsurvey. Note: The word "Firefox" should NOT be translated. -->
   <string name="microsurvey_describe_your_experience_title" tools:ignore="BrandUsage,UnusedResources">Pomogni nam poboljšati Firefox. Što najbolje opisuje tvoje dosadašnje iskustvo?</string>
+  <!--
+    Uninstall Survey
+
+    Title text for the uninstall survey dialog, asking the user for the reason they are removing the app
+  -->
+  <string name="microsurvey_uninstall_survey_title">Tvoje povratne informacije su nam važne. Zašto želiš deinstalirati?</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_1_v2">Sporo je ili nepouzdano</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_2_v2">Web stranice nisu ispravno radile</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_3_v2">Nedostaju značajke koje su mi potrebne</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_4_v2">Videozapisi, preuzimanja ili mediji nisu radili</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_5_v2">Teško je za korištenje ili je loše dizajnirano</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_6_v2">Problemi s privatnošću ili sigurnošću</string>
+  <!-- Button label shown at the bottom of the uninstall survey -->
+  <string name="uninstall_survey_button_label">Pošalji povratne informacije i deinstaliraj</string>
   <!--
     Accessibility
 
@@ -4383,6 +4429,50 @@
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Napomene o privatnosti</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Saznaj više</string>
+  <!--
+    Collections migration homepage card
+
+    Title shown on the collections to tab groups migration card on the homepage.
+  -->
+  <string name="collections_migration_homepage_banner_title">Zbirke su sada grupe</string>
+  <!-- Message shown on the collections to tab groups migration card on the homepage. -->
+  <string name="collections_migration_homepage_card_message">Postoji jednostavniji način za organizaciju tvojih kartica</string>
+  <!-- Link text shown on the collections to tab groups migration card that opens the tab groups page in the tab manager. -->
+  <string name="collections_migration_homepage_card_link">Prikaži moje grupe kartica</string>
+  <!-- Google Lens prototype related strings -->
+  <string name="preferences_debug_settings_google_lens_integration">Omogući integraciju Google Lensa</string>
+  <!-- Lens image search button content description -->
+  <string name="lens_search_content_description">Pretraži slikom</string>
+  <!-- Content description for the gallery picker button in the Lens camera screen -->
+  <string name="content_description_gallery">Odaberi iz galerije za slanje na Google Lens</string>
+  <!-- Content description for the shutter button in the Lens camera screen -->
+  <string name="content_description_take_photo">Snimi fotografiju i pošalji na Google Lens</string>
+  <!-- Image context menu entry that sends the long-pressed image to Google Lens -->
+  <string name="context_menu_open_image_with_google_lens">Pretraži pomoću Google Lensa</string>
+  <!-- Toast shown when the user denies the camera permission requested by the Lens camera screen -->
+  <string name="lens_camera_permission_denied">Dozvola je odbijena</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the photo they capture will be sent to Google Lens for a visual search.
+  -->
+  <string name="lens_camera_title_lens">Google Lens</string>
+  <!--
+    Title shown at the top of the camera screen, next to the close button, telling the
+    user that the camera is being used to scan a QR code.
+  -->
+  <string name="lens_camera_title_qr">QR kod</string>
+  <!-- Title for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_title">Omogući pretraživanje pomoću Google Lensa</string>
+  <!-- Description for the Google Lens Search Settings page feature toggle -->
+  <string name="search_settings_google_lens_description">Šalje slike i fotografije Googleu za vizualno pretraživanje.</string>
+  <!-- Caption shown under the Google Lens toggle clarifying when the feature is available -->
+  <string name="preferences_google_lens_availability_caption">Dostupno samo kada je Google aktiviran iznad i kada je on trenutna aktivna tražilica pri pregledavanju.</string>
+  <!-- Content description for the Google Lens half of the camera mode toggle -->
+  <string name="lens_camera_mode_lens">Google Lens</string>
+  <!-- Content description for the QR scanner half of the camera mode toggle -->
+  <string name="lens_camera_mode_qr">QR skener</string>
+  <!-- Toast shown when the user picks an image from the gallery in QR mode but no QR code is found in it -->
+  <string name="lens_camera_qr_no_code_found">Na slici nije pronađen QR kod</string>
   <!-- The description used in a confirmation dialog on the Firefox Labs screen when restoring the application to its defaults by turning "off" any experimental features. %s is the name of the app (for example "Firefox Nightly") -->
   <string name="firefox_labs_restore_defaults_dialog_message">Za vraćanje standardnih postavi ponovo pokreni %s.</string>
   <!-- The description text that is displayed in the confirmation dialog on the Firefox Labs screen for toggling "on" experimental features. %s is the name of the app (for example "Firefox Nightly") -->
