@@ -918,6 +918,10 @@
   <string name="preferences_open_links_in_apps_ask">Beriya vekirinê bipirse</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">Ti caran</string>
+  <!-- Preference category header for media related open links in apps settings -->
+  <string name="preferences_media_category">Medya</string>
+  <!-- Preference label for choosing whether links open in the YouTube app -->
+  <string name="preferences_open_links_in_youtube">Girêdanan di sepana YouTube de veke</string>
   <!-- Preference category for file storage. -->
   <string name="preferences_category_file_storage">Hilanîna pelan</string>
   <!-- Preference title for downloads default location. -->
@@ -1962,6 +1966,8 @@
   <string name="download_search_no_results_found">Ti encam nehat dîtin</string>
   <!-- Text for the "Select all" button, which selects all downloaded items in the downloads list. -->
   <string name="download_select_all_items">Gişî hilbijêre</string>
+  <!-- Shown in the downloads list in place of a website name when a file came from a data: or blob: URL that has no website address. "data" refers to the data: URL scheme. -->
+  <string name="download_item_source_data">(data)</string>
   <!--
     Downloads Content Type Filters
 
@@ -3112,10 +3118,31 @@
     %1$d is the total monthly allowance in GB (for example "50").
   -->
   <string name="ip_protection_menu_limit_reached">Gihîşte sînorê %1$d GB</string>
+  <!--
+    Error message shown on the browser VPN settings screen when the monthly data allowance is exhausted.
+    %1$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_data_limit_reached_description">Te kotaya %1$d GB ya VPN-a xwe bi kar aniye. Kota meha pêş tê valakirin.</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN is active -->
+  <string name="ip_protection_toolbar_pill_label">VPN vekirî</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has been activated -->
+  <string name="ip_protection_toolbar_pill_description">VPN çalak e.</string>
+  <!-- Label shown next to the browser protection icon in the address bar when the browser VPN turns off -->
+  <string name="ip_protection_toolbar_pill_label_off">VPN girtî</string>
+  <!-- Accessibility description for the browser VPN pill in the address bar when the VPN has turned off -->
+  <string name="ip_protection_toolbar_pill_description_off">VPN girtî ye.</string>
   <!-- Label for the button that starts the browser VPN authentication or authorization flow on the settings screen -->
   <string name="ip_protection_get_started">Dest pê bike</string>
+  <!-- Label for the "connecting" state of the button that starts the browser VPN authentication or authorization flow on the settings screen -->
+  <string name="ip_protection_connecting">Tê girêdan…</string>
   <!-- Headline for the browser VPN onboarding card. %s is the name of the app (for example "Firefox"). -->
   <string name="ip_protection_onboarding_card_headline">VPNa entegrekirî ya %s’ê bi kar bîne</string>
+  <!--
+    The body of the VPN onboarding card.
+    %1$s is a link using ip_protection_onboarding_body_link (“Browse with extra protection”) as text. It links to a support article about VPN on Firefox.
+    %2$d is the total monthly allowance in GB (for example "50").
+  -->
+  <string name="ip_protection_onboarding_body">%1$s bi veşartina cîgeha te, her wisa li ser Wi-Fi-yên giştî jî. Her meh %2$d GB belaş bistînin.</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link">Bi parastina zêdek bigere</string>
   <!--
@@ -3126,6 +3153,12 @@
   <string name="ip_protection_onboarding_body_promo">Ji bo ku geroka te nepentir û şopandina wê zehmettir bibe, vê çalak bike. Niha biceribîne da ku heta %1$s rêjeya bantê bêsînor bi kar bînî. %2$s</string>
   <!-- Used as text for a link in ip_protection_onboarding_body. Make sure to adapt capitalization if the link is in the middle of the sentence. -->
   <string name="ip_protection_onboarding_body_link_promo">Zêdetir bizane</string>
+  <!-- Label for the dismiss button on the onboarding bottom sheet. -->
+  <string name="ip_protection_onboarding_not_now_button">Ne niha</string>
+  <!-- Snackbar (in-app pop-up notification) text to signal the browser VPN connection error -->
+  <string name="ip_protection_connection_error_snackbar">Nekarî bi VPN-ê ve bê girêdan. Piştî çend xulekan dîsa biceribîne.</string>
+  <!-- Snackbar (in-app pop-up notification) text to signal the VPN location has been reset due to the previously selected VPN location being no longer available. -->
+  <string name="ip_protection_location_selection_reset_snackbar">Cîgeha VPN-ê yê hilbijartî ne berdest e. Derbasî cîgeha pêşniyarkirî bû.</string>
   <!-- Snackbar (in-app pop-up notification) action button text that takes the user to the VPN settings screen. -->
   <string name="ip_protection_open_settings_snackbar_action">Eyar</string>
   <!-- Description shown on the browser VPN settings screen prompting the user to turn the VPN on. -->
@@ -3890,6 +3923,22 @@
   <string name="uninstall_survey_option_4_v2">Vidyo, jêbarkirin, an medyayê kar nekir</string>
   <!-- Uninstall survey answer option -->
   <string name="uninstall_survey_option_5_v2">Bikranîna wê zehmet e û sêwirandina wê xirab e</string>
+  <!-- Uninstall survey answer option -->
+  <string name="uninstall_survey_option_6_v2">Fikarên li ser nepenîtiyê an ewlehiyê</string>
+  <!-- Button label shown at the bottom of the uninstall survey -->
+  <string name="uninstall_survey_button_label">Nirxandinê bişîne û rake</string>
+  <!--
+    Accessibility
+
+    Content description for the survey application icon. Note: The word "Firefox" should NOT be translated.
+  -->
+  <string name="microsurvey_app_icon_content_description" tools:ignore="BrandUsage">Logoya Firefoxê</string>
+  <!-- Content description for the survey feature icon. -->
+  <string name="microsurvey_feature_icon_content_description">Îkona taybetmendiya anketê</string>
+  <!-- Content description (not visible, for screen readers etc.) for closing microsurvey bottom sheet. -->
+  <string name="microsurvey_close_handle_content_description">Anketê bigire</string>
+  <!-- Content description for "X" button that is closing microsurvey. -->
+  <string name="microsurvey_close_button_content_description">Bigire</string>
   <!--
     Beta Label Component !
 
