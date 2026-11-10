@@ -714,6 +714,8 @@
   <string name="preferences_search">検索</string>
   <!-- Preference for settings related to Search engines -->
   <string name="preferences_search_engines">検索エンジン</string>
+  <!-- Settings item that adds the Firefox search widget to the device's home screen (tapping it opens the confirmation dialogue) -->
+  <string name="preferences_search_widget_in_home_screen">ホーム画面に検索ウィジェットを追加する</string>
   <!-- Settings item to add a search widget on the device's homescreen. -->
   <string name="preferences_add_search_widget_from_settings">ホーム画面ウィジェット</string>
   <!-- Preference for settings related to Search engines suggestions -->
@@ -966,6 +968,18 @@
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">拡張機能コレクションが変更されました。変更を適用するためにアプリケーションを終了しています…</string>
   <!--
+    Add-on removal confirmation dialog
+
+    Title of confirmation dialog. Displayed when uninstalling an extension. %1$s is the name of the extension (for example: Firefox Relay).
+  -->
+  <string name="addon_remove_dialog_title">%1$s を削除しますか？</string>
+  <!-- Body of confirmation dialog. Displayed when uninstalling an extension. -->
+  <string name="addon_remove_dialog_body">この端末から拡張機能とその設定が削除されます。</string>
+  <!-- Primary button on confirmation dialog. Tapping it uninstalls the selected extension. -->
+  <string name="addon_remove_dialog_confirm">削除</string>
+  <!-- Secondary button on confirmation dialog. Tapping cancels the process of uninstalling the extension and closes the dialog window. -->
+  <string name="addon_remove_dialog_cancel">キャンセル</string>
+  <!--
     Customize Home
 
     Title for the customize home screen section with privacy report.
@@ -1130,6 +1144,12 @@
   <string name="preferences_sync_category">同期するデータの選択</string>
   <!-- Preference category for sync controls -->
   <string name="preferences_category_sync">同期済みデータ</string>
+  <!-- Preference title for the toggle that allows user to turn sync on or off for the device they are on -->
+  <string name="preferences_enable_sync_title">この端末を同期する</string>
+  <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is on. -->
+  <string name="preferences_enable_sync_summary_sync_enabled">あなたのデータがバックアップされ、同期した端末で利用可能になりました。</string>
+  <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is off. It explains where synced data comes from. %1$s is the Firefox brand name. -->
+  <string name="preferences_enable_sync_summary_sync_disabled">%1$s アカウントに保存されているデータを使用します。</string>
   <!-- Summary for the sync preference category. -->
   <string name="preferences_sync_category_summary">接続したすべての端末で同期するものを管理します</string>
   <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
@@ -3874,6 +3894,8 @@
   <string name="protection_panel_privacy_and_security_settings_2">プライバシー設定</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">許可設定</string>
+  <!-- Certificate panel - Title of the section that contains the website's certificate information (issued to, issued by, etc.) as verified by Firefox (thus guaranteeing the HTTPS connection is secure) -->
+  <string name="certificate_details_panel_secure_connection_title">安全な接続</string>
   <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
     <!--
       Text for displaying the total number of trackers blocked in the trackers blocked panel.
