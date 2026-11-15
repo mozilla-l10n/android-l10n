@@ -186,6 +186,12 @@
     Label for popup button that appears when long-pressing the main menu. Tapping it allows the user to customize the main menu layout.
   -->
   <string name="customize_menu">Prilagodi meni</string>
+  <!-- Alert message shown in the "Customize menu" screen when the user tries to hide a menu section which cannot be hidden. -->
+  <string name="customize_menu_cannot_hide_section">Tega odseka ni mogoče skriti</string>
+  <!-- Title of the dialog shown when resetting the menu to its default layout (removing all user customizations) -->
+  <string name="menu_customize_reset_dialog_title">Povrnem privzeti meni?</string>
+  <!-- Message of the dialog shown when resetting the menu to its default layout (removing all user customizations) -->
+  <string name="menu_customize_reset_dialog_message">S tem boste odstranili prilagoditve, dejanja pa ne bo mogoče razveljaviti.</string>
   <!-- Primary button on the menu reset dialog. Tapping it removes all user customizations. -->
   <string name="menu_customize_reset_dialog_reset">Ponastavi</string>
   <!-- Secondary button on the menu reset dialog. Tapping it cancels the reset process and preserves all user-made customizations. -->
@@ -391,6 +397,8 @@
   <string name="ai_controls_voice_search_description">Za pretvorbo govora v besedilo se uporabljajo Googlove govorne storitve.</string>
   <!-- Title for the listen to page AI feature toggle -->
   <string name="ai_controls_listen_to_page_title">Poslušaj stran</string>
+  <!-- Description for the listen to page AI feature toggle -->
+  <string name="ai_controls_listen_to_page_description">Vaša naprava lahko za glasno branje uporabi umetno inteligenco. Besedilo in zvok ostaneta zasebna.</string>
   <!-- Title for the block AI enhancements confirmation dialog -->
   <string name="ai_controls_block_dialog_title">Želite prepovedati izboljšave z uporabo UI?</string>
   <!-- Body text for the block AI enhancements confirmation dialog. %1$s is the name of the app (for example "Firefox"). -->
@@ -422,7 +430,7 @@
   <!-- Button in the search suggestions onboarding that does not allow search suggestions in private sessions -->
   <string name="search_suggestions_onboarding_do_not_allow_button">Ne dovoli</string>
   <!-- Search suggestion onboarding hint title text -->
-  <string name="search_suggestions_onboarding_title">Dovolite predloge iskanja v zasebnih oknih?</string>
+  <string name="search_suggestions_onboarding_title">Dovolite predloge iskanja v zasebnih sejah?</string>
   <!-- Search suggestion onboarding hint description text, %s is the name of the app (for example "Firefox"). -->
   <string name="search_suggestions_onboarding_text">%s bo natipkano v naslovno vrstico delil s privzetim iskalnikom.</string>
   <!-- Search engine suggestion title text. %s is the name of the suggested engine. -->
@@ -590,6 +598,8 @@
   <string name="nova_onboarding_sync_subtitle">V trenutku si prenesite zaznamke, gesla in druge podatke na katerokoli napravo. Vaši osebni podatki so zavarovani s šifriranjem.</string>
   <!-- Sync onboarding button. -->
   <string name="nova_onboarding_sync_button">Začni s sinhronizacijo</string>
+  <!-- Secondary button of the onboarding pairing card. Opens the Mozilla account sign-in page. -->
+  <string name="nova_onboarding_sync_pairing_email_button">Prijava z e-poštnim naslovom</string>
   <!-- Marketing onboarding title. -->
   <string name="nova_onboarding_marketing_title">Pomagajte nam zgraditi boljši internet</string>
   <!--
@@ -970,6 +980,14 @@
   <string name="customize_addon_collection_user_hint">Lastnik zbirke (ID uporabnika)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">Zbirka razširitev je spremenjena. Zapiranje aplikacije za uveljavitev sprememb …</string>
+  <!--
+    Add-on removal confirmation dialog
+
+    Title of confirmation dialog. Displayed when uninstalling an extension. %1$s is the name of the extension (for example: Firefox Relay).
+  -->
+  <string name="addon_remove_dialog_title">Odstranim %1$s?</string>
+  <!-- Body of confirmation dialog. Displayed when uninstalling an extension. -->
+  <string name="addon_remove_dialog_body">S tem boste z naprave odstranili razširitev in njene nastavitve.</string>
   <!-- Primary button on confirmation dialog. Tapping it uninstalls the selected extension. -->
   <string name="addon_remove_dialog_confirm">Odstrani</string>
   <!-- Secondary button on confirmation dialog. Tapping cancels the process of uninstalling the extension and closes the dialog window. -->
@@ -2248,7 +2266,7 @@
   <!-- Preference for altering the persistent storage access for all websites -->
   <string name="preference_phone_feature_persistent_storage">Trajna shramba</string>
   <!-- Preference for altering the storage access setting for all websites -->
-  <string name="preference_phone_feature_cross_origin_storage_access">Spletni piškotki</string>
+  <string name="preference_phone_feature_cross_origin_storage_access">Medspletni piškotki</string>
   <!-- Preference for altering the EME access for all websites -->
   <string name="preference_phone_feature_media_key_system_access">Vsebina, zaščitena z DRM</string>
   <!-- Label that indicates that a permission must be asked always -->
@@ -2512,6 +2530,12 @@
   <string name="snackbar_private_tab_closed">Zasebni zavihek zaprt</string>
   <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
   <string name="snackbar_deleted_undo">RAZVELJAVI</string>
+  <!-- Confirmation message displayed when user adds a page to a tab group. %1$s is the tab group's name. -->
+  <string name="snackbar_tab_added_to_group">Dodano v skupino %1$s</string>
+  <!-- Confirmation message displayed when user moves a page from one tab group to another. %1$s is the tab group's name. -->
+  <string name="snackbar_tab_moved_to_group">Premaknjeno v skupino %1$s</string>
+  <!-- Button text displayed with a confirmation message when the user adds or moves a page to a tab group. Tapping it displays the tab group. -->
+  <string name="snackbar_action_view">Prikaži</string>
   <!--
     QR code scanner prompt which appears after scanning a code, but before navigating to it
     %1$s is the name of the app (for example "Firefox"), %2$s is the URL or text scanned
@@ -2563,7 +2587,7 @@
   <!-- Title for the site permissions item in Delete browsing data -->
   <string name="preferences_delete_browsing_data_site_permissions">Dovoljenja strani</string>
   <!-- Title for the downloads item in Delete browsing data -->
-  <string name="preferences_delete_browsing_data_downloads">Prenosi</string>
+  <string name="preferences_delete_browsing_data_downloads">Prenose</string>
   <!-- Text for the button to delete browsing data -->
   <string name="preferences_delete_browsing_data_button">Izbriši podatke brskanja</string>
   <!-- Title for the Delete browsing data on quit preference -->
@@ -4431,7 +4455,7 @@
 
     Title of Settings Search. "Search" is a verb here
   -->
-  <string name="settings_search_title">Nastavitve iskanja</string>
+  <string name="settings_search_title">Preišči nastavitve</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to clear the search field for settings search -->
   <string name="content_description_settings_search_clear_search">Počisti iskanje</string>
   <!-- Content description (not visible, for screen readers etc.) for the button to navigate back to the Settings page from the Settings Search screen. -->
@@ -4490,8 +4514,16 @@
   <string name="wrex_widget_error_refresh">Osveži</string>
   <!-- Sports widget menu item to view the team's match results. -->
   <string name="wrex_widget_results">Izidi</string>
+  <!-- Sports widget menu item to view the league standings table. -->
+  <string name="wrex_widget_standings">Lestvica</string>
   <!-- Sports widget menu item to browse the team's wallpapers. -->
   <string name="wrex_widget_wallpapers">Ozadja</string>
+  <!-- Sports widget menu item to remove the widget from the homepage. -->
+  <string name="wrex_widget_remove_widget">Odstrani pripomoček</string>
+  <!-- Sports widget match status label shown during half-time of a match. -->
+  <string name="wrex_widget_match_half_time">Polčas</string>
+  <!-- Sports widget match status label shown during penalties of a match. -->
+  <string name="wrex_widget_match_penalties">Enajstmetrovke</string>
   <!-- Content description (for accessibility, not displayed) for the overflow (more options) menu button on the sports widget card. -->
   <string name="wrex_widget_more_options_content_description">Več možnosti</string>
   <!--
