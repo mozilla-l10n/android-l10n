@@ -1177,6 +1177,12 @@
   <string name="preferences_sync_now">Sincronitza ara</string>
   <!-- Preference category for sync -->
   <string name="preferences_sync_category">Trieu què voleu sincronitzar</string>
+  <!-- Preference category for sync controls -->
+  <string name="preferences_category_sync">Dades sincronitzades</string>
+  <!-- Preference title for the toggle that allows user to turn sync on or off for the device they are on -->
+  <string name="preferences_enable_sync_title">Sincronitza aquest dispositiu</string>
+  <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
+  <string name="preferences_sync_category_no_engine_selected_summary">No esteu sincronitzant res. Trieu què voleu sincronitzar en aquest dispositiu.</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">Historial</string>
   <!-- Preference for syncing bookmarks -->
@@ -1189,6 +1195,10 @@
   <string name="preferences_sign_out">Tanca la sessió</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">Nom del dispositiu</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">Nom del dispositiu</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">Canvia el nom del dispositiu</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">El nom del dispositiu no pot estar buit.</string>
   <!-- Label indicating that sync is in progress -->
@@ -1291,6 +1301,14 @@
   <!-- Preference for removing FxA account -->
   <string name="preferences_sync_remove_account">Elimina el compte</string>
   <!--
+    Settings sign-in promo card
+
+    Sign-in promo card: Title inviting the user to sign in
+  -->
+  <string name="sign_in_promo_title">Inicia la sessió</string>
+  <!-- Sign-in promo card: Body of the card listing what signing in allows the user to do -->
+  <string name="sign_in_promo_description">Comenceu a sincronitzar les pestanyes, adreces d’interès, contrasenyes i molt més.</string>
+  <!--
     Pairing Feature strings
 
     Instructions on how to access pairing
@@ -1308,6 +1326,12 @@
   <string name="preference_simple_toolbar">Senzilla</string>
   <!-- Preference for using expanded toolbar -->
   <string name="preference_expanded_toolbar">Ampliada</string>
+  <!-- Preference for changing where the search bar is positioned on the homepage, shown when the user has set the address bar to be displayed at the top of the screen -->
+  <string name="preferences_homepage_search_location">Ubicació de cerca a la pàgina d’inici</string>
+  <!-- Preference for showing the homepage search bar in the middle of the homepage -->
+  <string name="preference_homepage_search_location_middle">Centre</string>
+  <!-- Preference for showing the homepage search bar at the top of the homepage (combined with the address bar, already displayed at the top) -->
+  <string name="preference_homepage_search_location_top">Superior</string>
   <!-- New tab shortcut in toolbar customization -->
   <string name="toolbar_customize_shortcut_new_tab">Obre una pestanya nova</string>
   <!-- Share shortcut in toolbar customization -->
@@ -1336,6 +1360,11 @@
   <string name="preference_light_theme">Clar</string>
   <!-- Preference for using dark theme -->
   <string name="preference_dark_theme">Fosc</string>
+  <!--
+    Preference for using the OLED theme. For localization, this can be translated as "True Black", "Maximum Darkness",
+    or "Full dark" if needed.
+  -->
+  <string name="preference_oled_theme">Més fosc</string>
   <!-- Preference for using using dark or light theme automatically set by battery -->
   <string name="preference_auto_battery_theme">Definit per l’estalvi de bateria</string>
   <!-- Preference for using following device theme -->
@@ -1346,6 +1375,8 @@
     Preferences for showing tab strip
   -->
   <string name="preference_tab_strip_show">Mostra la barra de pestanyes</string>
+  <!-- Preference for tab bar placement (top or bottom of the screen) -->
+  <string name="preference_tab_strip_location_header">Ubicació de la barra de pestanyes</string>
   <!--
     Gestures Preferences
 
@@ -2386,6 +2417,16 @@
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nEnviat des del %2$s 🦊 Proveu el navegador mòbil: %3$s</string>
   <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nEnviat des del %2$s 🦊 %3$s</string>
+  <!-- Send tab to synced devices: Authentication error button - Allows user to re-authenticate -->
+  <string name="sync_send_tab_error_auth_button">Inicia la sessió</string>
+  <!-- Send tab to synced devices: Authentication error button - Allows user to remove the currently connected account -->
+  <string name="sync_send_tab_error_auth_remove_account">Elimina el compte</string>
+  <!-- Send tab to synced devices: Empty state title - Displayed when the user has no synced devices -->
+  <string name="sync_send_tab_empty_state_title">No hi ha cap dispositiu connectat</string>
+  <!-- Send tab to synced devices: Empty state message - Displayed when the user has no synced devices -->
+  <string name="sync_send_tab_empty_state_description" tools:ignore="BrandUsage">Per enviar una pestanya, inicieu la sessió al Firefox en almenys un altre dispositiu.</string>
+  <!-- Send tab to synced devices: Empty state link - Displayed when the user has no synced devices -->
+  <string name="sync_send_tab_empty_state_link">Apreneu com connectar un dispositiu</string>
   <!-- Send tab to synced devices: Connectivity Error title -->
   <string name="sync_send_tab_error_connection_title">Comproveu la connexió a Internet</string>
   <!-- Send tab to synced devices: Connectivity Error message - Suggested user action after internet connection has been established -->
@@ -4471,6 +4512,18 @@
     %2$d is the current page number, and %3$d is the total number of pages.
   -->
   <string name="wrex_widget_page_position_content_description">%1$s, pàgina %2$d de %3$d</string>
+  <!-- Sports widget error card title shown when the user is offline. -->
+  <string name="wrex_widget_error_connection_offline_title">Sembla que esteu fora de línia</string>
+  <!-- Sports widget error card description shown when the user is offline. -->
+  <string name="wrex_widget_error_connection_offline_description">Comproveu la connexió a Internet i torneu-ho a provar.</string>
+  <!-- Sports widget error card title shown when match data fails to load. -->
+  <string name="wrex_widget_error_load_failed_title">No es pot mostrar la informació del partit ara mateix</string>
+  <!-- Sports widget error card description suggesting to refresh after match information could not be displayed. -->
+  <string name="wrex_widget_error_try_refreshing">Actualitzeu o torneu-ho a provar més tard.</string>
+  <!-- Sports widget error card title shown when the latest match results fail to load. -->
+  <string name="wrex_widget_error_results_load_failed_title">No es poden mostrar els resultats ara mateix</string>
+  <!-- Content description (for accessibility, not displayed) for teams which have not yet been determined in the match schedule. -->
+  <string name="wrex_widget_team_to_be_determined">Equip per determinar</string>
   <!--
     Privacy notice homepage banner
 
@@ -4483,6 +4536,18 @@
   <string name="privacy_notice_updated_homepage_message_privacy_notice" tools:ignore="UnusedResources">Avís de privadesa</string>
   <!-- The second active link used in privacy_notice_updated_homepage_message -->
   <string name="privacy_notice_updated_homepage_message_learn_more" tools:ignore="UnusedResources">Més informació</string>
+  <!--
+    Collections migration homepage card
+
+    Title shown on the collections to tab groups migration card on the homepage.
+  -->
+  <string name="collections_migration_homepage_banner_title">Les col·leccions ara són grups</string>
+  <!-- Message shown on the collections to tab groups migration card on the homepage. -->
+  <string name="collections_migration_homepage_card_message">Hi ha una manera més senzilla d’organitzar les pestanyes</string>
+  <!-- Link text shown on the collections to tab groups migration card that opens the tab groups page in the tab manager. -->
+  <string name="collections_migration_homepage_card_link">Mostra els meus grups de pestanyes</string>
+  <!-- Content description (not visible, for screen readers etc.) for the button that dismisses the collections to tab groups migration card. -->
+  <string name="collections_migration_card_close_button_content_description">Tanca</string>
   <!-- Google Lens prototype related strings -->
   <string name="preferences_debug_settings_google_lens_integration">Activa la integració amb el Google Lens</string>
   <!-- Lens image search button content description -->
@@ -4517,6 +4582,18 @@
   <string name="lens_camera_mode_qr">Escàner de QR</string>
   <!-- Toast shown when the user picks an image from the gallery in QR mode but no QR code is found in it -->
   <string name="lens_camera_qr_no_code_found">No s’ha trobat cap codi QR a la imatge</string>
+  <!-- Status shown under an image picked from the gallery or taken with the camera while it is being sent to Google Lens for a visual search -->
+  <string name="lens_camera_loading_status">S’està cercant</string>
+  <!-- Button shown under an image picked from the gallery or taken with the camera while it is being sent to Google Lens. Tapping it stops the search and returns to the camera. -->
+  <string name="lens_camera_loading_cancel_button">Cancel·la</string>
+  <!-- Snackbar message shown when an image picked from the gallery or taken with the camera could not be opened or read, so it was never sent to Google Lens. Shown after returning to the camera. -->
+  <string name="lens_camera_image_load_failed_v2">No s’ha pogut carregar aquesta imatge</string>
+  <!-- Snackbar message shown when an image picked from the gallery could not be opened or read, so it was never sent to Google Lens. Shown after returning to the camera. -->
+  <string name="lens_camera_image_load_failed">No s’ha pogut carregar aquesta imatge. Proveu-ne una altra.</string>
+  <!-- Snackbar message shown when an image picked from the gallery or taken with the camera could not be searched because of a network problem or an error from Google Lens. Shown after returning to the camera, next to the lens_camera_upload_failed_retry_button action. -->
+  <string name="lens_camera_upload_failed">No s’han pogut obtenir resultats del Google Lens</string>
+  <!-- Action in the snackbar shown when an image picked from the gallery or taken with the camera could not be searched with Google Lens. Tapping it searches the same image again. -->
+  <string name="lens_camera_upload_failed_retry_button">Torna-ho a provar</string>
   <!-- Title of the bottom sheet shown the first time the user opens the Google Lens camera screen -->
   <string name="lens_opt_out_title">Cerca-ho amb el Google Lens</string>
   <!-- Description of the bottom sheet shown the first time the user opens the Google Lens camera screen -->
@@ -4567,4 +4644,6 @@
   <string name="firefox_labs_feature_conflict">Aquesta funció no està disponible per a provar-la.</string>
   <!-- Text displayed on the Firefox Labs screen when there are no Labs experimental features present. -->
   <string name="firefox_labs_no_labs_available_description">No hi ha cap funció experimental per a provar ara mateix</string>
+  <!-- Title of the Firefox Labs Sandboxing experiment. -->
+  <string name="firefox_labs_website_isolation_title" tools:ignore="UnusedResources">Aïllament de llocs web</string>
 </resources>
