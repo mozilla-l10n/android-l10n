@@ -254,11 +254,21 @@
   <!-- Content description (not visible, for screen readers etc.) for recommended extensions in main menu -->
   <string name="browser_menu_recommended_extensions_content_description">پین معلومات</string>
   <!--
+    Extensions management fragment
+
+    Text displayed when there are no extensions to be shown
+  -->
+  <string name="extensions_management_no_extensions">دانگ ہچو بھلنی اف</string>
+  <!--
     Browser Toolbar
 
     Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred.
   -->
   <string name="browser_toolbar_translate">صفحہ اے مٹ کبو</string>
+  <!-- Accessibility description for the toolbar button displayed when the page the user is on has a video that can be opened in a picture-in-picture window -->
+  <string name="browser_toolbar_picture_in_picture">تصویر-ٹی-تصویر</string>
+  <!-- Accessibility description for the toolbar button displayed while the current page's video is playing in a picture-in-picture window. Tapping the button closes that window. -->
+  <string name="browser_toolbar_picture_in_picture_close">تصویر-ٹی-تصویر اے بند کبو</string>
   <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
   <string name="browser_toolbar_summarize_cfr_description">دا صفحہ اے سیکنڈ اتے ٹی گونڈ کننگ کن ڈیوائس اے سرفبو. ⚡️</string>
   <!--
@@ -269,6 +279,8 @@
     %2$s is the name of the language which the page was translated to. (For example: French)
   -->
   <string name="translation_toolbar_translated_from_and_to" tools:ignore="UnusedResources">%1$s ان %2$s ٹی مٹ مس</string>
+  <!-- Content description for the translate toolbar action that closes the translations toolbar. -->
+  <string name="translation_toolbar_close_action">کلہو خلاس کبو</string>
   <!--
     Page summaries
 
@@ -357,6 +369,14 @@
   <string name="onboarding_preferences_dialog_positive_button">مس</string>
   <!-- Terms of service onboarding title card label. 'Firefox' intentionally hardcoded here -->
   <string name="onboarding_welcome_to_firefox" tools:ignore="BrandUsage">Firefox ٹی ببوخیرٹ</string>
+  <!-- Terms of use (ToU) onboarding page continue button label. -->
+  <string name="onboarding_redesign_tou_agree_and_continue_button_label" tools:ignore="UnusedResources">برجا</string>
+  <!-- Onboarding header for the toolbar selection card. -->
+  <string name="onboarding_redesign_customize_toolbar_title" tools:ignore="UnusedResources">نم ڈس بار اے ہراڑے خوارے؟</string>
+  <!-- Onboarding label for 'Continue' button. -->
+  <string name="onboarding_redesign_continue_button" tools:ignore="UnusedResources">برجا</string>
+  <!-- Marketing onboarding page button label. Button to confirm choice and start browsing. -->
+  <string name="onboarding_marketing_redesign_positive_button" tools:ignore="UnusedResources">پکا</string>
   <!-- Sync onboarding redesign title. 'Firefox' is intentionally hardcoded. -->
   <string name="onboarding_redesign_sync_title" tools:ignore="BrandUsage,UnusedResources">ہر جا کہ Firefox استعمال کیرے ہمگام کبو</string>
   <!-- Sync onboarding redesign positive button text. -->
@@ -369,12 +389,26 @@
   <string name="onboarding_marketing_positive_button_1" tools:ignore="UnusedResources">منبو و ویبگشت شروع کبو</string>
   <!-- "Continue" onboarding button. -->
   <string name="nova_onboarding_continue_button">برجا</string>
+  <!-- "Continue browsing" onboarding button. -->
+  <string name="nova_onboarding_continue_browsing_button" tools:ignore="UnusedResources">ویبگشت ٹی برجا</string>
   <!-- "Not now" onboarding button. -->
   <string name="nova_onboarding_negative_button">داسہ نہ</string>
   <!-- Terms of use (ToU) onboarding title. -->
   <string name="nova_onboarding_tou_title" tools:ignore="UnusedResources">آجو و گام اسے کن تیارمبو</string>
+  <!-- "Set to default" onboarding button. -->
+  <string name="nova_onboarding_set_to_default_button">اصل ویبگشت کروک سیٹ کبو</string>
+  <!-- Sync onboarding button. -->
+  <string name="nova_onboarding_sync_button">ہمگام کننگ شروع کبو</string>
+  <!-- Body of the onboarding pairing card. Provides troubleshooting instructions when the QR code is not being displayed on the pairing computer. The "firefox.com/pair" URL should not be translated or edited. Bold tags should be preserved. -->
+  <string name="nova_onboarding_sync_pairing_body"><![CDATA[QR کوڈ اف؟ تینا کمپیوٹر ٹی <b>firefox.com/pair</b> اے انبو.]]></string>
+  <!-- Primary button of the onboarding pairing card. Opens the camera to scan the pairing QR code. -->
+  <string name="nova_onboarding_sync_pairing_scan_button">ہمجفت کروک کوڈ اسکین کبو</string>
+  <!-- Secondary button of the onboarding pairing card. Opens the Mozilla account sign-in page. -->
+  <string name="nova_onboarding_sync_pairing_email_button">ای میل تون سائن ان کبو</string>
   <!-- Marketing onboarding body link text. -->
   <string name="nova_onboarding_marketing_body_link_text_1">پین ہیل کبو</string>
+  <!-- Marketing onboarding primary button text. 'Firefox' is intentionally hardcoded. -->
+  <string name="nova_onboarding_marketing_primary_button_text" tools:ignore="BrandUsage,UnusedResources">Firefox اے کمک کبو</string>
   <!-- Marketing onboarding primary button text. -->
   <string name="nova_onboarding_marketing_primary_button_text_3">جی آؤ</string>
   <!-- Marketing onboarding secondary button text. -->
@@ -383,6 +417,17 @@
   <string name="nova_onboarding_marketing_secondary_button_text_2">اخہ</string>
   <!-- Notifications onboarding button. -->
   <string name="nova_onboarding_notifications_button">اعلاناتےملبو</string>
+  <plurals name="nova_onboarding_customize_prompt_body" tools:ignore="UnusedResources">
+    <!--
+      Customize prompt onboarding body.
+      %1$s is replaced by the product name (for example "Firefox"),
+      %2$,d is replaced by the number of trackers blocked. The comma represents the thousand
+      separator (e.g. 1,000 in English), and it will automatically use the correct character
+      for your locale (don't change or remove it).
+    -->
+    <item quantity="one">نما ویبگشت ٹی %1$s %2$,d ٹریکر اس تورے.</item>
+    <item quantity="other">نما ویبگشت ٹی %1$s %2$,d ٹریکر تورے.</item>
+  </plurals>
   <!--
     Search Widget
 
