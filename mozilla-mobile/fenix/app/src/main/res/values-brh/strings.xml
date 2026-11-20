@@ -542,6 +542,8 @@
   <string name="addons_permissions_allow_for_all_sites">کل سائٹ اتئے اجازت ایت</string>
   <!-- Hint displayed on input field for custom collection name -->
   <string name="customize_addon_collection_hint">مچی نا پن</string>
+  <!-- Primary button on confirmation dialog. Tapping it uninstalls the selected extension. -->
+  <string name="addon_remove_dialog_confirm">مٹائفبو</string>
   <!-- Title for the customize home screen section with bookmarks. -->
   <string name="customize_toggle_bookmarks">بک مارکاک</string>
   <!--
@@ -661,6 +663,8 @@
   <string name="library_desktop_bookmarks_unfiled">ایلو بکمارکاک</string>
   <!-- Option in Library to open History page -->
   <string name="library_history">تاریخچہ</string>
+  <!-- Content description (not visible, for screen readers etc.) for the check mark that replaces a site's icon in History and Recently closed tabs when the item is selected -->
+  <string name="library_item_selected_content_description">گچین مروک</string>
   <!-- Settings Page Title -->
   <string name="settings_title">سیٹنگاک</string>
   <!-- Content description (not visible, for screen readers etc.): "Close button for library settings" -->
@@ -705,6 +709,12 @@
   <string name="opening_screen_homepage">مون پنہ</string>
   <!-- Option for always opening the user's last-open tab when re-opening the app -->
   <string name="opening_screen_last_tab">گڈیکو ٹیب</string>
+  <!--
+    Studies
+
+    Title of the remove studies button
+  -->
+  <string name="studies_remove">مٹائفبو</string>
   <!-- Content description (not visible, for screen readers etc.): Create tab group button. Opens the create tab group sheet when pressed -->
   <string name="create_tab_group_content_description">ٹیب مچی اس جوڑ کبو</string>
   <!-- Text for the tab search bar placeholder -->
@@ -735,6 +745,8 @@
   <string name="tabs_tray_select_tabs">ٹیب اتے گچین کبو</string>
   <!-- Content description (not visible, for screen readers etc.): Close tab <title> button. %s is the tab title -->
   <string name="close_tab_title">%s ٹیب اے بند کبو</string>
+  <!-- Text for the menu button to remove a top site -->
+  <string name="remove_top_site">مٹائفبو</string>
   <!-- Title for introducing tab groups via an onboarding card shown in the tab manager. -->
   <string name="tab_group_onboarding_item_title">ٹیب مچی اس جوڑ کبو</string>
   <!-- Description for tab groups onboarding shown in the tab manager when in list view. -->
@@ -763,6 +775,11 @@
   <string name="tab_group_color_green">گونکی</string>
   <!-- Text for the button to clear all history -->
   <string name="history_delete_all">تاریخچہ مٹائفبو</string>
+  <!--
+    History multi select title in app bar
+    %1$d is the number of bookmarks selected
+  -->
+  <string name="history_multi_select_title">%1$d گچین مروک</string>
   <!-- Text shown when no history exists -->
   <string name="history_empty_message">ہچو تاریخچہ اف</string>
   <!-- Text for the snackbar to confirm that a single download item has been removed. %1$s is the name of the download item. -->
@@ -771,6 +788,11 @@
   <string name="download_in_progress_snackbar">ڈاونلوڈ برجا اے…</string>
   <!-- Text for the snackbar to confirm that a download has completed. -->
   <string name="download_completed_snackbar">ڈاونلوڈ پورہ مس</string>
+  <!--
+    History multi select title in app bar
+    %1$d is the number of downloads selected
+  -->
+  <string name="download_multi_select_title">%1$d گچین مروک</string>
   <!-- Title for the dialog that is shown when there is not enough storage space to download a file. -->
   <string name="download_file_has_not_enough_storage_dialog_title">داخس جاگہ اف</string>
   <!-- Text for the button to delete a single downloaded file item -->
@@ -819,6 +841,8 @@
   <string name="unsubmitted_crash_dialog_positive_button">پننگ نا رپورٹ اے رائی کبو</string>
   <!-- Snackbar title that confirms a bookmark was saved into a folder. %s is the name of the folder the bookmark was saved into. -->
   <string name="bookmark_saved_in_folder_snackbar">“%s” ٹی خوندی اے</string>
+  <!-- Bookmark menu move button -->
+  <string name="bookmark_menu_move_button">سرفبو</string>
   <!-- Bookmark overflow menu share button -->
   <string name="bookmark_menu_share_button">بشخبو</string>
   <!-- Bookmark overflow menu select all bookmarks -->
@@ -839,6 +863,11 @@
   <string name="bookmark_sort_menu_a_to_z">A ان Z ترتیب ایت</string>
   <!-- Label for button to sort bookmarks in reverse alphabetical order in the bookmark sorting overflow menu. -->
   <string name="bookmark_sort_menu_z_to_a">Z ان A ترتیب ایت</string>
+  <!--
+    Bookmark multi select title in app bar
+    %1$d is the number of bookmarks selected
+  -->
+  <string name="bookmarks_multi_select_title">%1$d گچین مروک</string>
   <!-- Bookmark editing screen title -->
   <string name="edit_bookmark_fragment_title">نشانی بدل کبو</string>
   <!-- Text indicating which folder a bookmark or folder will be saved in -->
@@ -851,6 +880,8 @@
   <string name="bookmark_empty_list_title">داساکن ہچو نشانی اف</string>
   <!-- Bookmark screen folder description. %s is the count of bookmark folder children -->
   <string name="bookmarks_folder_description">فولڈر ٹی نشانیک: %s</string>
+  <!-- Bookmark snackbar message for moving a single item. %1$s is the title of the item being moved and %2$s is the new parent folder of the bookmark -->
+  <string name="bookmark_moved_single_item">دا %1$s %2$s اے سرفنگا</string>
   <!-- Preference for altering the camera access for all websites -->
   <string name="preference_phone_feature_camera">کیمرہ</string>
   <!-- Preference for altering the microphone access for all websites -->
@@ -881,10 +912,17 @@
   <string name="create_collection_name_collection">مچی نا پن</string>
   <!-- Button to select all tabs in the "select tabs" step of the collection creator -->
   <string name="create_collection_select_all">کل ٹیب اتے گچین کبو</string>
+  <!--
+    Text to show users how many tabs they have selected in the "select tabs" step of the collection creator.
+    %d is a placeholder for the number of tabs selected.
+  -->
+  <string name="create_collection_save_to_collection_tabs_selected">%d ٹیب گچین مروک</string>
   <!-- Snackbar action to view the collection the user just created or updated -->
   <string name="create_collection_view">ہربو</string>
   <!-- Sub-header in the dialog to share a link to an app from the most-recent sorted list -->
   <string name="share_link_recent_apps_subheader">زوتیاٹ دو بروک</string>
+  <!-- Content description announced when a device is selected in the share dialog -->
+  <string name="send_to_devices_device_selected_content_description">گچین مروک</string>
   <!--
     Text shown in the notification that pops up to remind the user to set fenix as default browser.
     The app name is in the text, due to limitations with localizing Nimbus experiments
@@ -896,6 +934,8 @@
   <string name="snackbar_added_to_shortcuts">شارٹ کٹ تے ٹی شاغنگا!</string>
   <!-- Confirmation message displayed when user adds a page to a tab group. %1$s is the tab group's name. -->
   <string name="snackbar_tab_added_to_group">شاغنگا %1$s ٹی</string>
+  <!-- Confirmation message displayed when user moves a page from one tab group to another. %1$s is the tab group's name. -->
+  <string name="snackbar_tab_moved_to_group">دا %1$s اے سرفنگا</string>
   <!-- Button text displayed with a confirmation message when the user adds or moves a page to a tab group. Tapping it displays the tab group. -->
   <string name="snackbar_action_view">ہربو</string>
   <!-- Radio button in the delete browsing data dialog to delete history items for today and yesterday. -->
