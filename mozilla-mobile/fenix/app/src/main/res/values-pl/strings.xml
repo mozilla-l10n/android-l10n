@@ -3263,6 +3263,10 @@
   <string name="preferences_credit_cards_save_and_autofill_cards_2">Zachowywanie i\u00a0wypełnianie metod płatności</string>
   <!-- Preference summary for saving and autofilling payment method data. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_credit_cards_save_and_autofill_cards_summary_2">%s szyfruje wszystkie zachowywane metody płatności</string>
+  <!-- Preference for saving the security codes of credit cards. -->
+  <string name="preferences_credit_cards_save_security_codes">Zachowywanie kodów zabezpieczających</string>
+  <!-- Preference summary for saving the security codes of credit cards. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_credit_cards_save_security_codes_summary">%s szyfruje numer karty i\u00a0kod zabezpieczający, co przyspiesza następne płatności</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
   <string name="preferences_credit_cards_sync_cards_across_devices">Synchronizuj karty między urządzeniami</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
@@ -3299,6 +3303,8 @@
   <string name="credit_cards_expiration_date_year">Rok daty ważności</string>
   <!-- The header for the name on the credit card -->
   <string name="credit_cards_name_on_card">Imię i\u00a0nazwisko</string>
+  <!-- The header for the optional security code of a credit card. CVV is the abbreviation of the card security code. -->
+  <string name="credit_cards_cvv_optional">Kod CVV (opcjonalnie)</string>
   <!-- The text for the "Delete card" menu item for deleting a credit card -->
   <string name="credit_cards_menu_delete_card">Usuń kartę</string>
   <!-- The text for the "Delete card" button for deleting a credit card -->
@@ -3315,10 +3321,16 @@
   <string name="credit_cards_cancel_button">Anuluj</string>
   <!-- Title of the "Saved cards" screen -->
   <string name="credit_cards_saved_cards">Zachowane karty</string>
+  <!-- Text in the saved cards list that indicates the security code for a credit card is being stored -->
+  <string name="credit_cards_cvv_saved">Zachowano kod CVV</string>
   <!-- Error message for card number validation -->
   <string name="credit_cards_number_validation_error_message_2">Podaj prawidłowy numer karty</string>
   <!-- Error message for card name on card validation -->
   <string name="credit_cards_name_on_card_validation_error_message_2">Dodaj imię i\u00a0nazwisko</string>
+  <!-- Error message for a credit card security code that does not meet the 3-digit length requirement. -->
+  <string name="credit_cards_cvv_validation_error_message">Kod zabezpieczający musi mieć 3 cyfry</string>
+  <!-- Error message for a credit card security code that does not meet the 4-digit length requirement (used for American Express cards only) -->
+  <string name="credit_cards_cvv_amex_validation_error_message">Kody zabezpieczające American Express mają 4 cyfry</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
   <string name="credit_cards_biometric_prompt_message">Odblokuj, aby wyświetlić zachowane karty</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
@@ -3731,6 +3743,12 @@
   <!--
     Translations options dialog
 
+    Title of the translation options dialog that allows a user to set their translation preferences for the site the user is currently on.
+  -->
+  <string name="translation_option_bottom_sheet_title_heading2">Preferencje tłumaczenia</string>
+  <!--
+    Translations options dialog
+
     Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on.
   -->
   <string name="translation_option_bottom_sheet_title_heading">Opcje tłumaczenia</string>
@@ -3969,6 +3987,8 @@
   <string name="certificate_details_panel_secure_connection_title">Zabezpieczone połączenie</string>
   <!-- Certificate panel - Label for the organization, locality and country the website's certificate was issued to -->
   <string name="certificate_details_panel_issued_to_label">Certyfikat wystawiony dla:</string>
+  <!-- Certificate panel - Label for the name of the certificate authority that verified and issued the website's certificate -->
+  <string name="certificate_details_panel_verified_by_label">Zweryfikowane przez:</string>
   <!-- Certificate panel - Content description (not visible, for screen readers etc.) for the EU trust mark logo, shown when the website's certificate is a Qualified Website Authentication Certificate (QWAC) as specified in EU Regulation 2024/1183 -->
   <string name="certificate_details_panel_eu_trust_mark_content_description">Znak zaufania UE</string>
   <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
@@ -4045,6 +4065,8 @@
   <string name="clear_site_data_dialog_negative_button_text">Anuluj</string>
   <!-- Text for the connection security panel when the site is secure. -->
   <string name="connection_security_panel_secure">Zabezpieczone połączenie</string>
+  <!-- Action description (not visible, for screen readers etc.) for the “Secure connection” link in the protection panel header, which opens a page showing the website's certificate details. Screen readers announce it after “Double tap to” -->
+  <string name="connection_security_panel_view_certificate_details">wyświetlić informacje o\u00a0certyfikacie</string>
   <!-- Text for the connection security panel when the site is not secure. -->
   <string name="connection_security_panel_not_secure">Niezabezpieczone połączenie</string>
   <!-- Text for the connection security panel when accessed from local PDF. -->
@@ -4555,6 +4577,8 @@
   <string name="wrex_widget_match_suspended">Zawieszony</string>
   <!-- Label shown on the sports widget match status badge when a match has been postponed to a later date. -->
   <string name="wrex_widget_match_postponed">Przełożony</string>
+  <!-- Label shown on the sports widget match status badge when a match has been canceled. -->
+  <string name="wrex_widget_match_canceled">Odwołany</string>
   <!-- Sports widget action label to refresh match data after an error. -->
   <string name="wrex_widget_error_refresh">Odśwież</string>
   <!-- Sports widget menu item to view the team's match results. -->
