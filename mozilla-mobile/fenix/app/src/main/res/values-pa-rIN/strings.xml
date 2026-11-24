@@ -616,6 +616,14 @@
   <string name="nova_onboarding_sync_subtitle">ਪਲਕ ਝਪਕਦੇ ਹੀ ਕਿਸੇ ਵੀ ਡਿਵਾਈਸ ਉੱਤੇ ਬੁੱਕਮਾਰਕ, ਪਾਸਵਰਡ ਅਤੇ ਹੋਰ ਕਈ ਚੀਜ਼ਾਂ ਲਵੋ। ਤੁਹਾਡਾ ਨਿੱਜੀ ਡਾਟਾ ਇੰਕ੍ਰਿਪਸ਼ਨ ਨਾਲ ਸੁਰੱਖਿਅਤ ਰਹਿੰਦਾ ਹੈ।</string>
   <!-- Sync onboarding button. -->
   <string name="nova_onboarding_sync_button">ਸਿੰਕ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ</string>
+  <!-- Title of onboarding pairing card. Displayed when installing Firefox for Android by using a pairing link from Firefox for Desktop. "Scan" refers to scanning the QR code displayed on the computer. -->
+  <string name="nova_onboarding_sync_pairing_title">ਆਪਣੇ ਕੰਪਿਊਟਰ ਨਾਲ ਪੇਅਰ ਕਰਨ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਕੈਨ ਕਰੋ</string>
+  <!-- Body of the onboarding pairing card. Provides troubleshooting instructions when the QR code is not being displayed on the pairing computer. The "firefox.com/pair" URL should not be translated or edited. Bold tags should be preserved. -->
+  <string name="nova_onboarding_sync_pairing_body"><![CDATA[ਕੋਈ QR ਕੋਡ ਨਹੀਂ ਹੈ? ਆਪਣੇ ਕੰਪਿਊਟਰ ਉੱਤੇ <b>firefox.com/pair</b> ਉੱਤੇ ਜਾਓ।]]></string>
+  <!-- Primary button of the onboarding pairing card. Opens the camera to scan the pairing QR code. -->
+  <string name="nova_onboarding_sync_pairing_scan_button">ਪੇਅਰ ਕਰਨ ਵਾਲਾ ਕੋਡ ਸਕੈਨ ਕਰੋ</string>
+  <!-- Secondary button of the onboarding pairing card. Opens the Mozilla account sign-in page. -->
+  <string name="nova_onboarding_sync_pairing_email_button">ਈਮੇਲ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ</string>
   <!-- Marketing onboarding title. -->
   <string name="nova_onboarding_marketing_title">ਬੇਹਤਰ ਇੰਟਰਨੈੱਟ ਬਣਾਉਣ ਲਈ ਸਾਡੀ ਮਦਦ ਕਰੋ</string>
   <!--
@@ -1179,6 +1187,8 @@
   <string name="preferences_enable_sync_title">ਇਹ ਡਿਵਾਈਸ ਸਿੰਕ ਕਰੋ</string>
   <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is on. -->
   <string name="preferences_enable_sync_summary_sync_enabled">ਤੁਹਾਡੇ ਡਾਟੇ ਦਾ ਬੈਕਅੱਪ ਲਿਆ ਗਿਆ ਹੈ ਅਤੇ ਸਿੰਕ ਕੀਤੇ ਡਿਵਾਈਸਾਂ ਲਈ ਮੌਜੂਦ ਹੈ।</string>
+  <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is off. It explains where synced data comes from. -->
+  <string name="preferences_enable_sync_summary_sync_disabled_2">ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚ ਸੰਭਾਲੇ ਹੋਏ ਡਾਟੇ ਨੂੰ ਵਰਤ ਕੇ।</string>
   <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is off. It explains where synced data comes from. %1$s is the Firefox brand name. -->
   <string name="preferences_enable_sync_summary_sync_disabled">ਤੁਹਾਡੇ %1$s ਖਾਤੇ ਵਿੱਚ ਸੰਭਾਲੇ ਡਾਟੇ ਦੀ ਵਰਤੋਂ ਕਰਕੇ।</string>
   <!-- Summary for the sync preference category. -->
@@ -1698,6 +1708,8 @@
   <string name="add_to_new_tab_group_content_description">ਨਵੇਂ ਟੈਬ ਗਰੁੱਪ ਵਿੱਚ ਜੋੜੋ</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">ਨਵਾਂ ਟੈਬ ਗਰੁੱਪ</string>
+  <!-- Label to add a link in a new tab inside a tab group. -->
+  <string name="contextmenu_open_in_tab_group">ਟੈਬ ਗਰੁੱਪ ਵਿੱਚ ਖੋਲ੍ਹੋ</string>
   <plurals name="tab_group_tabs_count_subtitle">
     <!--
       Subtitle for the number of tabs in a tab group.
@@ -1740,6 +1752,14 @@
   <string name="close_tab_and_delete_group_confirmation_dialog_confirm">ਗਰੁੱਪ ਨੂੰ ਹਟਾਓ</string>
   <!-- Text shown on the cancel button in the Close last tab and delete tab group confirmation dialog. -->
   <string name="close_tab_and_delete_group_confirmation_dialog_cancel">ਰੱਦ ਕਰੋ</string>
+  <!-- Title of the confirmation dialog shown when moving the last tab out of a group will delete the group. %s is the group name, which defaults to a value such as "Group 1" but can be edited by the user to contain arbitrary text. -->
+  <string name="move_last_tab_and_delete_group_confirmation_dialog_title">ਕੀ %s ਤੋਂ ਆਖਰੀ ਟੈਬ ਨੂੰ ਭੇਜਣਾ ਹੈ?</string>
+  <!-- Body of the confirmation dialog shown when moving the last tab out of a group will delete the group. %1$s is the destination group name. %2$s is the source group name that will be deleted. Both names default to values such as "Group 1" but can be edited by the user to contain arbitrary text. -->
+  <string name="move_last_tab_and_delete_group_confirmation_dialog_body">ਇਸ ਟੈਬ ਨੂੰ %1$s ਵਿੱਚ ਭੇਜਿਆ ਜਾਵੇਗਾ। %2$s ਨੂੰ ਖਾਲੀ ਹੋਣ ਕਰਕੇ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ।</string>
+  <!-- Text shown on the confirm button for the confirmation dialog shown when moving the last tab out of a group will delete the group. -->
+  <string name="move_last_tab_and_delete_group_confirmation_dialog_confirm">ਟੈਬ ਨੂੰ ਭੇਜੋ</string>
+  <!-- Text shown on the cancel button for the confirmation dialog shown when moving the last tab out of a group will delete the group. -->
+  <string name="move_last_tab_and_delete_group_confirmation_dialog_cancel">ਰੱਦ ਕਰੋ</string>
   <!-- Content description for the three dot button next to a tab group" -->
   <string name="tab_group_three_dot_button_content_description">ਹੋਰ ਚੋਣਾਂ</string>
   <!--
@@ -2110,15 +2130,21 @@
   <string name="unsubmitted_crash_dialog_negative_button_2">ਬੰਦ ਕਰੋ</string>
   <!-- Unsubmitted crash dialog negative button to never be asked for the submission -->
   <string name="unsubmitted_crash_requested_by_devs_dialog_never_button">ਫੇਰ ਕਦੇ ਨਾ ਵੇਖਾਓ</string>
+  <!-- Unsubmitted crash dialog negative button to never be asked for the submission, displayed in all capital letters. -->
+  <string name="unsubmitted_crash_requested_by_devs_dialog_never_button_2" tools:ignore="UnusedResources">ਫੇਰ ਕਦੇ ਨਾ ਦਿਖਾਇਓ</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button_2">ਭੇਜੋ</string>
   <!-- Unsubmitted crash dialog positive button to submit crash report -->
   <string name="unsubmitted_crash_dialog_positive_button">ਕਰੈਸ਼ ਰਿਪੋਰਟ ਭੇਜੋ</string>
+  <!-- Unsubmitted crash dialog positive button to submit crash report, displayed in all capital letters. -->
+  <string name="unsubmitted_crash_dialog_positive_button_3" tools:ignore="UnusedResources">ਕਰੈਸ਼ ਸੰਬੰਧੀ ਜਾਣਕਾਰੀ ਭੇਜੋ</string>
   <!-- Body text for crash report dialog. %s is the link text in the annotated string (ie. "Learn More") -->
   <string name="unsubmitted_crash_dialog_body">ਕਰੈਸ਼ ਰਿਪੋਰਟਾਂ ਸਾਨੂੰ ਬਰਾਊਜ਼ਰ ਦੀ ਜਾਂਚ ਪੜਤਾਲ ਕਰਨ ਅਤੇ ਮਸਲਿਆਂ ਨੂੰ ਠੀਕ ਕਰਨ ਮਦਦ ਕਰਦੀਆਂ ਹਨ। ਰਿਪੋਰਟਾਂ ਵਿੱਚ ਨਿੱਜੀ ਜਾਂ ਸੰਵੇਦਨਸ਼ੀਲ ਡਾਟਾ ਸ਼ਾਮਲ ਹੋ ਸਕਦਾ ਹੈ। %s</string>
   <string name="unsubmitted_crash_dialog_learn_more">ਹੋਰ ਜਾਣੋ</string>
   <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy -->
   <string name="unsubmitted_crash_requested_by_devs_learn_more">ਹੋਰ ਜਾਣੋ</string>
+  <!-- Unsubmitted crash dialog button to open a web page with more details on the feature and privacy policy, displayed in all capital letters. -->
+  <string name="unsubmitted_crash_requested_by_devs_learn_more_2" tools:ignore="UnusedResources">ਹੋਰ ਸਿੱਖੋ</string>
   <!--
     Bookmarks
 
@@ -2550,6 +2576,12 @@
   <string name="snackbar_private_tab_closed">ਪ੍ਰਾਈਵੇਟ ਟੈਬ ਨੂੰ ਬੰਦ ਕੀਤਾ</string>
   <!-- Text shown in snackbar to undo deleting a tab, top site or collection -->
   <string name="snackbar_deleted_undo">UNDO</string>
+  <!-- Confirmation message displayed when user adds a page to a tab group. %1$s is the tab group's name. -->
+  <string name="snackbar_tab_added_to_group">%1$s ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ</string>
+  <!-- Confirmation message displayed when user moves a page from one tab group to another. %1$s is the tab group's name. -->
+  <string name="snackbar_tab_moved_to_group">%1$s ਵਿੱਚ ਭੇਜਿਆ</string>
+  <!-- Button text displayed with a confirmation message when the user adds or moves a page to a tab group. Tapping it displays the tab group. -->
+  <string name="snackbar_action_view">ਵੇਖੋ</string>
   <!--
     QR code scanner prompt which appears after scanning a code, but before navigating to it
     %1$s is the name of the app (for example "Firefox"), %2$s is the URL or text scanned
@@ -3106,6 +3138,8 @@
   <string name="ip_protection_learn_more">ਹੋਰ ਜਾਣੋ</string>
   <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
   <string name="ip_protection_data_limit_label">ਮਹੀਨੇਵਾਰ ਡਾਟਾ ਹੱਦ</string>
+  <!-- Accessibility description for the button that closes promotional banners or messages on the VPN settings screen (without triggering any effect) -->
+  <string name="ip_protection_settings_message_dismiss">ਖ਼ਾਰਜ ਕਰੋ</string>
   <!--
     Data usage shown on the browser VPN settings screen.
     %1$.1f is the data remaining in GB (for example "8.3").
@@ -3232,6 +3266,10 @@
   <string name="preferences_credit_cards_save_and_autofill_cards_2">ਭੁਗਤਾਨ ਦੇ ਢੰਗ ਸੰਭਾਲੋ ਅਤੇ ਭਰੋ</string>
   <!-- Preference summary for saving and autofilling payment method data. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_credit_cards_save_and_autofill_cards_summary_2">%s ਤੁਹਾਡੇ ਵਲੋਂ ਸੰਭਾਲੇ ਸਾਰੇ ਭੁਗਤਾਨ ਢੰਗਾਂ ਨੂੰ ਇੰਕ੍ਰਿਪਟ ਕਰਦਾ ਹੈ</string>
+  <!-- Preference for saving the security codes of credit cards. -->
+  <string name="preferences_credit_cards_save_security_codes">ਸੁਰੱਖਿਆ ਕੋਡਾਂ ਨੂੰ ਸੰਭਾਲੋ</string>
+  <!-- Preference summary for saving the security codes of credit cards. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_credit_cards_save_security_codes_summary">%s ਬਾਅਦ ਵਿੱਚ ਵੱਧ ਤੇਜ਼ੀ ਨਾਲ ਭੁਗਤਾਨ ਵਾਸਤੇ ਤੁਹਾਡੇ ਕਾਰਡ ਨੰਬਰ ਅਤੇ ਸੁਰੱਖਿਆ ਕੋਡ ਨੂੰ ਇੰਕ੍ਰਿਪਟ ਕਰਦਾ ਹੈ</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
   <string name="preferences_credit_cards_sync_cards_across_devices">ਡਿਵਾਈਸਾਂ ਵਿਚਾਲੇ ਕਾਰਡਾਂ ਨੂੰ ਸਿੰਕ ਕਰੋ</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
@@ -3268,6 +3306,8 @@
   <string name="credit_cards_expiration_date_year">ਮਿਆਦ ਪੁੱਗਣ ਤਾਰੀਖ ਸਾਲ</string>
   <!-- The header for the name on the credit card -->
   <string name="credit_cards_name_on_card">ਕਾਰਡ ਉੱਤੇ ਨਾਂ</string>
+  <!-- The header for the optional security code of a credit card. CVV is the abbreviation of the card security code. -->
+  <string name="credit_cards_cvv_optional">CVV (ਚੋਣਵਾਂ)</string>
   <!-- The text for the "Delete card" menu item for deleting a credit card -->
   <string name="credit_cards_menu_delete_card">ਕਾਰਡ ਹਟਾਓ</string>
   <!-- The text for the "Delete card" button for deleting a credit card -->
@@ -3284,10 +3324,16 @@
   <string name="credit_cards_cancel_button">ਰੱਦ ਕਰੋ</string>
   <!-- Title of the "Saved cards" screen -->
   <string name="credit_cards_saved_cards">ਸੰਭਾਲੇ ਹੋਏ ਕਾਰਡ</string>
+  <!-- Text in the saved cards list that indicates the security code for a credit card is being stored -->
+  <string name="credit_cards_cvv_saved">ਸੰਭਾਲਿਆ CVV</string>
   <!-- Error message for card number validation -->
   <string name="credit_cards_number_validation_error_message_2">ਵਾਜਬ ਕਾਰਡ ਨੰਬਰ ਭਰੋ</string>
   <!-- Error message for card name on card validation -->
   <string name="credit_cards_name_on_card_validation_error_message_2">ਨਾਂ ਜੋੜੋ</string>
+  <!-- Error message for a credit card security code that does not meet the 3-digit length requirement. -->
+  <string name="credit_cards_cvv_validation_error_message">ਸੁਰੱਖਿਆ ਕੋਡ 3 ਅੰਕਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ</string>
+  <!-- Error message for a credit card security code that does not meet the 4-digit length requirement (used for American Express cards only) -->
+  <string name="credit_cards_cvv_amex_validation_error_message">American Express ਲਈ ਸੁਰੱਖਿਆ ਕੋਡ 4 ਅੰਕਾਂ ਦੇ ਹੁੰਦੇ ਹਨ</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
   <string name="credit_cards_biometric_prompt_message">ਆਪਣੇ ਸੰਭਾਲੇ ਹੋਏ ਕਾਰਡ ਵੇਖਣ ਲਈ ਅਣ-ਲਾਕ ਕਰੋ</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
@@ -3700,6 +3746,12 @@
   <!--
     Translations options dialog
 
+    Title of the translation options dialog that allows a user to set their translation preferences for the site the user is currently on.
+  -->
+  <string name="translation_option_bottom_sheet_title_heading2">ਅਨੁਵਾਦ ਪਸੰਦਾਂ</string>
+  <!--
+    Translations options dialog
+
     Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on.
   -->
   <string name="translation_option_bottom_sheet_title_heading">ਉਲੱਥੇ ਲਈ ਚੋਣਾਂ</string>
@@ -3937,6 +3989,8 @@
   <string name="certificate_details_panel_secure_connection_title">ਸੁਰੱਖਿਅਤ ਕਨੈਕਸ਼ਨ</string>
   <!-- Certificate panel - Label for the organization, locality and country the website's certificate was issued to -->
   <string name="certificate_details_panel_issued_to_label">ਸਰਟੀਫਿਕੇਟ ਜਾਰੀ ਕੀਤਾ:</string>
+  <!-- Certificate panel - Label for the name of the certificate authority that verified and issued the website's certificate -->
+  <string name="certificate_details_panel_verified_by_label">ਜਾਂਚ ਕਰਤਾ:</string>
   <!-- Certificate panel - Content description (not visible, for screen readers etc.) for the EU trust mark logo, shown when the website's certificate is a Qualified Website Authentication Certificate (QWAC) as specified in EU Regulation 2024/1183 -->
   <string name="certificate_details_panel_eu_trust_mark_content_description">EU ਟਰੱਸਟ ਮਾਰਕ</string>
   <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
@@ -4006,6 +4060,8 @@
   <string name="clear_site_data_dialog_negative_button_text">ਰੱਦ ਕਰੋ</string>
   <!-- Text for the connection security panel when the site is secure. -->
   <string name="connection_security_panel_secure">ਸੁਰੱਖਿਅਤ ਕਨੈਕਸ਼ਨ</string>
+  <!-- Action description (not visible, for screen readers etc.) for the “Secure connection” link in the protection panel header, which opens a page showing the website's certificate details. Screen readers announce it after “Double tap to” -->
+  <string name="connection_security_panel_view_certificate_details">ਸਰਟੀਫਿਕੇਟ ਵੇਰਵਿਆਂ ਨੂੰ ਵੇਖੋ</string>
   <!-- Text for the connection security panel when the site is not secure. -->
   <string name="connection_security_panel_not_secure">ਕਨੈਕਸ਼ਨ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੈ</string>
   <!-- Text for the connection security panel when accessed from local PDF. -->
@@ -4516,6 +4572,8 @@
   <string name="wrex_widget_match_suspended">ਮੁਅੱਤਲ ਕੀਤਾ</string>
   <!-- Label shown on the sports widget match status badge when a match has been postponed to a later date. -->
   <string name="wrex_widget_match_postponed">ਟਾਲਿਆ</string>
+  <!-- Label shown on the sports widget match status badge when a match has been canceled. -->
+  <string name="wrex_widget_match_canceled">ਰੱਦ ਕੀਤਾ</string>
   <!-- Sports widget action label to refresh match data after an error. -->
   <string name="wrex_widget_error_refresh">ਤਾਜ਼ਾ ਕਰੋ</string>
   <!-- Sports widget menu item to view the team's match results. -->
