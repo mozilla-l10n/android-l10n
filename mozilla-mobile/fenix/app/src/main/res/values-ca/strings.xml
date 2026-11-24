@@ -1463,6 +1463,8 @@
     Title of preference for tabs management
   -->
   <string name="preferences_tabs">Pestanyes</string>
+  <!-- Title of preference that allows a user to specify the tab layout -->
+  <string name="preferences_tab_layout">Disposició de les pestanyes</string>
   <!-- Option for a list tab view -->
   <string name="tab_view_list">Llista</string>
   <!-- Option for a grid tab view -->
@@ -1509,18 +1511,28 @@
   <string name="opening_screen_last_tab_summary">Obre en la darrera pestanya</string>
   <!-- Summary for homepage preference indicating opening the homepage when re-opening the app after four hours of inactivity -->
   <string name="opening_screen_after_four_hours_of_inactivity_summary">Obre en la pàgina d’inici després de quatre hores</string>
+  <!--
+    Tab organization
+
+    Category header for the preferences that control how tabs are organized
+  -->
+  <string name="preferences_tab_organization">Organització de les pestanyes</string>
   <!-- Title of the preference that allows a user to enable or disable the inactive tabs feature -->
   <string name="preferences_inactive_tabs_toggle_title">Pestanyes inactives</string>
   <!-- Summary of the preference that allows a user to enable or disable the inactive tabs feature. -->
   <string name="preferences_inactive_tabs_title">Les pestanyes que no hàgiu vist des de fa dues setmanes es mouran a la secció d’inactives.</string>
   <!-- Title of the preference that allows a user to enable or disable the tab groups feature -->
   <string name="preferences_tab_groups_title">Grups de pestanyes</string>
+  <!-- Summary of the preference that allows a user to enable or disable the tab groups feature -->
+  <string name="preferences_tab_groups_description">Organitzeu les pestanyes en grups que podeu anomenar i desar.</string>
   <!--
     Privacy report
 
     Category header of a preference that allows a user to enable or disable the privacy report feature
   -->
   <string name="preferences_privacy_report">Informe de privadesa</string>
+  <!-- Title of the privacy report preference that allows a user to enable or disable the feature -->
+  <string name="preferences_privacy_report_title">Activa l’informe de privadesa</string>
   <!--
     Studies
 
@@ -1682,6 +1694,8 @@
   <string name="add_to_new_tab_group_content_description">Afegeix a un grup de pestanyes nou</string>
   <!-- Label for adding to a new tab group. -->
   <string name="add_to_new_tab_group_title">Grup de pestanyes nou</string>
+  <!-- Label to add a link in a new tab inside a tab group. -->
+  <string name="contextmenu_open_in_tab_group">Obre en un grup de pestanyes</string>
   <plurals name="tab_group_tabs_count_subtitle">
     <!--
       Subtitle for the number of tabs in a tab group.
@@ -1726,6 +1740,11 @@
   <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Cancel·la</string>
   <!-- Content description for the three dot button next to a tab group" -->
   <string name="tab_group_three_dot_button_content_description">Més opcions</string>
+  <!--
+    Content description for the Expand button on the contracted menu for a tab group:
+    when tapped, tabs are displayed in an expanded grid or list view, taking up the full screen.
+  -->
+  <string name="tab_groups_strip_expand_group_content_description">Amplia per a mostrar les pestanyes a pantalla completa</string>
   <!-- Text shown on the edit button for a tab group on the three dot menu -->
   <string name="tab_group_three_dot_menu_edit">Edita</string>
   <!-- Text shown on the ungroup button for a tab group on the three dot menu -->
@@ -1746,10 +1765,14 @@
   <string name="ungroup_tab_group_confirmation_dialog_confirm">Desagrupa</string>
   <!-- Text shown on the cancel button in the Ungroup tab group confirmation dialog. -->
   <string name="ungroup_tab_group_confirmation_dialog_cancel">Cancel·la</string>
+  <!-- Custom accessibility action to reorder a tab up rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_up">Mou la pestanya cap amunt</string>
   <!-- Custom accessibility action to reorder a tab left rather than dragging. -->
   <string name="custom_accessibility_action_reorder_tab_left">Mou la pestanya a l’esquerra</string>
   <!-- Custom accessibility action to reorder a tab right rather than dragging. -->
   <string name="custom_accessibility_action_reorder_tab_right">Mou la pestanya a la dreta</string>
+  <!-- Custom accessibility action to reorder a tab down rather than dragging. -->
+  <string name="custom_accessibility_action_reorder_tab_down">Mou la pestanya cap a baix</string>
   <!--
     Color labels for tab groups, used for accessibility and selection UI.
 
@@ -2447,6 +2470,8 @@
   <string name="sent_from_firefox_template" tools:ignore="UnusedResources">%1$s\n\nEnviat des del %2$s 🦊 Proveu el navegador mòbil: %3$s</string>
   <!-- A short message template for the shared link with a footer. %1$s is the shared link, %2$s is the app name (e.g. Firefox) and %3$s is a download link for the app. -->
   <string name="sent_from_firefox_template_short" tools:ignore="UnusedResources">%1$s\n\nEnviat des del %2$s 🦊 %3$s</string>
+  <!-- Send tab to synced devices: Authentication error title - Message asking the user to re-authenticate -->
+  <string name="sync_send_tab_error_auth_title">Torneu a iniciar la sessió per a enviar pestanyes entre dispositius</string>
   <!-- Send tab to synced devices: Authentication error button - Allows user to re-authenticate -->
   <string name="sync_send_tab_error_auth_button">Inicia la sessió</string>
   <!-- Send tab to synced devices: Authentication error button - Allows user to remove the currently connected account -->
@@ -3269,6 +3294,10 @@
   <string name="credit_cards_number_validation_error_message_2">Introduïu un número de targeta vàlid</string>
   <!-- Error message for card name on card validation -->
   <string name="credit_cards_name_on_card_validation_error_message_2">Afegiu un nom</string>
+  <!-- Error message for a credit card security code that does not meet the 3-digit length requirement. -->
+  <string name="credit_cards_cvv_validation_error_message">El codi de seguretat ha de tenir 3 dígits</string>
+  <!-- Error message for a credit card security code that does not meet the 4-digit length requirement (used for American Express cards only) -->
+  <string name="credit_cards_cvv_amex_validation_error_message">Els codis de seguretat d’American Express tenen 4 dígits</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
   <string name="credit_cards_biometric_prompt_message">Desbloqueu per veure les targetes desades</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
@@ -3991,6 +4020,8 @@
   <string name="clear_site_data_dialog_negative_button_text">Cancel·la</string>
   <!-- Text for the connection security panel when the site is secure. -->
   <string name="connection_security_panel_secure">Connexió segura</string>
+  <!-- Action description (not visible, for screen readers etc.) for the “Secure connection” link in the protection panel header, which opens a page showing the website's certificate details. Screen readers announce it after “Double tap to” -->
+  <string name="connection_security_panel_view_certificate_details">mostrar els detalls del certificat</string>
   <!-- Text for the connection security panel when the site is not secure. -->
   <string name="connection_security_panel_not_secure">La connexió no és segura</string>
   <!-- Text for the connection security panel when accessed from local PDF. -->
