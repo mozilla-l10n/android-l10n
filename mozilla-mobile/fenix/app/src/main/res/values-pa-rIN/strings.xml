@@ -184,6 +184,26 @@
     Label for popup button that appears when long-pressing the main menu. Tapping it allows the user to customize the main menu layout.
   -->
   <string name="customize_menu">ਮੇਨੂ ਨੂੰ ਕਸਟਮਾਈਜ਼ ਕਰੋ</string>
+  <!-- Alert message shown in the "Customize menu" screen when the user tries to hide a menu section which cannot be hidden. -->
+  <string name="customize_menu_cannot_hide_section">ਇਸ ਭਾਗ ਨੂੰ ਲੁਕਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ</string>
+  <!-- Customize menu screen - Accessibility description - name of the menu section that groups the Back, Forward, Share and Refresh buttons. Read aloud after "Section", followed by the button names ("Section “Page controls”: Back, Forward, Share, Refresh"). -->
+  <string name="browser_menu_section_page_controls">ਸਫ਼ਾ ਕੰਟਰੋਲ</string>
+  <!-- Customize menu screen - Accessibility description - name of the menu section that groups the page tools (Bookmark page, Find in page, Desktop site, Extensions, etc.). Read aloud after "Section", followed by the tool names ("Section “Tools”: Bookmark page, Find in page…"). -->
+  <string name="browser_menu_section_tools">ਟੂਲ</string>
+  <!-- Customize menu screen - Accessibility description - name of the menu section that groups the History, Bookmarks, Downloads and Passwords items. Read aloud after "Section", followed by the item names ("Section “Library”: History, Bookmarks, Downloads, Passwords"). -->
+  <string name="browser_menu_section_library">ਲਾਇਬਰੇਰੀ</string>
+  <!-- Customize menu screen - Accessibility description - name of the menu section that groups the Sign in and Settings items. Read aloud after "Section", followed by the item names ("Section “Accounts and settings”: Sign in, Settings"). -->
+  <string name="browser_menu_section_accounts_and_settings">ਖਾਤੇ ਅਤੇ ਸੈਟਿੰਗਾਂ</string>
+  <!-- Customize menu screen - Accessibility description - name of the menu section that groups the New tab and New private tab actions. Read aloud after "Section", followed by the action names ("Section “New tab”: New tab, New private tab"). -->
+  <string name="browser_menu_section_new_tab">ਨਵੀਂ ਟੈਬ</string>
+  <!-- Title of the dialog shown when resetting the menu to its default layout (removing all user customizations) -->
+  <string name="menu_customize_reset_dialog_title">ਕੀ ਮੂਲ ਮੇਨੂ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰਨਾ ਹੈ?</string>
+  <!-- Message of the dialog shown when resetting the menu to its default layout (removing all user customizations) -->
+  <string name="menu_customize_reset_dialog_message">ਇਹ ਕਸਟਮਾਈਜ਼ੇਸ਼ ਨੂੰ ਹਟਾਏਗਾ ਅਤੇ ਵਾਪਸ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।</string>
+  <!-- Primary button on the menu reset dialog. Tapping it removes all user customizations. -->
+  <string name="menu_customize_reset_dialog_reset">ਮੁੜ-ਸੈੱਟ</string>
+  <!-- Secondary button on the menu reset dialog. Tapping it cancels the reset process and preserves all user-made customizations. -->
+  <string name="menu_customize_reset_dialog_cancel">ਰੱਦ ਕਰੋ</string>
   <!-- Content description (not visible, for screen readers etc.): Navigate backward (browsing history) -->
   <string name="browser_menu_back">ਪਿੱਛੇ</string>
   <!-- Content description (not visible, for screen readers etc.): Navigate forward (browsing history) -->
@@ -273,6 +293,8 @@
   <string name="browser_menu_passwords">ਪਾਸਵਰਡ</string>
   <!-- Content description (not visible, for screen readers etc.) for the handle used to drag the main menu at the bottom of the screen. -->
   <string name="browser_close_main_menu_handlebar_content_description">ਮੇਨੂ ਨੂੰ ਬੰਦ ਕਰੋ</string>
+  <!-- Content description (not visible, used by screen readers, etc.) for the heading of the menu opened from the customize menu screen to preview pending changes. It is read before the menu items. The items are shown for preview only and do nothing when tapped. -->
+  <string name="browser_menu_preview_heading_content_description">ਮੇਨੂ ਝਲਕ। ਇੱਥੇ ਚੀਜ਼ਾਂ ਨੂੰ ਸਰਗਰਮ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।</string>
   <!-- Content description (not visible, for screen readers etc.) for main menu navigation header. -->
   <string name="browser_main_menu_content_description_navigation_header">ਨੇਵੀਗੇਸ਼ਨ</string>
   <!-- Content description (not visible, for screen readers etc.) for bottom sheet handlebar custom tab menu. -->
@@ -301,6 +323,8 @@
   <string name="browser_menu_webcompat_reporter_2">ਖ਼ਰਾਬ ਸਾਈਟ ਬਾਰੇ ਰਿਪੋਰਟ ਕਰੋ</string>
   <!-- Browser menu label for adding a tab to a tab group -->
   <string name="browser_menu_add_to_tab_group">ਗਰੁੱਪ ਵਿੱਚ ਜੋੜੋ</string>
+  <!-- Browser menu label for moving a tab to a tab group -->
+  <string name="browser_menu_move_to_tab_group">ਗਰੁੱਪ \'ਚ ਭੇਜੋ</string>
   <!-- Browser menu label that is displayed when the current page has been translated by the translation feature. -->
   <string name="browser_menu_translated">ਅਨੁਵਾਦ ਕੀਤਾ</string>
   <!-- Browser menu label for the print feature -->
@@ -331,6 +355,10 @@
     Content description for the translate page toolbar button that opens the translations dialog when no translation has occurred.
   -->
   <string name="browser_toolbar_translate">ਸਫ਼ੇ ਦਾ ਉਲੱਥਾ ਕਰੋ</string>
+  <!-- Accessibility description for the toolbar button displayed when the page the user is on has a video that can be opened in a picture-in-picture window -->
+  <string name="browser_toolbar_picture_in_picture">ਤਸਵੀਰ-‘ਚ-ਤਸਵੀਰ</string>
+  <!-- Accessibility description for the toolbar button displayed while the current page's video is playing in a picture-in-picture window. Tapping the button closes that window. -->
+  <string name="browser_toolbar_picture_in_picture_close">ਤਸਵੀਰ-‘ਚ-ਤਸਵੀਰ ਨੂੰ ਬੰਦ ਕਰੋ</string>
   <!-- CFR description for the browser toolbar describing the "Shake to summarize feature" -->
   <string name="browser_toolbar_summarize_cfr_description">ਇਸ ਸਫ਼ੇ ਦਾ ਸਾਰ ਸਕਿੰਟਾਂ ਵਿੱਚ ਲੈਣ ਲਈ ਆਪਣੇ ਡਿਵਾਈਸ ਨੂੰ ਹਿਲਾਓ। ⚡️</string>
   <!--
