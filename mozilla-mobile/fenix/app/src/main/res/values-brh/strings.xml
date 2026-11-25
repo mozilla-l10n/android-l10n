@@ -1208,6 +1208,10 @@
   <string name="preference_option_autoplay_block_audio2">صرف توار توننگے</string>
   <!-- Label for site specific setting that indicates that video autoplay is allowed, but audio autoplay is blocked -->
   <string name="quick_setting_option_autoplay_block_audio">صرف توار توننگے</string>
+  <!-- Label for global setting that indicates that all video and audio autoplay is blocked -->
+  <string name="preference_option_autoplay_blocked3">توار و ویڈیو توننگر</string>
+  <!-- Label for site specific setting that indicates that all video and audio autoplay is blocked -->
+  <string name="quick_setting_option_autoplay_blocked">توار و ویڈیو توننگر</string>
   <!-- Summary of delete browsing data on quit preference if it is set to on -->
   <string name="delete_browsing_data_quit_on">ملوک</string>
   <!-- Summary of delete browsing data on quit preference if it is set to off -->
@@ -1290,6 +1294,8 @@
     Name of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app.
   -->
   <string name="notification_privacy_report_channel_name">رازداری نا رپورٹ</string>
+  <!-- Description of the weekly privacy report notification channel. Displayed in the "App notifications" system settings for the app. %1$s is the app name (e.g. Firefox) -->
+  <string name="notification_privacy_report_channel_description">دا %1$s نشان ایتک کہ نما ویبگشت نا ٹی اخس ٹریکر توننگار.</string>
   <!--
     Snackbar
 
@@ -1367,6 +1373,8 @@
   <string name="preference_enhanced_tracking_protection_allow_list_learn_more">پین ہیل کبو</string>
   <!-- Preference for Global Privacy Control for the custom privacy settings for Global Privacy Control. '&amp;' is replaced with the ampersand symbol: & -->
   <string name="preference_enhanced_tracking_protection_custom_global_privacy_control">ویبڈس اتے پاننگے کہ ہچو ڈیٹا بشخپس و بحا کپس</string>
+  <!-- Header for categories that are being being blocked by current Enhanced Tracking Protection settings -->
+  <string name="enhanced_tracking_protection_blocked">توننگوک</string>
   <!-- Used as text for the link in `preference_doh_title`, points to documentation about "DNS over HTTPS" -->
   <string name="preference_doh_learn_more">پین ہیل کبو</string>
   <!-- Summary displayed for "Default Protection" option under "DNS over HTTPS". %1$s is the name of the application (e.g. Fenix). -->
@@ -1617,6 +1625,14 @@
     %s is the name of the app (for example "Firefox").
   -->
   <string name="protection_panel_banner_protected_title">%s گارڈ اٹے</string>
+  <plurals name="protection_panel_banner_protected_blocked_trackers_description">
+    <!--
+      Description text for the protection panel banner when privacy dashboard is enabled.
+      %1$d is the number of trackers blocked.
+    -->
+    <item quantity="one">دا ویبڈس ٹی %1$d ٹریکر اس توننگا</item>
+    <item quantity="other">دا ویبڈس ٹی %1$d ٹریکراک توننگار</item>
+  </plurals>
   <!--
     Description text for the protection panel banner when privacy dashboard is enabled.
     and there are no trackers blocked.
@@ -1630,12 +1646,30 @@
   <string name="protection_panel_etp_toggle_off">بند</string>
   <!-- Description text for the Enhanced Tracking Protection toggle when tracking protection is enabled. -->
   <string name="protection_panel_etp_toggle_enabled_description_2">اگہ ویبڈس ٹی گڑاسپنوک لگک، دادے بند کبو و ہربو.</string>
+  <!-- Text for when tracking protection is disabled and no trackers are blocked. -->
+  <string name="protection_panel_etp_disabled_no_trackers_blocked">ٹریکراک توروک افس</string>
   <!-- Link text to navigate to privacy and security settings from the protection panel. -->
   <string name="protection_panel_privacy_and_security_settings_2">رازداری نا سیٹنگاک</string>
   <!-- Certificate panel - Title of the section that contains the website's certificate information (issued to, issued by, etc.) as verified by Firefox (thus guaranteeing the HTTPS connection is secure) -->
   <string name="certificate_details_panel_secure_connection_title">محفوظ کنیکشن</string>
   <!-- Certificate panel - Label for the name of the certificate authority that verified and issued the website's certificate -->
   <string name="certificate_details_panel_verified_by_label">تصدیق کروک:</string>
+  <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
+    <!--
+      Text for displaying the total number of trackers blocked in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked.
+    -->
+    <item quantity="one">دا ویبڈس ٹی %1$d ٹریکر اس توننگا</item>
+    <item quantity="other">دا ویبڈس ٹی %1$d ٹریکراک توننگار</item>
+  </plurals>
+  <plurals name="trackers_blocked_panel_num_trackers_blocked_this_week_2">
+    <!--
+      Text for displaying the number of trackers blocked this week in the trackers blocked panel.
+      %1$d is a placeholder for the number of trackers blocked this week.
+    -->
+    <item quantity="one">دا ہفتہ ٹی %1$d ٹریکر اس توننگا</item>
+    <item quantity="other">دا ہفتہ ٹی %1$d ٹریکراک توننگار</item>
+  </plurals>
   <!--
     Description text for a dialog confirming whether the user wants to delete all data for current site.
     %s is a placeholder for the base domain of website.
