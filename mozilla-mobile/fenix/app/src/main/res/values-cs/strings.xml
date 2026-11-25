@@ -1766,6 +1766,8 @@
   <string name="close_tab_and_delete_group_confirmation_dialog_cancel">Zrušit</string>
   <!-- Title of the confirmation dialog shown when moving the last tab out of a group will delete the group. %s is the group name, which defaults to a value such as "Group 1" but can be edited by the user to contain arbitrary text. -->
   <string name="move_last_tab_and_delete_group_confirmation_dialog_title">Přesunout poslední panel ze skupiny %s?</string>
+  <!-- Body of the confirmation dialog shown when moving the last tab out of a group will delete the group. %1$s is the destination group name. %2$s is the source group name that will be deleted. Both names default to values such as "Group 1" but can be edited by the user to contain arbitrary text. -->
+  <string name="move_last_tab_and_delete_group_confirmation_dialog_body">Tento panel se přesune do skupiny %1$s. Skupina %2$s bude smazána, protože zůstane prázdná.</string>
   <!-- Text shown on the confirm button for the confirmation dialog shown when moving the last tab out of a group will delete the group. -->
   <string name="move_last_tab_and_delete_group_confirmation_dialog_confirm">Přesunout panel</string>
   <!-- Text shown on the cancel button for the confirmation dialog shown when moving the last tab out of a group will delete the group. -->
@@ -3280,6 +3282,10 @@
   <string name="preferences_credit_cards_save_and_autofill_cards_2">Ukládat a vyplňovat platební metody</string>
   <!-- Preference summary for saving and autofilling payment method data. %s is the name of the app (for example "Firefox"). -->
   <string name="preferences_credit_cards_save_and_autofill_cards_summary_2">%s šifruje všechny vaše uložené platební metody</string>
+  <!-- Preference for saving the security codes of credit cards. -->
+  <string name="preferences_credit_cards_save_security_codes">Ukládat bezpečnostní kódy</string>
+  <!-- Preference summary for saving the security codes of credit cards. %s is the name of the app (for example "Firefox"). -->
+  <string name="preferences_credit_cards_save_security_codes_summary">%s zašifruje číslo vaší karty a bezpečnostní kód, abyste příště mohli zaplatit rychleji</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is not signed into sync -->
   <string name="preferences_credit_cards_sync_cards_across_devices">Synchronizovat karty napříč zařízeními</string>
   <!-- Preference option for syncing credit cards across devices. This is displayed when the user is signed into sync -->
@@ -3334,10 +3340,16 @@
   <string name="credit_cards_cancel_button">Zrušit</string>
   <!-- Title of the "Saved cards" screen -->
   <string name="credit_cards_saved_cards">Uložené karty</string>
+  <!-- Text in the saved cards list that indicates the security code for a credit card is being stored -->
+  <string name="credit_cards_cvv_saved">CVV uloženo</string>
   <!-- Error message for card number validation -->
   <string name="credit_cards_number_validation_error_message_2">Zadejte platné číslo karty</string>
   <!-- Error message for card name on card validation -->
   <string name="credit_cards_name_on_card_validation_error_message_2">Zadejte jméno</string>
+  <!-- Error message for a credit card security code that does not meet the 3-digit length requirement. -->
+  <string name="credit_cards_cvv_validation_error_message">Bezpečnostní kód musí obsahovat 3 číslice</string>
+  <!-- Error message for a credit card security code that does not meet the 4-digit length requirement (used for American Express cards only) -->
+  <string name="credit_cards_cvv_amex_validation_error_message">Bezpečnostní kód karty American Express musí mít 4 číslice</string>
   <!-- Message displayed in biometric prompt displayed for authentication before allowing users to view their saved credit cards -->
   <string name="credit_cards_biometric_prompt_message">Odemknout pro zobrazení uložených karet</string>
   <!-- Title of warning dialog if users have no device authentication set up -->
@@ -3754,6 +3766,12 @@
   <!--
     Translations options dialog
 
+    Title of the translation options dialog that allows a user to set their translation preferences for the site the user is currently on.
+  -->
+  <string name="translation_option_bottom_sheet_title_heading2">Nastavení překladu</string>
+  <!--
+    Translations options dialog
+
     Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on.
   -->
   <string name="translation_option_bottom_sheet_title_heading">Nastavení překladu</string>
@@ -3993,6 +4011,8 @@
   <string name="certificate_details_panel_secure_connection_title">Zabezpečené připojení</string>
   <!-- Certificate panel - Label for the organization, locality and country the website's certificate was issued to -->
   <string name="certificate_details_panel_issued_to_label">Certifikát vydán pro:</string>
+  <!-- Certificate panel - Label for the name of the certificate authority that verified and issued the website's certificate -->
+  <string name="certificate_details_panel_verified_by_label">Ověřil:</string>
   <!-- Certificate panel - Content description (not visible, for screen readers etc.) for the EU trust mark logo, shown when the website's certificate is a Qualified Website Authentication Certificate (QWAC) as specified in EU Regulation 2024/1183 -->
   <string name="certificate_details_panel_eu_trust_mark_content_description">Značka důvěry EU</string>
   <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
@@ -4076,6 +4096,8 @@
   <string name="clear_site_data_dialog_negative_button_text">Zrušit</string>
   <!-- Text for the connection security panel when the site is secure. -->
   <string name="connection_security_panel_secure">Zabezpečené připojení</string>
+  <!-- Action description (not visible, for screen readers etc.) for the “Secure connection” link in the protection panel header, which opens a page showing the website's certificate details. Screen readers announce it after “Double tap to” -->
+  <string name="connection_security_panel_view_certificate_details">zobrazit podrobnosti certifikátu</string>
   <!-- Text for the connection security panel when the site is not secure. -->
   <string name="connection_security_panel_not_secure">Spojení není zabezpečené</string>
   <!-- Text for the connection security panel when accessed from local PDF. -->
@@ -4586,6 +4608,8 @@
   <string name="wrex_widget_match_suspended">Pozastaveno</string>
   <!-- Label shown on the sports widget match status badge when a match has been postponed to a later date. -->
   <string name="wrex_widget_match_postponed">Odloženo</string>
+  <!-- Label shown on the sports widget match status badge when a match has been canceled. -->
+  <string name="wrex_widget_match_canceled">Zrušeno</string>
   <!-- Sports widget action label to refresh match data after an error. -->
   <string name="wrex_widget_error_refresh">Obnovit</string>
   <!-- Sports widget menu item to view the team's match results. -->
