@@ -3141,6 +3141,10 @@
   <string name="credit_cards_warning_dialog_set_up_now">ھازىر تەڭشە</string>
   <!-- Negative button to ignore warning dialog if users have no device authentication set up -->
   <string name="credit_cards_warning_dialog_later">كېيىنچە</string>
+  <!-- Primary button on the dialog shown on Android Automotive OS (in cars). Tapping it directs users to the device settings to set up a device lock -->
+  <string name="automotive_authentication_setup_dialog_set_up_now">ھازىر تەڭشە</string>
+  <!-- Secondary button of the dialog shown on Android Automotive OS (in cars). Tapping closes the dialogue and cancels the action that triggered the dialogue. -->
+  <string name="automotive_authentication_setup_dialog_cancel">ۋاز كەچ</string>
   <!-- Title of PIN verification dialog to direct users to re-enter their device credentials to access their credit cards -->
   <string name="credit_cards_biometric_prompt_message_pin">ئۈسكۈنىڭىزنىڭ قۇلۇپىنى ئېچىڭ</string>
   <!-- Message displayed in biometric prompt for authentication, before allowing users to use their stored payment method information -->
@@ -3539,6 +3543,12 @@
   <!--
     Translations options dialog
 
+    Title of the translation options dialog that allows a user to set their translation preferences for the site the user is currently on.
+  -->
+  <string name="translation_option_bottom_sheet_title_heading2">تەرجىمە مايىللىقى</string>
+  <!--
+    Translations options dialog
+
     Title of the translation options dialog that allows a user to set their translation options for the site the user is currently on.
   -->
   <string name="translation_option_bottom_sheet_title_heading">تەرجىمە تاللانمىسى</string>
@@ -3772,6 +3782,14 @@
   <string name="protection_panel_privacy_and_security_settings_2">شەخسىيەت تەڭشىكى</string>
   <!-- Title text for the protection panel permissions section. -->
   <string name="protection_panel_permissions_title">ئىجازەت</string>
+  <!-- Certificate panel - Title of the section that contains the website's certificate information (issued to, issued by, etc.) as verified by Firefox (thus guaranteeing the HTTPS connection is secure) -->
+  <string name="certificate_details_panel_secure_connection_title">بىخەتەر باغلىنىش</string>
+  <!-- Certificate panel - Label for the organization, locality and country the website's certificate was issued to -->
+  <string name="certificate_details_panel_issued_to_label">گۇۋاھنامە بېرىلگۈچى:</string>
+  <!-- Certificate panel - Label for the name of the certificate authority that verified and issued the website's certificate -->
+  <string name="certificate_details_panel_verified_by_label">دەلىللىگۈچى:</string>
+  <!-- Certificate panel - Content description (not visible, for screen readers etc.) for the EU trust mark logo, shown when the website's certificate is a Qualified Website Authentication Certificate (QWAC) as specified in EU Regulation 2024/1183 -->
+  <string name="certificate_details_panel_eu_trust_mark_content_description">ياۋروپا ئىتتىپاقى ئىشەنچ ماركىسى</string>
   <plurals name="trackers_blocked_panel_total_num_trackers_blocked_2">
     <!--
       Text for displaying the total number of trackers blocked in the trackers blocked panel.
@@ -3839,6 +3857,8 @@
   <string name="clear_site_data_dialog_negative_button_text">ۋاز كەچ</string>
   <!-- Text for the connection security panel when the site is secure. -->
   <string name="connection_security_panel_secure">بىخەتەر باغلىنىش</string>
+  <!-- Action description (not visible, for screen readers etc.) for the “Secure connection” link in the protection panel header, which opens a page showing the website's certificate details. Screen readers announce it after “Double tap to” -->
+  <string name="connection_security_panel_view_certificate_details">گۇۋاھنامە تەپسىلاتىنى كۆرسەت</string>
   <!-- Text for the connection security panel when the site is not secure. -->
   <string name="connection_security_panel_not_secure">باغلىنىش بىخەتەر ئەمەس</string>
   <!-- Text for the connection security panel when accessed from local PDF. -->
@@ -4337,6 +4357,34 @@
   <string name="terms_of_use_prompt_body_line_two_alternative" tools:ignore="UnusedResources">سىز %1$s ھەققىدە مول بىلىمگە ئېرىشەلەيسىز.</string>
   <!-- Link text for terms_of_use_prompt_body_line_two_alternative that links to a site with more information about the Terms of Use -->
   <string name="terms_of_use_prompt_body_line_two_alternative_link" tools:ignore="UnusedResources">بۇ جاي</string>
+  <!--
+    Sports widget
+
+    Label shown on the sports widget scoreboard when a match is currently being played live.
+  -->
+  <string name="wrex_widget_match_live">شۇئان</string>
+  <!-- Label shown on the sports widget match status badge when the start of a match has been delayed. -->
+  <string name="wrex_widget_match_delayed">كېچىكتۈرۈلدى</string>
+  <!-- Label shown on the sports widget match status badge when a match has been suspended after it started. -->
+  <string name="wrex_widget_match_suspended">ۋاقىتلىق توختىتىلغان</string>
+  <!-- Label shown on the sports widget match status badge when a match has been postponed to a later date. -->
+  <string name="wrex_widget_match_postponed">كېچىكتۈرۈلدى</string>
+  <!-- Label shown on the sports widget match status badge when a match has been canceled. -->
+  <string name="wrex_widget_match_canceled">بىكار قىلىندى</string>
+  <!-- Sports widget action label to refresh match data after an error. -->
+  <string name="wrex_widget_error_refresh">يېڭىلا</string>
+  <!-- Sports widget menu item to view the team's match results. -->
+  <string name="wrex_widget_results">نەتىجە</string>
+  <!-- Sports widget menu item to view the league standings table. -->
+  <string name="wrex_widget_standings">رەت تەرتىپى</string>
+  <!-- Sports widget menu item to browse the team's wallpapers. -->
+  <string name="wrex_widget_wallpapers">تام قەغىزى</string>
+  <!-- Sports widget menu item to remove the widget from the homepage. -->
+  <string name="wrex_widget_remove_widget">ئەپچىنى چىقىرىۋەت</string>
+  <!-- Sports widget match status label shown at full-time (abbreviated) - indicates the match has ended, after regulation and extra time have been played -->
+  <string name="wrex_widget_match_full_time_short">ئاخىرقى مۇسابىقە</string>
+  <!-- Sports widget match status label shown during extra time of a match (abbreviated) -->
+  <string name="wrex_widget_match_extra_time_short">ئۇزارتىلغان مۇسابىقە</string>
   <!--
     Privacy notice homepage banner
 
