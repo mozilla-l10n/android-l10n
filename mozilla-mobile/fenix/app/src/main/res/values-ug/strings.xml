@@ -725,6 +725,10 @@
   <string name="search_widget_private_search">شەخسىي ئىزدە</string>
   <!-- Widget description in the widget picker screen for the search bar widget that includes buttons for private search and for voice search -->
   <string name="search_bar_widget_description">شەخسىي ۋە ئاۋازلىق ئىزدەش ئىقتىدارىغا ئىگە ئىزدەش بالدىقى</string>
+  <!-- Widget description in the widget picker screen for the search bar widget that includes buttons for image search, private search and voice search -->
+  <string name="search_bar_with_lens_widget_description">سۈرەت، شەخسىي ۋە ئاۋازلىق ئىزدەش ئىقتىدارىغا ئىگە ئىزدەش بالدىقى</string>
+  <!-- Widget description in the widget picker screen for the compact search bar widget -->
+  <string name="compact_search_bar_widget_description">ئىخچام ئىزدەش بالداق</string>
   <!--
     Preferences
 
@@ -751,6 +755,8 @@
   <string name="preferences_search">ئىزدەش</string>
   <!-- Preference for settings related to Search engines -->
   <string name="preferences_search_engines">ئىزدەش موتورى</string>
+  <!-- Settings item that adds the Firefox search widget to the device's home screen (tapping it opens the confirmation dialogue) -->
+  <string name="preferences_search_widget_in_home_screen">ئىزدەش ئەپچىنى باش ئېكرانغا قوشىدۇ</string>
   <!-- Settings item to add a search widget on the device's homescreen. -->
   <string name="preferences_add_search_widget_from_settings">باش ئېكران ئەپچە</string>
   <!-- Preference for settings related to Search engines suggestions -->
@@ -820,6 +826,8 @@
   <string name="preferences_override_sync_tokenserver">ئىختىيارى قەدەمداش مۇلازىمېتىر</string>
   <!-- Preference category for account information -->
   <string name="preferences_category_account">ھېسابات</string>
+  <!-- Preference category for sync controls. Sync can be translated, it's just short for ”Synchronization” in English. -->
+  <string name="preferences_category_sync_controls">قەدەمداش</string>
   <!-- Preference for changing where the AddressBar is positioned -->
   <string name="preferences_toolbar_2">ئادرېس بالداق ئورنى</string>
   <!-- Preference for changing toolbar layout -->
@@ -838,6 +846,8 @@
   <string name="preferences_toolbar_select_shortcut">تېزلەتمە تاللىنىدۇ</string>
   <!-- Title of a menu option allowing to change the shortcut button shown in the toolbar -->
   <string name="toolbar_shortcut_menu_edit_option">تېزلەتمە تەھرىر</string>
+  <!-- Preference category for menu customization -->
+  <string name="preferences_menu">تىزىملىك</string>
   <!-- Preference for gestures based actions -->
   <string name="preferences_gestures">قول ئىشارىسى</string>
   <!-- Preference for settings related to visual options -->
@@ -876,6 +886,8 @@
   <string name="preferences_search_synced_tabs">قەدەمداش بەتكۈچنى ئىزدەيدۇ</string>
   <!-- Preference for account settings -->
   <string name="preferences_account_settings">ھېسابات تەڭشىكى</string>
+  <!-- Preference for account and sync settings -->
+  <string name="preferences_account_and_sync_settings">ھېساب ۋە قەدەمداش</string>
   <!-- Preference for enabling url autocomplete -->
   <string name="preferences_enable_autocomplete_urls">ئۆزلۈكىدىن تاماملانغان تور ئادرېسلىرى</string>
   <!-- Preference title for switch preference to show sponsored Firefox Suggest search suggestions -->
@@ -912,6 +924,10 @@
   <string name="preferences_open_links_in_apps_ask">ئېچىشتىن ئىلگىرى سورا</string>
   <!-- Preference for open links in third party apps never open in apps option -->
   <string name="preferences_open_links_in_apps_never">ھەرگىز</string>
+  <!-- Preference category header for media related open links in apps settings -->
+  <string name="preferences_media_category">ۋاسىتە</string>
+  <!-- Preference label for choosing whether links open in the YouTube app -->
+  <string name="preferences_open_links_in_youtube">ئۇلانمىنى YouTube ئەپتە ئاچىدۇ</string>
   <!-- Preference category for file storage. -->
   <string name="preferences_category_file_storage">ھۆججەت ساقلىغۇچ</string>
   <!-- Preference title for downloads default location. -->
@@ -992,6 +1008,18 @@
   <string name="customize_addon_collection_user_hint">توپلىغۇچى ئىگىسى (ئىشلەتكۈچى كىملىكى)</string>
   <!-- Toast shown after confirming the custom extension collection configuration -->
   <string name="toast_customize_extension_collection_done">كېڭەيتىلمە توپلىمى ئۆزگەردى. ئۆزگەرتىشنى قوللىنىش ئۈچۈن پىروگراممىدىن چېكىنىۋاتىدۇ…</string>
+  <!--
+    Add-on removal confirmation dialog
+
+    Title of confirmation dialog. Displayed when uninstalling an extension. %1$s is the name of the extension (for example: Firefox Relay).
+  -->
+  <string name="addon_remove_dialog_title">%1$s نى چىقىرىۋېتەمدۇ؟</string>
+  <!-- Body of confirmation dialog. Displayed when uninstalling an extension. -->
+  <string name="addon_remove_dialog_body">بۇ مەشغۇلات كېڭەيتىلمە ۋە ئۇنىڭ تەڭشىكىنى مەزكۇر ئۈسكۈنىدىن چىقىرىۋېتىدۇ.</string>
+  <!-- Primary button on confirmation dialog. Tapping it uninstalls the selected extension. -->
+  <string name="addon_remove_dialog_confirm">چىقىرىۋەت</string>
+  <!-- Secondary button on confirmation dialog. Tapping cancels the process of uninstalling the extension and closes the dialog window. -->
+  <string name="addon_remove_dialog_cancel">ۋاز كەچ</string>
   <!--
     Customize Home
 
@@ -1155,6 +1183,20 @@
   <string name="preferences_sync_now">ھازىر قەدەمداشلا</string>
   <!-- Preference category for sync -->
   <string name="preferences_sync_category">قەدەمداش تاللىنىدۇ</string>
+  <!-- Preference category for sync controls -->
+  <string name="preferences_category_sync">قەدەمداشلانغان سانلىق مەلۇمات</string>
+  <!-- Preference title for the toggle that allows user to turn sync on or off for the device they are on -->
+  <string name="preferences_enable_sync_title">بۇ ئۈسكۈنىنى قەدەمداشلايدۇ</string>
+  <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is on. -->
+  <string name="preferences_enable_sync_summary_sync_enabled">سانلىق مەلۇماتىڭىز زاپاسلاندى ۋە قەدەمداشلانغان ئۈسكۈنىدە ئىشلەتكىلى بولىدۇ.</string>
+  <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is off. It explains where synced data comes from. -->
+  <string name="preferences_enable_sync_summary_sync_disabled_2">ھېسابىڭىزدىكى ساقلانغان ئۇچۇرنى ئىشلىتىدۇ.</string>
+  <!-- Preference summary for the toggle that turns sync on or off for the device, shown when sync is off. It explains where synced data comes from. %1$s is the Firefox brand name. -->
+  <string name="preferences_enable_sync_summary_sync_disabled">سىزنىڭ %1$s ھېسابىڭىزدا ساقلانغان سانلىق مەلۇماتنى ئىشلىتىدۇ.</string>
+  <!-- Summary for the sync preference category. -->
+  <string name="preferences_sync_category_summary">باغلانغان بارلىق ئۈسكۈنىلەردە قەدەمداشلىنىدىغاننى باشقۇرىدۇ</string>
+  <!-- Summary for the sync preference category, when user has disabled all synchronisation items. -->
+  <string name="preferences_sync_category_no_engine_selected_summary">ھېچنېمىنى قەدەمداشلىمىدىڭىز. ئۈسكۈنىلەر ئارا قەدەمداشلىنىدىغانلىرى تاللىنىدۇ.</string>
   <!-- Preference for syncing history -->
   <string name="preferences_sync_history">تارىخ</string>
   <!-- Preference for syncing bookmarks -->
@@ -1167,6 +1209,10 @@
   <string name="preferences_sign_out">چېكىنىش</string>
   <!-- Preference displays and allows changing current FxA device name -->
   <string name="preferences_sync_device_name">ئۈسكۈنە ئىسمى</string>
+  <!-- Preference category for Device name -->
+  <string name="preferences_device_name_category">ئۈسكۈنە ئىسمى</string>
+  <!-- Label for the Preference that displays and allows changing current device name on Mozilla Account -->
+  <string name="preferences_sync_change_device_name">ئۈسكۈنە ئاتىنى ئۆزگەرت</string>
   <!-- Text shown when user enters empty device name -->
   <string name="empty_device_name_error">ئۈسكۈنە ئىسمى بوش قالمايدۇ.</string>
   <!-- Label indicating that sync is in progress -->
