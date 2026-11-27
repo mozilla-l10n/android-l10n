@@ -190,6 +190,10 @@
   <string name="customize_menu_cannot_hide_section">Can’t hide this section</string>
   <!-- Title of the screen where the user chooses which items of a menu section are shown in the menu and in which order. -->
   <string name="edit_menu_items">Edit menu items</string>
+  <!-- Alert message shown in the "Edit menu items" screen when the user tries to move the Extensions item inside the "More" section, which is not supported. For "Extensions" use the term in browser_menu_extensions and for "More" use the term in browser_menu_more_settings, for consistency. -->
+  <string name="edit_menu_items_extensions_cannot_be_moved_into_more">Extensions can’t be moved into “More”</string>
+  <!-- Alert message shown in the "Edit menu items" screen when the user tries to hide the last item shown in a menu section, which would leave the section empty. -->
+  <string name="edit_menu_items_section_cannot_be_empty">Section can’t be empty</string>
   <!-- Customize menu screen - Accessibility description - name of the menu section that groups the Back, Forward, Share and Refresh buttons. Read aloud after "Section", followed by the button names ("Section “Page controls”: Back, Forward, Share, Refresh"). -->
   <string name="browser_menu_section_page_controls">Page controls</string>
   <!-- Customize menu screen - Accessibility description - name of the menu section that groups the page tools (Bookmark page, Find in page, Desktop site, Extensions, etc.). Read aloud after "Section", followed by the tool names ("Section “Tools”: Bookmark page, Find in page…"). -->
@@ -1187,6 +1191,16 @@
   <string name="preferences_manage_account_summary">Change your password, manage data collection, or delete your account</string>
   <!-- Preference for triggering sync -->
   <string name="preferences_sync_now">Sync now</string>
+  <!-- Sync preferences - Title of the error message displayed if syncing fails -->
+  <string name="account_sync_error_title">Couldn’t sync your data</string>
+  <!-- Sync preferences - Title of the error message displayed if syncing fails because the user needs to re-authenticate -->
+  <string name="account_error_title">Account error. Please sign in again to resume sync.</string>
+  <!-- Sync preferences - Body of the sync error message. %1$s is the date of the last successful sync. -->
+  <string name="account_error_last_sync">Last sync: %1$s</string>
+  <!-- Sync preferences - Body of the sync error message. Displayed after "Last sync:" (account_error_last_sync) instead of a date, when the account has never successfully synced in the past. -->
+  <string name="account_error_never_synced">never</string>
+  <!-- Sync preferences - Link button in the sync error message. Clicking it retries syncing. -->
+  <string name="account_sync_error_retry">Retry</string>
   <!-- Preference category for sync -->
   <string name="preferences_sync_category">Choose what to sync</string>
   <!-- Preference category for sync controls -->
@@ -3146,14 +3160,34 @@
   <string name="ip_protection_learn_more">Learn more</string>
   <!-- Label for the monthly data allowance section on the browser VPN settings screen -->
   <string name="ip_protection_data_limit_label">Monthly data limit</string>
+  <!--
+    Title for the VPN data reset upsell card that is shown when a user is using VPN without a Firefox account and their data gets refreshed.
+    %1$s is the data limit in gigabytes that they are allowed to use without an account (e.g 50)
+  -->
+  <string name="ip_protection_settings_message_gpi_reset_upsell_title">%1$s GB of VPN, refreshed and ready to go</string>
+  <!-- Message for the VPN data reset upsell card that is shown when a user is using VPN without a Firefox account, and their data gets refreshed. -->
+  <string name="ip_protection_settings_message_gpi_reset_upsell_message">Turn on VPN for an extra privacy boost, free every month.</string>
   <!-- Accessibility description for the button that closes promotional banners or messages on the VPN settings screen (without triggering any effect) -->
   <string name="ip_protection_settings_message_dismiss">Dismiss</string>
+  <!--
+    Title for the VPN sign-in upsell message.
+    %1$s is the VPN data limit in gigabytes after signing in (for example, 50).
+  -->
+  <string name="ip_protection_settings_message_gpi_upsell_title">Boost your VPN data limit to %1$s GB</string>
+  <!-- Action label for the VPN sign-in upsell message. -->
+  <string name="ip_protection_settings_message_gpi_upsell_action">Sign in</string>
+  <!--
+    Data usage shown on the browser VPN settings screen.
+    %1$.1f is the data remaining in GB (for example "8.3"). The remaining amount and its unit are shown in bold; keep the <b> and </b> tags around them
+    %2$.1f is the total monthly allowance in GB (for example "50.0").
+  -->
+  <string name="ip_protection_data_limit_value_styled"><![CDATA[<b>%1$.1f GB</b> of %2$.1f GB left]]></string>
   <!--
     Data usage shown on the browser VPN settings screen.
     %1$.1f is the data remaining in GB (for example "8.3").
     %2$.1f is the total monthly allowance in GB (for example "50.0").
   -->
-  <string name="ip_protection_data_limit_value">%1$.1f GB of %2$.1f GB left</string>
+  <string name="ip_protection_data_limit_value" tools:ignore="UnusedResources">%1$.1f GB of %2$.1f GB left</string>
   <!--
     Text shown below the data usage bar describing when the monthly allowance resets.
     %1$.0f is the total monthly data allowance in GB (for example "50").
@@ -3588,6 +3622,8 @@
   <string name="homepage_shortcuts_popular_sites">Popular sites</string>
   <!-- Label for the preference to show the shortcuts for the most visited top sites on the homepage -->
   <string name="top_sites_toggle_top_recent_sites_4">Shortcuts</string>
+  <!-- Label for the preference to show frequently visited sites as shortcuts on the browser homepage -->
+  <string name="top_sites_toggle_frequently_visited_sites">Frequently visited sites</string>
   <!-- Title text displayed in the rename top site dialog. -->
   <string name="top_sites_rename_dialog_title">Name</string>
   <!-- Hint for renaming title of a shortcut -->
@@ -4603,6 +4639,8 @@
   <string name="wrex_widget_match_canceled">Canceled</string>
   <!-- Sports widget action label to refresh match data after an error. -->
   <string name="wrex_widget_error_refresh">Refresh</string>
+  <!-- Sports widget menu item that opens the team's matches and results page. -->
+  <string name="wrex_widget_matches_and_results">Matches and Results</string>
   <!-- Sports widget menu item to view the team's match results. -->
   <string name="wrex_widget_results">Results</string>
   <!-- Sports widget menu item to view the league standings table. -->
@@ -4610,7 +4648,7 @@
   <!-- Sports widget menu item to browse the team's wallpapers. -->
   <string name="wrex_widget_wallpapers">Wallpapers</string>
   <!-- Sports widget menu item to remove the widget from the homepage. -->
-  <string name="wrex_widget_remove_widget">Remove Widget</string>
+  <string name="wrex_widget_remove_widget">Remove widget</string>
   <!-- Sports widget match status label shown at full-time (abbreviated) - indicates the match has ended, after regulation and extra time have been played -->
   <string name="wrex_widget_match_full_time_short">FT</string>
   <!-- Sports widget match status label shown during half-time of a match. -->
