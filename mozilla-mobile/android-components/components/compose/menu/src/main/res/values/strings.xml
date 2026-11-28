@@ -37,9 +37,9 @@
   <string name="mozac_menu_customize_named_section">Section “%1$s”: %2$s</string>
   <!-- Content description (not visible, for screen readers etc.) of a menu section without a name in the customize menu screen. %1$s is the names of its items, for example "VPN". -->
   <string name="mozac_menu_customize_unnamed_section">Section “%1$s”</string>
-  <!-- Name of the action (used by screen readers, etc.) that moves a menu section up one position in the customize menu screen. It is also shown in the list of actions displayed when the user long-presses the drag handle of a menu section. -->
+  <!-- Name of the action (used by screen readers, etc.) that moves a menu section up one position in the customize menu screen, or a menu item up one position on the Edit menu items screen. It is also shown in the list of actions displayed when the user long-presses the drag handle of a menu section. -->
   <string name="mozac_menu_customize_move_up">Move up</string>
-  <!-- Name of the action (used by screen readers, etc.) that moves a menu section down one position in the customize menu screen. It is also shown in the list of actions displayed when the user long-presses the drag handle of a menu section. -->
+  <!-- Name of the action (used by screen readers, etc.) that moves a menu section down one position in the customize menu screen, or a menu item down one position on the Edit menu items screen. It is also shown in the list of actions displayed when the user long-presses the drag handle of a menu section. -->
   <string name="mozac_menu_customize_move_down">Move down</string>
   <!-- Name of the action (used by screen readers, etc.) that hides a section in the customize menu screen. It is also shown in the list of actions displayed when the user long-presses the drag handle of a menu section. -->
   <string name="mozac_menu_customize_hide">Hide section</string>
@@ -59,4 +59,34 @@
   <string name="mozac_menu_customize_drag_items_to_hide">Drag items here to hide</string>
   <!-- Customize menu screen: Name of the action, read by screen readers, for opening the screen where the items of a menu section can be changed. -->
   <string name="mozac_menu_customize_edit_items">Edit menu items</string>
+  <!-- Accessibility description used in the screen where the items of a menu section can be moved around. The string describes the item the user has selected, and tells the user what position it currently occupies. %1$s is the name of the item (e.g. "Settings"). %2$d is its position, and %3$d is the total number of items being shown, including the ones inside an expanded item. -->
+  <string name="mozac_menu_customize_shown_item">%1$s. Position %2$d of %3$d</string>
+  <!-- Customize menu items screen: Name of the action for showing the items inside a collapsed menu item (e.g. "More"). Offered to screen readers as an action of a menu item. -->
+  <string name="mozac_menu_customize_expand">Expand</string>
+  <!-- Customize menu items screen: Name of the action for hiding the items inside an expanded menu item (e.g. "More"). Offered to screen readers as an action of a menu item. -->
+  <string name="mozac_menu_customize_collapse">Collapse</string>
+  <!-- Announcement (not visible, for screen readers etc.) once the user expanded a menu item. %1$s is the name of the item, for example "More". If gender is ambiguous or an issue, this can also be translated as "%1$s, item expanded". -->
+  <string name="mozac_menu_customize_item_expanded">%1$s expanded</string>
+  <!-- Announcement (not visible, for screen readers etc.) once the user collapsed a menu item. %1$s is the name of the item, for example "More". If gender is ambiguous or an issue, this can also be translated as "%1$s, item collapsed". -->
+  <string name="mozac_menu_customize_item_collapsed">%1$s collapsed</string>
+  <!-- Announcement (not visible, for screen readers etc.) when the user moves a menu item. %1$s is the name of the item, for example "Bookmarks". %2$d is its new position, and %3$d is the total number of items being shown. If gender is an issue, can also be translated as "Item %1$s moved to position %2$d of %3$d". -->
+  <string name="mozac_menu_customize_item_moved">%1$s moved to position %2$d of %3$d</string>
+  <!-- Announcement (not visible, for screen readers etc.) when the user changes the position of items within a menu section. %1$s is the name of the moved item, for example "Bookmarks". %2$d is its new position, and %3$d is the total number of items in the section. %4$s is the name of the section, for example "More". If gender or inflection are an issue, can also be translated as "Item %1$s moved to position %2$d of %3$d in section %4$s". -->
+  <string name="mozac_menu_customize_sub_item_moved">%1$s moved to position %2$d of %3$d in %4$s</string>
+  <!-- Customize menu items screen: Name of the action for removing a menu item from the menu (moving it to the "Hidden items" area). Offered to screen readers as an action of a menu item. -->
+  <string name="mozac_menu_customize_hide_item">Hide item</string>
+  <!-- Customize menu items screen: Name of the action for displaying a menu item that was hidden (moving it out of the "Hidden items" area). Offered to screen readers as an action of a menu item. -->
+  <string name="mozac_menu_customize_unhide_item">Unhide item</string>
+  <!-- Announcement (not visible, for screen readers etc.) when the user hides an item from the menu, which moves it to the "Hidden items" area. %1$s is the name of the item, for example "Bookmarks". Can also be translated as "%1$s item hidden from menu". -->
+  <string name="mozac_menu_customize_item_hidden">%1$s hidden from menu</string>
+  <!-- Announcement (not visible, for screen readers etc.) when the user un-hides a menu item so it is displayed in the menu again. %1$s is the name of the item, for example "Bookmarks". Can also be translated as "%1$s item added to menu". -->
+  <string name="mozac_menu_customize_item_shown">%1$s added to menu</string>
+  <!-- Customize menu items screen: Accessibility label (used by screenreaders) for the action of moving one menu item into another section of the menu (i.e. into a menu item that can be expanded and collapsed). %1$s is the name of the new section that the item is moved to, for example "More". Can also be translated as 'Move into “%1$s” section'. -->
+  <string name="mozac_menu_customize_move_into">Move into “%1$s”</string>
+  <!-- Customize menu items screen: Accessibility label (used by screenreaders) for the action of moving a menu item out of its current menu section and into the main menu. %1$s is the name of the section the item is currently in, for example "More". Can also be translated as 'Move out of “%1$s” section'. -->
+  <string name="mozac_menu_customize_move_out_of">Move out of “%1$s”</string>
+  <!-- Announcement (not visible, for screen readers etc.) when the user moves a menu item into another menu section. %1$s is the name of the moved item, for example "Bookmarks". %2$s is the name of the section the item was moved to, for example "More". Can also be translated as '%1$s item moved into “%2$s” section'. -->
+  <string name="mozac_menu_customize_item_moved_into">%1$s moved into “%2$s”</string>
+  <!-- Announcement (not visible, for screen readers etc.) when the user moves a menu item out of the section that contains it. %1$s is the name of the moved item, for example "Bookmarks". %2$s is the name of the section it was moved out of, for example "More". Can also be translated as '%1$s item moved out of “%2$s” section'. -->
+  <string name="mozac_menu_customize_item_moved_out_of">%1$s moved out of “%2$s”</string>
 </resources>
